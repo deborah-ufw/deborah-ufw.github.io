@@ -72,9 +72,9 @@ html, body {
 		color: #9e9e9e;
 	}
 	
-	.borders {
-		border: 1px solid #a6a6a6;
-	}
+	
+	
+	
 	
 	/* reds */
 	
@@ -150,9 +150,6 @@ strong {
 	
 	/* user dropdown */
 	
-	.user-info {
-	 
-	}
 	
 	.user-image {
 		height: 35px;
@@ -160,17 +157,13 @@ strong {
 		background-size: 100%;
 	}
 	
-	.user-info .inner {
-		
+	ul.dropdown-menu li.header {
+		margin-top: -5px;
+		margin-left: -1px;
 	}
 	
-	.user-name {
-		
-	}
 	
-	.user-role {
-		
-	}
+	
 
 /* heredeb */
 
