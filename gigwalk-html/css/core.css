@@ -1,0 +1,168 @@
+/* ---------- CORE APP CSS ---------- */
+
+
+/* fix iOS orientation resize bug */
+html, body {
+	-webkit-text-size-adjust: 100%;
+}
+
+/* everywhere */
+
+html, body {
+	font-family: Helvetica-Neue, Arial, sans-serif;
+	background: #ffffff;
+}
+
+body {
+	font-size: 1.4em;
+}
+
+.hide {
+	display: none;
+}
+
+.pointermouse {
+	cursor: pointer;
+}
+
+.defaultmouse {
+	cursor: default;
+}
+
+.clearit:after {
+  content: ' ';
+	display: block;
+	clear: both;
+}
+
+.center {
+	text-align: center;
+}
+
+.left,
+.right,
+.navbar-brand {
+		display: inline-block;
+}
+
+.inline-left {
+	display: inline-block;
+	float: left;
+}
+
+.inline-right {
+	display: inline-block;
+	float: right;
+}
+
+header .navbar .user-info,
+header .navbar .user-image,
+header .navbar .user-info .inner {
+	float: left;
+}
+
+header .navbar .dropdown-toggle {
+	float: right;
+}
+
+.opacity100 {
+	filter: alpha(opacity=100);
+     -moz-opacity: 1;
+          opacity: 1;
+}
+
+.transition  {
+	-webkit-transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out;
+}
+
+.smoother-animation {
+	 transform: translate3d(0px,0px,0px);
+	-webkit-transform: translate3d(0px,0px,0px);
+	-webkit-backface-visibility: hidden;
+}
+
+.circle {
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+/* boostrap customization */
+
+	/* remove rounded corners */
+	
+	.dropdown-menu {
+		border-radius: 0;
+	}
+	
+	/* fix drop shadows */
+	
+	.dropdown-menu {
+		box-shadow: -2px 2px 2px rgba(0, 0, 0, .3);
+	}
+	
+	/* dropdowns */
+	
+	.navbar-default .navbar-nav > .open > a, 
+	.navbar-default .navbar-nav > .open > a:hover, 
+	.navbar-default .navbar-nav > .open > a:focus {
+		background-color: transparent;
+	}
+	
+	ul.dropdown-menu li {
+		padding: .2em .5em;
+	}
+	
+	ul.dropdown-menu li {
+		padding: .2em .5em;
+	}
+	
+	ul.dropdown-menu li.header {
+		padding: .4em .5em;
+	}
+	
+	.im:before {
+		font-size: 1.7em;
+		line-height: 1em;
+	}
+	
+
+/* header */
+
+	/* header nav */
+	
+	nav {
+		font-size: 1.1em;
+	}
+	
+	header .nav .dropdown {
+		padding: 10px 0 0 10px;
+	}
+	
+	.user-image {
+		margin: .1em .5em 0 0;
+		background: url(../images/default-user-image.gif) 0 0 no-repeat;
+	}
+	
+
+
+	
+	
+/* ios fix for modal with keyboard */
+
+.modal-ios {
+	position: absolute;
+	overflow: visible
+}
+
+/* ie10 & 11 --- also will be picked up by ie9 */
+
+html[data-useragent*='MSIE 10.0'],
+html[data-useragent*='Trident'] {
+	/* fixes here */
+}	
+	
+	
+	
+/* ---------- END CORE.CSS ---------- */	
