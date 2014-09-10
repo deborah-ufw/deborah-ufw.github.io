@@ -1,0 +1,277 @@
+/* Gigwalk css */
+
+
+/* temporary */
+
+h1 {
+	font-family: Helvetica-Neue-Light;
+}
+
+body {
+	padding: 20px;
+}
+
+.super {
+	color: #F60;
+}
+
+header,
+footer,
+nav {
+	background-color: rgba(0, 0, 0, .12);
+}
+
+/* fix iOS orientation resize bug */
+html, body {
+	-webkit-text-size-adjust: 100%;
+}
+
+
+/* base */
+
+html, body {
+	font-family: Helvetica-Neue, Arial, sans-serif;
+	background: #ffffff;
+}
+
+body {
+	font-size: 1.4em;
+}
+
+.pointermouse {
+	cursor: pointer;
+}
+
+.defaultmouse {
+	cursor: default;
+}
+
+.clear:after {
+  content: ' ';
+	display: block;
+	clear: both;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	display: inline-block;
+	float: left;
+}
+
+.right {
+	display: inline-block;
+	float: right;
+}
+
+.opacity100 {
+	filter: alpha(opacity=100);
+     -moz-opacity: 1;
+          opacity: 1;
+}
+
+.transition  {
+	-webkit-transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out;
+}
+
+.smoother-animation {
+	 transform: translate3d(0px,0px,0px);
+	-webkit-transform: translate3d(0px,0px,0px);
+	-webkit-backface-visibility: hidden;
+}
+
+.circle {
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+/* colors */
+	
+	/* grays */
+	
+	body {
+		color: #4a4a4a;
+	}
+	
+	.gray-text {
+		color: #ababab;
+	}
+	
+	.gray-cancel {
+		color: #c6c6c6;
+	}
+	
+	.disabled {
+		background: #dfdfdf;
+	}
+	
+	.borders {
+		border: 1px solid #a6a6a6;
+	}
+	
+	/* reds */
+	
+	.remove {
+		color: #db2023;
+	}
+	
+	.incomplete {
+		background: #ff797e;
+	}
+	
+	/* blues */
+	
+	.link {
+		color: #4a90e2;
+	}
+	
+	.dropdown-blue {
+		background: #4a90e2;
+	}
+	
+	/* greens */
+	
+	.green {
+		background: #08aa86;
+	}
+	
+	/* purple */
+	
+	.required {
+		background: #9a5cab;
+	}
+
+
+/* font */
+
+.light {
+	font-family: Helvetica-Neue-Light;
+}
+
+.regular {
+	font-family: Helvetica-Neue;
+}
+
+.medium {
+	font-family: Helvetica-Neue-Medium;
+}
+
+strong {
+	font-family: Helvetica-Neue-Bold;
+	font-weight: normal !important;
+}
+
+.italic {
+	font-family: Helvetica-Neue-Italic;
+}
+
+
+/* heredeb */
+
+
+
+
+
+
+/* - - - - - - - - - -
+	 CSS3 form hints  
+	 can not be combined with each other 
+	 or anything else 
+	 - - - - - - - - - -
+*/
+
+input::-webkit-input-placeholder { 
+	color: #dfdfdf;
+}
+
+input:-ms-input-placeholder { 
+	color: #dfdfdf;
+}
+
+input::-moz-placeholder { 
+	color: #dfdfdf;
+}
+
+input:-ms-input-placeholder {
+	color: #dfdfdf;
+}
+
+textarea::-webkit-input-placeholder { 
+	color: #dfdfdf;
+}
+
+textarea:-ms-input-placeholder { 
+	color: #dfdfdf;
+}
+
+textarea::-moz-placeholder { 
+	color: #dfdfdf;
+}
+
+textarea:-ms-input-placeholder {
+	color: #dfdfdf;
+}
+
+input.invalid::-webkit-input-placeholder {
+	color: #f24b41;
+	opacity: .9;
+}
+
+input.invalid:-ms-input-placeholder { 
+	color: #f24b41;
+	opacity: .9;
+}
+
+input.invalid::-moz-placeholder { 
+	color: #f24b41;
+	opacity: .9;
+}
+
+input.invalid:-ms-input-placeholder {
+	color: #f24b41;
+	opacity: .9;
+}
+
+textarea.invalid::-webkit-input-placeholder {
+	color: #f24b41;
+	opacity: .9;
+}
+
+textarea.invalid:-ms-input-placeholder { 
+	color: #f24b41;
+	opacity: .9;
+}
+
+textarea.invalid::-moz-placeholder { 
+	color: #f24b41;
+	opacity: .9;
+}
+
+textarea.invalid:-ms-input-placeholder {
+	color: #f24b41;
+	opacity: .9;
+}
+
+
+/* ios fix for modal with keyboard */
+
+.modal-ios {
+	position: absolute;
+	overflow: visible
+}
+
+/* ie10 & 11 --- also will be picked up by ie9 */
+
+html[data-useragent*='MSIE 10.0'],
+html[data-useragent*='Trident'] {
+	/* fixes here */
+}
+
+
+
+
+
