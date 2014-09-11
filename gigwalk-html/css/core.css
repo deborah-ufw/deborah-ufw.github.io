@@ -21,6 +21,13 @@ body {
 	display: none;
 }
 
+.sidenav ul a,
+.sidenav ul a:hover,
+.sidenav ul a:focus,
+.sidenav ul a:visited {
+	text-decoration: none;
+}
+
 .pointermouse {
 	cursor: pointer;
 }
@@ -37,6 +44,11 @@ body {
 
 .center {
 	text-align: center;
+}
+
+.sidenav .nav-sections {
+	padding-left: 0;
+	list-style: none;
 }
 
 .left,
@@ -56,9 +68,9 @@ header nav .number {
 	float: right;
 }
 
-header .navbar .user-info,
-header .navbar .user-image,
-header .navbar .user-info .inner,
+nav .user-info,
+nav .user-image,
+nav .user-info .inner,
 header .navbar .dropdown-toggle {
 	float: left;
 }
@@ -76,7 +88,9 @@ header .navbar-collapse.in {
 	overflow-y: visible;
 }
 
-
+.sidenav .user-info {
+	width: 100%;
+}
 
 .opacity100 {
 	filter: alpha(opacity=100);
@@ -118,12 +132,9 @@ header nav .number {
 
 /* borders */
 
-
 .borders {
 	border: 1px solid #cccccc;
 }
-
-
 
 ul.dropdown-menu li {
 	border-top: 1px solid #cccccc;
@@ -289,10 +300,36 @@ header .nav .dropdown li {
 	ul.dropdown-menu li.header {
 		margin-left: -1px;
 	}
-	
-	
-	
 
+
+/* content structure */	
+
+.main.wrapper { /* full width */
+	display: table;
+	width: 100%;
+}
+
+nav.sidenav { /* full width */
+	padding: 10px 20px;
+	display: table-cell;
+	vertical-align: top;
+	width: 265px;
+}
+
+div.main.wrapper + div.inner {
+	display: table-cell;
+	vertical-align: top;
+}
+
+/*  left sidebar heredeb */
+
+.sidenav .nav-sections {
+	 
+}
+
+ 
+
+/* content */	
 
 	
 	

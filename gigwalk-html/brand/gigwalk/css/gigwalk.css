@@ -7,16 +7,11 @@ h1 {
 	font-family: Helvetica-Neue-Light;
 }
 
-section {
-	padding: 20px;
-}
-
 .super {
 	color: #F60;
 }
 
-footer,
-nav {
+nav.tabnav {
 	background-color: rgba(0, 0, 0, .12);
 }
 
@@ -72,7 +67,8 @@ html, body {
 		color: #4a4a4a;
 	}
 	
-	.user-role {
+	.user-role,
+	.sidenav .divider {
 		color: #ababab;
 	}
 	
@@ -88,6 +84,11 @@ html, body {
 	.dropdown-menu > .disabled > a:hover, 
 	.dropdown-menu > .disabled > a:focus {
 		color: #9e9e9e;
+	}
+	
+	.sidenav ul a,
+	.sidenav ul a:visited {
+		color: #333333;
 	}
 	
 	.navbar-default .navbar-toggle:hover,
@@ -117,7 +118,12 @@ html, body {
 	
 	/* blues */
 	
-	.link {
+	.sidenav ul a:hover,
+	.sidenav ul a:focus,
+	.sidenav ul a.active,
+	.sidenav ul a.active:hover,
+	.sidenav ul a.active:focus,
+	.sidenav ul a.active:visited {
 		color: #4a90e2;
 	}
 	
@@ -155,11 +161,18 @@ html, body {
 	.navbar-default .navbar-toggle {
 		background: #000000;
 	}
+	
+	
+/* borders */
+
+.sidenav .divider {
+	border-top: 1px solid #cccccc;
+}
 
 
 /* font */
 
-.light {
+.nav-sections li.divider {
 	font-family: Helvetica-Neue-Light;
 }
 
@@ -182,8 +195,6 @@ strong {
 
 
 /* header */
-
-	/* main header nav */
 	
 	.navbar-brand {
 		margin: .3em .2em;
@@ -242,6 +253,12 @@ strong {
 		
 	}
 
+
+/* side nav */
+
+.nav-sections li.divider {
+	text-transform: uppercase;
+}
 
 
 
