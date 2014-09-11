@@ -377,11 +377,15 @@ html[data-useragent*='Trident'] {
 		width: auto;
 		background-color: #ffffff;
 		border: 1px solid rgba(0, 0, 0, .15);
+		border-top: 0;
 		-webkit-box-shadow: -2px 2px 2px rgba(0, 0, 0, .3);
 		box-shadow: -2px 2px 2px rgba(0, 0, 0, .3);
 	}
 	.navbar-nav .open .dropdown-menu > li > a {
 		padding: .4em 4em .5em 1em;
+	}
+	.navbar-nav .open .dropdown-menu > li.last > a {
+		padding-bottom: 1em;
 	}
 }
 
@@ -392,7 +396,6 @@ html[data-useragent*='Trident'] {
     float: left;
     width: auto;
     background-color: #ffffff;
-    border-top: 0;
 		border-left: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -402,10 +405,7 @@ html[data-useragent*='Trident'] {
   .navbar-nav .open .dropdown-menu > li > a {
     line-height: 20px;
   }
-  .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-nav .open .dropdown-menu > li > a:focus {
-    background-image: none;
-  }
+  
 	header .navbar-nav {
 		margin-top: 0;
 		margin-bottom: 0;
