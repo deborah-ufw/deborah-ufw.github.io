@@ -27,6 +27,19 @@ html, body {
 	font-family: Helvetica-Neue, Arial, sans-serif;
 }
 
+/* remove rounded corners */
+	
+.dropdown-menu,
+.navbar-default .navbar-toggle {
+	border-radius: 0;
+}
+	
+/* borders */
+
+.navbar-default .navbar-toggle	{
+	border: 0px solid transparent;
+}
+
 
 /* colors */
 
@@ -35,6 +48,10 @@ html, body {
 	ul.dropdown-menu li.header,
 	header nav .number {
 		color: #ffffff;
+	}
+	
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #ffffff;
 	}
 	
 	ul.dropdown-menu li.disabled {
@@ -109,7 +126,8 @@ html, body {
 		color: #08aa86;
 	}
 	
-	ul.dropdown-menu li.header {
+	ul.dropdown-menu li.header,
+	.navbar-default .navbar-toggle {
 		background: #08aa86;
 	}
 	
@@ -157,6 +175,12 @@ strong {
 		height: 51px;
 		width: 172px;
 		background: url(../images/logo-header.png) right 0 no-repeat;
+	}
+	
+	.navbar-toggle .icon-bar {
+		width: 22px;
+		height: 3px;
+		border-radius: 1px;
 	}
 	
 	

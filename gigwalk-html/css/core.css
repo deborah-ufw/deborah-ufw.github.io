@@ -98,6 +98,10 @@ header nav .number {
 	border-radius: 50%;
 }
 
+.navbar {
+	border-radius: 0;
+}
+
 /* icon positioning */
 
 .im:before {
@@ -147,12 +151,6 @@ header .nav .dropdown li {
 
 
 /* boostrap customization */
-
-	/* remove rounded corners */
-	
-	.dropdown-menu {
-		border-radius: 0;
-	}
 	
 	/* fix drop shadows */
 	
@@ -283,6 +281,97 @@ html[data-useragent*='MSIE 10.0'],
 html[data-useragent*='Trident'] {
 	/* fixes here */
 }	
+
+/* customize when bootstrap's responsive behavior kicks in */
+
+@media (min-width: 575px) {
+  .navbar-collapse {
+    width: auto;
+    border-top: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .navbar-collapse.in {
+    overflow-y: visible;
+  }
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-static-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+  }
+	
+	.navbar-header {
+		float: left;
+	}
+	
+	.navbar-toggle {
+    display: none;
+  }
+	
+	.navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .navbar-nav > li {
+    float: left;
+  }
+  .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .navbar-nav.navbar-right:last-child {
+    margin-right: -15px;
+  }
+	
+  .navbar-right {
+    float: right !important;
+  }
+	.navbar-right .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+ 
+
+}
+
+
+@media (max-width: 574px) {
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+  }
+  .navbar-nav .open .dropdown-menu > li > a {
+    line-height: 20px;
+  }
+  .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-nav .open .dropdown-menu > li > a:focus {
+    background-image: none;
+  }
+	a.navbar-brand {
+		display: none;
+	}
+	
+}
+
+
+
 	
 	
 	
