@@ -1,3 +1,6 @@
+/* ---------- APP GLYPHS CSS ---------- */
+
+
 @font-face {
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon.eot?-6lck2c');
@@ -9,7 +12,8 @@
 	font-style: normal;
 }
 
-.im {
+.im,
+.caret {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -26,7 +30,8 @@
 .icon-empty:before {
 	content: "\e60f";
 }
-.icon-arrow-down:before {
+.icon-arrow-down:before,
+.caret:before {
 	content: "\e600";
 }
 .icon-arrow-up:before {
@@ -71,3 +76,12 @@
 .icon-trash:before {
 	content: "\e60e";
 }
+
+
+
+/* paste new characters just above this line */
+
+
+
+
+/* ---------- END APP-GLYPHS.CSS ---------- */

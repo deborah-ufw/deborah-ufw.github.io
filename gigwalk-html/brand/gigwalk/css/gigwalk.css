@@ -32,7 +32,8 @@ html, body {
 
 	/* white */
 	
-	ul.dropdown-menu li.header {
+	ul.dropdown-menu li.header,
+	header nav .number {
 		color: #ffffff;
 	}
 	
@@ -66,14 +67,15 @@ html, body {
 		background: #dfdfdf;
 	}
 	
+	.navbar-default .navbar-nav > li > a.dropdown-toggle,
+	.navbar-default .navbar-nav > .open > a, 
+	.navbar-default .navbar-nav > .open > a:hover, 
+	.navbar-default .navbar-nav > .open > a:focus, 
 	.dropdown-menu > .disabled > a, 
 	.dropdown-menu > .disabled > a:hover, 
 	.dropdown-menu > .disabled > a:focus {
 		color: #9e9e9e;
 	}
-	
-	
-	
 	
 	
 	/* reds */
@@ -92,7 +94,7 @@ html, body {
 		color: #4a90e2;
 	}
 	
-	.dropdown-blue {
+	header nav .number {
 		background: #4a90e2;
 	}
 	
@@ -102,8 +104,17 @@ html, body {
 	
 	/* greens */
 	
+	header .nav li.alerts .im,
+	header .nav li.messages .im {
+		color: #08aa86;
+	}
+	
 	ul.dropdown-menu li.header {
 		background: #08aa86;
+	}
+	
+	header .nav li {
+		border-left: 1px solid rgba(0, 169, 133, .3)
 	}
 	
 	/* purple */
@@ -147,21 +158,6 @@ strong {
 		width: 172px;
 		background: url(../images/logo-header.png) right 0 no-repeat;
 	}
-	
-	/* user dropdown */
-	
-	
-	.user-image {
-		height: 35px;
-		width: 35px;
-		background-size: 100%;
-	}
-	
-	ul.dropdown-menu li.header {
-		margin-top: -5px;
-		margin-left: -1px;
-	}
-	
 	
 	
 
