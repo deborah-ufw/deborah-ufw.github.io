@@ -392,15 +392,14 @@ html[data-useragent*='Trident'] {
 
 @media (max-width: 574px) {
   .navbar-nav .open .dropdown-menu {
-    position: absolute;
+    position: static;
     float: left;
-    width: auto;
+    width: 100%;
     background-color: #ffffff;
-		border-left: 0;
+		border: 0;
     -webkit-box-shadow: none;
-            box-shadow: none;
-		/* really had to thrash the positioning */
-		left: -156px;				
+            box-shadow: none;	
+		clear: both;			
   }
   .navbar-nav .open .dropdown-menu > li > a {
     line-height: 20px;
@@ -410,14 +409,14 @@ html[data-useragent*='Trident'] {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-	header .nav li {
+	header .nav li.buttonly {
 		display: inline-block;
 		float: left;
 	}
-	header .nav li.dropdown.open,
-	header .nav li.dropdown.open li {
-		display: block;
+	header nav .dropdown.open {
+		background: transparent;
 	}
+	
 	header .nav li.dropdown.open li {
 		width: 100%;
 	}

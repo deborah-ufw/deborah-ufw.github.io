@@ -221,19 +221,26 @@ strong {
 			background-color: #fbfbfb;
 		}
 		header .nav li {
-			border-left: 1px solid #cccccc;
+			border-left: 0;
+			border-right: 1px solid #cccccc;
+		}
+		header .nav li.dropdown {
+			border-right: 0;
 		}
 		.navbar-default .navbar-toggle:hover,
 		.navbar-default .navbar-toggle:focus {
 			background: #909090;
 		}
+		header nav .dropdown.open {
+			padding-left: 0;
+			background: transparent;
+			border-left: 0;
+		}
+		header nav .dropdown .user-info {
+			margin-left: 15px;
+		}
 		
 	}
-	
-
-/* heredeb */
-
-
 
 
 
