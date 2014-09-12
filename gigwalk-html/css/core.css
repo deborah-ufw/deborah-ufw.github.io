@@ -47,9 +47,11 @@ a.navly {
 .clearfix:after,
 .section.title:after,
 .group:after,
+.repeats-selection:after,
+.sidenav .user-info:after,
 .repeats.group:before,
-.repeats-selection:after {
-		content: ' ';
+.sidenav ul.nav-sections:before {
+	 content: ' ';
 	 visibility: hidden;
 	 display: block;
 	 font-size: 0;
@@ -98,7 +100,13 @@ header .navbar .dropdown-toggle {
 header nav li a,
 header nav li a .im,
 .tabnav li.buttonly,
-.tabnav li.buttonly a {
+.tabnav li.buttonly a,
+.date.group,
+.date.group div,
+.date.group input,
+.editable,
+.editable:after,
+.date.group:after {
 	position: relative;
 }
 
@@ -148,8 +156,19 @@ header nav .number {
 	border-radius: 50%;
 }
 
-.navbar,
-.datepicker {
+/* colors */
+
+.editable:after,
+.desktop .editable:hover:after {
+	color: #cbcbcb;
+}
+
+.desktop .editable:after,
+.desktop .date.group:after {
+	color: #ffffff;
+}
+
+.navbar {
 	border-radius: 0;
 }
 
@@ -171,6 +190,16 @@ header nav .number {
 .dropdown .im:before {
 	margin-right: .1em;
 }
+
+.editable:after {
+	padding-left: 5px;
+}
+
+.date .wrapper.editable:after {
+	padding-left: 0;
+		right: 25px;
+}
+
 
 /* borders */
 
@@ -440,6 +469,15 @@ input[type="textarea"] {
 	padding: 4px;
 }
 
+input.datepicker {
+	padding-right: 15px;
+	width: 205px;
+}
+
+.editable .datepicker {
+	border-color: transparent;
+}
+
 /* content */
 
 /* project builder top */
@@ -476,19 +514,9 @@ input[type="textarea"] {
 	width: 100px;
 }
 
-.date.group,
-.date.group div,
-.date.group input {
-	position: relative;
-}
-
 .date.group .plainLabel {
 	margin-right: 10px;
 	top: 7px;
-}
-
-.datepicker.editable {
-	border-color: transparent;
 }
 
 .repeats-selection {

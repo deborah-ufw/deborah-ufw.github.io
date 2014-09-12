@@ -25,7 +25,11 @@ html, body {
 /* remove rounded corners */
 	
 .dropdown-menu,
-.navbar-default .navbar-toggle {
+.navbar-default .navbar-toggle,
+.datepicker,
+.datepicker td, 
+.datepicker th,
+.datepicker td span {
 	border-radius: 0;
 }
 	
@@ -148,6 +152,32 @@ html, body {
 		background: #4890e2;
 	}
 	
+	.datepicker td.active, 
+	.datepicker td.active.active,
+	.datepicker td.active:hover,
+	.datepicker td span.active,
+	.datepicker td.active:hover,
+	.datepicker td.active:hover:hover,
+	.datepicker td.active:focus,
+	.datepicker td.active:hover:focus,
+	.datepicker td.active:active,
+	.datepicker td.active:hover:active,
+	.datepicker td.active.active,
+	.datepicker td.active:hover.active,
+	.datepicker td.active.disabled,
+	.datepicker td.active:hover.disabled,
+	.datepicker td.active[disabled],
+	.datepicker td.active:hover[disabled],
+	.datepicker td span.active:hover, 
+	.datepicker td span.active:focus, 
+	.datepicker td span.active:active, 
+	.datepicker td span.active.active, 
+	.datepicker td span.active.disabled, 
+	.datepicker td span.active[disabled] {
+		background-color: #4890e2;
+		background-image: none;
+	}
+	
 	header nav .dropdown.open {
 		background: rgba(74, 144, 226, .2);
 	}
@@ -232,7 +262,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	font-family: Helvetica-Neue-Medium;
 }
 
-strong {
+.datepicker tr th.switch {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }

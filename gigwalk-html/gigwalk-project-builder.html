@@ -161,7 +161,6 @@
         <div class="user-edit"><a class="link" href="#">Edit profile</a></div>
       </div>
     </div><!-- ends user info -->
-    <div class="clearit"></div>
     
     <ul class="nav-sections">
       <li class="active"><a href="#">Projects</a></li>
@@ -211,17 +210,21 @@
         
         <div class="date group">
           <div class="plainLabel">Start Date</div>
-          <input type="text" value="Monday 06/30/2014" class="datepicker editable first" data-date-format="mm/dd/yyyy" />
+          <div class="wrapper editable">
+            <input type="text" value="Monday 06/30/2014" class="datepicker first" data-date-format="mm/dd/yyyy" />
+          </div>
         </div>
         <div class="date group">
           <div class="plainLabel">End Date</div>
-          <input type="text" value="Wednesday 07/02/2014" class="datepicker editable" data-date-format="mm/dd/yyyy"/>
+          <div class="wrapper editable">
+            <input type="text" value="Wednesday 07/02/2014" class="datepicker" data-date-format="mm/dd/yyyy" />
+          </div>
         </div>
         
         <div class="repeats group">
           <div class="repeats-selection">
             <div class="plainLabel">Repeats</div>
-            <div class="value repeats-setter">Never</div>
+            <div class="value repeats-setter editable">Never</div>
           </div>
           
           <div class="set-repeats">

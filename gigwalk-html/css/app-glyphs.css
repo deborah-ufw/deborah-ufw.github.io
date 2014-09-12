@@ -13,7 +13,8 @@
 }
 
 .im,
-.caret {
+.caret,
+.editable:after {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -55,6 +56,7 @@
 .icon-duplicate:before {
 	content: "\e607";
 }
+.editable:after,
 .icon-edit:before {
 	content: "\e608";
 }
