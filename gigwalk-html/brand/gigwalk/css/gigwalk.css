@@ -72,7 +72,8 @@ html, body {
 	
 	/* grays */
 	
-	body {
+	body,
+	a.navly {
 		color: #4a4a4a;
 	}
 	
@@ -131,7 +132,9 @@ html, body {
 	
 	/* blues */
 	
-	a.link,
+	 a.link,
+	 a.navly:hover,
+	 a.navly:focus,
 	.sidenav ul a:hover,
 	.sidenav ul a:focus,
 	.sidenav ul .active a,
@@ -224,7 +227,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	font-family: Helvetica-Neue;
 }
 
-.sidenav .user-name {
+.sidenav .user-name,
+.section.title .ti {
 	font-family: Helvetica-Neue-Medium;
 }
 

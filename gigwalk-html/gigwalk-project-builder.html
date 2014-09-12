@@ -204,30 +204,26 @@
       
       <div class="project top">
       
-        <div class="title">
-          <div class="navly">All Drafts</div>
+        <div class="section title">
+          <a class="navly">All Drafts</a>
           <div class="ti editable">Gluten-Free Soy Sauce at Wal-Mart</div>
         </div>
         
-        <form class="editable">
         <div class="date group">
           <div class="plainLabel">Start Date</div>
-          <div class="value editable">
-            <!--  deborah to-do datepicker -->
-            <input type="text" value="Monday 06/30/2014" />
-          </div>
+          <input type="text" value="Monday 06/30/2014" class="datepicker editable first" data-date-format="mm/dd/yyyy" />
         </div>
         <div class="date group">
           <div class="plainLabel">End Date</div>
-          <div class="value editable">
-            <!--  deborah to-do datepicker -->
-            <input type="text" value="Wednesday 07/02/2014"/>
-          </div>
+          <input type="text" value="Wednesday 07/02/2014" class="datepicker editable" data-date-format="mm/dd/yyyy"/>
         </div>
         
         <div class="repeats group">
-          <div class="plainLabel">Repeats</div>
-          <div class="value">Never</div>
+          <div class="repeats-selection">
+            <div class="plainLabel">Repeats</div>
+            <div class="value repeats-setter">Never</div>
+          </div>
+          
           <div class="set-repeats">
             <div class="checker">
               <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>Repeats</label>

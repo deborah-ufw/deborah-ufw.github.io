@@ -49,6 +49,16 @@ $(document).ready(function() {
     });
 	});
 	
+	//******** datepicker ******** //	
+	
+	$('.datepicker').datepicker()
+	
+	
+	//******** repeats ******** //	
+	$('.repeats-setter').click(function() {
+		$('.set-repeats').show();
+	});
+	
 	
 });
 

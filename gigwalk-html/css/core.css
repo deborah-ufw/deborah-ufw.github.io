@@ -17,7 +17,9 @@ body {
 	font-size: 1.4em;
 }
 
-.header nav .user-edit {
+.hide,
+.header nav .user-edit,
+.set-repeats {
 	display: none;
 }
 
@@ -28,11 +30,13 @@ label {
 nav li a,
 nav li a:hover,
 nav li a:focus,
-nav li a:visited {
+nav li a:visited,
+a.navly {
 	text-decoration: none;
 }
 
-.pointermouse {
+.hellomouse,
+.editable:hover {
 	cursor: pointer;
 }
 
@@ -40,10 +44,17 @@ nav li a:visited {
 	cursor: default;
 }
 
-.clearit:after {
-  content: ' ';
-	display: block;
-	clear: both;
+.clearfix:after,
+.section.title:after,
+.group:after,
+.repeats.group:before,
+.repeats-selection:after {
+		content: ' ';
+	 visibility: hidden;
+	 display: block;
+	 font-size: 0;
+	 clear: both;
+	 height: 0;
 }
 
 .center {
@@ -137,7 +148,8 @@ header nav .number {
 	border-radius: 50%;
 }
 
-.navbar {
+.navbar,
+.datepicker {
 	border-radius: 0;
 }
 
@@ -402,7 +414,7 @@ div.main.wrapper + div.inner {
 	padding: 3px 0 10px 0;
 }
 
-/*  top tabbed nav heredeb */
+/*  top tabbed nav */
 
 .tabnav li a {
 	font-size: 1.2em;
@@ -420,12 +432,86 @@ div.main.wrapper + div.inner {
 	left: 5px;
 }
 
+/* form parts */
+
+input[type="text"],
+input[type="textarea"] {
+	margin-top: 1px;
+	padding: 4px;
+}
+
+/* content */
+
+/* project builder top */
+
+.section.title {
+	font-size: 1.4em;
+	margin-bottom: 1.5em;
+}
+
+.section.title .navly,
+.section.title .ti,
+.date.group,
+.date.group div,
+.group .plainLabel,
+.group .value {
+	float: left;
+}
+
+.group {
+	font-size: 1.15em;
+}
+
+.description .value {
+	font-size: .95em;
+}
+
+.group .plainLabel {
+	margin-right: 15px;
+}
+
+.plainLabel {
+	text-align: right;
+	margin-right: 10px;
+	width: 100px;
+}
+
+.date.group,
+.date.group div,
+.date.group input {
+	position: relative;
+}
+
+.date.group .plainLabel {
+	margin-right: 10px;
+	top: 7px;
+}
+
+.datepicker.editable {
+	border-color: transparent;
+}
+
+.repeats-selection {
+	margin: .5em 0 1em 0;
+}
+
+
+/* heredeb */
+
+
 
  
 
-/* content */	
+/* project builder responsive reformat */
 
-	
+@media (min-width: 575px) {
+
+	.section.title .navly:after {
+		content: '/';
+		padding: 0 .3em;
+	}
+
+}
 	
 /* ios fix for modal with keyboard */
 
