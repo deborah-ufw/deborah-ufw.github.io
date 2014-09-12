@@ -140,7 +140,10 @@ html, body {
 	/* blues */
 	
 	 a.link,
+	 a.link:hover,
 	 a.navly:hover,
+	 .dropdown-menu > li > a.link,
+	 .dropdown-menu > li > a.link:hover,
 	 a.navly:focus,
 	.sidenav ul a:hover,
 	.sidenav ul a:focus,

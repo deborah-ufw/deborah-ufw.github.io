@@ -32,7 +32,9 @@ nav li a:hover,
 nav li a:focus,
 nav li a:visited,
 a.navly,
-.remove {
+.remove,
+.dropdown-menu .link,
+.dropdown-menu .link:hover {
 	text-decoration: none;
 }
 
@@ -160,6 +162,10 @@ header nav .number {
 
 /* colors */
 
+ .dropdown-menu > li > a.link:hover {
+	 background-color: transparent;
+ }
+
 .editable:after,
 .desktop .editable:hover:after {
 	color: #cbcbcb;
@@ -282,7 +288,7 @@ header .nav .dropdown li {
 	}
 	 
 	
-	/* dropdowns */
+	/* form parts */
 	
 	.navbar-default .navbar-nav > .open > a, 
 	.navbar-default .navbar-nav > .open > a:hover, 
@@ -326,6 +332,40 @@ header .nav .dropdown li {
 		width: 1em;
 		height: 1em;
 		vertical-align: top;
+	}
+	
+	.dropdown-menu > li > a.link,
+	.content .dropdown-menu > li > a.link {
+		padding-top: .2em;
+		padding-bottom: .9em;
+	}
+	
+	.btn.btn-default.dropdown-toggle {
+		text-align: left;
+		font-size: 1em;
+		width: 275px;
+	}
+	
+	.btn.btn-default.dropdown-toggle .caret {
+		font-size: 1.7em;
+		margin-bottom: -5px;
+		float: right;
+	}
+	
+	input[type="text"],
+	input[type="textarea"] {
+		margin-top: 1px;
+		padding: 4px;
+	}
+	
+	input.datepicker {
+		margin-bottom: -10px;
+		padding-right: 15px;
+		width: 205px;
+	}
+	
+	.editable .datepicker {
+		border-color: transparent;
 	}
 	
 
@@ -431,7 +471,7 @@ div.main.wrapper + div.inner {
 }
 
 .nav-sections {
-	font-size: 1.2em;
+	font-size: 1.15em;
 }
 
 .nav-sections li {
@@ -464,35 +504,6 @@ div.main.wrapper + div.inner {
 	left: 5px;
 }
 
-/* form parts */
-
-input[type="text"],
-input[type="textarea"] {
-	margin-top: 1px;
-	padding: 4px;
-}
-
-input.datepicker {
-	margin-bottom: -10px;
-	padding-right: 15px;
-	width: 205px;
-}
-
-.editable .datepicker {
-	border-color: transparent;
-}
-
-.btn.btn-default.dropdown-toggle {
-	text-align: left;
-	font-size: 1.05em;
-	width: 275px;
-}
-
-.btn.btn-default.dropdown-toggle .caret {
-	font-size: 1.7em;
-	margin-bottom: -5px;
-	float: right;
-}
 
 /* content */
 
@@ -520,8 +531,17 @@ input.datepicker {
 	font-size: 1.15em;
 }
 
+.group .dropdown-menu,
 .group .sub {
-	margin-left: 115px;
+	width: 300px;
+}
+
+.group .sub {
+	margin-left: 115px; 
+}
+
+.group .dropdown-menu {
+		left: 114px;
 }
 
 .remove {
@@ -554,6 +574,13 @@ input.datepicker {
 
 .project .description.group {
 	padding-bottom: 2.5em;
+}
+
+.content .dropdown-menu li a {
+	line-height: 1.2em;
+	padding-top: .8em;
+	padding-bottom: .5em;
+	white-space: normal;
 }
 
 
