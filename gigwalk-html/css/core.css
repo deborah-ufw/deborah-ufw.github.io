@@ -220,8 +220,13 @@ header .nav ul.dropdown-menu li {
 }
 
 header nav.navbar-default,
-.project .description.group {
+.project .description.group,
+.group .sub {
 	border-bottom: 1px solid #cccccc;
+}
+
+.group .sub.last {
+	border-bottom-width: 0;
 }
 
 .tabnav li.buttonly a {
@@ -296,6 +301,10 @@ header .nav .dropdown li {
 		background-color: transparent;
 	}
 	
+	header .dropdown-menu > li > a {
+		padding: .4em 4em .5em 1em;
+	}
+	
 	header .nav ul.dropdown li {
 		 padding: 0 0 0 0;
 	}
@@ -307,10 +316,6 @@ header .nav .dropdown li {
 	
 	.dropdown-menu {
 		padding: 0 0 0 0;
-	}
-	
-	.dropdown-menu > li > a {
-		padding: .4em 4em .5em 1em;
 	}
 	
 	.dropdown-menu > li.last > a {
@@ -343,7 +348,7 @@ header .nav .dropdown li {
 	.btn.btn-default.dropdown-toggle {
 		text-align: left;
 		font-size: 1em;
-		width: 275px;
+		width: 300px;
 	}
 	
 	.btn.btn-default.dropdown-toggle .caret {
@@ -531,6 +536,11 @@ div.main.wrapper + div.inner {
 	font-size: 1.15em;
 }
 
+.group .dropdown {
+	margin-bottom: .3em;
+		top: -4px;
+}
+
 .group .dropdown-menu,
 .group .sub {
 	width: 300px;
@@ -541,11 +551,18 @@ div.main.wrapper + div.inner {
 }
 
 .group .dropdown-menu {
-		left: 114px;
+	left: 115px;
+}
+
+.group .sub .selected-item {
+	line-height: 1em;
+	padding: 14px 0 12px 0;
+	width: 245px;
 }
 
 .remove {
 	font-size: .75em;
+	padding-top: 13px;
 }
 
 .repeats-selection,
@@ -578,8 +595,6 @@ div.main.wrapper + div.inner {
 
 .content .dropdown-menu li a {
 	line-height: 1.2em;
-	padding-top: .8em;
-	padding-bottom: .5em;
 	white-space: normal;
 }
 
