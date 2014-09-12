@@ -27,11 +27,13 @@
 
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
 <script src="js/interactions.js"></script>
 
 <link href="css/bootstrap.css" media="screen" rel="stylesheet" />
 <link href="css/font-awesome.css" media="screen" rel="stylesheet" />
 <link href="css/app-glyphs.css" media="screen" rel="stylesheet" />
+<link href="css/datepicker.css" media="screen" rel="stylesheet" />
 <link href="css/core.css" media="screen" rel="stylesheet" />
 
 <!-- Brand CSS
@@ -194,7 +196,271 @@
     
     <!-- the content under the tabs -->
     <div class="content">
-      Top nav is perfected for responsive.
+      <div class="super">
+        Top nav is perfected for responsive. <br />
+        Sidenav and tabbed nav are not responsive yet. <br />
+        
+      </div>
+      
+      <div class="project top">
+      
+        <div class="title">
+          <div class="navly">All Drafts</div>
+          <div class="ti editable">Gluten-Free Soy Sauce at Wal-Mart</div>
+        </div>
+        
+        <form class="editable">
+        <div class="date group">
+          <div class="plainLabel">Start Date</div>
+          <div class="value editable">
+            <!--  deborah to-do datepicker -->
+            <input type="text" value="Monday 06/30/2014" />
+          </div>
+        </div>
+        <div class="date group">
+          <div class="plainLabel">End Date</div>
+          <div class="value editable">
+            <!--  deborah to-do datepicker -->
+            <input type="text" value="Wednesday 07/02/2014"/>
+          </div>
+        </div>
+        
+        <div class="repeats group">
+          <div class="plainLabel">Repeats</div>
+          <div class="value">Never</div>
+          <div class="set-repeats">
+            <div class="checker">
+              <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>Repeats</label>
+            </div> 
+            
+           <select class="custom time-increment">
+              <option value="Daily">Daily</option>
+              <option value="Daily">Daily</option>
+              <option value="Weekly" selected="selected">Weekly</option>
+              <option value="Monthly" >Monthly</option>
+              <option value="Yearly" >Yearly</option>
+           </select>
+           
+           <div class="every">
+            <span class="plainLabel">Every</span>
+            <select class="custom increment-value">
+              <option value="1" selected="selected">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            
+            <span class="plainLabel">Weeks</span>
+          </div>
+            
+            <div class="ends">
+              <div class="radios">
+                <input type="radio" name="ends">
+                <label class="plainLabel">Never</label>
+              </div>
+              <div class="radios">
+                <input type="radio" checked="checked" name="ends">
+                <label class="plainLabel">After</label>
+                <input type="text" class="ends-after"/>
+                <label class="plainLabel">times</label>
+              </div>
+              <div class="radios">
+                <input type="radio" checked="checked" name="ends">
+                <label class="plainLabel">On</label>
+                <!--  deborah to-do datepicker -->
+                <input type="text" class="ends-on"/>
+              </div>
+            </div>
+            <div class="summary">
+              <div class="plainLabel">Summary</div>
+              <div class="summary-dynamic">Repeats weekly, ends never.</div>
+            </div>
+              
+          </div>
+        </div><!-- ends repeats group -->
+        
+        <div class="description group">
+          <div class="plainLabel">Description</div>
+          <div class="value">
+            This is a standard new-product cut-in for Kikkoman Gluten-Free soy sauce.
+          </div>
+        </div>  
+        
+        <!-- locations -->
+        <div class="locations group">
+          <div class="inner">
+            <div class="plainLabel">Locations</div>
+            <div class="dropdown custom">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Select from saved lists
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 1</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 3 with an ultra super-long extremely wordy title</a></li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Create or edit saved lists</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- --------------------------------------------------------
+                Dave Valerie to-do
+                Add "first" and "last" classes to divs with class "sub"
+                showing dropdown selection (need this to manage dividers)
+          ----------------------------------------------------------- -->
+          <div class="sub first">
+            <div class="selected-item">Charlotte Wal-Marts</div>
+            <a class="remove" href="#">Remove</a>
+          </div>
+          <div class="sub">
+            <div class="selected-item">Eastern Seaboard Long Title Whole Foods Markets and Lunardi's</div>
+            <a class="remove" href="#">Remove</a>
+          </div>
+          <div class="sub last">
+            <div class="selected-item">Charlotte Wal-Marts</div>
+            <a class="remove" href="#">Remove</a>
+          </div>
+        </div>
+        
+        <!-- skills or equipment -->
+        <div class="skills group">
+          <div class="inner">
+            <div class="plainLabel">Required Skills or Equipment</div>
+            <div class="dropdown custom">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Select from options
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              
+                <!-- --------------------------------------------------------
+                    Dave Valerie to-do
+                    Don't show the divider or header for skills and equipment 
+                    if there are no skills in the list to select 
+                    (don't need dividers and headers if list is all equipment) 
+                  ----------------------------------------------------------- -->
+                <li role="presentation" class="divider skills"></li>
+                <li role="presentation" class="dropdown-header skills">Skills</li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Skill 1</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Skill 2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Skill 3</a></li>
+                <li role="presentation" class="divider equipment"></li>
+                <li role="presentation" class="dropdown-header equipment">Equipment</li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Equipment 1</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Equipment 2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Equipment 3</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="sub first">
+            <div class="selected-item">Wal-Mart Certified</div>
+            <a class="remove" href="#">Remove</a>
+          </div>
+          <div class="sub last">
+            <div class="selected-item">4+ Megapixel Camera</div>
+            <a class="remove" href="#">Remove</a>
+          </div>
+          <div class="sub more-info">
+            <div class="checker">
+              <label class="plainLabel">
+                <input type="checkbox" class="supercheck" value="repeats" />
+                Requires multiple workers
+              </label>
+            </div> 
+            <input type="text" placeholder="ex. 2" />
+          </div>
+        </div>
+        
+        <!-- clients -->
+        <div class="clients group">
+          <div class="inner">
+            <div class="plainLabel">Clients</div>
+            <div class="dropdown custom">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Select from options
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Client 1</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Client 2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Client 3</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="sub first last">
+            <div class="selected-item">Kikkoman</div>
+            <a class="remove" href="#">Remove</a>
+          </div>
+          <div class="sub more-info">
+            <div class="adjacent">
+              <input type="radio" checked="checked" name="Bill">
+              <label class="plainLabel">Bill %</label>
+              <input type="text" placeholder="ex. 80" />
+              <input type="radio" checked="" name="Bill">
+              <label class="plainLabel">Bill by hours</label>
+            </div> 
+          </div>
+        </div>
+        
+        <!-- group -->
+        <div class="clients group">
+          <div class="inner">
+            <div class="plainLabel">Group</div>
+            <div class="dropdown custom">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Select from options
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Group 1</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Group 2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Group 3</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="sub first last">
+            <div class="selected-item">Wal-Mart Dedicated</div>
+            <a class="remove" href="#">Remove</a>
+          </div>
+          <div class="sub more-info">
+            <div class="checker">
+              <label class="plainLabel">
+                <input type="checkbox" class="supercheck" value="repeats" />
+                Requires multiple workers
+              </label>
+            </div> 
+            <input type="text" placeholder="ex. 2" />
+          </div>
+        </div>
+        
+        <!-- additional info -->
+        <div class="additional group">
+          <div class="plainLabel">Additional Options</div>
+          <div class="checker">
+            <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>Do not reschedule</label>
+          </div> 
+          <div class="checker">
+            <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>Manually assign</label>
+          </div> 
+        </div>
+        
+        
+      </div><!-- end project top -->
+      
+      <div class="instructions project bottom">Instructions</div>
+      
+      
     </div><!-- ends tabbed content -->
     
   </div><!-- ends right side -->

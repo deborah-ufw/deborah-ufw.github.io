@@ -41,9 +41,15 @@ $(document).ready(function() {
 		});
 	}
 	
-	//******** device detection and class assignment ******** //	
+	//******** hints ******** //	
 	
-  
+	$(function () {
+    $('.hint').popover({
+        selector: '[data-toggle="popover"]'
+    });
+	});
+	
+	
 });
 
 
