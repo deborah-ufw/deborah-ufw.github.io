@@ -31,7 +31,8 @@ nav li a,
 nav li a:hover,
 nav li a:focus,
 nav li a:visited,
-a.navly {
+a.navly,
+.remove {
 	text-decoration: none;
 }
 
@@ -50,7 +51,8 @@ a.navly {
 .repeats-selection:after,
 .sidenav .user-info:after,
 .repeats.group:before,
-.sidenav ul.nav-sections:before {
+.sidenav ul.nav-sections:before,
+.group .sub:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -207,11 +209,12 @@ header nav .number {
 	border: 1px solid #cccccc;
 }
 
-ul.dropdown-menu li {
+header .nav ul.dropdown-menu li {
 	border-top: 1px solid #cccccc;
 }
 
-header nav.navbar-default {
+header nav.navbar-default,
+.project .description.group {
 	border-bottom: 1px solid #cccccc;
 }
 
@@ -470,6 +473,7 @@ input[type="textarea"] {
 }
 
 input.datepicker {
+	margin-bottom: -10px;
 	padding-right: 15px;
 	width: 205px;
 }
@@ -478,13 +482,24 @@ input.datepicker {
 	border-color: transparent;
 }
 
+.btn.btn-default.dropdown-toggle {
+	text-align: left;
+	font-size: 1.05em;
+	width: 275px;
+}
+
+.btn.btn-default.dropdown-toggle .caret {
+	font-size: 1.7em;
+	margin-bottom: -5px;
+	float: right;
+}
+
 /* content */
 
 /* project builder top */
 
 .section.title {
 	font-size: 1.4em;
-	margin-bottom: 1.5em;
 }
 
 .section.title .navly,
@@ -492,13 +507,31 @@ input.datepicker {
 .date.group,
 .date.group div,
 .group .plainLabel,
-.group .value {
+.group .value,
+.sub .selected-item {
 	float: left;
+}
+
+.sub .remove {
+	float: right;
 }
 
 .group {
 	font-size: 1.15em;
 }
+
+.group .sub {
+	margin-left: 115px;
+}
+
+.remove {
+	font-size: .75em;
+}
+
+.repeats-selection,
+.group {
+	margin-top: 1.3em;
+} 
 
 .description .value {
 	font-size: .95em;
@@ -519,9 +552,11 @@ input.datepicker {
 	top: 7px;
 }
 
-.repeats-selection {
-	margin: .5em 0 1em 0;
+.project .description.group {
+	padding-bottom: 2.5em;
 }
+
+
 
 
 /* heredeb */

@@ -29,7 +29,8 @@ html, body {
 .datepicker,
 .datepicker td, 
 .datepicker th,
-.datepicker td span {
+.datepicker td span,
+.btn {
 	border-radius: 0;
 }
 	
@@ -54,7 +55,8 @@ html, body {
 	
 	ul.dropdown-menu li.header,
 	header nav .number,
-	.tabnav li a {
+	.tabnav li a,
+	.btn.btn-default.dropdown-toggle {
 		color: #ffffff;
 	}
 	
@@ -126,7 +128,8 @@ html, body {
 	
 	/* reds */
 	
-	.remove {
+	.remove,
+	.remove:hover {
 		color: #db2023;
 	}
 	
@@ -150,6 +153,10 @@ html, body {
 	
 	header nav .number {
 		background: #4890e2;
+	}
+	
+	.btn.btn-default.dropdown-toggle {
+		background-color: #4890e2;
 	}
 	
 	.datepicker td.active, 
@@ -245,6 +252,10 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	border-top: 1px solid #cccccc;
 }
 
+.btn.btn-default.dropdown-toggle {
+	border-width: 0px;
+}
+
 
 /* fonts */
 
@@ -258,7 +269,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 }
 
 .sidenav .user-name,
-.section.title .ti {
+.section.title .ti,
+.remove {
 	font-family: Helvetica-Neue-Medium;
 }
 
@@ -330,11 +342,6 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 		}
 		
 	}
-
-
-/* tab nav heredeb */
-
-
 
 
 
