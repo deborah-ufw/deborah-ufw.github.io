@@ -552,6 +552,11 @@ div.main.wrapper + div.inner {
 	padding-bottom: 1em;
 }
 
+.group.date, 
+.group.repeats {
+	padding-bottom: 0;
+}
+
 .group .dropdown {
 	margin-bottom: .3em;
 		top: -4px;
