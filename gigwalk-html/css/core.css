@@ -31,7 +31,6 @@ label {
 	text-align: center;
 }
 
-.content .dropdown-menu li a,
 .group .sub .selected-item,
 .description .value,
 .plainLabel {
@@ -179,6 +178,10 @@ header nav .number {
  .dropdown-menu > li > a.link:hover {
 	 background-color: transparent;
  }
+ 
+ .dropdown-header {
+		color: #ababab; 
+ }
 
 .editable:after,
 .desktop .editable:hover:after {
@@ -215,6 +218,7 @@ header nav .number {
 
 .editable:after {
 	padding-left: 5px;
+		top: 1px;
 }
 
 .date .wrapper.editable:after {
@@ -225,7 +229,8 @@ header nav .number {
 
 /* borders */
 
-.borders {
+input[type="text"],
+input[type="textarea"] {
 	border: 1px solid #cccccc;
 }
 
@@ -333,20 +338,17 @@ header .nav .dropdown li {
 		padding: .3em .5em .5em 1em;
 	}
 	
-	.dropdown-menu {
-		padding: 0 0 0 0;
-	}
-	
-	.dropdown-menu > li.last > a {
-		padding-bottom: 1em;
-	}
-	
 	header nav .dropdown li a .im {
 		top: .3em;
 	}
 	
 	.nav > li > a.dropdown-toggle {
 		padding-top: .3em;
+	}
+	
+	.dropdown-header {
+		font-size: 1em;
+		padding-left: 12px;
 	}
 	
 	.caret {
@@ -356,12 +358,6 @@ header .nav .dropdown li {
 		width: 1em;
 		height: 1em;
 		vertical-align: top;
-	}
-	
-	.dropdown-menu > li > a.link,
-	.content .dropdown-menu > li > a.link {
-		padding-top: .2em;
-		padding-bottom: .9em;
 	}
 	
 	.btn.btn-default.dropdown-toggle {
@@ -589,6 +585,10 @@ div.main.wrapper + div.inner {
 	margin-top: 1.3em;
 } 
 
+.repeats-setter.value {
+	top: -2px;
+}
+
 .description .value {
 	font-size: .95em;
 	float: none;
@@ -607,7 +607,7 @@ div.main.wrapper + div.inner {
 
 .date.group .plainLabel {
 	margin-right: 10px;
-	top: 7px;
+	top: 8px;
 }
 
 .project .description.group {
