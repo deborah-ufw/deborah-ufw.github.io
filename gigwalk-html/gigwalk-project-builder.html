@@ -194,14 +194,15 @@
     </nav>
     
     <!-- the content under the tabs -->
-    <div class="content">
+    <div class="content project">
       <div class="super">
         Top nav is perfected for responsive. <br />
         Sidenav and tabbed nav are not responsive yet. <br />
         
       </div>
       
-      <div class="project top">
+      
+      <div class="settings">
       
         <div class="section title">
           <a class="navly">All Drafts</a>
@@ -232,7 +233,7 @@
               <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>Repeats</label>
             </div> 
             
-           <select class="custom time-increment">
+           <select class="time-increment">
               <option value="Daily">Daily</option>
               <option value="Daily">Daily</option>
               <option value="Weekly" selected="selected">Weekly</option>
@@ -242,7 +243,7 @@
            
            <div class="every">
             <span class="plainLabel">Every</span>
-            <select class="custom increment-value">
+            <select class="increment-value">
               <option value="1" selected="selected">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -294,7 +295,7 @@
         <!-- locations -->
         <div class="group locations">
             <div class="plainLabel">Locations</div>
-            <div class="dropdown custom">
+            <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                 Select from saved lists
                 <span class="caret"></span>
@@ -330,7 +331,7 @@
         <!-- skills or equipment -->
         <div class="group skills">
             <div class="plainLabel">Required Skills or Equipment</div>
-            <div class="dropdown custom">
+            <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                 Select from options
                 <span class="caret"></span>
@@ -377,7 +378,7 @@
         <!-- clients -->
         <div class="group clients">
             <div class="plainLabel">Clients</div>
-            <div class="dropdown custom">
+            <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                 Select from options
                 <span class="caret"></span>
@@ -411,7 +412,7 @@
         <!-- group -->
         <div class="group group">
             <div class="plainLabel">Group</div>
-            <div class="dropdown custom">
+            <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                 Select from options
                 <span class="caret"></span>
@@ -456,12 +457,95 @@
         </div>
         
         
-      </div><!-- end project top -->
+      </div><!-- ends project settings -->
       
-      <div class="instructions project bottom">Instructions</div>
+      <!-- project instructions -->
+      <div class="instructions">
+        <div class="ti">Instructions</div>
+        
+        <div class="expander"><a class="buttonly" href="#">All<span class="im icon-expand-all"></span></a></div>
+        
+        <!-- first instruction in incomplete edit mode -->
+        <div class="instruction edit-mode required incomplete">
+          
+          <div class="header">
+            <div class="controls">
+              <div class="ti">Question</div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-dragger"></span></div>
+            </div>
+            <div class="actions">
+              <div class="ti">Inventory Check</div>
+              <div class="destroy"><span class="im icon-close"></span></div>
+            </div>
+          </div>
+        
+          <div class="instruction-content">
+          
+            <div class="sub checker set-required">
+              <div class="plainLabel">Required</div>
+              <input type="checkbox" class="supercheck" value="required" />
+            </div> 
+            <div class="sub">
+              <div class="plainLabel">Question Type</div>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                  Select from options
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 1</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 2</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 3</a></li>
+                </ul>
+            </div>
+            <div class="sub">
+              <div class="plainLabel">Question Title</div>
+              <input type="text" placeholder="ex. Inventory Check" />Inventory Check</div>
+            </div> 
+            <div class="sub">
+              <div class="plainLabel">Question Text</div>
+              <input type="textarea" placeholder="ex. Check if these items are on the shelf" />Check if these items are on the shelf</div>
+            </div> 
+            <div class="sub">
+              <div class="plainLabel">Question Targets</div>
+              <div class="dropdown required invalid">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                  Select from options
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 1</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 2</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 3</a></li>
+                </ul>
+              </div>  
+            </div>
+            <div class="sub">
+              <div class="plainLabel">Answer 1</div>
+              <input type="textarea" placeholder="ex. Item out of stock" />Check if these items are on the shelf</div>
+              <div class="sub checker set-required">
+                <label class="plainLabel"><input type="checkbox" class="supercheck" value="required" /> Mark as exception</label>
+              </div> 
+              <a class="button-secondary">Add another answer</a>
+            </div> 
+            <div class="sub time-estimate">
+              <div class="plainLabel">Time estimate</div>
+              <input type="text" class="value" />
+              the time has come to customize regular select tags - http://bavotasan.com/2011/style-select-box-using-only-css/
+            </div>
+            
+          </div>
+          
+        </div><!-- ends first instruction -->
+        
+      </div><!-- ends project instructions -->
       
+      <div class="panel-actions">
+        <!-- put project actions here (delete) --> 
+      </div>
       
-    </div><!-- ends tabbed content -->
+    </div><!-- ends tabbed project content -->
     
   </div><!-- ends right side -->
 </div><!-- ends main panel -->
