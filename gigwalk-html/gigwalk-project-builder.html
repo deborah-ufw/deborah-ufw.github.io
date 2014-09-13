@@ -208,20 +208,20 @@
           <div class="ti editable">Gluten-Free Soy Sauce at Wal-Mart</div>
         </div>
         
-        <div class="date group">
+        <div class="group date">
           <div class="plainLabel">Start Date</div>
           <div class="wrapper editable">
             <input type="text" value="Monday 06/30/2014" class="datepicker first" data-date-format="mm/dd/yyyy" />
           </div>
         </div>
-        <div class="date group">
+        <div class="group date">
           <div class="plainLabel">End Date</div>
           <div class="wrapper editable">
             <input type="text" value="Wednesday 07/02/2014" class="datepicker" data-date-format="mm/dd/yyyy" />
           </div>
         </div>
         
-        <div class="repeats group">
+        <div class="group repeats">
           <div class="repeats-selection">
             <div class="plainLabel">Repeats</div>
             <div class="value repeats-setter editable">Never</div>
@@ -284,7 +284,7 @@
           </div>
         </div><!-- ends repeats group -->
         
-        <div class="description group">
+        <div class="group description ">
           <div class="plainLabel">Description</div>
           <div class="value">
             This is a standard new-product cut-in for Kikkoman Gluten-Free soy sauce.
@@ -292,7 +292,7 @@
         </div>  
         
         <!-- locations -->
-        <div class="locations group">
+        <div class="group locations">
             <div class="plainLabel">Locations</div>
             <div class="dropdown custom">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -328,7 +328,7 @@
         </div>
         
         <!-- skills or equipment -->
-        <div class="skills group">
+        <div class="group skills">
             <div class="plainLabel">Required Skills or Equipment</div>
             <div class="dropdown custom">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -376,7 +376,7 @@
         </div>
         
         <!-- clients -->
-        <div class="clients group">
+        <div class="group clients">
             <div class="plainLabel">Clients</div>
             <div class="dropdown custom">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -396,11 +396,15 @@
           </div>
           <div class="sub more-info">
             <div class="adjacent">
-              <input type="radio" checked="checked" name="Bill">
-              <label class="plainLabel">Bill %</label>
+              <div class="wrapper">
+                <input type="radio" checked="checked" value="percent" name="Bill">
+                <label class="plainLabel">Bill %</label>
               <input type="text" placeholder="ex. 80" />
-              <input type="radio" checked="" name="Bill">
-              <label class="plainLabel">Bill by hours</label>
+              </div>
+              <div class="wrapper">
+                <input type="radio" checked="" value="hours" name="Bill">
+                <label class="plainLabel">Bill by hours</label>
+              </div>
             </div> 
           </div>
         </div>
@@ -436,14 +440,20 @@
         </div>
         
         <!-- additional info -->
-        <div class="additional group">
+        <div class="group additional">
           <div class="plainLabel">Additional Options</div>
-          <div class="checker">
-            <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>Do not reschedule</label>
-          </div> 
-          <div class="checker">
-            <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>Manually assign</label>
-          </div> 
+          <div class="sub first more-info">
+            <div class="checker">
+              <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>
+                Do not reschedule
+              </label>
+            </div> 
+            <div class="checker">
+              <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>
+                Manually assign
+              </label>
+            </div> 
+          </div>
         </div>
         
         

@@ -286,6 +286,10 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	font-family: Helvetica-Neue-Italic;
 }
 
+/* form parts */
+
+
+
 
 /* header */
 	
@@ -348,84 +352,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 
 
 
-/* - - - - - - - - - -
-	 CSS3 form hints  
-	 can not be combined with each other 
-	 or anything else 
-	 - - - - - - - - - -
-*/
 
-input::-webkit-input-placeholder { 
-	color: #dfdfdf;
-}
-
-input:-ms-input-placeholder { 
-	color: #dfdfdf;
-}
-
-input::-moz-placeholder { 
-	color: #dfdfdf;
-}
-
-input:-ms-input-placeholder {
-	color: #dfdfdf;
-}
-
-textarea::-webkit-input-placeholder { 
-	color: #dfdfdf;
-}
-
-textarea:-ms-input-placeholder { 
-	color: #dfdfdf;
-}
-
-textarea::-moz-placeholder { 
-	color: #dfdfdf;
-}
-
-textarea:-ms-input-placeholder {
-	color: #dfdfdf;
-}
-
-input.invalid::-webkit-input-placeholder {
-	color: #f24b41;
-	opacity: .9;
-}
-
-input.invalid:-ms-input-placeholder { 
-	color: #f24b41;
-	opacity: .9;
-}
-
-input.invalid::-moz-placeholder { 
-	color: #f24b41;
-	opacity: .9;
-}
-
-input.invalid:-ms-input-placeholder {
-	color: #f24b41;
-	opacity: .9;
-}
-
-textarea.invalid::-webkit-input-placeholder {
-	color: #f24b41;
-	opacity: .9;
-}
-
-textarea.invalid:-ms-input-placeholder { 
-	color: #f24b41;
-	opacity: .9;
-}
-
-textarea.invalid::-moz-placeholder { 
-	color: #f24b41;
-	opacity: .9;
-}
-
-textarea.invalid:-ms-input-placeholder {
-	color: #f24b41;
-	opacity: .9;
-}
 
 
 
