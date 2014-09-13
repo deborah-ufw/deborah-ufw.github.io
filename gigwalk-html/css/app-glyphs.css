@@ -14,7 +14,8 @@
 
 .im,
 .caret,
-.editable:after {
+.editable:after,
+.checker .supercheck:after {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -40,7 +41,7 @@
 }
 .icon-bell:before {
 	content: "\e602";
-}
+},
 .icon-checkmark:before {
 	content: "\e603";
 }
