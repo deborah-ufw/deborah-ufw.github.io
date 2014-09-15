@@ -27,7 +27,8 @@ label {
 	font-weight: normal;
 }
 
-.center {
+.center,
+.expander {
 	text-align: center;
 }
 
@@ -44,7 +45,8 @@ nav li a:visited,
 a.navly,
 .remove,
 .dropdown-menu .link,
-.dropdown-menu .link:hover {
+.dropdown-menu .link:hover,
+a.buttonly {
 	text-decoration: none;
 }
 
@@ -82,7 +84,8 @@ nav.tabnav ul {
 
 .navbar-brand,
 header nav .number,
-.tabnav li a {
+.tabnav li a,
+a.buttonly {
 	display: inline-block;
 }
 
@@ -123,7 +126,9 @@ header nav li a .im,
 .date.group:after,
 .description .value,
 .checker,
-input[type="checkbox"] {
+input[type="checkbox"],
+.expander,
+.im {
 	position: relative;
 }
 
@@ -672,7 +677,18 @@ div.main.wrapper + div.inner {
 
 /* widgets heredeb */
 
+.expander {
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
 
+.expander a {
+	padding: .5em .7em .9em .7em;
+}
+
+.expander .im {
+	top: .3em;
+}
 
  
 

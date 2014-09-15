@@ -7,10 +7,6 @@
 	color: #F60;
 }
 
-.instructions {
-	margin-top: 3em;
-}
-
 
 /* base */
 
@@ -99,7 +95,8 @@ html, body {
 		color: #ababab;
 	}
 	
-	.gray-cancel {
+	.gray-cancel,
+	.expander a {
 		color: #c6c6c6;
 	}
 	
@@ -136,6 +133,10 @@ html, body {
 		background-color: #f5f5f5;
 	}
 	
+	.expander {
+		background: #f8f8f8;
+	}
+	
 	
 	/* reds */
 	
@@ -152,6 +153,7 @@ html, body {
 	
 	/* blues */
 	
+	 a,
 	 a.link,
 	 a.link:hover,
 	 a.navly:hover,
