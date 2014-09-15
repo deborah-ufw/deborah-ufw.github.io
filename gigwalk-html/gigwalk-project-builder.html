@@ -234,8 +234,7 @@
               <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>Repeats</label>
             </div> 
             
-           <select class="time-increment">
-              <option value="Daily">Daily</option>
+           <select class="custom time-increment">
               <option value="Daily">Daily</option>
               <option value="Weekly" selected="selected">Weekly</option>
               <option value="Monthly" >Monthly</option>
@@ -244,7 +243,7 @@
            
            <div class="every">
             <span class="plainLabel">Every</span>
-            <select class="increment-value">
+            <select class="custom increment-value">
               <option value="1" selected="selected">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -487,6 +486,7 @@
               <div class="plainLabel">Required</div>
               <input type="checkbox" class="supercheck" value="required" />
             </div> 
+            
             <div class="sub">
               <div class="plainLabel">Question Type</div>
               <div class="dropdown">
@@ -499,15 +499,19 @@
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 2</a></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 3</a></li>
                 </ul>
-            </div>
+              </div>
+            </div>  
+            
             <div class="sub">
               <div class="plainLabel">Question Title</div>
-              <input type="text" placeholder="ex. Inventory Check" />Inventory Check</div>
+              <input type="text" placeholder="ex. Inventory Check" value="Inventory Check" />
             </div> 
+            
             <div class="sub">
               <div class="plainLabel">Question Text</div>
-              <input type="textarea" placeholder="ex. Check if these items are on the shelf" />Check if these items are on the shelf</div>
+              <input type="textarea" placeholder="ex. Check if these items are on the shelf" value="Check if these items are on the shelf" />
             </div> 
+            
             <div class="sub">
               <div class="plainLabel">Question Targets</div>
               <div class="dropdown required invalid">
@@ -522,21 +526,34 @@
                 </ul>
               </div>  
             </div>
+            
             <div class="sub">
               <div class="plainLabel">Answer 1</div>
-              <input type="textarea" placeholder="ex. Item out of stock" />Check if these items are on the shelf</div>
+              <input type="textarea" placeholder="ex. Item out of stock" />
               <div class="sub checker set-required">
-                <label class="plainLabel"><input type="checkbox" class="supercheck" value="required" /> Mark as exception</label>
+                <label class="plainLabel">
+                  <input type="checkbox" class="supercheck" value="required" /> 
+                  Mark as exception
+                </label>
               </div> 
               <a class="button-secondary">Add another answer</a>
             </div> 
+            
             <div class="sub time-estimate">
               <div class="plainLabel">Time estimate</div>
               <input type="text" class="value" />
-              the time has come to customize regular select tags - http://bavotasan.com/2011/style-select-box-using-only-css/
+              <select class="custom time-estimate-increment">
+              <option value="Daily">Seconds</option>
+              <option value="Weekly" selected="selected">Minutes</option>
+              <option value="Monthly" >Hours</option>
+              <option value="Yearly" >Days</option>
+              </select>
+            </div>
+            <div class="actions">
+              <a class="btn cancel">Cancel</a>
+              <a class="btn disabled">Add</a>
             </div>
             
-          </div>
           
         </div><!-- ends first instruction -->
         

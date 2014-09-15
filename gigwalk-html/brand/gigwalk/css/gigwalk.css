@@ -70,7 +70,8 @@ html, body {
 	}
 	
 	.navbar-default .navbar-toggle .icon-bar,
-	.checker .supercheck:after {
+	.checker .supercheck:after,
+	.instruction-content {
 		background-color: #ffffff;
 	}
 	
@@ -143,7 +144,9 @@ html, body {
 		color: #db2023;
 	}
 	
-	.incomplete {
+	.instruction.incomplete,
+	.instruction.required.incomplete,
+	.invalid .btn.btn-default.dropdown-toggle {
 		background: #ff797e;
 	}
 	
@@ -239,7 +242,7 @@ html, body {
 	
 	/* purple */
 	
-	.required {
+	.instruction.required {
 		background: #9a5cab;
 	}
 	
