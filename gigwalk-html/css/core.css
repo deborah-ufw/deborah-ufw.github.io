@@ -18,7 +18,7 @@ body {
 }
 
 .hide,
-.header nav .user-edit,
+header nav .user-edit,
 .set-repeats {
 	display: none;
 }
@@ -281,6 +281,7 @@ header nav.navbar-default,
 }
 
 header nav .dropdown-menu {
+	padding-top: 0;
 	border-top-width: 0px;
 }
 
