@@ -61,7 +61,8 @@ html, body {
 	header nav .number,
 	.tabnav li a,
 	.btn.btn-default.dropdown-toggle,
-	input.supercheck:after {
+	input.supercheck:after,
+	.instructions .header .ti {
 		color: #ffffff;
 	}
 	
@@ -145,6 +146,11 @@ html, body {
 		color: #db2023;
 	}
 	
+	.instruction.incomplete .arrow,
+	.instruction.required.incomplete .arrow {
+		color: #ff797e;
+	}
+	
 	.instruction.incomplete,
 	.instruction.required.incomplete,
 	.invalid .btn.btn-default.dropdown-toggle {
@@ -152,6 +158,14 @@ html, body {
 	}
 	
 	/* blues */
+	
+	.step .arrow {
+		color: #59beec;
+	}
+	
+	.step .header {
+		background: #59beec;
+	}
 	
 	 a,
 	 a.link,
@@ -225,7 +239,8 @@ html, body {
 	/* greens */
 	
 	header .nav li.alerts .im,
-	header .nav li.messages .im {
+	header .nav li.messages .im,
+	.instruction .arrow {
 		color: #08aa86;
 	}
 	
@@ -243,6 +258,10 @@ html, body {
 	}
 	
 	/* purple */
+	
+	.instruction.required.arrow {
+		color: #9a5cab;
+	}
 	
 	.instruction.required {
 		background: #9a5cab;

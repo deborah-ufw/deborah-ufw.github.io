@@ -180,6 +180,10 @@ header nav .number {
 
 /* colors */
 
+.header .controls {
+	
+}
+
  .dropdown-menu > li > a.link:hover {
 	 background-color: transparent;
  }
@@ -676,6 +680,15 @@ div.main.wrapper + div.inner {
 }
 
 /* widgets heredeb */
+
+.header .controls {
+	padding: .5em;
+}
+
+.instructions > .ti {
+	font-size: 1.1em;
+	margin: .5em 0 1em 0;
+}
 
 .expander {
 	font-size: 1.5em;
