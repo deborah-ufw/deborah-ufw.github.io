@@ -23,12 +23,19 @@ header nav .user-edit,
 	display: none;
 }
 
+.nav-sections,
+.group,
+.instruction-content {
+	font-size: 1.15em;
+}
+
 label {
 	font-weight: normal;
 }
 
 .center,
-.expander {
+.expander,
+.instruction .dragger {
 	text-align: center;
 }
 
@@ -51,7 +58,10 @@ a.buttonly {
 }
 
 .hellomouse,
-.editable:hover {
+.editable:hover, 
+.header .controls .ti,
+.header .dragger,
+.header .arrow {
 	cursor: pointer;
 }
 
@@ -67,7 +77,8 @@ a.buttonly {
 .repeats.group:before,
 .sidenav ul.nav-sections:before,
 .group .sub:after,
-.group.additional .sub .checker:after {
+.group.additional .sub .checker:after,
+.header .actions:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -91,7 +102,8 @@ a.buttonly {
 
 .inline-left,
 .tabnav li,
-.group.clients .more-info .wrapper {
+.group.clients .more-info .wrapper,
+.instructions .header .ti {
 	display: inline-block;
 	float: left;
 }
@@ -105,7 +117,14 @@ nav .user-info,
 nav .user-image,
 nav .user-info .inner,
 header .navbar .dropdown-toggle,
-input[type="radio"] {
+input[type="radio"],
+.section.title .navly,
+.section.title .ti,
+.date.group,
+.date.group div,
+.group .plainLabel,
+.group .value,
+.sub .selected-item {
 	float: left;
 }
 
@@ -128,10 +147,14 @@ header nav li a .im,
 .checker,
 input[type="checkbox"],
 .expander,
-.im {
+.im,
+.header .controls,
+.header .actions {
 	position: relative;
 }
 
+.header .controls .ti,
+.header .controls .arrow,
 header nav .number,
 .tabnav li.buttonly a span.im {
 	position: absolute;
@@ -141,7 +164,8 @@ header .navbar-collapse.in {
 	overflow-y: visible;
 }
 
-.sidenav .user-info {
+.sidenav .user-info,
+.header .dragger {
 	width: 100%;
 }
 
@@ -180,8 +204,12 @@ header nav .number {
 
 /* colors */
 
-.header .controls {
-	 
+.instruction .header .controls {
+	 background: rgba(0, 0, 0, .12);
+}
+
+.icon-dragger {
+	 color: rgba(0, 0, 0, .18);
 }
 
  .dropdown-menu > li > a.link:hover {
@@ -239,7 +267,8 @@ header nav .number {
 /* borders */
 
 input[type="text"],
-input[type="textarea"] {
+input[type="textarea"],
+.instruction-content {
 	border: 1px solid #cccccc;
 }
 
@@ -248,12 +277,13 @@ header .nav ul.dropdown-menu li,
 	border-top: 1px solid #cccccc;
 }
 
-header nav.navbar-default,
 .project .group {
 	border-bottom: 1px solid #cccccc;
 }
 
-.group .sub.first {
+.group .sub.first,
+.instruction-content,
+.group .sub.more-info {
 	border-top-width: 0;
 }
 
@@ -461,6 +491,14 @@ header .nav .dropdown li {
 	ul.dropdown-menu li.header {
 		margin-left: -1px;
 	}
+	
+	header:after {
+		content: ' ';
+		margin: 0 1em -1px 0;
+		display: block;
+		height: 1px;
+		background: #cccccc;
+	}
 
 
 /* content structure */	
@@ -469,6 +507,10 @@ header .nav .dropdown li {
 .tabnav ul { 
 	display: table;
 	width: 100%;
+}
+
+.main.wrapper {
+	padding-right: 1em;
 }
 
 nav.sidenav { /* full width */
@@ -502,10 +544,6 @@ div.main.wrapper + div.inner {
 .sidenav .user-image {
 	width: 70px;
 	height: 70px;
-}
-
-.nav-sections {
-	font-size: 1.15em;
 }
 
 .nav-sections li {
@@ -547,19 +585,12 @@ div.main.wrapper + div.inner {
 	font-size: 1.4em;
 }
 
-.section.title .navly,
-.section.title .ti,
-.date.group,
-.date.group div,
-.group .plainLabel,
-.group .value,
-.sub .selected-item {
-	float: left;
+.group {
+	padding-bottom: 1em;
 }
 
-.group {
-	font-size: 1.15em;
-	padding-bottom: 1em;
+.group.last {
+	padding-bottom: 2em;
 }
 
 .group.date, 
@@ -633,7 +664,7 @@ div.main.wrapper + div.inner {
 	white-space: normal;
 }
 
-.sub .plainLabel {
+.group .sub .plainLabel {
 	text-align: left;
 	margin-right: 0;
 	width: auto;
@@ -641,7 +672,6 @@ div.main.wrapper + div.inner {
 
 .sub.more-info {
 	font-size: .85em;
-	padding-top: 15px;
 }
 
 .sub.more-info input[type="text"] {
@@ -680,11 +710,7 @@ div.main.wrapper + div.inner {
 	margin-bottom: 0;
 }
 
-/* widgets heredeb */
-
-.header .controls {
-	padding: .5em;
-}
+/* widgets */
 
 .instructions > .ti {
 	font-size: 1.1em;
@@ -697,12 +723,64 @@ div.main.wrapper + div.inner {
 }
 
 .expander a {
-	padding: .5em .7em .9em .7em;
+	padding: .4em 1.6em .8em 2em;
 }
 
 .expander .im {
 	top: .3em;
 }
+
+.header .controls,
+.header .actions {
+	padding: 8px 10px 0 10px;
+}
+
+.header .actions {
+	padding-bottom: 6px;
+}
+
+.header .controls .im,
+.header .actions .im {
+	font-size: 1.4em;
+}
+
+.header .dragger {
+	z-index: 1;
+}
+
+.header .arrow,
+.header .controls .ti {
+	z-index: 2;
+}
+
+.header .controls .ti {
+	font-size: 1.6em;
+	padding-right: 2em;
+}
+
+.header .icon-dragger {
+	 top: -2px;
+}
+
+.header .icon-arrow {
+	top: -1px;
+}
+
+.header .controls .arrow {
+	padding-left: 2em;
+		right: .7em;
+}
+
+.header .actions .ti {
+	font-size: 1.2em;
+}
+
+.instruction-content {
+	padding: 1em;
+}
+
+
+/* heredeb */
 
  
 

@@ -41,7 +41,7 @@ $(document).ready(function() {
 		});
 	}
 	
-	//******** hints ******** //	
+	//******** initialize bootstrap components ******** //	
 	
 	$(function () {
     $('.hint').popover({
@@ -49,16 +49,13 @@ $(document).ready(function() {
     });
 	});
 	
-	//******** datepicker ******** //	
-	
 	$('.datepicker').datepicker()
 	
 	
-	//******** repeats ******** //	
+	//******** project scheduling "repeats" panel ******** //	
 	$('.repeats-setter').click(function() {
 		$('.set-repeats').show();
 	});
-	
 	
 });
 

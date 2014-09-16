@@ -62,7 +62,7 @@ html, body {
 	.tabnav li a,
 	.btn.btn-default.dropdown-toggle,
 	input.supercheck:after,
-	.instructions .header .ti {
+	.instructions .header .actions {
 		color: #ffffff;
 	}
 	
@@ -147,9 +147,13 @@ html, body {
 	}
 	
 	.instruction.incomplete .arrow,
-	.instruction.required.incomplete .arrow {
-		color: #ff797e;
+	.instruction.required.incomplete .arrow,
+	.instruction.incomplete .controls .ti,
+	.instruction.required.incomplete .controls .ti {
+		color: #fe8e92;
 	}
+	
+	
 	
 	.instruction.incomplete,
 	.instruction.required.incomplete,
@@ -291,7 +295,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 /* fonts */
 
 .nav-sections li.divider,
-.tabnav li a {
+.tabnav li a,
+.header .actions .ti {
 	font-family: Helvetica-Neue-Light;
 }
 
