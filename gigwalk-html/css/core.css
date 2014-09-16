@@ -67,7 +67,9 @@ a.buttonly,
 .editable:hover, 
 .header .controls .ti,
 .header .dragger,
-.header .arrow {
+.header .arrow,
+select:hover,
+select:focus {
 	cursor: pointer;
 }
 
