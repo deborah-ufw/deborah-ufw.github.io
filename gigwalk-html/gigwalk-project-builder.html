@@ -481,12 +481,14 @@
         
           <div class="instruction-content">
           
-            <div class="sub checker set-required">
+            <div class="item checker set-required">
               <div class="plainLabel">Required</div>
-              <input type="checkbox" class="supercheck" value="required" />
+              <div class="sub">
+                <input type="checkbox" class="supercheck" value="required" />
+              </div>
             </div> 
             
-            <div class="sub">
+            <div class="item">
               <div class="plainLabel">Question Type</div>
               <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -499,19 +501,26 @@
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 3</a></li>
                 </ul>
               </div>
+              <div class="sub">
+                <!-- the selection will go here -->
+              </div>
             </div>  
             
-            <div class="sub">
+            <div class="item">
               <div class="plainLabel">Question Title</div>
-              <input type="text" placeholder="ex. Inventory Check" value="Inventory Check" />
+              <div class="sub">
+                <input type="text" placeholder="ex. Inventory Check" value="Inventory Check" />
+              </div>
             </div> 
             
-            <div class="sub">
+            <div class="item">
               <div class="plainLabel">Question Text</div>
-              <input type="textarea" placeholder="ex. Check if these items are on the shelf" value="Check if these items are on the shelf" />
+                <div class="sub">
+                <input type="textarea" placeholder="ex. Check if these items are on the shelf" value="Check if these items are on the shelf" />
+              </div>
             </div> 
             
-            <div class="sub">
+            <div class="item">
               <div class="plainLabel">Question Targets</div>
               <div class="dropdown required invalid">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -524,31 +533,39 @@
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List 3</a></li>
                 </ul>
               </div>  
+              <div class="sub">
+                <!-- the selection will go here -->
+              </div>
             </div>
             
-            <div class="sub">
+            <div class="item">
               <div class="plainLabel">Answer 1</div>
-              <input type="textarea" placeholder="ex. Item out of stock" />
-              <div class="sub checker set-required">
-                <label class="plainLabel">
-                  <input type="checkbox" class="supercheck" value="required" /> 
-                  Mark as exception
-                </label>
-              </div> 
-              <a class="button-secondary">Add another answer</a>
+              <div class="sub">
+                <input type="textarea" placeholder="ex. Item out of stock" />
+                <div class="sub checker set-required">
+                  <label class="plainLabel">
+                    <input type="checkbox" class="supercheck" value="required" /> 
+                    Mark as exception
+                  </label>
+                </div> 
+                <a class="button-secondary">Add another answer</a>
+              </div>
             </div> 
             
-            <div class="sub time-estimate">
+            <div class="item time-estimate">
               <div class="plainLabel">Time estimate</div>
-              <input type="text" class="value" />
-              <select class="custom time-estimate-increment">
-              <option value="Daily">Seconds</option>
-              <option value="Weekly" selected="selected">Minutes</option>
-              <option value="Monthly" >Hours</option>
-              <option value="Yearly" >Days</option>
-              </select>
+              <div class="sub">
+                <input type="text" class="value" />
+                <select class="custom time-estimate-increment">
+                <option value="Daily">Seconds</option>
+                <option value="Weekly" selected="selected">Minutes</option>
+                <option value="Monthly" >Hours</option>
+                <option value="Yearly" >Days</option>
+                </select>
+              </div>
             </div>
             <div class="actions">
+              <a class="btn delete">Delete</a>
               <a class="btn cancel">Cancel</a>
               <a class="btn disabled">Add</a>
             </div>
@@ -557,7 +574,7 @@
         </div><!-- ends first instruction -->
         
         <div class="panel-actions">
-          <!-- put project actions here (delete) --> 
+          <!-- put project actions here (delete, cancel, add) --> 
         </div>
         
       </div><!-- ends project instructions -->

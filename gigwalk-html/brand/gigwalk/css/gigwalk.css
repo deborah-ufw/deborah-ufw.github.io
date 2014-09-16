@@ -336,6 +336,21 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	width: 18px;
 }
 
+.item.checker .supercheck:after {
+	font-size: 1.9em;
+	padding-left: 1px;
+	height: 35px;
+	width: 35px;
+}
+
+.item.set-required {
+	margin-bottom: .5em;
+}
+
+.item.set-required .plainLabel {
+	margin-top: .7em;
+}
+
 
 /* header */
 	

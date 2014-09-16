@@ -123,6 +123,7 @@ input[type="radio"],
 .date.group,
 .date.group div,
 .group .plainLabel,
+.instruction-content .plainLabel,
 .group .value,
 .sub .selected-item {
 	float: left;
@@ -391,6 +392,10 @@ header .nav .dropdown li {
 		padding-left: 12px;
 	}
 	
+	.dropdown-menu {
+		margin-top: 0;
+	}
+	
 	.caret {
 		font-size: 2em;
 		margin-left: 2px;
@@ -403,7 +408,6 @@ header .nav .dropdown li {
 	.btn.btn-default.dropdown-toggle {
 		text-align: left;
 		font-size: 1em;
-		width: 300px;
 	}
 	
 	.btn.btn-default.dropdown-toggle .caret {
@@ -598,13 +602,18 @@ div.main.wrapper + div.inner {
 	padding-bottom: 0;
 }
 
-.group .dropdown {
+.group .dropdown,
+.instructions .dropdown {
 	margin-bottom: .3em;
 		top: -4px;
 }
 
 .group .dropdown-menu,
-.group .sub {
+.group .sub,
+.instructions .dropdown-menu,
+.item input[type="text"],
+.item input[type="textarea"],
+.btn.btn-default.dropdown-toggle {
 	width: 300px;
 }
 
@@ -641,7 +650,8 @@ div.main.wrapper + div.inner {
 		left: 0;
 }
 
-.group .plainLabel {
+.group .plainLabel,
+.instructions .plainLabel {
 	margin-right: 15px;
 }
 
@@ -776,7 +786,32 @@ div.main.wrapper + div.inner {
 }
 
 .instruction-content {
-	padding: 1em;
+	padding: 1.2em 1em 1em 1em;
+}
+
+.instructions .item {
+	padding-bottom: 1.7em;
+}
+
+.instructions .item .plainLabel {
+	width: 135px;
+}
+
+.instruction-content .sub {
+	margin-left: 150px;
+}
+
+.instruction-content .dropdown-menu {
+	left: 150px;
+}
+
+.item input[type="text"],
+.item input[type="textarea"] {
+	margin-top: -.5em;
+}
+
+.item.time-estimate input[type="text"] {
+	width: 50px;
 }
 
 
