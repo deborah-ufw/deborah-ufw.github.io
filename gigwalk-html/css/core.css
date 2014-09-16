@@ -54,7 +54,8 @@ a.navly,
 .remove,
 .dropdown-menu .link,
 .dropdown-menu .link:hover,
-a.buttonly {
+a.buttonly,
+.icon-buttons a {
 	text-decoration: none;
 }
 
@@ -119,7 +120,8 @@ select,
 	float: left;
 }
 
-.inline-right {
+.inline-right,
+.icon-buttons {
 	display: inline-block;
 	float: right;
 }
@@ -168,7 +170,8 @@ input[type="checkbox"],
 .header .controls,
 .header .actions,
 .instructions .primary.actions,
-.instructions .primary.actions:before {
+.instructions .primary.actions:before,
+.icon-buttons {
 	position: relative;
 }
 
@@ -339,12 +342,17 @@ header .nav ul.dropdown-menu li,
 }
 
 .caret,
-.navbar {
+.navbar,
+.icon-buttons a {
 	border: 0px solid transparent;
 	border-top: 0px solid transparent;
 	border-right: 0px solid transparent;
 	border-bottom: 0px solid transparent;
 	border-left: 0px solid transparent;
+}
+
+.icon-buttons a {
+	border-left: 1px solid;
 }
 
 .tabnav li.buttonly a {
@@ -916,7 +924,9 @@ div.main.wrapper + div.inner {
 	padding: .3em 1.5em;
 }
 
-
+.icon-buttons a {
+	padding: 0 .5em;
+}
 
 
 
