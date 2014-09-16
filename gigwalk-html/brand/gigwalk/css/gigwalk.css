@@ -288,8 +288,9 @@ html, body {
 	
 	/* purple */
 	
-	.instruction.required.arrow {
-		color: #9a5cab;
+	.instruction.required .arrow,
+	.instruction.required .controls .ti {
+		color: #ae7dbc;
 	}
 	
 	.instruction.required {
@@ -325,7 +326,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	font-family: Helvetica-Neue-Light;
 }
 
-.regular {
+.regular,
+select option {
 	font-family: Helvetica-Neue;
 }
 
