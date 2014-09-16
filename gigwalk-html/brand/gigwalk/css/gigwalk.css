@@ -40,6 +40,10 @@ html, body {
 	border: 0px solid transparent;
 }
 
+.instructions .item .actions a.buttonly {
+	border-color: #4a4a4a;
+}
+
 .tabnav  li a {
 	border-right: 1px solid rgba(0, 0, 0, .1);
 }
@@ -57,18 +61,23 @@ html, body {
 
 	/* white */
 	
+	select,
+	.custom-select:before,
 	ul.dropdown-menu li.header,
 	header nav .number,
 	.tabnav li a,
 	.btn.btn-default.dropdown-toggle,
 	input.supercheck:after,
-	.instructions .header .actions {
+	.instructions .header .actions,
+	.primary.actions a {
 		color: #ffffff;
 	}
 	
 	.navbar-default .navbar-toggle .icon-bar,
 	.checker .supercheck:after,
-	.instruction-content {
+	.instruction-content,
+	.primary.actions a.cancel,
+	.primary.actions a.delete {
 		background-color: #ffffff;
 	}
 	
@@ -87,7 +96,8 @@ html, body {
 	/* grays */
 	
 	body,
-	a.navly {
+	a.navly,
+	a.buttonly {
 		color: #4a4a4a;
 	}
 	
@@ -97,8 +107,13 @@ html, body {
 	}
 	
 	.gray-cancel,
+	.primary.actions a.cancel,
 	.expander a {
 		color: #c6c6c6;
+	}
+	
+	.primary.actions a.cancel {
+		border-color: #c6c6c6;
 	}
 	
 	.navbar-default .navbar-nav > li > a.dropdown-toggle,
@@ -125,15 +140,20 @@ html, body {
 		background: #909090;
 	}
 	
-	.disabled {
+	.primary.actions a.disabled {
 		background: #dfdfdf;
 	}
 	
-	.dropdown-menu > li > a:hover,
-	.dropdown-menu > li > a:focus {
-		background-color: #f5f5f5;
+	.primary.actions a.disabled {
+		border-color: #dfdfdf;
 	}
 	
+	.dropdown-menu > li > a:hover,
+	.dropdown-menu > li > a:focus,
+	.instructions .item .actions a.buttonly:hover,
+	.instructions .item .actions a.buttonly:focus,
+	.primary.actions a.cancel:hover,
+	.primary.actions a.cancel:focus,
 	.expander {
 		background: #f8f8f8;
 	}
@@ -153,7 +173,9 @@ html, body {
 		color: #fe8e92;
 	}
 	
-	
+	.primary.actions a.delete {
+		color: #ff5157;
+	}
 	
 	.instruction.incomplete,
 	.instruction.required.incomplete,
@@ -191,6 +213,7 @@ html, body {
 		background: #4890e2;
 	}
 	
+	select,
 	.btn.btn-default.dropdown-toggle {
 		background-color: #4890e2;
 	}
@@ -249,7 +272,8 @@ html, body {
 	}
 	
 	ul.dropdown-menu li.header,
-	input.supercheck:checked:after {
+	input.supercheck:checked:after,
+	.primary.actions a {
 		background: #08aa86;
 	}
 	
@@ -257,7 +281,8 @@ html, body {
 		border-left: 1px solid rgba(0, 169, 133, .3)
 	}
 	
-	input.supercheck:checked:after {
+	input.supercheck:checked:after,
+	.primary.actions a {
 		border-color: #08aa86;
 	}
 	

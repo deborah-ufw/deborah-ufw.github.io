@@ -542,13 +542,17 @@
               <div class="plainLabel">Answer 1</div>
               <div class="sub">
                 <input type="textarea" placeholder="ex. Item out of stock" />
-                <div class="sub checker set-required">
+              </div>
+              <div class="sub more-info"> 
+                <div class="checker set-required">
                   <label class="plainLabel">
                     <input type="checkbox" class="supercheck" value="required" /> 
                     Mark as exception
                   </label>
                 </div> 
-                <a class="button-secondary">Add another answer</a>
+              </div>   
+              <div class="sub actions">
+                <a class="buttonly secondary" href="#">Add another answer</a>
               </div>
             </div> 
             
@@ -556,18 +560,22 @@
               <div class="plainLabel">Time estimate</div>
               <div class="sub">
                 <input type="text" class="value" />
+                <div class="custom-select">
                 <select class="custom time-estimate-increment">
-                <option value="Daily">Seconds</option>
-                <option value="Weekly" selected="selected">Minutes</option>
-                <option value="Monthly" >Hours</option>
-                <option value="Yearly" >Days</option>
+                  <option value="Daily">Seconds</option>
+                  <option value="Weekly" selected="selected">Minutes</option>
+                  <option value="Monthly" >Hours</option>
+                  <option value="Yearly" >Days</option>
                 </select>
+                </div>
               </div>
             </div>
-            <div class="actions">
-              <a class="btn delete">Delete</a>
-              <a class="btn cancel">Cancel</a>
-              <a class="btn disabled">Add</a>
+            <div class="primary actions">
+              <a class="linkly delete" href="#">Delete</a>
+              <div class="right">
+                <a class="buttonly cancel" href="#">Cancel</a>
+                <a class="buttonly disabled" href="#">Add</a>
+              </div>
             </div>
             
           

@@ -35,7 +35,8 @@ label {
 
 .center,
 .expander,
-.instruction .dragger {
+.instruction .dragger,
+.time-estimate input[type="text"] {
 	text-align: center;
 }
 
@@ -57,6 +58,10 @@ a.buttonly {
 	text-decoration: none;
 }
 
+.primary.actions a.linkly {
+	text-decoration: underline;
+}
+
 .hellomouse,
 .editable:hover, 
 .header .controls .ti,
@@ -65,7 +70,8 @@ a.buttonly {
 	cursor: pointer;
 }
 
-.defaultmouse {
+.defaultmouse,
+a.disabled {
 	cursor: default;
 }
 
@@ -78,7 +84,9 @@ a.buttonly {
 .sidenav ul.nav-sections:before,
 .group .sub:after,
 .group.additional .sub .checker:after,
-.header .actions:after {
+.header .actions:after,
+.item .sub.more-info:after,
+.primary.actions:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -96,7 +104,10 @@ nav.tabnav ul {
 .navbar-brand,
 header nav .number,
 .tabnav li a,
-a.buttonly {
+a.buttonly,
+select,
+.custom-select,
+.caret  {
 	display: inline-block;
 }
 
@@ -113,6 +124,7 @@ a.buttonly {
 	float: right;
 }
 
+.navbar-toggle,
 nav .user-info,
 nav .user-image,
 nav .user-info .inner,
@@ -125,15 +137,19 @@ input[type="radio"],
 .group .plainLabel,
 .instruction-content .plainLabel,
 .group .value,
-.sub .selected-item {
+.sub .selected-item,
+.primary.actions a.delete {
 	float: left;
 }
 
+.right,
+.btn.btn-default.dropdown-toggle .caret,
 .tabnav li.buttonly,
 .remove {
 	float: right;
 }
 
+.custom-select,
 header nav li a,
 header nav li a .im,
 .tabnav li.buttonly,
@@ -150,10 +166,13 @@ input[type="checkbox"],
 .expander,
 .im,
 .header .controls,
-.header .actions {
+.header .actions,
+.instructions .primary.actions,
+.instructions .primary.actions:before {
 	position: relative;
 }
 
+.custom-select:before,
 .header .controls .ti,
 .header .controls .arrow,
 header nav .number,
@@ -203,6 +222,13 @@ header nav .number {
 	border-radius: 50%;
 }
 
+select {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+
 /* colors */
 
 .instruction .header .controls {
@@ -231,8 +257,16 @@ header nav .number {
 	color: #ffffff;
 }
 
+.instructions .item .actions a.buttonly {
+	background-color: #ffffff;
+}
+
 .navbar {
 	border-radius: 0;
+}
+
+.disabled {
+	background-color: #cccccc;
 }
 
 /* icon positioning */
@@ -273,6 +307,7 @@ input[type="textarea"],
 	border: 1px solid #cccccc;
 }
 
+.instructions .primary.actions:before,
 header .nav ul.dropdown-menu li,
 .group .sub {
 	border-top: 1px solid #cccccc;
@@ -291,6 +326,11 @@ header .nav ul.dropdown-menu li,
 .project .group.date,
 .project .group.repeats {
 	border-bottom-width: 0;
+}
+
+.actions a,
+.instructions .item .actions a.buttonly {
+	border: 1px solid;
 }
 
 .tabnav li.buttonly a {
@@ -320,6 +360,10 @@ header .nav .dropdown li {
 	border-left: 0px solid #ffffff;
 }
 
+.primary.actions a.linkly {
+	border-color: #ffffff;
+}
+
 
 
 /* boostrap customization */
@@ -341,7 +385,6 @@ header .nav .dropdown li {
 	.navbar-toggle {
 		margin-top: 0;
 		margin-bottom: 0;
-		float: left;
 	}
 	
 	header .container-fluid {
@@ -396,10 +439,10 @@ header .nav .dropdown li {
 		margin-top: 0;
 	}
 	
-	.caret {
+	.caret,
+	.custom-select:before {
 		font-size: 2em;
 		margin-left: 2px;
-		display: inline-block;
 		width: 1em;
 		height: 1em;
 		vertical-align: top;
@@ -413,7 +456,6 @@ header .nav .dropdown li {
 	.btn.btn-default.dropdown-toggle .caret {
 		font-size: 1.7em;
 		margin-bottom: -5px;
-		float: right;
 	}
 	
 	input[type="text"],
@@ -434,6 +476,19 @@ header .nav .dropdown li {
 	
 	input[type="radio"] {
 		margin-right: .5em;
+	}
+	
+	select {
+		padding: 6px 45px 6px 12px;
+		border: 0px solid #ffffff;
+		
+		-webkit-appearance: none;
+	}
+	
+	.custom-select:before {
+		font-size: 1.7em;
+		 top: 5px;
+		 right: 10px;	
 	}
 	
 
@@ -674,13 +729,15 @@ div.main.wrapper + div.inner {
 	white-space: normal;
 }
 
-.group .sub .plainLabel {
+.group .sub .plainLabel,
+.instructions .item .sub .plainLabel {
 	text-align: left;
 	margin-right: 0;
 	width: auto;
 }
 
-.sub.more-info {
+.sub.more-info,
+.instructions .item .actions {
 	font-size: .85em;
 }
 
@@ -785,6 +842,10 @@ div.main.wrapper + div.inner {
 	font-size: 1.2em;
 }
 
+.instruction {
+	margin-bottom: 1.5em;
+}
+
 .instruction-content {
 	padding: 1.2em 1em 1em 1em;
 }
@@ -811,11 +872,55 @@ div.main.wrapper + div.inner {
 }
 
 .item.time-estimate input[type="text"] {
+	margin-right: .5em;
 	width: 50px;
 }
 
+.time-estimate .plainLabel {
+	margin-top: .4em;
+}
+
+.instructions .sub.more-info {
+	margin-top: .7em; 
+}
+
+.instructions .item .actions {
+	padding: 1em 0;
+}
+
+.instructions .item .actions a.buttonly {
+	padding: .5em 1.5em;
+}
+
+.instructions .primary.actions {
+	margin: 1em 0 0 2em;
+}
+
+.instructions .primary.actions:before {
+	content: ' ';
+	display: inline-block;
+	margin-bottom: 1.5em;
+	height: 1px;
+	width: 100%;
+		right: -1em;
+}
+
+.primary.actions a {
+	margin-left: .5em;
+	padding: .3em 3em;
+}
+
+.primary.actions a.delete {
+	padding: .3em 1.5em;
+}
+
+
+
+
 
 /* heredeb */
+
+
 
  
 

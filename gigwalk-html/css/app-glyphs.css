@@ -14,6 +14,7 @@
 
 .im,
 .caret,
+.custom-select:before,
 .editable:after,
 .checker .supercheck:after {
 	font-family: 'icomoon';
@@ -33,7 +34,8 @@
 	content: "\e60f";
 }
 .icon-arrow-down:before,
-.caret:before {
+.caret:before,
+.custom-select:before {
 	content: "\e600";
 }
 .icon-arrow-up:before {
