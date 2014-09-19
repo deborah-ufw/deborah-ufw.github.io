@@ -13,20 +13,30 @@ html, body {
 	background: #ffffff;
 }
 
-body {
-	font-size: 1.4em;
-}
-
 .hide,
 header nav .user-edit,
 .set-repeats {
 	display: none;
 }
 
+body {
+	font-size: 1.4em;
+}
+
 .nav-sections,
 .group,
 .instruction-content {
 	font-size: 1.15em;
+}
+
+.sidenav .user-name {
+	line-height: 1em; 
+}
+
+.group .sub .selected-item,
+.description .value,
+.plainLabel {
+	line-height: 1.2em;
 }
 
 label {
@@ -38,12 +48,6 @@ label {
 .instruction .dragger,
 .time-estimate input[type="text"] {
 	text-align: center;
-}
-
-.group .sub .selected-item,
-.description .value,
-.plainLabel {
-	line-height: 1.2em;
 }
 
 nav li a,
@@ -357,6 +361,10 @@ header .nav ul.dropdown-menu li,
 	border-left: 1px solid;
 }
 
+.nav-sections li {
+	border-left: 4px solid #ffffff;
+}
+
 .tabnav li.buttonly a {
 	border-right-width: 0px;
 }
@@ -522,9 +530,9 @@ header .nav .dropdown li {
 	}
 	
 	.navbar > .container-fluid .navbar-brand {
-		margin-left: .2em;
-		width: 100%;
-		background-size: 100%;
+		margin: .5em 0  0 .2em;
+		height: 51px;
+		width: 220px;
 	}
 	
 	header .nav li.alerts .im,
@@ -557,6 +565,17 @@ header .nav .dropdown li {
 		width: 40px;
 		background: url(../images/default-user-image.gif) 0 0 no-repeat;
 		background-size: 100%;
+	}
+	
+	header .user-info .inner {
+		width: auto;
+		max-width: 140px;
+	}
+	
+	header .user-info .user-name,
+	header .user-info .user-org {
+		width: auto;
+		max-width: 140px;
 	}
 	
 	ul.dropdown-menu li.header {
@@ -604,6 +623,8 @@ div.main.wrapper + div.inner {
 
 .sidenav .user-name {
 	font-size: 1.25em;
+	margin-bottom: .3em;
+	width: 145px;
 }
 
 .sidenav .user-role,
@@ -940,7 +961,7 @@ div.main.wrapper + div.inner {
 
 /* project builder responsive reformat */
 
-@media (min-width: 575px) {
+@media (min-width: 665px) {
 
 	.section.title .navly:after {
 		content: '/';
@@ -965,7 +986,7 @@ html[data-useragent*='Trident'] {
 
 /* customize bootstrap's responsive behavior */
 
-@media (min-width: 575px) {
+@media (min-width: 665px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -1043,7 +1064,7 @@ html[data-useragent*='Trident'] {
 }
 
 
-@media (max-width: 574px) {
+@media (max-width: 664px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: left;

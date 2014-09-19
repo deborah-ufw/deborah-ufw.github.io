@@ -101,7 +101,6 @@ html, body {
 	/* grays */
 	
 	body,
-	a.navly,
 	a.buttonly {
 		color: #4a4a4a;
 	}
@@ -201,7 +200,7 @@ html, body {
 	 a,
 	 a.link,
 	 a.link:hover,
-	 a.navly:hover,
+	 a.navly,
 	 .dropdown-menu > li > a.link,
 	 .dropdown-menu > li > a.link:hover,
 	 a.navly:focus,
@@ -265,7 +264,7 @@ html, body {
 	}
 	
 	.nav-sections li.active {
-		border-left: 3px solid #4890e2;
+		border-left-color: #4890e2;
 	}
 	
 	/* greens */
@@ -387,9 +386,6 @@ select option {
 /* header */
 	
 	.navbar > .container-fluid .navbar-brand {
-		margin-top: .5em;
-		height: 51px;
-		width: 162px;
 		background: url(../images/logo-header.png) left 0 no-repeat;
 	}
 	
@@ -414,7 +410,7 @@ select option {
 		
 	}
 	
-	@media (max-width: 574px) {
+	@media (max-width: 664px) {
 		.navbar-default {
 			background: #5e5e5e;
 		}
