@@ -67,6 +67,13 @@ a.buttonly,
 	text-decoration: underline;
 }
 
+header .user-name,
+header .user-org {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  overflow: hidden;
+}
+
 .hellomouse,
 .editable:hover, 
 .header .controls .ti,
@@ -362,7 +369,7 @@ header .nav ul.dropdown-menu li,
 }
 
 .nav-sections li {
-	border-left: 4px solid #ffffff;
+	border-left: 4px solid transparent;
 }
 
 .tabnav li.buttonly a {
@@ -627,7 +634,7 @@ div.main.wrapper + div.inner {
 	width: 145px;
 }
 
-.sidenav .user-role,
+.sidenav .user-org,
 .sidenav .user-edit {
 	font-size: 1em;
 	line-height: 1.4em;
@@ -969,6 +976,19 @@ div.main.wrapper + div.inner {
 	}
 
 }
+
+@media (max-width: 664px) {
+
+	.section.title .navly:after {
+		content: ' ';
+	  visibility: hidden;
+	  display: block;
+	  font-size: 0;
+	  clear: both;
+	  height: 0;
+	}
+
+}
 	
 /* ios fix for modal with keyboard */
 
@@ -1099,7 +1119,7 @@ html[data-useragent*='Trident'] {
 	}
 	a.navbar-brand,
 	header .user-name,
-	header .user-role,
+	header .user-org,
 	header .nav .dropdown.open ul.dropdown-menu li.header {
 		display: none;
 	}
