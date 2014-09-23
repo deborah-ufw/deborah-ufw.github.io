@@ -41,6 +41,11 @@ $(document).ready(function() {
 		});
 	}
 	
+	//******** responsive side nav display ******** //
+	
+	
+	
+	
 	//******** initialize bootstrap components ******** //	
 	
 	$(function () {

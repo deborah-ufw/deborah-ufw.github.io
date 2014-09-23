@@ -44,11 +44,11 @@ html, body {
 	border-color: #4a4a4a;
 }
 
-.tabnav  li a {
+.tabnav  li {
 	border-right: 1px solid rgba(0, 0, 0, .1);
 }
 
-.tabnav  li.active a {
+.tabnav  li.active {
 	border-right: 1px solid rgba(0, 0, 0, .2);
 }
 
@@ -203,15 +203,23 @@ html, body {
 	 a.navly,
 	 .dropdown-menu > li > a.link,
 	 .dropdown-menu > li > a.link:hover,
-	 a.navly:focus,
-	.sidenav ul a:hover,
-	.sidenav ul a:focus,
-	.sidenav ul .active a,
-	.sidenav ul .active a:hover,
-	.sidenav ul .active a:focus,
-	.sidenav ul .active a:visited {
+	 a.navly:focus {
 		color: #4890e2;
 	}
+	
+	@media (min-width: 665px) { 
+	
+		.sidenav ul a:hover,
+		.sidenav ul a:focus,
+		.sidenav ul .active a,
+		.sidenav ul .active a:hover,
+		.sidenav ul .active a:focus,
+		.sidenav ul .active a:visited {
+			color: #4890e2;
+		}
+	
+	}
+	
 	
 	header nav .number {
 		background: #4890e2;
@@ -252,14 +260,9 @@ html, body {
 		background: rgba(74, 144, 226, .2);
 	}
 	
-	.tabnav li a:hover,
-	.tabnav li a:focus {
-		background: rgba(255, 255, 255, .2);
-	}
-	
-	.tabnav li.active a,
-	.tabnav li.active a:hover,
-	.tabnav li.active a:focus {
+	.tabnav li.active,
+	.tabnav li.active:hover,
+	.tabnav li.active:focus {
 		background: #32b0e8;
 	}
 	
@@ -421,8 +424,9 @@ select option {
 			border-left: 0;
 			border-right: 1px solid #cccccc;
 		}
+		header .nav .dropdown-menu li,
 		header .nav li.dropdown {
-			border-right: 0;
+			border-right: 0px solid transparent;
 		}
 		.navbar-default .navbar-toggle:hover,
 		.navbar-default .navbar-toggle:focus {
@@ -435,6 +439,11 @@ select option {
 		}
 		header nav .dropdown .user-info {
 			margin-left: 15px;
+		}
+		
+		.sidenav li:hover,
+		.sidenav li:focus {
+			background: #f5f5f5;
 		}
 		
 	}
