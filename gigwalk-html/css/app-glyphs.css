@@ -16,7 +16,8 @@
 .caret,
 .custom-select:before,
 .editable:after,
-.checker .supercheck:after {
+.checker .supercheck:after,
+.nav-active-holder:after {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -35,7 +36,8 @@
 }
 .icon-arrow-down:before,
 .caret:before,
-.custom-select:before {
+.custom-select:before,
+.nav-active-holder:after {
 	content: "\e600";
 }
 .icon-arrow-up:before {

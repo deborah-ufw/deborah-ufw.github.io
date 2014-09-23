@@ -43,8 +43,24 @@ $(document).ready(function() {
 	
 	//******** responsive side nav display ******** //
 	
-	
-	
+		//this gets the selected value on load
+		var navLocation = $('.nav-sections').find('.active').text();
+		$( '.nav-active-holder' ).html( navLocation );
+		
+	  //this updates teh button on change location
+		$('.nav-sections li').click(function() {
+			$('.nav-sections').find('li.active').removeClass('active');
+			$(this).addClass('active');
+			var navLocation = $('.nav-sections').find('.active').text();
+			$( '.nav-active-holder' ).html( navLocation );
+		});
+		
+		//this opens and closes the sidenav
+		$('.sidenav').addClass(' selective-hide');
+		$( '.nav-active-holder' ).click(function() {
+			$('.sidenav').toggleClass('selective-hide');
+		});
+				
 	
 	//******** initialize bootstrap components ******** //	
 	

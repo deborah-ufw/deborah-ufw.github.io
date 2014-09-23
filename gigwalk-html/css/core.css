@@ -219,6 +219,12 @@ header .navbar-collapse.in {
           transition: all 0.1s ease-in-out;
 }
 
+.sidenav,
+.sidenav.selective-hide {
+	-webkit-transition: all 0.7s ease-in-out;
+          transition: all 0.7s ease-in-out;
+}
+
 .smoother-animation {
 	 transform: translate3d(0px,0px,0px);
 	-webkit-transform: translate3d(0px,0px,0px);
@@ -708,18 +714,26 @@ div.main.wrapper + div.inner {
 		z-index: 100;
 	}
 	
-	.nav-active-holder .caret {
+	.nav-active-holder:after {
 		font-size: 1.2em;
 		vertical-align: middle;
 		color: rgba(255, 255, 255, .3);
 	}
 	
 	nav.sidenav {
+		margin-right: -1em;
 		padding: 0;
 		display: block;
 		position: relative;
+		max-height: 800px;
 		background: #ffffff;
-		z-index: 1000;
+		z-index: 1000; 
+		
+		overflow: hidden;
+	}
+	
+	.sidenav.selective-hide {
+		max-height: 0px;
 	}
 	
 	.nav-sections {
@@ -829,7 +843,7 @@ div.main.wrapper + div.inner {
 	
 	.tabnav li.buttonly a:before {
 		content: ' ';
-		padding-left: 15px;
+		padding-left: 20px;
 	}
 	
 	.tabnav li.buttonly a span.im {
