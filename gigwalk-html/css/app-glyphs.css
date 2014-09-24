@@ -83,6 +83,15 @@
 .icon-trash:before {
 	content: "\e60e";
 }
+.icon-building:before {
+	content: "\e610";
+}
+.icon-map-pin:before {
+	content: "\e611";
+}
+.icon-people:before {
+	content: "\e612";
+}
 
 
 

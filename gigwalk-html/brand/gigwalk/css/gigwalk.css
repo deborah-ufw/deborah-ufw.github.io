@@ -44,18 +44,6 @@ html, body {
 	border-color: #4a4a4a;
 }
 
-.tabnav  li {
-	border-right: 1px solid rgba(0, 0, 0, .1);
-}
-
-.tabnav  li.active {
-	border-right: 1px solid rgba(0, 0, 0, .2);
-}
-
-.icon-buttons a {
-	border-color: rgba(255, 255, 255, .3);
-}
-
 .btn.btn-default.dropdown-toggle {
 	border-width: 0px;
 }
@@ -310,12 +298,14 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 
 .nav-sections li.divider,
 .tabnav li a,
+.tabnav .btn.btn-default.dropdown-toggle,
 .header .actions .ti {
 	font-family: Helvetica-Neue-Light;
 }
 
 .regular,
-select option {
+select option,
+.tabnav li .dropdown li a {
 	font-family: Helvetica-Neue;
 }
 
