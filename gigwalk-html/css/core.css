@@ -1230,7 +1230,7 @@ div.main.wrapper + div.inner {
 } 
 
 .set-repeats .inner {
-	padding: 1em;
+	padding: 1em 2em 1em 1em;
 }
 
 .set-repeats {
@@ -1272,8 +1272,12 @@ div.main.wrapper + div.inner {
 	margin-top: -2px;
 }
 
-.set-repeats .radios input[type="text"] {
+.set-repeats .radios input[type="text"].ends-after {
 	width: 4em;
+}
+
+.set-repeats .radios input[type="text"].ends-on {
+	width: 6em;
 }
 
 .set-repeats .radios {
@@ -1281,11 +1285,17 @@ div.main.wrapper + div.inner {
 }
 
 .set-repeats .radio .plainLabel {
+	margin-right: .3em;
 	padding-left: 0;
 }
 
 .set-repeats .radio.first {
 	margin-top: 0;
+}
+
+.set-repeats .radio input {
+	padding: 2px;
+	top: 3px;
 }
 
 .description .value {
@@ -1294,18 +1304,17 @@ div.main.wrapper + div.inner {
 		left: 0;
 }
 
-.group .plainLabel,
-.instructions .plainLabel {
-	margin-right: 15px;
-}
-
 .set-repeats .radios .plainLabel {
 	text-align: left;
-	padding-top: 3px;
 }
 
 .group.repeats .set-repeats .dropdown-menu {
 	left: 0;
+}
+
+.group .plainLabel,
+.instructions .plainLabel {
+	margin-right: 15px;
 }
 
 .date.group .plainLabel {
