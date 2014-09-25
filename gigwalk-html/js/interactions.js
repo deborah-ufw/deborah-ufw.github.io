@@ -75,10 +75,16 @@ $(document).ready(function() {
 	
 	//******** project scheduling "repeats" panel ******** //	
 	$('.repeats-setter').click(function() {
-		$('.set-repeats').show();
+		if ( $('.set-repeats').css('display') == 'none' ) {
+		  $('.set-repeats').css('display','block');
+		} else {
+		  $('.set-repeats').css('display','none');
+		}
 	});
 	
 });
+
+
 
 
 // - - - - - - - - - - - - - END DOM READY - - - - - - - - - - - - - //
