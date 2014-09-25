@@ -7,6 +7,10 @@
 	color: #F60;
 }
 
+.subcontent {
+	margin-bottom: 5em;
+}
+
 
 /* base */
 
@@ -96,6 +100,10 @@ html, body {
 	.user-org,
 	.plainLabel {
 		color: #ababab;
+	}
+	
+	.subnav li a {
+		color: #aaaaaa;
 	}
 	
 	.gray-cancel,
@@ -243,14 +251,15 @@ html, body {
 	
 	header .nav li.alerts .im,
 	header .nav li.messages .im,
-	.instruction .arrow {
+	.instruction .arrow,
+	.subnav li.active a {
 		color: #08aa86;
 	}
 	
 	ul.dropdown-menu li.header,
 	input.supercheck:checked:after,
 	.primary.actions a {
-		background: #08aa86;
+		background: #00a584;
 	}
 	
 	header .nav li {
@@ -258,7 +267,10 @@ html, body {
 	}
 	
 	input.supercheck:checked:after,
-	.primary.actions a {
+	.primary.actions a,
+	.subnav li.active a,
+	.subnav,
+	.subnav li.active {
 		border-color: #08aa86;
 	}
 	
@@ -299,12 +311,14 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .nav-sections li.divider,
 .tabnav li a,
 .tabnav .btn.btn-default.dropdown-toggle,
-.header .actions .ti {
+.header .actions .ti,
+.subnav li {
 	font-family: Helvetica-Neue-Light;
 }
 
 .regular,
 select option,
+.subcontent.sub .subnav li,
 .tabnav li .dropdown li a {
 	font-family: Helvetica-Neue;
 }

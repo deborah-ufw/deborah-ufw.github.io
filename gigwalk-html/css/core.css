@@ -108,7 +108,8 @@ a.disabled,
 .group.additional .sub .checker:after,
 .header .actions:after,
 .item .sub.more-info:after,
-.primary.actions:after {
+.primary.actions:after,
+.subnav:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -118,7 +119,8 @@ a.disabled,
 }
 
 nav .nav-sections,
-nav.tabnav ul {
+nav.tabnav ul,
+nav.subnav ul {
 	padding-left: 0;
 	list-style: none;
 }
@@ -132,6 +134,7 @@ nav.tabnav ul {
 .navbar-brand,
 header nav .number,
 .tabnav li a,
+.subnav li a,
 a.buttonly,
 select,
 .custom-select,
@@ -140,6 +143,7 @@ select,
 }
 
 .inline-left,
+.subnav li,
 .group.clients .more-info .wrapper,
 .instructions .header .ti {
 	display: inline-block;
@@ -218,7 +222,8 @@ header .navbar-collapse.in {
 }
 
 .sidenav .user-info,
-.header .dragger {
+.header .dragger,
+.subnav ul {
 	width: 100%;
 }
 
@@ -359,8 +364,13 @@ header .nav ul.dropdown-menu li,
 	border-top: 1px solid #cccccc;
 }
 
-.Projects .group {
+.Projects .group,
+.subnav {
 	border-bottom: 1px solid #cccccc;
+}
+
+.subnav li {
+	border-bottom: 7px solid #ffffff;
 }
 
 .group .sub.first,
@@ -976,7 +986,6 @@ div.main.wrapper + div.inner {
 }
 
 
-
 /* tabbed nav width adjustments for content areas */
 
 @media (min-width: 665px) and (max-width: 715px) {
@@ -1075,7 +1084,24 @@ div.main.wrapper + div.inner {
 }
 
 
+/* subnavs */	
 
+.subnav {
+	margin: 2em 0 1em 0;
+}
+
+.subnav li {
+	font-size: 1.5em;
+	margin-right: 2em;
+}
+
+.subcontent.secondary .subnav {
+	width: 565px;
+}
+
+.subcontent.secondary .subnav li {
+	font-size: 1.1em;
+}
 
 
 /* content */
