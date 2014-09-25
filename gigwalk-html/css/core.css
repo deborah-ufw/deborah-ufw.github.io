@@ -109,7 +109,8 @@ a.disabled,
 .header .actions:after,
 .item .sub.more-info:after,
 .primary.actions:after,
-.subnav:after {
+.subnav:after,
+.set-repeats .ends:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -138,14 +139,17 @@ header nav .number,
 a.buttonly,
 select,
 .custom-select,
-.caret  {
+.caret,
+.set-repeats .dropdown,
+.set-repeats .inner  {
 	display: inline-block;
 }
 
 .inline-left,
 .subnav li,
 .group.clients .more-info .wrapper,
-.instructions .header .ti {
+.instructions .header .ti,
+.set-repeats .radios {
 	display: inline-block;
 	float: left;
 }
@@ -181,7 +185,9 @@ input[type="radio"],
 	float: right;
 }
 
-.tabnav li .dropdown li {
+.tabnav li .dropdown li,
+.group.repeats .every .dropdown .plainLabel,
+.group.repeats .set-repeats .radios .plainLabel {
 	float: none;
 }
 
@@ -205,7 +211,8 @@ input[type="checkbox"],
 .header .actions,
 .instructions .primary.actions,
 .instructions .primary.actions:before,
-.icon-buttons {
+.icon-buttons,
+.set-repeats .ends {
 	position: relative;
 }
 
@@ -264,7 +271,9 @@ select {
 
 /* colors */
 
-.tabnav li .dropdown li a {
+.tabnav li .dropdown li a,
+.set-repeats .dropdown .plainLabel,
+.set-repeats .radios .plainLabel {
 	color: #333;
 }
 
@@ -296,12 +305,14 @@ select {
 		color: #ababab; 
  }
 
-.editable:after,
-.desktop .editable:hover:after {
+.editable:after {
 	color: #cbcbcb;
 }
 
-.desktop .editable:after,
+.set-repeats .inner {
+	background: #f8f8f8;
+}
+
 .desktop .date.group:after {
 	color: #ffffff;
 }
@@ -1143,8 +1154,17 @@ div.main.wrapper + div.inner {
 
 /* Project builder top */
 
+.inner.wrapper > .content {
+	margin-top: 1em;
+}
+
 .section.title {
-	font-size: 1.4em;
+	font-size: 1.9em;
+}
+
+.ti.editable:after {
+	font-size: .8em;
+	top: 2px;
 }
 
 .group {
@@ -1175,6 +1195,11 @@ div.main.wrapper + div.inner {
 	width: 300px;
 }
 
+.group.repeats .btn.btn-default.dropdown-toggle,
+.group.repeats .dropdown-menu {
+	width: auto;
+}
+
 .group .sub {
 	margin-left: 115px; 
 }
@@ -1193,13 +1218,74 @@ div.main.wrapper + div.inner {
 	padding-top: 14px;
 }
 
+.plainLabel {
+	text-align: right;
+	margin-right: 10px;
+	width: 100px;
+}
+
 .repeats-selection,
 .group {
 	margin-top: 1.3em;
 } 
 
+.set-repeats .inner {
+	padding: 1em;
+}
+
+.set-repeats {
+	margin: 0 0 0 116px;
+}
+
 .repeats-setter.value {
 	top: -2px;
+}
+
+.set-repeats .checker .plainLabel {
+	margin-right: 3em;
+}
+
+.set-repeats .every .dropdown .plainLabel,
+.set-repeats .dropdown .caret {
+	margin-left: .2em;
+}
+
+.set-repeats .every .plainLabel,
+.set-repeats .ends .plainLabel {
+	width: 117px;
+}
+
+.set-repeats .plainLabel,
+.set-repeats .radios .plainLabel {
+	width: auto;
+}
+
+.set-repeats {
+	font-size: .9em;
+}
+
+.set-repeats .dropdown .dropdown-toggle {
+	padding-right: 8px;
+}
+
+.set-repeats .dropdown .dropdown-toggle .caret {
+	margin-top: -2px;
+}
+
+.set-repeats .radios input[type="text"] {
+	width: 4em;
+}
+
+.set-repeats .radios {
+	margin-left: 1.5em;
+}
+
+.set-repeats .radio .plainLabel {
+	padding-left: 0;
+}
+
+.set-repeats .radio.first {
+	margin-top: 0;
 }
 
 .description .value {
@@ -1213,10 +1299,13 @@ div.main.wrapper + div.inner {
 	margin-right: 15px;
 }
 
-.plainLabel {
-	text-align: right;
-	margin-right: 10px;
-	width: 100px;
+.set-repeats .radios .plainLabel {
+	text-align: left;
+	padding-top: 3px;
+}
+
+.group.repeats .set-repeats .dropdown-menu {
+	left: 0;
 }
 
 .date.group .plainLabel {

@@ -324,7 +324,6 @@ select option,
 }
 
 .sidenav .user-name,
-.section.title .ti,
 .remove {
 	font-family: Helvetica-Neue-Medium;
 }
@@ -360,6 +359,10 @@ select option,
 	padding-left: 1px;
 	height: 35px;
 	width: 35px;
+}
+
+.set-repeats input.supercheck:checked:after {
+	font-size: 1.1em;
 }
 
 .item.set-required {

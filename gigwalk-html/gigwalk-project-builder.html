@@ -225,58 +225,73 @@
           </div>
           
           <div class="set-repeats">
-            <div class="checker">
-              <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>Repeats</label>
-            </div> 
-            
-           <select class="custom time-increment">
-              <option value="Daily">Daily</option>
-              <option value="Weekly" selected="selected">Weekly</option>
-              <option value="Monthly" >Monthly</option>
-              <option value="Yearly" >Yearly</option>
-           </select>
-           
-           <div class="every">
-            <span class="plainLabel">Every</span>
-            <select class="custom increment-value">
-              <option value="1" selected="selected">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
-            
-            <span class="plainLabel">Weeks</span>
-          </div>
-            
-            <div class="ends">
-              <div class="radios">
-                <input type="radio" name="ends">
-                <label class="plainLabel">Never</label>
-              </div>
-              <div class="radios">
-                <input type="radio" checked="checked" name="ends">
-                <label class="plainLabel">After</label>
-                <input type="text" class="ends-after"/>
-                <label class="plainLabel">times</label>
-              </div>
-              <div class="radios">
-                <input type="radio" checked="checked" name="ends">
-                <label class="plainLabel">On</label>
-                <!--  deborah to-do datepicker -->
-                <input type="text" class="ends-on"/>
-              </div>
-            </div>
-            <div class="summary">
-              <div class="plainLabel">Summary</div>
-              <div class="summary-dynamic">Repeats weekly, ends never.</div>
+            <div class="inner">
+              <div class="checker">
+                <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>Repeats</label>
+              </div> 
+              
+             <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    Weekly
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Daily</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Weekly</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Monthly</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Yearly</a></li>
+                  </ul>
+                </div>
+             
+             <div class="every">
+              <span class="plainLabel">Every</span>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    1
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">1</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">2</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">3</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">4</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">5</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">6</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">7</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">8</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">9</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">10</a></li>
+                  </ul>
+                  <span class="plainLabel">Weeks</span>
+                </div>
             </div>
               
+              <div class="ends">
+                <label class="plainLabel">Ends</label>
+                <div class="radios">
+                  <div class="radio first">
+                    <input type="radio" name="ends">
+                    <label class="plainLabel">Never</label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" checked="checked" name="ends">
+                    <label class="plainLabel">After</label>
+                    <input type="text" class="ends-after"/>
+                    <label class="plainLabel">times</label>
+                  </div>
+                  <div class="radio">
+                    <input type="radio" checked="checked" name="ends">
+                    <label class="plainLabel">On</label>
+                    <!--  deborah to-do datepicker -->
+                    <input type="text" class="ends-on"/>
+                  </div>
+                </div>
+              </div>
+              <div class="summary">
+                <div class="plainLabel">Summary</div>
+                <div class="summary-dynamic">Repeats weekly, ends never.</div>
+              </div>
+            </div>  
           </div>
         </div><!-- ends repeats group -->
         
