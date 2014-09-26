@@ -24,6 +24,11 @@ body {
 	font-size: 1.4em;
 }
 
+.header .actions .ti,
+.instructions .item .actions a.buttonly {
+	font-size: 1.2em;
+}
+
 .nav-sections,
 .group,
 .instruction-content {
@@ -110,7 +115,8 @@ a.disabled,
 .item .sub.more-info:after,
 .primary.actions:after,
 .subnav:after,
-.set-repeats .ends:after {
+.set-repeats .ends:after,
+.group.materials .mini-panel .wrapper:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -141,15 +147,16 @@ select,
 .custom-select,
 .caret,
 .set-repeats .dropdown,
-.set-repeats .inner  {
+.set-repeats .mini-panel  {
 	display: inline-block;
 }
 
 .inline-left,
 .subnav li,
-.group.clients .more-info .wrapper,
+.adjacent .wrapper,
 .instructions .header .ti,
-.set-repeats .radios {
+.set-repeats .radios,
+.group.materials .ti.number {
 	display: inline-block;
 	float: left;
 }
@@ -309,7 +316,7 @@ select {
 	color: #cbcbcb;
 }
 
-.set-repeats .inner {
+.mini-panel {
 	background: #f8f8f8;
 }
 
@@ -380,6 +387,10 @@ header .nav ul.dropdown-menu li,
 .Projects .group,
 .subnav {
 	border-bottom: 1px solid #cccccc;
+}
+
+.group .mini-panel {
+	border-bottom: 1px solid #ffffff;
 }
 
 .subnav li {
@@ -1191,7 +1202,8 @@ div.main.wrapper + div.inner {
 .instructions .dropdown-menu,
 .item input[type="text"],
 .item input[type="textarea"],
-.btn.btn-default.dropdown-toggle {
+.btn.btn-default.dropdown-toggle,
+.group .text-input input[type="text"] {
 	width: 300px;
 }
 
@@ -1229,10 +1241,6 @@ div.main.wrapper + div.inner {
 	margin-top: 1.3em;
 } 
 
-.set-repeats .inner {
-	padding: 1em 2em 1em 1em;
-}
-
 .set-repeats {
 	margin: 0 0 0 116px;
 }
@@ -1252,7 +1260,7 @@ div.main.wrapper + div.inner {
 
 .set-repeats .every .plainLabel,
 .set-repeats .ends .plainLabel {
-	width: 117px;
+	width: 105px;
 }
 
 .set-repeats .plainLabel,
@@ -1338,13 +1346,15 @@ div.main.wrapper + div.inner {
 }
 
 .sub.more-info,
+.sub .more-info,
 .instructions .item .actions {
 	font-size: .85em;
 }
 
-.sub.more-info input[type="text"] {
+.sub.more-info input[type="text"],
+.sub .more-info input[type="text"] {
 	text-align: center;
-	margin-top: -5px;
+	margin: -5px 0 0 5px;
 	padding: 2px 4px;
 	width: 60px;
 }
@@ -1377,6 +1387,43 @@ div.main.wrapper + div.inner {
 .group.additional .sub .plainLabel {
 	margin-bottom: 0;
 }
+
+.mini-panel  {
+	padding: 1em 2em 1em 1em;
+}
+
+.group .text-input input[type="text"] {
+	margin: 1px 5px 10px 0;
+}
+
+.group.materials .ti.number {
+	font-size: 1.3em;
+	max-width: 200px;
+}
+
+.group.materials .mini-panel .remove {
+	margin-top: -7px;
+}
+
+.group.materials .mini-panel .ti.name {
+	margin: 0 0 .8em 0;
+}
+
+.group .mini-panel .adjacent {
+	margin-top: 1em;
+}
+
+.group .mini-panel .adjacent .plainLabel {
+	margin-right: 2em;
+}
+
+
+
+
+/* heredeb */
+
+
+
 
 /* widgets */
 
@@ -1439,10 +1486,6 @@ div.main.wrapper + div.inner {
 		right: .7em;
 }
 
-.header .actions .ti {
-	font-size: 1.2em;
-}
-
 .instruction {
 	margin-bottom: 1.5em;
 }
@@ -1489,8 +1532,9 @@ div.main.wrapper + div.inner {
 	padding: 1em 0;
 }
 
-.instructions .item .actions a.buttonly {
-	padding: .5em 1.5em;
+.instructions .item .actions a.buttonly,
+.group a.buttonly {
+	padding: .5em 1em;
 }
 
 .instructions .primary.actions {

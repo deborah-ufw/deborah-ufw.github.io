@@ -82,6 +82,17 @@ $(document).ready(function() {
 		}
 	});
 	
+	//******** project "materials" options panel ******** //	
+		$('.materials.buttonly').click(function() {
+			if ( $('.materials.options').css('display') == 'none' ) {
+			  $('.materials.options').css('display','block');
+			} else {
+			  $('.materials.options').css('display','none');
+			}
+		});
+	
+	
+	
 });
 
 

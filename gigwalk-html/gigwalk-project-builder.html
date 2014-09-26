@@ -224,8 +224,15 @@
             <div class="value repeats-setter editable">Never</div>
           </div>
           
+          <!-- --------------------------------------------------------
+                Dave Valerie
+                the js that shows/hides the panel is
+                "project scheduling "repeats" panel" in interactions.js
+                in the dom ready
+          ----------------------------------------------------------- -->      
+          
           <div class="set-repeats">
-            <div class="inner">
+            <div class="inner mini-panel">
               <div class="checker">
                 <label class="plainLabel"><input type="checkbox" class="supercheck" value="repeats"/>Repeats</label>
               </div> 
@@ -282,7 +289,6 @@
                   <div class="radio">
                     <input type="radio" checked="checked" name="ends">
                     <label class="plainLabel">On</label>
-                    <!--  deborah to-do datepicker -->
                     <input type="text" class="datepicker ends-on"/>
                   </div>
                 </div>
@@ -320,7 +326,7 @@
           </div>
           
           <!-- --------------------------------------------------------
-                Dave Valerie to-do
+                Dave Valerie 
                 Add "first" and "last" classes to divs with class "sub"
                 showing dropdown selection (need this to manage dividers)
           ----------------------------------------------------------- -->
@@ -349,7 +355,7 @@
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
               
                 <!-- --------------------------------------------------------
-                    Dave Valerie to-do
+                    Dave Valerie 
                     Don't show the divider or header for skills and equipment 
                     if there are no skills in the list to select 
                     (don't need dividers and headers if list is all equipment) 
@@ -385,6 +391,47 @@
           </div>
         </div>
         
+        <!-- materials -->
+        <div class="group materials">
+          <div class="plainLabel">Required Materials</div>
+          <div class="text-input">
+            <input type="text" placeholder="Enter PMID" />
+            <a class="buttonly secondary" href="javascript:;">Add</a>
+          </div>
+          
+          <!-- --------------------------------------------------------
+                Dave Valerie
+                the js that shows/hides the panel is
+                "project "materials" options panel" in interactions.js 
+                in the dom ready
+          ----------------------------------------------------------- -->
+          
+          <div class="sub mini-panel first last">
+            <div class="wrapper">
+              <div class="ti number">
+                049290
+              </div>
+              <a class="remove" href="javascript:;">Remove</a>
+            </div>
+            <div class="ti name">
+              Sunscreen Promo Pack
+            </div>
+            <input type="text" placeholder="Enter quantity" />
+            <div class="more-info adjacent">
+              <div class="wrapper">
+                <label class="plainLabel">
+                  <input type="radio" checked="" value="hours" name="Bill" />By worker
+                </label>
+              </div>
+              <div class="wrapper">
+                <label class="plainLabel">
+                  <input type="radio" checked="" value="hours" name="Bill" />By location
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <!-- clients -->
         <div class="group clients">
           <div class="plainLabel">Clients</div>
@@ -400,22 +447,24 @@
             </ul>
           </div>
           
-          <div class="sub first">
+          <div class="sub first last">
             <div class="selected-item">Kikkoman</div>
             <a class="remove" href="javascript:;">Remove</a>
-          </div>
-          <div class="sub last more-info">
-            <div class="adjacent">
-              <div class="wrapper">
-                <input type="radio" checked="checked" value="percent" name="Bill">
-                <label class="plainLabel">Bill %</label>
-              <input type="text" placeholder="ex. 80" />
-              </div>
-              <div class="wrapper">
-                <input type="radio" checked="" value="hours" name="Bill">
-                <label class="plainLabel">Bill by hours</label>
-              </div>
-            </div> 
+            <div class="more-info">
+              <div class="adjacent">
+                <div class="wrapper">
+                  <label class="plainLabel">
+                    <input type="radio" checked="checked" value="percent" name="Bill" />Bill %
+                  </label>
+                  <input type="text" placeholder="ex. 80" />
+                </div>
+                <div class="wrapper">
+                  <label class="plainLabel">
+                    <input type="radio" checked="" value="hours" name="Bill" />Bill by hours
+                  </label>
+                </div>
+              </div> 
+            </div>
           </div>
         </div>
         
