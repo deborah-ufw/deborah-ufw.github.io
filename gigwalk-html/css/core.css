@@ -41,7 +41,8 @@ body {
 
 .group .sub .selected-item,
 .description .value,
-.plainLabel {
+.plainLabel,
+.instruction .header .actions .ti {
 	line-height: 1.2em;
 }
 
@@ -116,7 +117,8 @@ a.disabled,
 .primary.actions:after,
 .subnav:after,
 .set-repeats .ends:after,
-.group.materials .mini-panel .wrapper:after {
+.group.materials .mini-panel .wrapper:after,
+.instruction-footer:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -147,7 +149,9 @@ select,
 .custom-select,
 .caret,
 .set-repeats .dropdown,
-.set-repeats .mini-panel  {
+.set-repeats .mini-panel,
+.instruction-footer .icon-checkmark,
+.instruction-footer .item.count .described {
 	display: inline-block;
 }
 
@@ -156,7 +160,8 @@ select,
 .adjacent .wrapper,
 .instructions .header .ti,
 .set-repeats .radios,
-.group.materials .ti.number {
+.group.materials .ti.number,
+.instruction-footer .item {
 	display: inline-block;
 	float: left;
 }
@@ -216,10 +221,15 @@ input[type="checkbox"],
 .im,
 .header .controls,
 .header .actions,
+.header .actions .icon-buttons .im,
 .instructions .primary.actions,
 .instructions .primary.actions:before,
 .icon-buttons,
-.set-repeats .ends {
+.set-repeats .ends,
+.instruction-footer .item,
+.instruction-footer .descriptor,
+.instruction-footer .item.count .described,
+.icon-buttons a:before {
 	position: relative;
 }
 
@@ -280,7 +290,8 @@ select {
 
 .tabnav li .dropdown li a,
 .set-repeats .dropdown .plainLabel,
-.set-repeats .radios .plainLabel {
+.set-repeats .radios .plainLabel,
+.instruction-footer .descriptor {
 	color: #333;
 }
 
@@ -320,7 +331,8 @@ select {
 	background: #f8f8f8;
 }
 
-.desktop .date.group:after {
+.desktop .date.group:after,
+.instruction-footer .icon-checkmark {
 	color: #ffffff;
 }
 
@@ -328,7 +340,8 @@ select {
 	background-color: #ffffff;
 }
 
-.tabnav ul.dropdown-menu {
+.tabnav ul.dropdown-menu,
+.instruction-footer .item {
 	background: #ffffff;
 }
 
@@ -336,7 +349,11 @@ select {
 	border-radius: 0;
 }
 
-.disabled {
+.disabled,
+.disabled:hover,
+.disabled:focus,
+.primary.actions a.buttonly.disabled:hover,
+.primary.actions a.buttonly.disabled:focus {
 	background-color: #cccccc;
 }
 
@@ -380,8 +397,14 @@ input[type="textarea"],
 
 .instructions .primary.actions:before,
 header .nav ul.dropdown-menu li,
-.group .sub {
+.group .sub,
+.instruction-footer {
 	border-top: 1px solid #cccccc;
+}
+
+.instruction-footer .item.required,
+.instruction-footer .item.count {
+	border-right: 1px solid #cccccc;
 }
 
 .Projects .group,
@@ -408,7 +431,6 @@ header .nav ul.dropdown-menu li,
 	border-bottom-width: 0;
 }
 
-.actions a,
 .instructions .item .actions a.buttonly {
 	border: 1px solid;
 }
@@ -421,10 +443,7 @@ header .nav ul.dropdown-menu li,
 	border-right: 1px solid rgba(0, 0, 0, .2);
 }
 
-.icon-buttons a {
-	border-color: rgba(255, 255, 255, .3);
-}
-
+.icon-buttons a,
 .tabnav li.buttonly a,
 .tabnav .btn.btn-default.dropdown-toggle {
 	border-left: 1px solid rgba(255, 255, 255, .3);
@@ -432,17 +451,12 @@ header .nav ul.dropdown-menu li,
 }
 
 .caret,
-.navbar,
-.icon-buttons a {
+.navbar {
 	border: 0px solid transparent;
 	border-top: 0px solid transparent;
 	border-right: 0px solid transparent;
 	border-bottom: 0px solid transparent;
 	border-left: 0px solid transparent;
-}
-
-.icon-buttons a {
-	border-left: 1px solid;
 }
 
 .nav-sections li {
@@ -1208,7 +1222,8 @@ div.main.wrapper + div.inner {
 }
 
 .group.repeats .btn.btn-default.dropdown-toggle,
-.group.repeats .dropdown-menu {
+.group.repeats .dropdown-menu,
+.instructions .instruction-footer .item .plainLabel {
 	width: auto;
 }
 
@@ -1418,13 +1433,6 @@ div.main.wrapper + div.inner {
 }
 
 
-
-
-/* heredeb */
-
-
-
-
 /* widgets */
 
 .instructions > .ti {
@@ -1446,12 +1454,14 @@ div.main.wrapper + div.inner {
 }
 
 .header .controls,
-.header .actions {
+.header .actions .ti {
 	padding: 8px 10px 0 10px;
 }
 
-.header .actions {
-	padding-bottom: 6px;
+.header .actions .ti {
+	padding-top: 14px;
+	padding-bottom: 8px;
+	max-width: 440px;
 }
 
 .header .controls .im,
@@ -1490,7 +1500,7 @@ div.main.wrapper + div.inner {
 	margin-bottom: 1.5em;
 }
 
-.instruction-content {
+.instruction-content .inner {
 	padding: 1.2em 1em 1em 1em;
 }
 
@@ -1534,7 +1544,7 @@ div.main.wrapper + div.inner {
 
 .instructions .item .actions a.buttonly,
 .group a.buttonly {
-	padding: .5em 1em;
+	padding: .5em 1.2em .5em 1em;
 }
 
 .instructions .primary.actions {
@@ -1560,8 +1570,54 @@ div.main.wrapper + div.inner {
 }
 
 .icon-buttons a {
-	padding: 0 .5em;
+	margin-right: -5px;
+	padding: .6em .8em;
 }
+
+.icon-buttons a:before {
+	top: 4px;
+}
+
+.instruction-footer .item {
+	font-size: 1.1em;
+	padding: 0 15px;
+}
+
+.instruction-footer .item.required {
+	padding-left: 0;
+}
+
+.instruction-footer .icon-checkmark {
+	margin: -1px 5px -1px -1px;
+	padding: 5px 0 0 6px;
+	height: 42px;
+	width: 42px;
+}
+
+.instruction-footer .item.count,
+.instruction-footer .item.estimated {
+	height: 40px;
+}
+
+.instruction-footer .required .descriptor {
+	top: -5px;
+}
+
+.instruction-footer .descriptor {
+	padding-left: .3em;
+}
+
+.instruction-footer .item.count .described {
+	font-size: 1.4em;
+		top: 2px;
+}
+
+.instruction-footer .item.estimated {
+	padding-top: .6em;
+}
+
+
+/* heredeb */
 
 
 

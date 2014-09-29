@@ -7,6 +7,18 @@
 	color: #F60;
 }
 
+.super span {
+	color: #ff0099;
+}
+
+.instructions .super {
+	font-size: 1.4em;
+	margin: 1em 0;
+	padding: 1em;
+	border-top: 8px solid #f60;
+	border-bottom: 8px solid #f60;
+}
+
 .subcontent {
 	margin-bottom: 5em;
 }
@@ -77,7 +89,9 @@ html, body {
 	.checker .supercheck:after,
 	.instruction-content,
 	.primary.actions a.cancel,
-	.primary.actions a.delete {
+	.primary.actions a.delete,
+	.primary.actions a.delete:hover,
+	.primary.actions a.delete:focus {
 		background-color: #ffffff;
 	}
 	
@@ -138,11 +152,15 @@ html, body {
 		background: #909090;
 	}
 	
-	.primary.actions a.disabled {
+	.primary.actions a.disabled,
+	.primary.actions a.buttonly.disabled:hover,
+	.primary.actions a.buttonly.disabled:focus {
 		background: #dfdfdf;
 	}
 	
-	.primary.actions a.disabled {
+	.primary.actions a.disabled,
+	.primary.actions a.buttonly.disabled:hover,
+	.primary.actions a.buttonly.disabled:focus {
 		border-color: #dfdfdf;
 	}
 	
@@ -250,19 +268,33 @@ html, body {
 		border-left-color: #4890e2;
 	}
 	
+	.instructions .item .actions a.buttonly:hover,
+	.instructions .item .actions a.buttonly:focus,
+	.group a.buttonly:hover,
+	.group a.buttonly:focus {
+		background: #2771da;
+	}
+	
 	/* greens */
 	
 	header .nav li.alerts .im,
 	header .nav li.messages .im,
 	.instruction .arrow,
-	.subnav li.active a {
+	.subnav li.active a,
+	.instruction-footer .item.count .described {
 		color: #08aa86;
 	}
 	
 	ul.dropdown-menu li.header,
 	input.supercheck:checked:after,
-	.primary.actions a {
+	.primary.actions a,
+	.instruction-footer .icon-checkmark {
 		background: #00a584;
+	}
+	
+	.primary.actions a:hover,
+	.primary.actions a:focus {
+		background: #048d66;
 	}
 	
 	header .nav li {
@@ -327,11 +359,13 @@ select option,
 }
 
 .sidenav .user-name,
-.remove {
+.remove,
+.instruction-footer {
 	font-family: Helvetica-Neue-Medium;
 }
 
-.datepicker tr th.switch {
+.datepicker tr th.switch,
+.instruction-footer .item.count .described {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }
