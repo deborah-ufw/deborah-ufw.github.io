@@ -528,19 +528,15 @@
         <div class="super">
           Valerie and Dave, this is "Add Question" in editable and viewable state, from here to below.<br />
           I will make an annotated image for how to control the instruction's appearance for edit mode, view mode, 
-          "incomplete", and "required".
+          "incomplete", and "required", also making fields "invalid".
         </div>
         
         <!-- ****************** DEBORAH PASTE FOR VALERIE AND DAVE ***************** -->
         
-        <div class="super">
-          Valerie and Dave, this ends "Add Question". <span>Below here is in progress :]</span>
-        </div>
+        <h1 class="super">Edit Mode</h1>
         
-        <!-- ************************** END FOR VALERIE AND DAVE ************************** -->
-        
-        <!-- first instruction in incomplete edit mode, required -->
-        <div class="instruction edit-mode required incomplete">
+        <!-- ADD QUESTION instruction in EDIT MODE -->
+        <div class="instruction edit-mode">
           
           <div class="header">
             <div class="controls">
@@ -550,6 +546,14 @@
             </div>
             <div class="actions">
               <div class="ti">Inventory Check</div>
+              <div class="viewing icon-buttons">
+                <a class="im icon-trash" href="javascript:;"></a>
+                <a class="im icon-duplicate" href="javascript:;"></a>
+                <a class="im icon-edit" href="javascript:;"></a>
+              </div>
+              <div class="editing icon-buttons">
+                <a class="im icon-close" href="javascript:;"></a>
+              </div>
             </div>
           </div>
         
@@ -562,7 +566,7 @@
                 </div>
               </div> 
               
-              <div class="item">
+              <div class="item required">
                 <div class="plainLabel">Question Type</div>
                 <div class="dropdown">
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -570,33 +574,33 @@
                     <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">List 1</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">List 2</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">List 3</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Multiple Choice1</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Checkboxes</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Numeric Entry</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Date</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Time</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Item Grid</a></li>
                   </ul>
-                </div>
-                <div class="sub">
-                  <!-- the selection will go here -->
                 </div>
               </div>  
               
-              <div class="item">
+              <div class="item required">
                 <div class="plainLabel">Question Title</div>
                 <div class="sub">
                   <input type="text" placeholder="ex. Inventory Check" value="Inventory Check" />
                 </div>
               </div> 
               
-              <div class="item">
+              <div class="item required">
                 <div class="plainLabel">Question Text</div>
                   <div class="sub">
-                  <input type="textarea" placeholder="ex. Check if these items are on the shelf" value="Check if these items are on the shelf" />
+                  <input type="textarea" placeholder="ex. Check if items are on the shelf" value="Check if items are on the shelf" />
                 </div>
               </div> 
               
-              <div class="item">
+              <div class="item required targets">
                 <div class="plainLabel">Question Targets</div>
-                <div class="dropdown required invalid">
+                <div class="dropdown required">
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                     Select from options
                     <span class="caret"></span>
@@ -605,14 +609,18 @@
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">List 1</a></li>
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">List 2</a></li>
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">List 3</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;" class="link">Add one target</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;" class="link">Manage Target lists</a></li>
                   </ul>
                 </div>  
-                <div class="sub">
-                  <!-- the selection will go here -->
+                <div class="sub first last">
+                  <div class="selected-item">List or Target 1</div>
+                  <a class="remove" href="javascript:;">Remove</a>
                 </div>
               </div>
               
-              <div class="item">
+              <div class="item required">
                 <div class="plainLabel">Answer 1</div>
                 <div class="sub">
                   <input type="textarea" placeholder="ex. Item out of stock" />
@@ -634,26 +642,116 @@
                 <div class="plainLabel">Time estimate</div>
                 <div class="sub">
                   <input type="text" class="value" />
-                  <div class="custom-select">
-                  <select class="custom time-estimate-increment">
-                    <option value="Daily">Seconds</option>
-                    <option value="Weekly" selected="selected">Minutes</option>
-                    <option value="Monthly" >Hours</option>
-                    <option value="Yearly" >Days</option>
-                  </select>
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                      Minutes
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
+            </div><!-- ends instruction content inner -->  
+            
+            <div class="instruction-footer">
+            
               <div class="primary actions">
                 <a class="linkly delete" href="javascript:;">Delete</a>
                 <div class="right">
                   <a class="buttonly cancel" href="javascript:;">Cancel</a>
                   <a class="buttonly disabled" href="javascript:;">Add</a>
                 </div>
-              </div>
-            </div><!-- ends instruction content inner -->  
+              </div><!-- ends instruction actions -->
+            
+              <div class="instruction-summary">
+                <div class="item required">
+                  <span class="im icon-checkmark"></span>
+                  <span class="descriptor">Required</span>
+                </div>
+                <div class="item count">
+                  <span class="described">18</span> 
+                  <span class="descriptor"><span class="descriptive">Total </span>questions</span>
+                </div>
+                <div class="item estimated">
+                  <span class="plainLabel">Est<span class="descriptive">imated time</span><span class="descriptor">18 minutes</span></span>
+                </div>
+              </div><!-- ends instruction summary -->
+              
+            </div><!-- ends instruction footer -->
+              
           </div><!-- ends instruction content -->
-        </div><!-- ends first instruction -->
+        </div><!-- ends ADD QUESTION instruction in EDIT MODE -->
+        
+        
+        <h1 class="super">View Mode</h1>
+        
+        <!-- ADD QUESTION instruction in VIEW MODE -->
+        <div class="instruction view-mode">
+          
+          <div class="header">
+            <div class="controls">
+              <div class="ti">Question</div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-dragger"></span></div>
+            </div>
+            <div class="actions">
+              <div class="ti">Inventory Check</div>
+              <div class="viewing icon-buttons">
+                <a class="im icon-trash" href="javascript:;"></a>
+                <a class="im icon-duplicate" href="javascript:;"></a>
+                <a class="im icon-edit" href="javascript:;"></a>
+              </div>
+              <div class="editing icon-buttons">
+                <a class="im icon-close" href="javascript:;"></a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="instruction-content">
+            <div class="inner">
+               Will put content based on the question types here
+            </div><!-- ends instruction content inner -->  
+            
+            <div class="instruction-footer">
+            
+              <div class="primary actions">
+                <a class="linkly delete" href="javascript:;">Delete</a>
+                <div class="right">
+                  <a class="buttonly cancel" href="javascript:;">Cancel</a>
+                  <a class="buttonly disabled" href="javascript:;">Add</a>
+                </div>
+              </div><!-- ends instruction actions -->
+            
+              <div class="instruction-summary">
+                <div class="item required">
+                  <span class="im icon-checkmark"></span>
+                  <span class="descriptor">Required</span>
+                </div>
+                <div class="item count">
+                  <span class="described">18</span> 
+                  <span class="descriptor"><span class="descriptive">Total </span>questions</span>
+                </div>
+                <div class="item estimated">
+                  <span class="plainLabel">Est<span class="descriptive">imated time</span><span class="descriptor">18 minutes</span></span>
+                </div>
+              </div><!-- ends instruction summary -->
+              
+            </div><!-- ends instruction footer -->
+              
+          </div><!-- ends instruction content -->
+        </div><!-- ends ADD QUESTION instruction in VIEW MODE -->
+        
+        <div class="super">
+          Valerie and Dave, this ends "Add Question". <span>Below here is my working area in progress (don't look because these parts are not ready yet!) :]</span>
+        </div>
+        
+        <!-- ************************** END FOR VALERIE AND DAVE ************************** -->
+        
         
         <!-- 2nd instruction in view mode, required -->
         <div class="instruction view-mode required">
@@ -666,42 +764,59 @@
             </div>
             <div class="actions">
               <div class="ti">Kikkoman bottle context on the shelf</div>
-              <div class="icon-buttons">
+              <div class="viewing icon-buttons">
                 <a class="im icon-trash" href="javascript:;"></a>
                 <a class="im icon-duplicate" href="javascript:;"></a>
                 <a class="im icon-edit" href="javascript:;"></a>
               </div>
+              <div class="editing icon-buttons">
+                <a class="im icon-close" href="javascript:;"></a>
+              </div>
             </div>
           </div>
         
-            <div class="instruction-content">
-              <div class="inner">
-                <p class="super">working here</p>
-              </div>
-              <div class="instruction-footer">
+          <div class="instruction-content">
+          
+            <div class="inner">
+              <p class="super">working here</p>
+            </div>
+            
+            <div class="instruction-footer">
+            
+              <div class="primary actions">
+                <a class="linkly delete" href="javascript:;">Delete</a>
+                <div class="right">
+                  <a class="buttonly cancel" href="javascript:;">Cancel</a>
+                  <a class="buttonly disabled" href="javascript:;">Add</a>
+                </div>
+              </div><!-- ends instruction actions -->
+            
+              <div class="instruction-summary">
                 <div class="item required">
                   <span class="im icon-checkmark"></span>
                   <span class="descriptor">Required</span>
                 </div>
                 <div class="item count">
                   <span class="described">18</span> 
-                  <span class="descriptor"><span class="descriptive">Total </span>photos</span>
+                  <span class="descriptor"><span class="descriptive">Total </span>questions</span>
                 </div>
                 <div class="item estimated">
                   <span class="plainLabel">Est<span class="descriptive">imated time</span><span class="descriptor">18 minutes</span></span>
                 </div>
-              </div><!-- ends instruction footer -->
+              </div><!-- ends instruction summary -->
               
-            </div><!-- ends instruction content -->  
-            
+            </div><!-- ends instruction footer -->
+              
+          </div><!-- ends instruction content -->  
         </div><!-- ends instruction -->
         
         <div class="panel-actions">
           <!-- put project actions here (delete, cancel, add) -->
-          <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>  
         </div>
         
       </div><!-- ends project instructions -->
+      
+      <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
       
       
       </div><!-- ends content -->

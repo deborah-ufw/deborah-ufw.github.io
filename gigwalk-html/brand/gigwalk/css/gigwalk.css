@@ -11,12 +11,17 @@
 	color: #ff0099;
 }
 
-.instructions .super {
+.instructions div.super {
 	font-size: 1.4em;
 	margin: 1em 0;
 	padding: 1em;
 	border-top: 8px solid #f60;
 	border-bottom: 8px solid #f60;
+}
+
+h1.super {
+	font-family: Helvetica-Neue-Light;
+	font-size: 3em;
 }
 
 .subcontent {
@@ -176,8 +181,14 @@ html, body {
 	/* reds */
 	
 	.remove,
-	.remove:hover {
+	.remove:hover,
+	.item.required > .plainLabel:after {
 		color: #db2023;
+	}
+	
+	.invalid input[type="text"],
+	.invalid input[type="textarea"] {
+		color: #ff5056;
 	}
 	
 	.instruction.incomplete .arrow,
@@ -191,10 +202,15 @@ html, body {
 		color: #ff5157;
 	}
 	
-	.instruction.incomplete,
-	.instruction.required.incomplete,
+	.instruction.incomplete .header,
+	.instruction.required.incomplete .header,
 	.invalid .btn.btn-default.dropdown-toggle {
 		background: #ff797e;
+	}
+	
+	.invalid input[type="text"],
+	.invalid input[type="textarea"] {
+		border-color:  #fe8e92;
 	}
 	
 	/* blues */
@@ -279,16 +295,21 @@ html, body {
 	
 	header .nav li.alerts .im,
 	header .nav li.messages .im,
-	.instruction .arrow,
 	.subnav li.active a,
 	.instruction-footer .item.count .described {
 		color: #08aa86;
 	}
 	
+	.instruction .arrow,
+	.instruction .header .controls .ti {
+		color: #39af95;
+	}
+	
 	ul.dropdown-menu li.header,
 	input.supercheck:checked:after,
 	.primary.actions a,
-	.instruction-footer .icon-checkmark {
+	.instruction-footer .icon-checkmark,
+	.instruction .header {
 		background: #00a584;
 	}
 	
@@ -316,7 +337,7 @@ html, body {
 		color: #ae7dbc;
 	}
 	
-	.instruction.required {
+	.instruction.required .header {
 		background: #9a5cab;
 	}
 	
