@@ -160,7 +160,8 @@ nav.subnav ul {
 .tabnav .dropdown.open ul.dropdown-menu,
 .tabnav li .dropdown li,
 .tabnav li .dropdown li a,
-.instruction.edit-mode .instruction-content .numeric .more-info .plainLabel {
+.instruction.edit-mode .instruction-content .numeric .more-info .plainLabel,
+.instruction .item.targets .sub .mini-panel.targets label {
 	display: block;
 }
 
@@ -399,8 +400,12 @@ select {
 }
 
 .mini-panel,
-.instruction .item.targets .sub {
+.instruction .item.targets .sub .mini-panel {
 	background: #f8f8f8;
+}
+
+.instruction .item.targets .sub {
+	background: #efefef;
 }
 
 .desktop .date.group:after,
@@ -507,6 +512,10 @@ header .nav ul.dropdown-menu li,
 	border-bottom: 1px solid #cccccc;
 }
 
+.instruction .item.targets .sub .mini-panel {
+	border-top: 2px solid #ffffff;
+}
+
 .mini-panel, .instruction .item.targets .sub,
 .group .mini-panel {
 	border-bottom: 2px solid #ffffff;
@@ -523,7 +532,8 @@ header .nav ul.dropdown-menu li,
 }
 
 .Projects .group.date,
-.Projects .group.repeats {
+.Projects .group.repeats,
+.instruction .item.targets .sub .mini-panel {
 	border-bottom-width: 0;
 }
 
@@ -1854,6 +1864,25 @@ a.iconly {
 a.iconly:before {
 	font-size: 1.5em;
 		top: 3px;
+}
+
+.instruction .item.targets .sub .mini-panel {
+	margin: -.3em -.5em;
+	padding-right: 1em;
+}
+
+.instruction .item.targets .sub .mini-panel.targets label {
+	font-size: .9em;
+	margin-left: 26px;
+}
+
+.instruction .item.targets .sub .mini-panel.targets input {
+	margin-right: 15px;
+	margin-left: -26px;
+}
+
+.instruction .item.targets .sub .mini-panel.targets input:after {
+	margin-top: -5px;
 }
 
 
