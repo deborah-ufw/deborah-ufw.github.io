@@ -18,7 +18,8 @@
 .editable:after,
 .checker .supercheck:after,
 .nav-active-holder:after,
-.instruction.view-mode .answer.exception .plainLabel:after {
+.instruction.view-mode .answer.exception .plainLabel:after,
+.iconly:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -97,6 +98,7 @@
 	content: "\e613";
 }
 .instruction.view-mode .answer.exception .plainLabel:after,
+.iconly.set-exceptions:before,
 .icon-flag:before {
 	content: "\e614";
 }

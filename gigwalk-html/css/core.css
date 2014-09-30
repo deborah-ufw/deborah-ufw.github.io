@@ -71,6 +71,10 @@ nav li a:focus,
 nav li a:visited,
 a.navly,
 .remove,
+.iconly,
+a.iconly,
+a.iconly:hover,
+a.iconly:focus,
 .dropdown-menu .link,
 a.buttonly,
 .icon-buttons a {
@@ -78,7 +82,9 @@ a.buttonly,
 }
 
 .primary.actions a.linkly,
-.dropdown-menu .link:hover {
+.dropdown-menu .link:hover,
+a.iconly span:hover,
+a.iconly span:focus {
 	text-decoration: underline;
 }
 
@@ -133,7 +139,9 @@ a.disabled,
 .instruction.view-mode .target:after,
 .instruction.view-mode .target .answers:after,
 .instruction.view-mode .target .answer:after,
-.instruction.view-mode .ti:after {
+.instruction.view-mode .ti:after,
+.instruction.edit-mode .instruction-content .numeric .more-info:before,
+.instruction.edit-mode .numeric .between:before {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -151,7 +159,8 @@ nav.subnav ul {
 
 .tabnav .dropdown.open ul.dropdown-menu,
 .tabnav li .dropdown li,
-.tabnav li .dropdown li a {
+.tabnav li .dropdown li a,
+.instruction.edit-mode .instruction-content .numeric .more-info .plainLabel {
 	display: block;
 }
 
@@ -167,7 +176,8 @@ select,
 .set-repeats .mini-panel,
 .instruction-footer .icon-checkmark,
 .instruction-footer .item.count .described,
-.time-estimate .dropdown {
+.time-estimate .dropdown,
+a.iconly {
 	display: inline-block;
 }
 
@@ -179,7 +189,9 @@ select,
 .group.materials .ti.number,
 .instruction-footer .item,
 .instruction.view-mode .target .name,
-.instruction.view-mode .target .answer {
+.instruction.view-mode .target .answer,
+.instruction.edit-mode .numeric .ti,
+.instruction.edit-mode .numeric .dropdown {
 	display: inline-block;
 	float: left;
 }
@@ -220,7 +232,8 @@ input[type="radio"],
 
 .tabnav li .dropdown li,
 .group.repeats .every .dropdown .plainLabel,
-.group.repeats .set-repeats .radios .plainLabel {
+.group.repeats .set-repeats .radios .plainLabel,
+.instruction.edit-mode .instruction-content .numeric .more-info > .plainLabel {
 	float: none;
 }
 
@@ -258,8 +271,11 @@ input[type="checkbox"],
 .instruction.view-mode .answer.exception .plainLabel:after,
 input[type="radio"],
 input[type="radio"]:after,
-.instruction.view-mode .time .dropdown ,
-.instruction.view-mode .time .btn.btn-default.dropdown-toggle {
+.instruction.view-mode .time .dropdown,
+.instruction.view-mode .time .btn.btn-default.dropdown-toggle,
+.tabnav .btn.btn-default.dropdown-toggle,
+a.iconly,
+a.iconly:before {
 	position: relative;
 }
 
@@ -276,7 +292,8 @@ header .navbar-collapse.in {
 
 .sidenav .user-info,
 .header .dragger,
-.subnav ul {
+.subnav ul,
+.instruction.edit-mode .instruction-content .numeric .more-info .plainLabel {
 	width: 100%;
 }
 
@@ -287,8 +304,17 @@ header .navbar-collapse.in {
 .instruction .time .btn.btn-default.dropdown-toggle,
 .instruction-content .time-estimate .dropdown-menu,
 .view-mode .instruction-content .time .dropdown-menu,
-.instruction.view-mode .answers .plainLabel {
+.more-info:before,.instruction.edit-mode .numeric .dropdown-menu,
+.instruction.view-mode .answers .plainLabel,
+.instruction.edit-mode .numeric .mini-panel .btn.btn-default.dropdown-toggle {
 	width: auto;
+}
+
+.tabnav .dropdownly .dropdown-menu,
+.instruction-content .time-estimate .dropdown-menu,
+.view-mode .instruction-content .time .dropdown-menu,
+.more-info:before,.instruction.edit-mode .numeric .dropdown-menu {
+	left: auto;
 }
 
 .opacity100 {
@@ -919,13 +945,8 @@ div.main.wrapper + div.inner {
 
 /*  top tabbed nav */
 
-.tabnav .btn.btn-default.dropdown-toggle {
-	position: relative;
-}
-
 .tabnav .dropdownly .dropdown-menu {
 	width: 265px;
-	left: auto;
 }
 
 @media (min-width: 665px) {
@@ -1273,8 +1294,11 @@ div.main.wrapper + div.inner {
 
 .group .dropdown,
 .instructions .dropdown {
-	margin-bottom: .3em;
 		top: -4px;
+}
+
+.group .dropdown {
+	margin-bottom: .3em;
 }
 
 
@@ -1309,6 +1333,10 @@ div.main.wrapper + div.inner {
 .remove {
 	font-size: .75em;
 	padding-top: 14px;
+}
+
+.iconly {
+	font-size: .85em;
 }
 
 .plainLabel {
@@ -1586,11 +1614,6 @@ div.main.wrapper + div.inner {
 	left: 150px;
 }
 
-.instruction-content .time-estimate .dropdown-menu,
-.view-mode .instruction-content .time .dropdown-menu {
-	left: auto;
-}
-
 .item input[type="text"],
 .item input[type="textarea"] {
 	margin-top: -.5em;
@@ -1791,6 +1814,48 @@ div.main.wrapper + div.inner {
 .view-mode .numeric .currency:before {
 	content: '$';
 }
+
+.instruction.edit-mode .numeric input[type="radio"] {
+	margin: 0 8px 0px 8px;
+}
+
+.instruction.edit-mode .numeric .plainLabel {
+	margin-right: 1em;
+}
+
+.instruction.edit-mode .numeric .more-info input[type="checkbox"] {
+	margin: .8em .8em 0 .2em;
+}
+
+.instruction.edit-mode .numeric .dropdown {
+	margin: .5em 0;
+}
+
+.instruction.edit-mode .numeric input[type="text"] {
+	margin: 0 0 0 0;
+}
+
+.instruction.edit-mode .numeric .mini-panel span {
+	margin: 0 7px;
+}
+
+.iconly input[type="checkbox"] {
+	margin-right: 11px;
+}
+
+.iconly input[type="checkbox"]:after {
+	margin-top: -5px;
+}
+
+a.iconly {
+	margin: -.5em 1.5em .5em 0;
+}
+
+a.iconly:before {
+	font-size: 1.5em;
+		top: 3px;
+}
+
 
 /* heredeb */
 

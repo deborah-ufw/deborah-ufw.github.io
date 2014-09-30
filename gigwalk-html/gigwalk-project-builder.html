@@ -598,6 +598,49 @@
                 </div>
               </div> 
               
+              <!-- ------------- Display div if Question Type is "Numeric entry" (did not do any show/hide js) ------------- -->
+              
+              <h2 class="super">Display div if Question Type is "Numeric entry" (did not do any show/hide js)</h2> 
+              
+              <div class="item numeric">
+                <div class="plainLabel">Number Format</div>
+                  <div class="sub">
+                  <label class="plainLabel">
+                    <input type="radio" name="number format" value="number" checked />Number
+                  </label>
+                  <label class="plainLabel">
+                    <input type="radio" name="number format" value="Currency" />Currency
+                  </label>
+                  <div class="more-info">
+                    <label class="plainLabel">
+                      <input type="checkbox" value="rules" />Set rules
+                    </label>
+                    <div class="mini-panel">
+                      <div class="ti">Answer should be</div>
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                          Select from options
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">between</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">exactly</a></li>
+                        </ul>
+                      </div>
+                      <div class="between">
+                        <input type="text" name="startvalue" placeholder="ex. 3"/><span>and</span><input type="text" name="endvalue" placeholder="ex. 5" />
+                      </div>
+                      <div class="exactly">
+                        <input type="text" name="exactly" placeholder="ex. 4"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- ------------- End div to display for "Numeric entry" ------------- -->
+              
+              <!-- ------------- Added exceptions selection to html (did not do any show/hide js) ------------- -->
+              <h2 class="super">Added exceptions selection divs for single and list targets (did not do any show/hide js)</h2>
+              
               <div class="item required targets">
                 <div class="plainLabel">Question Targets</div>
                 <div class="dropdown required">
@@ -617,18 +660,21 @@
                 <div class="sub first">
                   <div class="selected-item">List 1</div>
                   <a class="remove" href="javascript:;">Remove</a>
+                  <a class="iconly set-exceptions" href="javascript:;"><span>Set Exceptions</span></a>
                 </div>
                 <div class="sub">
                   <div class="selected-item">
                     <input type="text" placeholder="ex. Redbull 24 oz." value = "Single Target 1" />
                   </div>
                   <a class="remove" href="javascript:;">Remove</a>
+                  <label class="iconly"><input type="checkbox" value="exception" />Exception</label>
                 </div>
                 <div class="sub last">
                   <div class="selected-item">
                     <input type="text" placeholder="ex. Redbull 24 oz." value = "Single Target 2" />
                   </div>
                   <a class="remove" href="javascript:;">Remove</a>
+                  <label class="iconly"><input type="checkbox" value="exception" />Exception</label>
                 </div>
               </div>
               

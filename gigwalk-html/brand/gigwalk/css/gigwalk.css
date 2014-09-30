@@ -30,13 +30,18 @@ h2.super {
 	margin: 0;
 }
 
-.instruction.view-mode h2.super:before {
+.instruction.view-mode h2.super:before,
+.instruction.edit-mode h2.super:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
 	 font-size: 0;
 	 clear: both;
 	 height: 0;
+}
+
+.instruction.edit-mode h2.super {
+	margin-bottom: 15px;
 }
 
 .subcontent {
@@ -235,7 +240,7 @@ input[type="radio"]:after {
 	
 	/* blues */
 	
-	.step .arrow {
+	.step .arrow{
 		color: #59beec;
 	}
 	
@@ -247,9 +252,12 @@ input[type="radio"]:after {
 	 a.link,
 	 a.link:hover,
 	 a.navly,
+	 a.navly:focus,
+	 .iconly,
+	 a.iconly,
+	 a.iconly:hover,
 	 .dropdown-menu > li > a.link,
-	 .dropdown-menu > li > a.link:hover,
-	 a.navly:focus {
+	 .dropdown-menu > li > a.link:hover {
 		color: #4890e2;
 	}
 	
@@ -412,6 +420,7 @@ select option,
 
 .sidenav .user-name,
 .remove,
+.iconly,
 .instruction-footer {
 	font-family: Helvetica-Neue-Medium;
 }
