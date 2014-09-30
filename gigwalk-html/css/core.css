@@ -60,7 +60,8 @@ label {
 .instruction .dragger,
 .time-estimate input[type="text"],
 .instruction.view-mode input.datepicker,
-.instruction.view-mode .numeric input {
+.instruction.view-mode .numeric input,
+.instruction.view-mode .time input {
 	text-align: center;
 }
 
@@ -1756,7 +1757,7 @@ div.main.wrapper + div.inner {
 .instruction.view-mode input.datepicker {
 	margin: 0 6.5em 0 0;
 	padding-right: 4px;
-	width: 110px;
+	width: 120px;
 }
 
 .instruction.view-mode .numeric .name,
