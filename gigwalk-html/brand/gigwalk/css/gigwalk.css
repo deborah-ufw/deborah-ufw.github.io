@@ -193,8 +193,8 @@ html, body {
 	
 	.instruction.incomplete .arrow,
 	.instruction.required.incomplete .arrow,
-	.instruction.incomplete .controls .ti,
-	.instruction.required.incomplete .controls .ti {
+	.instruction.incomplete .header .controls .ti,
+	.instruction.required.incomplete .header .controls .ti {
 		color: #fe8e92;
 	}
 	
