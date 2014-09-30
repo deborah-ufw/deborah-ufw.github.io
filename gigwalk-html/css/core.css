@@ -364,6 +364,10 @@ select {
 	color: #ababab; 
 }
 
+.view-mode .numeric .currency:before {
+	color: #bcbcbc;
+}
+
 .editable:after {
 	color: #cbcbcb;
 }
@@ -398,6 +402,7 @@ select {
 .primary.actions a.buttonly.disabled:focus {
 	background-color: #cccccc;
 }
+
 
 /* reds */
 
@@ -1693,7 +1698,7 @@ div.main.wrapper + div.inner {
 }
 
 .instruction .item.targets .sub {
-	padding: .5em;
+	padding: .3em .5em;
 }
 
 .instruction .item.targets .sub.last {
@@ -1702,6 +1707,10 @@ div.main.wrapper + div.inner {
 
 .instruction .item.targets .sub .selected-item {
 		width: 225px;
+}
+
+.instruction .item.targets .sub .selected-item input {
+		width: 215px;
 }
 
 /* add question */
@@ -1777,6 +1786,10 @@ div.main.wrapper + div.inner {
 
 .view-mode .instruction-content .time .dropdown-menu {
 	right: -2px;
+}
+
+.view-mode .numeric .currency:before {
+	content: '$';
 }
 
 /* heredeb */
