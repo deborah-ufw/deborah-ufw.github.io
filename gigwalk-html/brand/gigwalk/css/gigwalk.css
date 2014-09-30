@@ -24,6 +24,12 @@ h1.super {
 	font-size: 3em;
 }
 
+h2.super {
+	font-family: Helvetica-Neue-Light;
+	font-size: 2em;
+	margin: 0;
+}
+
 .subcontent {
 	margin-bottom: 5em;
 }
@@ -49,7 +55,8 @@ html, body {
 	
 /* borders */
 
-.checker .supercheck:after {
+.checker .supercheck:after,
+input[type="radio"]:after {
 	border: 1px solid #cccccc;
 }
 
@@ -92,6 +99,7 @@ html, body {
 	
 	.navbar-default .navbar-toggle .icon-bar,
 	.checker .supercheck:after,
+	input[type="radio"]:after,
 	.instruction-content,
 	.primary.actions a.cancel,
 	.primary.actions a.delete,
@@ -296,7 +304,8 @@ html, body {
 	header .nav li.alerts .im,
 	header .nav li.messages .im,
 	.subnav li.active a,
-	.instruction-footer .item.count .described {
+	.instruction-footer .item.count .described,
+	.instruction.view-mode .answer.exception .plainLabel:after {
 		color: #08aa86;
 	}
 	
@@ -328,6 +337,14 @@ html, body {
 	.subnav,
 	.subnav li.active {
 		border-color: #08aa86;
+	}
+	
+	input[type="radio"]:checked:after {
+		border: 6px solid #08aa86;
+	}
+	
+	input[type="radio"]:checked:after {
+		background: #84d5c3;
 	}
 	
 	/* purple */
@@ -398,8 +415,15 @@ select option,
 
 /* form parts */
 
-.checker .supercheck {
+.checker .supercheck,
+input[type="radio"] {
 	margin-right: 8px;
+}
+
+.checker .supercheck:after,
+input[type="radio"]:after {
+	display: block;
+	float: left;
 }
 
 .checker .supercheck:after {
@@ -407,10 +431,21 @@ select option,
 	font-family: 'icomoon';
 	font-size: 1.2em;
 	margin-top: -3px;
-	display: block;
-	float: left;
 	height: 18px;
 	width: 18px;
+}
+
+input[type="radio"]:after {
+	content: ' ';
+	margin-top: -5px;
+	height: 24px;
+	width: 24px;
+		left: -8px;
+}
+
+input[type="radio"]:checked:after {
+	content: ' ';
+	padding: 1px;
 }
 
 .item.checker .supercheck:after {

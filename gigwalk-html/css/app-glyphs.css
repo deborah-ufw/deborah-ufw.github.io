@@ -17,7 +17,8 @@
 .custom-select:before,
 .editable:after,
 .checker .supercheck:after,
-.nav-active-holder:after {
+.nav-active-holder:after,
+.instruction.view-mode .answer.exception .plainLabel:after {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -92,6 +93,23 @@
 .icon-people:before {
 	content: "\e612";
 }
+.icon-camera:before {
+	content: "\e613";
+}
+.instruction.view-mode .answer.exception .plainLabel:after,
+.icon-flag:before {
+	content: "\e614";
+}
+.icon-magnify:before {
+	content: "\e615";
+}
+.icon-lightning-strike:before {
+	content: "\e616";
+}
+.icon-barcode:before {
+	content: "\e617";
+}
+
 
 
 

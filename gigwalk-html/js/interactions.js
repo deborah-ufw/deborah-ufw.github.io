@@ -81,7 +81,15 @@ $(document).ready(function() {
 		  $('.set-repeats').css('display','none');
 		}
 	});
-
+	
+	
+	//******** "required" instruction sets header color ******** //	
+	
+	$('.instruction .set-required .supercheck').click(function () {
+		$(this).closest('.instruction').toggleClass(' required');
+	});
+	
+	
 });
 
 

@@ -124,7 +124,11 @@ a.disabled,
 .subnav:after,
 .set-repeats .ends:after,
 .group.materials .mini-panel .wrapper:after,
-.instruction-footer:after {
+.instruction-footer:after,
+.instruction.view-mode .inner:after,
+.instruction.view-mode .target:after,
+.instruction.view-mode .target .answers:after,
+.instruction.view-mode .target .answer:after  {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -168,13 +172,16 @@ select,
 .instructions .header .ti,
 .set-repeats .radios,
 .group.materials .ti.number,
-.instruction-footer .item {
+.instruction-footer .item,
+.instruction.view-mode .target .name,
+.instruction.view-mode .target .answer {
 	display: inline-block;
 	float: left;
 }
 
 .inline-right,
-.icon-buttons {
+.icon-buttons,
+.instruction.view-mode .target .answers  {
 	display: inline-block;
 	float: right;
 }
@@ -200,7 +207,8 @@ input[type="radio"],
 .right,
 .tabnav li.right,
 .btn.btn-default.dropdown-toggle .caret,
-.remove {
+.remove,
+.instruction.view-mode .type {
 	float: right;
 }
 
@@ -237,11 +245,16 @@ input[type="checkbox"],
 .instruction-footer .descriptor,
 .instruction-footer .item.count .described,
 .icon-buttons a:before,
-.item.required > .plainLabel:after {
+.item.required > .plainLabel:after,
+.instruction.view-mode .answer,
+.instruction.view-mode .answer input,
+.instruction.view-mode .answer.exception .plainLabel,
+.instruction.view-mode .answer.exception .plainLabel:after,
+input[type="radio"],
+input[type="radio"]:after {
 	position: relative;
 }
 
-.custom-select:before,
 .header .controls .ti,
 .header .controls .arrow,
 header nav .number,
@@ -263,7 +276,8 @@ header .navbar-collapse.in {
 .group.repeats .dropdown-menu,
 .instructions .instruction-footer .item .plainLabel,
 .time-estimate .btn.btn-default.dropdown-toggle,
-.instruction-content .time-estimate .dropdown-menu {
+.instruction-content .time-estimate .dropdown-menu,
+.instruction.view-mode .answers .plainLabel {
 	width: auto;
 }
 
@@ -289,7 +303,8 @@ header .navbar-collapse.in {
 	-webkit-backface-visibility: hidden;
 }
 
-header nav .number {
+header nav .number,
+input[type="radio"]:after {
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
@@ -331,13 +346,13 @@ select {
 	 color: rgba(0, 0, 0, .18);
 }
 
- .dropdown-menu > li > a.link:hover {
-	 background-color: transparent;
- }
- 
- .dropdown-header {
-		color: #ababab; 
- }
+.dropdown-menu > li > a.link:hover {
+ background-color: transparent;
+}
+
+.dropdown-header {
+	color: #ababab; 
+}
 
 .editable:after {
 	color: #cbcbcb;
@@ -436,7 +451,8 @@ input[type="textarea"],
 .instructions .primary.actions:before,
 header .nav ul.dropdown-menu li,
 .group .sub,
-.instruction-summary {
+.instruction-summary,
+.instruction.view-mode .target {
 	border-top: 1px solid #cccccc;
 }
 
@@ -1620,7 +1636,6 @@ div.main.wrapper + div.inner {
 }
 
 .instruction-footer .item {
-	font-size: 1.1em;
 	padding: 0 15px;
 }
 
@@ -1675,6 +1690,37 @@ div.main.wrapper + div.inner {
 
 .instruction .item.targets .sub .selected-item {
 		width: 225px;
+}
+
+/* add question */
+
+.instruction.view-mode .type {
+	margin: 1em -1em 1em 1em;
+	min-width: 90%;
+}
+
+.instruction.view-mode .target {
+	padding: .5em 0;
+}
+
+.instruction.view-mode .answer {
+	margin-left: 2em;
+	padding-top: .2em;
+}
+
+.instruction.view-mode .answer.exception {
+	margin-bottom: -.6em;
+}
+
+.instruction.view-mode .answer input[type="radio"] {
+	top: -3px;
+}
+
+.instruction.view-mode .answer.exception .plainLabel:after {
+	font-size: 1.4em;
+	line-height: 0;
+	overflow: visible;
+		top: 3px;
 }
 
 
