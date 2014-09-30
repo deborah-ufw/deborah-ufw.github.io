@@ -30,6 +30,15 @@ h2.super {
 	margin: 0;
 }
 
+.instruction.view-mode h2.super:before {
+	 content: ' ';
+	 visibility: hidden;
+	 display: block;
+	 font-size: 0;
+	 clear: both;
+	 height: 0;
+}
+
 .subcontent {
 	margin-bottom: 5em;
 }
@@ -56,6 +65,7 @@ html, body {
 /* borders */
 
 .checker .supercheck:after,
+input[type="checkbox"]:after,
 input[type="radio"]:after {
 	border: 1px solid #cccccc;
 }
@@ -88,6 +98,7 @@ input[type="radio"]:after {
 	.tabnav li a,
 	.btn.btn-default.dropdown-toggle,
 	input.supercheck:after,
+	input[type="checkbox"]:after,
 	.instructions .header .actions,
 	.primary.actions a,
 	.icon-buttons a,
@@ -99,6 +110,7 @@ input[type="radio"]:after {
 	
 	.navbar-default .navbar-toggle .icon-bar,
 	.checker .supercheck:after,
+	input[type="checkbox"]:after,
 	input[type="radio"]:after,
 	.instruction-content,
 	.primary.actions a.cancel,
@@ -316,6 +328,7 @@ input[type="radio"]:after {
 	
 	ul.dropdown-menu li.header,
 	input.supercheck:checked:after,
+	input[type="checkbox"]:checked:after,
 	.primary.actions a,
 	.instruction-footer .icon-checkmark,
 	.instruction .header {
@@ -332,6 +345,7 @@ input[type="radio"]:after {
 	}
 	
 	input.supercheck:checked:after,
+	input[type="checkbox"]:checked:after,
 	.primary.actions a,
 	.subnav li.active a,
 	.subnav,
@@ -416,17 +430,20 @@ select option,
 /* form parts */
 
 .checker .supercheck,
+input[type="checkbox"],
 input[type="radio"] {
 	margin-right: 8px;
 }
 
 .checker .supercheck:after,
+input[type="checkbox"]:after,
 input[type="radio"]:after {
 	display: block;
 	float: left;
 }
 
-.checker .supercheck:after {
+.checker .supercheck:after,
+input[type="checkbox"]:after {
 	content: "\e603";
 	font-family: 'icomoon';
 	font-size: 1.2em;

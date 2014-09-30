@@ -58,7 +58,9 @@ label {
 .center,
 .expander,
 .instruction .dragger,
-.time-estimate input[type="text"] {
+.time-estimate input[type="text"],
+.instruction.view-mode input.datepicker,
+.instruction.view-mode .numeric input {
 	text-align: center;
 }
 
@@ -126,9 +128,11 @@ a.disabled,
 .group.materials .mini-panel .wrapper:after,
 .instruction-footer:after,
 .instruction.view-mode .inner:after,
+.instruction.view-mode .type:after,
 .instruction.view-mode .target:after,
 .instruction.view-mode .target .answers:after,
-.instruction.view-mode .target .answer:after  {
+.instruction.view-mode .target .answer:after,
+.instruction.view-mode .ti:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -181,7 +185,8 @@ select,
 
 .inline-right,
 .icon-buttons,
-.instruction.view-mode .target .answers  {
+.instruction.view-mode .target .answers,
+.instruction.view-mode .time .dropdown {
 	display: inline-block;
 	float: right;
 }
@@ -251,7 +256,9 @@ input[type="checkbox"],
 .instruction.view-mode .answer.exception .plainLabel,
 .instruction.view-mode .answer.exception .plainLabel:after,
 input[type="radio"],
-input[type="radio"]:after {
+input[type="radio"]:after,
+.instruction.view-mode .time .dropdown ,
+.instruction.view-mode .time .btn.btn-default.dropdown-toggle {
 	position: relative;
 }
 
@@ -276,7 +283,9 @@ header .navbar-collapse.in {
 .group.repeats .dropdown-menu,
 .instructions .instruction-footer .item .plainLabel,
 .time-estimate .btn.btn-default.dropdown-toggle,
+.instruction .time .btn.btn-default.dropdown-toggle,
 .instruction-content .time-estimate .dropdown-menu,
+.view-mode .instruction-content .time .dropdown-menu,
 .instruction.view-mode .answers .plainLabel {
 	width: auto;
 }
@@ -466,8 +475,9 @@ header .nav ul.dropdown-menu li,
 	border-bottom: 1px solid #cccccc;
 }
 
+.mini-panel, .instruction .item.targets .sub,
 .group .mini-panel {
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 2px solid #ffffff;
 }
 
 .subnav li {
@@ -1570,7 +1580,8 @@ div.main.wrapper + div.inner {
 	left: 150px;
 }
 
-.instruction-content .time-estimate .dropdown-menu {
+.instruction-content .time-estimate .dropdown-menu,
+.view-mode .instruction-content .time .dropdown-menu {
 	left: auto;
 }
 
@@ -1704,7 +1715,7 @@ div.main.wrapper + div.inner {
 }
 
 .instruction.view-mode .answer {
-	margin-left: 2em;
+	margin-left:.5em;
 	padding-top: .2em;
 }
 
@@ -1721,9 +1732,51 @@ div.main.wrapper + div.inner {
 	line-height: 0;
 	overflow: visible;
 		top: 3px;
+		left: -3px;
 }
 
+.instruction.view-mode .numeric input,
+.instruction.view-mode .time input {
+	margin: 0 0 0 0;
+	padding-right: 4px;
+	width: 60px;
+}
 
+.instruction.view-mode .numeric input {
+	margin-right: 2em;
+	padding-right: 4px;
+	width: 60px;
+}
+
+.instruction.view-mode .type.date .answer {
+	margin-right: 1em;
+	padding-top: 0;
+}
+
+.instruction.view-mode input.datepicker {
+	margin: 0 6.5em 0 0;
+	padding-right: 4px;
+	width: 110px;
+}
+
+.instruction.view-mode .numeric .name,
+.instruction.view-mode .date .name {
+	padding-top: .3em;
+}
+
+.instruction.view-mode .time .dropdown {
+	margin: 0 1em 0 .5em;
+}
+
+.instruction.view-mode .time .btn.btn-default.dropdown-toggle {
+	padding-top: 4px;
+	padding-bottom: 4px;
+		top: 5px;
+}
+
+.view-mode .instruction-content .time .dropdown-menu {
+	right: -2px;
+}
 
 /* heredeb */
 

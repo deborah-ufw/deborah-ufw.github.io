@@ -614,8 +614,16 @@
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;" class="link">Manage Target lists</a></li>
                   </ul>
                 </div>  
-                <div class="sub first last">
-                  <div class="selected-item">List or Target 1</div>
+                <div class="sub first">
+                  <div class="selected-item">List 1</div>
+                  <a class="remove" href="javascript:;">Remove</a>
+                </div>
+                <div class="sub">
+                  <div class="selected-item">Single Target 2</div>
+                  <a class="remove" href="javascript:;">Remove</a>
+                </div>
+                <div class="sub last">
+                  <div class="selected-item">Single Target 3</div>
                   <a class="remove" href="javascript:;">Remove</a>
                 </div>
               </div>
@@ -727,13 +735,13 @@
                     <div class="answers">
                       <div class="answer exception">
                         <label class="plainLabel">
-                          <input type="radio" checked="" name="target1 answer" />
+                          <input type="radio" checked name="target1 answer" />
                           Not on Shelf
                         </label>
                       </div>
                       <div class="answer">
                         <label class="plainLabel">
-                          <input type="radio" checked="" name="target1 answer" />
+                          <input type="radio"  name="target1 answer" />
                           On shelf
                         </label>
                       </div>
@@ -744,13 +752,13 @@
                     <div class="answers">
                       <div class="answer exception">
                         <label class="plainLabel">
-                          <input type="radio" checked="" name="target2 answer" />
+                          <input type="radio" name="target2 answer" />
                           Not on Shelf
                         </label>
                       </div>
                       <div class="answer">
                         <label class="plainLabel">
-                          <input type="radio" checked="" name="target2 answer" />
+                          <input type="radio" checked name="target2 answer" />
                           On shelf
                         </label>
                       </div>
@@ -761,13 +769,13 @@
                     <div class="answers">
                       <div class="answer exception">
                         <label class="plainLabel">
-                          <input type="radio" checked="" name="target3 answer" />
+                          <input type="radio" checked name="target3 answer" />
                           Not on Shelf
                         </label>
                       </div>
                       <div class="answer">
                         <label class="plainLabel">
-                          <input type="radio" checked="" name="target3 answer" />
+                          <input type="radio" name="target3 answer" />
                           On shelf
                         </label>
                       </div>
@@ -778,19 +786,287 @@
                     <div class="answers">
                       <div class="answer exception">
                         <label class="plainLabel">
-                          <input type="radio" checked="" name="target4 answer" />
+                          <input type="radio" name="target4 answer" />
                           Not on Shelf
                         </label>
                       </div>
                       <div class="answer">
                         <label class="plainLabel">
-                          <input type="radio" checked="" name="target4 answer" />
+                          <input type="radio" checked name="target4 answer" />
                           On shelf
                         </label>
                       </div>
                     </div>
                   </div>
                 </div><!--  Ends Item grid  -->
+                
+              <!-- ------------- Item multiple choice ------------- -->
+              
+              <h2 class="super">Multiple choice</h2> 
+              
+              <div class="ti">What aisle is the item in?</div>
+              <div class="type multiple-choice">
+                <div class="target first">
+                    <div class="name">Blueberry Redbull 8 oz.</div>
+                    <div class="answers">
+                      <div class="answer exception">
+                        <label class="plainLabel">
+                          <input type="checkbox" name="target1 answer soda" />
+                          Soda aisle
+                        </label>
+                      </div>
+                      <div class="answer">
+                        <label class="plainLabel">
+                          <input type="checkbox" name="target1 answer check-out" />
+                          Check-out
+                        </label>
+                      </div>
+                      <div class="answer">
+                        <label class="plainLabel">
+                          <input type="checkbox" checked name="target1 answer end-cap" />
+                          End cap
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Redbull 12 oz.</div>
+                    <div class="answers">
+                      <div class="answer exception">
+                        <label class="plainLabel">
+                          <input type="checkbox" checked name="target2 answer soda" />
+                          Soda aisle
+                        </label>
+                      </div>
+                      <div class="answer">
+                        <label class="plainLabel">
+                          <input type="checkbox" name="target2 answer check-out" />
+                          Check-out
+                        </label>
+                      </div>
+                      <div class="answer">
+                        <label class="plainLabel">
+                          <input type="checkbox"  name="target2 answer end-cap" />
+                          End cap
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Clementine 8 oz.</div>
+                    <div class="answers">
+                      <div class="answer exception">
+                        <label class="plainLabel">
+                          <input type="checkbox" name="target3 answer soda" />
+                          Soda aisle
+                        </label>
+                      </div>
+                      <div class="answer">
+                        <label class="plainLabel">
+                          <input type="checkbox" checked="checked" name="target3 answer check-out" />
+                          Check-out
+                        </label>
+                      </div>
+                      <div class="answer">
+                        <label class="plainLabel">
+                          <input type="checkbox" checked name="target3 answer end-cap" />
+                          End cap
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Clementine 12 oz.</div>
+                    <div class="answers">
+                      <div class="answer exception">
+                        <label class="plainLabel">
+                          <input type="checkbox" checked name="target4 answer soda" />
+                          Soda aisle
+                        </label>
+                      </div>
+                      <div class="answer">
+                        <label class="plainLabel">
+                          <input type="checkbox" checked name="target4 answer check-out" />
+                          Check-out
+                        </label>
+                      </div>
+                      <div class="answer">
+                        <label class="plainLabel">
+                          <input type="checkbox" name="target4 answer end-cap" />
+                          End cap
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div><!--  Ends Item multiple choice  -->
+                
+              <!-- ------------- Item numeric entry ------------- -->
+              
+              <h2 class="super">Numeric entry</h2> 
+              
+              <div class="ti">How many are on the shelf?</div>
+              <div class="type numeric">
+                <div class="target first">
+                    <div class="name">Blueberry Redbull 8 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" name="target1 answer date" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Redbull 12 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" name="target2 answer date" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Clementine 8 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" name="target3 answer date" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Clementine 12 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" name="target1 answer date" />
+                      </div>
+                    </div>
+                  </div>
+                </div><!--  Ends Item numeric entry  -->
+                
+              <!-- ------------- Item date ------------- -->
+              
+              <h2 class="super">Date</h2> 
+              
+              <div class="ti">What is the expiration date of the first one you picked up?</div>
+              <div class="type date">
+                <div class="target first">
+                    <div class="name">Blueberry Redbull 8 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" class="datepicker" name="target1 answer date" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Redbull 12 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" class="datepicker" name="target2 answer date" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Clementine 8 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" class="datepicker" name="target3 answer date" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Clementine 12 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" class="datepicker" name="target1 answer date" />
+                      </div>
+                    </div>
+                  </div>
+                </div><!--  Ends Item date  -->
+                
+                <!-- ------------- Item time ------------- -->
+              
+              <h2 class="super">Time</h2> 
+              
+              <div class="ti">How long did it take to locate the item?</div>
+              <div class="type time">
+                <div class="target first">
+                    <div class="name">Blueberry Redbull 8 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" name="target1 answer date" />
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Minutes
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Redbull 12 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" name="target2 answer date" />
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Minutes
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Clementine 8 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" name="target3 answer date" />
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Minutes
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target">
+                    <div class="name">Blueberry Clementine 12 oz.</div>
+                    <div class="answers">
+                      <div class="answer">
+                        <input type="text" name="target1 answer date" />
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Minutes
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!--  Ends Item time  -->
               
 
 
