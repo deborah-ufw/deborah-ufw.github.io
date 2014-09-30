@@ -452,6 +452,11 @@ input[type="checkbox"]:after {
 	width: 18px;
 }
 
+.instruction.view-mode input[type="checkbox"]:after {
+	font-size: 1em;
+}
+
+
 input[type="radio"]:after {
 	content: ' ';
 	margin-top: -5px;
