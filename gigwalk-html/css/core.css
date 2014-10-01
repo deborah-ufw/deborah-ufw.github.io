@@ -1563,8 +1563,8 @@ div.main.wrapper + div.inner {
 }
 
 .header .actions .ti {
-	padding-top: 14px;
-	padding-bottom: 8px;
+	padding-top: 13px;
+	padding-bottom: 9px;
 	max-width: 440px;
 }
 
@@ -1887,6 +1887,10 @@ a.iconly:before {
 
 .instruction .item.targets .sub .mini-panel.targets input:after {
 	margin-top: -5px;
+}
+
+.instruction.edit-mode .item .sub input[type="textarea"] {
+	margin-bottom: .5em;
 }
 
 
