@@ -1446,7 +1446,7 @@ div.main.wrapper + div.inner {
 
 .date.group .plainLabel {
 	margin-right: 10px;
-	top: 8px;
+	top: 2px;
 }
 
 .Projects .description.group {
@@ -1839,6 +1839,10 @@ div.main.wrapper + div.inner {
 
 .instruction.edit-mode .numeric .dropdown {
 	margin: .5em 0;
+}
+
+.instruction.edit-mode .numeric .mini-panel .btn.btn-default.dropdown-toggle {
+	padding-right: 0;
 }
 
 .instruction.edit-mode .numeric input[type="text"] {
