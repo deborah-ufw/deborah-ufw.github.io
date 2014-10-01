@@ -36,6 +36,7 @@
 .icon-empty:before {
 	content: "\e60f";
 }
+.collapsed .icon-arrow-up:before,
 .icon-arrow-down:before,
 .caret:before,
 .custom-select:before,
