@@ -1893,6 +1893,11 @@ a.iconly:before {
 	margin-bottom: .5em;
 }
 
+.sub.actions.duplicator {
+	margin-top: -.5em;
+	padding-top: 0;
+}
+
 
 /* heredeb */
 
