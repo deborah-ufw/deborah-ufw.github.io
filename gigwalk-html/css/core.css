@@ -886,6 +886,7 @@ div.main.wrapper + div.inner {
 		padding: 10px 20px;
 		display: table-cell;
 		width: 265px;
+		min-width: 265px;
 	}
 	
 	.nav-sections li {
@@ -1129,19 +1130,33 @@ div.main.wrapper + div.inner {
 			padding-left: 12px;
 			padding-right: 12px; 
 	 }
+	
+}
+
+@media (min-width: 721px) and (max-width: 825px) {
+	
+	 .Projects .tabnav li a {
+			padding-left: 12px;
+			padding-right: 12px; 
+	 }
+	
+}
+
+@media (min-width: 665px) and (max-width: 720px) {
+	
+	 .Projects .tabnav li a {
+		  font-size: 1em;
+			padding-left: 12px;
+			padding-right: 12px; 
+	 }
 	 
-	 .tabnav li.buttonly a {
-			padding:  8px 12px 8px 40px; 
+	 .Projects .tabnav li.buttonly a {
+			margin-left: 0;
 	 }
 	
 }
 
 @media (min-width: 665px) and (max-width: 825px) {
-	
-	 .Projects .tabnav li a {
-			padding-left: 6px;
-			padding-right: 6px; 
-	 }
 	 
 	 .tabnav li.buttonly a {
 			padding:  8px 12px 8px 40px; 
