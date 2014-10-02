@@ -8,11 +8,7 @@
 <style type="text/css">
     body{
       width:100% !important;
-    }
-    body{
       -webkit-text-size-adjust:none;
-    }
-    body{
       margin:0;
       padding:0;
     }
@@ -20,6 +16,8 @@
       margin:0;
       margin-bottom:0 !important;
       margin-top:0 !important;
+      border:0; 
+      outline:none; 
     }
     table,tbody,td{
       border-spacing:0 !important;
@@ -33,6 +31,7 @@
     }
     table[class=holder]{
       border: 1px solid #ebebeb;
+      max-width: 670px;
     }
     a:hover{
       text-decoration:underline;
@@ -49,112 +48,110 @@
       border-radius:8px;
     }
     
-@media only screen and (max-device-width: 670px){
-    table[class=expanding]{
-      width:100% !important;
+    @media only screen and (max-device-width: 669px){
+        table[class=expanding],
+        table[class=holder]{
+          width:100% !important;
+        }
+    
+    }  @media only screen and (max-device-width: 669px){
+        img[class=show]{
+          display:inline;
+        }
+    
+    } @media only screen and (max-device-width: 669px){
+        span[class=break]{
+          text-align:left;
+          display:block;
+          width:100%;
+        }
+    
+    } @media only screen and (max-device-width: 669px){
+        td[class=device-block]{
+          display:block;
+          width:100%;
+        }
+    
+    } @media only screen and (max-device-width: 669px){
+        img[class=show]{
+          display:inline;
+        }
+    
+    } @media only screen and (max-device-width: 669px){
+        span[class=break]{
+          text-align:left;
+          display:block;
+          width:100%;
+        }
+    
+    } @media only screen and (max-device-width: 669px){
+        td[class=device-block]{
+          display:block;
+          width:100%;
+        }
+    } 
+    
+    @font-face {
+        font-family: 'Helvetica-Neue';
+        src: url('fonts/helveticaneue.eot');
+        src: url('fonts/helveticaneue.eot?#iefix') format('embedded-opentype'),
+             url('fonts/helveticaneue.woff') format('woff'),
+             url('fonts/helveticaneue.ttf') format('truetype'),
+             url('fonts/helveticaneue.svg#helveticaneue') format('svg');
+        font-weight: normal;
+        font-style: normal;
     }
-
-}  @media only screen and (max-device-width: 670px){
-    img[class=show]{
-      display:inline;
+    
+    @font-face {
+        font-family: 'Helvetica-Neue-Light';
+        src: url('fonts/helveticaneue-light.eot');
+        src: url('fonts/helveticaneue-light.eot?#iefix') format('embedded-opentype'),
+             url('fonts/helveticaneue-light.woff') format('woff'),
+             url('fonts/helveticaneue-light.ttf') format('truetype'),
+             url('fonts/helveticaneue-light.svg#helveticaneue-light') format('svg');
+        font-weight: normal;
+        font-style: normal;
     }
-
-} @media only screen and (max-device-width: 670px){
-    span[class=break]{
-      text-align:left;
-      display:block;
-      width:100%;
+    
+    @font-face {
+        font-family: 'Helvetica-Neue-Bold';
+        src: url('fonts/helveticaneue-bold.eot');
+        src: url('fonts/helveticaneue-bold.eot?#iefix') format('embedded-opentype'),
+             url('fonts/helveticaneue-bold.woff') format('woff'),
+             url('fonts/helveticaneue-bold.ttf') format('truetype'),
+             url('fonts/helveticaneue-bold.svg#helveticaneue-bold') format('svg');
+        font-weight: normal;
+        font-style: normal;
     }
-
-} @media only screen and (max-device-width: 670px){
-    td[class=device-block]{
-      display:block;
-      width:100%;
+    
+    @font-face {
+        font-family: 'Helvetica-Neue-Italic';
+        src: url('fonts/helveticaneue-italic.eot');
+        src: url('fonts/helveticaneue-italic.eot?#iefix') format('embedded-opentype'),
+             url('fonts/helveticaneue-italic.woff') format('woff'),
+             url('fonts/helveticaneue-italic.ttf') format('truetype'),
+             url('fonts/helveticaneue-italic.svg#helveticaneue-italic') format('svg');
+        font-weight: normal;
+        font-style: normal;
     }
-
-} @media only screen and (max-device-width: 480px){
-    img[class=show]{
-      display:inline;
+    
+    span[class=regular-font]{
+      font-family: Helvetica-Neue-Light;
     }
-
-} @media only screen and (max-device-width: 480px){
-    span[class=break]{
-      text-align:left;
-      display:block;
-      width:100%;
+    
+    span[class=strong-font]{
+      font-family: Helvetica-Neue-Bold;
     }
-
-} @media only screen and (max-device-width: 480px){
-    td[class=device-block]{
-      display:block;
-      width:100%;
+    
+    a[class=strong-font]{
+      font-family: Helvetica-Neue-Bold;
     }
-} 
-
-@font-face {
-    font-family: 'Helvetica-Neue';
-    src: url('fonts/helveticaneue.eot');
-    src: url('fonts/helveticaneue.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticaneue.woff') format('woff'),
-         url('fonts/helveticaneue.ttf') format('truetype'),
-         url('fonts/helveticaneue.svg#helveticaneue') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Helvetica-Neue-Light';
-    src: url('fonts/helveticaneue-light.eot');
-    src: url('fonts/helveticaneue-light.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticaneue-light.woff') format('woff'),
-         url('fonts/helveticaneue-light.ttf') format('truetype'),
-         url('fonts/helveticaneue-light.svg#helveticaneue-light') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Helvetica-Neue-Bold';
-    src: url('fonts/helveticaneue-bold.eot');
-    src: url('fonts/helveticaneue-bold.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticaneue-bold.woff') format('woff'),
-         url('fonts/helveticaneue-bold.ttf') format('truetype'),
-         url('fonts/helveticaneue-bold.svg#helveticaneue-bold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Helvetica-Neue-Italic';
-    src: url('fonts/helveticaneue-italic.eot');
-    src: url('fonts/helveticaneue-italic.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticaneue-italic.woff') format('woff'),
-         url('fonts/helveticaneue-italic.ttf') format('truetype'),
-         url('fonts/helveticaneue-italic.svg#helveticaneue-italic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-span[class=regular-font]{
-  font-family: Helvetica-Neue-Light;
-  font-weight: normal;
-}
-
-span[class=strong-font]{
-  font-family: Helvetica-Neue-Bold;
-  font-weight: normal;
-}
-
-a[class=strong-font]{
-  font-family: Helvetica-Neue-Bold;
-  font-weight: normal;
-}
-
 
 </style>
 </head>
 
 <body bgcolor="#f5f5f5" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" style="-webkit-font-smoothing: antialiased;width: 100% !important;background: #f5f5f5;-webkit-text-size-adjust: none;margin: 0;padding: 0;">
+<center>
   
 <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f5f5f5" class="backgroundTable" height="100%" style="margin: 0;padding: 0;border-spacing: 0 !important;border-collapse: collapse !important;height: 100% !important;width: 100% !important;">
   <tr>
@@ -162,16 +159,16 @@ a[class=strong-font]{
     
       <!-- -------------  holder table ------------- -->
       
-      <table width="670" cellpadding="0" cellspacing="0" align="center" class="expanding holder" bgcolor="#ffffff" style="border-spacing: 0 !important;border-collapse: collapse !important;">
+      <table cellpadding="0" cellspacing="0" align="center" class="holder" bgcolor="#ffffff" style="border-spacing: 0 !important;border-collapse: collapse !important;max-width: 670px;">
         <tr>
           <td bgcolor="#ffffff" style="border-spacing: 0 !important;border-collapse: collapse !important;">
-            <img border="0" src="images/spacer.gif" width="55" height="70" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+            <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="55" height="70" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
           </td>
           <td bgcolor="#ffffff" style="border-spacing: 0 !important;border-collapse: collapse !important;">&nbsp;
             
           </td>
           <td bgcolor="#ffffff" style="border-spacing: 0 !important;border-collapse: collapse !important;">
-            <img border="0" src="images/spacer.gif" width="55" height="70" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+            <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="55" height="70" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
           </td>
         </tr>
         <tr>
@@ -188,12 +185,12 @@ a[class=strong-font]{
               
               <tr>
                 <td align="center" style="border-spacing: 0 !important;border-collapse: collapse !important;">
-                  <img border="0" src="images/logo-gigwalk.png" width=" " height=" " style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+                  <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/logo-gigwalk.png" width=" " height=" " style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
                 </td>
               </tr>  
               <tr>
                 <td style="border-spacing: 0 !important;border-collapse: collapse !important;">
-                  <img border="0" src="images/spacer.gif" width="30" height="30" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+                  <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="30" height="30" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
                 </td>
               </tr> 
               
@@ -211,13 +208,13 @@ a[class=strong-font]{
                      <tr>
                        <td align="left" valign="middle" style="color: #5d5d5d;font-size: 18px;font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica-Neue-Light, Helvetica-Neue, Arial, sans-serif;border-spacing: 0 !important;border-collapse: collapse !important;" class="regular-font">
                         
-                       Derek Waters has invited you to join <strong><span class="strong-font">The Umbrella Corporation</span></strong> on Gigwalk. Click on the button below or paste the link into your browser to accept.
+                       Derek Waters has invited you to join <b><span style="color: #5d5d5d;text-decoration: none;font-size: 18px;font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica-Neue-Bold, Helvetica-Neue, Arial, sans-serif;" class="strong-font">The Umbrella Corporation</span></b> on Gigwalk. Click on the button below or paste the link into your browser to accept.
                        
                        </td>
                      </tr>
                      <tr>
                       <td style="border-spacing: 0 !important;border-collapse: collapse !important;">
-                        <img border="0" src="images/spacer.gif" width="35" height="35" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+                        <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="35" height="35" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
                       </td>
                     </tr> 
                     
@@ -226,18 +223,18 @@ a[class=strong-font]{
                       
                         <!-- button -->
                       
-                        <table cellpadding="0" cellspacing="0" border="0" height="52" class="buttoned" style="border-collapse: collapse;border-spacing: 0 !important;height: 41px;-moz-border-radius: 8px;-webkit-border-radius: 8px;border-radius: 8px;" bgcolor="#008fff">
+                        <table cellpadding="0" cellspacing="0" border="0" height="55" class="buttoned" style="border-collapse: collapse;border-spacing: 0 !important;height: 55px;-moz-border-radius: 8px;-webkit-border-radius: 8px;border-radius: 8px;" bgcolor="#008fff">
                           <tr>
-                            <td style="border-spacing: 0 !important;border-collapse: collapse !important;">
-                              <img border="0" src="images/spacer.gif" width="90" height="1" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+                            <td height="55" style="border-spacing: 0 !important;border-collapse: collapse !important;">
+                              <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="90" height="1" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
                             </td>
-                            <td align="center" style="border-spacing: 0 !important;border-collapse: collapse !important;" height="55">
-                              <strong>
+                            <td height="55" align="center" style="border-spacing: 0 !important;border-collapse: collapse !important;">
+                              <b>
                                 <a style="color:#f5f5f5;font-size: 22px;font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica-Neue-Bold, Helvetica-Neue, Arial, sans-serif;text-decoration: none;margin-top: 0;margin-bottom: 0;padding-top: 0px;padding-bottom: 0px;" href="#" class="bold-font">Accept</a>
-                              </strong>
+                              </b>
                              </td>
-                             <td style="border-spacing: 0 !important;border-collapse: collapse !important;">
-                              <img border="0" src="images/spacer.gif" width="90" height="1" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+                             <td height="55" style="border-spacing: 0 !important;border-collapse: collapse !important;">
+                              <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="90" height="1" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
                             </td>
                            </tr>
                          </table>
@@ -248,7 +245,7 @@ a[class=strong-font]{
                     </tr>
                     <tr>
                       <td style="border-spacing: 0 !important;border-collapse: collapse !important;">
-                        <img border="0" src="images/spacer.gif" width="15" height="15" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+                        <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="15" height="15" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
                       </td>
                     </tr>
                     
@@ -272,31 +269,31 @@ a[class=strong-font]{
               <!-- -------------  footer ------------- -->
               <tr>
                 <td valign="top" align="center" style="border-spacing: 0 !important;border-collapse: collapse !important;">
-                  <img border="0" src="images/spacer.gif" width="40" height="40" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+                  <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="40" height="40" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
                 </td>
               </tr>
               <tr>
                 <td valign="top" align="center" height="1" bgcolor="#86c9d2" style="border-spacing: 0 !important;border-collapse: collapse !important;">
-                  <img border="0" src="images/spacer.gif" width="1" height="1" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+                  <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="1" height="1" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
                 </td>
               </tr>
               <tr>
                 <td valign="top" align="center" style="border-spacing: 0 !important;border-collapse: collapse !important;">
-                  <img border="0" src="images/spacer.gif" width="25" height="25" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+                  <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="25" height="25" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
                 </td>
               </tr>
               <tr>
-                <td valign="top" align="center" style="color: #9b9b9b;font-size: 12px;font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica-Neue-Bold, Helvetica-Neue, Arial, sans-serif;border-spacing: 0 !important;border-collapse: collapse !important;" class="strong-font">
+                <td valign="top" align="center" border-spacing: 0 !important;border-collapse: collapse !important;" class="strong-font">
                   
                   <strong>
-                    <span class="strong-font">Made by&nbsp;<a href="http://www.gigwalk.com" style="color: #ff3c00;text-decoration: none;">Gigwalk</a>&nbsp;in San Francisco</span>
+                    <span style="color: #9b9b9b;font-size: 12px;font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica-Neue-Bold, Helvetica-Neue, Arial, sans-serif;" "class="strong-font">Made by&nbsp;<a href="http://www.gigwalk.com" style="color: #ff3c00;text-decoration: none;font-size: 12px;font-family: 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica-Neue-Bold, Helvetica-Neue, Arial, sans-serif;">Gigwalk</a>&nbsp;in San Francisco</span>
                   </strong>
                   
 
                 </td>
               <tr>
                 <td valign="top" align="center" style="border-spacing: 0 !important;border-collapse: collapse !important;">
-                  <img border="0" src="images/spacer.gif" width="1" height="2" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+                  <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="1" height="2" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
                 </td>
               </tr>  
               <tr>
@@ -351,13 +348,13 @@ a[class=strong-font]{
         </tr>
         <tr>
           <td bgcolor="#ffffff" style="border-spacing: 0 !important;border-collapse: collapse !important;">
-            <img border="0" src="images/spacer.gif" width="55" height="180" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+            <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="55" height="180" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
           </td>
           <td bgcolor="#ffffff" style="border-spacing: 0 !important;border-collapse: collapse !important;">&nbsp;
             
           </td>
           <td bgcolor="#ffffff" style="border-spacing: 0 !important;border-collapse: collapse !important;">
-            <img border="0" src="images/spacer.gif" width="55" height="180" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
+            <img border="0" src="http://deborah-ufw.github.io/gigwalk-html/gigwalk-email/images/spacer.gif" width="55" height="180" style="-ms-interpolation-mode: bicubic;margin-bottom: 0 !important;display: block;margin: 0;margin-top: 0 !important;" />
           </td>
         </tr> 
       </table>
