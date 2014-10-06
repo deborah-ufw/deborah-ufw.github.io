@@ -1163,19 +1163,6 @@ div.main.wrapper + div.inner {
 	
 }
 
-@media (min-width: 665px) and (max-width: 825px) {
-	
-	 .Tickets .tabnav li a {
-			padding-left: 16px;
-			padding-right: 16px; 
-	 }
-	 
-	 .Tickets li.buttonly a {
-			padding:  8px 12px 8px 40px; 
-	 }
-	
-}
-
 @media (min-width: 876px) and (max-width: 970px) {
 	
 	 .People .tabnav li a {
