@@ -463,11 +463,6 @@ input[type="checkbox"]:after {
 	width: 18px;
 }
 
-.set-exceptions input[type="checkbox"]:after {
-	margin-top: -3px;
-	
-}
-
 .instruction.view-mode input[type="checkbox"]:after {
 	font-size: 1em;
 }
