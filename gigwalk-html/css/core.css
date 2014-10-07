@@ -1489,7 +1489,7 @@ div.main.wrapper + div.inner {
 }
 
 .group.additional .sub .plainLabel {
-	margin-bottom: 0;
+	margin-bottom: 1em;
 }
 
 .mini-panel  {
@@ -2471,6 +2471,7 @@ html[data-useragent*='Trident'] {
 	
 	.im.icon-pencil-box:before {
 		font-size: .5em;
+		color: #ff0099;
 	}
 	
 }	
