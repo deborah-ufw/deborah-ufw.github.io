@@ -2476,6 +2476,12 @@ html[data-useragent*='Trident'] {
 	
 }	
 
+/* android ellipsis */
+
+body {
+	text-rendering: auto;
+}
+
 /* fix FF bugs */
 @-moz-document url-prefix() {
 	
