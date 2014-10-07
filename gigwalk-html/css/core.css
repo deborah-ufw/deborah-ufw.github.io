@@ -47,7 +47,8 @@ body {
 .instruction .sub .selected-item,
 .description .value,
 .plainLabel,
-.instruction .header .actions .ti {
+.instruction .header .actions .ti,
+.section.title {
 	line-height: 1.2em;
 }
 
@@ -141,7 +142,9 @@ a.disabled,
 .instruction.view-mode .target .answer:after,
 .instruction.view-mode .ti:after,
 .instruction.edit-mode .instruction-content .numeric .more-info:before,
-.instruction.edit-mode .numeric .between:before {
+.instruction.edit-mode .numeric .between:before,
+.instruction .primary.actions .right:after,
+.instruction .header .icon-edit:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -329,7 +332,8 @@ header .navbar-collapse.in {
 .tabnav li,
 .tabnav li a,
 .subnav li,
-.subnav li a {
+.subnav li a,
+.primary.actions a  {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
@@ -497,7 +501,7 @@ input[type="textarea"],
 .instructions .primary.actions:before,
 header .nav ul.dropdown-menu li,
 .group .sub,
-.instruction-summary,
+.instruction-footer,
 .instruction.view-mode .target {
 	border-top: 1px solid #cccccc;
 }
@@ -1312,29 +1316,6 @@ div.main.wrapper + div.inner {
 	margin-bottom: .3em;
 }
 
-
-.group .sub,
-.instruction .item .sub,
-.item input[type="text"],
-.item input[type="textarea"],
-.btn.btn-default.dropdown-toggle,
-.group .text-input input[type="text"] {
-	width: 300px;
-}
-
-.group .dropdown-menu,
-.instructions .dropdown-menu {
-	width: 301px;
-}
-
-.group .sub {
-	margin-left: 115px; 
-}
-
-.group .dropdown-menu {
-	left: 115px;
-}
-
 .group .sub .selected-item,
 .instruction .sub .selected-item {
 	padding: 14px 0 12px 0;
@@ -1348,12 +1329,6 @@ div.main.wrapper + div.inner {
 
 .iconly {
 	font-size: .85em;
-}
-
-.plainLabel {
-	text-align: right;
-	margin-right: 10px;
-	width: 100px;
 }
 
 .repeats-selection,
@@ -1434,10 +1409,6 @@ div.main.wrapper + div.inner {
 
 .set-repeats .radios .plainLabel {
 	text-align: left;
-}
-
-.group.repeats .set-repeats .dropdown-menu {
-	left: 0;
 }
 
 .group .plainLabel,
@@ -1540,16 +1511,6 @@ div.main.wrapper + div.inner {
 
 /* widgets */
 
-.instructions > .ti {
-	font-size: 1.1em;
-	margin: .5em 0 1em 0;
-}
-
-.expander {
-	font-size: 1.5em;
-	margin-bottom: 1em;
-}
-
 .expander a {
 	padding: .4em 1.6em .8em 2em;
 }
@@ -1566,7 +1527,6 @@ div.main.wrapper + div.inner {
 .header .actions .ti {
 	padding-top: 13px;
 	padding-bottom: 9px;
-	max-width: 440px;
 }
 
 .header .controls .im,
@@ -1613,18 +1573,6 @@ div.main.wrapper + div.inner {
 	padding-bottom: 1.7em;
 }
 
-.instructions .item .plainLabel {
-	width: 135px;
-}
-
-.instruction-content .sub {
-	margin-left: 150px;
-}
-
-.instruction-content .dropdown-menu {
-	left: 150px;
-}
-
 .item input[type="text"],
 .item input[type="textarea"] {
 	margin-top: -.5em;
@@ -1650,18 +1598,6 @@ div.main.wrapper + div.inner {
 .instructions .item .actions a.buttonly,
 .group a.buttonly {
 	padding: .5em 1.2em .5em 1em;
-}
-
-.instruction .primary.actions {
-	margin: 1em 0 1em 2em;
-}
-
-.instructions .primary.actions:before {
-	content: ' ';
-	display: inline-block;
-	margin-bottom: 1.5em;
-	height: 1px;
-	width: 100%;
 }
 
 .primary.actions .right {
@@ -1739,13 +1675,6 @@ div.main.wrapper + div.inner {
 	padding-bottom: 1em;
 }
 
-.instruction .item.targets .sub .selected-item {
-		width: 225px;
-}
-
-.instruction .item.targets .sub .selected-item input {
-		width: 215px;
-}
 
 /* add question */
 
@@ -1760,11 +1689,6 @@ div.main.wrapper + div.inner {
 
 .instruction.view-mode .answer {
 	margin-left:.5em;
-	padding-top: .2em;
-}
-
-.instruction.view-mode .answer.exception {
-	margin-bottom: -.6em;
 }
 
 .instruction.view-mode .answer input[type="radio"] {
@@ -1854,21 +1778,26 @@ div.main.wrapper + div.inner {
 	margin: 0 7px;
 }
 
-.iconly input[type="checkbox"] {
-	margin-right: 11px;
-}
-
-.iconly input[type="checkbox"]:after {
-	margin-top: -5px;
-}
-
 a.iconly {
 	margin: -.5em 1.5em .5em 0;
+}
+
+.iconly input[type="checkbox"] {
+	margin-right: 11px;
 }
 
 a.iconly:before {
 	font-size: 1.5em;
 		top: 3px;
+}
+
+.instruction.view-mode .target .answers {
+	margin-left: .5em;
+}
+
+.instruction.view-mode .target .name, 
+.instruction .answers .answer {
+	padding: .5em 0;
 }
 
 .instruction .item.targets .sub .mini-panel {
@@ -1899,32 +1828,379 @@ a.iconly:before {
 	padding-top: 0;
 }
 
-
-/* heredeb */
-
-
-
  
 
 /* Project builder responsive reformat */
 
+@media (min-width: 775px) {
+	
+	.instruction-content .sub {
+		margin-left: 150px;
+	}
+	
+	.instruction-content .dropdown-menu {
+		left: 150px;
+	}
+	
+	.group .sub {
+		margin-left: 115px; 
+	}
+	
+	.group .dropdown-menu {
+		left: 115px;
+	}
+	
+	.group.repeats .set-repeats .dropdown-menu {
+		left: 0;
+	}
+	
+	.instructions .item .plainLabel {
+		width: 135px;
+	}
+	
+}
+
 @media (min-width: 665px) {
+	
+	.instruction .header .icon-edit:after {
+		display: none;
+	}
+	
+	.instruction-content .plainLabel {
+		text-align: right;
+	}
 
 	.section.title .navly:after {
 		content: '/';
 		padding: 0 .3em;
 	}
+	
+	.group .plainLabel {
+		text-align: right;
+		margin-right: 10px;
+		width: 100px;
+	}
+	
+	.group .sub,
+	.instruction .item .sub,
+	.item input[type="text"],
+	.item input[type="textarea"],
+	.btn.btn-default.dropdown-toggle {
+		width: 300px;
+	}
+	
+	.group.materials .text-input input[type="text"] {
+		width: 225px;
+	}
+	
+	.group .dropdown-menu,
+	.instructions .dropdown-menu {
+		width: 301px;
+	}
+	
+	.instructions > .ti {
+		font-size: 1.1em;
+		margin: .5em 0 1em 0;
+	}
+	
+	.expander {
+		font-size: 1.5em;
+		margin-bottom: 1em;
+	}
 
+	.instruction .item.targets .sub .selected-item {
+		width: 225px;
+	}
+	
+	.instruction .item.targets .sub .selected-item input {
+		width: 215px;
+	}
+	
+	.iconly input[type="checkbox"]:after {
+		margin-top: -5px;
+	}
+	
+	.instruction .primary.actions {
+		margin: 1em 0 1em 2em;
+	}
+
+
+}
+
+@media (min-width: 931px) {
+
+	.header .actions .ti {
+			max-width: 440px;
+		}
+	
+}
+
+@media (min-width: 851px) and (max-width: 930px) {
+
+	.header .actions .ti {
+			max-width: 360px;
+		}
+	
+}
+
+@media (min-width: 776px) and (max-width: 850px) {
+
+	.header .actions .ti {
+			max-width: 285px;
+		}
+	
+}
+
+
+@media (min-width: 665px) and (max-width: 890px) {
+	
+	.instruction-summary .descriptive {
+		display: none;
+	}
+	
+}
+
+@media (min-width: 665px) and (max-width: 775px) {
+	
+	.instruction.view-mode .target .answers {
+		width: 100%;
+	}
+	
+}
+
+@media (max-width: 774px) {
+	
+	.group .plainLabel,
+	.instructions .item .plainLabel,
+	.instruction-footer .item.estimated {
+ 		width: 100%;
+	}
+	
+	.set-repeats .ends .radios .plainLabel,
+	.instruction .time-estimate .btn.btn-default.dropdown-toggle,
+	.instruction .item.time-estimate .sub {
+		width: auto;
+	}
+	
+	.instruction-footer .item.estimated {
+		border-top: 1px solid #cccccc;
+	}
+	
+	.set-repeats .checker .plainLabel {
+		width: 90px;
+		margin-right: 1.7em;
+	}
+	
+	.group .plainLabel,
+	.instruction .item .plainLabel {
+		text-align: left;
+		margin: 0 1em .5em 0;
+	}
+	
+	.group .sub,
+	.set-repeats,
+	.instruction-content .sub {
+		margin-left: 0;
+	}
+	
+	.set-repeats .every {
+		margin-top: 1.5em;
+	}
+	
+	.set-repeats .ends {
+		margin: 1.5em 0;
+	}
+	
+	.set-repeats .every .plainLabel, 
+	.set-repeats .ends .plainLabel {
+		text-align: right;
+		width: 100px;
+	}
+	
+	.item.required > .plainLabel:after {
+		margin-right: 5px;
+		float: left;
+		left: 0;
+	}
+	
+	.primary.actions a.delete {
+		padding: 2em .3em 2em 0;
+	}
+	
+	.instruction-footer .item.count {
+		border-right-width: 0px;
+	}
+	
 }
 
 @media (max-width: 664px) {
-
-	.section.title .navly {
-	  display: block;
+	
+	.content {
+		margin: 0 .5em;
+	}
+	
+	.section.title .navly,
+	.mini-panel,
+	.instructions .item .plainLabel,
+	.header .actions .ti,
+	.instructions .view-mode .answers,
+	.instructions .view-mode .answer,
+	.instruction-summary .item {
  		width: 100%;
 	}
+	
+	.instruction .item.targets .sub .mini-panel,
+	.set-repeats .ends .radios .plainLabel,
+	.instruction.view-mode .time .answers {
+		width: auto;
+	}
+
+	.section.title .navly {
+		font-size: .8em;
+	  display: block;
+	}
+	
+	.group .set-repeats .plainLabel,
+	.group .more-info .plainLabel,
+	.instruction .item.numeric .sub .plainLabel,
+	.iconly,
+	.iconly input[type="checkbox"]:after,
+	.instruction .more-info .plainLabel,
+	.instruction .answer .plainLabel,
+	.instruction .instruction-summary .estimated .plainLabel {
+		font-size: 1em;
+	}
+	
+	.item.numeric .sub .more-info .btn.btn-default.dropdown-toggle {
+		font-size: 1.2em;
+	}
+	
+	.group .plainLabel,
+	.instruction .plainLabel,
+	.instruction .mini-panel .ti {
+		font-size: 1.3em;
+	}
+	
+	.instructions > .ti {
+		font-size: 2em;
+	}
+	
+	.expander a.buttonly {
+		font-size: 1.8em;
+	}
+	
+	.header .actions .ti {
+		border-bottom: 1px solid rgba(255, 255, 255, .3);
+	}
+	
+	.instruction-footer .item.required {
+		border-bottom: 1px solid #cccccc;
+	}
+	
+	.instruction .header .actions .im {
+		border-bottom-width: 0px;
+	}
+	
+	.instruction-footer .item.required {
+		border-right-width: 0px;
+	}
+	
+	.group .sub, 
+	.item input[type="text"], 
+	.item input[type="textarea"], 
+	.btn.btn-default.dropdown-toggle,
+	.group .dropdown-menu {
+		width: 280px;
+	}
+	
+	.instructions .dropdown-menu,
+	.instruction .item .sub,  
+	.instruction .item input[type="text"], 
+	.instruction .item input[type="textarea"], 
+	.instruction .btn.btn-default.dropdown-toggle {
+		width: 245px;
+	}
+	  
+	.instruction .item .mini-panel input[type="text"], 
+	.instruction .item .mini-panel input[type="textarea"] {
+		width: 220px;
+	}
+	
+	.instruction .item.numeric .mini-panel input[type="text"], 
+	.instruction .item.numeric .mini-panel input[type="textarea"],
+	.instruction .item.time-estimate input[type="text"] {
+		width: 60px;
+	}
+	
+	.group .text-input input[type="text"] {
+		width: 205px;
+	}
+	
+	.group .sub .selected-item, 
+	.instruction .sub .selected-item {
+		width: 215px;
+	}
+	
+	.instructions > .ti {
+		margin: .3em 0;
+	}
+	
+	.instruction .item.targets .sub .selected-item,
+	.instruction .item.targets .sub input[type="text"] {
+		width: 165px;
+	}
+	
+	.group.repeats .set-repeats .dropdown-menu,
+	.instruction-content .dropdown-menu {
+		left: auto;
+		right: 0;
+	}
+	
+	.adjacent .wrapper,
+	.more-info .checker {
+		margin: .5em .2em 1em 1em;
+	}
+	
+	.instruction.edit-mode .numeric .mini-panel span {
+		margin-bottom: -.1em;
+	}
+	
+	.instruction .item .mini-panel input[type="text"], 
+	.instruction .item .mini-palen input[type="textarea"] {
+		margin: .5em 0;
+	}
+		
+	.instruction .item.targets .sub .mini-panel {
+		margin: -.3em -.5em -.3em -.5em;
+		padding-right: 1em;
+	}
+	
+	.iconly input[type="checkbox"]:after {
+		margin-top: -3px;
+	}
+	
+	.primary.actions a {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	
+	.instruction .primary.actions {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+	
+	.instruction .header .actions .icon-buttons {
+		margin-bottom: -14px;
+	}
+	
+	.instruction-footer .item.count {
+		padding-top: .2em;
+	}
+
 
 }
+
+/* heredeb */
 	
 /* ios fix for modal with keyboard */
 
