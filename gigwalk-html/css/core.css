@@ -1943,7 +1943,8 @@ a.iconly:before {
 	}
 	
 	.iconly input[type="checkbox"]:after {
-		margin-top: -5px;
+		margin-top: -4px;
+		margin-bottom: -4px;
 	}
 	
 	.instruction .primary.actions {
