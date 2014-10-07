@@ -441,7 +441,7 @@ select option,
 .checker .supercheck,
 input[type="checkbox"],
 input[type="radio"] {
-	margin-right: 8px;
+	margin-right: 10px;
 }
 
 .checker .supercheck:after,
@@ -455,14 +455,14 @@ input[type="radio"]:after {
 input[type="checkbox"]:after {
 	content: "\e603";
 	font-family: 'icomoon';
-	font-size: 1.2em;
-	margin: -2px -2px -2px -2px;
-	height: 20px;
-	width: 20px;
+	font-size: 1.3em;
+	margin: -5px -2px -2px -2px;
+	height: 22px;
+	width: 22px;
 }
 
 .instruction.view-mode input[type="checkbox"]:after {
-	font-size: 1em;
+	font-size: 1.2em;
 }
 
 

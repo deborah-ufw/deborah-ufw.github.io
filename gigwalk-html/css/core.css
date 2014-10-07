@@ -1841,10 +1841,6 @@ a.iconly:before {
 	margin-left: -26px;
 }
 
-.instruction .item.targets .sub .mini-panel.targets input:after {
-	margin-top: -3px;
-}
-
 .instruction.edit-mode .item .sub input[type="textarea"] {
 	margin-bottom: .5em;
 }
@@ -1943,8 +1939,7 @@ a.iconly:before {
 	}
 	
 	.iconly input[type="checkbox"]:after {
-		margin-top: -4px;
-		margin-bottom: -4px;
+		margin-top: -5px;
 	}
 	
 	.instruction .primary.actions {
