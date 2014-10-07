@@ -2469,7 +2469,7 @@ textarea:-ms-input-placeholder {
 html[data-useragent*='MSIE 10.0'],
 html[data-useragent*='Trident'] {
 	
-	.im.icon-pencil-box:before {
+	.im.icon-pencil-box {
 		font-size: 1em;
 	}
 	
