@@ -2468,7 +2468,11 @@ textarea:-ms-input-placeholder {
 
 html[data-useragent*='MSIE 10.0'],
 html[data-useragent*='Trident'] {
-	/* fixes here */
+	
+	.im.icon-pencil-box:before {
+		font-size: 1em;
+	}
+	
 }	
 
 /* fix FF bugs */
