@@ -1384,10 +1384,6 @@ div.main.wrapper + div.inner {
 	font-size: .9em;
 }
 
-.set-repeats .dropdown .dropdown-toggle {
-	padding-right: 8px;
-}
-
 .set-repeats .dropdown .dropdown-toggle .caret {
 	margin-top: -2px;
 }
