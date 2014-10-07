@@ -101,37 +101,6 @@ header .user-org,
   overflow: hidden;
 }
 
-/* fix FF bugs */
-@-moz-document url-prefix() {
-	
-  .tabnav .dropdownly .dropdown-toggle .caret {
-		 z-index: 5;  
-	} 
-	
-	.tabnav .dropdownly .dropdown-toggle:before {
-		content: ' ';
-		display: inline-block;
-		margin-right: .3em;
-	}
-	
-	.tabnav .dropdownly .dropdown-toggle:after {
-		content: ' ...';
-		color: #ffffff;
-		background-color: #178d9f;
-		padding-left: 5px;
-		display: inline-block;
-		width: 2.5em;
-		height: 2em;
-		position: absolute;
-			right: 0;
-	} 
-	
-	.instruction .viewing.icon-buttons {
-		min-width: 200px;
-	}
-    
-}
-
 .hellomouse,
 .editable:hover, 
 .header .controls .ti,
@@ -757,7 +726,7 @@ header .nav .dropdown li {
 	.btn.btn-default.dropdown-toggle .caret {
 		font-size: 1.7em;
 			top: 5px;
-			right: 10px;
+			right: 8px;
 	}
 	
 	input[type="text"],
@@ -1535,6 +1504,10 @@ div.main.wrapper + div.inner {
 	margin: 1px 5px 10px 0;
 }
 
+.group.materials .mini-panel {
+	padding-right: 1em;
+}
+
 .group.materials .ti.number {
 	font-size: 1.3em;
 	max-width: 200px;
@@ -2205,7 +2178,7 @@ a.iconly:before {
 	
 	.group.repeats .set-repeats .dropdown-menu,
 	.instruction-content .dropdown-menu {
-		left: auto;
+		left: 0;
 		right: 0;
 	}
 	
@@ -2255,19 +2228,7 @@ a.iconly:before {
 
 /* heredeb */
 	
-/* ios fix for modal with keyboard */
 
-.modal-ios {
-	position: absolute;
-	overflow: visible
-}
-
-/* ie10 & 11 --- also will be picked up by ie9 */
-
-html[data-useragent*='MSIE 10.0'],
-html[data-useragent*='Trident'] {
-	/* fixes here */
-}	
 
 /* customize bootstrap's responsive behavior */
 
@@ -2414,13 +2375,11 @@ html[data-useragent*='Trident'] {
 }
 
 
-
-
-/* - - - - - - - - - -
+/* - - - - - - - - - - - - - - - -
 	 CSS3 form hints  
 	 can not be combined with each other 
 	 or anything else 
-	 - - - - - - - - - -
+	 - - - - - - - - - - - - - - - -
 */
 
 input::-webkit-input-placeholder { 
@@ -2493,6 +2452,66 @@ textarea:-ms-input-placeholder {
 .invalid textarea:-ms-input-placeholder {
 	color: #323232;
 	opacity: .5;
+}
+
+
+/* - - - - - - - - - - - - - - - -
+	 Assorted device and 
+	 browser fixes
+	 - - - - - - - - - - - - - - - -
+*/
+
+/* ios fix for modal with keyboard */
+
+.modal-ios {
+	position: absolute;
+	overflow: visible
+}
+
+/* ie10 & 11 --- also will be picked up by ie9 */
+
+html[data-useragent*='MSIE 10.0'],
+html[data-useragent*='Trident'] {
+	/* fixes here */
+}	
+
+/* fix FF bugs */
+@-moz-document url-prefix() {
+	
+  .tabnav .dropdownly .dropdown-toggle .caret {
+		 z-index: 5;  
+	} 
+	
+	.tabnav .dropdownly .dropdown-toggle:before {
+		content: ' ';
+		display: inline-block;
+		margin-right: .3em;
+	}
+	
+	.tabnav .dropdownly .dropdown-toggle:after {
+		content: ' ...';
+		color: #ffffff;
+		background-color: #178d9f;
+		padding-left: 5px;
+		display: inline-block;
+		width: 2.5em;
+		height: 2em;
+		position: absolute;
+			right: 0;
+	} 
+	
+	.instruction .viewing.icon-buttons {
+		min-width: 200px;
+	}
+	
+	.set-required input[type="checkbox"] {
+		top: 8px;
+	}
+	
+	.more-info .set-required input[type="checkbox"] {
+		top: 0;
+	}
+    
 }
 	
 	
