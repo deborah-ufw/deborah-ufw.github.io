@@ -841,10 +841,6 @@ header .nav .dropdown li {
 	width: 100%;
 }
 
-.main.wrapper {
-	padding-right: 1em;
-}
-
 /*  left sidenav */
 
 nav.sidenav {  
@@ -966,6 +962,10 @@ div.main.wrapper + div.inner {
 
 @media (min-width: 665px) {
 	
+	.main.wrapper {
+		padding-right: 1em;
+	}
+	
 	.tabnav li {
 		display: inline-block;
 		float: left;
@@ -1036,10 +1036,6 @@ div.main.wrapper + div.inner {
 }
 
 @media (max-width: 664px) {
-	
-	nav.tabnav {
-		margin-right: -1em;
-	}
 	
 	.tabnav ul {
 		display: table;
