@@ -456,7 +456,7 @@ input[type="checkbox"]:after {
 	content: "\e603";
 	font-family: 'icomoon';
 	font-size: 1.2em;
-	margin-top: -4px;
+	margin-top: -3px;
 	margin-bottom: -2px;
 	margin-left: -2px;
 	height: 18px;
