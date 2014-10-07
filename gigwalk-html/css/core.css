@@ -1397,6 +1397,7 @@ div.main.wrapper + div.inner {
 }
 
 .set-repeats .radios {
+	margin-top: .5em;
 	margin-left: 1.5em;
 }
 
