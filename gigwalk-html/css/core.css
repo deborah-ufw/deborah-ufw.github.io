@@ -1400,6 +1400,10 @@ div.main.wrapper + div.inner {
 	margin-left: 1.5em;
 }
 
+.set-repeats .radio {
+	min-height: 30px;
+}
+
 .set-repeats .radio .plainLabel {
 	margin-right: .3em;
 	padding-left: 0;
@@ -1411,7 +1415,6 @@ div.main.wrapper + div.inner {
 
 .set-repeats .radio input {
 	padding: 2px;
-	top: 3px;
 }
 
 .description .value {
