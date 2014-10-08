@@ -2479,7 +2479,7 @@ html[data-useragent*='Trident'] {
 /* android ellipsis */
 
 body {
-	text-rendering: optimizeSpeed;
+	/* it did not work */
 }
 
 /* fix FF bugs */
