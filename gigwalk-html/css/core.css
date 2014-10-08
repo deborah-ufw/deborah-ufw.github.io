@@ -1357,12 +1357,14 @@ div.main.wrapper + div.inner {
 	margin: 0 0 0 116px;
 }
 
-.repeats-setter.value {
-	top: -2px;
+.group .repeats-setter.value {
+	float: none;
+		top: -2px;
+		left: 0;
 }
 
 .set-repeats .checker .plainLabel {
-	margin-right: 3em;
+	margin-right: 1.3em;
 }
 
 .set-repeats .every .dropdown .plainLabel,
@@ -1498,6 +1500,10 @@ div.main.wrapper + div.inner {
 
 .mini-panel  {
 	padding: 1em 2em 1em 1em;
+}
+
+.item.numeric .mini-panel {
+	margin-top: .5em;
 }
 
 .group .text-input input[type="text"] {
