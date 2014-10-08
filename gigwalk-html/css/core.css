@@ -24,7 +24,8 @@ header nav .user-edit,
 	display: none;
 }
 
-body {
+body,
+.instruction.edit-mode .answer .more-info .set-required input.supercheck[type="checkbox"]:after {
 	font-size: 1.4em;
 }
 
