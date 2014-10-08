@@ -144,7 +144,8 @@ a.disabled,
 .instruction.edit-mode .instruction-content .numeric .more-info:before,
 .instruction.edit-mode .numeric .between:before,
 .instruction .primary.actions .right:after,
-.instruction .header .icon-edit:after {
+.instruction .header .icon-edit:after,
+.instruction .header .viewing.icon-buttons:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
