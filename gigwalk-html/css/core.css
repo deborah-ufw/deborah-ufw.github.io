@@ -1498,6 +1498,10 @@ div.main.wrapper + div.inner {
 	margin-top: 0;
 }
 
+.set-repeats .radio.first .plainLabel {
+	padding-top: 4px;
+}
+
 .set-repeats .radio input {
 	padding: 2px;
 }
@@ -1943,7 +1947,7 @@ a.iconly:before {
 .instruction .item.targets .sub .mini-panel.targets input {
 	margin-right: 15px;
 	margin-left: -26px;
-		top: -2px;
+		top: -1px;
 }
 
 .instruction .item.targets .sub .mini-panel.targets input:after {
