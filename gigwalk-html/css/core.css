@@ -1427,6 +1427,10 @@ div.main.wrapper + div.inner {
 	font-size: .85em;
 }
 
+.iconly input[type="checkbox"]:after {
+	font-size: 1.3em;
+}
+
 .repeats-selection,
 .group {
 	margin-top: 1.3em;
@@ -2200,11 +2204,14 @@ a.iconly:before {
 	.group .more-info .plainLabel,
 	.instruction .item.numeric .sub .plainLabel,
 	.iconly,
-	.iconly input[type="checkbox"]:after,
 	.instruction .more-info .plainLabel,
 	.instruction .answer .plainLabel,
 	.instruction .instruction-summary .estimated .plainLabel {
 		font-size: 1em;
+	}
+	
+	.iconly input[type="checkbox"]:after {
+		font-size: 1.1em;
 	}
 	
 	.item.numeric .sub .more-info .btn.btn-default.dropdown-toggle {
@@ -2326,7 +2333,7 @@ a.iconly:before {
 	}
 	
 	.instruction .header .actions .icon-buttons {
-		margin-bottom: -14px;
+		max-height: 44px;
 	}
 	
 	.instruction-footer .item.count {
