@@ -2509,6 +2509,7 @@ body {
 	
 	.instruction .viewing.icon-buttons {
 		min-width: 200px;
+		min-height: 45px;
 	}
 	
 	.set-required input[type="checkbox"] {
