@@ -29,7 +29,9 @@ body {
 }
 
 .header .actions .ti,
-.instructions .item .actions a.buttonly {
+.instructions .item .actions a.buttonly,
+.set-repeats .checker .supercheck, 
+.set-repeats input[type="checkbox"] {
 	font-size: 1.2em;
 }
 
@@ -48,7 +50,8 @@ body {
 .description .value,
 .plainLabel,
 .instruction .header .actions .ti,
-.section.title {
+.section.title,
+.set-repeats .summary-dynamic {
 	line-height: 1.2em;
 }
 
@@ -417,11 +420,16 @@ select {
 	background: #efefef;
 }
 
+input.supercheck:after,
+input[type="checkbox"]:after,
 .desktop .date.group:after,
 .instruction-footer .icon-checkmark {
 	color: #ffffff;
 }
 
+.checker .supercheck:after,
+input[type="checkbox"]:after,
+input[type="radio"]:after,
 .instructions .item .actions a.buttonly {
 	background-color: #ffffff;
 }
@@ -497,6 +505,9 @@ select {
 
 /* borders */
 
+.checker .supercheck:after,
+input[type="checkbox"]:after,
+input[type="radio"]:after,
 input[type="text"],
 input[type="textarea"],
 .instruction-content {
@@ -729,6 +740,71 @@ header .nav .dropdown li {
 		font-size: 1.7em;
 			top: 5px;
 			right: 8px;
+	}
+	
+	.checker .supercheck,
+	input[type="checkbox"],
+	input[type="radio"] {
+		margin-right: 8px;
+	}
+	
+	.checker .supercheck:after,
+	input[type="checkbox"]:after,
+	input[type="radio"]:after {
+		display: block;
+		float: left;
+	}
+	
+	.checker .supercheck:after,
+	input[type="checkbox"]:after {
+		content: "\e603";
+		font-family: 'icomoon';
+		font-size: 1.3em;
+		margin: -5px -2px -2px -2px;
+		height: 22px;
+		width: 22px;
+	}
+	
+	.instruction.view-mode input[type="checkbox"]:after {
+		font-size: 1.2em;
+	}
+	
+	
+	input[type="radio"]:after {
+		content: ' ';
+		margin-top: -5px;
+		height: 24px;
+		width: 24px;
+			left: -5px;
+	}
+	
+	input[type="radio"]:checked:after {
+		content: ' ';
+		padding: 1px;
+	}
+	
+	.item.checker .supercheck:after {
+		font-size: 1.9em;
+		padding-left: 1px;
+		height: 35px;
+		width: 35px;
+	}
+	
+	.set-repeats .checker .supercheck, 
+	.set-repeats input[type="checkbox"] {
+		margin-right: 12px;
+	}
+	
+	.set-repeats input.supercheck:checked:after {
+		font-size: 1.1em;
+	}
+	
+	.item.set-required {
+		margin-bottom: .5em;
+	}
+	
+	.item.set-required .plainLabel {
+		margin-top: .7em;
 	}
 	
 	input[type="text"],
@@ -1374,12 +1450,16 @@ div.main.wrapper + div.inner {
 	margin-left: .2em;
 }
 
-.set-repeats .every .plainLabel,
-.set-repeats .ends .plainLabel {
-	width: 105px;
+.group .set-repeats .plainLabel {
+	width: 90px;
 }
 
-.set-repeats .plainLabel,
+.set-repeats .every .plainLabel,
+.set-repeats .ends .plainLabel {
+	width: 95px;
+}
+
+.group .set-repeats .summary .plainLabel,
 .set-repeats .radios .plainLabel {
 	width: auto;
 }
@@ -1479,6 +1559,7 @@ div.main.wrapper + div.inner {
 
 .group .more-info input[type="radio"] {
 	margin-top: 1px;
+	margin-right: .7em;
 }
 
 .group .more-info input[type="checkbox"] {
@@ -1793,7 +1874,16 @@ instruction .viewing.icon-buttons {
 }
 
 .instruction.edit-mode .numeric .more-info input[type="checkbox"] {
-	margin: .8em .8em 0 .2em;
+	margin: .8em .9em 0 .2em;
+}
+
+.instruction.edit-mode .numeric .more-info input[type="checkbox"]:after {
+	font-size: 1.4em;
+}
+
+.instruction.edit-mode .numeric .more-info input[type="checkbox"],
+.instruction.edit-mode .numeric .more-info input[type="checkbox"]:after {
+	top: -2px;
 }
 
 .instruction.edit-mode .numeric .dropdown {
@@ -1823,6 +1913,7 @@ a.iconly {
 
 .iconly input[type="checkbox"] {
 	margin-right: 11px;
+		top: -2px;
 }
 
 a.iconly:before {
@@ -1852,6 +1943,11 @@ a.iconly:before {
 .instruction .item.targets .sub .mini-panel.targets input {
 	margin-right: 15px;
 	margin-left: -26px;
+		top: -2px;
+}
+
+.instruction .item.targets .sub .mini-panel.targets input:after {
+	margin-top: -5px;
 }
 
 .instruction.edit-mode .item .sub input[type="textarea"] {
