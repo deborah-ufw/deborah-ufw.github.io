@@ -143,6 +143,7 @@ a.disabled,
 .instruction.view-mode .ti:after,
 .instruction.edit-mode .instruction-content .numeric .more-info:before,
 .instruction.edit-mode .numeric .between:before,
+.instruction .header:after,
 .instruction .primary.actions .right:after,
 .instruction .header .icon-edit:after,
 .instruction .header .viewing.icon-buttons:after {
@@ -1429,6 +1430,7 @@ div.main.wrapper + div.inner {
 
 .set-repeats .radios .plainLabel {
 	text-align: left;
+	margin-left: 5px;
 }
 
 .group .plainLabel,
