@@ -2587,21 +2587,25 @@ textarea:-ms-input-placeholder {
 
 /* ie10 & 11 --- also will be picked up by ie9 */
 
-html[data-useragent*='MSIE 10.0'],
-html[data-useragent*='Trident'] {
-	
-	.im.icon-pencil-box:before {
-		font-size: .5em;
-		color: #ff0099;
-	}
-	
+html[data-useragent*='MSIE 10.0'] .buttonly .im.icon-pencil-box:before,
+html[data-useragent*='Trident'] .buttonly .im.icon-pencil-box:before {
+	font-size: .8em;
 }	
 
-/* android ellipsis */
+html[data-useragent*='Trident'] .buttonly .im.icon-pencil-box:before {
+	font-size: .7em;
+}	
 
-body {
-	/* it did not work */
-}
+html[data-useragent*='MSIE 10.0'] .edit-mode .instruction-content .item.set-required .sub,
+html[data-useragent*='Trident'] .edit-mode .instruction-content .item.set-required .sub {
+	padding-top: 12px;
+}	
+
+html[data-useragent*='MSIE 10.0'] .instruction.edit-mode .item.answer .more-info,
+html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
+	padding-top: 10px;
+}	
+
 
 /* fix FF bugs */
 @-moz-document url-prefix() {
