@@ -1634,6 +1634,10 @@ div.main.wrapper + div.inner {
 	padding: .3em 1.5em;
 }
 
+instruction .viewing.icon-buttons {
+	min-height: 45px;
+}
+
 .icon-buttons a {
 	margin-right: -5px;
 	padding: .6em .8em;
@@ -2509,7 +2513,6 @@ body {
 	
 	.instruction .viewing.icon-buttons {
 		min-width: 200px;
-		min-height: 45px;
 	}
 	
 	.set-required input[type="checkbox"] {
