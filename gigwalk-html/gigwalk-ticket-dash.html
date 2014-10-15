@@ -1,0 +1,656 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Basic Page Needs 
+================================================== -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" /> 
+
+<title>Tickets Dash</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+
+
+<!-- device and shortcut icons
+================================================== -->
+
+<link rel="shortcut icon" type="image/x-icon" href="brand/gigwalk/images/favicon-gigwalk.ico">
+<link rel="apple-touch-icon" href="brand/gigwalk/images/apple-touch-icon.png" /> 
+
+
+<!-- Global CSS and JS
+================================================== -->
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/DataTables.all.min.js"></script>
+<script src="js/interactions.js"></script>
+
+<link href="css/bootstrap.css" media="screen" rel="stylesheet" />
+<link href="css/font-awesome.css" media="screen" rel="stylesheet" />
+<link href="css/app-glyphs.css" media="screen" rel="stylesheet" />
+<link href="css/datepicker.css" media="screen" rel="stylesheet" />
+<link href="css/core.css" media="screen" rel="stylesheet" />
+
+<!-- Brand CSS
+================================================== -->
+
+<link href="brand/gigwalk/css/fonts-gigwalk.css" media="screen" rel="stylesheet" />
+<link href="brand/gigwalk/css/gigwalk.css" media="screen" rel="stylesheet" />
+
+
+<!-- Manage IE
+================================================== -->
+
+<!--[if lte IE 8]>
+  <script type="text/javascript">       
+      window.location="unsupported.html";
+  </script>
+<![endif]-->
+
+<!--[if IE 9]>
+  <link href="/css/ie9.css" media="screen" rel="stylesheet" />
+  <script src=="js/html5.min.js"></script> 
+<![endif]-->
+
+<script>
+  var doc = document.documentElement;
+  doc.setAttribute('data-useragent', navigator.userAgent);
+  // detect IE10 and IE11 from string
+</script>
+
+ 
+</head>
+<body class="body">
+
+<!-- top navigation -->
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+  
+  <!-- hold the responsive sidenav button -->
+  <div class="nav-active-holder">Holds nav location<span class="caret"></span></div>
+  
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:;">&nbsp;</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="alerts buttonly">
+            <a href="javascript:;">
+              <span class="im icon-bell"></span>
+              <span class="number">6</span>
+            </a>
+          </li>
+          <li class="messages buttonly">
+            <a href="javascript:;">
+             <span class="im icon-email"></span>
+             <span class="number">18</span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <!-- use this same "user-info" div in the sidenav -->
+            <div class="user-info">
+              <div class="user-image">
+                <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+              </div>
+              <div class="inner">
+                <div class="user-name">Grace Kelly</div>
+                <div class="user-org">Crossmark</div>
+                <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+              </div>
+            </div><!-- ends user info -->
+            
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="header">Manage Organization</li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-checkmark"></span>
+                  <span>Admin Dashboard</span>
+                </a>
+              </li>
+              <li class="disabled">
+                <a href="javascript:;">
+                  <span class="im icon-empty"></span>
+                  <span>Org Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-settings"></span>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li class="last">
+                <a href="javascript:;">
+                  <span class="im icon-lock"></span>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- ends navbar-collapse -->
+    </div><!-- ends container-fluid -->
+  </nav>
+</header>
+
+<!-- --------------------------------------------------------
+        Dave Valerie
+        inject role name in to div "main wrapper" class
+        example "main wrapper worker" or
+                "main wrapper admin" -->
+                
+<!-- start the main panel -->
+<div class="main wrapper admin">
+                
+<!-- ----------------------------------------------------- --> 
+
+  <!-- side navigation (left side) -->
+  <nav class="sidenav">
+  
+    <!-- use the same "user-info" div as in the top nav -->
+    <div class="user-info">
+      <div class="user-image">
+        <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+      </div>
+      <div class="inner">
+        <div class="user-name">Grace Kelly</div>
+        <div class="user-org">Crossmark</div>
+        <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+      </div>
+    </div><!-- ends user info -->
+    
+    <ul class="nav-sections">
+      <li><a href="javascript:;">Organizations</a></li>
+      <li><a href="javascript:;">Projects</a></li>
+      <li class="active"><a href="javascript:;">Tickets</a></li>
+      <li><a href="javascript:;">People</a></li>
+      <li><a href="javascript:;">Resources</a></li>
+      
+      <li class="divider">Support</li>
+      <li class="support"><a href="javascript:;">Demos and FAQs</a></li>
+      <li class="support"><a href="javascript:;">Support</a></li>
+      <li class="support"><a href="javascript:;">Contact Us</a></li>
+      
+    </ul>
+  </nav><!-- ends side nav -->
+  
+  <!-- content (right side) -->
+  <div class="inner wrapper Projects">
+  
+      <!-- tabs for the content -->
+      <nav class="tabnav">
+        <ul>
+          <li class="active"><a href="javascript:;">Tickets</a></li>
+          <li class="dropdownly right">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                P&G Dedicated Really Long Team 
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Team Name 1</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Extremely long overflowing Team Name 2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Team Name 3</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav><!-- ends content tabs -->
+      
+      <!-- the content under the tabs -->
+      <div class="content tickets dash">
+      
+      <!-- ****************************************************************** -->
+      <!--                              LIST VIEW                             -->
+      <!-- ****************************************************************** -->
+           
+      
+      <!-- ****************** FILTERS ***************** -->
+      
+      <div class="filters-holder"><!-- start view and filter buttons -->
+        <div class="view">
+          <a class="map" href="javascript:;">Map</a>
+          <a class="list active" href="javascript:;">List</a>
+        </div>
+        <div class="filters">
+          <div class="filter supersearch">
+            supersearch
+          </div>
+          <div class="filter dropdown">
+            dropdown
+          </div>
+          <div class="filter dates">
+            dates
+          </div>
+        </div>
+      </div><!-- end filters (view and filter buttons) -->
+      
+      
+      <!-- ****************** TABLE CONTROL BAR ***************** -->
+      
+      <!-- the summary area on the left with action buttons on the right -->
+      <div class="table-list">
+        <div class="controls">
+          <div class="summary">
+            <div class="tickets visible">number <span class="descr-before"></span>Tickets <span class="descr-after"></span></div>
+            <div class="tickets selected">| number selected</div>
+          </div>
+          <div class="actions">
+            <a class="iconButton cancel" href="javascript:;">Cancel</a><!-- Grace only -->
+            <a class="iconButton extend" href="javascript:;">Extend</a><!-- Grace only -->
+            <a class="iconButton schedule" href="javascript:;">Schedule</a><!-- Jimmy only -->
+            <a class="iconButton print" href="javascript:;">Print</a>
+            <a class="iconButton assign" href="javascript:;">Assign</a><!-- Grace only -->
+            <a class="iconButton unassign" href="javascript:;">Assign</a><!-- Jimmy only -->
+          </div>
+        </div>
+        
+        <!-- the panel that drops down for specifying the selected action -->
+        <div class="action panel assign">
+          <h1>Assign 20 Tickets <span>(estimated 53 hours 28 minutes)</span></h1>
+          <div class="item required">
+            <div class="plainLabel">Choose Assignee</div>
+            <div class="radios">
+              <div class="radio">
+                <label>
+                <input type="radio" name="choose" value="search" />Search for assignee</label>
+                <div class="hint">Tickets already assigned will be re-assigned</div>
+                
+                <div class="search">
+                  <input type="text" />
+                  <div class="selection">
+                    <div class="value">Kelly Wentworth</div>
+                    <a class="close"></a>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="radio">
+                <label>
+                <input type="radio" name="choose" value="list" />Choose from a list</label>
+                <div class="hint">Tickets already assigned will be re-assigned</div>
+              </div>
+              <div class="radio">
+                <label>
+                <input type="radio" name="choose" value="system" />Let the system choose for me</label>
+                <div class="hint">Only unassigned tickets will be assigned</div>
+              </div>
+            
+            </div>
+          </div>
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly disabled" href="javascript:;">Assign</a>
+            </div>
+          </div>
+
+        </div>
+        
+        <!-- the panel that confirms the executed action -->
+        <div class="action confirmation">
+          <h1>20 Tickets were assigned (Confirmation message)</h1>
+        </div>
+        <div class="action warning">
+          <h1>Warning message</h1>
+        </div>
+        <div class="action problem">
+          <h1>Problem message</h1>
+        </div>
+      
+        <!-- ****************** TABLE ***************** -->
+      
+        <table data-target="dataTable" class="dataTable no-footer" role="grid">
+        
+          <thead>
+            <tr role="row">
+              <th class="sorting project-name">
+                <input type="checkbox" value="select-all" />
+                Project Name
+              </th>
+              <th class="sorting location">
+                Location
+              </th>
+              <th class="sorting assigned">
+                Assigned
+              </th>
+              <th class="sorting due">
+                Due
+              </th>
+              <th class="sorting status">
+                Status
+              </th>
+            </tr>
+          </thead>
+          
+          <tbody>
+          
+            <tr role="row" class="odd">
+              <td class="sorting project-title">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">
+                  Cover Girl Fall 2015 Eyeshadow Reset 
+                </a>
+              </td>
+              <td class="sorting location">
+                <a href="javascript:;">
+                  Walmart 
+                </a>
+              </td>
+              <td class="sorting assigned"> 
+                <a href="javascript:;">
+                  Jimmy Stewart 
+                </a>
+              </td>
+              <td class="sorting due">
+                11/05/2014 
+              </td>
+              <td class="status">
+                <span class="open"></span>
+              </td>
+            </tr>
+            
+            <tr role="row" class="even">
+              <td class="sorting project-title">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">
+                  05.16.15 Product Distribution - Snickers 
+                </a>
+              </td>
+              <td class="sorting location"> 
+                <a href="javascript:;">
+                  Walmart 
+                </a>
+              </td>
+              <td class="sorting assigned">
+                <a href="javascript:;">
+                  Kelly Wentworth
+                </a>
+              </td>
+              <td class="sorting due">
+                11/05/2014 
+              </td>
+              <td class="status">
+                <span class="submitted"></span>
+              </td>
+            </tr>
+            
+            <tr role="row" class="even">
+              <td class="sorting project-title">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">
+                  New Product Cut-in - Kikkoman Gluten-Free Soy Sauce 
+                </a>
+              </td>
+              <td class="sorting location">
+                <a href="javascript:;">
+                  Safeway 
+                </a>
+              </td>
+              <td class="sorting assigned"> 
+                <a href="javascript:;">
+                  Kelly Wentworth
+                </a>
+              </td>
+              <td class="sorting due">
+                11/06/2014 
+              </td>
+              <td class="status">
+                <span class="submitted"></span>
+              </td>
+            </tr>
+            
+            <tr role="row" class="odd">
+              <td class="sorting project-title">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">
+                  Atlas Alerts 918-215419650
+                </a>
+              </td>
+              <td class="sorting location"> 
+                <a href="javascript:;">
+                  Safeway 
+                </a>
+              </td>
+              <td class="sorting assigned"> 
+                <a href="javascript:;">
+                  James Dean
+                </a>
+              </td>
+              <td class="sorting due">
+                11/06/2014 
+              </td>
+              <td class="status">
+                <span class="started"></span>
+              </td>
+            </tr>
+            <tr role="row" class="even">
+              <td class="sorting project-title">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">
+                  New Product Cut-in - Kikkoman Gluten-Free Soy Sauce
+                </a>
+              </td>
+              <td class="sorting location">
+                <a href="javascript:;">
+                  Kroeger's
+                </a>
+              </td>
+              <td class="sorting assigned"> 
+                <a href="javascript:;">
+                  Jimmy Stewart
+                </a>
+              </td>
+              <td class="sorting due">
+                11/07/2014 
+              </td>
+              <td class="status">
+                <span class="started"></span>
+              </td>
+            </tr>
+            <tr role="row" class="odd">
+              <td class="sorting project-title">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">
+                  Atlas Alerts 918-215419650
+                </a>
+              </td>
+              <td class="sorting location"> 
+                <a href="javascript:;">
+                  Kroeger's 
+                </a>
+              </td>
+              <td class="sorting assigned">
+                <a href="javascript:;">
+                  James Dean
+                </a>
+              </td>
+              <td class="sorting due"> 
+                11/06/2014 
+              </td>
+              <td class="status">
+                <span class="started paused"></span>
+              </td>
+            </tr>
+            <tr role="row" class="even">
+              <td class="sorting project-title">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">
+                  Cover Girl Fall 2015 Eyeshadow Reset
+                </a>
+              </td>
+              <td class="sorting location">
+                <a href="javascript:;">
+                  Target
+                </a>
+              </td>
+              <td class="sorting assigned">
+                Unassigned
+              </td>
+              <td class="sorting due">
+                11/07/2014 
+              </td>
+              <td class="status">
+                <span class="open"></span>
+              </td>
+            </tr>
+            <tr role="row" class="even">
+              <td class="sorting project-title">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">
+                  Cover Girl Fall 2015 Eyeshadow Reset
+                </a>
+              </td>
+              <td class="sorting location"> 
+                <a href="javascript:;">
+                  Target
+                </a>
+              </td>
+              <td class="sorting assigned">
+                Unassigned
+              </td>
+              <td class="sorting due"> 
+                11/07/2014 
+              </td>
+              <td class="status">
+                <span class="open"></span>
+              </td>
+            </tr>
+            
+          </tbody>
+          
+        </table>
+      </div><!-- end table-list div -->
+
+      <!-- ****************** PAGINATION ***************** -->
+      
+      
+      
+      <!-- end List View -->
+        
+        
+        
+        
+      <!-- ****************************************************************** -->
+      <!--                              MAP VIEW                              -->
+      <!-- ****************************************************************** -->
+           
+      
+      <!-- ****************** FILTERS ***************** -->
+      
+      <div class="filters-holder"><!-- start view and filter buttons -->
+        <div class="view">
+          <a class="map" href="javascript:;">Map</a>
+          <a class="list active" href="javascript:;">List</a>
+        </div>
+        <div class="filters">
+          <div class="filter supersearch">
+            supersearch
+          </div>
+          <div class="filter dropdown">
+            dropdown
+          </div>
+          <div class="filter dates">
+            dates
+          </div>
+        </div>
+      </div><!-- end filters (view and filter buttons) -->
+      
+      <div class="map">
+        <div class="drawer">
+        
+          <div class="tab info">
+            <a class="ticketlink" href="javascript:;">Safeway</a>
+            <div class="description">
+              Actions will focus on the client relationship management and item purchasing. Check on product availability.
+            </div>
+            <a class="requirements" href="javascript:;">Requirements</a>
+            <div class="Due">
+              <div class="smallLabel">Due</div>
+              <div class="value">3 days (Monday)</div>
+            </div>
+            <div class="Estimated"><!-- Jimmy only -->
+              <div class="smallLabel">Estimated Time</div>
+              <div class="value">3 hours 30 minutes</div>
+            </div>
+            <div class="Assigned"><!-- Grace only -->
+              <div class="smallLabel">Assigned</div>
+              <a class="value" href="javascript:;">Jimmy Stewart</a>
+            </div>
+          </div>
+          
+          <div class="tab directions"><!-- Jimmy only -->
+            <a class="ticketlink">Safeway</a>
+            <div class="address">16121 N. Snelling Rd</div>
+            <div class="address">Cupertino, CA 95014</div>
+            <div class="phone">(408) 877-2113</div>
+          </div>
+          
+          <div class="tab actions">
+            <a class="ticketlink" href="javascript:;">Safeway</a>
+            <div class="Scheduled">
+              <div class="value">Scheduled for Today</div>
+            </div>
+            
+            <a class="iconButton schedule" href="javascript:;">Schedule</a><!-- Jimmy only -->
+            <a class="iconButton comment" href="javascript:;">Add Comment</a>
+            <a class="iconButton print" href="javascript:;">Print ticket</a>
+            <a class="iconButton unassign" href="javascript:;">Unassign</a><!-- Jimmy only -->
+            
+            <!-- Grace's buttons -->
+            <a class="iconButton extend" href="javascript:;">Extend</a><!-- Grace only -->
+            <a class="iconButton cancel" href="javascript:;">Cancel</a><!-- Grace only -->
+
+          </div>
+          
+          <a class="buttonly" href="javascript:;">Main action</a>
+        </div>
+        
+        <div class="pin scheduled active"></div>
+        <div class="pin unscheduled"></div>
+        <div class="pin unassigned"></div><!-- Grace only -->
+        <div class="pin paused"></div><!-- For Grace, this is a "scheduled" pin -->
+        <div class="pin submitted"></div>
+        <div class="pin expired"></div><!-- Grace only -->
+
+        <div class="keys">
+          <div class="key scheduled">Scheduled</div>
+          <div class="key unscheduled">Unscheduled</div>
+          <div class="key unassigned">Unassigned</div><!-- Grace only -->
+          <div class="key paused">Paused</div><!-- Jimmy only -->
+          <div class="key submitted">Submitted</div>
+          <div class="key expired">Expired</div><!-- Grace only -->
+        </div>
+      
+      
+      </div><!-- end map div -->
+    
+      <!-- end map View -->
+    
+      <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
+    
+    
+    </div><!-- ends content -->
+  
+  </div><!-- ends right side ("inner wrapper")  -->
+</div><!-- ends main panel ("main wrapper") -->
+
+</body>
+</html>

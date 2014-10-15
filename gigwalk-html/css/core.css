@@ -1970,7 +1970,7 @@ a.iconly:before {
 
  
 
-/* Project builder responsive reformat */
+/* this is where Project Builder is in the wider format */
 
 @media (min-width: 775px) {
 	
@@ -1999,6 +1999,8 @@ a.iconly:before {
 	}
 	
 }
+
+/* this is where all menus are in desktop view */
 
 @media (min-width: 665px) {
 	
@@ -2067,6 +2069,8 @@ a.iconly:before {
 
 }
 
+/* these control and optimize a few quirky elements */
+
 @media (min-width: 931px) {
 
 	.header .actions .ti {
@@ -2107,6 +2111,8 @@ a.iconly:before {
 	}
 	
 }
+
+/* this is the width where project builder goes vertical */
 
 @media (max-width: 774px) {
 	
@@ -2172,6 +2178,8 @@ a.iconly:before {
 	}
 	
 }
+
+/* this is the width where all the menus flip into device-sized mode */
 
 @media (max-width: 664px) {
 	

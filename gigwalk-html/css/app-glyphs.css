@@ -34,85 +34,123 @@
 }
 
 .icon-empty:before {
-	content: "\e60f";
+	content: "\e612";
 }
 .collapsed .icon-arrow-up:before,
 .icon-arrow-down:before,
 .caret:before,
 .custom-select:before,
 .nav-active-holder:after {
-	content: "\e600";
+	content: "\e613";
 }
 .icon-arrow-up:before {
-	content: "\e601";
+	content: "\e614";
 }
 .icon-bell:before {
-	content: "\e602";
+	content: "\e615";
 }
 .icon-checkmark:before {
-	content: "\e603";
+	content: "\e616";
 }
 .icon-close-alt:before {
-	content: "\e604";
+	content: "\e617";
 }
 .icon-close:before {
-	content: "\e605";
+	content: "\e618";
 }
 .icon-dragger:before {
-	content: "\e606";
+	content: "\e619";
 }
 .icon-duplicate:before {
-	content: "\e607";
+	content: "\e61a";
 }
 .editable:after,
 .icon-edit:before {
-	content: "\e608";
+	content: "\e61b";
 }
 .icon-email:before {
-	content: "\e609";
+	content: "\e61c";
 }
 .icon-expand-all:before {
-	content: "\e60a";
+	content: "\e61d";
 }
 .icon-lock:before {
-	content: "\e60b";
+	content: "\e61e";
 }
 .icon-pencil-box:before {
-	content: "\e60c";
+	content: "\e61f";
 }
 .icon-settings:before {
-	content: "\e60d";
+	content: "\e620";
 }
 .icon-trash:before {
-	content: "\e60e";
+	content: "\e621";
 }
 .icon-building:before {
-	content: "\e610";
+	content: "\e622";
 }
 .icon-map-pin:before {
-	content: "\e611";
+	content: "\e623";
 }
 .icon-people:before {
-	content: "\e612";
+	content: "\e624";
 }
 .icon-camera:before {
-	content: "\e613";
+	content: "\e60f";
 }
 .instruction.view-mode .answer.exception .plainLabel:after,
 .iconly.set-exceptions:before,
 .icon-flag:before {
-	content: "\e614";
+	content: "\e611";
 }
 .icon-magnify:before {
-	content: "\e615";
+	content: "\e60e";
 }
 .icon-lightning-strike:before {
-	content: "\e616";
+	content: "\e60d";
 }
 .icon-barcode:before {
-	content: "\e617";
+	content: "\e610";
 }
-
+.icon-pause:before {
+	content: "\e600";
+}
+.icon-cancel:before {
+	content: "\e601";
+}
+.icon-search:before {
+	content: "\e602";
+}
+.icon-assign:before {
+	content: "\e603";
+}
+.icon-print:before {
+	content: "\e604";
+}
+.icon-calendar:before {
+	content: "\e605";
+}
+.icon-comment:before {
+	content: "\e606";
+}
+.icon-lightning-solid:before {
+	content: "\e607";
+}
+.icon-direction:before {
+	content: "\e608";
+}
+.icon-list:before {
+	content: "\e609";
+}
+.icon-ticket:before {
+	content: "\e60a";
+}
+.icon-info:before {
+	content: "\e60b";
+}
+.icon-gig:before {
+	content: "\e60c";
+}
 
 
 
