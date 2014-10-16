@@ -226,19 +226,33 @@
       
       <div class="filters-holder"><!-- start view and filter buttons -->
         <div class="view">
-          <a class="map" href="javascript:;">Map</a>
-          <a class="list active" href="javascript:;">List</a>
+          <a class="map" href="javascript:;"><span class="im icon-map-pin-solid"></span>Map</a>
+          <a class="list active" href="javascript:;"><span class="im icon-list"></span>List</a>
         </div>
         <div class="filters">
-          <div class="filter supersearch">
-            supersearch
+          <div class="filter search">
+            <input type="text" placeholder="Search" />
+            <span class="im icon-search"></span>
           </div>
           <div class="filter dropdown">
-            dropdown
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Show open
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li class="show-open" role="presentation"><a role="menuitem" href="javascript:;">Show open</a></li><!-- default for both -->
+                <li class="assigned"  role="presentation"><a role="menuitem" href="javascript:;">Assigned</a></li><!-- Grace only -->
+                <li class="unassigned"  role="presentation"><a role="menuitem" href="javascript:;">Unassigned</a></li><!-- Grace only -->
+                <li class="scheduled"  role="presentation"><a role="menuitem" href="javascript:;">Scheduled</a></li><!-- Jimmy only -->
+                <li class="paused"  role="presentation"><a role="menuitem" href="javascript:;">Paused</a></li><!-- Jimmy only -->
+                <li class="due"  role="presentation"><a role="menuitem" href="javascript:;">Due</a></li>
+                <li class="submitted"  role="presentation"><a role="menuitem" href="javascript:;">Submitted</a></li>
+                <li class="expired"  role="presentation"><a role="menuitem" href="javascript:;">Expired</a></li><!-- Grace only -->
+              </ul>
+            </div>
           </div>
-          <div class="filter dates">
-            dates
-          </div>
+          <div class="filter dates"><span class="im icon-calendar"></span></div>
         </div>
       </div><!-- end filters (view and filter buttons) -->
       
@@ -540,7 +554,10 @@
       </div><!-- end table-list div -->
 
       <!-- ****************** PAGINATION ***************** -->
-      
+      <div class="pagination">
+        <a class="previous" href="javascript:;"></a>
+        <a class="next" href="javascript:;"></a>
+      </div>
       
       
       <!-- end List View -->
@@ -557,90 +574,105 @@
       
       <div class="filters-holder"><!-- start view and filter buttons -->
         <div class="view">
-          <a class="map" href="javascript:;">Map</a>
-          <a class="list active" href="javascript:;">List</a>
+          <a class="map  active" href="javascript:;"><span class="im icon-map-pin-solid"></span>Map</a>
+          <a class="list" href="javascript:;"><span class="im icon-list"></span>List</a>
         </div>
         <div class="filters">
-          <div class="filter supersearch">
-            supersearch
+          <div class="filter search">
+            <input type="text" placeholder="Search" />
+            <span class="im icon-search"></span>
           </div>
           <div class="filter dropdown">
-            dropdown
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Show open
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li class="show-open" role="presentation"><a role="menuitem" href="javascript:;">Show open</a></li><!-- default for both -->
+                <li class="assigned"  role="presentation"><a role="menuitem" href="javascript:;">Assigned</a></li><!-- Grace only -->
+                <li class="unassigned"  role="presentation"><a role="menuitem" href="javascript:;">Unassigned</a></li><!-- Grace only -->
+                <li class="scheduled"  role="presentation"><a role="menuitem" href="javascript:;">Scheduled</a></li><!-- Jimmy only -->
+                <li class="paused"  role="presentation"><a role="menuitem" href="javascript:;">Paused</a></li><!-- Jimmy only -->
+                <li class="due"  role="presentation"><a role="menuitem" href="javascript:;">Due</a></li>
+                <li class="submitted"  role="presentation"><a role="menuitem" href="javascript:;">Submitted</a></li>
+                <li class="expired"  role="presentation"><a role="menuitem" href="javascript:;">Expired</a></li><!-- Grace only -->
+              </ul>
+            </div>
           </div>
-          <div class="filter dates">
-            dates
-          </div>
+          <div class="filter dates"><span class="im icon-calendar"></span></div>
         </div>
       </div><!-- end filters (view and filter buttons) -->
       
-      <div class="map">
-        <div class="drawer">
-        
-          <div class="tab info">
-            <a class="ticketlink" href="javascript:;">Safeway</a>
-            <div class="description">
-              Actions will focus on the client relationship management and item purchasing. Check on product availability.
-            </div>
-            <a class="requirements" href="javascript:;">Requirements</a>
-            <div class="Due">
-              <div class="smallLabel">Due</div>
-              <div class="value">3 days (Monday)</div>
-            </div>
-            <div class="Estimated"><!-- Jimmy only -->
-              <div class="smallLabel">Estimated Time</div>
-              <div class="value">3 hours 30 minutes</div>
-            </div>
-            <div class="Assigned"><!-- Grace only -->
-              <div class="smallLabel">Assigned</div>
-              <a class="value" href="javascript:;">Jimmy Stewart</a>
-            </div>
-          </div>
+      <div class="map-holder">
+        <div class="map">
+          <div class="map-drawer">
           
-          <div class="tab directions"><!-- Jimmy only -->
-            <a class="ticketlink">Safeway</a>
-            <div class="address">16121 N. Snelling Rd</div>
-            <div class="address">Cupertino, CA 95014</div>
-            <div class="phone">(408) 877-2113</div>
-          </div>
-          
-          <div class="tab actions">
-            <a class="ticketlink" href="javascript:;">Safeway</a>
-            <div class="Scheduled">
-              <div class="value">Scheduled for Today</div>
+            <div class="tab info">
+              <a class="ticketlink" href="javascript:;">Safeway</a>
+              <div class="description">
+                Actions will focus on the client relationship management and item purchasing. Check on product availability.
+              </div>
+              <a class="requirements" href="javascript:;">Requirements</a>
+              <div class="Due">
+                <div class="smallLabel">Due</div>
+                <div class="value">3 days (Monday)</div>
+              </div>
+              <div class="Estimated"><!-- Jimmy only -->
+                <div class="smallLabel">Estimated Time</div>
+                <div class="value">3 hours 30 minutes</div>
+              </div>
+              <div class="Assigned"><!-- Grace only -->
+                <div class="smallLabel">Assigned</div>
+                <a class="value" href="javascript:;">Jimmy Stewart</a>
+              </div>
             </div>
             
-            <a class="iconButton schedule" href="javascript:;">Schedule</a><!-- Jimmy only -->
-            <a class="iconButton comment" href="javascript:;">Add Comment</a>
-            <a class="iconButton print" href="javascript:;">Print ticket</a>
-            <a class="iconButton unassign" href="javascript:;">Unassign</a><!-- Jimmy only -->
+            <div class="tab directions"><!-- Jimmy only -->
+              <a class="ticketlink">Safeway</a>
+              <div class="address">16121 N. Snelling Rd</div>
+              <div class="address">Cupertino, CA 95014</div>
+              <div class="phone">(408) 877-2113</div>
+            </div>
             
-            <!-- Grace's buttons -->
-            <a class="iconButton extend" href="javascript:;">Extend</a><!-- Grace only -->
-            <a class="iconButton cancel" href="javascript:;">Cancel</a><!-- Grace only -->
-
-          </div>
+            <div class="tab actions">
+              <a class="ticketlink" href="javascript:;">Safeway</a>
+              <div class="Scheduled">
+                <div class="value">Scheduled for Today</div>
+              </div>
+              
+              <a class="iconButton schedule" href="javascript:;">Schedule</a><!-- Jimmy only -->
+              <a class="iconButton comment" href="javascript:;">Add Comment</a>
+              <a class="iconButton print" href="javascript:;">Print ticket</a>
+              <a class="iconButton unassign" href="javascript:;">Unassign</a><!-- Jimmy only -->
+              
+              <!-- Grace's buttons -->
+              <a class="iconButton extend" href="javascript:;">Extend</a><!-- Grace only -->
+              <a class="iconButton cancel" href="javascript:;">Cancel</a><!-- Grace only -->
+  
+            </div>
+            
+            <a class="buttonly" href="javascript:;">Main action</a>
+          </div><!-- end map-drawer -->
           
-          <a class="buttonly" href="javascript:;">Main action</a>
-        </div>
-        
-        <div class="pin scheduled active"></div>
-        <div class="pin unscheduled"></div>
-        <div class="pin unassigned"></div><!-- Grace only -->
-        <div class="pin paused"></div><!-- For Grace, this is a "scheduled" pin -->
-        <div class="pin submitted"></div>
-        <div class="pin expired"></div><!-- Grace only -->
-
-        <div class="keys">
-          <div class="key scheduled">Scheduled</div>
-          <div class="key unscheduled">Unscheduled</div>
-          <div class="key unassigned">Unassigned</div><!-- Grace only -->
-          <div class="key paused">Paused</div><!-- Jimmy only -->
-          <div class="key submitted">Submitted</div>
-          <div class="key expired">Expired</div><!-- Grace only -->
-        </div>
+          <div class="pin scheduled active"></div>
+          <div class="pin unscheduled"></div>
+          <div class="pin unassigned"></div><!-- Grace only -->
+          <div class="pin paused"></div><!-- For Grace, this is a "scheduled" pin -->
+          <div class="pin submitted"></div>
+          <div class="pin expired"></div><!-- Grace only -->
+  
+        </div><!-- end map div -->
+      </div><!-- end map holder div -->
       
-      
-      </div><!-- end map div -->
+      <div class="map keys">
+        <div class="key scheduled">Scheduled</div>
+        <div class="key unscheduled">Unscheduled</div>
+        <div class="key unassigned">Unassigned</div><!-- Grace only -->
+        <div class="key paused">Paused</div><!-- Jimmy only -->
+        <div class="key submitted">Submitted</div>
+        <div class="key expired">Expired</div><!-- Grace only -->
+      </div>
     
       <!-- end map View -->
     

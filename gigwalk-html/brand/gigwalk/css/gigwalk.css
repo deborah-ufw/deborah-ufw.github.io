@@ -1,7 +1,7 @@
 /* ---------- GIGWALK CSS ----------  */
 
 
-/* temporary */
+/* temporary */ 
 
 .super {
 	color: #F60;
@@ -47,6 +47,14 @@ h2.super {
 .subcontent {
 	margin-bottom: 5em;
 }
+
+.map-holder .map {
+	background: url(../images/map.gif);
+}
+
+
+/* end temporary */
+
 
 
 /* base */
@@ -238,6 +246,8 @@ html, body {
 	}
 	
 	 a,
+	 a:hover,
+	 a:focus,
 	 a.link,
 	 a.link:hover,
 	 a.navly,
@@ -251,13 +261,17 @@ html, body {
 	}
 	
 	header nav .number,
-	.group a.buttonly {
+	.group a.buttonly,
+	.filter.dropdown .caret,
+	.filter.search .icon-search {
 		background: #4890e2;
 	}
 	
 	select,
 	.btn.btn-default.dropdown-toggle,
-	.instructions .item .actions a.buttonly {
+	.instructions .item .actions a.buttonly,
+	.filters-holder .view a.active,
+	.filter.dates {
 		background-color: #4890e2;
 	}
 	
@@ -297,6 +311,10 @@ html, body {
 		background: #32b0e8;
 	}
 	
+	.filters-holder .view a {
+		border-color: #4890e2;
+	}
+	
 	.nav-sections li.active {
 		border-left-color: #4890e2;
 	}
@@ -304,7 +322,9 @@ html, body {
 	.instructions .item .actions a.buttonly:hover,
 	.instructions .item .actions a.buttonly:focus,
 	.group a.buttonly:hover,
-	.group a.buttonly:focus {
+	.group a.buttonly:focus,
+	.filter.dates:hover,
+	.filter.dates:focus {
 		background: #2771da;
 	}
 	
@@ -396,7 +416,10 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .tabnav li a,
 .tabnav .btn.btn-default.dropdown-toggle,
 .header .actions .ti,
-.subnav li {
+.subnav li,
+.filters-holder .view a,
+.filter.dropdown .btn.btn-default.dropdown-toggle,
+.filter.search {
 	font-family: Helvetica-Neue-Light;
 }
 

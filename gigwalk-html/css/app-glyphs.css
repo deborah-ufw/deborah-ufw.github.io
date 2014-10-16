@@ -92,6 +92,9 @@
 .icon-map-pin:before {
 	content: "\e623";
 }
+.icon-map-pin-solid:before {
+	content: "\e625";
+}
 .icon-people:before {
 	content: "\e624";
 }
@@ -127,7 +130,9 @@
 .icon-print:before {
 	content: "\e604";
 }
-.icon-calendar:before {
+.icon-calendar:before,
+.icon-schedule:before,
+.icon-extend:before {
 	content: "\e605";
 }
 .icon-comment:before {

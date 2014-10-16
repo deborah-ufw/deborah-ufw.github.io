@@ -24,9 +24,17 @@ header nav .user-edit,
 	display: none;
 }
 
-body,
-.instruction.edit-mode .answer .more-info .set-required input.supercheck[type="checkbox"]:after {
-	font-size: 1.4em;
+.filter.search .icon-search {
+	font-size: 1.1em;
+}
+
+.nav-sections,
+.group,
+.instruction-content,
+.filters-holder .view a .im,
+.action.panel .primary.actions,
+.filter.dropdown .dropdown-menu {
+	font-size: 1.15em;
 }
 
 .header .actions .ti,
@@ -36,13 +44,35 @@ body,
 	font-size: 1.2em;
 }
 
-.nav-sections,
-.group,
-.instruction-content {
-	font-size: 1.15em;
+.filter.dropdown .btn.btn-default.dropdown-toggle, 
+.filter.search,
+.filters-holder .view a {
+	font-size: 1.3em;
 }
 
-.sidenav .user-name {
+body,
+.instruction.edit-mode .answer .more-info .set-required input.supercheck[type="checkbox"]:after {
+	font-size: 1.4em;
+}
+
+.filters-holder .view a .im:before {
+	font-size: 1.6em;
+}
+
+.filter.dropdown .btn.btn-default.dropdown-toggle .caret {
+	font-size: 1.9em;
+}
+
+.filter.search .icon-search:before {
+	line-height: .7em;
+}
+
+.filter.dates {
+	line-height: .9em;
+}
+
+.sidenav .user-name,
+.filters-holder .view a .im {
 	line-height: 1em; 
 }
 
@@ -82,7 +112,8 @@ a.iconly:hover,
 a.iconly:focus,
 .dropdown-menu .link,
 a.buttonly,
-.icon-buttons a {
+.icon-buttons a,
+.filters-holder .view a {
 	text-decoration: none;
 }
 
@@ -150,7 +181,8 @@ a.disabled,
 .instruction .header:after,
 .instruction .primary.actions .right:after,
 .instruction .header .icon-edit:after,
-.instruction .header .viewing.icon-buttons:after {
+.instruction .header .viewing.icon-buttons:after,
+.filters-holder:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -187,7 +219,8 @@ select,
 .instruction-footer .icon-checkmark,
 .instruction-footer .item.count .described,
 .time-estimate .dropdown,
-a.iconly {
+a.iconly,
+.filters-holder .filter {
 	display: inline-block;
 }
 
@@ -201,7 +234,9 @@ a.iconly {
 .instruction.view-mode .target .name,
 .instruction.view-mode .target .answer,
 .instruction.edit-mode .numeric .ti,
-.instruction.edit-mode .numeric .dropdown {
+.instruction.edit-mode .numeric .dropdown,
+.filters-holder .view,
+.filters-holder view a {
 	display: inline-block;
 	float: left;
 }
@@ -209,7 +244,8 @@ a.iconly {
 .inline-right,
 .icon-buttons,
 .instruction.view-mode .target .answers,
-.instruction.view-mode .time .dropdown {
+.instruction.view-mode .time .dropdown,
+.filters-holder .filters {
 	display: inline-block;
 	float: right;
 }
@@ -287,7 +323,12 @@ input[type="radio"]:after,
 a.iconly,
 a.iconly:before,
 .btn.btn-default.dropdown-toggle,
-.btn.btn-default.dropdown-toggle .caret:before {
+.btn.btn-default.dropdown-toggle .caret:before,
+.filters-holder .view a,
+.filters-holder .filters,
+.filters-holder .filter,
+.filter.search .icon-search:before,
+.filter.dates .im:before {
 	position: relative;
 }
 
@@ -306,7 +347,8 @@ header .navbar-collapse.in {
 .sidenav .user-info,
 .header .dragger,
 .subnav ul,
-.instruction.edit-mode .instruction-content .numeric .more-info .plainLabel {
+.instruction.edit-mode .instruction-content .numeric .more-info .plainLabel,
+.map {
 	width: 100%;
 }
 
@@ -319,8 +361,13 @@ header .navbar-collapse.in {
 .view-mode .instruction-content .time .dropdown-menu,
 .more-info:before,.instruction.edit-mode .numeric .dropdown-menu,
 .instruction.view-mode .answers .plainLabel,
-.instruction.edit-mode .numeric .mini-panel .btn.btn-default.dropdown-toggle {
+.instruction.edit-mode .numeric .mini-panel .btn.btn-default.dropdown-toggle,
+.filter.dropdown .btn.btn-default.dropdown-toggle .caret {
 	width: auto;
+}
+
+.filter.dropdown .btn.btn-default.dropdown-toggle .caret {
+	height: auto;
 }
 
 .tabnav .dropdownly .dropdown-menu,
@@ -396,6 +443,11 @@ select {
 	 color: rgba(0, 0, 0, .18);
 }
 
+.filter.dropdown .btn.btn-default.dropdown-toggle,
+.filter.search {
+	color: #9e9e9e;
+}
+
 .dropdown-menu > li > a.link:hover {
  background-color: transparent;
 }
@@ -413,7 +465,8 @@ select {
 }
 
 .mini-panel,
-.instruction .item.targets .sub .mini-panel {
+.instruction .item.targets .sub .mini-panel,
+.action.panel {
 	background: #f8f8f8;
 }
 
@@ -424,14 +477,19 @@ select {
 input.supercheck:after,
 input[type="checkbox"]:after,
 .desktop .date.group:after,
-.instruction-footer .icon-checkmark {
+.instruction-footer .icon-checkmark,
+.filters-holder .view a.active,
+.filter.dates,
+.filter.dropdown .caret,
+.filter.search .icon-search {
 	color: #ffffff;
 }
 
 .checker .supercheck:after,
 input[type="checkbox"]:after,
 input[type="radio"]:after,
-.instructions .item .actions a.buttonly {
+.instructions .item .actions a.buttonly,
+.filter.dropdown .btn.btn-default.dropdown-toggle {
 	background-color: #ffffff;
 }
 
@@ -503,6 +561,13 @@ input[type="radio"]:after,
 		right: 25px;
 }
 
+.filter.dates .im:before {
+	font-size: 3em;
+		top: -2px;
+}
+
+
+
 
 /* borders */
 
@@ -511,7 +576,8 @@ input[type="checkbox"]:after,
 input[type="radio"]:after,
 input[type="text"],
 input[type="textarea"],
-.instruction-content {
+.instruction-content,
+.map-holder {
 	border: 1px solid #cccccc;
 }
 
@@ -531,6 +597,11 @@ header .nav ul.dropdown-menu li,
 .Projects .group,
 .subnav {
 	border-bottom: 1px solid #cccccc;
+}
+
+.filter.dropdown .btn.btn-default.dropdown-toggle,
+.filter.search {
+	border: 1px solid #cfcfcf;
 }
 
 .instruction .item.targets .sub .mini-panel {
@@ -559,8 +630,17 @@ header .nav ul.dropdown-menu li,
 }
 
 .instructions .item .actions a.buttonly,
-.primary.actions a {
+.primary.actions a,
+.filters-holder .view a {
 	border: 1px solid;
+}
+
+.action.panel {
+	border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.action.panel {
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 .tabnav  li {
@@ -579,7 +659,8 @@ header .nav ul.dropdown-menu li,
 }
 
 .caret,
-.navbar {
+.navbar,
+.filter.search input[type="text"] {
 	border: 0px solid transparent;
 	border-top: 0px solid transparent;
 	border-right: 0px solid transparent;
@@ -610,6 +691,15 @@ header .nav .dropdown li {
 .primary.actions a.linkly {
 	border-color: #ffffff;
 }
+
+/* miscellaneous bootstrap overrides */
+
+.panel {
+	-webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, .0);
+	box-shadow: 0 0px 0px rgba(0, 0, 0, .0);
+}
+
+
 
 /* hidden for large screens */
 
@@ -758,7 +848,7 @@ header .nav .dropdown li {
 	
 	.checker .supercheck:after,
 	input[type="checkbox"]:after {
-		content: "\e603";
+		content: "\e616";
 		font-family: 'icomoon';
 		font-size: 1.3em;
 		margin: -5px -2px -2px -2px;
@@ -2351,7 +2441,95 @@ a.iconly:before {
 
 }
 
+
+/* dash filters */
+
+.filters-holder .view a {
+	margin-right: -8px;
+	padding: .5em 1.1em .5em .8em;
+}
+
+.filters-holder .view a.map {
+	padding-left: .3em;
+}
+
+.filters-holder .view a .im {
+	top: .4em;
+	left: -.2em;
+}
+
+.filters-holder .view a .im.icon-map-pin-solid {
+	left: 0;
+}
+
+.filters-holder .filters .filter {
+	margin-left: .5em;
+}
+
+.filter.dates {
+	padding: 0 .5em;
+		top: 2px;
+}
+
+.filter.dropdown {
+		top: -12px;
+}
+
+.filter.search {
+		top: -9px;
+}
+
+.filter.dropdown .btn.btn-default.dropdown-toggle,
+.filter.search input[type="text"] {
+	padding: 8px 0 7px 12px;
+}
+
+.filter.search input[type="text"] {
+	margin-top: 0;
+}
+
+.filter.dropdown .btn.btn-default.dropdown-toggle {
+	width: 195px;
+}
+
+.filter.dropdown .dropdown-menu {
+	padding-bottom: 1em;
+	width: 195px;
+}
+
+.filter.dropdown .btn.btn-default.dropdown-toggle .caret,
+.filter.search .icon-search {
+	margin: -1px -1px -1px 0;
+		top: 0;
+		right: 0;
+}
+
+.filter.dropdown .btn.btn-default.dropdown-toggle .caret {
+	padding: 5px 3px 2px 3px;
+}
+
+.filter.search .icon-search {
+	padding: 9px 5px 13px 5px;
+}
+
+.filter.search .icon-search:before {
+	top: 7px;
+}
+
+.filter.search  {
+	margin-top: 0;
+}
+
 /* heredeb */
+
+/* Tickets dashes */
+
+.map-holder .map {
+	height: 300px;
+}
+
+
+
 	
 
 
@@ -2537,6 +2715,22 @@ textarea::-moz-placeholder {
 
 textarea:-ms-input-placeholder {
 	color: #bcbcbc;
+}
+
+.filter.search input::-webkit-input-placeholder { 
+	color: #9e9e9e;
+}
+
+.filter.search input:-ms-input-placeholder { 
+	color: #9e9e9e;
+}
+
+.filter.search input::-moz-placeholder { 
+	color: #9e9e9e;
+}
+
+.filter.search input:-ms-input-placeholder {
+	color: #9e9e9e;
 }
 
 .invalid input::-webkit-input-placeholder {
