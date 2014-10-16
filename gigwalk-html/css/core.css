@@ -6,10 +6,7 @@ html, body {
 	-webkit-text-size-adjust: 100%;
 }
 
-/* temporary! */
-.dash .choose-dates {
-	display: none;
-}
+
 
 /* everywhere */
 
@@ -31,7 +28,8 @@ header nav .user-edit,
 
 .filter.search .icon-search,
 .choose-dates,
-.table-list .controls {
+.table-list .controls,
+.table-list .action.panel .item {
 	font-size: 1.1em;
 }
 
@@ -2660,6 +2658,10 @@ a.iconly:before {
 
 .table-list .action.panel {
 	padding: 0 1em 1em 1em;
+}
+
+.action.panel.assign .required {
+	margin-left: 3em;
 }
 
 
