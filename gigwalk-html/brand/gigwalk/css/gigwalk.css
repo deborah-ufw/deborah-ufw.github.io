@@ -245,7 +245,7 @@ html, body {
 	
 	/* blues */
 	
-	.step .arrow{
+	.step .arrow {
 		color: #59beec;
 	}
 	
@@ -265,7 +265,10 @@ html, body {
 	 a.iconly:hover,
 	 .dropdown-menu > li > a.link,
 	 .dropdown-menu > li > a.link:hover,
-	 .pin.submitted:before {
+	 .pin.submitted:before,
+	 .filters-choices,
+	 .filters-choices .icon-cancel:before,
+	 .choose-dates .quick-select a {
 		color: #4890e2;
 	}
 	
@@ -288,8 +291,16 @@ html, body {
 	}
 	
 	.filters-holder .view a:hover,
-	.filters-holder .view a:active {
+	.filters-holder .view a:active,
+	.filters-choices .choice,
+	.filters-choices .choice .close {
 		background-color: #f2f7fd;
+	}
+	
+	.filters-choices .choice .close:hover,
+	.filters-choices .choice .close:focus,
+	.choose-dates .quick-select a {
+		background-color: #d9e9fa;
 	}
 	
 	.datepicker td.active, 
@@ -328,7 +339,9 @@ html, body {
 		background: #32b0e8;
 	}
 	
-	.filters-holder .view a {
+	.filters-holder .view a,
+	.filters-choices .choice,
+	.filters-choices .choice .close {
 		border-color: #4890e2;
 	}
 	
@@ -375,7 +388,8 @@ html, body {
 	.primary.actions a,
 	.instruction-footer .icon-checkmark,
 	.instruction .header,
-	.key.scheduled:before {
+	.key.scheduled:before,
+	.choose-dates .actions a {
 		background: #00a584;
 	}
 	
@@ -462,7 +476,9 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .filters-holder .view a,
 .filter.dropdown .btn.btn-default.dropdown-toggle,
 .filter.search,
-.keys .key {
+.keys .key,
+.filters-choices .value,
+.table-list .controls .actions {
 	font-family: Helvetica-Neue-Light;
 }
 
@@ -476,12 +492,13 @@ select option,
 .sidenav .user-name,
 .remove,
 .iconly,
-.instruction-footer {
+.instruction-footer{
 	font-family: Helvetica-Neue-Medium;
 }
 
 .datepicker tr th.switch,
-.instruction-footer .item.count .described {
+.instruction-footer .item.count .described,
+.table-list .controls .summary .selected span {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }

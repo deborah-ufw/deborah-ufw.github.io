@@ -225,10 +225,12 @@
       <!-- ****************** FILTERS ***************** -->
       
       <div class="filters-holder"><!-- start view and filter buttons -->
+      
         <div class="view">
           <a class="map" href="javascript:;"><span class="im icon-map-pin-solid"></span>Map</a>
           <a class="list active" href="javascript:;"><span class="im icon-list"></span>List</a>
-        </div>
+        </div><!-- end view toggle -->
+        
         <div class="filters">
           <div class="filter search">
             <input type="text" placeholder="Search" />
@@ -253,8 +255,34 @@
             </div>
           </div>
           <div class="filter dates"><span class="im icon-calendar"></span></div>
+          
+          <div class="choose-dates">
+            <div class="quick-select">
+              <a href="javascript:;">Today</a>
+              <a href="javascript:;">Tomorrow</a>
+              <a href="javascript:;">This week</a>
+            </div>
+            <div class="between">
+              <label>Between</label>
+              <input class="datepicker" type="text" /> and <input class="datepicker" type="text" />
+            </div>
+            <div class="actions">
+              <a href="javascript:;">Submit</a>
+            </div>
+          </div><!-- end date choosing panel -->
+        </div><!-- end filters (right side) -->
+      </div><!-- end filters holder (all) -->
+      
+      <div class="filters-choices">
+        <div class="choice searched">
+          <div class="value">Jimmy Stewart</div>
+          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
         </div>
-      </div><!-- end filters (view and filter buttons) -->
+        <div class="choice date">
+          <div class="value">Today</div>
+          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+        </div>
+      </div><!-- end filters selections -->
       
       
       <!-- ****************** TABLE CONTROL BAR ***************** -->
@@ -263,16 +291,16 @@
       <div class="table-list">
         <div class="controls">
           <div class="summary">
-            <div class="tickets visible">number <span class="descr-before"></span>Tickets <span class="descr-after"></span></div>
-            <div class="tickets selected">| number selected</div>
+            <div class="visible">(#) <span class="descr-before"></span>Tickets <span class="descr-after"></span></div>
+            <div class="selected">&nbsp;|&nbsp; <span>(#) selected</span></div>
           </div>
           <div class="actions">
             <a class="iconButton cancel" href="javascript:;">Cancel</a><!-- Grace only -->
             <a class="iconButton extend" href="javascript:;">Extend</a><!-- Grace only -->
             <a class="iconButton schedule" href="javascript:;">Schedule</a><!-- Jimmy only -->
             <a class="iconButton print" href="javascript:;">Print</a>
-            <a class="iconButton assign" href="javascript:;">Assign</a><!-- Grace only -->
-            <a class="iconButton unassign" href="javascript:;">Assign</a><!-- Jimmy only -->
+            <a class="iconButton assign last" href="javascript:;">Assign</a><!-- Grace only -->
+            <a class="iconButton unassign last" href="javascript:;">Unassign</a><!-- Jimmy only -->
           </div>
         </div>
         
@@ -319,14 +347,16 @@
         </div>
         
         <!-- the panel that confirms the executed action -->
-        <div class="action confirmation">
-          <h1>20 Tickets were assigned (Confirmation message)</h1>
-        </div>
-        <div class="action warning">
-          <h1>Warning message</h1>
-        </div>
-        <div class="action problem">
-          <h1>Problem message</h1>
+        <div class="action message">
+          <div class="confirmation">
+            <h1>20 Tickets were assigned (Confirmation message)</h1>
+          </div>
+          <div class="warning">
+            <h1>Warning message</h1>
+          </div>
+          <div class="problem">
+            <h1>Problem message</h1>
+          </div>
         </div>
       
         <!-- ****************** TABLE ***************** -->
@@ -573,10 +603,12 @@
       <!-- ****************** FILTERS ***************** -->
       
       <div class="filters-holder"><!-- start view and filter buttons -->
+      
         <div class="view">
           <a class="map  active" href="javascript:;"><span class="im icon-map-pin-solid"></span>Map</a>
           <a class="list" href="javascript:;"><span class="im icon-list"></span>List</a>
-        </div>
+        </div><!-- end view toggle -->
+        
         <div class="filters">
           <div class="filter search">
             <input type="text" placeholder="Search" />
@@ -601,8 +633,34 @@
             </div>
           </div>
           <div class="filter dates"><span class="im icon-calendar"></span></div>
+          
+          <div class="choose-dates">
+            <div class="quick-select">
+              <a href="javascript:;">Today</a>
+              <a href="javascript:;">Tomorrow</a>
+              <a href="javascript:;">This week</a>
+            </div>
+            <div class="between">
+              <label>Between</label>
+              <input class="datepicker" type="text" /> and <input class="datepicker" type="text" />
+            </div>
+            <div class="actions">
+              <a href="javascript:;">Submit</a>
+            </div>
+          </div><!-- end date choosing panel -->
+        </div><!-- end filters (right side) -->
+      </div><!-- end filters holder (all) -->
+      
+      <div class="filters-choices">
+        <div class="choice searched">
+          <div class="value">Jimmy Stewart</div>
+          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
         </div>
-      </div><!-- end filters (view and filter buttons) -->
+        <div class="choice date">
+          <div class="value">Today</div>
+          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+        </div>
+      </div><!-- end filters selections -->
       
       <div class="map-holder">
         <div class="map">
