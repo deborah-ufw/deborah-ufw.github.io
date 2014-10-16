@@ -478,7 +478,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .filter.search,
 .keys .key,
 .filters-choices .value,
-.table-list .controls .actions {
+.table-list .controls .actions,
+.filters-choices .selection .detail {
 	font-family: Helvetica-Neue-Light;
 }
 

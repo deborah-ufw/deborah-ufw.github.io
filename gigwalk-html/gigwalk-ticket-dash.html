@@ -312,26 +312,36 @@
             <div class="radios">
               <div class="radio">
                 <label>
-                <input type="radio" name="choose" value="search" />Search for assignee</label>
+                <input type="radio" name="choose" value="search" /> &nbsp;Search for assignee</label>
                 <div class="hint">Tickets already assigned will be re-assigned</div>
                 
-                <div class="search">
-                  <input type="text" />
-                  <div class="selection">
-                    <div class="value">Kelly Wentworth</div>
-                    <a class="close"></a>
+                <div class="choose search">
+                  <div class="filter search">
+                    <input type="text" placeholder="Search" />
+                    <span class="im icon-search"></span>
+                  </div>
+                  <div class="filters-choices">
+                    <div class="selection">
+                      <div class="choice searched">
+                        <div class="value">Jimmy Stewart</div>
+                        <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+                      </div>
+                      <div class="detail">30h available this week</div>
+                    </div>
                   </div>
                 </div>
                 
               </div>
               <div class="radio">
                 <label>
-                <input type="radio" name="choose" value="list" />Choose from a list</label>
+                <input type="radio" name="choose" value="list" /> &nbsp;Choose from a list</label>
                 <div class="hint">Tickets already assigned will be re-assigned</div>
+                
+                <div class="choose list"></div>
               </div>
               <div class="radio">
                 <label>
-                <input type="radio" name="choose" value="system" />Let the system choose for me</label>
+                <input type="radio" name="choose" value="system" /> &nbsp;Let the system choose for me</label>
                 <div class="hint">Only unassigned tickets will be assigned</div>
               </div>
             
@@ -344,7 +354,7 @@
             </div>
           </div>
 
-        </div>
+        </div><!-- end action panel -->
         
         <!-- the panel that confirms the executed action -->
         <div class="action message">

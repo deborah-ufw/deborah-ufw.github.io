@@ -6,7 +6,10 @@ html, body {
 	-webkit-text-size-adjust: 100%;
 }
 
-
+/* temporary! */
+.dash .choose-dates {
+	display: none;
+}
 
 /* everywhere */
 
@@ -26,6 +29,11 @@ header nav .user-edit,
 	display: none;
 }
 
+.panel.action .choose.search .filters-choices {
+	font-size: .8em;
+}
+
+.panel.action .choose.search .filter.search,
 .filter.search .icon-search,
 .choose-dates,
 .table-list .controls,
@@ -47,7 +55,8 @@ header nav .user-edit,
 .set-repeats .checker .supercheck, 
 .set-repeats input[type="checkbox"],
 .key,
-.filters-choices .choice .value {
+.filters-choices .choice .value,
+.filters-choices .selection .detail {
 	font-size: 1.2em;
 }
 
@@ -223,7 +232,8 @@ nav.subnav ul {
 .tabnav li .dropdown li a,
 .instruction.edit-mode .instruction-content .numeric .more-info .plainLabel,
 .instruction .item.targets .sub .mini-panel.targets label,
-.choose-dates .between label {
+.choose-dates .between label,
+.action-panel .choice.searched {
 	display: block;
 }
 
@@ -248,7 +258,9 @@ a.iconly,
 .filters-choices .choice .close,
 .choose-dates,
 .choose-dates .actions a,
-.table-list .summary div {
+.table-list .summary div,
+.action.panel .filter.search,
+.filters-choices .selection .detail {
 	display: inline-block;
 }
 
@@ -265,7 +277,8 @@ a.iconly,
 .instruction.edit-mode .numeric .dropdown,
 .filters-holder .view,
 .filters-holder view a,
-.table-list .summary {
+.table-list .summary,
+.table-list .action.panel .plainLabel {
 	display: inline-block;
 	float: left;
 }
@@ -507,7 +520,8 @@ select {
 	color: #bcbcbc;
 }
 
-.editable:after {
+.editable:after,
+.action.panel .item .hint {
 	color: #cbcbcb;
 }
 
@@ -2522,12 +2536,12 @@ a.iconly:before {
 /* dash filters */
 
 .filters-holder .view {
-	margin-top: -1px;
+	margin-top: -2px;
 }
 
 .filters-holder .view a {
 	margin-right: -8px;
-	padding: .47em 1.1em .5em .8em;
+	padding: .4em 1.1em .5em .8em;
 }
 
 .filters-holder .view a.map {
@@ -2646,6 +2660,11 @@ a.iconly:before {
 	margin-top: 1.5em;
 }
 
+.action.panel .choice.searched .value {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
 /* dash table lists  */
 
 .table-list .controls {
@@ -2653,7 +2672,7 @@ a.iconly:before {
 }
 
 .table-list .primary.actions .right {
-	margin-right: 0;
+	margin: 1.5em 0 0 0;
 }
 
 .table-list .action.panel {
@@ -2661,9 +2680,41 @@ a.iconly:before {
 }
 
 .action.panel.assign .required {
-	margin-left: 3em;
+	margin: 1em 0 0 3em;
 }
 
+.action.panel.assign .radio .hint,
+.action.panel.assign .radio .choose {
+	margin-left: 25px;
+}
+
+.action.panel.assign .radios {
+	margin-left: 148px;
+}
+
+.action.panel .selection {
+	padding-left: 1em;
+}
+
+.action.panel .filters-choices {
+	text-align: left;
+}
+
+.action.panel .choose.search {
+	margin: .5em 0 1em 0;
+}
+
+.action.panel .choice.searched {
+	margin: .8em .5em 0 0;
+}
+
+.action.panel .filter.search input {
+	width: 200px;
+}
+
+.action.panel .choose .detail {
+	margin: 3px 0 10px 0;
+}
 
 
 /* map */
