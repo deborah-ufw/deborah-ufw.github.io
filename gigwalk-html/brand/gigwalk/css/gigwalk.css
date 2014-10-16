@@ -49,7 +49,7 @@ h2.super {
 }
 
 .map-holder .map {
-	background: url(../images/map.gif);
+	background: url(../../../images/map.gif);
 }
 
 
@@ -230,6 +230,14 @@ html, body {
 		background: #ff797e;
 	}
 	
+	.pin.expired:before {
+		color: #ff5157;
+	}
+	
+	.key.expired:before {
+		background: #ff5157;
+	}
+	
 	.invalid input[type="text"],
 	.invalid input[type="textarea"] {
 		border-color:  #fe8e92;
@@ -256,14 +264,16 @@ html, body {
 	 a.iconly,
 	 a.iconly:hover,
 	 .dropdown-menu > li > a.link,
-	 .dropdown-menu > li > a.link:hover {
+	 .dropdown-menu > li > a.link:hover,
+	 .pin.submitted:before {
 		color: #4890e2;
 	}
 	
 	header nav .number,
 	.group a.buttonly,
 	.filter.dropdown .caret,
-	.filter.search .icon-search {
+	.filter.search .icon-search,
+	.key.submitted:before {
 		background: #4890e2;
 	}
 	
@@ -271,8 +281,15 @@ html, body {
 	.btn.btn-default.dropdown-toggle,
 	.instructions .item .actions a.buttonly,
 	.filters-holder .view a.active,
+	.filters-holder .view a.active:hover,
+	.filters-holder .view a.active:focus,
 	.filter.dates {
 		background-color: #4890e2;
+	}
+	
+	.filters-holder .view a:hover,
+	.filters-holder .view a:active {
+		background-color: #f2f7fd;
 	}
 	
 	.datepicker td.active, 
@@ -319,6 +336,14 @@ html, body {
 		border-left-color: #4890e2;
 	}
 	
+	.pin.unassigned:before {
+		color: #256aa8;
+	}
+	
+	.key.unassigned:before {
+		background: #256aa8;
+	}
+	
 	.instructions .item .actions a.buttonly:hover,
 	.instructions .item .actions a.buttonly:focus,
 	.group a.buttonly:hover,
@@ -334,7 +359,8 @@ html, body {
 	header .nav li.messages .im,
 	.subnav li.active a,
 	.instruction-footer .item.count .described,
-	.instruction.view-mode .answer.exception .plainLabel:after {
+	.instruction.view-mode .answer.exception .plainLabel:after,
+	.pin.scheduled:before {
 		color: #08aa86;
 	}
 	
@@ -348,7 +374,8 @@ html, body {
 	input[type="checkbox"]:checked:after,
 	.primary.actions a,
 	.instruction-footer .icon-checkmark,
-	.instruction .header {
+	.instruction .header,
+	.key.scheduled:before {
 		background: #00a584;
 	}
 	
@@ -385,8 +412,23 @@ html, body {
 		color: #ae7dbc;
 	}
 	
-	.instruction.required .header {
+	.pin.unscheduled:before {
+		color: #9a5cab;
+	}
+	
+	.instruction.required .header,
+	.key.unscheduled:before {
 		background: #9a5cab;
+	}
+	
+	/* yellow */
+	
+	.pin.paused:before {
+		color: #febb11;
+	}
+	
+	.key.paused:before {
+		background: #febb11;
 	}
 	
 	/* black */
@@ -419,7 +461,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .subnav li,
 .filters-holder .view a,
 .filter.dropdown .btn.btn-default.dropdown-toggle,
-.filter.search {
+.filter.search,
+.keys .key {
 	font-family: Helvetica-Neue-Light;
 }
 

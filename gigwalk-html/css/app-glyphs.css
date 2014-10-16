@@ -19,7 +19,8 @@
 .checker .supercheck:after,
 .nav-active-holder:after,
 .instruction.view-mode .answer.exception .plainLabel:after,
-.iconly:before {
+.iconly:before,
+.pin:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -92,6 +93,7 @@
 .icon-map-pin:before {
 	content: "\e623";
 }
+.pin:before,
 .icon-map-pin-solid:before {
 	content: "\e625";
 }
