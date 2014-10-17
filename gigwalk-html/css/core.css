@@ -296,7 +296,8 @@ a.iconly,
 .messages .problem span.exclaim:before,
 .messages .problem span.exclaim,
 .map-drawer,
-.map .nav.nav-tabs > li > a {
+.map .nav.nav-tabs > li > a,
+.map .pin:before {
 	display: inline-block;
 }
 
@@ -430,7 +431,9 @@ th.sorting:after,
 .pagination a span.im:before,
 .map,
 .map-drawer,
-.Tickets .dash td.status span:before {
+.Tickets .dash td.status span:before,
+.map .pin,
+.map .pin:before {
 	position: relative;
 }
 
@@ -511,7 +514,8 @@ header .navbar-collapse.in {
 
 header nav .number,
 input[type="radio"]:after,
-.message.problem span.exclaim:before {
+.message.problem span.exclaim:before,
+.map .pin:before {
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
@@ -628,7 +632,8 @@ input[type="radio"]:after,
 
 .tabnav ul.dropdown-menu,
 .instruction-footer .item,
-	.choose-dates {
+.choose-dates,
+.map .pin:before {
 	background: #ffffff;
 }
 
@@ -711,20 +716,6 @@ input[type="radio"]:after,
 		top: 5px;
 }
 
-.messages .problem span.exclaim {
-	margin-right: 25px;
-	z-index: 1;
-}
-
-.messages .problem span.exclaim:before {
-	content: ' ';
-	margin-right: -23px;
-	width: 40px;
-	height: 40px;
-		top: 10px;
-	z-index: -1;
-}
-
 .iconButton:before {
 	top: 10px;
 }
@@ -733,6 +724,37 @@ input[type="radio"]:after,
 .iconButton.extend:before {
 	top: 7px;
 }
+
+.messages .problem span.exclaim,
+.map .pin:after {
+	z-index: 1;
+}
+
+.messages .problem span.exclaim:before,
+.map .pin:before {
+	content: ' ';
+	z-index: -1;
+}
+
+.messages .problem span.exclaim {
+	margin-right: 25px;
+}
+
+.messages .problem span.exclaim:before {
+	margin-right: -23px;
+	width: 40px;
+	height: 40px;
+		top: 10px;
+}
+
+.map .pin:before {
+	width: 10px;
+	height: 10px;
+		top: 3px;
+		left: 3px;
+}
+
+
 
 
 
@@ -993,6 +1015,10 @@ header .nav .dropdown li {
 	
 	header nav .dropdown-menu {
 		padding-top: 0;
+	}
+	
+	worker header .nav li {
+		border-left-color: transparent;
 	}
 	 
 	
@@ -2896,23 +2922,23 @@ th.sorting:after {
 	top: -4px;
 }
 
-.Tickets .dash .location {
+.Tickets .dash td.location {
 	min-width: 115px;
 }
 
-.Tickets .dash .assigned {
+.Tickets .dash td.assigned {
 	min-width: 125px;
 }
 
-.Tickets .dash .status {
+.Tickets .dash td.status {
 	min-width: 105px;
 }
 
-.Tickets .dash .scheduled {
+.Tickets .dash td.scheduled {
 	min-width: 125px;
 }
 
-.Tickets .dash .estimated {
+.Tickets .dash td.estimated {
 	text-align: right;
 	min-width: 115px;
 }

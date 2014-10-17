@@ -21,6 +21,7 @@
 .instruction.view-mode .answer.exception .plainLabel:after,
 .iconly:before,
 .pin:before,
+.pin:after,
 .iconButton:before,
 th.sorting:after,
 .Tickets .dash td.status span:before,
@@ -100,7 +101,7 @@ th.sorting:after,
 .icon-map-pin:before {
 	content: "\e623";
 }
-.pin:before,
+.pin:after,
 .icon-map-pin-solid:before {
 	content: "\e625";
 }

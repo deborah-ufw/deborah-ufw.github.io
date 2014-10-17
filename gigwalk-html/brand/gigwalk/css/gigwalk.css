@@ -235,7 +235,7 @@ html, body {
 		background: #ff797e;
 	}
 	
-	.pin.expired:before {
+	.pin.expired:after {
 		color: #ff5157;
 	}
 	
@@ -278,7 +278,7 @@ html, body {
 	 a.iconly:hover,
 	 .dropdown-menu > li > a.link,
 	 .dropdown-menu > li > a.link:hover,
-	 .pin.submitted:before,
+	 .pin.submitted:after,
 	 .filters-choices,
 	 .filters-choices .icon-cancel:before,
 	 .choose-dates .quick-select a,
@@ -374,7 +374,7 @@ html, body {
 		border-left-color: #4890e2;
 	}
 	
-	.pin.unassigned:before {
+	.pin.unassigned:after {
 		color: #256aa8;
 	}
 	
@@ -398,7 +398,7 @@ html, body {
 	.subnav li.active a,
 	.instruction-footer .item.count .described,
 	.instruction.view-mode .answer.exception .plainLabel:after,
-	.pin.scheduled:before,
+	.pin.scheduled:after,
 	.confirmation h1,
 	.confirmation .icon-checkmark,
 	.Tickets .dash td.status span.submitted:before {
@@ -427,7 +427,7 @@ html, body {
 	}
 	
 	header .nav li {
-		border-left-color: rgba(0, 169, 133, .3)
+		border-left-color: rgba(0, 169, 133, .3);
 	}
 	
 	input.supercheck:checked:after,
@@ -463,7 +463,7 @@ html, body {
 		color: #ae7dbc;
 	}
 	
-	.pin.unscheduled:before {
+	.pin.unscheduled:after {
 		color: #9a5cab;
 	}
 	
@@ -475,7 +475,7 @@ html, body {
 	/* yellow */
 	
 	.Tickets .dash td.status span.started.paused:before,
-	.pin.paused:before {
+	.pin.paused:after {
 		color: #febb11;
 	}
 	
