@@ -516,12 +516,12 @@ select {
 }
 
 .view-mode .numeric .currency:before,
-.disabled {
+.disabled,
+.action.panel .item .hint {
 	color: #bcbcbc;
 }
 
-.editable:after,
-.action.panel .item .hint {
+.editable:after {
 	color: #cbcbcb;
 }
 
@@ -715,11 +715,13 @@ header .nav ul.dropdown-menu li,
 	border: 1px solid;
 }
 
-.action.panel {
+.topborder {
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
-.action.panel {
+.table-list .controls,
+.action.panel,
+.action.messages .message {
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -2668,7 +2670,7 @@ a.iconly:before {
 /* dash table lists  */
 
 .table-list .controls {
-	margin: 1em 0 3px 0;
+	padding: 1em 0 3px 0;
 }
 
 .table-list .primary.actions .right {
@@ -2714,6 +2716,10 @@ a.iconly:before {
 
 .action.panel .choose .detail {
 	margin: 3px 0 10px 0;
+}
+
+.table-list .action.messages {
+	
 }
 
 
