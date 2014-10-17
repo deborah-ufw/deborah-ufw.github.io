@@ -402,8 +402,12 @@ html, body {
 	.pin.scheduled:after,
 	.confirmation h1,
 	.confirmation .icon-checkmark,
-	.Tickets .dash td.status span.submitted:before {
-		color: #08aa86;
+	.Tickets .dash td.status span.submitted:before,
+	.map .requirements-list li:before,
+	.map .tab-pane .due .value,
+	.map .tab-pane .estimated .value,
+	.map .tab-pane .scheduled .value {
+		color: #07a985;
 	}
 	
 	.instruction .arrow,
@@ -418,7 +422,8 @@ html, body {
 	.instruction-footer .icon-checkmark,
 	.instruction .header,
 	.key.scheduled:before,
-	.choose-dates .actions a {
+	.choose-dates .actions a,
+	.map .tab-pane a.buttonly.main {
 		background: #00a584;
 	}
 	
@@ -520,7 +525,9 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .table-list .controls .actions,
 .filters-choices .selection .detail,
 .table-list td,
-.map .tab-pane .ticketlink {
+.map .tab-pane .ticketlink,
+.map .tab-pane.actions .iconButton,
+.map .tab-pane a.buttonly.main {
 	font-family: Helvetica-Neue-Light;
 }
 

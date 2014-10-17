@@ -28,7 +28,8 @@ th.sorting:after,
 .map .nav-tabs > li > a:before,
 .map a.collapse:before,
 .checker .supercheck:after,
-input[type="checkbox"]:after {
+input[type="checkbox"]:after,
+.map .requirements-list li:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -58,6 +59,7 @@ input[type="checkbox"]:after {
 .icon-bell:before {
 	content: "\e615";
 }
+.map .requirements-list li:before,
 .checker .supercheck:after,
 input[type="checkbox"]:after,
 .Tickets .dash td.status span:before,
