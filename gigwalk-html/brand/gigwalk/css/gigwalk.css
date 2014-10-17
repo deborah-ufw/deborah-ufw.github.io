@@ -281,7 +281,8 @@ html, body {
 	 .pin.submitted:before,
 	 .filters-choices,
 	 .filters-choices .icon-cancel:before,
-	 .choose-dates .quick-select a {
+	 .choose-dates .quick-select a,
+	 .map .nav-tabs > li > a.active:before {
 		color: #4890e2;
 	}
 	

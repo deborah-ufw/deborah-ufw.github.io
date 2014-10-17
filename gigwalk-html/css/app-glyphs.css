@@ -23,7 +23,8 @@
 .pin:before,
 .iconButton:before,
 th.sorting:after,
-.Tickets .dash td.status span:before {
+.Tickets .dash td.status span:before,
+.map .nav-tabs > li > a:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;

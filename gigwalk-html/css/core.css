@@ -294,7 +294,9 @@ a.iconly,
 .action.panel .filter.search,
 .filters-choices .selection .detail,
 .messages .problem span.exclaim:before,
-.messages .problem span.exclaim {
+.messages .problem span.exclaim,
+.map-drawer,
+.map .nav.nav-tabs > li > a {
 	display: inline-block;
 }
 
@@ -425,7 +427,10 @@ th.sorting,
 th.sorting:after,
 .pagination .previous,
 .pagination .next,
-.pagination a span.im:before {
+.pagination a span.im:before,
+.map,
+.map-drawer,
+.Tickets .dash td.status span:before {
 	position: relative;
 }
 
@@ -512,7 +517,8 @@ input[type="radio"]:after,
 	border-radius: 50%;
 }
 
-select {
+select,
+.nav.nav-tabs > li > a {
 	-moz-border-radius: 0;
 	-webkit-border-radius: 0;
 	border-radius: 0;
@@ -607,7 +613,8 @@ input[type="checkbox"]:after,
 .filter.dates,
 .filter.dropdown .caret,
 .filter.search .icon-search,
-.choose-dates .actions a {
+.choose-dates .actions a,
+.map .nav-tabs > li > a:before {
 	color: #ffffff;
 }
 
@@ -793,7 +800,8 @@ header .nav ul.dropdown-menu li,
 
 .Projects .group.date,
 .Projects .group.repeats,
-.instruction .item.targets .sub .mini-panel {
+.instruction .item.targets .sub .mini-panel,
+.nav-tabs {
 	border-bottom-width: 0;
 }
 
@@ -835,6 +843,12 @@ header .nav ul.dropdown-menu li,
 .tabnav .btn.btn-default.dropdown-toggle {
 	border-left: 1px solid rgba(255, 255, 255, .3);
 	border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus {
+	border: 0px solid transparent;
 }
 
 .caret,
@@ -887,6 +901,17 @@ header .nav .dropdown li {
 	float: none;
 	font-weight: normal;
 	text-shadow: none;
+}
+
+.nav.nav-tabs > li > a {
+	margin-right: 0;
+  padding: 0 0 0 0;
+}
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus {
+	
 }
 
 
@@ -2842,7 +2867,7 @@ a.iconly:before {
 }
 
 .table-list td {
-	padding: 17px 10px 9px 0;
+	padding: 17px 10px 7px 0;
 	vertical-align: top;
 }
 
@@ -2859,6 +2884,10 @@ th.sorting:after {
 
 .Tickets .dash .table-list table .project-title input[type="checkbox"] {
 	margin-left: -26px;
+}
+
+.Tickets .dash td.status span:before {
+	top: -4px;
 }
 
 .Tickets .dash .location {
@@ -2918,13 +2947,18 @@ th.sorting:after {
 	
 /* map */
 
-.map-holder .map {
-	height: 300px;
+.map-holder .map,
+.map-drawer {
+	height: 390px;
 }
 
 .map-holder,
 .map.keys {
 	margin-top: 10px;
+}
+
+.map-drawer {
+	width: 250px;
 }
 
 .key {
