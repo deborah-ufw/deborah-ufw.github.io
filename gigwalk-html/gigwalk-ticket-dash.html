@@ -192,7 +192,7 @@
   </nav><!-- ends side nav -->
   
   <!-- content (right side) -->
-  <div class="inner wrapper Projects">
+  <div class="inner wrapper Tickets">
   
       <!-- tabs for the content -->
       <nav class="tabnav">
@@ -215,7 +215,7 @@
       </nav><!-- ends content tabs -->
       
       <!-- the content under the tabs -->
-      <div class="content tickets dash">
+      <div class="content dash">
       
       <!-- ****************************************************************** -->
       <!--                              LIST VIEW                             -->
@@ -289,7 +289,7 @@
       
       <!-- the summary area on the left with action buttons on the right -->
       <div class="table-list">
-        <div class="controls">
+        <div class="controls has-buttons">
           <div class="summary">
             <div class="visible">(#) <span class="descr-before"></span>Tickets <span class="descr-after"></span></div>
             <div class="selected">&nbsp;|&nbsp; <span>(#) selected</span></div>
@@ -359,13 +359,10 @@
         <!-- the panel that confirms the executed action -->
         <div class="action messages">
           <div class="message confirmation">
-            <h1>20 Tickets were assigned (Confirmation message)</h1>
-          </div>
-          <div class="message warning">
-            <h1>Warning message</h1>
+            <h1><span class="im icon-checkmark"></span>20 Tickets were assigned (Confirmation message)</h1>
           </div>
           <div class="message problem">
-            <h1>Problem message</h1>
+            <h1><span class="exclaim">!</span>Problem message</h1>
           </div>
         </div>
       
@@ -375,7 +372,7 @@
         
           <thead>
             <tr role="row">
-              <th class="sorting project-name">
+              <th class="sorting project-title">
                 <input type="checkbox" value="select-all" />
                 Project Name
               </th>

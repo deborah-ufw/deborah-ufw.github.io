@@ -20,7 +20,10 @@
 .nav-active-holder:after,
 .instruction.view-mode .answer.exception .plainLabel:after,
 .iconly:before,
-.pin:before {
+.pin:before,
+.iconButton:before,
+th.sorting:after,
+.Tickets .dash td.status span:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -50,6 +53,7 @@
 .icon-bell:before {
 	content: "\e615";
 }
+.Tickets .dash td.status span:before,
 .icon-checkmark:before {
 	content: "\e616";
 }
@@ -72,6 +76,7 @@
 .icon-email:before {
 	content: "\e61c";
 }
+th.sorting:after,
 .icon-expand-all:before {
 	content: "\e61d";
 }
@@ -97,6 +102,7 @@
 .icon-map-pin-solid:before {
 	content: "\e625";
 }
+.iconButton.assign:before,
 .icon-people:before {
 	content: "\e624";
 }
@@ -117,26 +123,34 @@
 .icon-barcode:before {
 	content: "\e610";
 }
+.Tickets .dash td.status span.started.paused:before,
 .icon-pause:before {
 	content: "\e600";
 }
+.iconButton.cancel:before,
 .icon-cancel:before {
 	content: "\e601";
 }
 .icon-search:before {
 	content: "\e602";
 }
+.iconButton.unassign:before,
 .icon-assign:before {
 	content: "\e603";
 }
+.iconButton.print:before,
 .icon-print:before {
 	content: "\e604";
 }
+.iconButton.schedule:before,
+.iconButton.calendar:before,
+.iconButton.extend:before,
 .icon-calendar:before,
 .icon-schedule:before,
 .icon-extend:before {
 	content: "\e605";
 }
+.iconButton.comment:before,
 .icon-comment:before {
 	content: "\e606";
 }

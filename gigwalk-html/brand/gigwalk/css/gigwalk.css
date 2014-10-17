@@ -220,8 +220,13 @@ html, body {
 		color: #fe8e92;
 	}
 	
-	.primary.actions a.delete {
+	.primary.actions a.delete,
+	.messages .message.problem {
 		color: #ff5157;
+	}
+	
+	.messages .problem span.exclaim:before {
+		background: #ff5157;
 	}
 	
 	.instruction.incomplete .header,
@@ -241,6 +246,14 @@ html, body {
 	.invalid input[type="text"],
 	.invalid input[type="textarea"] {
 		border-color:  #fe8e92;
+	}
+	
+	.messages .message.problem {
+		background: #ffe5e6;
+	}
+	
+	.messages .message.problem span.exclaim {
+		color: #ffe5e6;
 	}
 	
 	/* blues */
@@ -373,7 +386,10 @@ html, body {
 	.subnav li.active a,
 	.instruction-footer .item.count .described,
 	.instruction.view-mode .answer.exception .plainLabel:after,
-	.pin.scheduled:before {
+	.pin.scheduled:before,
+	.confirmation h1,
+	.confirmation .icon-checkmark,
+	.Tickets .dash td.status span.submitted:before {
 		color: #08aa86;
 	}
 	
@@ -419,6 +435,14 @@ html, body {
 		background: #84d5c3;
 	}
 	
+	.Tickets .dash td.status span.started:before {
+		color: #8ad7c5;
+	}
+	
+	.messages .message.confirmation {
+		background: #dbf2ed;
+	}
+	
 	/* purple */
 	
 	.instruction.required .arrow,
@@ -437,6 +461,7 @@ html, body {
 	
 	/* yellow */
 	
+	.Tickets .dash td.status span.started.paused:before,
 	.pin.paused:before {
 		color: #febb11;
 	}
@@ -479,7 +504,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .keys .key,
 .filters-choices .value,
 .table-list .controls .actions,
-.filters-choices .selection .detail {
+.filters-choices .selection .detail,
+.table-list td {
 	font-family: Helvetica-Neue-Light;
 }
 
@@ -493,7 +519,8 @@ select option,
 .sidenav .user-name,
 .remove,
 .iconly,
-.instruction-footer{
+.instruction-footer,
+.messages .problem span.exclaim {
 	font-family: Helvetica-Neue-Medium;
 }
 
