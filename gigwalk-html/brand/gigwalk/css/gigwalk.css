@@ -282,7 +282,7 @@ html, body {
 	 .filters-choices,
 	 .filters-choices .icon-cancel:before,
 	 .choose-dates .quick-select a,
-	 .map .nav-tabs > li > a.active:before {
+	 .map .nav-tabs > li.active > a:before {
 		color: #4890e2;
 	}
 	
@@ -290,7 +290,8 @@ html, body {
 	.group a.buttonly,
 	.filter.dropdown .caret,
 	.filter.search .icon-search,
-	.key.submitted:before {
+	.key.submitted:before,
+	.map .nav-tabs > li > a {
 		background: #4890e2;
 	}
 	

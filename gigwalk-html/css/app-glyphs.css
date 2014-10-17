@@ -25,7 +25,10 @@
 .iconButton:before,
 th.sorting:after,
 .Tickets .dash td.status span:before,
-.map .nav-tabs > li > a:before {
+.map .nav-tabs > li > a:before,
+.map a.collapse:before,
+.checker .supercheck:after,
+input[type="checkbox"]:after {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -55,6 +58,8 @@ th.sorting:after,
 .icon-bell:before {
 	content: "\e615";
 }
+.checker .supercheck:after,
+input[type="checkbox"]:after,
 .Tickets .dash td.status span:before,
 .admin .Tickets .dash td.status span.started.paused:before, 
 .icon-checkmark:before {
@@ -130,6 +135,7 @@ th.sorting:after,
 .icon-pause:before {
 	content: "\e600";
 }
+.map a.collapse:before,
 .iconButton.cancel:before,
 .icon-cancel:before {
 	content: "\e601";
@@ -157,9 +163,11 @@ th.sorting:after,
 .icon-comment:before {
 	content: "\e606";
 }
+.map .nav-tabs > li > a.actions:before,
 .icon-lightning-solid:before {
 	content: "\e607";
 }
+.map .nav-tabs > li > a.directions:before,
 .icon-direction:before {
 	content: "\e608";
 }
@@ -169,6 +177,7 @@ th.sorting:after,
 .icon-ticket:before {
 	content: "\e60a";
 }
+.map .nav-tabs > li > a.info:before,
 .icon-info:before {
 	content: "\e60b";
 }
