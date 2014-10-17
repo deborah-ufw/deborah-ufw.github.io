@@ -62,7 +62,7 @@ $(document).ready(function() {
 		});
 				
 	
-	//******** initialize bootstrap components ******** //	
+	//******** initialize bootstrap datepicker ******** //	
 	
 	$(function () {
     $('.hint').popover({
@@ -71,6 +71,22 @@ $(document).ready(function() {
 	});
 	
 	$('.datepicker').datepicker()
+	
+	
+	//******** initialize bootstrap tabs (map panel) ******** //	
+	
+	$('.map #info a').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	})
+	$('.map #directions a').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	})
+	$('.map #actions a').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	})
 	
 	
 	//******** project scheduling "repeats" panel ******** //	

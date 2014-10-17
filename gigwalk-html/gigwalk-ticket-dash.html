@@ -674,50 +674,72 @@
         <div class="map">
           <div class="map-drawer">
           
-            <div class="tab info">
-              <a class="ticketlink" href="javascript:;">Safeway</a>
-              <div class="description">
-                Actions will focus on the client relationship management and item purchasing. Check on product availability.
-              </div>
-              <a class="requirements" href="javascript:;">Requirements</a>
-              <div class="Due">
-                <div class="smallLabel">Due</div>
-                <div class="value">3 days (Monday)</div>
-              </div>
-              <div class="Estimated worker"><!-- Jimmy only -->
-                <div class="smallLabel">Estimated Time</div>
-                <div class="value">3 hours 30 minutes</div>
-              </div>
-              <div class="Assigned admin"><!-- Grace only -->
-                <div class="smallLabel">Assigned</div>
-                <a class="value" href="javascript:;">Jimmy Stewart</a>
-              </div>
-            </div>
+          <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="active">
+                <a href="#info" class="info" role="tab" data-toggle="tab"></a>
+              </li>
+              <li>
+                <a href="#directions" class="directions" role="tab" data-toggle="tab"></a>
+              </li>
+              <li>
+                <a href="#actions" class="actions" role="tab" data-toggle="tab"></a>
+              </li>
+            </ul>
             
-            <div class="tab directions worker"><!-- Jimmy only -->
-              <a class="ticketlink">Safeway</a>
-              <div class="address">16121 N. Snelling Rd</div>
-              <div class="address">Cupertino, CA 95014</div>
-              <div class="phone">(408) 877-2113</div>
-            </div>
+            <!-- bootstrap tab panes -->
+            <div class="tab-content">
             
-            <div class="tab actions">
-              <a class="ticketlink" href="javascript:;">Safeway</a>
-              <div class="Scheduled">
-                <div class="value">Scheduled for Today</div>
-              </div>
+              <div class="tab-pane info active" id="info"><!-- info tab -->
+                <a class="ticketlink" href="javascript:;">Safeway</a>
+                <div class="description">
+                  Actions will focus on the client relationship management and item purchasing. Check on product availability.
+                </div>
+                <a class="requirements" href="javascript:;">Requirements</a>
+                <div class="Due">
+                  <div class="smallLabel">Due</div>
+                  <div class="value">3 days (Monday)</div>
+                </div>
+                <div class="Estimated worker"><!-- Jimmy only -->
+                  <div class="smallLabel">Estimated Time</div>
+                  <div class="value">3 hours 30 minutes</div>
+                </div>
+                <div class="Assigned admin"><!-- Grace only -->
+                  <div class="smallLabel">Assigned</div>
+                  <a class="value" href="javascript:;">Jimmy Stewart</a>
+                </div>
+                
+                <a class="buttonly" href="javascript:;">Main action</a>
+              </div><!-- end info tab -->
               
-              <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
-              <a class="iconButton comment" href="javascript:;">Add Comment</a>
-              <a class="iconButton print" href="javascript:;">Print ticket</a>
-              <a class="iconButton unassign worker" href="javascript:;">Unassign</a><!-- Jimmy only -->
-              <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
-              <a class="iconButton cancel worker" href="javascript:;">Cancel</a><!-- Grace only -->
-  
-            </div>
-            
-            <a class="buttonly" href="javascript:;">Main action</a>
+              <div class="tab-pane directions worker" id="directions"><!-- directions tab - Jimmy only -->
+                <a class="ticketlink">Safeway</a>
+                <div class="address">16121 N. Snelling Rd</div>
+                <div class="address">Cupertino, CA 95014</div>
+                <div class="phone">(408) 877-2113</div>
+                
+                <a class="buttonly" href="javascript:;">Main action</a>
+              </div><!-- end directions tab -->
+              
+              <div class="tab-pane actions" id="actions"><!-- actions tab -->
+                <a class="ticketlink" href="javascript:;">Safeway</a>
+                <div class="Scheduled">
+                  <div class="value">Scheduled for Today</div>
+                </div>
+                
+                <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
+                <a class="iconButton comment" href="javascript:;">Add Comment</a>
+                <a class="iconButton print" href="javascript:;">Print ticket</a>
+                <a class="iconButton unassign worker" href="javascript:;">Unassign</a><!-- Jimmy only -->
+                <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
+                <a class="iconButton cancel worker" href="javascript:;">Cancel</a><!-- Grace only -->
+                
+                <a class="buttonly" href="javascript:;">Main action</a>
+              </div><!-- end actions tab -->
+              
+            </div><!-- end bootstrap tabs -->
           </div><!-- end map-drawer -->
+          
           
           <div class="pin scheduled active"></div>
           <div class="pin unscheduled"></div>
