@@ -801,7 +801,9 @@ header .nav ul.dropdown-menu li,
 .primary.actions a,
 .filters-holder .view a,
 .filters-choices .choice,
-	.filters-choices .choice .close {
+.filters-choices .choice .close,
+.pagination .previous,
+.pagination .next {
 	border: 1px solid;
 }
 

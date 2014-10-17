@@ -312,6 +312,11 @@ html, body {
 		background-color: #f2f7fd;
 	}
 	
+	.pagination .previous,
+	.pagination .next {
+		border-color: rgba(64, 145, 230, .2);
+	}
+	
 	.filters-choices .choice .close:hover,
 	.filters-choices .choice .close:focus,
 	.choose-dates .quick-select a,
