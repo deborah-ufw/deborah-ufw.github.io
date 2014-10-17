@@ -519,7 +519,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .filters-choices .value,
 .table-list .controls .actions,
 .filters-choices .selection .detail,
-.table-list td {
+.table-list td,
+.map .tab-pane .ticketlink {
 	font-family: Helvetica-Neue-Light;
 }
 
