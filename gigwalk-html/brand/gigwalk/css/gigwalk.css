@@ -427,7 +427,7 @@ html, body {
 	}
 	
 	header .nav li {
-		border-left: 1px solid rgba(0, 169, 133, .3)
+		border-left-color: rgba(0, 169, 133, .3)
 	}
 	
 	input.supercheck:checked:after,

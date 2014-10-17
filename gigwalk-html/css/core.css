@@ -788,22 +788,6 @@ header .nav ul.dropdown-menu li,
 .subnav li {
 	border-bottom: 7px solid #ffffff;
 }
-.table-list .controls .iconButton.last {
-	border-right-width: 0;
-}
-
-.group .sub.first,
-.instruction-content,
-.group .sub.more-info {
-	border-top-width: 0;
-}
-
-.Projects .group.date,
-.Projects .group.repeats,
-.instruction .item.targets .sub .mini-panel,
-.nav-tabs {
-	border-bottom-width: 0;
-}
 
 .instructions .item .actions a.buttonly,
 .primary.actions a,
@@ -813,6 +797,10 @@ header .nav ul.dropdown-menu li,
 .pagination .previous,
 .pagination .next {
 	border: 1px solid;
+}
+
+header .nav li {
+	border-left: 1px solid;
 }
 
 .topborder {
@@ -861,20 +849,30 @@ header .nav ul.dropdown-menu li,
 	border-left: 0px solid transparent;
 }
 
-.nav-sections li {
-	border-left: 4px solid transparent;
+.table-list .controls .iconButton.last {
+	border-right-width: 0;
+}
+
+.group .sub.first,
+.instruction-content,
+.group .sub.more-info,
+header nav .dropdown-menu {
+	border-top-width: 0;
+}
+
+.Projects .group.date,
+.Projects .group.repeats,
+.instruction .item.targets .sub .mini-panel,
+.nav-tabs {
+	border-bottom-width: 0;
 }
 
 .tabnav li.buttonly a,
 .tabnav .btn.btn-default.dropdown-toggle,
 .tabnav li .dropdown li,
-.tabnav li.active .dropdown li {
+.tabnav li.active .dropdown li,
+.table-list .controls .iconButton.last {
 	border-right-width: 0px;
-}
-
-header nav .dropdown-menu {
-	padding-top: 0;
-	border-top-width: 0px;
 }
 
 header .nav .dropdown li {
@@ -883,6 +881,10 @@ header .nav .dropdown li {
 
 .primary.actions a.linkly {
 	border-color: #ffffff;
+}
+
+.nav-sections li {
+	border-left: 4px solid transparent;
 }
 
 /* miscellaneous bootstrap overrides */
@@ -987,6 +989,10 @@ header .nav .dropdown li {
 	
 	.navbar-nav .open .dropdown-menu {
 		padding-bottom: 0;
+	}
+	
+	header nav .dropdown-menu {
+		padding-top: 0;
 	}
 	 
 	
