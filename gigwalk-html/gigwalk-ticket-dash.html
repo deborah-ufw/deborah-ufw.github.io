@@ -157,7 +157,7 @@
                 "main wrapper admin" -->
                 
 <!-- start the main panel -->
-<div class="main wrapper admin">
+<div class="main wrapper">
                 
 <!-- ----------------------------------------------------- --> 
 
@@ -217,12 +217,10 @@
       <!-- the content under the tabs -->
       <div class="content dash">
       
-      <!-- ****************************************************************** -->
-      <!--                              LIST VIEW                             -->
-      <!-- ****************************************************************** -->
-           
       
-      <!-- ****************** FILTERS ***************** -->
+      <!-- ****************************************************************** -->
+      <!--                              FILTERS                               -->
+      <!-- ****************************************************************** -->
       
       <div class="filters-holder"><!-- start view and filter buttons -->
       
@@ -244,12 +242,12 @@
               </button>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                 <li class="show-open" role="presentation"><a role="menuitem" href="javascript:;">Show open</a></li><!-- default for both -->
-                <li class="assigned"  role="presentation"><a role="menuitem" href="javascript:;">Assigned</a></li><!-- Grace only -->
-                <li class="unassigned"  role="presentation"><a role="menuitem" href="javascript:;">Unassigned</a></li><!-- Grace only -->
-                <li class="scheduled"  role="presentation"><a role="menuitem" href="javascript:;">Scheduled</a></li><!-- Jimmy only -->
-                <li class="paused"  role="presentation"><a role="menuitem" href="javascript:;">Paused</a></li><!-- Jimmy only -->
+                <li class="assigned admin"  role="presentation"><a role="menuitem" href="javascript:;">Assigned</a></li><!-- Grace only -->
+                <li class="unassigned admin"  role="presentation"><a role="menuitem" href="javascript:;">Unassigned</a></li><!-- Grace only -->
+                <li class="scheduled worker"  role="presentation"><a role="menuitem" href="javascript:;">Scheduled</a></li><!-- Jimmy only -->
+                <li class="paused worker"  role="presentation"><a role="menuitem" href="javascript:;">Paused</a></li><!-- Jimmy only -->
                 <li class="due"  role="presentation"><a role="menuitem" href="javascript:;">Due</a></li>
-                <li class="submitted"  role="presentation"><a role="menuitem" href="javascript:;">Submitted</a></li>
+                <li class="submitted admin"  role="presentation"><a role="menuitem" href="javascript:;">Submitted</a></li>
                 <li class="expired"  role="presentation"><a role="menuitem" href="javascript:;">Expired</a></li><!-- Grace only -->
               </ul>
             </div>
@@ -285,6 +283,13 @@
       </div><!-- end filters selections -->
       
       
+      <!-- ****************************************************************** -->
+      <!--                              LIST VIEW                             -->
+      <!-- ****************************************************************** -->
+      
+      <h1 class="super">List view</h1>
+      
+      
       <!-- ****************** TABLE CONTROL BAR ***************** -->
       
       <!-- the summary area on the left with action buttons on the right -->
@@ -295,12 +300,12 @@
             <div class="selected">&nbsp;|&nbsp; <span>(#) selected</span></div>
           </div>
           <div class="actions">
-            <a class="iconButton cancel" href="javascript:;">Cancel</a><!-- Grace only -->
-            <a class="iconButton extend" href="javascript:;">Extend</a><!-- Grace only -->
-            <a class="iconButton schedule" href="javascript:;">Schedule</a><!-- Jimmy only -->
+            <a class="iconButton cancel admin" href="javascript:;">Cancel</a><!-- Grace only -->
+            <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
+            <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
             <a class="iconButton print" href="javascript:;">Print</a>
-            <a class="iconButton assign last" href="javascript:;">Assign</a><!-- Grace only -->
-            <a class="iconButton unassign last" href="javascript:;">Unassign</a><!-- Jimmy only -->
+            <a class="iconButton assign admin last" href="javascript:;">Assign</a><!-- Grace only -->
+            <a class="iconButton unassign worker last" href="javascript:;">Unassign</a><!-- Jimmy only -->
           </div>
         </div>
         
@@ -379,11 +384,17 @@
               <th class="sorting location">
                 Location
               </th>
-              <th class="sorting assigned">
+              <th class="sorting assigned admin"><!-- Grace only (assigned td also) -->
                 Assigned
+              </th>
+              <th class="sorting scheduled worker"><!-- Jimmy only (scheduled td also) -->
+                Scheduled
               </th>
               <th class="sorting due">
                 Due
+              </th>
+              <th class="sorting estimated worker"><!-- Jimmy only (estimated td also) -->
+                Est. Time
               </th>
               <th class="sorting status">
                 Status
@@ -405,13 +416,19 @@
                   Walmart 
                 </a>
               </td>
-              <td class="sorting assigned"> 
+              <td class="sorting assigned admin"> 
                 <a href="javascript:;">
                   Jimmy Stewart 
                 </a>
               </td>
+              <td class="sorting scheduled worker">
+                11/04/2014 
+              </td>
               <td class="sorting due">
                 11/05/2014 
+              </td>
+              <td class="sorting estimated worker">
+                3:00 
               </td>
               <td class="status">
                 <span class="open"></span>
@@ -430,13 +447,19 @@
                   Walmart 
                 </a>
               </td>
-              <td class="sorting assigned">
+              <td class="sorting assigned admin">
                 <a href="javascript:;">
                   Kelly Wentworth
                 </a>
               </td>
               <td class="sorting due">
                 11/05/2014 
+              </td>
+              <td class="sorting scheduled worker">
+                11/03/2014 
+              </td>
+              <td class="sorting estimated worker">
+                :15 
               </td>
               <td class="status">
                 <span class="submitted"></span>
@@ -455,13 +478,19 @@
                   Safeway 
                 </a>
               </td>
-              <td class="sorting assigned"> 
+              <td class="sorting assigned admin"> 
                 <a href="javascript:;">
                   Kelly Wentworth
                 </a>
               </td>
+              <td class="sorting scheduled worker">
+                11/05/2014 
+              </td>
               <td class="sorting due">
                 11/06/2014 
+              </td>
+              <td class="sorting estimated worker">
+                2 days 
               </td>
               <td class="status">
                 <span class="submitted"></span>
@@ -480,13 +509,19 @@
                   Safeway 
                 </a>
               </td>
-              <td class="sorting assigned"> 
+              <td class="sorting assigned admin"> 
                 <a href="javascript:;">
                   James Dean
                 </a>
               </td>
+              <td class="sorting scheduled worker">
+                <span>unscheduled</span>
+              </td>
               <td class="sorting due">
                 11/06/2014 
+              </td>
+              <td class="sorting estimated worker">
+                2:20 
               </td>
               <td class="status">
                 <span class="started"></span>
@@ -504,13 +539,19 @@
                   Kroeger's
                 </a>
               </td>
-              <td class="sorting assigned"> 
+              <td class="sorting assigned admin"> 
                 <a href="javascript:;">
                   Jimmy Stewart
                 </a>
               </td>
+              <td class="sorting scheduled worker">
+                <span>unscheduled</span>
+              </td>
               <td class="sorting due">
                 11/07/2014 
+              </td>
+              <td class="sorting estimated worker">
+                1:10
               </td>
               <td class="status">
                 <span class="started"></span>
@@ -528,13 +569,19 @@
                   Kroeger's 
                 </a>
               </td>
-              <td class="sorting assigned">
+              <td class="sorting assigned admin">
                 <a href="javascript:;">
                   James Dean
                 </a>
               </td>
+              <td class="sorting scheduled worker"> 
+                11/03/2014 
+              </td>
               <td class="sorting due"> 
                 11/06/2014 
+              </td>
+              <td class="sorting estimated worker"> 
+                1:00
               </td>
               <td class="status">
                 <span class="started paused"></span>
@@ -552,11 +599,17 @@
                   Target
                 </a>
               </td>
-              <td class="sorting assigned">
+              <td class="sorting assigned admin">
                 Unassigned
+              </td>
+              <td class="sorting scheduled worker">
+                11/07/2014 
               </td>
               <td class="sorting due">
                 11/07/2014 
+              </td>
+              <td class="sorting estimated worker">
+                :40 
               </td>
               <td class="status">
                 <span class="open"></span>
@@ -574,11 +627,17 @@
                   Target
                 </a>
               </td>
-              <td class="sorting assigned">
+              <td class="sorting assigned admin">
                 Unassigned
+              </td>
+              <td class="sorting scheduled worker"> 
+                11/03/2014 
               </td>
               <td class="sorting due"> 
                 11/07/2014 
+              </td>
+              <td class="sorting estimated worker"> 
+                <span>not estimated</span> 
               </td>
               <td class="status">
                 <span class="open"></span>
@@ -592,8 +651,10 @@
 
       <!-- ****************** PAGINATION ***************** -->
       <div class="pagination">
-        <a class="previous" href="javascript:;"></a>
-        <a class="next" href="javascript:;"></a>
+        <div class="inner">
+          <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
+          <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
+        </div>
       </div>
       
       
@@ -607,67 +668,7 @@
       <!-- ****************************************************************** -->
            
       
-      <!-- ****************** FILTERS ***************** -->
-      
-      <div class="filters-holder"><!-- start view and filter buttons -->
-      
-        <div class="view">
-          <a class="map  active" href="javascript:;"><span class="im icon-map-pin-solid"></span>Map</a>
-          <a class="list" href="javascript:;"><span class="im icon-list"></span>List</a>
-        </div><!-- end view toggle -->
-        
-        <div class="filters">
-          <div class="filter search">
-            <input type="text" placeholder="Search" />
-            <span class="im icon-search"></span>
-          </div>
-          <div class="filter dropdown">
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                Show open
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                <li class="show-open" role="presentation"><a role="menuitem" href="javascript:;">Show open</a></li><!-- default for both -->
-                <li class="assigned"  role="presentation"><a role="menuitem" href="javascript:;">Assigned</a></li><!-- Grace only -->
-                <li class="unassigned"  role="presentation"><a role="menuitem" href="javascript:;">Unassigned</a></li><!-- Grace only -->
-                <li class="scheduled"  role="presentation"><a role="menuitem" href="javascript:;">Scheduled</a></li><!-- Jimmy only -->
-                <li class="paused"  role="presentation"><a role="menuitem" href="javascript:;">Paused</a></li><!-- Jimmy only -->
-                <li class="due"  role="presentation"><a role="menuitem" href="javascript:;">Due</a></li>
-                <li class="submitted"  role="presentation"><a role="menuitem" href="javascript:;">Submitted</a></li>
-                <li class="expired"  role="presentation"><a role="menuitem" href="javascript:;">Expired</a></li><!-- Grace only -->
-              </ul>
-            </div>
-          </div>
-          <div class="filter dates"><span class="im icon-calendar"></span></div>
-          
-          <div class="choose-dates">
-            <div class="quick-select">
-              <a href="javascript:;">Today</a>
-              <a href="javascript:;">Tomorrow</a>
-              <a href="javascript:;">This week</a>
-            </div>
-            <div class="between">
-              <label>Between</label>
-              <input class="datepicker" type="text" /> and <input class="datepicker" type="text" />
-            </div>
-            <div class="actions">
-              <a href="javascript:;">Submit</a>
-            </div>
-          </div><!-- end date choosing panel -->
-        </div><!-- end filters (right side) -->
-      </div><!-- end filters holder (all) -->
-      
-      <div class="filters-choices">
-        <div class="choice searched">
-          <div class="value">Jimmy Stewart</div>
-          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-        </div>
-        <div class="choice date">
-          <div class="value">Today</div>
-          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-        </div>
-      </div><!-- end filters selections -->
+      <h1 class="super">Map view</h1>
       
       <div class="map-holder">
         <div class="map">
@@ -683,17 +684,17 @@
                 <div class="smallLabel">Due</div>
                 <div class="value">3 days (Monday)</div>
               </div>
-              <div class="Estimated"><!-- Jimmy only -->
+              <div class="Estimated worker"><!-- Jimmy only -->
                 <div class="smallLabel">Estimated Time</div>
                 <div class="value">3 hours 30 minutes</div>
               </div>
-              <div class="Assigned"><!-- Grace only -->
+              <div class="Assigned admin"><!-- Grace only -->
                 <div class="smallLabel">Assigned</div>
                 <a class="value" href="javascript:;">Jimmy Stewart</a>
               </div>
             </div>
             
-            <div class="tab directions"><!-- Jimmy only -->
+            <div class="tab directions worker"><!-- Jimmy only -->
               <a class="ticketlink">Safeway</a>
               <div class="address">16121 N. Snelling Rd</div>
               <div class="address">Cupertino, CA 95014</div>
@@ -706,14 +707,12 @@
                 <div class="value">Scheduled for Today</div>
               </div>
               
-              <a class="iconButton schedule" href="javascript:;">Schedule</a><!-- Jimmy only -->
+              <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
               <a class="iconButton comment" href="javascript:;">Add Comment</a>
               <a class="iconButton print" href="javascript:;">Print ticket</a>
-              <a class="iconButton unassign" href="javascript:;">Unassign</a><!-- Jimmy only -->
-              
-              <!-- Grace's buttons -->
-              <a class="iconButton extend" href="javascript:;">Extend</a><!-- Grace only -->
-              <a class="iconButton cancel" href="javascript:;">Cancel</a><!-- Grace only -->
+              <a class="iconButton unassign worker" href="javascript:;">Unassign</a><!-- Jimmy only -->
+              <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
+              <a class="iconButton cancel worker" href="javascript:;">Cancel</a><!-- Grace only -->
   
             </div>
             
@@ -722,10 +721,10 @@
           
           <div class="pin scheduled active"></div>
           <div class="pin unscheduled"></div>
-          <div class="pin unassigned"></div><!-- Grace only -->
+          <div class="pin unassigned admin"></div><!-- Grace only -->
           <div class="pin paused"></div><!-- For Grace, this is a "scheduled" pin -->
           <div class="pin submitted"></div>
-          <div class="pin expired"></div><!-- Grace only -->
+          <div class="pin expired admin"></div><!-- Grace only -->
           
         </div><!-- end map div -->
       </div><!-- end map holder div -->
@@ -733,10 +732,10 @@
       <div class="map keys">
         <div class="key scheduled">Scheduled</div>
         <div class="key unscheduled">Unscheduled</div>
-        <div class="key unassigned">Unassigned</div><!-- Grace only -->
-        <div class="key paused">Paused</div><!-- Jimmy only -->
+        <div class="key unassigned admin">Unassigned</div><!-- Grace only -->
+        <div class="key paused worker">Paused</div><!-- Jimmy only -->
         <div class="key submitted">Submitted</div>
-        <div class="key expired">Expired</div><!-- Grace only -->
+        <div class="key expired admin">Expired</div><!-- Grace only -->
       </div>
     
       <!-- end map View -->

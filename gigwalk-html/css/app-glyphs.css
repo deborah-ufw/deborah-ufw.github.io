@@ -54,6 +54,7 @@ th.sorting:after,
 	content: "\e615";
 }
 .Tickets .dash td.status span:before,
+.admin .Tickets .dash td.status span.started.paused:before, 
 .icon-checkmark:before {
 	content: "\e616";
 }
@@ -172,7 +173,12 @@ th.sorting:after,
 .icon-gig:before {
 	content: "\e60c";
 }
-
+.icon-previous:before {
+	content: "\e626";
+}
+.icon-next:before {
+	content: "\e627";
+}
 
 
 /* paste new characters just above this line */

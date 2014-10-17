@@ -306,13 +306,19 @@ html, body {
 	.filters-holder .view a:hover,
 	.filters-holder .view a:active,
 	.filters-choices .choice,
-	.filters-choices .choice .close {
+	.filters-choices .choice .close,
+	.pagination .previous,
+	.pagination .next {
 		background-color: #f2f7fd;
 	}
 	
 	.filters-choices .choice .close:hover,
 	.filters-choices .choice .close:focus,
-	.choose-dates .quick-select a {
+	.choose-dates .quick-select a,
+	.pagination .previous:hover,
+	.pagination .previous:focus,
+	.pagination .next:hover,
+	.pagination .next:focus {
 		background-color: #d9e9fa;
 	}
 	
@@ -435,7 +441,8 @@ html, body {
 		background: #84d5c3;
 	}
 	
-	.Tickets .dash td.status span.started:before {
+	.Tickets .dash td.status span.started:before,
+	.admin .Tickets .dash td.status span.started.paused:before {
 		color: #8ad7c5;
 	}
 	

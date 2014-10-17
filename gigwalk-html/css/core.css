@@ -6,11 +6,6 @@ html, body {
 	-webkit-text-size-adjust: 100%;
 }
 
-/* temporary! */
-.dash .choose-dates {
-	display: none;
-}
-
 /* everywhere */
 
 html, body {
@@ -25,7 +20,12 @@ header nav .user-edit,
 .instruction.view-mode .editing.icon-buttons,
 .instruction.edit-mode .viewing.icon-buttons,
 .instruction.view-mode .instruction-footer .primary.actions,
-.instruction.edit-mode .instruction-footer .instruction-summary {
+.instruction.edit-mode .instruction-footer .instruction-summary,
+.admin .Tickets .dash .worker,
+.worker .Tickets .dash .admin,
+.worker .sidenav,
+.worker .tabnav li,
+.worker header:after {
 	display: none;
 }
 
@@ -74,7 +74,8 @@ body,
 	font-size: 1.4em;
 }
 
-.filters-holder .view a .im:before {
+.filters-holder .view a .im:before,
+.pagination {
 	font-size: 1.6em;
 }
 
@@ -163,7 +164,10 @@ a.buttonly,
 .icon-buttons a,
 .filters-holder .view a,
 a.iconButton:hover,
-a.iconButton:focus {
+a.iconButton:focus,
+.pagination a,
+.pagination a:hover,
+.pagination a:focus {
 	text-decoration: none;
 }
 
@@ -236,7 +240,9 @@ a.disabled,
 .filters-holder:after,
 .table-list .controls:after,
 .table-list .action.panel:after,
-.dash .action.panel .primary.actions .right:before {
+.dash .action.panel .primary.actions .right:before,
+.pagination.inner:before,
+.pagination:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -258,7 +264,8 @@ nav.subnav ul {
 .instruction.edit-mode .instruction-content .numeric .more-info .plainLabel,
 .instruction .item.targets .sub .mini-panel.targets label,
 .choose-dates .between label,
-.action-panel .choice.searched {
+.action-panel .choice.searched,
+.pagination {
 	display: block;
 }
 
@@ -315,7 +322,8 @@ a.iconly,
 .instruction.view-mode .target .answers,
 .instruction.view-mode .time .dropdown,
 .filters-holder .filters,
-.table-list .actions {
+.table-list .actions,
+.pagination .inner {
 	display: inline-block;
 	float: right;
 }
@@ -414,7 +422,10 @@ a.iconly:before,
 .iconButton:before,
 .table-list .controls.has-buttons .summary,
 th.sorting,
-th.sorting:after {
+th.sorting:after,
+.pagination .previous,
+.pagination .next,
+.pagination a span.im:before {
 	position: relative;
 }
 
@@ -563,7 +574,9 @@ select {
 .disabled,
 .action.panel .item .hint,
 th.sorting:after,
-.table-list table td.assigned {
+.table-list table td.assigned,
+.table-list table td.scheduled span,
+.table-list table td.estimated span {
 	color: #bcbcbc;
 }
 
@@ -2856,6 +2869,46 @@ th.sorting:after {
 
 .Tickets .dash .status {
 	min-width: 105px;
+}
+
+.Tickets .dash .scheduled {
+	min-width: 125px;
+}
+
+.Tickets .dash .estimated {
+	text-align: right;
+	min-width: 115px;
+}
+
+/* worker's view adjustments */
+
+.worker .main.wrapper {
+	padding-left: 1em;
+}
+
+.worker .tabnav ul {
+	height:  10px;
+}
+
+.worker .navbar > .container-fluid .navbar-brand {
+	margin-left: .5em;
+}
+
+
+/* pagination */
+
+.pagination {
+	margin: 1em 0;
+}
+
+.pagination .previous,
+.pagination .next {
+	margin-left: 2px;
+	padding: .5em 2em; 
+}
+
+.pagination span.im:before {
+	top: 8px;
 }
 
 
