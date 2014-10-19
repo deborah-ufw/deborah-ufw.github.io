@@ -309,7 +309,12 @@
           </div>
         </div>
         
-        <!-- the panel that drops down for specifying the selected action -->
+        <!-- ****************************************************************** -->
+        <!-- **********  Action panel (drops down on action select  *********** -->
+        <!-- ****************************************************************** -->
+        
+        <!-- Panel for Admin "Assign" -->
+        
         <div class="action panel assign">
           <h1>Assign 20 Tickets <span>(estimated 53 hours 28 minutes)</span></h1>
           <div class="item required">
@@ -320,6 +325,7 @@
                 <input type="radio" name="choose" value="search" /> &nbsp;Search for assignee</label>
                 <div class="hint">Tickets already assigned will be re-assigned</div>
                 
+                <!-- Search subpanel shows if "Search for assignee" is selected -->
                 <div class="choose search">
                   <div class="filter search">
                     <input type="text" placeholder="Search" />
@@ -334,24 +340,130 @@
                       <div class="detail">30h available this week</div>
                     </div>
                   </div>
-                </div>
+                </div><!-- end Search subpanel -->
                 
-              </div>
+              </div><!-- end first radio -->
+              
+              
               <div class="radio">
                 <label>
                 <input type="radio" name="choose" value="list" /> &nbsp;Choose from a list</label>
                 <div class="hint">Tickets already assigned will be re-assigned</div>
                 
-                <div class="choose list"></div>
-              </div>
+                <!-- List subpanel shows if "Choose from a list" is selected -->
+                <div class="choose list">
+                  <table data-target="dataTable" class="dataTable no-footer" role="grid"><!-- it's a jQuery dataTable! :) -->
+                    <thead>
+                      <tr role="row">
+                        <th class="sorting user-name">
+                          Name
+                        </th>
+                        <th class="sorting location">
+                          Location
+                        </th>
+                        <th class="sorting availability"><!-- Grace only (assigned td also) -->
+                          Availability (week)
+                        </th>
+                      </tr>
+                    </thead>
+                    
+                    <tbody>
+                      <tr role="row" class="odd">
+                        <td class="sorting user-name">
+                          <input type="checkbox" value="select-all" /> 
+                          <a href="javascript:;">
+                            James Dean
+                          </a>
+                        </td>
+                        <td class="sorting location">
+                           state and zip code?
+                        </td>
+                        <td class="availability"> 
+                          32h
+                        </td>
+                      </tr>
+                      <tr role="row" class="odd">
+                        <td class="sorting user-name">
+                          <input type="checkbox" value="select-all" /> 
+                          <a href="javascript:;">
+                            Richard Gere
+                          </a>
+                        </td>
+                        <td class="sorting location">
+                           state and zip code?
+                        </td>
+                        <td class="availability"> 
+                          5h
+                        </td>
+                      </tr>
+                      <tr role="row" class="odd">
+                        <td class="sorting user-name">
+                          <input type="checkbox" value="select-all" /> 
+                          <a href="javascript:;">
+                            Val Kilmer
+                          </a>
+                        </td>
+                        <td class="sorting location">
+                           state and zip code?
+                        </td>
+                        <td class="availability"> 
+                          1h
+                        </td>
+                      </tr>
+                      <tr role="row" class="odd">
+                        <td class="sorting user-name">
+                          <input type="checkbox" value="select-all" /> 
+                          <a href="javascript:;">
+                            Jimmy Stewart
+                          </a>
+                        </td>
+                        <td class="sorting location">
+                           state and zip code?
+                        </td>
+                        <td class="availability"> 
+                          30h
+                        </td>
+                      </tr>
+                      <tr role="row" class="odd">
+                        <td class="sorting user-name">
+                          <input type="checkbox" value="select-all" /> 
+                          <a href="javascript:;">
+                            Kelly Wentworth 
+                          </a>
+                        </td>
+                        <td class="sorting location">
+                           state and zip code?
+                        </td>
+                        <td class="availability"> 
+                          30h
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  <!-- ******* PAGNINATION ******* -->
+                  <div class="pagination">
+                    <div class="inner">
+                      <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
+                      <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
+                    </div>
+                  </div>
+                  
+                </div><!-- end List subpanel -->
+                
+              </div><!-- end second radio -->
+              
+              
               <div class="radio">
                 <label>
                 <input type="radio" name="choose" value="system" /> &nbsp;Let the system choose for me</label>
                 <div class="hint">Only unassigned tickets will be assigned</div>
+                <!-- no subpanel for "Let the system choose for me" -->
               </div>
-            
-            </div>
-          </div>
+              
+            </div><!-- end radios -->
+          </div><!-- end "item required" -->
+          
           <div class="primary actions">
             <div class="right">
               <a class="buttonly cancel" href="javascript:;">Cancel</a>
@@ -359,7 +471,12 @@
             </div>
           </div>
 
-        </div><!-- end action panel -->
+        </div><!-- end Admin "Assign" panel -->
+        
+        <!-- ------------------------------------------------------------ -->
+        
+        
+        <!-- **********  Action Confirmation panel  *********** -->
         
         <!-- the panel that confirms the executed action -->
         <div class="action messages">

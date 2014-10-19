@@ -36,12 +36,20 @@ header nav .user-edit,
 	font-size: .8em;
 }
 
+.action.panel .choose.list table {
+	font-size: .9em;
+}
+
 .panel.action .choose.search .filter.search,
 .filter.search .icon-search,
 .choose-dates,
 .table-list .controls,
 .table-list .action.panel .item {
 	font-size: 1.1em;
+}
+
+.action.panel .choose.list .pagination {
+	font-size: 1.2em;
 }
 
 .nav-sections,
@@ -2981,6 +2989,10 @@ a.iconly:before {
 
 .action.panel .choose .detail {
 	margin: 3px 0 10px 0;
+}
+
+.action.panel .choose.list input[type="checkbox"]:after {
+	margin-top: -7px;
 }
 
 .table-list .action.messages .message {
