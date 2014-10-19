@@ -44,12 +44,9 @@ header nav .user-edit,
 .filter.search .icon-search,
 .choose-dates,
 .table-list .controls,
-.table-list .action.panel .item {
+.table-list .action.panel .item,
+.action.panel .warning {
 	font-size: 1.1em;
-}
-
-.action.panel .choose.list .pagination {
-	font-size: 1.2em;
 }
 
 .nav-sections,
@@ -69,7 +66,8 @@ header nav .user-edit,
 .set-repeats input[type="checkbox"],
 .key,
 .filters-choices .choice .value,
-.filters-choices .selection .detail {
+.filters-choices .selection .detail,
+.action.panel .choose.list .pagination {
 	font-size: 1.2em;
 }
 
@@ -1291,7 +1289,10 @@ header .nav .dropdown li {
 			left: 10px;
 	}
 	
-	
+	.item.required.text input[type="text"],
+	.item .required.text input[type="textarea"] {
+		margin-left: 15px;
+	}
 	
 	
 	
@@ -2954,7 +2955,8 @@ a.iconly:before {
 	padding: 0 1em 1em 1em;
 }
 
-.action.panel.assign .required {
+.action.panel .item,
+.action.panel .warning {
 	margin: 1em 0 0 3em;
 }
 
@@ -3004,6 +3006,10 @@ a.iconly:before {
 	padding: .3em 1em .5em .3em;
 }
 
+.table-list .action.panel h1 {
+	padding-bottom: 0;
+}
+
 .table-list h1 span.im {
 	padding-right: 2px;
 }
@@ -3024,6 +3030,19 @@ a.iconly:before {
 .table-list td {
 	padding: 17px 10px 7px 0;
 	vertical-align: top;
+}
+
+.action.panel .choose.list td {
+	padding: 14px 10px 12px 0;
+}
+
+.action.panel h1 + .hint {
+	padding: 0 0 15px 10px;
+}
+
+.action.panel.extend input,
+.action.panel.schedule input {
+	width: 190px;
 }
 
 th.sorting:after {

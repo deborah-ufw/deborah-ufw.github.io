@@ -221,7 +221,8 @@ html, body {
 	}
 	
 	.primary.actions a.delete,
-	.messages .message.problem {
+	.messages .message.problem,
+	.action.panel .warning {
 		color: #ff5157;
 	}
 	

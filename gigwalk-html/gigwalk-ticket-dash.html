@@ -313,7 +313,7 @@
         <!-- **********  Action panel (drops down on action select  *********** -->
         <!-- ****************************************************************** -->
         
-        <!-- Panel for Admin "Assign" -->
+        <!-- Panel for Admin "Assign" (Grace only) -->
         
         <div class="action panel assign">
           <h1>Assign 20 Tickets <span>(estimated 53 hours 28 minutes)</span></h1>
@@ -376,7 +376,7 @@
                           </a>
                         </td>
                         <td class="sorting location">
-                           state and zip code?
+                           Brentwood, SC
                         </td>
                         <td class="availability"> 
                           32h
@@ -390,7 +390,7 @@
                           </a>
                         </td>
                         <td class="sorting location">
-                           state and zip code?
+                           Blythewood, SC
                         </td>
                         <td class="availability"> 
                           5h
@@ -404,7 +404,7 @@
                           </a>
                         </td>
                         <td class="sorting location">
-                           state and zip code?
+                           Greenville, SC
                         </td>
                         <td class="availability"> 
                           1h
@@ -418,7 +418,7 @@
                           </a>
                         </td>
                         <td class="sorting location">
-                           state and zip code?
+                           Columbia, SC
                         </td>
                         <td class="availability"> 
                           30h
@@ -432,7 +432,7 @@
                           </a>
                         </td>
                         <td class="sorting location">
-                           state and zip code?
+                           Brentwood, SC
                         </td>
                         <td class="availability"> 
                           30h
@@ -472,6 +472,46 @@
           </div>
 
         </div><!-- end Admin "Assign" panel -->
+        
+        <!-- Panel for Admin "Extend" (Grace only) -->
+        
+        <div class="action panel extend">
+          <h1>Extend 20 Tickets</h1>
+          <div class="hint">End dates will be updated to the selected date.</div>
+          <div class="item required text">
+            <div class="plainLabel">Choose End Date</div>
+            <input type="text" class="datepicker" />
+          </div>
+          
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly disabled" href="javascript:;">Extend</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Panel for Worker "Schedule" (Jimmy only) -->
+        
+        <div class="action panel schedule">
+          <h1>Schedule 20 Tickets</h1>
+          <div class="hint">Tickets already scheduled will be re-scheduled.</div>
+          <div class="item required text">
+            <div class="plainLabel">Choose Date</div>
+            <input type="text" class="datepicker" />
+          </div>
+          <div class="warning">Some of the selected tickets are due before this date. These tickets will not be scheduled.</div>
+          
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly disabled" href="javascript:;">Schedule</a>
+            </div>
+          </div>
+        </div>
+        
+        
+           
         
         <!-- ------------------------------------------------------------ -->
         
@@ -856,10 +896,10 @@
                 </div>
                 
                 <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
+                <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
                 <a class="iconButton comment" href="javascript:;">Add Comment</a>
                 <a class="iconButton print" href="javascript:;">Print ticket</a>
                 <a class="iconButton unassign worker" href="javascript:;">Unassign</a><!-- Jimmy only -->
-                <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
                 <a class="iconButton cancel admin" href="javascript:;">Cancel</a><!-- Grace only -->
                 
                 <a class="buttonly main" href="javascript:;">Main action</a>
