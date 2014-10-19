@@ -66,7 +66,7 @@
 
  
 </head>
-<body class="body">
+<body class="body admin">
 
 <!-- top navigation -->
 <header>
@@ -896,11 +896,43 @@
                 </div>
                 
                 <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
+                <div class="schedule-action detail">
+                  <input type="text" class="datepicker" placeholder="Select date" />
+                  <div class="warning">This ticket is due before this date.</div>
+                  <div class="button-holder">
+                    <a class="cancel" href="javascript:;">Cancel</a>
+                    <a class="buttonly disabled" href="javascript:;">Schedule</a>
+                  </div>
+                </div>
+                <div class="schedule-action confirm">Scheduled</div>
+                
                 <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
+                <div class="schedule-action detail">
+                  <input type="text" class="datepicker" placeholder="Select date" />
+                  <div class="button-holder">
+                    <a class="cancel" href="javascript:;">Cancel</a>
+                    <a class="buttonly disabled" href="javascript:;">Extend</a>
+                  </div>
+                </div>
+                <div class="extend-action confirm">Extended</div>
+                
                 <a class="iconButton comment" href="javascript:;">Add Comment</a>
+                <div class="comment-action detail">
+                  <textarea placeholder="Comment"></textarea>
+                  <div class="button-holder">
+                    <a class="cancel" href="javascript:;">Cancel</a>
+                    <a class="buttonly disabled" href="javascript:;">Add</a>
+                  </div>
+                </div>  
+                <div class="comment-action confirm">Comment added</div>
+                
                 <a class="iconButton print" href="javascript:;">Print ticket</a>
+                
                 <a class="iconButton unassign worker" href="javascript:;">Unassign</a><!-- Jimmy only -->
+                <div class="unassign-action confirm">Unassigned</div>
+                
                 <a class="iconButton cancel admin" href="javascript:;">Cancel</a><!-- Grace only -->
+                <div class="cancel-action confirm">Canceled</div>
                 
                 <a class="buttonly main" href="javascript:;">Main action</a>
               </div><!-- end actions tab -->

@@ -32,6 +32,11 @@ header nav .user-edit,
 	display: none;
 }
 
+.tab-pane.actions .confirm,
+.tab-pane.actions .detail {
+	display: none;
+}
+
 .panel.action .choose.search .filters-choices {
 	font-size: .8em;
 }
@@ -159,7 +164,8 @@ th.sorting:after,
 .Tickets .dash .table-list table td,
 .map .tab-pane .requirements-list li,
 .map .tab-pane .description,
-.map .tab-pane .address {
+.map .tab-pane .address,
+.button-holder a {
 	line-height: 1.2em;
 }
 
@@ -183,6 +189,10 @@ header .nav .number,
 .table-list table .status,
 .map .tab-pane a.buttonly.main {
 	text-align: center;
+}
+
+.map .tab-pane.actions .button-holder {
+	text-align: right;
 }
 
 nav li a,
@@ -209,7 +219,8 @@ a.iconButton:focus,
 .map .tabs-control a:focus,
 .map .tab-pane a,
 .map .tab-pane a:hover,
-.map .tab-pane a:focus {
+.map .tab-pane a:focus,
+.choose-dates .actions a:hover {
 	text-decoration: none;
 }
 
@@ -487,7 +498,10 @@ th.sorting:after,
 .map a.collapse:before,
 .map ul.nav.nav-tabs,
 .map .ticketlink, 
-.map .ticketlink .icon-ticket:before {
+.map .ticketlink .icon-ticket:before,
+.tab-pane.action .detail,
+.tab-pane.actions .comment-action.detail:before,
+.tab-pane.actions textarea {
 	position: relative;
 }
 
@@ -920,7 +934,8 @@ header .nav ul.dropdown-menu li,
 .filters-choices .choice,
 .filters-choices .choice .close,
 .pagination .previous,
-.pagination .next {
+.pagination .next,
+.button-holder a {
 	border: 1px solid;
 }
 
@@ -1283,7 +1298,8 @@ header .nav .dropdown li {
 		margin-right: .5em;
 	}
 	
-	.item.required > .plainLabel:after {
+	.item.required > .plainLabel:after,
+	.tab-pane.actions .detail:before {
 		content: '*';
 		font-size: 1.4em;
 			left: 10px;
@@ -2912,7 +2928,8 @@ a.iconly:before {
 	z-index: 1;
 }
 
-.choose-dates a {
+.choose-dates a,
+.tab-pane.actions .button-holder a {
 	padding: 5px 1em;
 }
 
@@ -3186,6 +3203,37 @@ th.sorting:after {
 		left: 0;
 }
 
+.map .tab-pane.actions .detail {
+	margin: .5em 0;
+}
+
+.map .tab-pane.actions input[type="text"] {
+	margin: 5px 0;
+}
+
+.map .tab-pane.actions .datepicker {
+	width: 160px;
+}
+
+.map .tab-pane.actions textarea {
+	width: 85%;
+	height: 5em;
+		left: 20px;
+}
+
+.map .tab-pane.actions .button-holder {
+	margin: 8px 0 12px 0;
+}
+
+.tab-pane.actions .confirm {
+	margin: 5px 0 0 0;
+	padding: 3px 10px 3px 37px;
+}
+
+.tab-pane.actions .comment-action.detail:before {
+	top: -50px;
+	left: 18px;
+}
 
 /* heredeb */
 	
