@@ -2944,6 +2944,10 @@ a.iconly:before {
 	width: 125px;
 }
 
+.choose-dates .warning {
+	margin: 1em 0 -1em 0;
+}
+
 .choose-dates .actions {
 	margin-top: 1.5em;
 }

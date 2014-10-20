@@ -236,7 +236,8 @@ html, body {
 	.primary.actions a.delete,
 	.messages .message.problem,
 	.action.panel .warning,
-	.tab-pane.actions .warning {
+	.tab-pane.actions .warning,
+	.choose-dates .warning {
 		color: #ff5157;
 	}
 	
@@ -415,6 +416,7 @@ html, body {
 	.instruction-footer .item.count .described,
 	.instruction.view-mode .answer.exception .plainLabel:after,
 	.pin.scheduled:after,
+	.admin .pin.paused:after,
 	.confirmation h1,
 	.confirmation .icon-checkmark,
 	.Tickets .dash td.status span.submitted:before,
