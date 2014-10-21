@@ -298,7 +298,8 @@ html, body {
 	 .filters-choices,
 	 .filters-choices .icon-cancel:before,
 	 .choose-dates .quick-select a,
-	 .map .nav-tabs > li.active > a:before {
+	 .map .nav-tabs > li.active > a:before,
+	 .table-list .controls .actions.active a {
 		color: #4890e2;
 	}
 	

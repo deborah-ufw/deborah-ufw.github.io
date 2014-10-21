@@ -255,7 +255,8 @@ th.sorting {
 
 .defaultmouse,
 a.disabled,
-.tabnav li.active a {
+.tabnav li.active a,
+.iconButton.disabled {
 	cursor: default;
 }
 
@@ -640,7 +641,8 @@ select,
 .filter.dropdown .btn.btn-default.dropdown-toggle,
 .filter.search,
 .key,
-.map .tabs-control a {
+.map .tabs-control a,
+.table-list .controls .actions a {
 	color: #9e9e9e;
 }
 
@@ -662,7 +664,9 @@ select,
 th.sorting:after,
 .table-list table td.assigned,
 .table-list table td.scheduled span,
-.table-list table td.estimated span {
+.table-list table td.estimated span,
+a.iconButton.disabled:hover,
+a.iconButton.disabled:focus {
 	color: #bcbcbc;
 }
 
@@ -715,6 +719,12 @@ input[type="radio"]:after,
 .map .nav-tabs > li.active > a,
 .map-drawer {
 	background: #ffffff;
+}
+
+.iconButton.disabled,
+.iconButton.disabled:hover,
+.iconButton.disabled:focus {
+	background-color: transparent;
 }
 
 .navbar {

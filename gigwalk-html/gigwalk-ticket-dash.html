@@ -303,7 +303,7 @@
             <!-- update html (add span "value" to div "selected") -->
             <div class="selected">&nbsp;|&nbsp; <span class="value">(#)</span><span> selected</span></div>
           </div>
-          <div class="actions">
+          <div class="actions active">
             <a class="iconButton cancel admin" href="javascript:;">Cancel</a><!-- Grace only -->
             <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
             <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
@@ -494,6 +494,21 @@
             </div>
           </div>
         </div>
+        
+        <!-- html update - add panel for Admin "Cancel" (Grace only) -->
+        <!-- Panel for Admin "Cancel" (Grace only) -->
+        <div class="action panel cancel">
+          <h1>Cancel 20 Tickets</h1>
+          <div class="hint">Tickets that have not been started can be canceled.</div>
+          <div class="warning">Some of the selected tickets have been started. These tickets will not be canceled.</div>
+          
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly disabled" href="javascript:;">Cancel Tickets</a>
+            </div>
+          </div>
+        </div>  
         
         <!-- Panel for Worker "Schedule" (Jimmy only) -->
         
@@ -935,6 +950,7 @@
                 <a class="iconButton unassign worker" href="javascript:;">Unassign</a><!-- Jimmy only -->
                 <div class="unassign-action confirm">Unassigned</div>
                 
+                <!-- inject class "disabled" into the a tag if ticket is started, and do not allow user to click it -->
                 <a class="iconButton cancel admin" href="javascript:;">Cancel</a><!-- Grace only -->
                 <div class="cancel-action confirm">Canceled</div>
                 
