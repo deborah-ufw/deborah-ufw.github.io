@@ -215,7 +215,8 @@ a.iconButton:focus,
 .map .tab-pane a,
 .map .tab-pane a:hover,
 .map .tab-pane a:focus,
-.choose-dates .actions a:hover {
+.choose-dates .actions a:hover,
+.admin .table-list td.location a:hover {
 	text-decoration: none;
 }
 
@@ -256,7 +257,8 @@ th.sorting {
 .defaultmouse,
 a.disabled,
 .tabnav li.active a,
-.iconButton.disabled {
+.iconButton.disabled,
+.admin .table-list td.location {
 	cursor: default;
 }
 

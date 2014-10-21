@@ -138,7 +138,8 @@ html, body {
 	/* grays */
 	
 	body,
-	a.buttonly {
+	a.buttonly,
+	.admin .table-list td.location a {
 		color: #4a4a4a;
 	}
 	
