@@ -2820,6 +2820,21 @@ a.iconly:before {
 }
 
 
+/* worker's Tickets view adjustments */
+
+.worker .main.wrapper {
+	padding-left: 1em;
+}
+
+.worker .tabnav ul {
+	height:  10px;
+}
+
+.worker .navbar > .container-fluid .navbar-brand {
+	margin-left: .5em;
+}
+
+
 /* dash filters */
 
 .filters-holder .view {
@@ -3099,20 +3114,6 @@ th.sorting:after {
 .Tickets .dash td.estimated {
 	text-align: right;
 	min-width: 115px;
-}
-
-/* worker's view adjustments */
-
-.worker .main.wrapper {
-	padding-left: 1em;
-}
-
-.worker .tabnav ul {
-	height:  10px;
-}
-
-.worker .navbar > .container-fluid .navbar-brand {
-	margin-left: .5em;
 }
 
 
