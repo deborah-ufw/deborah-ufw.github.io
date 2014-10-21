@@ -28,7 +28,9 @@ header nav .user-edit,
 .worker header:after,
 .admin .map .nav.nav-tabs > li > a.directions,
 .worker .map .tab-pane.actions .iconButton.admin,
-.admin .map .tab-pane.actions .iconButton.worker {
+.admin .map .tab-pane.actions .iconButton.worker,
+.worker .Tickets .table-list tr.canceled,
+.worker .Tickets .table-list tr.expired {
 	display: none;
 }
 
