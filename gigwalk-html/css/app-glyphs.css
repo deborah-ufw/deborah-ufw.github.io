@@ -139,6 +139,8 @@ th.sorting:after,
 }
 .map a.collapse:before,
 .iconButton.cancel:before,
+.Tickets .dash td.status span.canceled:before,
+.Tickets .dash td.status span.expired:before,
 .icon-cancel:before {
 	content: "\e601";
 }

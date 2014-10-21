@@ -1,2 +1,7 @@
-/* Gigwalk css */
+/* CSMK css */
 
+
+
+.navbar > .container-fluid .navbar-brand {
+		background: url(../images/logo-header.png) left 0 no-repeat;
+	}

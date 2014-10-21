@@ -251,6 +251,10 @@ html, body {
 		background: #ff797e;
 	}
 	
+	.Tickets .dash td.status span.expired:before {
+		
+	}
+	
 	.pin.expired:after {
 		color: #ff5157;
 	}

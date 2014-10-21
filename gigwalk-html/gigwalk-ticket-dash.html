@@ -298,9 +298,7 @@
       <div class="table-list">
         <div class="controls has-buttons">
           <div class="summary">
-            <!-- update html (add span "value" to div "visible") -->
             <div class="visible"><span class="value">(#)</span> <span class="descr-before"></span>Tickets <span class="descr-after"></span></div>
-            <!-- update html (add span "value" to div "selected") -->
             <div class="selected">&nbsp;|&nbsp; <span class="value">(#)</span><span> selected</span></div>
           </div>
           <div class="actions active">
@@ -341,7 +339,6 @@
                         <div class="value">Jimmy Stewart</div>
                         <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
                       </div>
-                      <!-- an unimportant update html here, revised text display of time increment -->
                       <div class="detail">30 hours available this week</div>
                     </div>
                   </div>
@@ -356,7 +353,6 @@
                 <div class="hint">Tickets already assigned will be re-assigned</div>
                 
                 <!-- List subpanel shows if "Choose from a list" is selected -->
-                <!-- some unimportant update html changes in here, revised text display of the time increments -->
                 <div class="choose list">
                   <table data-target="dataTable" class="dataTable no-footer" role="grid"><!-- it's a jQuery dataTable! :) -->
                     <thead>
@@ -497,7 +493,6 @@
           </div>
         </div>
         
-        <!-- update html - add panel for Admin "Cancel" (Grace only) -->
         <!-- Panel for Admin "Cancel" (Grace only) -->
         <div class="action panel cancel">
           <h1>Cancel 20 Tickets</h1>
@@ -507,7 +502,6 @@
           <div class="primary actions">
             <div class="right">
               <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <!-- update html - no required selection, so no need to disable the main button -->
               <a class="buttonly" href="javascript:;">Cancel Tickets</a>
             </div>
           </div>
@@ -791,7 +785,7 @@
                 :40 
               </td>
               <td class="status">
-                <span class="open"></span>
+                <span class="canceled"></span>
               </td>
             </tr>
             <tr role="row" class="even">
@@ -819,7 +813,7 @@
                 <span>not estimated</span> 
               </td>
               <td class="status">
-                <span class="open"></span>
+                <span class="expired"></span>
               </td>
             </tr>
             
