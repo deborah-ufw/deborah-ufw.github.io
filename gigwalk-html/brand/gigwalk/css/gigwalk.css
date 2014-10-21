@@ -237,7 +237,8 @@ html, body {
 	.messages .message.problem,
 	.action.panel .warning,
 	.tab-pane.actions .warning,
-	.choose-dates .warning {
+	.choose-dates .warning,
+	.Tickets .dash td.status span.expired:before {
 		color: #ff5157;
 	}
 	
@@ -249,10 +250,6 @@ html, body {
 	.instruction.required.incomplete .header,
 	.invalid .btn.btn-default.dropdown-toggle {
 		background: #ff797e;
-	}
-	
-	.Tickets .dash td.status span.expired:before {
-		
 	}
 	
 	.pin.expired:after {
