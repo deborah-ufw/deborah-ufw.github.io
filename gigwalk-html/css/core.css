@@ -527,7 +527,8 @@ header .navbar-collapse.in {
 .instruction.edit-mode .instruction-content .numeric .more-info .plainLabel,
 .map,
 .map .tabs-control,
-.table-list table {
+.table-list table,
+.map .tab-pane .description.ellipsify {
 	width: 100%;
 }
 
@@ -554,6 +555,12 @@ header .navbar-collapse.in {
 .view-mode .instruction-content .time .dropdown-menu,
 .more-info:before,.instruction.edit-mode .numeric .dropdown-menu {
 	left: auto;
+}
+
+/* ellipsify */
+
+.map .tab-pane .description.ellipsify {
+	height: 65px;
 }
 
 .opacity100,
