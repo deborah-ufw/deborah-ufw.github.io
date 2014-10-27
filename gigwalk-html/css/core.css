@@ -146,7 +146,8 @@ th.sorting:after {
 th.sorting:after,
 .Tickets .dash td.status span:before,
 .map .nav.nav-tabs,
-.map .tabs-control {
+.map .tabs-control,
+.map .ticket-link {
 	line-height: 1em; 
 }
 
@@ -677,7 +678,9 @@ th.sorting:after,
 .table-list table td.scheduled span,
 .table-list table td.estimated span,
 a.iconButton.disabled:hover,
-a.iconButton.disabled:focus {
+a.iconButton.disabled:focus,
+.map .tab-pane .estimated .value span,
+.map .tab-pane .assigned .value {
 	color: #bcbcbc;
 }
 
@@ -728,6 +731,8 @@ input[type="radio"]:after,
 .choose-dates,
 .map .pin:before,
 .map .nav-tabs > li.active > a,
+.map .nav-tabs > li.active > a:hover,
+.map .nav-tabs > li.active > a:focus,
 .map-drawer {
 	background: #ffffff;
 }

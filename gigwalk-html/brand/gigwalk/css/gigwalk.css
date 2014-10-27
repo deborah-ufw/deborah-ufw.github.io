@@ -314,6 +314,11 @@ html, body {
 		background: #4890e2;
 	}
 	
+	.map .nav-tabs > li > a:hover,
+	.map .nav-tabs > li > a:focus {
+		background: #539ce9;
+	}
+	
 	select,
 	.btn.btn-default.dropdown-toggle,
 	.instructions .item .actions a.buttonly,
