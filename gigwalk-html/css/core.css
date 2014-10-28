@@ -705,9 +705,16 @@ a.iconButton.disabled:focus,
 	border: 8px solid #f7f7f7;
 }
 
+.search.disabled input,
+.search.disabled input:hover,
+.search.disabled input:focus,
 .instruction .item.targets .sub,
 .datepicker td.day.disabled {
 	background-color: #efefef;
+}
+
+.search.disabled {
+	border-color: #efefef;
 }
 
 input.supercheck:after,
@@ -764,7 +771,8 @@ input[type="radio"]:after,
 .disabled:hover,
 .disabled:focus,
 .primary.actions a.buttonly.disabled:hover,
-.primary.actions a.buttonly.disabled:focus {
+.primary.actions a.buttonly.disabled:focus,
+.search.disabled .im.icon-search {
 	background-color: #cccccc;
 }
 
