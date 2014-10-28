@@ -363,7 +363,8 @@ a.iconly,
 .map-drawer,
 .map ul.nav.nav-tabs,
 .map .nav.nav-tabs > li > a,
-.map .pin:before {
+.map .pin:before,
+.Tickets .filters .wrapper {
 	display: inline-block;
 }
 
