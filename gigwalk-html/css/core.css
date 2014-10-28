@@ -30,7 +30,8 @@ header nav .user-edit,
 .worker .map .tab-pane.actions .iconButton.admin,
 .admin .map .tab-pane.actions .iconButton.worker,
 .worker .Tickets .table-list tr.canceled,
-.worker .Tickets .table-list tr.expired {
+.worker .Tickets .table-list tr.expired,
+.worker .nav-active-holder:after {
 	display: none;
 }
 
@@ -183,7 +184,6 @@ th {
 .instruction.view-mode .numeric input,
 .instruction.view-mode .time input,
 header .nav .number,
-.filters-choices,
 .choose-dates .actions a,
 .table-list table .due,
 .table-list table .scheduled,
@@ -192,7 +192,9 @@ header .nav .number,
 	text-align: center;
 }
 
-.map .tab-pane .button-holder {
+.map .tab-pane .button-holder,
+.Tickets .dash td.estimated,
+.filters-choices {
 	text-align: right;
 }
 
@@ -586,7 +588,9 @@ header .navbar-collapse.in {
 .subnav li a,
 .primary.actions a,
 .choose-dates,
-.map .pin  {
+.map .pin,
+.table-list th,
+.table-list td {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
@@ -986,6 +990,10 @@ header .nav li {
 	border-left: 1px solid;
 }
 
+.worker header .nav li {
+	border-left-color: transparent;
+}
+
 .topborder {
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
@@ -1140,7 +1148,8 @@ header .nav .dropdown li {
 	header .nav .dropdown.open ul.dropdown-menu li.header,
 	.sidenav .user-info,
 	.tabnav li.buttonly a .descriptive,
-	.sidenav li.divider {
+	.sidenav li.divider,
+	.worker .tabnav ul {
 		display: none;
 	}
 	
@@ -1507,6 +1516,10 @@ div.main.wrapper + div.inner {
 			top: 2px;
 		left: 60px;
 		z-index: 100;
+	}
+	
+	.worker .nav-active-holder {
+		top: 4px;
 	}
 	
 	.nav-active-holder:after {
@@ -2582,6 +2595,22 @@ a.iconly:before {
 	.instruction .primary.actions {
 		margin: 1em 0 1em 2em;
 	}
+	
+	/* tickets dash global adjustments for desktop view heredeb full */
+	
+	/* worker */
+	
+	.worker .main.wrapper {
+		padding-left: 1em;
+	}
+	
+	.worker .tabnav ul {
+		height:  10px;
+	}
+	
+	.worker .navbar > .container-fluid .navbar-brand {
+		margin-left: .5em;
+	}
 
 
 }
@@ -2864,23 +2893,17 @@ a.iconly:before {
 	.instruction-footer .item.count {
 		padding-top: .2em;
 	}
+	
+	/* tickets dash global adjustments for device view heredeb small */
 
+	.table-list {
+		margin-left: -.5em;
+	}
+	
+	.table-list .summary {
+		padding-left: .5em;
+	}
 
-}
-
-
-/* worker's Tickets view adjustments */
-
-.worker .main.wrapper {
-	padding-left: 1em;
-}
-
-.worker .tabnav ul {
-	height:  10px;
-}
-
-.worker .navbar > .container-fluid .navbar-brand {
-	margin-left: .5em;
 }
 
 
@@ -2932,6 +2955,7 @@ a.iconly:before {
 
 .filter.search input[type="text"] {
 	margin: 0 -8px 0 0;
+	width: 150px;
 }
 
 .filter.dropdown .btn.btn-default.dropdown-toggle {
@@ -3066,7 +3090,7 @@ a.iconly:before {
 }
 
 .action.panel .filter.search input {
-	width: 200px;
+	width: 170px;
 }
 
 .action.panel .choose .detail {
@@ -3132,8 +3156,6 @@ th.sorting:after {
 
 .Tickets .dash .table-list table .project-title {
 	padding-left: 45px;
-	min-width: 210px;
-	max-width: 400px;
 }
 
 .Tickets .dash .table-list table .project-title input[type="checkbox"] {
@@ -3142,6 +3164,11 @@ th.sorting:after {
 
 .Tickets .dash td.status span:before {
 	top: -4px;
+}
+
+.Tickets .dash .table-list table .project-title {
+	min-width: 210px;
+	max-width: 400px;
 }
 
 .Tickets .dash td.location {
@@ -3161,7 +3188,6 @@ th.sorting:after {
 }
 
 .Tickets .dash td.estimated {
-	text-align: right;
 	min-width: 115px;
 }
 
@@ -3311,9 +3337,6 @@ th.sorting:after {
 	left: 18px;
 }
 
-/* heredeb */
-	
-
 /* map key */
 
 .key {
@@ -3327,6 +3350,100 @@ th.sorting:after {
 	width: 30px;
 	height: 30px;
 }
+
+/* tickets dash assorted filter adjustments heredeb map */
+
+/* worker */
+
+@media (max-width: 751px) {
+	
+	.worker .filters-holder .view .im:before {
+		display: none;
+	}
+	
+	.filters-holder .view {
+		margin-top: .7em;
+	}
+	
+	.filters-holder .view a.map,
+	.filters-holder .view a {
+		padding-left: 1em;
+	}
+	
+	.Tickets .filters .filter.search input {
+		width: 110px;
+	}
+	
+	.Tickets .filters .filter.dropdown .btn.btn-default.dropdown-toggle {
+		width: 155px;
+	}
+	
+}
+
+@media (max-width: 560px) {
+	
+	
+}
+
+/* tickets dash assorted list adjustments */
+
+/* worker */
+
+@media (min-width: 821px) {
+	
+	.worker .Tickets .dash .table-list table .project-title {
+		min-width: 210px;
+		max-width: 400px;
+	}
+	
+	.worker .Tickets .dash td.location {
+		min-width: 115px;
+	}
+	
+	.worker .Tickets .dash td.status {
+		min-width: 105px;
+	}
+	
+	.Tickets .dash td.scheduled {
+		min-width: 125px;
+	}
+	
+	.Tickets .dash td.estimated {
+		min-width: 115px;
+	}
+
+
+}
+
+@media (max-width: 820px) {
+	
+	.worker .Tickets .dash .table-list table .project-title {
+		min-width: 210px;
+		max-width: 400px;
+	}
+	
+	.worker .Tickets .dash td.location {
+		min-width: 115px;
+	}
+	
+	.worker .Tickets .dash td.status {
+		min-width: 105px;
+	}
+	
+	.Tickets .dash td.scheduled {
+		min-width: 125px;
+	}
+	
+	.Tickets .dash td.estimated {
+		min-width: 115px;
+	}
+
+
+}
+
+/* heredeb */
+
+
 
 
 

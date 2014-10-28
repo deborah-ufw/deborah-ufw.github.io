@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="X-UA-Compatible" content="IE=9" /> 
 
-<title>Tickets Dash</title>
+<title>Tickets Dash (working)</title>
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
@@ -29,7 +29,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-datepicker.js"></script>
 <script src="js/DataTables.all.min.js"></script>
-<script src="js/interactions.js"></script>
+<script src="js/interactions-working.js"></script>
 
 <link href="css/bootstrap.css" media="screen" rel="stylesheet" />
 <link href="css/font-awesome.css" media="screen" rel="stylesheet" />
@@ -42,6 +42,8 @@
 
 <link href="brand/gigwalk/css/fonts-gigwalk.css" media="screen" rel="stylesheet" />
 <link href="brand/gigwalk/css/gigwalk.css" media="screen" rel="stylesheet" />
+
+<link href="css/working.css" media="screen" rel="stylesheet" />
 
 
 <!-- Manage IE
@@ -66,7 +68,7 @@
 
  
 </head>
-<body class="body">
+<body class="body working worker">
 
 <!-- top navigation -->
 <header>
@@ -229,8 +231,11 @@
           <a class="list active" href="javascript:;"><span class="im icon-list"></span>List</a>
         </div><!-- end view toggle -->
         
-        <!-- Valerie (moved div filter search from here to line 252) -->
         <div class="filters">
+          <div class="filter search">
+            <input type="text" placeholder="Search" />
+            <span class="im icon-search"></span>
+          </div>
           <div class="filter dropdown">
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -248,10 +253,6 @@
                 <li class="expired"  role="presentation"><a role="menuitem" href="javascript:;">Expired</a></li><!-- Grace only -->
               </ul>
             </div>
-          </div>
-          <div class="filter search">
-            <input type="text" placeholder="Search" />
-            <span class="im icon-search"></span>
           </div>
           <div class="filter dates"><span class="im icon-calendar"></span></div>
           
