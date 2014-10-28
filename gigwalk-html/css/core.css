@@ -264,7 +264,8 @@ th.sorting {
 a.disabled,
 .tabnav li.active a,
 .iconButton.disabled,
-.admin .table-list td.location {
+.admin .table-list td.location,
+.map .tab-pane a.buttonly.main.disabled {
 	cursor: default;
 }
 
@@ -684,7 +685,8 @@ th.sorting:after,
 a.iconButton.disabled:hover,
 a.iconButton.disabled:focus,
 .map .tab-pane .estimated .value span,
-.map .tab-pane .assigned .value {
+.map .tab-pane .assigned .value,
+.map .tab-pane .scheduled .value span {
 	color: #bcbcbc;
 }
 
@@ -750,6 +752,12 @@ input[type="radio"]:after,
 
 .navbar {
 	border-radius: 0;
+}
+
+.map .tab-pane a.buttonly.main.disabled,
+.map .tab-pane a.buttonly.main.disabled:hover,
+.map .tab-pane a.buttonly.main.disabled:focus {
+	background: #cccccc;
 }
 
 .disabled,
