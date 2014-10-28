@@ -495,7 +495,7 @@ html, body {
 	}
 	
 	.messages .message.confirmation,
-	.tab-pane.actions .confirm {
+	.tab-pane .confirm {
 		background: #dbf2ed;
 	}
 	

@@ -38,7 +38,9 @@ header nav .user-edit,
 	font-size: .8em;
 }
 
-.action.panel .choose.list table {
+.action.panel .choose.list table,
+.map .assign-action.detail .filters-choices,
+.map .assign-action.detail .filters-choices span.im {
 	font-size: .9em;
 }
 
@@ -47,7 +49,8 @@ header nav .user-edit,
 .choose-dates,
 .table-list .controls,
 .table-list .action.panel .item,
-.action.panel .warning {
+.action.panel .warning,
+.map .tab-pane .search {
 	font-size: 1.1em;
 }
 
@@ -189,7 +192,7 @@ header .nav .number,
 	text-align: center;
 }
 
-.map .tab-pane.actions .button-holder {
+.map .tab-pane .button-holder {
 	text-align: right;
 }
 
@@ -502,7 +505,8 @@ th.sorting:after,
 .map .ticketlink .icon-ticket:before,
 .tab-pane.action .detail,
 .tab-pane.actions .comment-action.detail:before,
-.tab-pane.actions textarea {
+.tab-pane.actions textarea,
+.map .tab-pane .assign-action.detail {
 	position: relative;
 }
 
@@ -733,7 +737,8 @@ input[type="radio"]:after,
 .map .nav-tabs > li.active > a,
 .map .nav-tabs > li.active > a:hover,
 .map .nav-tabs > li.active > a:focus,
-.map-drawer {
+.map-drawer,
+.map .tab-pane .assign-action.detail {
 	background: #ffffff;
 }
 
@@ -762,7 +767,8 @@ input[type="radio"]:after,
 	.invalid > input[type="text"],
 	.invalid > input[type="textarea"],
 	input[type="text"].invalid,
-	input[type="textarea"].invalid {
+	input[type="textarea"].invalid,
+	.map .tab-pane .assign-action.detail .plainLabel:after {
 		color: #f03;
 	}
 	
@@ -1320,7 +1326,8 @@ header .nav .dropdown li {
 	}
 	
 	.item.required > .plainLabel:after,
-	.tab-pane.actions .detail:before {
+	.tab-pane.actions .detail:before,
+	.map .tab-pane .assign-action.detail .plainLabel:after {
 		content: '*';
 		font-size: 1.4em;
 			left: 10px;
@@ -2965,7 +2972,7 @@ a.iconly:before {
 }
 
 .choose-dates a,
-.tab-pane.actions .button-holder a {
+.tab-pane .button-holder a {
 	padding: 5px 1em;
 }
 
@@ -3229,7 +3236,7 @@ th.sorting:after {
 		left: 0;
 }
 
-.map .tab-pane.actions .detail {
+.map .tab-pane .detail {
 	margin: .5em 0;
 }
 
@@ -3237,8 +3244,35 @@ th.sorting:after {
 	margin: 5px 0;
 }
 
-.map .tab-pane.actions .datepicker {
+.map .tab-pane .assign-action.detail {
+	padding: 2em 0;
+	height: 280px;
+		bottom: 30px;
+		left: 0;
+}
+
+.map .tab-pane .assign-action.detail .plainLabel {
+	margin-bottom: 3px;
+}
+
+.map .tab-pane .datepicker {
 	width: 160px;
+}
+
+.map .tab-pane .search input {
+	width: 183px;
+}
+
+.map .tab-pane .filter.search .icon-search {
+	padding-bottom: 12px;
+}
+
+.map .tab-pane .search {
+	margin-bottom: 5px;
+}
+
+.map .tab-pane .filters-choices a.close {
+	padding-top: 0;
 }
 
 .map .tab-pane.actions textarea {
@@ -3247,11 +3281,11 @@ th.sorting:after {
 		left: 20px;
 }
 
-.map .tab-pane.actions .button-holder {
+.map .tab-pane .button-holder {
 	margin: 8px 0 12px 0;
 }
 
-.tab-pane.actions .confirm {
+.tab-pane .confirm {
 	margin: 5px 0 0 0;
 	padding: 3px 10px 3px 37px;
 }
