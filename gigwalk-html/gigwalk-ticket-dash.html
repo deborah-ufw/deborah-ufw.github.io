@@ -249,28 +249,31 @@
               </ul>
             </div>
           </div>
-          <div class="filter search">
-            <input type="text" placeholder="Search" />
-            <span class="im icon-search"></span>
-          </div>
-          <div class="filter dates"><span class="im icon-calendar"></span></div>
-          
-          <div class="choose-dates">
-            <div class="quick-select">
-              <a href="javascript:;">Today</a>
-              <a href="javascript:;">Tomorrow</a>
-              <a href="javascript:;">This week</a>
+          <!-- Valerie (added a wrapper div, ends on line ) -->
+          <div class="wrapper">
+            <div class="filter search">
+              <input type="text" placeholder="Search" />
+              <span class="im icon-search"></span>
             </div>
-            <div class="between">
-              <label>Between</label>
-              <input class="datepicker" type="text" /> and <input class="datepicker" type="text" />
-            </div>
-            <!-- update html - add div "warning" - also update css -->
-            <div class="warning">Please select a valid date range.</div>
-            <div class="actions">
-              <a href="javascript:;">Submit</a>
-            </div>
-          </div><!-- end date choosing panel -->
+            <div class="filter dates"><span class="im icon-calendar"></span></div>
+            
+            <div class="choose-dates">
+              <div class="quick-select">
+                <a href="javascript:;">Today</a>
+                <a href="javascript:;">Tomorrow</a>
+                <a href="javascript:;">This week</a>
+              </div>
+              <div class="between">
+                <label>Between</label>
+                <input class="datepicker" type="text" /> and <input class="datepicker" type="text" />
+              </div>
+              <!-- update html - add div "warning" - also update css -->
+              <div class="warning">Please select a valid date range.</div>
+              <div class="actions">
+                <a href="javascript:;">Submit</a>
+              </div>
+            </div><!-- end date choosing panel -->
+          </div><!-- end wrapper -->
         </div><!-- end filters (right side) -->
       </div><!-- end filters holder (all) -->
       

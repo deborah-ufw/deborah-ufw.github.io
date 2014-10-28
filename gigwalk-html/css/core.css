@@ -751,7 +751,8 @@ input[type="radio"]:after,
 .map .nav-tabs > li.active > a:hover,
 .map .nav-tabs > li.active > a:focus,
 .map-drawer,
-.map .tab-pane .assign-action.detail {
+.map .tab-pane .assign-action.detail,
+.filters-holder .view a {
 	background: #ffffff;
 }
 
@@ -3381,6 +3382,7 @@ th.sorting:after {
 }
 
 @media (max-width: 560px) {
+	
 	
 	
 }
