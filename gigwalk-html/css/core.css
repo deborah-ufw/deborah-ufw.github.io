@@ -2957,16 +2957,10 @@ a.iconly:before {
 
 .filter.search input[type="text"] {
 	margin: 0 -8px 0 0;
-	width: 150px;
-}
-
-.filter.dropdown .btn.btn-default.dropdown-toggle {
-	width: 195px;
 }
 
 .filter.dropdown .dropdown-menu {
 	padding-bottom: 1em;
-	width: 195px;
 }
 
 .filter.dropdown .btn.btn-default.dropdown-toggle .caret,
@@ -3028,10 +3022,6 @@ a.iconly:before {
 
 .choose-dates .between label {
 	margin-bottom: 0;
-}
-
-.choose-dates .between input {
-	width: 125px;
 }
 
 .choose-dates .warning {
@@ -3355,9 +3345,25 @@ th.sorting:after {
 
 /* tickets dash assorted filter adjustments heredeb map */
 
-/* worker */
+/* filters full width */
 
-@media (max-width: 751px) {
+.filter.dropdown .btn.btn-default.dropdown-toggle,
+.filter.dropdown ul.dropdown-menu {
+	width: 195px;
+}
+
+.filter.search input[type="text"] {
+	width: 150px;
+}
+
+.choose-dates .between input {
+	width: 125px;
+}
+
+
+/* filters start to size down */
+
+@media (max-width: 750px) {
 	
 	.worker .filters-holder .view .im:before {
 		display: none;
@@ -3369,22 +3375,74 @@ th.sorting:after {
 	
 	.filters-holder .view a.map,
 	.filters-holder .view a {
-		padding-left: 1em;
+		padding-left: .8em;
+		padding-right: .9em;
 	}
 	
-	.Tickets .filters .filter.search input {
-		width: 110px;
-	}
-	
-	.Tickets .filters .filter.dropdown .btn.btn-default.dropdown-toggle {
+	.Tickets .filters .filter.dropdown .btn.btn-default.dropdown-toggle,
+	.Tickets .filter.dropdown ul.dropdown-menu {
 		width: 155px;
 	}
 	
 }
 
+@media (min-width: 561px) and (max-width: 750px) {
+
+	.Tickets .filters .filter.search input {
+			width: 110px;
+		}
+	
+}
+
+/* filters stack */
+
 @media (max-width: 560px) {
 	
+	.Tickets .filters {
+		margin: 1em 0 0 .5em;
+		float: left;
+		z-index: 1;	
+	}
 	
+	.Tickets .filters .wrapper {
+		margin-left: -130px;
+		display: block;
+		clear: both;
+	}
+	
+	.Tickets .filters .filter.search input {
+			width: 174px;
+	}
+	
+	.Tickets .view {
+		z-index: 2;
+	}
+	
+	.Tickets .filters-choices {
+		text-align: left;
+	}
+	
+	.Tickets .filters-choices .choice.date {
+		float: none;
+	}
+	
+	.Tickets .filters-choices .choice {
+		margin-left: 0;
+		margin-right: 8px;
+	}
+	
+	.Tickets .choose-dates {
+		width: 282px;
+	}
+	
+	.Tickets .choose-dates a {
+		padding-left: .5em;
+		padding-right: .5em;
+	}
+	
+	.Tickets .choose-dates .between input {
+		width: 100px;
+	}
 	
 }
 
