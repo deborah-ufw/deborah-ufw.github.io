@@ -11,6 +11,7 @@ html, body {
 html, body {
 	font-family: Helvetica-Neue, Arial, sans-serif;
 	background: #ffffff;
+	min-width: 315px;
 }
 
 .hide,
@@ -3362,77 +3363,284 @@ th.sorting:after {
 	width: 125px;
 }
 
+/* filters start to size down - Grace */
 
-/* filters start to size down */
-
-@media (max-width: 750px) {
+@media (max-width: 960px) {
 	
-	.filters-holder .view .im:before {
+	.admin .filters-holder .view .im:before {
 		display: none;
 	}
 	
-	.filters-holder .view {
+	.admin  .filters-holder .view {
 		margin-top: .7em;
 	}
 	
-	.filters-holder .view a.map,
-	.filters-holder .view a {
+	.admin  .filters-holder .view a.map,
+	.admin  .filters-holder .view a {
 		padding-left: .8em;
 		padding-right: .9em;
 	}
 	
-	.Tickets .filters .filter.dropdown .btn.btn-default.dropdown-toggle {
+	.admin  .Tickets .filters .filter.dropdown .btn.btn-default.dropdown-toggle {
 		width: 155px;
 	}
 	
-	.Tickets .filter.dropdown ul.dropdown-menu {
+	.admin  .Tickets .filter.dropdown ul.dropdown-menu {
 		min-width: 140px;
 		width: 156px;
 	}
 	
-	.table-list .action.panel {
+	.admin  .table-list .action.panel {
 		padding-left: .5em;
 	}
 	
-	.table-list .action.panel .item {
+	.admin  .table-list .action.panel .item {
 		margin-left: 0;  
 	}
 	
-	.table-list .action.panel .warning {
+	.admin  .table-list .action.panel .warning {
 		margin-left: .7em;  
 	}
 	
-	.table-list .item input[type="text"],
-	.table-list .item input[type="textarea"] {
+	.admin  .table-list .item input[type="text"],
+	.admin  .table-list .item input[type="textarea"] {
 		margin-top: 0;
 	}
 	
-	.item.required.text input[type="text"], 
-	.item .required.text input[type="textarea"] {
+	.admin  .item.required.text input[type="text"], 
+	.admin  .item .required.text input[type="textarea"] {
 		margin-left: 10px; 
 	}
 	
-	.action.panel .primary.actions a {
+	.admin  .action.panel .primary.actions a {
 		padding-left: 1.2em;
 		padding-right: 1.2em;
 	}
 	
-
-	.Tickets .filters-choices .choice {
+	.admin  .Tickets .filters-choices .choice {
 		margin: 0 8px 8px 1px;
 	}
 	
-	.filters-choices .choice .value {
+	.admin  .filters-choices .choice .value {
 		font-size: 1.1em;
 		padding-left: .8em;
 		padding-right: 3.5em;
 	}
 	
-	.filters-choices .choice .im {
+	.admin  .filters-choices .choice .im {
 		font-size: .9em;
 	}
 	
-	.filters-choices .choice .close {
+	.admin  .filters-choices .choice .close {
+		padding-top: 0;
+	}
+	
+}
+
+/* filters partially stack while sidebar shows - Grace */
+
+@media (min-width: 736px) and (max-width: 855px) {
+	
+	.admin .view {
+		width: 100%; 
+		clear: both;
+	}
+	
+	.admin .Tickets .filters {
+		margin-top: 1em;
+		float: left;
+	}
+	
+	.admin .Tickets .filters-holder .filters .filter {
+		margin-left: 0;
+		margin-right: 8px;
+	}
+	
+	.admin .Tickets .filters-choices {
+		text-align: center;
+	}
+	
+	.admin .Tickets .filters-choices .choice.date {
+		float: none;
+	}
+	
+}
+
+/* filters stack - Grace - while sidebar */
+
+@media (min-width: 665px) and (max-width: 735px) {
+	
+	.admin .Tickets .filters {
+		margin: 1em 0 0 .5em;
+		float: left;
+		z-index: 1;	
+	}
+	
+	.admin .Tickets .filters .wrapper {
+		margin-top: -5px;
+		margin-left: -130px;
+		display: block;
+		clear: both;
+	}
+	
+	.admin .Tickets .filters .filter.search {
+		margin-right: -3px;
+	}
+	
+	.admin .Tickets .filters .filter.search input {
+		width: 178px;
+	}
+	
+	.admin .Tickets .view {
+		z-index: 2;
+	}
+	
+	.admin .Tickets .filters-choices {
+		text-align: left;
+	}
+	
+	.admin .Tickets .filters-choices .choice.date {
+		float: none;
+	}
+	
+	.admin .Tickets .choose-dates {
+		width: 282px;
+	}
+	
+	.admin .Tickets .choose-dates a {
+		padding-left: .5em;
+		padding-right: .5em;
+	}
+	
+	.admin .Tickets .choose-dates .between input {
+		width: 100px;
+	}
+	
+}
+
+/* filters stack - Grace - no sidebar */
+
+@media (max-width: 590px) {
+	
+	.admin .Tickets .filters {
+		margin: 1em 0 0 .5em;
+		float: left;
+		z-index: 1;	
+	}
+	
+	.admin .Tickets .filters .wrapper {
+		margin-top: -5px;
+		margin-left: -130px;
+		display: block;
+		clear: both;
+	}
+	
+	.admin .Tickets .filters .filter.search {
+		margin-right: -3px;
+	}
+	
+	.admin .Tickets .filters .filter.search input {
+		width: 178px;
+	}
+	
+	.admin .Tickets .view {
+		z-index: 2;
+	}
+	
+	.admin .Tickets .filters-choices {
+		text-align: left;
+	}
+	
+	.admin .Tickets .filters-choices .choice.date {
+		float: none;
+	}
+	
+	.admin .Tickets .choose-dates {
+		width: 282px;
+	}
+	
+	.admin .Tickets .choose-dates a {
+		padding-left: .5em;
+		padding-right: .5em;
+	}
+	
+	.admin .Tickets .choose-dates .between input {
+		width: 100px;
+	}
+	
+}
+
+
+
+/* filters start to size down - Jimmy */
+
+@media (max-width: 750px) {
+	
+	.worker .filters-holder .view .im:before {
+		display: none;
+	}
+	
+	.worker .filters-holder .view {
+		margin-top: .7em;
+	}
+	
+	.worker .filters-holder .view a.map,
+	.worker .filters-holder .view a {
+		padding-left: .8em;
+		padding-right: .9em;
+	}
+	
+	.worker .Tickets .filters .filter.dropdown .btn.btn-default.dropdown-toggle {
+		width: 155px;
+	}
+	
+	.worker .Tickets .filter.dropdown ul.dropdown-menu {
+		min-width: 140px;
+		width: 156px;
+	}
+	
+	.worker .table-list .action.panel {
+		padding-left: .5em;
+	}
+	
+	.worker .table-list .action.panel .item {
+		margin-left: 0;  
+	}
+	
+	.worker .table-list .action.panel .warning {
+		margin-left: .7em;  
+	}
+	
+	.worker .table-list .item input[type="text"],
+	.worker .table-list .item input[type="textarea"] {
+		margin-top: 0;
+	}
+	
+	.worker .item.required.text input[type="text"], 
+	.worker .item .required.text input[type="textarea"] {
+		margin-left: 10px; 
+	}
+	
+	.worker .action.panel .primary.actions a {
+		padding-left: 1.2em;
+		padding-right: 1.2em;
+	}
+
+	.worker .Tickets .filters-choices .choice {
+		margin: 0 8px 8px 1px;
+	}
+	
+	.worker .filters-choices .choice .value {
+		font-size: 1.1em;
+		padding-left: .8em;
+		padding-right: 3.5em;
+	}
+	
+	.worker .filters-choices .choice .im {
+		font-size: .9em;
+	}
+	
+	.worker .filters-choices .choice .close {
 		padding-top: 0;
 	}
 	
@@ -3440,59 +3648,59 @@ th.sorting:after {
 
 @media (min-width: 561px) and (max-width: 750px) {
 
-	.Tickets .filters .filter.search input {
+	.worker .Tickets .filters .filter.search input {
 			width: 110px;
 		}
 	
 }
 
-/* filters stack */
+/* filters stack - Jimmy */
 
 @media (max-width: 560px) {
 	
-	.Tickets .filters {
+	.worker .Tickets .filters {
 		margin: 1em 0 0 .5em;
 		float: left;
 		z-index: 1;	
 	}
 	
-	.Tickets .filters .wrapper {
+	.worker .Tickets .filters .wrapper {
 		margin-top: -5px;
 		margin-left: -130px;
 		display: block;
 		clear: both;
 	}
 	
-	.Tickets .filters .filter.search {
+	.worker .Tickets .filters .filter.search {
 		margin-right: -3px;
 	}
 	
-	.Tickets .filters .filter.search input {
+	.worker .Tickets .filters .filter.search input {
 		width: 178px;
 	}
 	
-	.Tickets .view {
+	.worker .Tickets .view {
 		z-index: 2;
 	}
 	
-	.Tickets .filters-choices {
+	.worker .Tickets .filters-choices {
 		text-align: left;
 	}
 	
-	.Tickets .filters-choices .choice.date {
+	.worker .Tickets .filters-choices .choice.date {
 		float: none;
 	}
 	
-	.Tickets .choose-dates {
+	.worker .Tickets .choose-dates {
 		width: 282px;
 	}
 	
-	.Tickets .choose-dates a {
+	.worker .Tickets .choose-dates a {
 		padding-left: .5em;
 		padding-right: .5em;
 	}
 	
-	.Tickets .choose-dates .between input {
+	.worker .Tickets .choose-dates .between input {
 		width: 100px;
 	}
 	
