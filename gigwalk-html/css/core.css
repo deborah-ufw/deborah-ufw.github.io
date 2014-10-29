@@ -3097,8 +3097,17 @@ a.iconly:before {
 	padding-bottom: 0;
 }
 
-.table-list h1 span.im {
-	padding-right: 2px;
+.table-list .action.messages h1 {
+	padding-left: 50px;
+}
+
+.table-list .action.messages h1 span.im,
+.table-list .action.messages h1 span.exclaim {
+	 margin-left: -50px;
+}
+
+.table-list .action.messages h1 span.im {
+	padding: 0 5px;
 }
 
 .table-list .controls .iconButton {
@@ -3323,7 +3332,7 @@ th.sorting:after {
 /* map key */
 
 .key {
-	padding: 0 1em 0 0em;
+	padding: 0 1em .5em 0em;
 }
 
 .key:before {
@@ -3441,7 +3450,8 @@ th.sorting:after {
 		text-align: left;
 	}
 	
-	.Tickets .filters-choices .choice.date {
+	.Tickets .filters-choices .choice.date,
+	.worker .Tickets .table-list .controls .actions {
 		float: none;
 	}
 	
@@ -3473,7 +3483,6 @@ th.sorting:after {
 	
 	.worker .Tickets .table-list .actions {
 		margin: .5em 0;
-		float: none; 
 	}
 	
 	.worker .Tickets .table-list .controls .iconButton {
