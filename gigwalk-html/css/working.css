@@ -6,7 +6,7 @@ h1.super,
 .assign-action.detail,
 .tab-pane.actions .detail,
 .tab-pane.actions .confirm,
-.action.panel,
-.table-list {
+.action.panel.assign,
+.table-list table {
 	display: none;
 }

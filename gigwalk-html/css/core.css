@@ -591,7 +591,8 @@ header .navbar-collapse.in {
 .choose-dates,
 .map .pin,
 .table-list th,
-.table-list td {
+.table-list td,
+.iconButton {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
@@ -2225,11 +2226,6 @@ div.main.wrapper + div.inner {
 	padding-bottom: 1.7em;
 }
 
-.item input[type="text"],
-.item input[type="textarea"] {
-	margin-top: -.5em;
-}
-
 .item.time-estimate input[type="text"] {
 	margin-right: .5em;
 	width: 50px;
@@ -2498,6 +2494,11 @@ a.iconly:before {
 .sub.actions.duplicator {
 	margin-top: -.5em;
 	padding-top: 0;
+}
+
+.item input[type="text"],
+.item input[type="textarea"] {
+	margin-top: -.5em;
 }
 
  
@@ -2894,16 +2895,6 @@ a.iconly:before {
 	
 	.instruction-footer .item.count {
 		padding-top: .2em;
-	}
-	
-	/* tickets dash global adjustments for device view heredeb small */
-
-	.table-list {
-		margin-left: -.5em;
-	}
-	
-	.table-list .summary {
-		padding-left: .5em;
 	}
 
 }
@@ -3365,7 +3356,7 @@ th.sorting:after {
 
 @media (max-width: 750px) {
 	
-	.worker .filters-holder .view .im:before {
+	.filters-holder .view .im:before {
 		display: none;
 	}
 	
@@ -3382,6 +3373,33 @@ th.sorting:after {
 	.Tickets .filters .filter.dropdown .btn.btn-default.dropdown-toggle,
 	.Tickets .filter.dropdown ul.dropdown-menu {
 		width: 155px;
+	}
+	
+	.table-list .action.panel {
+		padding-left: .5em;
+	}
+	
+	.table-list .action.panel .item {
+		margin-left: 0;  
+	}
+	
+	.table-list .action.panel .warning {
+		margin-left: .7em;  
+	}
+	
+	.table-list .item input[type="text"],
+	.table-list .item input[type="textarea"] {
+		margin-top: 0;
+	}
+	
+	.item.required.text input[type="text"], 
+	.item .required.text input[type="textarea"] {
+		margin-left: 10px; 
+	}
+	
+	.action.panel .primary.actions a {
+		padding-left: 1.2em;
+		padding-right: 1.2em;
 	}
 	
 }
@@ -3405,6 +3423,7 @@ th.sorting:after {
 	}
 	
 	.Tickets .filters .wrapper {
+		margin-top: -5px;
 		margin-left: -130px;
 		display: block;
 		clear: both;
@@ -3444,67 +3463,53 @@ th.sorting:after {
 		width: 100px;
 	}
 	
+	.worker .Tickets .table-list .summary {
+		margin-bottom: 1em;
+		padding-bottom: 5px;
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid #cccccc;
+	}
+	
+	.worker .Tickets .table-list .actions {
+		margin: .5em 0;
+		float: none; 
+	}
+	
+	.worker .Tickets .table-list .controls .iconButton {
+		padding-right: 4px;
+		padding-left: 0; 
+		border-right-color: transparent;
+	}
+	
 }
 
 /* tickets dash assorted list adjustments */
 
-/* worker */
-
-@media (min-width: 821px) {
+/* full-width */
 	
-	.worker .Tickets .dash .table-list table .project-title {
-		min-width: 210px;
-		max-width: 400px;
-	}
-	
-	.worker .Tickets .dash td.location {
-		min-width: 115px;
-	}
-	
-	.worker .Tickets .dash td.status {
-		min-width: 105px;
-	}
-	
-	.Tickets .dash td.scheduled {
-		min-width: 125px;
-	}
-	
-	.Tickets .dash td.estimated {
-		min-width: 115px;
-	}
-
-
+.Tickets .dash .table-list table .project-title {
+	min-width: 210px;
+	max-width: 400px;
 }
 
-@media (max-width: 820px) {
-	
-	.worker .Tickets .dash .table-list table .project-title {
-		min-width: 210px;
-		max-width: 400px;
-	}
-	
-	.worker .Tickets .dash td.location {
-		min-width: 115px;
-	}
-	
-	.worker .Tickets .dash td.status {
-		min-width: 105px;
-	}
-	
-	.Tickets .dash td.scheduled {
-		min-width: 125px;
-	}
-	
-	.Tickets .dash td.estimated {
-		min-width: 115px;
-	}
+.Tickets .dash td.location {
+	min-width: 115px;
+}
 
+.Tickets .dash td.status {
+	min-width: 105px;
+}
 
+.Tickets .dash td.scheduled {
+	min-width: 125px;
+}
+
+.Tickets .dash td.estimated {
+	min-width: 115px;
 }
 
 /* heredeb */
-
-
 
 
 
