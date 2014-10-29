@@ -3363,7 +3363,17 @@ th.sorting:after {
 	width: 125px;
 }
 
-/* filters start to size down - Grace */
+/* Tickets tables start to size down - Grace */
+
+@media (max-width: 1000px) {
+	
+	.admin .Tickets .table-list th {
+		font-size: 1.1em;
+	}
+	
+}
+
+/* Tickets filters start to size down - Grace */
 
 @media (max-width: 960px) {
 	
@@ -3371,67 +3381,77 @@ th.sorting:after {
 		display: none;
 	}
 	
-	.admin  .filters-holder .view {
+	.admin .filters-holder .view {
 		margin-top: .7em;
 	}
 	
-	.admin  .filters-holder .view a.map,
-	.admin  .filters-holder .view a {
+	.admin .filters-holder .view a.map,
+	.admin .filters-holder .view a {
 		padding-left: .8em;
 		padding-right: .9em;
 	}
 	
-	.admin  .Tickets .filters .filter.dropdown .btn.btn-default.dropdown-toggle {
+	.admin .Tickets .filters .filter.dropdown .btn.btn-default.dropdown-toggle {
 		width: 155px;
 	}
 	
-	.admin  .Tickets .filter.dropdown ul.dropdown-menu {
+	.admin .Tickets .filter.dropdown ul.dropdown-menu {
 		min-width: 140px;
 		width: 156px;
 	}
 	
-	.admin  .table-list .action.panel {
+	.admin .Tickets .table-list .action.panel {
 		padding-left: .5em;
 	}
 	
-	.admin  .table-list .action.panel .item {
+	.admin .Tickets .table-list .action.panel .item {
 		margin-left: 0;  
 	}
 	
-	.admin  .table-list .action.panel .warning {
-		margin-left: .7em;  
+	.admin .Tickets .table-list .action.panel .item .plainLabel {
+		float: none;
+		width: 100%; 
 	}
 	
-	.admin  .table-list .item input[type="text"],
-	.admin  .table-list .item input[type="textarea"] {
-		margin-top: 0;
-	}
-	
-	.admin  .item.required.text input[type="text"], 
-	.admin  .item .required.text input[type="textarea"] {
+	.action.panel.assign .radios {
+		margin-top: 1em;
 		margin-left: 10px; 
 	}
 	
-	.admin  .action.panel .primary.actions a {
+	.admin .Tickets .table-list .action.panel .warning {
+		margin-left: .7em;  
+	}
+	
+	.admin .Tickets .table-list .item input[type="text"],
+	.admin .Tickets .table-list .item input[type="textarea"] {
+		margin-top: 0;
+	}
+	
+	.admin .Tickets .item.required.text input[type="text"], 
+	.admin .Tickets .item .required.text input[type="textarea"] {
+		margin-left: 10px; 
+	}
+	
+	.admin .Tickets .action.panel .primary.actions a {
 		padding-left: 1.2em;
 		padding-right: 1.2em;
 	}
 	
-	.admin  .Tickets .filters-choices .choice {
+	.admin .Tickets .dash > .filters-choices .choice {
 		margin: 0 8px 8px 1px;
 	}
 	
-	.admin  .filters-choices .choice .value {
+	.admin .Tickets .dash > .filters-choices .choice .value {
 		font-size: 1.1em;
 		padding-left: .8em;
 		padding-right: 3.5em;
 	}
 	
-	.admin  .filters-choices .choice .im {
+	.admin .Tickets .dash > .filters-choices .choice .im {
 		font-size: .9em;
 	}
 	
-	.admin  .filters-choices .choice .close {
+	.admin .Tickets .dash > .filters-choices .choice .close {
 		padding-top: 0;
 	}
 	
@@ -3605,6 +3625,11 @@ th.sorting:after {
 	
 	.worker .table-list .action.panel .item {
 		margin-left: 0;  
+	}
+	
+	.worker .table-list .action.panel .item .plainLabel {
+		float: none;
+		width: 100%; 
 	}
 	
 	.worker .table-list .action.panel .warning {

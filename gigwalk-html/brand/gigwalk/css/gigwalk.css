@@ -594,6 +594,15 @@ select option,
 	font-family: Helvetica-Neue-Italic;
 }
 
+@media (max-width: 1000px) {
+	
+	.admin .Tickets .table-list th {
+		font-family: Helvetica-Neue-Bold;
+		font-weight: normal !important;
+	}
+	
+}
+
 
 /* header */
 	
