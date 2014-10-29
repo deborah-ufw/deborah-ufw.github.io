@@ -3450,8 +3450,7 @@ th.sorting:after {
 		text-align: left;
 	}
 	
-	.Tickets .filters-choices .choice.date,
-	.worker .Tickets .table-list .controls .actions {
+	.Tickets .filters-choices .choice.date {
 		float: none;
 	}
 	
@@ -3473,6 +3472,14 @@ th.sorting:after {
 		width: 100px;
 	}
 	
+}
+
+/* table actions buttons snap under */
+
+/* Jimmy */
+
+@media (max-width: 660px) {
+	
 	.worker .Tickets .table-list .summary {
 		margin-bottom: 1em;
 		padding-bottom: 5px;
@@ -3481,8 +3488,9 @@ th.sorting:after {
 		border-bottom: 1px solid #cccccc;
 	}
 	
-	.worker .Tickets .table-list .actions {
+	.worker .Tickets .table-list .controls .actions {
 		margin: .5em 0;
+		float: none;
 	}
 	
 	.worker .Tickets .table-list .controls .iconButton {
@@ -3493,7 +3501,34 @@ th.sorting:after {
 	
 }
 
-/* tickets dash assorted list adjustments */
+/* Grace */
+
+@media (max-width: 990px) {
+	
+	.admin .Tickets .table-list .summary {
+		margin-bottom: 1em;
+		padding-bottom: 5px;
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid #cccccc;
+	}
+	
+	.admin .Tickets .table-list .actions {
+		margin: .5em 0;
+		float: none;
+	}
+	
+	.admin .Tickets .table-list .controls .iconButton {
+		padding-right: .5em;
+		padding-left: 0;
+		border-right-color: transparent;
+	}
+	
+	
+}
+
+
+/* tickets dash list view table adjustments */
 
 /* full-width */
 	
@@ -3517,8 +3552,6 @@ th.sorting:after {
 .Tickets .dash td.estimated {
 	min-width: 115px;
 }
-
-/* heredeb */
 
 
 
