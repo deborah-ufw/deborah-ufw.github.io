@@ -3381,16 +3381,16 @@ th.sorting:after {
 
 @media (max-width: 960px) {
 	
-	.admin .filters-holder .view .im:before {
+	.admin .Tickets .filters-holder .view .im:before {
 		display: none;
 	}
 	
-	.admin .filters-holder .view {
+	.admin .Tickets .filters-holder .view {
 		margin-top: .7em;
 	}
 	
-	.admin .filters-holder .view a.map,
-	.admin .filters-holder .view a {
+	.admin .Tickets .filters-holder .view a.map,
+	.admin .Tickets .filters-holder .view a {
 		padding-left: .8em;
 		padding-right: .9em;
 	}
@@ -3465,7 +3465,7 @@ th.sorting:after {
 
 @media (min-width: 736px) and (max-width: 855px) {
 	
-	.admin .view {
+	.admin .Tickets .view {
 		width: 100%; 
 		clear: both;
 	}
@@ -3619,16 +3619,16 @@ th.sorting:after {
 
 @media (max-width: 750px) {
 	
-	.worker .filters-holder .view .im:before {
+	.worker .Tickets .filters-holder .view .im:before {
 		display: none;
 	}
 	
-	.worker .filters-holder .view {
+	.worker .Tickets .filters-holder .view {
 		margin-top: .7em;
 	}
 	
-	.worker .filters-holder .view a.map,
-	.worker .filters-holder .view a {
+	.worker .Tickets .filters-holder .view a.map,
+	.worker .Tickets .filters-holder .view a {
 		padding-left: .8em;
 		padding-right: .9em;
 	}
@@ -3642,34 +3642,34 @@ th.sorting:after {
 		width: 156px;
 	}
 	
-	.worker .table-list .action.panel {
+	.worker .Tickets .table-list .action.panel {
 		padding-left: .5em;
 	}
 	
-	.worker .table-list .action.panel .item {
+	.worker .Tickets .table-list .action.panel .item {
 		margin-left: 0;  
 	}
 	
-	.worker .table-list .action.panel .item .plainLabel {
+	.worker .Tickets .table-list .action.panel .item .plainLabel {
 		float: none;
 		width: 100%; 
 	}
 	
-	.worker .table-list .action.panel .warning {
+	.worker .Tickets .table-list .action.panel .warning {
 		margin-left: .7em;  
 	}
 	
-	.worker .table-list .item input[type="text"],
-	.worker .table-list .item input[type="textarea"] {
+	.worker .Tickets .table-list .item input[type="text"],
+	.worker .Tickets .table-list .item input[type="textarea"] {
 		margin-top: 0;
 	}
 	
-	.worker .item.required.text input[type="text"], 
-	.worker .item .required.text input[type="textarea"] {
+	.worker .Tickets .item.required.text input[type="text"], 
+	.worker .Tickets .item .required.text input[type="textarea"] {
 		margin-left: 10px; 
 	}
 	
-	.worker .action.panel .primary.actions a {
+	.worker .Tickets .action.panel .primary.actions a {
 		padding-left: 1.2em;
 		padding-right: 1.2em;
 	}
@@ -3678,17 +3678,17 @@ th.sorting:after {
 		margin: 0 8px 8px 1px;
 	}
 	
-	.worker .filters-choices .choice .value {
+	.worker .Tickets .filters-choices .choice .value {
 		font-size: 1.1em;
 		padding-left: .8em;
 		padding-right: 3.5em;
 	}
 	
-	.worker .filters-choices .choice .im {
+	.worker .Tickets .filters-choices .choice .im {
 		font-size: .9em;
 	}
 	
-	.worker .filters-choices .choice .close {
+	.worker .Tickets .filters-choices .choice .close {
 		padding-top: 0;
 	}
 	
@@ -3706,12 +3706,12 @@ th.sorting:after {
 
 @media (max-width: 560px) {
 	
-	.worker .filters-holder {
+	.worker .Tickets .filters-holder {
 		 margin: -14px -10px 0 -10px;
 		 padding: 10px 0 0 10px;
 	}
 	
-	.worker .filters-choices {
+	.worker .Tickets .filters-choices {
 		margin: 0 -10px;
 		padding: 0 10px;
 	}
@@ -3856,16 +3856,16 @@ th.sorting:after {
 		min-width: 80px;
 	}
 	
-	.Tickets .dash td.scheduled { 
+	.worker .Tickets .dash td.scheduled { 
 		text-align: left;
 		min-width: 110px;
 	}
 	
-	.Tickets .dash td.estimated {
+	.worker .Tickets .dash td.estimated {
 		min-width: 100px;  
 	}
 	
-	.worker .pagination {
+	.worker .Tickets .pagination {
 		font-size: 1.4em;
 	}
 	
@@ -3910,18 +3910,18 @@ th.sorting:after {
 		max-width: 100%;
 	}
 	
-	.worker .table-list table .scheduled,
-	.worker .table-list table .due,
-	.worker .table-list table .estimated,
-	.worker .table-list table .status {  
+	.worker .Tickets .table-list table .scheduled,
+	.worker .Tickets .table-list table .due,
+	.worker .Tickets .table-list table .estimated,
+	.worker .Tickets .table-list table .status {  
 		text-align: left;
 	}
 	
-	.worker .table-list table th.status {  
+	.worker .Tickets .table-list table th.status {  
 		margin-bottom: 20px;
 	}
 	
-	.worker .table-list table td.status {  
+	.worker .Tickets .table-list table td.status {  
 		font-size: 1.4em;
 		margin-bottom: 1em;
 	}
@@ -3943,7 +3943,7 @@ th.sorting:after {
 		border-top: 1px solid rgba(0, 0, 0, .1);
 	}
 	
-	.worker .table-list .controls .actions a {
+	.worker .Tickets .table-list .controls .actions a {
 		padding-top: 12px;
 		padding-bottom: 13px;
 	}
@@ -3966,31 +3966,36 @@ th.sorting:after {
 		left: -3px;
 	}
 	
-	.worker .table-list table td.project-title:before,
-	.worker .table-list table td.location:before,
-	.worker .table-list table td.scheduled:before,
-	.worker .table-list table td.due:before,
-	.worker .table-list table td.estimated:before,
-	.worker .table-list table td.status:before {
+	.worker .Tickets .table-list table td.scheduled span, 
+	.worker .Tickets .table-list table td.estimated span {
+		color: #888;
+	}
+	
+	.worker .Tickets .table-list table td.project-title:before,
+	.worker .Tickets .table-list table td.location:before,
+	.worker .Tickets .table-list table td.scheduled:before,
+	.worker .Tickets .table-list table td.due:before,
+	.worker .Tickets .table-list table td.estimated:before,
+	.worker .Tickets .table-list table td.status:before {
 		color: #bcbcbc;
 		font-size: .8em;
 		display: block;
 	}
 	
-	.worker .table-list table td.location:before {
+	.worker .Tickets .table-list table td.location:before {
 		content: 'Location';
 	}
-	.worker .table-list table td.scheduled:before {
+	.worker .Tickets .table-list table td.scheduled:before {
 		content: 'Scheduled';
 	}
 	
-	.worker .table-list table td.due:before {
+	.worker .Tickets .table-list table td.due:before {
 		content: 'Due';
 	}
-	.worker .table-list table td.estimated:before {
+	.worker .Tickets .table-list table td.estimated:before {
 		content: 'Estimated Time';
 	}
-	.worker .table-list table td.status:before {
+	.worker .Tickets .table-list table td.status:before {
 		content: 'Status';
 	}
 	
