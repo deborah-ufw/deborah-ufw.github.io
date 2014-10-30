@@ -3165,7 +3165,8 @@ th.sorting:after {
 	top: -4px;
 }
 
-.Tickets .dash .table-list table .project-title {
+.Tickets .dash .table-list table th.project-title,
+.Tickets .dash .table-list table td.project-title {
 	min-width: 210px;
 	max-width: 400px;
 }
@@ -3367,16 +3368,6 @@ th.sorting:after {
 	width: 125px;
 }
 
-/* Tickets tables start to size down - Grace */
-
-@media (max-width: 1000px) {
-	
-	.admin .Tickets .table-list th {
-		font-size: 1.1em;
-	}
-	
-}
-
 /* Tickets filters start to size down - Grace */
 
 @media (max-width: 960px) {
@@ -3508,12 +3499,11 @@ th.sorting:after {
 	}
 	
 	.admin .Tickets .dash > .filters-holder {
-		 margin: -14px -10px 0 -10px;
+		 margin: -14px 0 0 0;
 		 padding: 10px 0 0 10px;
 	}
 	
 	.admin .Tickets .dash > .filters-choices {
-		margin: 0 -10px;
 		padding: 0 10px;
 	}
 	
@@ -3794,31 +3784,6 @@ th.sorting:after {
 }
 
 
-/* tickets dash list view table adjustments */
-
-/* full-width */
-	
-.Tickets .dash .table-list table .project-title {
-	min-width: 210px;
-	max-width: 400px;
-}
-
-.Tickets .dash td.location {
-	min-width: 115px;
-}
-
-.Tickets .dash td.status {
-	min-width: 105px;
-}
-
-.Tickets .dash td.scheduled {
-	min-width: 125px;
-}
-
-.Tickets .dash td.estimated {
-	min-width: 115px;
-}
-
 /* Tickets tables start to size down - Jimmy */
 
 @media (max-width: 825px) {
@@ -3844,6 +3809,172 @@ th.sorting:after {
 	.worker .Tickets .pagination {
 		font-size: 1.4em;
 	}
+	
+}
+
+/* Tickets tables start to size down - Grace */
+
+@media (max-width: 1000px) {
+	
+	.admin .Tickets .table-list th,
+	.admin .Tickets .table-list td {
+		font-size: 1.1em;
+	}
+	
+	.admin .Tickets .pagination {
+		font-size: 1.4em;
+	}
+	
+	.admin .Tickets .dash td.due { 
+		text-align: left;
+		min-width: 105px;
+	}
+	
+	.admin .Tickets .dash td.status {
+		min-width: 80px;
+	}
+	
+}
+
+/* Tickets tables snap to responsive display - Grace */
+
+@media (max-width: 920px) {
+	
+	.admin .Tickets .table-list .summary {
+		margin-bottom: 8px;
+		padding-bottom: 5px;
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
+	
+	.admin .Tickets .table-list .controls .actions {
+		margin: .5em 0;
+		float: none;
+	}
+	
+	.admin .Tickets .table-list .controls .iconButton {
+		padding-right: 8px;
+		padding-left: 0; 
+		border-right-color: transparent;
+	}
+	
+	.admin .Tickets .table-list table th, 
+	.admin .Tickets .table-list table td {
+		padding-bottom: 0;
+		padding-left: 35px;
+	}
+	 
+	.admin .Tickets .table-list table td {
+		font-size: 1.4em;
+		padding-top: 10px;
+		display: block;
+		width: 100%;
+	}
+	
+	.admin .Tickets .table-list table th {
+		font-size: 1.3em;
+		margin-left: 2.5em;
+		margin-bottom: .3em;
+		display: table;
+	}
+	
+	.admin .Tickets .table-list table thead {
+		background: #fcfcfc;
+	}
+	
+	.admin .Tickets .dash .table-list table th.project-title {
+		padding-bottom: 3px;
+		min-width: 155px;
+		max-width: 155px;
+	}
+	
+	.admin .Tickets .dash .table-list table td.project-title {
+		padding-top: 20px;
+		max-width: 100%;
+	}
+	
+	.admin .Tickets .table-list table .due,
+	.admin .Tickets .table-list table .status {  
+		text-align: left;
+	}
+	
+	.admin .Tickets .table-list table th.status {  
+		margin-bottom: 20px;
+	}
+	
+	.admin .Tickets .table-list table td.status {  
+		font-size: 1.4em;
+		margin-bottom: 1em;
+	}
+	
+	.admin .table-list table tr.even {
+		background: #fbfbfb;
+	}
+	
+	.admin .Tickets .table-list .summary {
+		font-size: 1.3em;
+		border-bottom: 0px solid #ffffff;
+	}
+	
+	.admin .Tickets .table-list .controls .actions {
+		margin-bottom: -2px; 
+		padding: 8px 0 15px 0;
+		width: 100%;
+		background: #f7f7f7;
+		border-top: 1px solid rgba(0, 0, 0, .1);
+	}
+	
+	.admin .Tickets .table-list .controls .actions a {
+		padding-top: 12px;
+		padding-bottom: 13px;
+	}
+	
+	.admin .Tickets th.project-title input {
+		margin: 1em 0 .5em 0;
+		display: block;
+		width: 100%;
+	}
+	
+	.admin .Tickets th.project-title input:before {
+		content: 'Select all';
+		margin-left: 14px;
+		position: relative;
+		top: -2px;
+	}
+	
+	.admin .Tickets .dash td.status span:before {
+		top: 0;
+		left: -3px;
+	}
+	
+	.admin .Tickets .table-list table td.assigned {
+		color: #888;
+	}
+	
+	.admin .Tickets .table-list table td.project-title:before,
+	.admin .Tickets .table-list table td.location:before,
+	.admin .Tickets .table-list table td.assigned:before,
+	.admin .Tickets .table-list table td.due:before,
+	.admin .Tickets .table-list table td.status:before {
+		color: #bcbcbc;
+		font-size: .8em;
+		display: block;
+	}
+	
+	.admin .Tickets .table-list table td.location:before {
+		content: 'Location';
+	}
+	.admin .Tickets .table-list table td.assigned:before {
+		content: 'Assigned';
+	}
+	.admin .Tickets .table-list table td.due:before {
+		content: 'Due';
+	}
+	.admin .Tickets .table-list table td.status:before {
+		content: 'Status';
+	}
+	
 	
 }
 
