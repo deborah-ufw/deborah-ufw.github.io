@@ -194,7 +194,7 @@ header .nav .number,
 }
 
 .map .tab-pane .button-holder,
-.Tickets .dash td.estimated,
+.table-list table .estimated,
 .filters-choices {
 	text-align: right;
 }
@@ -259,7 +259,9 @@ header .user-org,
 select:hover,
 select:focus,
 .nav-active-holder,
-th.sorting {
+th.sorting,
+.worker .table-list .controls .actions.active a,
+.Tickets th.project-title input:before {
 	cursor: pointer;
 }
 
@@ -268,7 +270,8 @@ a.disabled,
 .tabnav li.active a,
 .iconButton.disabled,
 .admin .table-list td.location,
-.map .tab-pane a.buttonly.main.disabled {
+.map .tab-pane a.buttonly.main.disabled,
+.table-list .controls .actions a {
 	cursor: default;
 }
 
@@ -3150,11 +3153,12 @@ th.sorting:after {
 }
 
 .Tickets .dash .table-list table .project-title {
-	padding-left: 45px;
+	padding-left: 35px;
 }
 
 .Tickets .dash .table-list table .project-title input[type="checkbox"] {
-	margin-left: -26px;
+	margin-left: -32px;
+	margin-right: 15px;
 }
 
 .Tickets .dash td.status span:before {
@@ -3457,7 +3461,7 @@ th.sorting:after {
 	
 }
 
-/* filters partially stack while sidebar shows - Grace */
+/* Tickets filters partially stack while sidebar shows - Grace */
 
 @media (min-width: 736px) and (max-width: 855px) {
 	
@@ -3486,7 +3490,7 @@ th.sorting:after {
 	
 }
 
-/* filters stack - Grace - while sidebar */
+/* Tickets filters stack - Grace - while sidebar */
 
 @media (min-width: 665px) and (max-width: 735px) {
 	
@@ -3503,6 +3507,16 @@ th.sorting:after {
 		clear: both;
 	}
 	
+	.admin .Tickets .dash > .filters-holder {
+		 margin: -14px -10px 0 -10px;
+		 padding: 10px 0 0 10px;
+	}
+	
+	.admin .Tickets .dash > .filters-choices {
+		margin: 0 -10px;
+		padding: 0 10px;
+	}
+	
 	.admin .Tickets .filters .filter.search {
 		margin-right: -3px;
 	}
@@ -3538,7 +3552,7 @@ th.sorting:after {
 	
 }
 
-/* filters stack - Grace - no sidebar */
+/* Tickets filters stack - Grace - no sidebar */ 
 
 @media (max-width: 590px) {
 	
@@ -3555,6 +3569,16 @@ th.sorting:after {
 		clear: both;
 	}
 	
+	.admin .Tickets .dash > .filters-holder {
+		 margin: -14px -10px 0 -10px;
+		 padding: 10px 0 0 10px;
+	}
+	
+	.admin .Tickets .dash > .filters-choices {
+		margin: 0 -10px;
+		padding: 0 10px;
+	}
+	
 	.admin .Tickets .filters .filter.search {
 		margin-right: -3px;
 	}
@@ -3589,7 +3613,6 @@ th.sorting:after {
 	}
 	
 }
-
 
 
 /* filters start to size down - Jimmy */
@@ -3683,6 +3706,16 @@ th.sorting:after {
 
 @media (max-width: 560px) {
 	
+	.worker .filters-holder {
+		 margin: -14px -10px 0 -10px;
+		 padding: 10px 0 0 10px;
+	}
+	
+	.worker .filters-choices {
+		margin: 0 -10px;
+		padding: 0 10px;
+	}
+	
 	.worker .Tickets .filters {
 		margin: 1em 0 0 .5em;
 		float: left;
@@ -3738,11 +3771,11 @@ th.sorting:after {
 @media (max-width: 660px) {
 	
 	.worker .Tickets .table-list .summary {
-		margin-bottom: 1em;
+		margin-bottom: 8px;
 		padding-bottom: 5px;
 		display: block;
 		width: 100%;
-		border-bottom: 1px solid #cccccc;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
 	}
 	
 	.worker .Tickets .table-list .controls .actions {
@@ -3751,7 +3784,7 @@ th.sorting:after {
 	}
 	
 	.worker .Tickets .table-list .controls .iconButton {
-		padding-right: 4px;
+		padding-right: 8px;
 		padding-left: 0; 
 		border-right-color: transparent;
 	}
@@ -3763,11 +3796,11 @@ th.sorting:after {
 @media (max-width: 990px) {
 	
 	.admin .Tickets .table-list .summary {
-		margin-bottom: 1em;
+		margin-bottom: 8px;
 		padding-bottom: 5px;
 		display: block;
 		width: 100%;
-		border-bottom: 1px solid #cccccc;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
 	}
 	
 	.admin .Tickets .table-list .controls .actions {
@@ -3808,6 +3841,160 @@ th.sorting:after {
 
 .Tickets .dash td.estimated {
 	min-width: 115px;
+}
+
+/* Tickets tables start to size down - Jimmy */
+
+@media (max-width: 825px) {
+	
+	.worker .Tickets .table-list th,
+	.worker .Tickets .table-list td {
+		font-size: 1.1em;
+	}
+	
+	.worker .Tickets .dash td.status {
+		min-width: 80px;
+	}
+	
+	.Tickets .dash td.scheduled { 
+		text-align: left;
+		min-width: 110px;
+	}
+	
+	.Tickets .dash td.estimated {
+		min-width: 100px;  
+	}
+	
+	.worker .pagination {
+		font-size: 1.4em;
+	}
+	
+}
+
+/* Tickets tables snap to responsive display - Jimmy */
+
+@media (max-width: 750px) {
+	
+	.worker .Tickets .table-list table th, 
+	.worker .Tickets .table-list table td {
+		padding-bottom: 0;
+		padding-left: 35px;
+	}
+	 
+	.worker .Tickets .table-list table td {
+		font-size: 1.4em;
+		padding-top: 10px;
+		display: block;
+		width: 100%;
+	}
+	
+	.worker .Tickets .table-list table th {
+		font-size: 1.3em;
+		margin-left: 2.5em;
+		margin-bottom: .3em;
+		display: table;
+	}
+	
+	.worker .Tickets .table-list table thead {
+		background: #fcfcfc;
+	}
+	
+	.worker .Tickets .dash .table-list table th.project-title {
+		padding-bottom: 3px;
+		min-width: 155px;
+		max-width: 155px;
+	}
+	
+	.worker .Tickets .dash .table-list table td.project-title {
+		padding-top: 20px;
+		max-width: 100%;
+	}
+	
+	.worker .table-list table .scheduled,
+	.worker .table-list table .due,
+	.worker .table-list table .estimated,
+	.worker .table-list table .status {  
+		text-align: left;
+	}
+	
+	.worker .table-list table th.status {  
+		margin-bottom: 20px;
+	}
+	
+	.worker .table-list table td.status {  
+		font-size: 1.4em;
+		margin-bottom: 1em;
+	}
+	
+	.worker .table-list table tr.even {
+		background: #fbfbfb;
+	}
+	
+	.worker .Tickets .table-list .summary {
+		font-size: 1.3em;
+		border-bottom: 0px solid #ffffff;
+	}
+	
+	.worker .Tickets .table-list .controls .actions {
+		margin-bottom: -2px; 
+		padding: 8px 0 15px 0;
+		width: 100%;
+		background: #f7f7f7;
+		border-top: 1px solid rgba(0, 0, 0, .1);
+	}
+	
+	.worker .table-list .controls .actions a {
+		padding-top: 12px;
+		padding-bottom: 13px;
+	}
+	
+	.worker .Tickets th.project-title input {
+		margin: 1em 0 .5em 0;
+		display: block;
+		width: 100%;
+	}
+	
+	.worker .Tickets th.project-title input:before {
+		content: 'Select all';
+		margin-left: 14px;
+		position: relative;
+		top: -2px;
+	}
+	
+	.worker .Tickets .dash td.status span:before {
+		top: 0;
+		left: -3px;
+	}
+	
+	.worker .table-list table td.project-title:before,
+	.worker .table-list table td.location:before,
+	.worker .table-list table td.scheduled:before,
+	.worker .table-list table td.due:before,
+	.worker .table-list table td.estimated:before,
+	.worker .table-list table td.status:before {
+		color: #bcbcbc;
+		font-size: .8em;
+		display: block;
+	}
+	
+	.worker .table-list table td.location:before {
+		content: 'Location';
+	}
+	.worker .table-list table td.scheduled:before {
+		content: 'Scheduled';
+	}
+	
+	.worker .table-list table td.due:before {
+		content: 'Due';
+	}
+	.worker .table-list table td.estimated:before {
+		content: 'Estimated Time';
+	}
+	.worker .table-list table td.status:before {
+		content: 'Status';
+	}
+	
+	
 }
 
 

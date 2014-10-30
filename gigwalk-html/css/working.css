@@ -5,6 +5,10 @@
 h1.super,
 .assign-action.detail,
 .tab-pane.actions .detail,
-.tab-pane.actions .confirm {
+.tab-pane.actions .confirm,
+.worker .action.panel.assign,
+.action.panel,
+.action.messages,
+.filters-choices .choice {
 	display: none;
 }

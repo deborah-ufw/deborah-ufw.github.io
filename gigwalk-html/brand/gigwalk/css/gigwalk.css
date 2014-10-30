@@ -416,6 +416,33 @@ html, body {
 		background: #2771da;
 	}
 	
+	
+	/* admin filters stacked bg - with sidebar */
+	@media (min-width: 665px) and (max-width: 735px) {
+		.admin .Tickets .dash > .filters-holder,
+		.admin .Tickets .dash > .filters-choices {
+			background: #d2edfa;
+		}
+	}
+	
+	/* admin filters stacked bg - no sidebar */
+	@media (max-width: 590px) {
+		.admin .Tickets .dash > .filters-holder,
+		.admin .Tickets .dash > .filters-choices {
+			background: #d2edfa;
+		}
+	}
+	
+	/* worker filters stacked bg */
+	@media (max-width: 560px) {
+		.worker .filters-holder,
+		.worker .filters-choices {
+			background: #d2edfa;
+		}
+	}
+	
+	
+	
 	/* greens */
 	
 	header .nav li.alerts .im,
@@ -573,7 +600,6 @@ select option,
 .tabnav li .dropdown li a {
 	font-family: Helvetica-Neue;
 }
-
 .sidenav .user-name,
 .remove,
 .iconly,
@@ -595,12 +621,28 @@ select option,
 }
 
 @media (max-width: 1000px) {
-	
 	.admin .Tickets .table-list th {
 		font-family: Helvetica-Neue-Bold;
 		font-weight: normal !important;
 	}
+}
+
+@media (max-width: 825px) {
+	.worker .Tickets .table-list th {
+		font-family: Helvetica-Neue-Bold;
+		font-weight: normal !important;
+	}
+}
+
+@media (max-width: 750px) {
+	.worker .Tickets th.project-title:before,
+	.worker .Tickets td:before  {
+		font-family: Helvetica-Neue-Light;
+	}
 	
+	.worker .Tickets .table-list td {
+		font-family: Helvetica-Neue;
+	}
 }
 
 
