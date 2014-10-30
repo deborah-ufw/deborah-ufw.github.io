@@ -3766,30 +3766,6 @@ th.sorting:after {
 
 /* table actions buttons snap under */
 
-/* Jimmy */
-
-@media (max-width: 660px) {
-	
-	.worker .Tickets .table-list .summary {
-		margin-bottom: 8px;
-		padding-bottom: 5px;
-		display: block;
-		width: 100%;
-		border-bottom: 1px solid rgba(0, 0, 0, .1);
-	}
-	
-	.worker .Tickets .table-list .controls .actions {
-		margin: .5em 0;
-		float: none;
-	}
-	
-	.worker .Tickets .table-list .controls .iconButton {
-		padding-right: 8px;
-		padding-left: 0; 
-		border-right-color: transparent;
-	}
-	
-}
 
 /* Grace */
 
@@ -3874,6 +3850,25 @@ th.sorting:after {
 /* Tickets tables snap to responsive display - Jimmy */
 
 @media (max-width: 750px) {
+	
+	.worker .Tickets .table-list .summary {
+		margin-bottom: 8px;
+		padding-bottom: 5px;
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
+	
+	.worker .Tickets .table-list .controls .actions {
+		margin: .5em 0;
+		float: none;
+	}
+	
+	.worker .Tickets .table-list .controls .iconButton {
+		padding-right: 8px;
+		padding-left: 0; 
+		border-right-color: transparent;
+	}
 	
 	.worker .Tickets .table-list table th, 
 	.worker .Tickets .table-list table td {
