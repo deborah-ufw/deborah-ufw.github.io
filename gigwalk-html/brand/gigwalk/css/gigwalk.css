@@ -645,6 +645,17 @@ select option,
 	}
 }
 
+@media (max-width: 920px) {
+	.admin .Tickets th.project-title:before,
+	.admin .Tickets .table-list > table td:before  {
+		font-family: Helvetica-Neue-Light;
+	}
+	
+	.admin .Tickets .table-list > table td {
+		font-family: Helvetica-Neue;
+	}
+}
+
 
 /* header */
 	
