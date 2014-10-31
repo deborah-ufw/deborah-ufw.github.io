@@ -3962,9 +3962,23 @@ th.sorting:after {
 		width: 100%;
 	}
 	
+	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
+		left: -10px;
+	}
+	
+	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
+		font-size: 1.2em;
+		margin-top: -6px;
+	}
+	
+	.admin .Tickets .dash .table-list table td.project-title input[type="checkbox"]:after {
+		font-size: 1.1em;
+		margin-top: -6px;
+	}
+	
 	.admin .Tickets th.project-title input:before {
 		content: 'Select all';
-		margin-left: 14px;
+		margin-left: 25px;
 		position: relative;
 		top: -2px;
 	}
@@ -4204,9 +4218,23 @@ th.sorting:after {
 		width: 100%;
 	}
 	
+	.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
+		left: -10px;
+	}
+	
+	.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
+		font-size: 1.2em;
+		margin-top: -6px;
+	}
+	
+	.worker .Tickets .dash .table-list table td.project-title input[type="checkbox"]:after {
+		font-size: 1.1em;
+		margin-top: -6px;
+	}
+	
 	.worker .Tickets th.project-title input:before {
 		content: 'Select all';
-		margin-left: 14px;
+		margin-left: 25px;
 		position: relative;
 		top: -2px;
 	}

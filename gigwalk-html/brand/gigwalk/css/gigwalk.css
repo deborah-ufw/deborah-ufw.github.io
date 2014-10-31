@@ -335,6 +335,8 @@ html, body {
 	
 	.filters-holder .view a:hover,
 	.filters-holder .view a:active,
+	.choose-dates .quick-select a:hover,
+	.choose-dates .quick-select a:active,
 	.filters-choices .choice,
 	.filters-choices .choice .close,
 	.pagination .previous,
