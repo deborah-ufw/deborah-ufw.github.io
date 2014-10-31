@@ -74,7 +74,8 @@ header nav .user-edit,
 .key,
 .filters-choices .choice .value,
 .filters-choices .selection .detail,
-.action.panel .choose.list .pagination {
+.action.panel .choose.list .pagination,
+.instruction-footer .icon-checkmark {
 	font-size: 1.2em;
 }
 
@@ -514,7 +515,8 @@ th.sorting:after,
 .tab-pane.action .detail,
 .tab-pane.actions .comment-action.detail:before,
 .tab-pane.actions textarea,
-.map .tab-pane .assign-action.detail {
+.map .tab-pane .assign-action.detail,
+.instruction-footer .plainLabel {
 	position: relative;
 }
 
@@ -856,7 +858,7 @@ input[type="radio"]:checked:after,
 
 .filter.dates .im:before {
 	font-size: 3em;
-		top: -2px;
+		top: -1px;
 }
 
 .confirmation .icon-checkmark:before {
@@ -870,7 +872,7 @@ input[type="radio"]:checked:after,
 
 .iconButton.schedule:before,
 .iconButton.extend:before {
-	top: 7px;
+	top: 9px;
 }
 
 .messages .problem span.exclaim,
@@ -2290,7 +2292,7 @@ instruction .viewing.icon-buttons {
 
 .instruction-footer .icon-checkmark {
 	margin: -1px 5px -1px -1px;
-	padding: 5px 0 0 6px;
+	padding: 5px 0 0 4px;
 	height: 42px;
 	width: 42px;
 }
@@ -2301,16 +2303,21 @@ instruction .viewing.icon-buttons {
 }
 
 .instruction-footer .required .descriptor {
-	top: -5px;
+	top: -8px;
 }
 
 .instruction-footer .descriptor {
 	padding-left: .3em;
 }
 
+.instruction-footer .item.count .descriptor,
+.instruction-footer .plainLabel {
+		top: 2px;
+}
+
 .instruction-footer .item.count .described {
 	font-size: 1.4em;
-		top: 2px;
+		top: 4px;
 }
 
 .instruction-footer .item.estimated {

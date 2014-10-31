@@ -77,11 +77,11 @@ input[type="checkbox"]:after,
 	content: "\e619";
 }
 .icon-duplicate:before {
-	content: "\e61a";
+	content: "\e629";
 }
 .editable:after,
 .icon-edit:before {
-	content: "\e61b";
+	content: "\e62a";
 }
 .icon-email:before {
 	content: "\e61c";
@@ -193,6 +193,15 @@ th.sorting:after,
 }
 .icon-next:before {
 	content: "\e627";
+}
+.icon-shield:before {
+	content: "\e62f";
+}
+.icon-paperclip:before {
+	content: "\e60";
+}
+.icon-warning:before {
+	content: "\e61b";
 }
 
 
