@@ -226,7 +226,8 @@ a.iconButton:focus,
 .map .tab-pane a:hover,
 .map .tab-pane a:focus,
 .choose-dates .actions a:hover,
-.admin .table-list td.location a:hover {
+.admin .table-list td.location a:hover,
+.quick-select a {
 	text-decoration: none;
 }
 
