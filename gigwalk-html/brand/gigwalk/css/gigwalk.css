@@ -155,12 +155,14 @@ html, body {
 	.gray-cancel,
 	.primary.actions a.cancel,
 	.button-holder a.cancel,
+	.choose-dates a.cancel,
 	.expander a {
 		color: #c6c6c6;
 	}
 	
 	.primary.actions a.cancel,
-	.button-holder a.cancel {
+	.button-holder a.cancel,
+	.choose-dates a.cancel {
 		border-color: #c6c6c6;
 	}
 	
@@ -208,6 +210,8 @@ html, body {
 	.primary.actions a.cancel:focus,
 	.button-holder a.cancel:hover,
 	.button-holder a.cancel:focus,
+	.choose-dates a.cancel:hover,
+	.choose-dates a.cancel:focus,
 	.expander {
 		background: #f8f8f8;
 	}
@@ -475,7 +479,7 @@ html, body {
 	.instruction-footer .icon-checkmark,
 	.instruction .header,
 	.key.scheduled:before,
-	.choose-dates .actions a,
+	.choose-dates .actions a.buttonly,
 	.map .tab-pane a.buttonly.main,
 	.button-holder a.buttonly {
 		background: #00a584;
@@ -485,8 +489,8 @@ html, body {
 	.primary.actions a:focus,
 	.button-holder a:hover,
 	.button-holder a:focus,
-	.choose-dates .actions a:hover,
-	.choose-dates .actions a:focus,
+	.choose-dates .actions a.buttonly:hover,
+	.choose-dates .actions a.buttonly:focus,
 	.tab-pane a.buttonly.main:hover,
 	.tab-pane a.buttonly.main:focus {
 		background: #119676;
@@ -504,7 +508,8 @@ html, body {
 	.subnav li.active,
 	.button-holder a,
 	.button-holder a.buttonly:hover,
-	.button-holder a.buttonly:focus {
+	.button-holder a.buttonly:focus,
+	.choose-dates a.buttonly {
 		border-color: #08aa86;
 	}
 	

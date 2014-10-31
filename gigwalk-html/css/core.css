@@ -327,6 +327,10 @@ nav.subnav ul {
 	list-style: none;
 }
 
+.filters-holder .view a {
+	display: inline;
+}
+
 .tabnav .dropdown.open ul.dropdown-menu,
 .tabnav li .dropdown li,
 .tabnav li .dropdown li a,
@@ -369,7 +373,8 @@ a.iconly,
 .map ul.nav.nav-tabs,
 .map .nav.nav-tabs > li > a,
 .map .pin:before,
-.Tickets .filters .wrapper {
+.Tickets .filters .wrapper,
+.filter.search .icon-search {
 	display: inline-block;
 }
 
@@ -739,7 +744,7 @@ input[type="checkbox"]:after,
 .filter.dates,
 .filter.dropdown .caret,
 .filter.search .icon-search,
-.choose-dates .actions a,
+.choose-dates .actions a.buttonly,
 .map .nav-tabs > li > a:before,
 .map .tab-pane a.buttonly.main {
 	color: #ffffff;
@@ -993,7 +998,8 @@ header .nav ul.dropdown-menu li,
 .filters-choices .choice .close,
 .pagination .previous,
 .pagination .next,
-.button-holder a {
+.button-holder a,
+.choose-dates a {
 	border: 1px solid;
 }
 
@@ -2920,11 +2926,12 @@ a.iconly:before {
 }
 
 .filters-holder .view a {
-	margin-right: -8px;
+	margin-right: 1px;
 	padding: .4em 1.1em .5em .8em;
 }
 
 .filters-holder .view a.map {
+	margin-right: -8px;
 	padding-left: .3em;
 }
 
@@ -2972,6 +2979,7 @@ a.iconly:before {
 	margin: -1px -1px -1px 0;
 		top: 0;
 		right: 0;
+		bottom: 0;
 }
 
 .filter.dropdown .btn.btn-default.dropdown-toggle .caret {
@@ -2979,7 +2987,7 @@ a.iconly:before {
 }
 
 .filter.search .icon-search {
-	padding: 9px 5px 13px 5px;
+	padding: 2px 5px 13px 5px;
 }
 
 .filter.search .icon-search:before {
@@ -3007,6 +3015,7 @@ a.iconly:before {
 .choose-dates {
 	margin-top: -11px;
 	padding: 1.5em 1.5em 2em 1em;
+		top: 55px;
 		right: 0;
 	z-index: 1;
 }
@@ -4556,6 +4565,7 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 	.more-info .set-required input[type="checkbox"] {
 		top: 0;
 	}
+	
     
 }
 	
