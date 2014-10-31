@@ -3138,6 +3138,15 @@ a.iconly:before {
 	padding: 14px 10px 12px 0;
 }
 
+.action.panel .choose.list td.user-name {
+	padding-left: 30px;
+}
+
+.action.panel .choose.list .user-name input[type="checkbox"] {
+	margin-left: -28px;
+	margin-right: 10px;
+}
+
 .action.panel h1 + .hint {
 	padding: 0 0 15px 10px;
 }
@@ -3859,27 +3868,27 @@ th.sorting:after {
 		border-right-color: transparent;
 	}
 	
-	.admin .Tickets .table-list table th, 
-	.admin .Tickets .table-list table td {
+	.admin .Tickets .table-list > table th, 
+	.admin .Tickets .table-list > table td {
 		padding-bottom: 0;
 		padding-left: 35px;
 	}
 	 
-	.admin .Tickets .table-list table td {
+	.admin .Tickets .table-list > table td {
 		font-size: 1.4em;
 		padding-top: 10px;
 		display: block;
 		width: 100%;
 	}
 	
-	.admin .Tickets .table-list table th {
+	.admin .Tickets .table-list > table th {
 		font-size: 1.3em;
 		margin-left: 2.5em;
 		margin-bottom: .3em;
 		display: table;
 	}
 	
-	.admin .Tickets .table-list table thead {
+	.admin .Tickets .table-list > table thead {
 		background: #fcfcfc;
 	}
 	
@@ -3908,7 +3917,7 @@ th.sorting:after {
 		margin-bottom: 1em;
 	}
 	
-	.admin .table-list table tr.even {
+	.admin .table-list > table tr.even {
 		background: #fbfbfb;
 	}
 	
@@ -3953,7 +3962,7 @@ th.sorting:after {
 	}
 	
 	.admin .Tickets .table-list table td.project-title:before,
-	.admin .Tickets .table-list table td.location:before,
+	.admin .Tickets .table-list > table td.location:before,
 	.admin .Tickets .table-list table td.assigned:before,
 	.admin .Tickets .table-list table td.due:before,
 	.admin .Tickets .table-list table td.status:before {
@@ -3962,7 +3971,7 @@ th.sorting:after {
 		display: block;
 	}
 	
-	.admin .Tickets .table-list table td.location:before {
+	.admin .Tickets .table-list > table td.location:before {
 		content: 'Location';
 	}
 	.admin .Tickets .table-list table td.assigned:before {
@@ -3977,6 +3986,104 @@ th.sorting:after {
 	
 	
 }
+
+/* assign panel for Grace - starts to size down */
+
+@media (max-width: 805px) {
+	
+	.admin .Tickets .action.panel.assign .radio .choose.list {
+		margin-left: 0;
+	}
+	
+	.admin .Tickets .table-list .choose.list th {
+		line-height: 1em;
+		vertical-align: top;
+		padding: 15px 0 0 0;
+	}
+	
+	.admin .Tickets .table-list .choose.list th:after {
+		margin-left: 0;
+		top: -5px;
+	}
+	
+	.admin .Tickets .table-list .choose.list th.availability {
+		padding-right: 25px;
+	}
+	
+}
+
+@media (min-width: 500px) and (max-width: 805px) {
+	
+	.admin .Tickets .table-list .choose.list th.availability:after {
+		position: absolute;
+		right: 0;
+		top: 10px;
+	}
+	
+}
+
+/* assign panel for Grace - snaps to responsive */
+
+@media (max-width: 500px) {
+	
+	.admin .Tickets .table-list .action.panel.assign table {
+		margin: 1em 0 1em 0em;
+		background: #fcfcfc;
+		border: 6px solid #fcfcfc;
+	}
+	
+	.admin .Tickets .table-list .action.panel.assign table th, 
+	.admin .Tickets .table-list table td {
+		padding-bottom: 0;
+	}
+	 
+	.admin .Tickets .table-list .action.panel.assign table td {
+		font-size: 1.2em;
+		padding: 3px 5px 3px 30px;
+		display: block;
+		width: 100%;
+	}
+	
+	.admin .Tickets .table-list .action.panel.assign table tr.odd {
+		background: #ffffff;
+	}
+	
+	.admin .Tickets .table-list .action.panel.assign table th.user-name {
+		margin-top: .5em;
+	}
+	
+	.admin .Tickets .table-list .action.panel.assign table td.user-name {
+		padding-top: 1em;
+	}
+	
+	.admin .Tickets .table-list .action.panel.assign table td.availability {
+		padding-bottom: 1em;
+	}
+	
+	.admin .Tickets .table-list .action.panel.assign table th {
+		font-size: 1.3em;
+		margin-bottom: .3em;
+		display: table;
+	}
+	
+	.admin .Tickets .table-list .action.panel.assign table td.location:before,
+	.admin .Tickets .table-list .action.panel.assign table td.availability:before {
+		color: #ccc;
+		font-size: .9em;
+		display: block;
+	}
+	
+	.admin .Tickets .table-list .action.panel.assign table td.location:before {
+		content: 'Location';
+	}
+	
+	.admin .Tickets .table-list .action.panel.assign table td.availability:before {
+		content: 'Availability (week)';
+	}
+
+	
+}
+
 
 /* Tickets tables snap to responsive display - Jimmy */
 
