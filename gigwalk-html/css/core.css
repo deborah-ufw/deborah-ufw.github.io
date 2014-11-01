@@ -36,6 +36,10 @@ header nav .user-edit,
 	display: none;
 }
 
+.tab-pane.actions .assign-action.detail.required:before {
+	content: ' ';
+}
+
 .panel.action .choose.search .filters-choices {
 	font-size: .8em;
 }
@@ -966,7 +970,8 @@ header .nav ul.dropdown-menu li,
 }
 
 .filter.dropdown .btn.btn-default.dropdown-toggle,
-.filter.search {
+.filter.search,
+.map .tab-pane .assign-action.detail .filter.search input[type="text"] {
 	border: 1px solid #cfcfcf;
 }
 
@@ -1044,7 +1049,8 @@ header .nav li {
 
 .nav-tabs > li.active > a, 
 .nav-tabs > li.active > a:hover, 
-.nav-tabs > li.active > a:focus {
+.nav-tabs > li.active > a:focus,
+.map .tab-pane .assign-action.detail .filter.search {
 	border: 0px solid transparent;
 }
 
@@ -2619,7 +2625,7 @@ a.iconly:before {
 		margin: 1em 0 1em 2em;
 	}
 	
-	/* tickets dash global adjustments for desktop view heredeb full */
+	/* tickets dash global adjustments for desktop view full */
 	
 	/* worker */
 	
@@ -3308,10 +3314,6 @@ th.sorting:after {
 	margin: .5em 0;
 }
 
-.map .tab-pane.actions input[type="text"] {
-	margin: 5px 0;
-}
-
 .map .tab-pane .assign-action.detail {
 	padding: 2em 0;
 	height: 280px;
@@ -3327,8 +3329,9 @@ th.sorting:after {
 	width: 160px;
 }
 
-.map .tab-pane .search input {
-	width: 183px;
+.map .tab-pane .filter.search input {
+	padding: 7px 0 7px 12px;
+	width: 180px;
 }
 
 .map .tab-pane .filter.search .icon-search {
@@ -3597,6 +3600,7 @@ th.sorting:after {
 	
 	.admin .Tickets .filters .filter.search {
 		margin-right: -3px;
+		margin-left: 0;
 	}
 	
 	.admin .Tickets .filters .filter.search input {
@@ -4599,12 +4603,18 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
     padding: 6px 10px 1px 5px;
 	}
 	
-	@media (max-width: 805px) {
+	.map .assign-action.detail .choice.searched,
+	.map .assign-action-detail .choice.searched .close {
+		height: 35px;
+	}
 	
+	
+	@media (max-width: 805px) {
 		.admin .Tickets .table-list .choose.list th:after {
 			float: right;
 		}
 	}
+	
 	/* Tickets tables snap to responsive display - Grace */
 	@media (max-width: 920px) {
 		.admin .Tickets .dash > .filters-choices .choice,
@@ -4625,6 +4635,7 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 			
 		}
 	}
+	
 	/* Tickets tables snap to responsive display - Jimmy */
 	@media (max-width: 750px) {
 		.worker .Tickets .dash > .filters-choices .choice,
