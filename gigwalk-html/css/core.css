@@ -2748,7 +2748,7 @@ a.iconly:before {
 	
 }
 
-/* this is the width where all the menus flip into device-sized mode */
+/* here all the menus snap into device-sized mode */
 
 @media (max-width: 664px) {
 	
@@ -4595,6 +4595,56 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 		top: 0;
 	}
 	
+	.map a.collapse {
+    padding: 6px 10px 1px 5px;
+	}
+	
+	@media (max-width: 805px) {
+	
+		.admin .Tickets .table-list .choose.list th:after {
+			float: right;
+		}
+	}
+	/* Tickets tables snap to responsive display - Grace */
+	@media (max-width: 920px) {
+		.admin .Tickets .dash > .filters-choices .choice,
+		.admin .Tickets .dash > .filters-choices .choice .close {
+			height: 36px;
+		}
+		
+		.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
+			 left: -80px;
+		}
+		
+		.admin .Tickets .dash .table-list table th.project-title:before {
+			content: 'Select all';
+			display: inline-block;
+			position: relative;
+			left: 0;
+			top: 36px;
+			
+		}
+	}
+	/* Tickets tables snap to responsive display - Jimmy */
+	@media (max-width: 750px) {
+		.worker .Tickets .dash > .filters-choices .choice,
+		.worker .Tickets .dash > .filters-choices .choice .close {
+			height: 36px;
+		}
+		
+		.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
+			 left: -80px;
+		}
+		
+		.worker .Tickets .dash .table-list table th.project-title:before {
+			content: 'Select all';
+			display: inline-block;
+			position: relative;
+			left: 0;
+			top: 36px;
+			
+		}
+	}
     
 }
 	

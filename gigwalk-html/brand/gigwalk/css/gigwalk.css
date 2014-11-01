@@ -663,6 +663,22 @@ select option,
 	}
 }
 
+/* Firefox only */
+@-moz-document url-prefix() {
+	@media (max-width: 920px) {
+		.admin .Tickets .dash .table-list table th.project-title:before {
+			font-family: Helvetica-Neue-Bold;
+			font-weight: normal !important;
+		}
+	}
+	@media (max-width: 750px) {
+		.worker .Tickets .dash .table-list table th.project-title:before {
+			font-family: Helvetica-Neue-Bold;
+			font-weight: normal !important;
+		}
+	}
+}
+
 
 /* header */
 	
