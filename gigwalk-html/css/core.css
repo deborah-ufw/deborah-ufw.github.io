@@ -32,12 +32,9 @@ header nav .user-edit,
 .admin .map .tab-pane.actions .iconButton.worker,
 .worker .Tickets .table-list tr.canceled,
 .worker .Tickets .table-list tr.expired,
-.worker .nav-active-holder {
-	display: none;
-}
-
+.worker .nav-active-holder,
 .tab-pane.actions .assign-action.detail.required:before {
-	content: ' ';
+	display: none;
 }
 
 .panel.action .choose.search .filters-choices {
