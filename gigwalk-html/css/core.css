@@ -33,6 +33,7 @@ header nav .user-edit,
 .worker .Tickets .table-list tr.canceled,
 .worker .Tickets .table-list tr.expired,
 .worker .nav-active-holder,
+.worker .map .tab-pane .assign-action.detail,
 .tab-pane.actions .assign-action.detail.required:before {
 	display: none;
 }
@@ -831,7 +832,6 @@ input[type="radio"]:after,
 
 input[type="radio"]:after,
 input[type="radio"]:checked:after,
-.messages .problem span.exclaim:before,
 .map .pin:before {
 	content: ' ';
 }
@@ -871,6 +871,10 @@ input[type="radio"]:checked:after,
 .confirmation .icon-checkmark:before {
 	font-size: 1.5em;
 		top: 5px;
+}
+
+.problem .icon-warning:before {
+	top: 5px;
 }
 
 .iconButton:before {
@@ -3309,6 +3313,10 @@ th.sorting:after {
 
 .map .tab-pane .detail {
 	margin: .5em 0;
+}
+
+.map .tab-pane.actions .warning {
+	padding-top: 5px;
 }
 
 .map .tab-pane .assign-action.detail {

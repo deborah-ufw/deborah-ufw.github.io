@@ -2,10 +2,7 @@
 
 .requirements-list,
 h1.super,
-.tab-pane.actions .confirm,
 .worker .action.panel.assign,
-.choose-dates,
-.map .description,
-.map .requirements {
+.choose-dates {
 	display: none;
 }

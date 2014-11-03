@@ -243,12 +243,9 @@ html, body {
 	.action.panel .warning,
 	.tab-pane.actions .warning,
 	.choose-dates .warning,
-	.Tickets .dash td.status span.expired:before {
-		color: #ff5157;
-	}
-	
+	.Tickets .dash td.status span.expired:before,
 	.messages .problem span.exclaim:before {
-		background: #ff5157;
+		color: #ff5157;
 	}
 	
 	.instruction.incomplete .header,
