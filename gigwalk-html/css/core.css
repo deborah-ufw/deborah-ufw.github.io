@@ -3963,10 +3963,6 @@ th.sorting:after {
 		width: 100%;
 	}
 	
-	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
-		left: -10px;
-	}
-	
 	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
 		font-size: 1.2em;
 		margin-top: -6px;
@@ -3977,11 +3973,16 @@ th.sorting:after {
 		margin-top: -6px;
 	}
 	
-	.admin .Tickets th.project-title input:before {
+	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
+		left: -10px;
+	}
+
+	.admin .Tickets .dash .table-list table th.project-title:before {
 		content: 'Select all';
-		margin-left: 25px;
+		display: inline-block;
 		position: relative;
-		top: -2px;
+		left: 0;
+		top: 36px;
 	}
 	
 	.admin .Tickets .dash td.status span:before {
@@ -4030,26 +4031,28 @@ th.sorting:after {
 	.admin .Tickets .table-list .choose.list th {
 		line-height: 1em;
 		vertical-align: top;
-		padding: 15px 0 0 0;
 	}
 	
 	.admin .Tickets .table-list .choose.list th:after {
 		margin-left: 0;
-		top: -5px;
 	}
 	
 	.admin .Tickets .table-list .choose.list th.availability {
 		padding-right: 25px;
 	}
 	
+	.admin .Tickets .table-list .choose.list th:after {
+		float: right;
+	}
+	
 }
 
-@media (min-width: 500px) and (max-width: 805px) {
+@media (min-width: 501px) and (max-width: 805px) {
 	
-	.admin .Tickets .table-list .choose.list th.availability:after {
+	.admin .Tickets .table-list .choose.list th:after {
 		position: absolute;
 		right: 0;
-		top: 10px;
+		top:0;
 	}
 	
 }
@@ -4076,6 +4079,10 @@ th.sorting:after {
 		width: 100%;
 	}
 	
+	.admin .Tickets .table-list .action.panel.assign table th.sorting:after {
+		top: -5px;
+	}
+	
 	.admin .Tickets .table-list .action.panel.assign table tr.odd {
 		background: #ffffff;
 	}
@@ -4100,7 +4107,7 @@ th.sorting:after {
 	
 	.admin .Tickets .table-list .action.panel.assign table td.location:before,
 	.admin .Tickets .table-list .action.panel.assign table td.availability:before {
-		color: #ccc;
+		color: #ababab;
 		font-size: .9em;
 		display: block;
 	}
@@ -4112,8 +4119,6 @@ th.sorting:after {
 	.admin .Tickets .table-list .action.panel.assign table td.availability:before {
 		content: 'Availability (week)';
 	}
-
-	
 }
 
 
@@ -4219,10 +4224,6 @@ th.sorting:after {
 		width: 100%;
 	}
 	
-	.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
-		left: -10px;
-	}
-	
 	.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
 		font-size: 1.2em;
 		margin-top: -6px;
@@ -4233,12 +4234,17 @@ th.sorting:after {
 		margin-top: -6px;
 	}
 	
-	.worker .Tickets th.project-title input:before {
-		content: 'Select all';
-		margin-left: 25px;
-		position: relative;
-		top: -2px;
+	.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
+		left: -10px;
 	}
+	
+	.worker .Tickets .dash .table-list table th.project-title:before {
+			content: 'Select all';
+			display: inline-block;
+			position: relative;
+			left: 0;
+			top: 36px;
+		}
 	
 	.worker .Tickets .dash td.status span:before {
 		top: 0;
@@ -4604,13 +4610,7 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 	.map .assign-action-detail .choice.searched .close {
 		height: 35px;
 	}
-	
-	
-	@media (max-width: 805px) {
-		.admin .Tickets .table-list .choose.list th:after {
-			float: right;
-		}
-	}
+
 	
 	/* Tickets tables snap to responsive display - Grace */
 	@media (max-width: 920px) {
@@ -4618,18 +4618,8 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 		.admin .Tickets .dash > .filters-choices .choice .close {
 			height: 36px;
 		}
-		
 		.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
-			 left: -80px;
-		}
-		
-		.admin .Tickets .dash .table-list table th.project-title:before {
-			content: 'Select all';
-			display: inline-block;
-			position: relative;
-			left: 0;
-			top: 36px;
-			
+		 left: -80px;
 		}
 	}
 	
@@ -4643,19 +4633,8 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 		.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
 			 left: -80px;
 		}
-		
-		.worker .Tickets .dash .table-list table th.project-title:before {
-			content: 'Select all';
-			display: inline-block;
-			position: relative;
-			left: 0;
-			top: 36px;
-			
-		}
 	}
-    
 }
-	
 	
 	
 /* ---------- END CORE.CSS ---------- */	

@@ -650,6 +650,10 @@ select option,
 	.worker .Tickets .table-list td {
 		font-family: Helvetica-Neue;
 	}
+	.worker .Tickets .dash .table-list table th.project-title:before {
+		font-family: Helvetica-Neue-Bold;
+		font-weight: normal !important;
+	}
 }
 
 @media (max-width: 920px) {
@@ -661,21 +665,9 @@ select option,
 	.admin .Tickets .table-list > table td {
 		font-family: Helvetica-Neue;
 	}
-}
-
-/* Firefox only */
-@-moz-document url-prefix() {
-	@media (max-width: 920px) {
-		.admin .Tickets .dash .table-list table th.project-title:before {
-			font-family: Helvetica-Neue-Bold;
-			font-weight: normal !important;
-		}
-	}
-	@media (max-width: 750px) {
-		.worker .Tickets .dash .table-list table th.project-title:before {
-			font-family: Helvetica-Neue-Bold;
-			font-weight: normal !important;
-		}
+	.admin .Tickets .dash .table-list table th.project-title:before {
+		font-family: Helvetica-Neue-Bold;
+		font-weight: normal !important;
 	}
 }
 
