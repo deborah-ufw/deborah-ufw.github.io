@@ -3562,7 +3562,14 @@ th.sorting:after {
 	}
 	
 	.admin .Tickets .choose-dates {
+		padding-right: 1em;
 		width: 282px;
+			top: 95px;
+	}
+	
+	.admin .choose-dates .actions {
+		text-align: left;
+		width: 100%;
 	}
 	
 	.admin .Tickets .choose-dates a {
@@ -3572,6 +3579,10 @@ th.sorting:after {
 	
 	.admin .Tickets .choose-dates .between input {
 		width: 100px;
+	}
+	
+	.choose-dates .actions a {
+		width: 115px;
 	}
 	
 }
@@ -3625,7 +3636,14 @@ th.sorting:after {
 	}
 	
 	.admin .Tickets .choose-dates {
+		padding-right: 1em;
 		width: 282px;
+			top: 95px;
+	}
+	
+	.admin .choose-dates .actions {
+		text-align: left;
+		width: 100%;
 	}
 	
 	.admin .Tickets .choose-dates a {
@@ -3635,6 +3653,10 @@ th.sorting:after {
 	
 	.admin .Tickets .choose-dates .between input {
 		width: 100px;
+	}
+	
+	.choose-dates .actions a {
+		width: 115px;
 	}
 	
 }
@@ -3775,12 +3797,23 @@ th.sorting:after {
 	}
 	
 	.worker .Tickets .choose-dates {
+		padding-right: 1em;
 		width: 282px;
+			top: 95px;
+	}
+	
+	.worker .choose-dates .actions {
+		text-align: left;
+		width: 100%;
 	}
 	
 	.worker .Tickets .choose-dates a {
 		padding-left: .5em;
 		padding-right: .5em;
+	}
+	
+	.worker .choose-dates .actions a {
+		width: 115px;
 	}
 	
 	.worker .Tickets .choose-dates .between input {
