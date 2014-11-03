@@ -443,6 +443,14 @@ html, body {
 			background: #f3f8fd;
 		}
 	}
+	/* Firefox admin assign sorting */
+	@-moz-document url-prefix() {
+		@media (min-width: 501px) and (max-width: 815px) {
+			.admin .Tickets .table-list .choose.list th {
+				color: #4890e2 !important;
+			}
+		}
+	}
 	
 	
 	

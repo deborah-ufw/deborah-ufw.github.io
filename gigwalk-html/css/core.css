@@ -4618,6 +4618,14 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 	.map .assign-action-detail .choice.searched .close {
 		height: 35px;
 	}
+	
+	.map .assign-action.detail .filter.search input[type="text"] {
+		height: 38px;
+	}
+	
+	.map .assign-action-detail .filter.search span.icon-search {
+		height: 40px;
+	}
 
 	
 	/* Tickets tables snap to responsive display - Grace */
@@ -4628,6 +4636,12 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 		}
 		.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
 		 left: -80px;
+		}
+	}
+	@media (min-width: 501px) and (max-width: 815px) {
+	
+		.admin .Tickets .table-list .choose.list th:after {
+			display: none;
 		}
 	}
 	
