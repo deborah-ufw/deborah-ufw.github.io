@@ -4119,6 +4119,7 @@ th.sorting:after {
 	.admin .Tickets .table-list .action.panel.assign table {
 		margin: 1em 0 1em 0em;
 		background: #fcfcfc;
+		border-top: 1px solid rgba(0, 0, 0, .1);
 	}
 	
 	.admin .Tickets .table-list .action.panel.assign table th, 
@@ -4128,6 +4129,11 @@ th.sorting:after {
 		display: block;
 		float: left;
 		width: 100%;
+	}
+	
+	.admin .Tickets .table-list .action.panel.assign table th {
+		font-size: 1.3em;
+		margin-bottom: 1em;
 	}
 	 
 	.admin .Tickets .table-list .action.panel.assign table td {
@@ -4153,11 +4159,6 @@ th.sorting:after {
 	
 	.admin .Tickets .table-list .action.panel.assign table td.availability {
 		padding-bottom: 1em;
-	}
-	
-	.admin .Tickets .table-list .action.panel.assign table th {
-		font-size: 1.3em;
-		margin-bottom: 1em;
 	}
 	
 	.admin .Tickets .table-list .action.panel.assign table td.location:before,
