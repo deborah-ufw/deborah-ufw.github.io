@@ -3938,6 +3938,10 @@ th.sorting:after {
 		padding-bottom: 0;
 		padding-left: 45px;
 	}
+	
+	.admin .Tickets .dash .table-list table .project-title {
+		padding-left: 45px;
+	}
 	 
 	.admin .Tickets .table-list > table td {
 		font-size: 1.4em;
@@ -3949,7 +3953,6 @@ th.sorting:after {
 	
 	.admin .Tickets .table-list > table th {
 		font-size: 1.3em;
-		margin-left: .5em;
 		margin-bottom: .3em;
 		display: block;
 		float: left;
@@ -3960,8 +3963,12 @@ th.sorting:after {
 		background: #fcfcfc;
 	}
 	
-	.admin .Tickets .dash .table-list table .project-title {
-		padding-left: 45px;
+	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
+		left: -10px;
+	}
+	
+	.admin .Tickets .dash .table-list table td.project-title input[type="checkbox"] {
+		margin-left: -35px;
 	}
 	
 	.admin .Tickets .dash .table-list table th.project-title {
@@ -3973,14 +3980,6 @@ th.sorting:after {
 	.admin .Tickets .dash .table-list table td.project-title {
 		padding-top: 20px;
 		max-width: 100%;
-	}
-	
-	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
-		left: -20px;
-	}
-	
-	.admin .Tickets .dash .table-list table td.project-title input[type="checkbox"] {
-		margin-left: -35px;
 	}
 	
 	.admin .Tickets .table-list table .due,
@@ -4218,11 +4217,12 @@ th.sorting:after {
 		width: 100%;
 	}
 	
-	.worker .Tickets .table-list table th {
+	.worker .Tickets .table-list > table th {
 		font-size: 1.3em;
-		margin-left: 2.5em;
 		margin-bottom: .3em;
-		display: table;
+		display: block;
+		float: left;
+		width: 100%;
 	}
 	
 	.worker .Tickets .table-list table thead {
@@ -4239,8 +4239,8 @@ th.sorting:after {
 	
 	.worker .Tickets .dash .table-list table th.project-title {
 		padding-bottom: 3px;
-		min-width: 155px;
-		max-width: 155px;
+		min-width: 200px;
+		max-width: 200px;
 	}
 	
 	.worker .Tickets .dash .table-list table td.project-title {
