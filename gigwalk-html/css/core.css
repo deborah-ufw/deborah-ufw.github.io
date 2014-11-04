@@ -171,7 +171,8 @@ th.sorting:after,
 .map .tab-pane .requirements-list li,
 .map .tab-pane .description,
 .map .tab-pane .address,
-.button-holder a {
+.button-holder a,
+.admin .Tickets .table-list .action.panel .warning {
 	line-height: 1.2em;
 }
 
@@ -3189,15 +3190,11 @@ th.sorting:after {
 	padding-left: 35px;
 }
 
-.Tickets .dash .table-list table th.project-title input[type="checkbox"] {
-	margin-left: -25px;
+.Tickets .dash .table-list table .project-title input[type="checkbox"] {
+	margin-left: -32px;
 	margin-right: 15px;
 }
 
-.Tickets .dash .table-list table td.project-title input[type="checkbox"] {
-	margin-left: -25px;
-	margin-right: 15px;
-}
 
 .Tickets .dash td.status span:before {
 	top: -4px;
@@ -4627,7 +4624,9 @@ html[data-useragent*='Trident'] .buttonly .im.icon-pencil-box:before {
 html[data-useragent*='MSIE 10.0'] .dates.filter .im.icon-calendar:before,
 html[data-useragent*='Trident'] .dates.filter .im.icon-calendar:before,
 html[data-useragent*='MSIE 10.0'] .view .im:before,
-html[data-useragent*='Trident'] .view .im:before {
+html[data-useragent*='Trident'] .view .im:before,
+html[data-useragent*='MSIE 10.0'] .confirmation .icon-checkmark:before,
+html[data-useragent*='Trident'] .confirmation .icon-checkmark:before {
 	font-size: .6em;
 }	
 
@@ -4649,6 +4648,16 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 html[data-useragent*='MSIE 10.0'] .map .assign-action.detail .filter.search input[type="text"],
 html[data-useragent*='Trident'] .map .assign-action.detail .filter.search input[type="text"] {
 	height: 38px;
+}
+
+html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list table th.project-title input[type="checkbox"],
+html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
+	 width: 15px;
+}
+
+html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list table th.project-title,
+html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-title {
+	 white-space: nowrap;
 }
 
 
