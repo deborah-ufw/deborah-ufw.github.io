@@ -4,6 +4,7 @@
 h1.super,
 .tab-pane.actions .confirm,
 .worker .action.panel.assign,
+.choose-dates,
 .map .description,
 .map .requirements {
 	display: none;
