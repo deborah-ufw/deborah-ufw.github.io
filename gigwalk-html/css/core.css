@@ -1318,7 +1318,7 @@ header .nav .dropdown li {
 	}
 	
 	.Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
-		font-size: 1.15em;
+		font-size: 20px;
 	}
 	
 	.instruction.view-mode input[type="checkbox"]:after {
@@ -4022,7 +4022,7 @@ th.sorting:after {
 	}
 	
 	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
-		font-size: 1.15em;
+		font-size: 20px;
 		margin-top: -6px;
 	}
 	
@@ -4291,7 +4291,7 @@ th.sorting:after {
 	}
 	
 	.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
-		font-size: 1.2em;
+		font-size: 20px;
 		margin-top: -6px;
 	}
 	
