@@ -172,7 +172,7 @@ th.sorting:after,
 .map .tab-pane .description,
 .map .tab-pane .address,
 .button-holder a,
-.admin .Tickets .table-list .action.panel .warning {
+.Tickets .table-list .action.panel .warning {
 	line-height: 1.2em;
 }
 
@@ -4621,15 +4621,15 @@ html[data-useragent*='Trident'] .buttonly .im.icon-pencil-box:before {
 	font-size: .7em;
 }	
 
-html[data-useragent*='MSIE 10.0'] .dates.filter .im.icon-calendar:before,
-html[data-useragent*='Trident'] .dates.filter .im.icon-calendar:before,
-html[data-useragent*='MSIE 10.0'] .view .im:before,
-html[data-useragent*='Trident'] .view .im:before,
 html[data-useragent*='MSIE 10.0'] .confirmation .icon-checkmark:before,
-html[data-useragent*='Trident'] .confirmation .icon-checkmark:before {
-	font-size: .6em;
+html[data-useragent*='Trident'] .confirmation .icon-checkmark:before,
+html[data-useragent*='MSIE 10.0'] .dates.filter .im.icon-calendar:before,
+html[data-useragent*='Trident'] .dates.filter .im.icon-calendar:before {
+	font-size: 42px;
 }	
 
+html[data-useragent*='MSIE 10.0'] .view .im:before,
+html[data-useragent*='Trident'] .view .im:before, 
 html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list td.status span.started.paused:before,
 html[data-useragent*='Trident'] .Tickets .dash .table-list td.status span.started.paused:before {
 	font-size: 30px;
