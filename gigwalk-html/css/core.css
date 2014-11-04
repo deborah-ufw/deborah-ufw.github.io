@@ -4022,7 +4022,7 @@ th.sorting:after {
 	}
 	
 	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
-		font-size: 1.1em;
+		font-size: 22px;
 		margin-top: -6px;
 	}
 	
@@ -4291,7 +4291,7 @@ th.sorting:after {
 	}
 	
 	.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
-		font-size: 1.1em;
+		font-size: 22px;
 		margin-top: -6px;
 	}
 	
