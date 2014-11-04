@@ -1317,6 +1317,10 @@ header .nav .dropdown li {
 		width: 22px;
 	}
 	
+	.Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
+		font-size: 1.15em;
+	}
+	
 	.instruction.view-mode input[type="checkbox"]:after {
 		font-size: 1.2em;
 	}
@@ -3112,7 +3116,7 @@ a.iconly:before {
 }
 
 .action.panel .choose.list input[type="checkbox"]:after {
-	margin-top: -7px;
+	margin-top: -6px;
 }
 
 .table-list .action.messages .message {
@@ -3960,10 +3964,6 @@ th.sorting:after {
 		background: #fcfcfc;
 	}
 	
-	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
-		left: -10px;
-	}
-	
 	.admin .Tickets .dash .table-list table td.project-title input[type="checkbox"] {
 		margin-left: -35px;
 	}
@@ -4022,7 +4022,7 @@ th.sorting:after {
 	}
 	
 	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
-		font-size: 22px;
+		font-size: 1.15em;
 		margin-top: -6px;
 	}
 	
@@ -4291,17 +4291,13 @@ th.sorting:after {
 	}
 	
 	.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
-		font-size: 22px;
+		font-size: 1.2em;
 		margin-top: -6px;
 	}
 	
 	.worker .Tickets .dash .table-list table td.project-title input[type="checkbox"]:after {
 		font-size: 1.1em;
 		margin-top: -6px;
-	}
-	
-	.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
-		left: -10px;
 	}
 	
 	.worker .Tickets .dash .table-list table th.project-title:before {
@@ -4653,7 +4649,8 @@ html[data-useragent*='Trident'] .map .assign-action.detail .filter.search input[
 
 html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list table th.project-title input[type="checkbox"],
 html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
-	 width: 15px;
+	width: 15px;
+		left: 0;
 }
 
 html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list table th.project-title,
@@ -4720,7 +4717,7 @@ html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-titl
 	/* Tickets tables snap to responsive display - Grace */
 	@media (max-width: 920px) {
 		.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
-		 left: -80px;
+		 left: -70px;
 		}
 	}
 	@media (min-width: 501px) and (max-width: 815px) {
