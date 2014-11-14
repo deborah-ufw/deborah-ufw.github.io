@@ -172,7 +172,8 @@ th.sorting:after,
 .map .tab-pane .description,
 .map .tab-pane .address,
 .button-holder a,
-.Tickets .table-list .action.panel .warning {
+.Tickets .table-list .action.panel .warning,
+.map .tab-pane.actions .warning {
 	line-height: 1.2em;
 }
 
@@ -985,6 +986,11 @@ header .nav ul.dropdown-menu li,
 	border-bottom: 1px solid #b3b3b3;
 }
 
+.filters-holder .view a.list {
+	border-right: 1px solid #ffffff;
+	border-left: 1px solid #ffffff;
+}
+
 .instruction .item.targets .sub .mini-panel {
 	border-top: 2px solid #ffffff;
 }
@@ -1001,7 +1007,6 @@ header .nav ul.dropdown-menu li,
 
 .instructions .item .actions a.buttonly,
 .primary.actions a,
-.filters-holder .view a,
 .filters-choices .choice,
 .filters-choices .choice .close,
 .pagination .previous,
@@ -1149,6 +1154,10 @@ header .nav .dropdown li {
 .map .nav-tabs > li.active > a.actions:hover,
 .map .nav-tabs > li.active > a.actions:focus {
 	border-right-color: #b3b3b3;
+}
+
+.table-condensed > tbody > tr > td {
+	padding: 5px 3px;
 }
 
 
@@ -2121,6 +2130,10 @@ div.main.wrapper + div.inner {
 	width: 60px;
 }
 
+.sub .more-info .billing-code input[type="text"] {
+	width: 120px;
+}
+
 .skills .more-info input[type="text"],
 .group.group .more-info input[type="text"] {
 	float: right;
@@ -2654,7 +2667,7 @@ a.iconly:before {
 
 @media (min-width: 931px) {
 
-	.header .actions .ti {
+	.header .view-mode .actions .ti {
 			max-width: 440px;
 		}
 	
@@ -2662,7 +2675,7 @@ a.iconly:before {
 
 @media (min-width: 851px) and (max-width: 930px) {
 
-	.header .actions .ti {
+	.header .view-mode .actions .ti {
 			max-width: 360px;
 		}
 	
@@ -2670,7 +2683,7 @@ a.iconly:before {
 
 @media (min-width: 776px) and (max-width: 850px) {
 
-	.header .actions .ti {
+	.header .view-mode .actions .ti {
 			max-width: 285px;
 		}
 	
@@ -3230,6 +3243,10 @@ th.sorting:after {
 	min-width: 115px;
 }
 
+td.table-actions a {
+	padding: 0 10px;
+}
+
 
 /* pagination */
 
@@ -3322,7 +3339,7 @@ th.sorting:after {
 }
 
 .map .tab-pane.actions .warning {
-	padding-top: 5px;
+	padding-top: 8px;
 }
 
 .map .tab-pane .assign-action.detail {

@@ -208,25 +208,18 @@
         <div class="group date">
           <div class="plainLabel">Start Date</div>
           <div class="starts value editable">Monday 06/30/2014</div>
-        </div><!-- corrected this for better display -->
+        </div>
         <div class="group date">
           <div class="plainLabel">End Date</div>
           <div class="ends value editable">Wednesday 07/02/2014</div>
-        </div><!-- corrected this for better display -->
+        </div>
         
         <div class="group repeats">
           <div class="repeats-selection">
             <div class="plainLabel">Repeats</div>
             <div class="value repeats-setter editable">Never</div>
           </div>
-          
-          <!-- --------------------------------------------------------
-                Dave Valerie
-                the js that shows/hides the panel is
-                "project scheduling "repeats" panel" in interactions.js
-                in the dom ready
-          ----------------------------------------------------------- -->      
-          
+                        
           <div class="set-repeats">
             <div class="inner mini-panel">
               <div class="checker">
@@ -447,7 +440,17 @@
             <div class="selected-item">Kikkoman</div>
             <a class="remove" href="javascript:;">Remove</a>
             <div class="more-info">
-              <div class="adjacent">
+            
+              <!-- ------------------ DAVE YouTrack GWP-534 - Add "billing code" for CSMK ------------------ -->
+              
+              <!-- This html block if CSMK -->
+              <div class="billing-code">
+                <div class="plainLabel">Billing Code</div>
+              <input type="text" placeholder="Enter Code" />
+              </div><!-- END if CSMK -->
+              
+              <!-- This html block if NOT CSMK -->
+              <div class="adjacent billing-percent-hours">
                 <div class="wrapper">
                   <label class="plainLabel">
                     <input type="radio" checked="checked" value="percent" name="Bill" />Bill %
@@ -459,7 +462,9 @@
                     <input type="radio" checked="" value="hours" name="Bill" />Bill by hours
                   </label>
                 </div>
-              </div> 
+              </div><!-- END if NOT CSMK -->
+              <!-- ------------------ END Add "billing code" for CSMK ------------------ -->
+              
             </div>
           </div>
         </div>
@@ -482,7 +487,7 @@
           <div class="sub first">
             <div class="selected-item">Wal-Mart Dedicated</div>
             <a class="remove" href="javascript:;">Remove</a>
-            <div class="more-info"><!-- corrected this - it belongs with the sub, each sub gets one -->
+            <div class="more-info">
               <div class="checker">
                 <label class="plainLabel">
                   <input type="checkbox" class="supercheck" value="repeats" />
@@ -493,6 +498,29 @@
             </div>
           </div>
         </div>
+        
+        <!-- ------------------ DAVE YouTrack GWP-534 - Add "Division" for CSMK ------------------ -->
+        <!-- division -->
+        <div class="group division">
+            <div class="plainLabel">Division</div>
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Select from options
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Division 1</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Division 2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Division 3</a></li>
+              </ul>
+          </div>
+          
+          <div class="sub first">
+            <div class="selected-item">Big Ol' Division</div>
+            <a class="remove" href="javascript:;">Remove</a>
+          </div>
+        </div>
+        <!-- ------------------ END Add "Division" for CSMK ------------------ -->
         
         <!-- additional info -->
         <div class="group additional last">
@@ -519,12 +547,6 @@
         <div class="ti">Instructions</div>
         
         <div class="expander"><a class="buttonly" href="javascript:;">All<span class="im icon-expand-all"></span></a></div>
-        
-        <!-- ************************** READY FOR VALERIE AND DAVE ************************** -->
-        <div class="super">
-          Valerie and Dave, this is "Add Question" in editable and viewable state, from here to below.<br />
-          I will make an annotated image for everything here.
-        </div>
         
         <!-- ****************** ADD QUESTION ***************** -->
         
@@ -590,7 +612,7 @@
                 </div>
               </div> 
               
-              <!-- ------------- Display div if Question Type is "Numeric entry" (did not do any show/hide js) ------------- -->
+              <!-- ------------- Display div if Question Type is "Numeric entry"  ------------- -->
               
               <h2 class="super">Display div if Question Type is "Numeric entry" (did not do any show/hide js)</h2> 
               
@@ -630,7 +652,7 @@
                 </div>
               </div><!-- ------------- End div to display for "Numeric entry" ------------- -->
               
-              <!-- ------------- Added exceptions selection to html (did not do any show/hide js) ------------- -->
+              <!-- ------------- Added exceptions selection to html  ------------- -->
               <h2 class="super">Added exceptions selection divs for single and list targets (did not do any show/hide js)</h2>
               
               <div class="item required targets">
@@ -688,7 +710,7 @@
                         Mark as exception
                       </label>
                     </div> 
-                  </div><!-- corrected this - it belongs with the sub, each sub gets one -->
+                  </div>
                 </div>
               </div> 
               
@@ -696,7 +718,7 @@
                 <div class="sub actions duplicator">
                   <a class="buttonly secondary" href="javascript:;">Add another answer</a>
                 </div>
-              </div><!-- corrected this - so it is separate from the area it is duplicating -->
+              </div>
               
               <div class="item time-estimate">
                 <div class="plainLabel">Time estimate</div>

@@ -219,6 +219,7 @@ html, body {
 	
 	/* reds */
 	
+	.table-remove,
 	.remove,
 	.remove:hover,
 	.item.required > .plainLabel:after,
@@ -330,8 +331,6 @@ html, body {
 		background-color: #4890e2;
 	}
 	
-	.filters-holder .view a:hover,
-	.filters-holder .view a:active,
 	.choose-dates .quick-select a:hover,
 	.choose-dates .quick-select a:active,
 	.filters-choices .choice,
@@ -339,6 +338,12 @@ html, body {
 	.pagination .previous,
 	.pagination .next {
 		background-color: #f2f7fd;
+	}
+	
+	.filters-holder .view a:hover,
+	.filters-holder .view a:active,
+	.filters-holder .view a:focus {
+		background: #d9e9fa;
 	}
 	
 	.pagination .previous,
@@ -392,10 +397,13 @@ html, body {
 		background: #32b0e8;
 	}
 	
-	.filters-holder .view a,
 	.filters-choices .choice,
 	.filters-choices .choice .close {
-		border-color: #4890e2;
+		border-color: rgba(64, 145, 230, .7);
+	}
+	
+	.filters-holder .view a {
+		background: #f2f7fd;
 	}
 	
 	.nav-sections li.active {
@@ -434,6 +442,9 @@ html, body {
 		.admin .Tickets .dash > .filters-choices {
 			background: #f3f8fd;
 		}
+		.admin .Tickets .filters-holder .view a {
+			border: 1px solid #4890e2;
+		}
 	}
 	
 	/* worker filters stacked bg */
@@ -441,6 +452,9 @@ html, body {
 		.worker .filters-holder,
 		.worker .filters-choices {
 			background: #f3f8fd;
+		}
+		.worker .Tickets .filters-holder .view a {
+			border: 1px solid #4890e2;
 		}
 	}
 	/* Firefox admin assign sorting */
