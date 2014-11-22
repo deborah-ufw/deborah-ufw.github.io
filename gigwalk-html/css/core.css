@@ -94,12 +94,12 @@ header nav .user-edit,
 }
 
 body,
-.instruction.edit-mode .answer .more-info .set-required input.supercheck[type="checkbox"]:after {
+.instruction.edit-mode .answer .more-info .set-required input.supercheck[type="checkbox"]:after,
+.pagination {
 	font-size: 1.4em;
 }
 
-.filters-holder .view a .im:before,
-.pagination {
+.filters-holder .view a .im:before {
 	font-size: 1.6em;
 }
 
@@ -4632,7 +4632,7 @@ html[data-useragent*='MSIE 10.0'] .buttonly .im.icon-pencil-box:before {
 }	
 
 html[data-useragent*='Trident'] .buttonly .im.icon-pencil-box:before {
-	font-size: .7em;
+	font-size: .6em;
 }	
 
 html[data-useragent*='MSIE 10.0'] .confirmation .icon-checkmark:before,
