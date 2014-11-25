@@ -87,6 +87,8 @@ input[type="checkbox"]:after,
 	content: "\e61c";
 }
 th.sorting:after,
+th.sorting_asc:after,
+th.sorting_desc:after,
 .icon-expand-all:before {
 	content: "\e61d";
 }
