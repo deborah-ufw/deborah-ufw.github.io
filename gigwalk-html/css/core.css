@@ -34,7 +34,8 @@ header nav .user-edit,
 .worker .Tickets .table-list tr.expired,
 .worker .nav-active-holder,
 .worker .map .tab-pane .assign-action.detail,
-.tab-pane.actions .assign-action.detail.required:before {
+.tab-pane.actions .assign-action.detail.required:before,
+.Groups .table-list table .org-name {
 	display: none;
 }
 
@@ -4477,10 +4478,26 @@ td.table-actions a {
 
 .Groups .table-list table .group-name {
 	width: 40%;
+	min-width: 40%;
+	max-width: 40%;
+}
+
+.user-gigwalk .Groups .table-list table .org-name {
+	width: 25%;
+	min-width: 25%;
+	max-width: 25%;
 }
 
 .Groups .table-list table .members {
 	width: 200px;
+	min-width: 200px;
+	max-width: 200px;
+}
+
+.user-gigwalk .Groups .table-list table .subgroups {
+	width: 120px;
+	min-width: 120px;
+	max-width: 120px;
 }
 
 .Groups .table-list table td.members {
@@ -4489,6 +4506,10 @@ td.table-actions a {
 
 .table-list table td.expanded {
 	padding: 0 0 0 0;
+}
+
+.user-gigwalk .Groups .table-list table .org-name {
+	display: table-cell;
 }
 
 .filters-holder {
