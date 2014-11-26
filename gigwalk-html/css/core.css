@@ -78,7 +78,8 @@ header nav .user-edit,
 .filters-choices .selection .detail,
 .action.panel .choose.list .pagination,
 .instruction-footer .icon-checkmark,
-.instruction .duplicating-message a .im {
+.instruction .duplicating-message a .im,
+.action.messages h1 span.icon-checkmark {
 	font-size: 1.2em;
 }
 
@@ -503,9 +504,9 @@ a.iconly:before,
 .keys,
 .key,
 .filters-choices .choice,
-.table-list .message h1,
-.table-list .message .im,
-.table-list .message .im:before,
+.action.messages .message h1,
+.action.messages .message .im,
+.action.messages .message .im:before,
 .messages .problem span.exclaim:before,
 .messages .problem span.exclaim,
 .table-list .actions,
@@ -887,7 +888,7 @@ input[type="radio"]:checked:after,
 
 .confirmation .icon-checkmark:before {
 	font-size: 1.5em;
-		top: 5px;
+		top: 10px;
 }
 
 .problem .icon-warning:before {
@@ -1051,7 +1052,7 @@ header .nav li {
 .table-list .controls,
 .table-list tr,
 .action.panel,
-.action.messages .message {
+.table-list .action.messages .message {
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -3167,11 +3168,12 @@ a.iconly:before {
 	margin-top: -6px;
 }
 
-.table-list .action.messages .message {
+.action.messages .message {
 	padding: 0 1em .5em 1em;
 }
 
-.table-list h1 {
+.table-list h1,
+.page.action.messages h1 {
 	margin: 0;
 	padding: .3em 1em .5em .3em;
 }
@@ -3180,16 +3182,21 @@ a.iconly:before {
 	padding-bottom: 0;
 }
 
-.table-list .action.messages h1 {
+.action.messages h1,
+.page.action.messages h1 {
+	padding-top: .1em;
 	padding-left: 50px;
 }
 
-.table-list .action.messages h1 span.im,
-.table-list .action.messages h1 span.exclaim {
-	 margin-left: -50px;
+.action.messages h1 span.icon-checkmark {
+	margin-left: -55px;
 }
 
-.table-list .action.messages h1 span.im {
+.action.messages h1 span.im {
+	 margin-left: -55px;
+}
+
+.action.messages h1 span.im {
 	padding: 0 5px;
 }
 
@@ -4404,6 +4411,12 @@ td.table-actions a {
 	
 }
 
+
+/* Groups heredeb */
+
+.page.action.messages {
+	margin: 1em 0;
+}
 
 
 /* customize bootstrap's responsive behavior */
