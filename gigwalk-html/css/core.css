@@ -103,7 +103,8 @@ body,
 	font-size: 1.6em;
 }
 
-.map .tab-pane .ticketlink {
+.map .tab-pane .ticketlink,
+.instruction .duplicating-message .im.icon-warning {
 	font-size: 1.7em;
 }
 
@@ -526,7 +527,10 @@ th.sorting:after,
 .tab-pane.actions .comment-action.detail:before,
 .tab-pane.actions textarea,
 .map .tab-pane .assign-action.detail,
-.instruction-footer .plainLabel {
+.instruction-footer .plainLabel,
+.instructions .positioner,
+.instruction .duplicate,
+.instruction .duplicating-message{
 	position: relative;
 }
 
@@ -538,7 +542,8 @@ header nav .number,
 .filters-choices .choice .close,
 .choose-dates,
 .map .tabs-control,
-.map .tab-pane a.buttonly.main {
+.map .tab-pane a.buttonly.main,
+.instruction .duplicating-message .icon-warning {
 	position: absolute;
 }
 
@@ -553,7 +558,8 @@ header .navbar-collapse.in {
 .map,
 .map .tabs-control,
 .table-list table,
-.map .tab-pane .description.ellipsify {
+.map .tab-pane .description.ellipsify,
+.instruction.duplicate {
 	width: 100%;
 }
 
@@ -723,6 +729,10 @@ a.iconButton.disabled:focus,
 .action.panel,
 .map .tabs-control {
 	background: #f8f8f8;
+}
+
+.duplicating-message {
+	background: #fafafa;
 }
 
 .key:before {
@@ -933,6 +943,15 @@ input[type="radio"]:checked:after,
 
 .map .requirements-list li:before {
 	margin: 0 2px 0 -2px;
+}
+
+.instruction.duplicate .duplicating-message .inner {
+	padding-left: 4em;
+}
+
+.instruction.duplicate .duplicating-message .icon-warning {
+	top: .2em;
+	left: .3em;
 }
 
 
@@ -2370,6 +2389,16 @@ instruction .viewing.icon-buttons {
 
 .instruction .item.targets .sub.last {
 	padding-bottom: 1em;
+}
+
+.instruction.duplicate {
+	top: 0;
+	left: 0;
+}
+
+/* heredeb */
+.duplicating-message {
+	 
 }
 
 

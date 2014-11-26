@@ -4,7 +4,6 @@
 h1.super,
 .tab-pane.actions .confirm,
 .worker .action.panel.assign,
-.table-list .message, 
 .map .tab-pane .assign-action.detail {
 	display: none;
 }

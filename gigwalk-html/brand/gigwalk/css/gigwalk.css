@@ -11,6 +11,10 @@
 	color: #ff0099;
 }
 
+.super span.regular {
+	color: #999999;
+}
+
 .instructions div.super {
 	font-size: 1.4em;
 	margin: 1em 0;
@@ -28,6 +32,12 @@ h2.super {
 	font-family: Helvetica-Neue-Light;
 	font-size: 2em;
 	margin: 0;
+}
+
+.temporary-message {
+	color: #f60;
+	text-align: center;
+	padding: 2em;
 }
 
 .instruction.view-mode h2.super:before,
@@ -245,7 +255,8 @@ html, body {
 	.tab-pane.actions .warning,
 	.choose-dates .warning,
 	.Tickets .dash td.status span.expired:before,
-	.messages .problem span.exclaim:before {
+	.messages .problem span.exclaim:before,
+	.instructions .duplicating-message {
 		color: #ff5157;
 	}
 	
@@ -268,7 +279,8 @@ html, body {
 		border-color:  #fe8e92;
 	}
 	
-	.messages .message.problem {
+	.messages .message.problem,
+	.instructions .duplicating-message {
 		background: #ffe5e6;
 	}
 	
