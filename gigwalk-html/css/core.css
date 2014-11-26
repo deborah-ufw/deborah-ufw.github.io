@@ -77,7 +77,8 @@ header nav .user-edit,
 .filters-choices .choice .value,
 .filters-choices .selection .detail,
 .action.panel .choose.list .pagination,
-.instruction-footer .icon-checkmark {
+.instruction-footer .icon-checkmark,
+.instruction .duplicating-message a .im {
 	font-size: 1.2em;
 }
 
@@ -232,7 +233,9 @@ a.iconButton:focus,
 .map .tab-pane a:focus,
 .choose-dates .actions a:hover,
 .admin .table-list td.location a:hover,
-.quick-select a {
+.quick-select a,
+.instruction .duplicating-message a.closer:hover,
+.instruction .duplicating-message a.closer:focus {
 	text-decoration: none;
 }
 
@@ -380,7 +383,8 @@ a.iconly,
 .map .nav.nav-tabs > li > a,
 .map .pin:before,
 .Tickets .filters .wrapper,
-.filter.search .icon-search {
+.filter.search .icon-search,
+.instruction .duplicating-message a.closer {
 	display: inline-block;
 }
 
@@ -543,7 +547,8 @@ header nav .number,
 .choose-dates,
 .map .tabs-control,
 .map .tab-pane a.buttonly.main,
-.instruction .duplicating-message .icon-warning {
+.instruction .duplicating-message .icon-warning,
+.instruction .duplicating-message a.closer {
 	position: absolute;
 }
 
@@ -943,10 +948,6 @@ input[type="radio"]:checked:after,
 
 .map .requirements-list li:before {
 	margin: 0 2px 0 -2px;
-}
-
-.instruction.duplicate .duplicating-message .inner {
-	padding-left: 4em;
 }
 
 .instruction.duplicate .duplicating-message .icon-warning {
@@ -2396,9 +2397,14 @@ instruction .viewing.icon-buttons {
 	left: 0;
 }
 
-/* heredeb */
-.duplicating-message {
-	 
+.instruction.duplicate .duplicating-message .inner {
+	padding-left: 1em;
+	padding-right: 4em;
+}
+
+.instruction.duplicate .duplicating-message a.closer {
+	top: .8em;
+	right: .5em;
 }
 
 

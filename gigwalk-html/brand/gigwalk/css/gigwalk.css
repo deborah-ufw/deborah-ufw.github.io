@@ -256,7 +256,8 @@ html, body {
 	.choose-dates .warning,
 	.Tickets .dash td.status span.expired:before,
 	.messages .problem span.exclaim:before,
-	.instructions .duplicating-message {
+	.instructions .duplicating-message,
+	.instructions .duplicating-message a .im {
 		color: #ff5157;
 	}
 	
