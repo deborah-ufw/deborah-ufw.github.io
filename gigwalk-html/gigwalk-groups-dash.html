@@ -68,7 +68,7 @@
 
  
 </head>
-<body class="body working admin">
+<body class="body">
 
 <!-- top navigation -->
 <header>
@@ -235,6 +235,7 @@
               <input type="text" placeholder="Search" />
               <span class="im icon-search"></span>
             </div>
+            <a class="new-button"><span class="im icon-pencil-box"></span>New Group</a>
           </div><!-- end wrapper -->
         </div><!-- end filters -->
       </div><!-- end filters holder (all) -->
@@ -264,7 +265,7 @@
       <!-- ****************** TABLE CONTROL BAR ***************** -->
       
       <!-- the summary area on the left with action buttons on the right -->
-      <div class="table-list">
+      <div class="table-list no-bulk-actions">
         <div class="controls">
           <div class="summary">
             <div class="visible"><span class="value">(#)</span> Groups</div>
@@ -278,27 +279,15 @@
         
           <thead>
             <tr role="row">
-              <th class="sorting project-title">
-                <input type="checkbox" value="select-all" />
-                Project Name
+              <th class="sorting group-name">
+                Group Name
               </th>
-              <th class="sorting location">
-                Location
+              <th class="sorting members">
+                Members
               </th>
-              <th class="sorting assigned admin"><!-- Grace only (assigned td also) -->
-                Assigned
-              </th>
-              <th class="sorting scheduled worker"><!-- Jimmy only (scheduled td also) -->
-                Scheduled
-              </th>
-              <th class="sorting due">
-                Due
-              </th>
-              <th class="sorting estimated worker"><!-- Jimmy only (estimated td also) -->
-                Est. Time
-              </th>
-              <th class="sorting status">
-                Status
+              <!-- don't add class "sorting" to this TH -->
+              <th class="subgroups details-control"> 
+                Subgroups
               </th>
             </tr>
           </thead>
@@ -306,245 +295,201 @@
           <tbody>
           
             <tr role="row" class="odd">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
+              <td class="sorting group-name">
                 <a href="javascript:;">
-                  Cover Girl Fall 2015 Eyeshadow Reset 
+                  Alerts Alpha 
                 </a>
               </td>
-              <td class="sorting location">
-                <a href="javascript:;">
-                  Walmart 
-                </a>
+              <td class="sorting members">
+                  2,025
               </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  Jimmy Stewart 
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                11/04/2014 
-              </td>
-              <td class="sorting due">
-                11/05/2014 
-              </td>
-              <td class="sorting estimated worker">
-                3:00 
-              </td>
-              <td class="status">
-                <span class="open"></span>
-              </td>
+              <!-- don't add class "sorting" to this TD -->
+              <td class="subgroups"></td>
             </tr>
             
             <tr role="row" class="even">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
+              <td class="sorting group-name">
                 <a href="javascript:;">
-                  05.16.15 Product Distribution - Snickers 
+                  Drug Stores
                 </a>
               </td>
-              <td class="sorting location"> 
+              <td class="sorting members">
+                  644
+              </td>
+              <!-- don't add class "sorting" to this TD -->
+              <td class="subgroups details-control"> 
+                <a href="javascript:;">Show</a>
+              </td>  
+            </tr>
+            
+            <!-- *********** EXAMPLE EXPANDED ROW ***********
+            
+                   uses dynamic style names from the plugin 
+                   
+                   Valerie - make it as close as you can,
+                   if it's not possible to do it quite like this,
+                   ping me and I'll adjust the CSS to handle
+                   the next best way 
+                 
+                 ******************************************** -->
+                 
+            <tr role="row" class="odd shown">
+              <td class="sorting group-name">
                 <a href="javascript:;">
-                  Walmart 
+                  Grocery Stores
                 </a>
               </td>
-              <td class="sorting assigned admin">
+              <td class="sorting members">
+                  5,911
+              </td>
+              <!-- don't add class "sorting" to this TD -->
+              <td class="subgroups details-control">
+                <a href="javascript:;">Hide</a>
+              </td>  
+            </tr>
+         
+            <!-- ****** EXAMPLE EXPANDED SUBGROUPS AREA *******
+            
+                        copied structure from plugin 
+                 
+                 ********************************************** -->
+            <tr>
+              <!-- please make the plugin add class "expanded" to this td -->
+              <td colspan="3" class="expanded">
+                  <!-- don't let it put inline styles in this table, it will mess things up 
+                  
+                       <table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">
+                  
+                  -->
+                <table>
+                  <tr role="row" class="odd">
+                    <td class="sorting group-name">
+                      <a href="javascript:;">
+                        Kroeger's
+                      </a>
+                    </td>
+                    <td class="sorting members">
+                        2,299
+                    </td>
+                    <!-- don't add class "sorting" to this TD -->
+                    <td class="subgroups details-control"></td>  
+                  </tr>
+                  
+                  <tr role="row" class="even">
+                    <td class="sorting group-name">
+                      <a href="javascript:;">
+                        Lucky
+                      </a>
+                    </td>
+                    <td class="sorting members">
+                        2,213
+                    </td>
+                    <!-- don't add class "sorting" to this TD -->
+                    <td class="subgroups details-control"></td>  
+                  </tr>
+                  
+                  <tr role="row" class="odd">
+                    <td class="sorting group-name">
+                      <a href="javascript:;">
+                        Piggly-Wiggly
+                      </a>
+                    </td>
+                    <td class="sorting members">
+                        2426
+                    </td>
+                    <!-- don't add class "sorting" to this TD -->
+                    <td class="subgroups details-control">
+                      <a href="javascript:;">Show</a>
+                    </td>  
+                  </tr>
+                  
+                  <tr role="row" class="even">
+                    <td class="sorting group-name">
+                      <a href="javascript:;">
+                        Safeway
+                      </a>
+                    </td>
+                    <td class="sorting members">
+                        1,011
+                    </td>
+                    <!-- don't add class "sorting" to this TD -->
+                    <td class="subgroups details-control"></td>  
+                  </tr>
+                </table>
+              
+              </td>
+            </tr>
+            <!-- ENDS EXPANDED SUBGROUPS AREA -->
+            
+            <tr role="row" class="even">
+              <td class="sorting group-name">
                 <a href="javascript:;">
-                  Kelly Wentworth
+                  Keebler
                 </a>
               </td>
-              <td class="sorting scheduled worker">
-                11/05/2014 
+              <td class="sorting members">
+                  2,299
               </td>
-              <td class="sorting due">
-                11/03/2014 
-              </td>
-              <td class="sorting estimated worker">
-                :15 
-              </td>
-              <td class="status">
-                <span class="submitted"></span>
-              </td>
+              <!-- don't add class "sorting" to this TD -->
+              <td class="subgroups"></td>  
             </tr>
             
             <tr role="row" class="odd">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
+              <td class="sorting group-name">
                 <a href="javascript:;">
-                  New Product Cut-in - Kikkoman Gluten-Free Soy Sauce 
+                  Maybelline 
+              </td>
+              <td class="sorting members">
+                  2,213
                 </a>
               </td>
-              <td class="sorting location">
-                <a href="javascript:;">
-                  Safeway 
-                </a>
-              </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  Kelly Wentworth
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                11/05/2014 
-              </td>
-              <td class="sorting due">
-                11/06/2014 
-              </td>
-              <td class="sorting estimated worker">
-                2 days 
-              </td>
-              <td class="status">
-                <span class="submitted"></span>
-              </td>
+              <!-- don't add class "sorting" to this TD -->
+              <td class="subgroups"></td>  
             </tr>
             
             <tr role="row" class="even">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
+              <td class="sorting group-name">
                 <a href="javascript:;">
-                  Atlas Alerts 918-215419650
+                  Megastores 
                 </a>
               </td>
-              <td class="sorting location"> 
-                <a href="javascript:;">
-                  Safeway 
-                </a>
+              <td class="sorting members">
+                  2,426
               </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  James Dean
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                <span>unscheduled</span>
-              </td>
-              <td class="sorting due">
-                11/06/2014 
-              </td>
-              <td class="sorting estimated worker">
-                2:20 
-              </td>
-              <td class="status">
-                <span class="started"></span>
-              </td>
+              <!-- don't add class "sorting" to this TD -->
+              <td class="subgroups details-control"> 
+                <a href="javascript:;">Show</a>
+              </td>  
             </tr>
+            
             <tr role="row" class="odd">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
+              <td class="sorting group-name">
                 <a href="javascript:;">
-                  New Product Cut-in - Kikkoman Gluten-Free Soy Sauce
+                  Staples
                 </a>
               </td>
-              <td class="sorting location">
-                <a href="javascript:;">
-                  Kroeger's
-                </a>
+              <td class="sorting members">
+                  1,011
               </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  Jimmy Stewart
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                <span>unscheduled</span>
-              </td>
-              <td class="sorting due">
-                11/07/2014 
-              </td>
-              <td class="sorting estimated worker">
-                1:10
-              </td>
-              <td class="status">
-                <span class="started"></span>
-              </td>
-            </tr>
-            <tr role="row" class="even">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Atlas Alerts 918-215419650
-                </a>
-              </td>
-              <td class="sorting location"> 
-                <a href="javascript:;">
-                  Kroeger's 
-                </a>
-              </td>
-              <td class="sorting assigned admin">
-                <a href="javascript:;">
-                  James Dean
-                </a>
-              </td>
-              <td class="sorting scheduled worker"> 
-                11/03/2014 
-              </td>
-              <td class="sorting due"> 
-                11/06/2014 
-              </td>
-              <td class="sorting estimated worker"> 
-                1:00
-              </td>
-              <td class="status">
-                <span class="started paused"></span>
-              </td>
-            </tr>
-            <tr role="row" class="odd canceled">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Cover Girl Fall 2015 Eyeshadow Reset
-                </a>
-              </td>
-              <td class="sorting location">
-                <a href="javascript:;">
-                  Target
-                </a>
-              </td>
-              <td class="sorting assigned admin">
-                unassigned
-              </td>
-              <td class="sorting scheduled worker">
-                11/07/2014 
-              </td>
-              <td class="sorting due">
-                11/07/2014 
-              </td>
-              <td class="sorting estimated worker">
-                :40 
-              </td>
-              <td class="status">
-                <span class="canceled"></span>
-              </td>
-            </tr>
-            <tr role="row" class="even expired">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Cover Girl Fall 2015 Eyeshadow Reset
-                </a>
-              </td>
-              <td class="sorting location"> 
-                <a href="javascript:;">
-                  Target
-                </a>
-              </td>
-              <td class="sorting assigned admin">
-                unassigned
-              </td>
-              <td class="sorting scheduled worker"> 
-                11/03/2014 
-              </td>
-              <td class="sorting due"> 
-                11/07/2014 
-              </td>
-              <td class="sorting estimated worker"> 
-                <span>not estimated</span> 
-              </td>
-              <td class="status">
-                <span class="expired"></span>
-              </td>
+              <!-- don't add class "sorting" to this TD -->
+              <td class="subgroups"></td>  
             </tr>
             
+            <tr role="row" class="even">
+              <td class="sorting group-name">
+                <a href="javascript:;">
+                  United States 
+                </a>
+              </td>
+              <td class="sorting members">
+                  1,379
+              </td>
+              <!-- don't add class "sorting" to this TD -->
+              <td class="subgroups details-control"> 
+                <a href="javascript:;">Show</a>
+              </td>  
+            </tr>
+                        
           </tbody>
           
         </table>
@@ -564,194 +509,6 @@
         
         
         
-      <!-- ****************************************************************** -->
-      <!--                              MAP VIEW                              -->
-      <!-- ****************************************************************** -->
-           
-      
-      <h1 class="super">Map view</h1>
-      
-      <div class="map-holder">
-        <div class="map">
-          <div class="map-drawer">
-          
-          <!-- collapse button -->
-          <div class="tabs-control">
-            <a href="javascript:;" class="collapse"></a>
-          </div>
-          
-          <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li class="active">
-                <a href="#info" class="info" role="tab" data-toggle="tab"></a>
-              </li>
-              <li>
-                <a href="#directions" class="directions" role="tab" data-toggle="tab"></a>
-              </li>
-              <li>
-                <a href="#actions" class="actions" role="tab" data-toggle="tab"></a>
-              </li>
-            </ul>
-            
-            <!-- bootstrap tab panes -->
-            <div class="tab-content">
-            
-              <div class="tab-pane info active" id="info"><!-- info tab -->
-                <a class="ticketlink" href="javascript:;"><span class="im icon-ticket"></span>Safeway</a>
-                <div class="description ellipsify">
-                  Actions will focus on the client relationship management and item purchasing. Check on product availability.
-                </div>
-                <a class="requirements" href="javascript:;">Requirements <span class="cue">( + )</span></a>
-                <div class="requirements-list">
-                  <ul>
-                    <li>3+ megapixel camera</li>
-                    <li>Wal-mart certification</li>
-                  </ul>
-                </div>
-                <div class="due">
-                  <div class="smallLabel">Due</div>
-                  <div class="value">3 days (Monday)</div>
-                </div>
-                <div class="estimated worker"><!-- Jimmy only -->
-                  <div class="smallLabel">Estimated Time</div>
-                  <div class="value">3 hours 30 minutes</div>
-                </div>
-                <div class="assigned admin"><!-- Grace only -->
-                  <div class="smallLabel">Assigned</div>
-                  <!-- html update Dave (corrected the div structure) -->
-                  <div class="value">
-                    <a href="javascript:;">Jimmy Stewart</a>
-                  </div>
-                </div>
-                <!-- html update Dave (added assign panel for admin) -->
-                <div class="assign-action detail required">
-                  <div class="plainLabel">Choose assignee</div>
-                  <div class="filter search required">
-                    <input type="text" placeholder="Search">
-                    <span class="im icon-search"></span>
-                  </div>
-                  <div class="filters-choices">
-                      <div class="selection">
-                        <div class="choice searched">
-                          <div class="value">Jimmy Stewart</div>
-                          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-                        </div>
-                      </div>
-                    </div>
-                  <div class="button-holder">
-                    <a class="cancel" href="javascript:;">Cancel</a>
-                    <a class="buttonly disabled" href="javascript:;">Assign</a>
-                  </div>
-                </div>
-                <a class="buttonly main" href="javascript:;">Main action</a>
-              </div><!-- end info tab -->
-              
-              <div class="tab-pane directions worker" id="directions"><!-- directions tab - Jimmy only -->
-                <a class="ticketlink"><span class="im icon-ticket"></span>Safeway</a>
-                <div class="address">16121 N. Snelling Rd</div>
-                <div class="address">Cupertino, CA 95014</div>
-                <!-- html update Dave (added link for phone number) -->
-                <div class="phone">
-                  <a href="tel:+14088772113">(408) 877-2113</a>
-                </div>
-                
-                <a class="buttonly main" href="javascript:;">Main action</a>
-              </div><!-- end directions tab -->
-              
-              <div class="tab-pane actions" id="actions"><!-- actions tab -->
-                <a class="ticketlink" href="javascript:;"><span class="im icon-ticket"></span>Safeway</a>
-                <div class="scheduled">
-                  <div class="value">Scheduled for Today</div>
-                </div>
-                
-                <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
-                <div class="schedule-action detail">
-                  <input type="text" class="datepicker" placeholder="Select date" />
-                  <div class="warning">This ticket is due before this date.</div>
-                  <div class="button-holder">
-                    <a class="cancel" href="javascript:;">Cancel</a>
-                    <a class="buttonly disabled" href="javascript:;">Schedule</a>
-                  </div>
-                </div>
-                <div class="schedule-action confirm">Scheduled</div>
-                
-                <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
-                <!-- html update Dave (corrected class name) -->
-                <div class="extend-action detail">
-                  <input type="text" class="datepicker" placeholder="Select date" />
-                  <div class="button-holder">
-                    <a class="cancel" href="javascript:;">Cancel</a>
-                    <a class="buttonly disabled" href="javascript:;">Extend</a>
-                  </div>
-                </div>
-                <div class="extend-action confirm">Extended</div>
-                
-                <a class="iconButton comment" href="javascript:;">Add Comment</a>
-                <div class="comment-action detail">
-                  <textarea placeholder="Comment"></textarea>
-                  <div class="button-holder">
-                    <a class="cancel" href="javascript:;">Cancel</a>
-                    <a class="buttonly disabled" href="javascript:;">Add</a>
-                  </div>
-                </div>  
-                <div class="comment-action confirm">Comment added</div>
-                
-                <a class="iconButton print" href="javascript:;">Print ticket</a>
-                
-                <a class="iconButton unassign worker" href="javascript:;">Unassign</a><!-- Jimmy only -->
-                <div class="unassign-action confirm">Unassigned</div>
-                
-                <!-- inject class "disabled" into the a tag if ticket is started, and do not allow user to click it -->
-                <a class="iconButton cancel admin" href="javascript:;">Cancel</a><!-- Grace only -->
-                <div class="cancel-action confirm">Canceled</div>
-                
-                <!-- html update Dave (added assign panel for admin) -->
-                <div class="assign-action detail required">
-                  <div class="plainLabel">Choose assignee</div>
-                  <div class="filter search required">
-                    <input type="text" placeholder="Search">
-                    <span class="im icon-search"></span>
-                  </div>
-                  <div class="filters-choices">
-                      <div class="selection">
-                        <div class="choice searched">
-                          <div class="value">Jimmy Stewart</div>
-                          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-                        </div>
-                      </div>
-                    </div>
-                  <div class="button-holder">
-                    <a class="cancel" href="javascript:;">Cancel</a>
-                    <a class="buttonly disabled" href="javascript:;">Assign</a>
-                  </div>
-                </div>
-                <a class="buttonly main" href="javascript:;">Main action</a>
-              </div><!-- end actions tab -->
-              
-            </div><!-- end bootstrap tabs -->
-          </div><!-- end map-drawer -->
-          
-          
-          <div class="pin scheduled active"></div>
-          <div class="pin unscheduled"></div>
-          <div class="pin unassigned admin"></div><!-- Grace only -->
-          <div class="pin paused"></div><!-- For Grace, this is a "scheduled" pin -->
-          <div class="pin submitted"></div>
-          <div class="pin expired admin"></div><!-- Grace only -->
-          
-        </div><!-- end map div -->
-      </div><!-- end map holder div -->
-      
-      <div class="map keys">
-        <div class="key scheduled">Scheduled</div>
-        <div class="key unscheduled">Unscheduled</div>
-        <div class="key unassigned admin">Unassigned</div><!-- Grace only -->
-        <div class="key paused worker">Paused</div><!-- Jimmy only -->
-        <div class="key submitted">Submitted</div>
-        <div class="key expired admin">Expired</div><!-- Grace only -->
-      </div>
-    
-      <!-- end map View -->
     
       <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
     

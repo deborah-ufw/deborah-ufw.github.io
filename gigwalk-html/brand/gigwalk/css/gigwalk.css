@@ -349,7 +349,10 @@ html, body {
 	.filters-choices .choice,
 	.filters-choices .choice .close,
 	.pagination .previous,
-	.pagination .next {
+	.pagination .next,
+	.table-list tr.shown td,
+	a.new-button:hover,
+	a.new-button:focus {
 		background-color: #f2f7fd;
 	}
 	
@@ -413,6 +416,10 @@ html, body {
 	.filters-choices .choice,
 	.filters-choices .choice .close {
 		border-color: rgba(64, 145, 230, .7);
+	}
+	
+	a.new-button {
+		border: 1px solid rgba(64, 145, 230, .8);
 	}
 	
 	.filters-holder .view a {
@@ -629,7 +636,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .filters-choices .selection .detail,
 .table-list td,
 .map .tab-pane .ticketlink,
-.map .tab-pane.actions .iconButton {
+.map .tab-pane.actions .iconButton,
+a.new-button {
 	font-family: Helvetica-Neue-Light;
 }
 
