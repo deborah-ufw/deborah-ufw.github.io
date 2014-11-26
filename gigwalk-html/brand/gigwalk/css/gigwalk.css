@@ -166,13 +166,15 @@ html, body {
 	.primary.actions a.cancel,
 	.button-holder a.cancel,
 	.choose-dates a.cancel,
+	.new-panel a.cancel,
 	.expander a {
 		color: #c6c6c6;
 	}
 	
 	.primary.actions a.cancel,
 	.button-holder a.cancel,
-	.choose-dates a.cancel {
+	.choose-dates a.cancel,
+	.new-panel a.cancel {
 		border-color: #c6c6c6;
 	}
 	
@@ -222,6 +224,8 @@ html, body {
 	.button-holder a.cancel:focus,
 	.choose-dates a.cancel:hover,
 	.choose-dates a.cancel:focus,
+	.new-panel a.cancel:hover,
+	.new-panel a.cancel:focus,
 	.expander {
 		background: #f8f8f8;
 	}
@@ -257,7 +261,8 @@ html, body {
 	.Tickets .dash td.status span.expired:before,
 	.messages .problem span.exclaim:before,
 	.instructions .duplicating-message,
-	.instructions .duplicating-message a .im {
+	.instructions .duplicating-message a .im,
+	.new-panel .warning {
 		color: #ff5157;
 	}
 	
@@ -521,6 +526,7 @@ html, body {
 	.instruction .header,
 	.key.scheduled:before,
 	.choose-dates .actions a.buttonly,
+	.new-panel .actions a.buttonly,
 	.map .tab-pane a.buttonly.main,
 	.button-holder a.buttonly {
 		background: #00a584;
@@ -532,6 +538,8 @@ html, body {
 	.button-holder a:focus,
 	.choose-dates .actions a.buttonly:hover,
 	.choose-dates .actions a.buttonly:focus,
+	.new-panel .actions a.buttonly:hover,
+	.new-panel .actions a.buttonly:focus,
 	.tab-pane a.buttonly.main:hover,
 	.tab-pane a.buttonly.main:focus {
 		background: #119676;
@@ -637,7 +645,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .table-list td,
 .map .tab-pane .ticketlink,
 .map .tab-pane.actions .iconButton,
-a.new-button {
+a.new-button,
+.new-panel input {
 	font-family: Helvetica-Neue-Light;
 }
 
