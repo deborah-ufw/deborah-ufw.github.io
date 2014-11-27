@@ -240,12 +240,20 @@
             </div>
             <a class="page-action delete-button"><span class="im icon-trash"></span>Delete</a>
             <div class="page-action-panel">
-              <input type="text" class="name" placeholder="Group Name" />
-              <div class="warning">Must be at least 3 characters</div>
-              <div class="warning">A group already exists with this name</div>
+              This group contains 2 subgroups.
+              <div class="radios">
+                <div class="radio">
+                  <label>
+                  <input type="radio" name="choose" value="keep-subgroups" /> &nbsp;Don't delete the subgroups</label>
+                </div>
+                <div class="radio">
+                  <label>
+                  <input type="radio" name="choose" value="delete-subgroups" /> &nbsp;Delete the subgroups also</label>
+                </div>
+              </div>  
               <div class="actions">
                 <a class="cancel" href="javascript:;">Cancel</a>
-                <a class="buttonly" href="javascript:;">Submit</a>
+                <a class="buttonly delete" href="javascript:;">Delete</a>
               </div>
             </div>
           </div><!-- end wrapper -->

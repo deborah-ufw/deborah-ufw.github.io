@@ -815,7 +815,8 @@ input[type="radio"]:after,
 .map-drawer,
 .map .tab-pane .assign-action.detail,
 .filters-holder .view a,
-.page-action-panel a.cancel {
+.page-action-panel a.cancel,
+.page-action-panel .actions a.buttonly.delete {
 	background: #ffffff;
 }
 
@@ -843,7 +844,6 @@ input[type="radio"]:after,
 .search.disabled .im.icon-search {
 	background-color: #cccccc;
 }
-
 
 /* reds */
 
@@ -1067,7 +1067,8 @@ header .nav ul.dropdown-menu li,
 .button-holder a,
 .choose-dates a,
 .page-action-panel a,
-a.page-action {
+a.page-action,
+.page-action-panel a.buttonly.delete {
 	border: 1px solid;
 }
 
@@ -3132,6 +3133,10 @@ a.iconly:before {
 	z-index: 1;
 }
 
+.Group .page-action-panel {
+	right: -30px;
+}
+
 .choose-dates a,
 .tab-pane .button-holder a,
 .page-action-panel .actions a {
@@ -4475,7 +4480,7 @@ td.table-actions a {
 }
 
 
-/* Groups heredeb */
+/* Groups */
 
 .page.action.messages {
 	margin: 1em 0;
@@ -4537,16 +4542,31 @@ a.page-action.delete-button span.im {
 }
 
 .Groups .filters-choices {
-	margin-right: 177px;
+	padding-right: 177px;
+}
+
+.Group .filters-choices {
+	padding-right: 135px;
 }
 
 .page-action-panel {
 	width: 305px;
 }
 
-.page-action-panel input {
+.page-action-panel input[type="text"] {
 	padding-left: 1em;
 }
+
+.page-action-panel .radios {
+	margin: 1em 1em 1.5em 1em;
+}
+
+.page-action-panel .radio {
+	padding: 3px 0;
+}
+
+
+/* Groups heredeb */
 
 
 

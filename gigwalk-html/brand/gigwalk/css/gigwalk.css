@@ -225,9 +225,14 @@ html, body {
 	.choose-dates a.cancel:hover,
 	.choose-dates a.cancel:focus,
 	.page-action-panel a.cancel:hover,
-	.page-action-panel a.cancel:focus,
+	.page-action-panel a.cancel:focus
 	.expander {
 		background: #f8f8f8;
+	}
+	
+	.page-action-panel .actions a.buttonly.delete:hover,
+	.page-action-panel .actions a.buttonly.delete:focus {
+		background-color: #f8f8f8;
 	}
 	
 	
@@ -263,7 +268,8 @@ html, body {
 	.instructions .duplicating-message,
 	.instructions .duplicating-message a .im,
 	.page-action-panel .warning,
-	a.page-action.delete-button {
+	a.page-action.delete-button,
+	.page-action-panel a.buttonly.delete {
 		color: #ff5157;
 	}
 	
@@ -281,7 +287,8 @@ html, body {
 		background: #ff5157;
 	}
 	
-	a.page-action.delete-button {
+	a.page-action.delete-button,
+	.page-action-panel a.buttonly.delete {
 		border-color: #ff5157;
 	}
 	
@@ -648,6 +655,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .map .tab-pane .ticketlink,
 .map .tab-pane.actions .iconButton,
 a.page-action,
+.page-action-panel,
 .page-action-panel input {
 	font-family: Helvetica-Neue-Light;
 }
