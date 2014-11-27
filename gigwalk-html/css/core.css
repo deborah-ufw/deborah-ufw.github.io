@@ -59,8 +59,8 @@ header nav .user-edit,
 .table-list .action.panel .item,
 .action.panel .warning,
 .map .tab-pane .search,
-.new-panel,
-.new-panel input {
+.page-action-panel,
+.page-action-panel input {
 	font-size: 1.1em;
 }
 
@@ -201,7 +201,7 @@ th {
 .instruction.view-mode .time input,
 header .nav .number,
 .choose-dates .actions a,
-.new-panel .actions a,
+.page-action-panel .actions a,
 .table-list table .due,
 .table-list table .scheduled,
 .table-list table .status,
@@ -244,8 +244,8 @@ a.iconButton:focus,
 .map .tab-pane a:focus,
 .choose-dates .actions a:hover,
 .choose-dates .actions a:focus,
-.new-panel .actions a:hover,
-.new-panel .actions a:focus,
+.page-action-panel .actions a:hover,
+.page-action-panel .actions a:focus,
 .admin .table-list td.location a:hover,
 .quick-select a,
 .instruction .duplicating-message a.closer:hover,
@@ -390,7 +390,7 @@ a.iconly,
 .filters-choices .choice .close,
 .choose-dates,
 .choose-dates .actions a,
-.new-panel .actions a,
+.page-action-panel .actions a,
 .table-list .summary div,
 .action.panel .filter.search,
 .filters-choices .selection .detail,
@@ -555,7 +555,7 @@ th.sorting:after,
 .instruction .duplicate,
 .instruction .duplicating-message,
 a.page-action,
-.new-panel {
+.page-action-panel {
 	position: relative;
 }
 
@@ -587,7 +587,7 @@ header .navbar-collapse.in {
 .table-list table,
 .map .tab-pane .description.ellipsify,
 .instruction.duplicate,
-.new-panel input.name {
+.page-action-panel input.name {
 	width: 100%;
 }
 
@@ -754,7 +754,7 @@ a.iconButton.disabled:focus,
 }
 
 .mini-panel,
-.new-panel,
+.page-action-panel,
 .instruction .item.targets .sub .mini-panel,
 .action.panel,
 .map .tabs-control {
@@ -791,7 +791,7 @@ input[type="checkbox"]:after,
 .filter.dropdown .caret,
 .filter.search .icon-search,
 .choose-dates .actions a.buttonly,
-.new-panel .actions a.buttonly,
+.page-action-panel .actions a.buttonly,
 .map .nav-tabs > li > a:before,
 .map .tab-pane a.buttonly.main {
 	color: #ffffff;
@@ -815,7 +815,7 @@ input[type="radio"]:after,
 .map-drawer,
 .map .tab-pane .assign-action.detail,
 .filters-holder .view a,
-.new-panel a.cancel {
+.page-action-panel a.cancel {
 	background: #ffffff;
 }
 
@@ -1066,7 +1066,8 @@ header .nav ul.dropdown-menu li,
 .pagination .next,
 .button-holder a,
 .choose-dates a,
-.new-panel a {
+.page-action-panel a,
+a.page-action {
 	border: 1px solid;
 }
 
@@ -3123,7 +3124,7 @@ a.iconly:before {
 	z-index: 1;
 }
 
-.new-panel {
+.page-action-panel {
 	margin: -5px 0 .5em 0;
 	padding: 1.5em 1.5em 2em 1em;
 		top: 0;
@@ -3133,12 +3134,12 @@ a.iconly:before {
 
 .choose-dates a,
 .tab-pane .button-holder a,
-.new-panel .actions a {
+.page-action-panel .actions a {
 	padding: 5px 1em;
 }
 
 .choose-dates .actions a,
-.new-panel .actions a {
+.page-action-panel .actions a {
 	width: 125px;
 }
 
@@ -3154,7 +3155,7 @@ a.iconly:before {
 	margin: 1em 0 -1em 0;
 }
 
-.new-panel .warning {
+.page-action-panel .warning {
 	margin: .5em 0 1em 2px;
 }
 
@@ -4531,15 +4532,19 @@ a.page-action span.im {
 	left: 8px;
 }
 
+a.page-action.delete-button span.im {
+	top: 4px;
+}
+
 .Groups .filters-choices {
 	margin-right: 177px;
 }
 
-.new-panel {
+.page-action-panel {
 	width: 305px;
 }
 
-.new-panel input {
+.page-action-panel input {
 	padding-left: 1em;
 }
 

@@ -166,7 +166,7 @@ html, body {
 	.primary.actions a.cancel,
 	.button-holder a.cancel,
 	.choose-dates a.cancel,
-	.new-panel a.cancel,
+	.page-action-panel a.cancel,
 	.expander a {
 		color: #c6c6c6;
 	}
@@ -174,7 +174,7 @@ html, body {
 	.primary.actions a.cancel,
 	.button-holder a.cancel,
 	.choose-dates a.cancel,
-	.new-panel a.cancel {
+	.page-action-panel a.cancel {
 		border-color: #c6c6c6;
 	}
 	
@@ -224,8 +224,8 @@ html, body {
 	.button-holder a.cancel:focus,
 	.choose-dates a.cancel:hover,
 	.choose-dates a.cancel:focus,
-	.new-panel a.cancel:hover,
-	.new-panel a.cancel:focus,
+	.page-action-panel a.cancel:hover,
+	.page-action-panel a.cancel:focus,
 	.expander {
 		background: #f8f8f8;
 	}
@@ -262,7 +262,8 @@ html, body {
 	.messages .problem span.exclaim:before,
 	.instructions .duplicating-message,
 	.instructions .duplicating-message a .im,
-	.new-panel .warning {
+	.page-action-panel .warning,
+	a.page-action.delete-button {
 		color: #ff5157;
 	}
 	
@@ -280,6 +281,10 @@ html, body {
 		background: #ff5157;
 	}
 	
+	a.page-action.delete-button {
+		border-color: #ff5157;
+	}
+	
 	.invalid input[type="text"],
 	.invalid input[type="textarea"] {
 		border-color:  #fe8e92;
@@ -289,10 +294,7 @@ html, body {
 	.instructions .duplicating-message {
 		background: #ffe5e6;
 	}
-	
-	.messages .message.problem span.exclaim {
-		color: #ffe5e6;
-	}
+
 	
 	/* blues */
 	
@@ -424,7 +426,7 @@ html, body {
 	}
 	
 	a.new-button {
-		border: 1px solid rgba(64, 145, 230, .8);
+		border-color: rgba(64, 145, 230, .8);
 	}
 	
 	.filters-holder .view a {
@@ -526,7 +528,7 @@ html, body {
 	.instruction .header,
 	.key.scheduled:before,
 	.choose-dates .actions a.buttonly,
-	.new-panel .actions a.buttonly,
+	.page-action-panel .actions a.buttonly,
 	.map .tab-pane a.buttonly.main,
 	.button-holder a.buttonly {
 		background: #00a584;
@@ -538,8 +540,8 @@ html, body {
 	.button-holder a:focus,
 	.choose-dates .actions a.buttonly:hover,
 	.choose-dates .actions a.buttonly:focus,
-	.new-panel .actions a.buttonly:hover,
-	.new-panel .actions a.buttonly:focus,
+	.page-action-panel .actions a.buttonly:hover,
+	.page-action-panel .actions a.buttonly:focus,
 	.tab-pane a.buttonly.main:hover,
 	.tab-pane a.buttonly.main:focus {
 		background: #119676;
@@ -646,7 +648,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .map .tab-pane .ticketlink,
 .map .tab-pane.actions .iconButton,
 a.page-action,
-.new-panel input {
+.page-action-panel input {
 	font-family: Helvetica-Neue-Light;
 }
 
