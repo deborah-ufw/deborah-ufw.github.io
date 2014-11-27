@@ -269,6 +269,38 @@
         </div>
       </div><!-- end filters selections -->
       
+      <div class="section-controls">
+        <div class="section title">
+          <a class="navly" href="javascript:;">All Groups</a> Awesome Group
+        </div>
+        
+        <!-- --------------------------- -->
+        <!-- ------ NEEDS LOGIC -------- -->
+        <!-- --------------------------- -->
+        <div class="section-detail">
+          <!-- if no subroups, put this in the div -->
+          <div class="none">This group has no subgroups</div>
+          <!-- if subgroup(s), put this in the div and 
+               create the js to toggle the subroups viewer 
+               open and closed -->
+          <a class="subgroups-toggle" href="javascript:;">Show Subgroups</a>     
+        </div>
+        
+        <div class="section-actions">
+          <a class="iconButton ownership">Ownership</a>
+          <a class="iconButton members">Add Members</a>
+          <a class="iconButton new">New Subgroup</a>
+        </div>
+      </div>
+      
+      <!-- --------------------------------------------------------
+      
+           Show "section-no-content" div if there are no members
+           If there are no members, don't show div "table-list"
+           
+       --------------------------------------------------------  -->
+      <div class="section-no-content">There aren't any members in this group.</div>
+      
       
       <!-- ****************** TABLE CONTROL BAR ***************** -->
       
@@ -276,7 +308,7 @@
       <div class="table-list">
         <div class="controls has-buttons">
           <div class="summary">
-            <div class="visible"><span class="value">(#)</span> <span class="descr-before"></span>Tickets <span class="descr-after"></span></div>
+            <div class="visible"><span class="value">(#)</span> Groups </div>
             <div class="selected">&nbsp;|&nbsp; <span class="value">(#)</span><span> selected</span></div>
           </div>
           

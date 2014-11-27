@@ -29,7 +29,8 @@ th.sorting:after,
 .map a.collapse:before,
 .checker .supercheck:after,
 input[type="checkbox"]:after,
-.map .requirements-list li:before {
+.map .requirements-list li:before,
+.section-actions a:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -95,6 +96,7 @@ th.sorting_desc:after,
 .icon-lock:before {
 	content: "\e61e";
 }
+.section-actions a.new:before,
 .icon-pencil-box:before {
 	content: "\e61f";
 }
@@ -115,6 +117,7 @@ th.sorting_desc:after,
 	content: "\e625";
 }
 .iconButton.assign:before,
+.section-actions a.members:before,
 .icon-people:before {
 	content: "\e624";
 }
@@ -204,6 +207,27 @@ th.sorting_desc:after,
 }
 .icon-warning:before {
 	content: "\e61b";
+}
+.icon-vacation:before {
+	content: "\e61a";
+}
+.icon-extend:before {
+	content: "\e628";
+}
+.icon-plus:before,
+.iconButton.add:before {
+	content: "\e62b";
+}
+.icon-minus:before,
+.iconButton.subtract:before {
+	content: "\e62c";
+}
+.section-actions a.ownership:before,
+.icon-ownership:before {
+	content: "\e62d";
+}
+.icon-time:before {
+	content: "\e62e";
 }
 
 

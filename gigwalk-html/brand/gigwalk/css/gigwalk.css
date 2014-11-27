@@ -149,16 +149,19 @@ html, body {
 	
 	body,
 	a.buttonly,
+	.section.title a.navly:after,
 	.admin .table-list td.location a {
 		color: #4a4a4a;
 	}
 	
 	.user-org,
-	.plainLabel {
+	.plainLabel,
+	.section-detail {
 		color: #ababab;
 	}
 	
-	.subnav li a {
+	.subnav li a,
+	.section-no-content {
 		color: #aaaaaa;
 	}
 	
@@ -226,7 +229,8 @@ html, body {
 	.choose-dates a.cancel:focus,
 	.page-action-panel a.cancel:hover,
 	.page-action-panel a.cancel:focus
-	.expander {
+	.expander,
+	.section-no-content {
 		background: #f8f8f8;
 	}
 	
@@ -669,7 +673,8 @@ select option,
 .remove,
 .iconly,
 .instruction-footer,
-.messages .problem span.exclaim {
+.messages .problem span.exclaim,
+.section-no-content {
 	font-family: Helvetica-Neue-Medium;
 }
 
