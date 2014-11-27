@@ -68,13 +68,6 @@
 
  
 </head>
-
-  <!-- ------------------------------------------------------
-      inject class "user-gigwalk" to handle showing or hiding
-      the "Organization" column and TD's with CSS if the user
-      is or isn't a Gigwalk user (this will help format the
-      column widths responsively also)
-      ---------------------------------------------------------- -->
 <body class="body">
 
 <!-- top navigation -->
@@ -159,11 +152,12 @@
   </nav>
 </header>
 
-<!-- --------------------------------------------------------
-        Dave Valerie
-        inject role name in to div "main wrapper" class
-        example "main wrapper worker" or
-                "main wrapper admin" -->
+  <!-- ------------------------------------------------------
+      inject class "user-gigwalk" into "main wrapper" to handle 
+      showing or hiding the "Organization" column and TD's with CSS 
+      if the user is or isn't a Gigwalk user (this will help format
+      the column widths responsively also)
+      ---------------------------------------------------------- -->
                 
 <!-- start the main panel -->
 <div class="main wrapper">
@@ -300,7 +294,7 @@
               <!-- ------------------------------------------------------
                 don't show TH or TD for Organization if user is NOT Gigwalk user
                 CSS will handle this if class "user-gigwalk" is injected
-                in the body tag or just under it if user is Gigwalk user
+                in the "main wrapper" div if user is Gigwalk user
                 (this will help format the column widths responsively also)
                 ---------------------------------------------------------- -->
               <th class="sorting org-name">
