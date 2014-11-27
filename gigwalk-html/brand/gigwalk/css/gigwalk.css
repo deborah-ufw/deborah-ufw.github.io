@@ -645,7 +645,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 .table-list td,
 .map .tab-pane .ticketlink,
 .map .tab-pane.actions .iconButton,
-a.new-button,
+a.page-action,
 .new-panel input {
 	font-family: Helvetica-Neue-Light;
 }

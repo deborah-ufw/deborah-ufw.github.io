@@ -98,7 +98,7 @@ header nav .user-edit,
 .filters-holder .view a,
 .table-list th,
 .map .tab-pane a.buttonly.main,
-a.new-button {
+a.page-action {
 	font-size: 1.3em;
 }
 
@@ -250,8 +250,8 @@ a.iconButton:focus,
 .quick-select a,
 .instruction .duplicating-message a.closer:hover,
 .instruction .duplicating-message a.closer:focus,
-a.new-button:hover,
-a.new-button:focus {
+a.page-action:hover,
+a.page-action:focus {
 	text-decoration: none;
 }
 
@@ -288,7 +288,7 @@ select:focus,
 th.sorting,
 .worker .table-list .controls .actions.active a,
 .Tickets th.project-title input:before,
-a.new-button {
+a.page-action {
 	cursor: pointer;
 }
 
@@ -403,7 +403,7 @@ a.iconly,
 .Tickets .filters .wrapper,
 .filter.search .icon-search,
 .instruction .duplicating-message a.closer,
-a.new-button {
+a.page-action {
 	display: inline-block;
 }
 
@@ -554,7 +554,7 @@ th.sorting:after,
 .instructions .positioner,
 .instruction .duplicate,
 .instruction .duplicating-message,
-a.new-button,
+a.page-action,
 .new-panel {
 	position: relative;
 }
@@ -570,7 +570,7 @@ header nav .number,
 .map .tab-pane a.buttonly.main,
 .instruction .duplicating-message .icon-warning,
 .instruction .duplicating-message a.closer,
-a.new-button span.im {
+a.page-action span.im {
 	position: absolute;
 }
 
@@ -645,7 +645,7 @@ header .navbar-collapse.in {
 .iconButton,
 .filters-choices .choice .value,
 .filters-choices .choice .close,
-a.new-button {
+a.page-action {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
@@ -3098,6 +3098,10 @@ a.iconly:before {
 }
 
 .filters-choices .choice {
+	height: 39px;
+}
+
+.filters-choices .choice {
 	margin: 0 0 5px 8px;
 }
 
@@ -4516,23 +4520,19 @@ td.table-actions a {
 	padding-top: .8em;
 }
 
-a.new-button {
+a.page-action {
 	margin-left: .5em;
 	padding: .4em 1.5em .4em 2.5em;
 		top: -10px;
 }
 
-a.new-button span.im {
+a.page-action span.im {
 	top: 0;
 	left: 8px;
 }
 
 .Groups .filters-choices {
 	margin-right: 177px;
-}
-
-.Groups .filters-choices .choice {
-	height: 39px;
 }
 
 .new-panel {

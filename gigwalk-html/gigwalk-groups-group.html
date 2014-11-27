@@ -195,9 +195,11 @@
   </nav><!-- ends side nav -->
   
   <!-- content (right side) -->
-  <div class="inner wrapper Groups">
-  
+  <!-- inject page name "Group" -->
+  <div class="inner wrapper Group">
+      
       <!-- tabs for the content -->
+      <!-- remove class "active" from the Groups li (since this is not the home page for Groups) -->
       <nav class="tabnav">
         <ul>
           <li><a href="javascript:;">Users</a></li>
@@ -209,7 +211,7 @@
       <div class="content dash">
       
       
-      <!-- ****************************************************************** -->
+      <!-- ****************************************************************** - ->
       <!--                              FILTERS                               -->
       <!-- ****************************************************************** -->
       
@@ -236,7 +238,7 @@
               <input type="text" placeholder="Search" />
               <span class="im icon-search"></span>
             </div>
-            <a class="new-button"><span class="im icon-pencil-box"></span>New Group</a>
+            <a class="page-action delete-button"><span class="im icon-trash"></span>Delete</a>
             <div class="new-panel">
               <input type="text" class="name" placeholder="Group Name" />
               <div class="warning">Must be at least 3 characters</div>
@@ -257,19 +259,6 @@
         </div>
       </div><!-- end filters selections -->
       
-      <!-- *************************************************   
-      
-          Confirmation message for a deleted group 
-          (redirected after deletion from the Group detail page  
-          
-          *************************************************** -->
-        
-        <div class="page action messages">
-          <div class="message confirmation">
-            <h1><span class="im icon-checkmark"></span>1 Group and 2 Subgroups were deleted</h1>
-          </div>
-        </div>
-      
       
       <!-- ****************** TABLE CONTROL BAR ***************** -->
       
@@ -280,13 +269,11 @@
             <div class="visible"><span class="value">(#)</span> <span class="descr-before"></span>Tickets <span class="descr-after"></span></div>
             <div class="selected">&nbsp;|&nbsp; <span class="value">(#)</span><span> selected</span></div>
           </div>
-          <div class="actions active">
-            <a class="iconButton cancel admin" href="javascript:;">Cancel</a><!-- Grace only -->
-            <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
-            <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
-            <a class="iconButton print" href="javascript:;">Print</a>
-            <a class="iconButton assign admin last" href="javascript:;">Assign</a><!-- Grace only -->
-            <a class="iconButton unassign worker last" href="javascript:;">Unassign</a><!-- Jimmy only -->
+          
+          <!-- on select any, inject class "active" into div "actions" -->
+          <div class="actions">
+            <a class="iconButton add" href="javascript:;">Add to Subgroup</a>
+            <a class="iconButton subtract last" href="javascript:;">Remove</a>
           </div>
         </div>
         
@@ -434,14 +421,6 @@
                 
               </div><!-- end second radio -->
               
-              
-              <div class="radio">
-                <label>
-                <input type="radio" name="choose" value="system" /> &nbsp;Let the system choose for me</label>
-                <div class="hint">Only unassigned tickets will be assigned</div>
-                <!-- no subpanel for "Let the system choose for me" -->
-              </div>
-              
             </div><!-- end radios -->
           </div><!-- end "item required" -->
           
@@ -454,59 +433,6 @@
 
         </div><!-- end Admin "Assign" panel -->
         
-        <!-- Panel for Admin "Extend" (Grace only) -->
-        
-        <div class="action panel extend">
-          <h1>Extend 20 Tickets</h1>
-          <div class="hint">End dates will be updated to the selected date.</div>
-          <div class="item required text">
-            <div class="plainLabel">Choose End Date</div>
-            <input type="text" class="datepicker" />
-          </div>
-          
-          <div class="primary actions">
-            <div class="right">
-              <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly disabled" href="javascript:;">Extend</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Panel for Admin "Cancel" (Grace only) -->
-        <div class="action panel cancel">
-          <h1>Cancel 20 Tickets</h1>
-          <div class="hint">Tickets that have not been started can be canceled.</div>
-          <div class="warning">Some of the selected tickets have been started. These tickets will not be canceled.</div>
-          
-          <div class="primary actions">
-            <div class="right">
-              <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly" href="javascript:;">Cancel Tickets</a>
-            </div>
-          </div>
-        </div>  
-        
-        <!-- Panel for Worker "Schedule" (Jimmy only) -->
-        
-        <div class="action panel schedule">
-          <h1>Schedule 20 Tickets</h1>
-          <div class="hint">Tickets already scheduled will be re-scheduled.</div>
-          <div class="item required text">
-            <div class="plainLabel">Choose Date</div>
-            <input type="text" class="datepicker" />
-          </div>
-          <div class="warning">Some of the selected tickets are due before this date. These tickets will not be scheduled.</div>
-          
-          <div class="primary actions">
-            <div class="right">
-              <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly disabled" href="javascript:;">Schedule</a>
-            </div>
-          </div>
-        </div>
-        
-        
-           
         
         <!-- ------------------------------------------------------------ -->
         
@@ -532,25 +458,13 @@
             <tr role="row">
               <th class="sorting project-title">
                 <input type="checkbox" value="select-all" />
-                Project Name
+                Name
               </th>
               <th class="sorting location">
                 Location
               </th>
-              <th class="sorting assigned admin"><!-- Grace only (assigned td also) -->
-                Assigned
-              </th>
-              <th class="sorting scheduled worker"><!-- Jimmy only (scheduled td also) -->
-                Scheduled
-              </th>
               <th class="sorting due">
-                Due
-              </th>
-              <th class="sorting estimated worker"><!-- Jimmy only (estimated td also) -->
-                Est. Time
-              </th>
-              <th class="sorting status">
-                Status
+                Zip Code
               </th>
             </tr>
           </thead>
@@ -561,30 +475,13 @@
               <td class="sorting project-title">
                 <input type="checkbox" value="select-all" /> 
                 <a href="javascript:;">
-                  Cover Girl Fall 2015 Eyeshadow Reset 
-                </a>
+                  Vilma Banky</a>
               </td>
               <td class="sorting location">
-                <a href="javascript:;">
-                  Walmart 
-                </a>
-              </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  Jimmy Stewart 
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                11/04/2014 
+                Hollywood, CA
               </td>
               <td class="sorting due">
-                11/05/2014 
-              </td>
-              <td class="sorting estimated worker">
-                3:00 
-              </td>
-              <td class="status">
-                <span class="open"></span>
+                90274 
               </td>
             </tr>
             
@@ -592,30 +489,12 @@
               <td class="sorting project-title">
                 <input type="checkbox" value="select-all" /> 
                 <a href="javascript:;">
-                  05.16.15 Product Distribution - Snickers 
+                  Lionel Barrymore
                 </a>
               </td>
-              <td class="sorting location"> 
-                <a href="javascript:;">
-                  Walmart 
-                </a>
-              </td>
-              <td class="sorting assigned admin">
-                <a href="javascript:;">
-                  Kelly Wentworth
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                11/05/2014 
-              </td>
+              <td class="sorting location">Beverly Hills, CA </td>
               <td class="sorting due">
-                11/03/2014 
-              </td>
-              <td class="sorting estimated worker">
-                :15 
-              </td>
-              <td class="status">
-                <span class="submitted"></span>
+                90210 
               </td>
             </tr>
             
@@ -623,177 +502,70 @@
               <td class="sorting project-title">
                 <input type="checkbox" value="select-all" /> 
                 <a href="javascript:;">
-                  New Product Cut-in - Kikkoman Gluten-Free Soy Sauce 
-                </a>
+                  Clark Gable (Admin)</a>
               </td>
-              <td class="sorting location">
-                <a href="javascript:;">
-                  Safeway 
-                </a>
-              </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  Kelly Wentworth
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                11/05/2014 
-              </td>
+              <td class="sorting location">Malibu, CA </td>
               <td class="sorting due">
-                11/06/2014 
-              </td>
-              <td class="sorting estimated worker">
-                2 days 
-              </td>
-              <td class="status">
-                <span class="submitted"></span>
+                90221 
               </td>
             </tr>
             
             <tr role="row" class="even">
               <td class="sorting project-title">
                 <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Atlas Alerts 918-215419650
+                <a href="javascript:;">Douglas Fairbanks
                 </a>
               </td>
-              <td class="sorting location"> 
-                <a href="javascript:;">
-                  Safeway 
-                </a>
-              </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  James Dean
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                <span>unscheduled</span>
-              </td>
+              <td class="sorting location">Los Feliz, CA </td>
               <td class="sorting due">
-                11/06/2014 
-              </td>
-              <td class="sorting estimated worker">
-                2:20 
-              </td>
-              <td class="status">
-                <span class="started"></span>
+                90219 
               </td>
             </tr>
             <tr role="row" class="odd">
               <td class="sorting project-title">
                 <input type="checkbox" value="select-all" /> 
                 <a href="javascript:;">
-                  New Product Cut-in - Kikkoman Gluten-Free Soy Sauce
+                  Rudolph Valentino
                 </a>
               </td>
-              <td class="sorting location">
-                <a href="javascript:;">
-                  Kroeger's
-                </a>
-              </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  Jimmy Stewart
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                <span>unscheduled</span>
-              </td>
+              <td class="sorting location">Bel Air, CA </td>
               <td class="sorting due">
-                11/07/2014 
-              </td>
-              <td class="sorting estimated worker">
-                1:10
-              </td>
-              <td class="status">
-                <span class="started"></span>
+                90244 
               </td>
             </tr>
             <tr role="row" class="even">
               <td class="sorting project-title">
                 <input type="checkbox" value="select-all" /> 
                 <a href="javascript:;">
-                  Atlas Alerts 918-215419650
+                  Rudolph Valentino (Operator)
                 </a>
               </td>
-              <td class="sorting location"> 
-                <a href="javascript:;">
-                  Kroeger's 
-                </a>
-              </td>
-              <td class="sorting assigned admin">
-                <a href="javascript:;">
-                  James Dean
-                </a>
-              </td>
-              <td class="sorting scheduled worker"> 
-                11/03/2014 
-              </td>
+              <td class="sorting location">Bel Air, CA </td>
               <td class="sorting due"> 
-                11/06/2014 
-              </td>
-              <td class="sorting estimated worker"> 
-                1:00
-              </td>
-              <td class="status">
-                <span class="started paused"></span>
+                90244 
               </td>
             </tr>
             <tr role="row" class="odd canceled">
               <td class="sorting project-title">
                 <input type="checkbox" value="select-all" /> 
                 <a href="javascript:;">
-                  Cover Girl Fall 2015 Eyeshadow Reset
-                </a>
+                  Jane Weymouth</a>
               </td>
-              <td class="sorting location">
-                <a href="javascript:;">
-                  Target
-                </a>
-              </td>
-              <td class="sorting assigned admin">
-                unassigned
-              </td>
-              <td class="sorting scheduled worker">
-                11/07/2014 
-              </td>
+              <td class="sorting location">Bel Air, CA </td>
               <td class="sorting due">
-                11/07/2014 
-              </td>
-              <td class="sorting estimated worker">
-                :40 
-              </td>
-              <td class="status">
-                <span class="canceled"></span>
+                90244 
               </td>
             </tr>
             <tr role="row" class="even expired">
               <td class="sorting project-title">
                 <input type="checkbox" value="select-all" /> 
                 <a href="javascript:;">
-                  Cover Girl Fall 2015 Eyeshadow Reset
+                  Jeff York
                 </a>
               </td>
-              <td class="sorting location"> 
-                <a href="javascript:;">
-                  Target
-                </a>
-              </td>
-              <td class="sorting assigned admin">
-                unassigned
-              </td>
-              <td class="sorting scheduled worker"> 
-                11/03/2014 
-              </td>
+              <td class="sorting location">Bel Air, CA </td>
               <td class="sorting due"> 
-                11/07/2014 
-              </td>
-              <td class="sorting estimated worker"> 
-                <span>not estimated</span> 
-              </td>
-              <td class="status">
-                <span class="expired"></span>
+                90244 
               </td>
             </tr>
             
@@ -808,6 +580,7 @@
           <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
           <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
         </div>
+      </div>
       
     
       <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
