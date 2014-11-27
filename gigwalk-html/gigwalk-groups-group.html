@@ -280,10 +280,32 @@
         <div class="section-detail">
           <!-- if no subroups, put this in the div -->
           <div class="none">This group has no subgroups</div>
-          <!-- if subgroup(s), put this in the div and 
-               create the js to toggle the subroups viewer 
-               open and closed -->
-          <a class="subgroups-toggle" href="javascript:;">Show Subgroups</a>     
+          <!-- -----------------------------------------------
+               if subgroup(s), put this in the div and 
+               create the js to 
+                 * toggle the subroups viewer open and closed 
+                 * toggle the word "Show" or "Hide"
+               ----------------------------------------------- -->
+          <a class="subgroups-toggle" href="javascript:;">Show Subgroups</a> 
+          
+          <div class="mini-panel subgroups-detail">
+            <a href="javascript:;">Bionic</a> 
+            <a href="javascript:;">Interstellar</a> 
+            <a href="javascript:;">Galactic</a> 
+            <a href="javascript:;">Narnian</a> 
+            <a href="javascript:;">Hobbitly</a> 
+            <a href="javascript:;">Interplanetary</a> 
+            
+            <!-- -----------------------------------------------
+            
+              only show "helper" button if more than 5 subgroups
+              on a mobile device, this will help user when
+              the other button is out of sight at the top
+              of long list
+            
+              ----------------------------------------------- -->
+            <a class="helper">Hide Subgroups</a>
+          </div>    
         </div>
         
         <div class="section-actions">
@@ -291,6 +313,168 @@
           <a class="iconButton members">Add Members</a>
           <a class="iconButton new">New Subgroup</a>
         </div>
+        
+        <!-- Ownership action panel -->
+        <div class="action panel ownership">
+          <h1>Ownership</h1>
+          <div class="group">
+            <div class="filter search">
+              <input type="text" placeholder="Search" />
+              <span class="im icon-search"></span>
+            </div>
+            <div class="sub first">
+              <div class="selected-item">Clark Gable <span>(Admin)</span></div>
+              <a class="remove" href="javascript:;">Remove</a>
+            </div>
+            <div class="sub last">
+              <div class="selected-item">Rudolph Valentino <span>(Operator)</span></div>
+              <a class="remove" href="javascript:;">Remove</a>
+            </div>
+          </div>
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly" href="javascript:;">Save</a>
+            </div>
+          </div>
+        </div><!-- END Ownership action panel -->
+        
+        <!-- Add Members action panel -->
+        <div class="action panel add-members">
+          <h1>Add Members</h1>
+          
+          <div class="group">
+            <div class="filter search">
+              <input type="text" placeholder="Search" />
+              <span class="im icon-search"></span>
+            </div>
+          </div>  
+          
+          <div class="table-list">
+            <div class="controls">
+              <div class="summary">
+                <div class="visible"><span class="value">(#)</span> Users </div>
+                <div class="selected">&nbsp;|&nbsp; <span class="value">(#)</span><span> selected</span></div>
+              </div>
+            </div>
+          <div class="choose list">
+            <table data-target="dataTable" class="dataTable no-footer" role="grid"><!-- it's a jQuery dataTable! :) -->
+              <thead>
+                <tr role="row">
+                  <th class="sorting user-name">
+                    Name
+                  </th>
+                  <th class="sorting location">
+                    Location
+                  </th>
+                  <th class="sorting zip"> 
+                    Zip Code
+                  </th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                <tr role="row" class="odd">
+                  <td class="sorting user-name">
+                    <input type="checkbox" value="select-all" /> 
+                    <a href="javascript:;">Vilma Banky</a>
+                  </td>
+                  <td class="sorting location">
+                     Hollywood, CA</td>
+                  <td class="zip"> 
+                    90274
+                  </td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="sorting user-name">
+                    <input type="checkbox" value="select-all" /> 
+                    <a href="javascript:;">Lionel Barrymore</a>
+                  </td>
+                  <td class="sorting location">
+                     Beverly Hills, CA
+                  </td>
+                  <td class="zip"> 
+                    90210
+                  </td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="sorting user-name">
+                    <input type="checkbox" value="select-all" /> 
+                    <a href="javascript:;">Clark Gable  <span>(Admin)</span></a>
+                  </td>
+                  <td class="sorting location">
+                     Malibu, CA
+                  </td>
+                  <td class="zip"> 
+                    90221
+                  </td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="sorting user-name">
+                    <input type="checkbox" value="select-all" /> 
+                    <a href="javascript:;">Douglas Fairbanks</a>
+                  </td>
+                  <td class="sorting location">
+                     Los Feliz, CA
+                  </td>
+                  <td class="zip"> 
+                    90219
+                  </td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="sorting user-name">
+                    <input type="checkbox" value="select-all" /> 
+                    <a href="javascript:;">Rudolph Valentino <span>(Operator)</span></a>
+                  </td>
+                  <td class="sorting location">
+                     Bel Air, CA
+                  </td>
+                  <td class="zip"> 
+                    90244
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <!-- ******* PAGNINATION ******* -->
+            <!-- Don't show if there aren't any pages -->
+            <div class="pagination">
+              <div class="inner">
+                <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
+                <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
+              </div>
+            </div>
+            
+          </div><!-- end "choose list" subpanel -->
+          </div><!-- end "table-list" -->
+
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              
+              <!-- On select any, remove class "disabled" -->
+              <a class="buttonly disabled" href="javascript:;">Add</a>
+              
+            </div>
+          </div>
+        </div><!-- END Add Members action panel -->
+        
+        <!-- New Subgroup action panel -->
+        <div class="action panel new-subgroup">
+          <h1>New Subgroup</h1>
+          <div class="wrapper">
+            <input type="text" class="name" placeholder="Group Name" />
+              <div class="warning">Must be at least 3 characters</div>
+              <div class="warning">A group already exists with this name</div>
+          </div>
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly" href="javascript:;">Create</a>
+            </div>
+          </div>
+        </div><!-- END Ownership action panel -->
+        
       </div>
       
       <!-- --------------------------------------------------------
@@ -323,157 +507,44 @@
         <!-- **********  Action panel (drops down on action select)  *********** -->
         <!-- ****************************************************************** -->
         
-        <!-- Panel for Admin "Assign" (Grace only) -->
+        <!-- Panel for Add Members -->
         
-        <div class="action panel assign">
-          <h1>Assign 20 Tickets <span>(estimated 53 hours 28 minutes)</span></h1>
-          <div class="item required">
-            <div class="plainLabel">Choose Assignee</div>
-            <div class="radios">
-              <div class="radio">
+        <div class="action panel add-members">
+          <h1>Add (#) Members to Subgroup</h1>
+          <div class="wrapper">
+            <div class="checkboxes">
+            
+              <div class="checkbox">
                 <label>
-                <input type="radio" name="choose" value="search" /> &nbsp;Search for assignee</label>
-                <div class="hint">Tickets already assigned will be re-assigned</div>
-                
-                <!-- Search subpanel shows if "Search for assignee" is selected -->
-                <div class="choose search">
-                  <div class="filter search">
-                    <input type="text" placeholder="Search" />
-                    <span class="im icon-search"></span>
-                  </div>
-                  <div class="filters-choices">
-                    <div class="selection">
-                      <div class="choice searched">
-                        <div class="value">Jimmy Stewart</div>
-                        <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-                      </div>
-                      <div class="detail">30 hours available this week</div>
-                    </div>
-                  </div>
-                </div><!-- end Search subpanel -->
-                
-              </div><!-- end first radio -->
+                  <input type="checkbox" class="supercheck" value="repeats" />
+                    Bionic
+                </label>
+              </div>
               
-              
-              <div class="radio">
+              <!-- Create New Subgroup option should always be last -->
+              <div class="checkbox new">
                 <label>
-                <input type="radio" name="choose" value="list" /> &nbsp;Choose from a list</label>
-                <div class="hint">Tickets already assigned will be re-assigned</div>
-                
-                <!-- List subpanel shows if "Choose from a list" is selected -->
-                <div class="choose list">
-                  <table data-target="dataTable" class="dataTable no-footer" role="grid"><!-- it's a jQuery dataTable! :) -->
-                    <thead>
-                      <tr role="row">
-                        <th class="sorting user-name">
-                          Name
-                        </th>
-                        <th class="sorting location">
-                          Location
-                        </th>
-                        <th class="sorting availability"><!-- Grace only (assigned td also) -->
-                          Availability (week)
-                        </th>
-                      </tr>
-                    </thead>
-                    
-                    <tbody>
-                      <tr role="row" class="odd">
-                        <td class="sorting user-name">
-                          <input type="checkbox" value="select-all" /> 
-                          <a href="javascript:;">
-                            James Dean
-                          </a>
-                        </td>
-                        <td class="sorting location">
-                           Brentwood, SC
-                        </td>
-                        <td class="availability"> 
-                          32 hours
-                        </td>
-                      </tr>
-                      <tr role="row" class="even">
-                        <td class="sorting user-name">
-                          <input type="checkbox" value="select-all" /> 
-                          <a href="javascript:;">
-                            Richard Gere
-                          </a>
-                        </td>
-                        <td class="sorting location">
-                           Blythewood, SC
-                        </td>
-                        <td class="availability"> 
-                          5 hours
-                        </td>
-                      </tr>
-                      <tr role="row" class="odd">
-                        <td class="sorting user-name">
-                          <input type="checkbox" value="select-all" /> 
-                          <a href="javascript:;">
-                            Val Kilmer
-                          </a>
-                        </td>
-                        <td class="sorting location">
-                           Greenville, SC
-                        </td>
-                        <td class="availability"> 
-                          1 day
-                        </td>
-                      </tr>
-                      <tr role="row" class="even">
-                        <td class="sorting user-name">
-                          <input type="checkbox" value="select-all" /> 
-                          <a href="javascript:;">
-                            Jimmy Stewart
-                          </a>
-                        </td>
-                        <td class="sorting location">
-                           Columbia, SC
-                        </td>
-                        <td class="availability"> 
-                          30 minutes
-                        </td>
-                      </tr>
-                      <tr role="row" class="odd">
-                        <td class="sorting user-name">
-                          <input type="checkbox" value="select-all" /> 
-                          <a href="javascript:;">
-                            Kelly Wentworth 
-                          </a>
-                        </td>
-                        <td class="sorting location">
-                           Brentwood, SC
-                        </td>
-                        <td class="availability"> 
-                          30 hours
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  
-                  <!-- ******* PAGNINATION ******* -->
-                  <div class="pagination">
-                    <div class="inner">
-                      <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
-                      <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
-                    </div>
-                  </div>
-                  
-                </div><!-- end List subpanel -->
-                
-              </div><!-- end second radio -->
+                  <input type="checkbox" class="supercheck" value="repeats" />
+                    Create New Subgroup
+                </label>
+                <div class="inner">
+                  <input type="text" class="name" placeholder="Group Name" />
+                  <div class="warning">Must be at least 3 characters</div>
+                  <div class="warning">A group already exists with this name</div>
+                </div>
+              </div><!-- END new -->
               
-            </div><!-- end radios -->
-          </div><!-- end "item required" -->
+            </div><!-- END checkboxes -->
+          </div><!-- END wrapper -->
           
           <div class="primary actions">
             <div class="right">
               <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly disabled" href="javascript:;">Assign</a>
+              <a class="buttonly disabled" href="javascript:;">Add</a>
             </div>
           </div>
-
-        </div><!-- end Admin "Assign" panel -->
+           
+        </div><!-- END Add Members panel -->
         
         
         <!-- ------------------------------------------------------------ -->
@@ -484,10 +555,32 @@
         <!-- the panel that confirms the executed action -->
         <div class="action messages">
           <div class="message confirmation">
+          
+            <!-- ------------------------------------------------------------------- 
+            
+                 Would like all "message" divs in "action-messages" div to 
+                 delay 5 seconds, then smoothly fade and animate up
+                   * if this can be done, remove the "closer" link
+                   * if not, please js the "closer" link to close the "message" div
+                   
+            ---------------------------------------------------------------------- -->
+            <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+            
             <h1><span class="im icon-checkmark"></span>20 Tickets were assigned (Confirmation message)</h1>
           </div>
-          <!-- html update Valerie - replace the span in the h1 -->
+
           <div class="message problem">
+          
+          <!-- ------------------------------------------------------------------- 
+            
+                 Would like all "message" divs in "action-messages" div to 
+                 delay 5 seconds, then smoothly fade and animate up
+                   * if this can be done, remove the "closer" link
+                   * if not, please js the "closer" link to close the "message" div
+                   
+            ---------------------------------------------------------------------- -->
+            <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+          
             <h1><span class="im icon-warning"></span>Problem message</h1>
           </div>
         </div>
@@ -498,14 +591,14 @@
         
           <thead>
             <tr role="row">
-              <th class="sorting project-title">
+              <th class="sorting user-name">
                 <input type="checkbox" value="select-all" />
                 Name
               </th>
               <th class="sorting location">
                 Location
               </th>
-              <th class="sorting due">
+              <th class="sorting zip">
                 Zip Code
               </th>
             </tr>
@@ -514,99 +607,87 @@
           <tbody>
           
             <tr role="row" class="odd">
-              <td class="sorting project-title">
+              <td class="sorting user-name">
                 <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Vilma Banky</a>
+                <a href="javascript:;">Vilma Banky</a>
               </td>
               <td class="sorting location">
                 Hollywood, CA
               </td>
-              <td class="sorting due">
+              <td class="sorting zip">
                 90274 
               </td>
             </tr>
             
             <tr role="row" class="even">
-              <td class="sorting project-title">
+              <td class="sorting user-name">
                 <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Lionel Barrymore
-                </a>
+                <a href="javascript:;">Lionel Barrymore</a>
               </td>
               <td class="sorting location">Beverly Hills, CA </td>
-              <td class="sorting due">
+              <td class="sorting zip">
                 90210 
               </td>
             </tr>
             
             <tr role="row" class="odd">
-              <td class="sorting project-title">
+              <td class="sorting user-name">
                 <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Clark Gable (Admin)</a>
+                <a href="javascript:;">Clark Gable <span>(Admin)</span></a>
               </td>
               <td class="sorting location">Malibu, CA </td>
-              <td class="sorting due">
+              <td class="sorting zip">
                 90221 
               </td>
             </tr>
             
             <tr role="row" class="even">
-              <td class="sorting project-title">
+              <td class="sorting user-name">
                 <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">Douglas Fairbanks
-                </a>
+                <a href="javascript:;">Douglas Fairbanks</a>
               </td>
               <td class="sorting location">Los Feliz, CA </td>
-              <td class="sorting due">
+              <td class="sorting zip">
                 90219 
               </td>
             </tr>
             <tr role="row" class="odd">
-              <td class="sorting project-title">
+              <td class="sorting user-name">
                 <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Rudolph Valentino
-                </a>
+                <a href="javascript:;">Rudolph Valentino</a>
               </td>
               <td class="sorting location">Bel Air, CA </td>
-              <td class="sorting due">
+              <td class="sorting zip">
                 90244 
               </td>
             </tr>
             <tr role="row" class="even">
-              <td class="sorting project-title">
+              <td class="sorting user-name">
                 <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Rudolph Valentino (Operator)
-                </a>
+                <a href="javascript:;">Rudolph Valentino <span>(Operator)</span></a>
               </td>
               <td class="sorting location">Bel Air, CA </td>
-              <td class="sorting due"> 
+              <td class="sorting zip"> 
                 90244 
               </td>
             </tr>
             <tr role="row" class="odd canceled">
-              <td class="sorting project-title">
+              <td class="sorting user-name">
                 <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Jane Weymouth</a>
+                <a href="javascript:;">Jane Weymouth</a>
               </td>
               <td class="sorting location">Bel Air, CA </td>
-              <td class="sorting due">
+              <td class="sorting zip">
                 90244 
               </td>
             </tr>
             <tr role="row" class="even expired">
-              <td class="sorting project-title">
+              <td class="sorting user-name">
                 <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Jeff York
-                </a>
+                <a href="javascript:;">Jeff York</a>
               </td>
               <td class="sorting location">Bel Air, CA </td>
-              <td class="sorting due"> 
+              <td class="sorting zip"> 
                 90244 
               </td>
             </tr>
@@ -617,6 +698,7 @@
       </div><!-- end table-list div -->
 
       <!-- ****************** PAGINATION ***************** -->
+      <!-- Don't show if there aren't any pages -->
       <div class="pagination">
         <div class="inner">
           <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>

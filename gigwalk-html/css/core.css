@@ -48,7 +48,9 @@ header nav .user-edit,
 .map .assign-action.detail .filters-choices span.im {
 	font-size: .9em;
 }
-.table-list table table td {
+
+.table-list table table td,
+.section-controls .action.panel .table-list table {
 	font-size: 1em;
 }
 
@@ -60,7 +62,9 @@ header nav .user-edit,
 .action.panel .warning,
 .map .tab-pane .search,
 .page-action-panel,
-.page-action-panel input {
+.page-action-panel input,
+.section-controls .action.panel .filter.search,
+.add-members .checkbox label {
 	font-size: 1.1em;
 }
 
@@ -86,7 +90,9 @@ header nav .user-edit,
 .action.panel .choose.list .pagination,
 .instruction-footer .icon-checkmark,
 .instruction .duplicating-message a .im,
-.action.messages h1 span.icon-checkmark {
+.action.messages h1 span.icon-checkmark,
+.section-controls .action.panel input[type="text"],
+.add-members .checkbox.new .name {
 	font-size: 1.2em;
 }
 
@@ -111,7 +117,8 @@ a.page-action,
 
 body,
 .instruction.edit-mode .answer .more-info .set-required input.supercheck[type="checkbox"]:after,
-.pagination {
+.pagination,
+.message a.closer {
 	font-size: 1.4em;
 }
 
@@ -186,7 +193,7 @@ th.sorting:after,
 .section.title,
 .set-repeats .summary-dynamic,
 .tabnav li .dropdown .dropdown-menu > li > a,
-.Tickets .dash .table-list table td,
+.dash .table-list table td,
 .map .tab-pane .requirements-list li,
 .map .tab-pane .description,
 .map .tab-pane .address,
@@ -214,6 +221,7 @@ header .nav .number,
 .table-list table .due,
 .table-list table .scheduled,
 .table-list table .status,
+.table-list table .zip,
 .map .tab-pane a.buttonly.main,
 .Groups .table-list table .subgroups,
 .section-no-content {
@@ -263,7 +271,9 @@ a.iconButton:focus,
 a.page-action:hover,
 a.page-action:focus,
 .section-detail a:hover,
-.section-detail a:focus {
+.section-detail a:focus,
+.message a.closer:hover,
+.message a.closer:focus {
 	text-decoration: none;
 }
 
@@ -273,7 +283,10 @@ a.iconly span:hover,
 a.iconly span:focus,
 .map .tab-pane a.requirements,
 .map .tab-pane a.requirements:hover,
-.map .tab-pane a.requirements:focus {
+.map .tab-pane a.requirements:focus,
+.subgroups-detail a.helper,
+.subgroups-detail a:hover,
+.subgroups-detail a:focus {
 	text-decoration: underline;
 }
 
@@ -301,7 +314,8 @@ th.sorting,
 .worker .table-list .controls .actions.active a,
 .Tickets th.project-title input:before,
 a.page-action,
-.section-actions a {
+.section-actions a,
+.message a.closer {
 	cursor: pointer;
 }
 
@@ -350,7 +364,8 @@ a.disabled,
 .dash .action.panel .primary.actions .right:before,
 .pagination.inner:before,
 .pagination:after,
-.map .tabs-control:after {
+.map .tabs-control:after,
+.subgroups-toggle:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -368,6 +383,12 @@ nav.subnav ul {
 
 .filters-holder .view a {
 	display: inline;
+}
+
+.section-controls .group,
+.section-controls .action.panel.new-subgroup .wrapper,
+.table-list .action.panel .wrapper {
+	display: table;
 }
 
 .tabnav .dropdown.open ul.dropdown-menu,
@@ -416,7 +437,8 @@ a.iconly,
 .Tickets .filters .wrapper,
 .filter.search .icon-search,
 .instruction .duplicating-message a.closer,
-a.page-action {
+a.page-action,
+.subgroups-detail {
 	display: inline-block;
 }
 
@@ -434,7 +456,8 @@ a.page-action {
 .filters-holder .view,
 .filters-holder view a,
 .table-list .summary,
-.table-list .action.panel .plainLabel {
+.table-list .action.panel .plainLabel,
+.subgroups-detail a {
 	display: inline-block;
 	float: left;
 }
@@ -568,7 +591,9 @@ th.sorting:after,
 .instruction .duplicate,
 .instruction .duplicating-message,
 a.page-action,
-.page-action-panel {
+.page-action-panel,
+.message.confirmation,
+.message.problem {
 	position: relative;
 }
 
@@ -583,7 +608,8 @@ header nav .number,
 .map .tab-pane a.buttonly.main,
 .instruction .duplicating-message .icon-warning,
 .instruction .duplicating-message a.closer,
-a.page-action span.im {
+a.page-action span.im,
+.message a.closer  {
 	position: absolute;
 }
 
@@ -806,7 +832,10 @@ input[type="checkbox"]:after,
 .choose-dates .actions a.buttonly,
 .page-action-panel .actions a.buttonly,
 .map .nav-tabs > li > a:before,
-.map .tab-pane a.buttonly.main {
+.map .tab-pane a.buttonly.main,
+.page-action-panel .actions a.buttonly.disabled,
+.page-action-panel .actions a.buttonly.disabled:hover,
+.page-action-panel .actions a.buttonly.disabled:focus {
 	color: #ffffff;
 }
 
@@ -882,7 +911,7 @@ input[type="radio"]:after,
 	.invalid input[type="textarea"],
 	input[type="text"].invalid,
 	input[type="textarea"].invalid {
-		background: #faffb5;
+		background: #fcfec3;
 	}
 
 
@@ -996,6 +1025,10 @@ input[type="radio"]:checked:after,
 	left: .3em;
 }
 
+.section-actions a.new:before {
+	top: 8px;
+}
+
 
 
 /* borders */
@@ -1093,7 +1126,8 @@ header .nav li {
 	border-left-color: transparent;
 }
 
-.topborder {
+.topborder,
+.section-controls .action.panel {
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -1229,7 +1263,14 @@ header .nav .dropdown li {
 	padding: 5px 3px;
 }
 
+.checkbox {
+	margin-bottom: 0;
+}
 
+.checkbox input[type="checkbox"] {
+	position: relative;
+	margin-left: 0;
+}
 
 
 /* hidden for large screens */
@@ -2451,6 +2492,11 @@ instruction .viewing.icon-buttons {
 	right: .5em;
 }
 
+.message a.closer {
+	top: 1em;
+	right: .8em;
+}
+
 
 /* add question */
 
@@ -3191,13 +3237,19 @@ a.iconly:before {
 	margin: 1.5em 0 0 0;
 }
 
-.table-list .action.panel {
+.table-list .action.panel,
+.section-controls .action.panel {
 	padding: 0 1em 1em 1em;
 }
 
 .action.panel .item,
 .action.panel .warning {
 	margin: 1em 0 0 3em;
+}
+
+.section-controls .action.panel .warning,
+.action.panel.add-members .warning {
+	margin: 5px 0 0 3px;
 }
 
 .action.panel.assign .radio .hint,
@@ -3238,16 +3290,18 @@ a.iconly:before {
 }
 
 .action.messages .message {
-	padding: 0 1em .5em 1em;
+	padding: 0 4.5em .5em 1em;
 }
 
 .table-list h1,
-.page.action.messages h1 {
+.page.action.messages h1,
+.section-controls .action.panel h1 {
 	margin: 0;
 	padding: .3em 1em .5em .3em;
 }
 
-.table-list .action.panel h1 {
+.table-list .action.panel h1,
+.section-controls .action.panel h1 {
 	padding-bottom: 0;
 }
 
@@ -3287,12 +3341,12 @@ a.iconly:before {
 }
 
 .table-list td {
-	padding: 17px 10px 7px 0;
+	padding: 17px 10px 17px 0;
 	vertical-align: top;
 }
 
-.table-list.no-bulk-actions td {
-	padding-bottom: 17px;
+.Tickets .table-list td {
+	padding-bottom: 7px;
 }
 
 .action.panel .choose.list td {
@@ -4561,7 +4615,14 @@ a.page-action.delete-button span.im {
 	width: 305px;
 }
 
-.page-action-panel input[type="text"] {
+.section-controls .action.panel input[type="text"],
+.add-members .name {
+	width: 270px;
+}
+
+.page-action-panel input[type="text"],
+.section-controls .action.panel input[type="text"],
+.add-members .name {
 	padding-left: 1em;
 }
 
@@ -4583,6 +4644,7 @@ a.page-action.delete-button span.im {
 
 .section-actions {
 	margin-top: -.6em;
+	margin-bottom: 5px;
 }
 
 .section-actions a {
@@ -4591,6 +4653,62 @@ a.page-action.delete-button span.im {
 
 .section-no-content {
 	padding: 1.2em;
+}
+
+.subgroups-detail {
+	margin-top: 3px;
+	padding-bottom: 2em;
+	min-width: 310px;
+}
+
+.subgroups-detail a {
+	margin: .2em 0;
+	padding: 0 1em;
+	clear: both;
+}
+
+.subgroups-detail a.helper {
+	margin-top: 1.3em;
+}
+
+.section-controls .group {
+	margin: 1em auto;
+}
+
+.section-controls .action.panel.new-subgroup .wrapper{
+	margin: 2em auto;
+}
+
+.table-list .action.panel .wrapper {
+	margin: 1.5em auto 1em auto;
+}
+
+.section-controls .sub {
+	margin-left: 0;
+}
+
+.section-controls .action.panel .group .filter.search input {
+	width: 260px;
+}
+
+.section-controls .action.panel .group .filter.search {
+	margin-bottom: 1em;
+}
+
+.section-controls .action.panel .table-list {
+	margin: 1em 1em 3em 1em;
+}
+
+.add-members .checkbox {
+	margin-top: .7em;
+}
+
+.add-members .checkbox input[type="checkbox"]:after {
+	margin-top: -6px;
+}
+
+.add-members .checkbox.new .inner {
+	margin: .5em 0 0 3.3em;
 }
 
 
