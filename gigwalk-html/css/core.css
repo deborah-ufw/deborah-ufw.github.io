@@ -4590,7 +4590,7 @@ td.table-actions a {
 
 a.page-action {
 	margin-left: .5em;
-	padding: .4em 1.5em .4em 2.5em;
+	padding: .4em 1.2em .4em 2.5em;
 		top: -10px;
 }
 
@@ -4972,20 +4972,18 @@ textarea:-ms-input-placeholder {
 
 /* ie10 & 11 --- also will be picked up by ie9 */
 
-html[data-useragent*='MSIE 10.0'] .buttonly .im.icon-pencil-box:before {
-	font-size: .8em;
-}	
-
 html[data-useragent*='Trident'] .buttonly .im.icon-pencil-box:before {
 	font-size: .6em;
-}	
+}
 
-html[data-useragent*='MSIE 10.0'] .confirmation .icon-checkmark:before,
-html[data-useragent*='Trident'] .confirmation .icon-checkmark:before,
-html[data-useragent*='MSIE 10.0'] .dates.filter .im.icon-calendar:before,
-html[data-useragent*='Trident'] .dates.filter .im.icon-calendar:before {
-	font-size: 42px;
-}	
+html[data-useragent*='MSIE 10.0'] .buttonly .im.icon-pencil-box:before {
+	font-size: .8em;
+}		
+
+html[data-useragent*='MSIE 10.0'] a.page-action.new-button span,
+html[data-useragent*='Trident'] a.page-action.new-button span {
+	font-size: 11px;
+}
 
 html[data-useragent*='MSIE 10.0'] .view .im:before,
 html[data-useragent*='Trident'] .view .im:before, 
@@ -4993,6 +4991,18 @@ html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list td.status span.star
 html[data-useragent*='Trident'] .Tickets .dash .table-list td.status span.started.paused:before {
 	font-size: 30px;
 }
+
+html[data-useragent*='MSIE 10.0'] .section-actions a.iconButton:before,
+html[data-useragent*='Trident'] .section-actions a.iconButton:before {
+	font-size: 34px;
+}
+
+html[data-useragent*='MSIE 10.0'] .confirmation .icon-checkmark:before,
+html[data-useragent*='Trident'] .confirmation .icon-checkmark:before,
+html[data-useragent*='MSIE 10.0'] .dates.filter .im.icon-calendar:before,
+html[data-useragent*='Trident'] .dates.filter .im.icon-calendar:before {
+	font-size: 42px;
+}	
 
 html[data-useragent*='MSIE 10.0'] .edit-mode .instruction-content .item.set-required .sub,
 html[data-useragent*='Trident'] .edit-mode .instruction-content .item.set-required .sub {
@@ -5007,6 +5017,11 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 html[data-useragent*='MSIE 10.0'] .map .assign-action.detail .filter.search input[type="text"],
 html[data-useragent*='Trident'] .map .assign-action.detail .filter.search input[type="text"] {
 	height: 38px;
+}
+
+html[data-useragent*='MSIE 10.0'] .filters-choices .choice,
+html[data-useragent*='Trident'] .filters-choices .choice {
+	height: 40px;
 }
 
 html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list table th.project-title input[type="checkbox"],
