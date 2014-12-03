@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="X-UA-Compatible" content="IE=9" /> 
 
-<title>Tickets Dash (working)</title>
+<title>Ticket Dash with Scheduler</title>
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
@@ -29,7 +29,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-datepicker.js"></script>
 <script src="js/DataTables.all.min.js"></script>
-<script src="js/interactions-working.js"></script>
+<script src="js/interactions.js"></script>
 
 <link href="css/bootstrap.css" media="screen" rel="stylesheet" />
 <link href="css/font-awesome.css" media="screen" rel="stylesheet" />
@@ -43,6 +43,7 @@
 <link href="brand/gigwalk/css/fonts-gigwalk.css" media="screen" rel="stylesheet" />
 <link href="brand/gigwalk/css/gigwalk.css" media="screen" rel="stylesheet" />
 
+<!-- working.css is temporary to show/hide elements while Deborah is developing -->
 <link href="css/working.css" media="screen" rel="stylesheet" />
 
 
@@ -68,7 +69,7 @@
 
  
 </head>
-<body class="body working worker">
+<body class="body">
 
 <!-- top navigation -->
 <header>
@@ -151,18 +152,10 @@
     </div><!-- ends container-fluid -->
   </nav>
 </header>
-
-<!-- --------------------------------------------------------
-        Dave Valerie
-        inject role name in to div "main wrapper" class
-        example "main wrapper worker" or
-                "main wrapper admin" -->
                 
 <!-- start the main panel -->
 <div class="main wrapper">
                 
-<!-- ----------------------------------------------------- --> 
-
   <!-- side navigation (left side) -->
   <nav class="sidenav">
   
@@ -181,7 +174,7 @@
     <ul class="nav-sections">
       <li><a href="gigwalk-groups-dash.html">Organizations</a></li>
       <li><a href="gigwalk-project-builder.html">Projects</a></li>
-      <li class="active"><a href="gigwalk-tickets-dash-old.html">Tickets</a></li>
+      <li class="active"><a href="gigwalk-ticket-dash-scheduler.html">Tickets</a></li>
       <li><a href="javascript:;">People</a></li>
       <li><a href="javascript:;">Resources</a></li>
       
@@ -200,6 +193,7 @@
       <nav class="tabnav">
         <ul>
           <li class="active"><a href="javascript:;">Tickets</a></li>
+          <li><a href="gigwalk-scheduler.html">Calendar</a></li>
           <li class="dropdownly right">
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle ellipsify" type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -250,7 +244,6 @@
               </ul>
             </div>
           </div>
-          <!-- Valerie (added a wrapper div, ends on line ) -->
           <div class="wrapper">
             <div class="filter search">
               <input type="text" placeholder="Search" />
@@ -268,7 +261,6 @@
                 <label>Between</label>
                 <input class="datepicker" type="text" /> and <input class="datepicker" type="text" />
               </div>
-              <!-- update html - add div "warning" - also update css -->
               <div class="warning">Please select a valid date range.</div>
               <div class="actions">
                 <a class="cancel" href="javascript:;">Cancel</a>
@@ -390,7 +382,7 @@
                           32 hours
                         </td>
                       </tr>
-                      <tr role="row" class="even">
+                      <tr role="row" class="odd">
                         <td class="sorting user-name">
                           <input type="checkbox" value="select-all" /> 
                           <a href="javascript:;">
@@ -418,7 +410,7 @@
                           1 day
                         </td>
                       </tr>
-                      <tr role="row" class="even">
+                      <tr role="row" class="odd">
                         <td class="sorting user-name">
                           <input type="checkbox" value="select-all" /> 
                           <a href="javascript:;">
@@ -546,7 +538,7 @@
             <h1><span class="im icon-checkmark"></span>20 Tickets were assigned (Confirmation message)</h1>
           </div>
           <div class="message problem">
-            <h1><span class="im icon-warning"></span>Problem message</h1>
+            <h1><span class="exclaim">!</span>Problem message</h1>
           </div>
         </div>
       
@@ -631,10 +623,10 @@
                   Kelly Wentworth
                 </a>
               </td>
-              <td class="sorting scheduled worker">
+              <td class="sorting scheduled">
                 11/05/2014 
               </td>
-              <td class="sorting due">
+              <td class="sorting due worker">
                 11/03/2014 
               </td>
               <td class="sorting estimated worker">
@@ -896,12 +888,10 @@
                 </div>
                 <div class="assigned admin"><!-- Grace only -->
                   <div class="smallLabel">Assigned</div>
-                  <!-- html update Dave (corrected the div structure) -->
                   <div class="value">
                     <a href="javascript:;">Jimmy Stewart</a>
                   </div>
                 </div>
-                <!-- html update Dave (added assign panel for admin) -->
                 <div class="assign-action detail required">
                   <div class="plainLabel">Choose assignee</div>
                   <div class="filter search required">
@@ -928,7 +918,6 @@
                 <a class="ticketlink"><span class="im icon-ticket"></span>Safeway</a>
                 <div class="address">16121 N. Snelling Rd</div>
                 <div class="address">Cupertino, CA 95014</div>
-                <!-- html update Dave (added link for phone number) -->
                 <div class="phone">
                   <a href="tel:+14088772113">(408) 877-2113</a>
                 </div>
@@ -954,7 +943,6 @@
                 <div class="schedule-action confirm">Scheduled</div>
                 
                 <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
-                <!-- html update Dave (corrected class name) -->
                 <div class="extend-action detail">
                   <input type="text" class="datepicker" placeholder="Select date" />
                   <div class="button-holder">
@@ -983,7 +971,6 @@
                 <a class="iconButton cancel admin" href="javascript:;">Cancel</a><!-- Grace only -->
                 <div class="cancel-action confirm">Canceled</div>
                 
-                <!-- html update Dave (added assign panel for admin) -->
                 <div class="assign-action detail required">
                   <div class="plainLabel">Choose assignee</div>
                   <div class="filter search required">
@@ -1024,7 +1011,7 @@
         <div class="key scheduled">Scheduled</div>
         <div class="key unscheduled">Unscheduled</div>
         <div class="key unassigned admin">Unassigned</div><!-- Grace only -->
-        <div class="key paused worker">Paused</div><!-- Jimmy only -->
+        <div class="key paused worker">Saved</div><!-- Jimmy only -->
         <div class="key submitted">Submitted</div>
         <div class="key expired admin">Expired</div><!-- Grace only -->
       </div>

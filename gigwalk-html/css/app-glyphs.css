@@ -160,12 +160,9 @@ th.sorting_desc:after,
 .icon-print:before {
 	content: "\e604";
 }
-.iconButton.schedule:before,
 .iconButton.calendar:before,
-.iconButton.extend:before,
 .icon-calendar:before,
-.icon-schedule:before,
-.icon-extend:before {
+.icon-schedule:before {
 	content: "\e605";
 }
 .iconButton.comment:before,
@@ -211,6 +208,7 @@ th.sorting_desc:after,
 .icon-vacation:before {
 	content: "\e61a";
 }
+.iconButton.extend:before,
 .icon-extend:before {
 	content: "\e628";
 }
@@ -228,6 +226,22 @@ th.sorting_desc:after,
 }
 .icon-time:before {
 	content: "\e62e";
+}
+.icon-vacation-illust:before {
+	content: "\e630";
+}
+.icon-group:before {
+	content: "\e631";
+}
+.icon-calendar-minus:before {
+	content: "\e632";
+}
+.iconButton.schedule:before,
+.icon-calendar-add:before {
+	content: "\e633";
+}
+.icon-reschedule:before {
+	content: "\e634";
 }
 
 

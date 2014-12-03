@@ -3,6 +3,7 @@
 .requirements-list,
 h1.super,
 .worker .action.panel.assign,
+.choose-dates,
 .map .tab-pane .assign-action.detail {
 	display: none;
 }
