@@ -282,7 +282,7 @@ html, body {
 	.primary.actions a.delete,
 	.messages .message.problem,
 	.problem a.closer,
-	.action.panel .warning,
+	.map .tab-pane .warning,
 	.tab-pane.actions .warning,
 	.choose-dates .warning,
 	.Tickets .dash td.status span.expired:before,
@@ -350,7 +350,7 @@ html, body {
 	 .pin.submitted:after,
 	 .filters-choices,
 	 .filters-choices .icon-cancel:before,
-	 .choose-dates .quick-select a,
+	 .quick-select a,
 	 .map .nav-tabs > li.active > a:before,
 	 .table-list .controls .actions.active a {
 		color: #4890e2;
@@ -380,8 +380,8 @@ html, body {
 		background-color: #4890e2;
 	}
 	
-	.choose-dates .quick-select a:hover,
-	.choose-dates .quick-select a:active,
+	.quick-select a:hover,
+	.quick-select a:focus,
 	.filters-choices .choice,
 	.filters-choices .choice .close,
 	.pagination .previous,
@@ -405,7 +405,7 @@ html, body {
 	
 	.filters-choices .choice .close:hover,
 	.filters-choices .choice .close:focus,
-	.choose-dates .quick-select a,
+	.quick-select a,
 	.pagination .previous:hover,
 	.pagination .previous:focus,
 	.pagination .next:hover,
@@ -450,7 +450,9 @@ html, body {
 	}
 	
 	.filters-choices .choice,
-	.filters-choices .choice .close {
+	.filters-choices .choice .close,
+	.choose-dates a,
+	.quick-select a {
 		border-color: rgba(64, 145, 230, .7);
 	}
 	

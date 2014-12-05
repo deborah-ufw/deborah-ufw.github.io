@@ -3,10 +3,8 @@
 .requirements-list,
 h1.super,
 .worker .action.panel.assign,
-.choose-dates,
-.map .tab-pane a.ticketlink,
 .map .tab-pane .description,
 .map .tab-pane .requirements,
-.map .tab-pane .assign-action.detail {
+.map .mini {
 	display: none;
 }

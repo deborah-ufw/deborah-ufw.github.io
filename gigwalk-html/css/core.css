@@ -65,7 +65,8 @@ header nav .user-edit,
 .page-action-panel,
 .page-action-panel input,
 .section-controls .action.panel .filter.search,
-.add-members .checkbox label {
+.add-members .checkbox label,
+.map .tab-pane .quick-select {
 	font-size: 1.1em;
 }
 
@@ -194,7 +195,7 @@ th.sorting:after,
 .map .tab-pane .address,
 .button-holder a,
 .Tickets .table-list .action.panel .warning,
-.map .tab-pane.actions .warning {
+.map .tab-pane .warning {
 	line-height: 1.2em;
 }
 
@@ -1107,6 +1108,7 @@ header .nav ul.dropdown-menu li,
 .pagination .next,
 .button-holder a,
 .choose-dates a,
+.quick-select a,
 .page-action-panel a,
 a.page-action,
 .page-action-panel a.buttonly.delete {
@@ -1217,6 +1219,10 @@ header .nav .dropdown li {
 	 border-radius: 0;
 	 -moz-border-radius: 0;
 	 -webkit-border-radius: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: normal;
 }
 
 .close {
@@ -3156,6 +3162,10 @@ a.iconly:before {
 	height: 39px;
 }
 
+.map .tab-pane .filters-choices .choice {
+	height: 35px;
+}
+
 .filters-choices .choice {
 	margin: 0 0 5px 8px;
 }
@@ -3191,6 +3201,7 @@ a.iconly:before {
 }
 
 .choose-dates a,
+.quick-select a,
 .tab-pane .button-holder a,
 .page-action-panel .actions a {
 	padding: 5px 1em;
@@ -3497,7 +3508,7 @@ td.table-actions a {
 }
 
 .map .tab-pane .mini {
-	margin-top: 1em;
+	margin-top: .6em;
 }
 
 .map .tab-pane .phone {
@@ -3519,10 +3530,14 @@ td.table-actions a {
 }
 
 .map .tab-pane .assign-action.detail {
-	padding: 2em 0;
-	height: 280px;
-		bottom: 30px;
+	padding: 1em 0;
+	height: 300px;
+		bottom: 50px;
 		left: 0;
+}
+
+.map .tab-pane .assign-action.detail .warning {
+	margin-bottom: .5em;
 }
 
 .map .tab-pane .assign-action.detail .plainLabel {
@@ -4554,6 +4569,7 @@ td.table-actions a {
 }
 
 .Groups .table-list table .group-name {
+	padding-left: 8px;
 	width: 40%;
 	min-width: 40%;
 	max-width: 40%;
@@ -4717,7 +4733,14 @@ a.page-action.delete-button span.im {
 }
 
 
-/* Groups heredeb */
+/* Scheduler */
+
+.map .tab-pane .quick-select {
+	margin-top: 1.5em;
+}
+
+
+/* heredeb */
 
 
 

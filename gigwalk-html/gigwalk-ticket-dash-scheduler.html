@@ -950,35 +950,77 @@
                   <div class="value">#</div>
                 </div>  
                 
-                <!-- Annotation 51 - 53 
+                <!-- Annotation 51, 52, 53 
                    ---------------------------------------  LOGIC   ---------------------------------------  
                    if Ticket count = 1, do not show div "unassigned"
                    ------------------------------------------------------------------------------------- -->
-                <div class="mini unassigned admin">
+                <div class="mini unassigned admin"><!-- Grace only -->
                   <div class="smallLabel">Unassigned tickets</div>
                   <div class="value">#</div>
                 </div>
-                   
+                
                 <div class="mini due">
                   <div class="smallLabel">Due</div>
-                  <div class="value">3 days (Monday)</div>
+                  <!-- Annotation 54, 55, 56, 57 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if more than 1 ticket, construct date range "(soonest due) - (latest due)"
+                   if 1 ticket, show only "(soonest due)" with no dash or second due statement
+                   
+                      - construct date statement(s) according to the annotation to match Android
+                      - construct date statement(s) according to the annotation to speak good English
+                   
+                   ------------------------------------------------------------------------------------- -->
+                  <div class="value">(soonest due) &ndash; (latest due)</div>
                 </div>
+                
+                
+                
                 <div class="mini estimated worker"><!-- Jimmy only -->
-                  <div class="smallLabel">Estimated Time</div>
-                  <div class="value">3 hours 30 minutes</div>
+                
+                  <!-- Annotation 58 - add "Unscheduled, de-capitalize "e" in "estimated time" -->
+                  <div class="smallLabel">Unscheduled Estimated Time</div>
+                  
+                  <!-- Annotation 59, 60, 61 --------------------------------------------------------------
+                    
+                   59 - calculate Unscheduled estimated time
+                      - if minutes > 1
+                        60 - standardize format to match with Android
+                        61 - if hours < than 1, show ":(xx)" (do not show a zero in the hours place)
+                      - if minutes < 1
+                        62 - show "No unscheduled estimated time"
+                   
+                   ------------------------------------------------------------------------------------- -->
+                  <div class="value">(xx):(xx)</div>
                 </div>
+                
+                <!-- Annotation 63 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count > 1, do not show div "assigned"
+                   ------------------------------------------------------------------------------------- -->
                 <div class="mini assigned admin"><!-- Grace only -->
                   <div class="smallLabel">Assigned</div>
                   <div class="value">
                     <a href="javascript:;">Jimmy Stewart</a>
                   </div>
                 </div>
+                
+                <div class="quick-select">
+                  <!-- Annotation 64 - zooms the map -->
+                  <a href="javascript:;">Zoom in</a>
+                  <!-- Annotation 65, 66 - show tickets in List view, update the "view" toggle buttons -->
+                  <a href="javascript:;">Show in list</a>
+                </div>
+                
                 <div class="assign-action detail required">
                   <div class="plainLabel">Choose assignee</div>
                   <div class="filter search required">
                     <input type="text" placeholder="Search">
                     <span class="im icon-search"></span>
                   </div>
+                  
+                  <!-- Annotation 68 - added div "warning" -->
+                  <div class="warning">Tickets already assigned will be re-assigned</div>
+                  
                   <div class="filters-choices">
                       <div class="selection">
                         <div class="choice searched">
