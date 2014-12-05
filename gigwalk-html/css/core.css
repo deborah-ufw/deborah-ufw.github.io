@@ -25,11 +25,12 @@ header nav .user-edit,
 .admin .Tickets .dash .worker,
 .worker .Tickets .dash .admin,
 .worker .sidenav,
-.worker .tabnav li,
+.worker .tabnav li.dropdownly,
+.worker .filters .dropdown li.admin,
 .worker header:after,
 .admin .map .nav.nav-tabs > li > a.directions,
-.worker .map .tab-pane.actions .iconButton.admin,
-.admin .map .tab-pane.actions .iconButton.worker,
+.worker .map .tab-pane .admin,
+.admin .map .tab-pane .worker,
 .worker .Tickets .table-list tr.canceled,
 .worker .Tickets .table-list tr.expired,
 .worker .nav-active-holder,
@@ -96,10 +97,6 @@ header nav .user-edit,
 	font-size: 1.2em;
 }
 
-.map .tab-pane .due .value,
-.map .tab-pane .estimated .value,
-.map .tab-pane .assigned .value,
-.map .tab-pane .scheduled .value,
 .filter.dropdown .btn.btn-default.dropdown-toggle, 
 .filter.search,
 .filters-holder .view a,
@@ -167,9 +164,7 @@ th.sorting:after,
 	line-height: .7em;
 }
 
-.map .tab-pane .due .value,
-.map .tab-pane .estimated .value,
-.map .tab-pane .assigned .value,
+.map .tab-pane .mini .value,
 .filter.dates {
 	line-height: .9em;
 }
@@ -181,7 +176,7 @@ th.sorting:after,
 .Tickets .dash td.status span:before,
 .map .nav.nav-tabs,
 .map .tabs-control,
-.map .ticket-link {
+.map .tab-pane .ticketlink {
 	line-height: 1em; 
 }
 
@@ -1011,9 +1006,9 @@ input[type="radio"]:checked:after,
 }
 
 .map .ticketlink .icon-ticket:before {
-	margin-right: -10px;
-		left: -10px;
-		top: 4px;
+	margin-right: -5px;
+		left: -5px;
+		top: 9px;
 }
 
 .map .requirements-list li:before {
@@ -1293,8 +1288,7 @@ header .nav .dropdown li {
 	header .nav .dropdown.open ul.dropdown-menu li.header,
 	.sidenav .user-info,
 	.tabnav li.buttonly a .descriptive,
-	.sidenav li.divider,
-	.worker .tabnav ul {
+	.sidenav li.divider {
 		display: none;
 	}
 	
@@ -1493,6 +1487,15 @@ header .nav .dropdown li {
 	
 	.editable .datepicker {
 		border-color: transparent;
+	}
+	
+	.datepicker {
+		padding: 10px;
+	}
+	
+	.datepicker td, 
+	.datepicker th {
+		width: 15px;
 	}
 	
 	input[type="radio"] {
@@ -2777,10 +2780,6 @@ a.iconly:before {
 		padding-left: 1em;
 	}
 	
-	.worker .tabnav ul {
-		height:  10px;
-	}
-	
 	.worker .navbar > .container-fluid .navbar-brand {
 		margin-left: .5em;
 	}
@@ -3439,8 +3438,14 @@ td.table-actions a {
 
 /* map */
 
+.map-holder,
 .map-holder .map {
-	height: 390px;
+	min-height: 390px;
+	max-height: 390px;
+}
+
+.map-holder {
+	overflow: hidden;
 }
 
 .map-holder,
@@ -3477,6 +3482,7 @@ td.table-actions a {
 }
 
 .map .tab-pane .description {
+	margin-top: 5px;
 	margin-bottom: 1em;
 }
 
@@ -3490,9 +3496,7 @@ td.table-actions a {
 	margin: .4em 0;
 }
 
-.map .tab-pane .due,
-.map .tab-pane .estimated,
-.map .tab-pane .assigned {
+.map .tab-pane .mini {
 	margin-top: 1em;
 }
 
@@ -3565,6 +3569,7 @@ td.table-actions a {
 	top: -50px;
 	left: 18px;
 }
+
 
 /* map key */
 

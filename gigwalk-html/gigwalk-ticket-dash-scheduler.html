@@ -193,7 +193,10 @@
       <nav class="tabnav">
         <ul>
           <li class="active"><a href="javascript:;">Tickets</a></li>
-          <li><a href="gigwalk-scheduler.html">Calendar</a></li>
+          <!-- Annotation 1 - add "Calendar" tab -->
+          <li><a href="javascript:;">Calendar</a></li>
+          
+          <!-- Annotation 2 - Groups chooser is for Grace only (CSS will hide, but might be good not to place for worker at all) -->
           <li class="dropdownly right">
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle ellipsify" type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -234,13 +237,24 @@
               </button>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                 <li class="show-open" role="presentation"><a role="menuitem" href="javascript:;">Show open</a></li><!-- default for both -->
+                
+                <!-- Annotation 3 - add "Scheduled" with no view restrictions below "Show open" -->
+                <li class="scheduled"  role="presentation"><a role="menuitem" href="javascript:;">Scheduled</a></li>
+                
+                <!-- Annotation 4 - add "Unscheduled" with no view restrictions below "Scheduled" -->
+                <li class="unscheduled"  role="presentation"><a role="menuitem" href="javascript:;">Unscheduled</a></li>
                 <li class="assigned admin"  role="presentation"><a role="menuitem" href="javascript:;">Assigned</a></li><!-- Grace only -->
                 <li class="unassigned admin"  role="presentation"><a role="menuitem" href="javascript:;">Unassigned</a></li><!-- Grace only -->
-                <li class="scheduled worker"  role="presentation"><a role="menuitem" href="javascript:;">Scheduled</a></li><!-- Jimmy only -->
-                <li class="paused worker"  role="presentation"><a role="menuitem" href="javascript:;">Paused</a></li><!-- Jimmy only -->
+                
+                <!-- Annotation 5 - remove the worker-only "Scheduled" item that was here -->
+                
+                <!-- Annotation 6 - change "Paused" to "Saved" -->
+                <li class="paused worker"  role="presentation"><a role="menuitem" href="javascript:;">Saved</a></li><!-- Jimmy only -->
                 <li class="due"  role="presentation"><a role="menuitem" href="javascript:;">Due</a></li>
                 <li class="submitted admin"  role="presentation"><a role="menuitem" href="javascript:;">Submitted</a></li>
-                <li class="expired"  role="presentation"><a role="menuitem" href="javascript:;">Expired</a></li><!-- Grace only -->
+                
+                <!-- Annotation 7 - add class "admin" to the li -->
+                <li class="expired admin"  role="presentation"><a role="menuitem" href="javascript:;">Expired</a></li><!-- Grace only -->
               </ul>
             </div>
           </div>
@@ -259,11 +273,14 @@
               </div>
               <div class="between">
                 <label>Between</label>
-                <input class="datepicker" type="text" /> and <input class="datepicker" type="text" />
+                <input class="datepicker datetimepicker1" type="text" /> and <input class="datepicker datetimepicker2" type="text" />
               </div>
               <div class="warning">Please select a valid date range.</div>
               <div class="actions">
+              
+                <!-- Annotation 8 - add the cancel button -->
                 <a class="cancel" href="javascript:;">Cancel</a>
+                
                 <a class="buttonly" href="javascript:;">Submit</a>
               </div>
             </div><!-- end date choosing panel -->
@@ -867,10 +884,34 @@
             <div class="tab-content">
             
               <div class="tab-pane info active" id="info"><!-- info tab -->
-                <a class="ticketlink" href="javascript:;"><span class="im icon-ticket"></span>Safeway</a>
+              
+              <!-- Annotation 39 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count > 1, href goes to List view showing selected Tickets
+                   if Ticket count = 1, href goes to the Ticket
+                   ------------------------------------------------------------------------------------- -->
+                <a class="ticketlink" href="javascript:;">
+                
+                <!-- Annotation 38 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count > 1, shows # Tickets (even if all at same store)
+                   if Ticket count = 1, shows Store Name
+                   ------------------------------------------------------------------------------------- -->
+                  <span class="im icon-ticket"></span># Tickets (or store name)
+                </a>
+                
+                <!-- Annotation 41 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count > 1, do not show div "description"
+                   ------------------------------------------------------------------------------------- -->
                 <div class="description ellipsify">
                   Actions will focus on the client relationship management and item purchasing. Check on product availability.
                 </div>
+                
+                <!-- Annotation 42 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count > 1, do not show "requirements" toggle link
+                   ------------------------------------------------------------------------------------- -->
                 <a class="requirements" href="javascript:;">Requirements <span class="cue">( + )</span></a>
                 <div class="requirements-list">
                   <ul>
@@ -878,15 +919,55 @@
                     <li>Wal-mart certification</li>
                   </ul>
                 </div>
-                <div class="due">
+                
+                <!-- Annotation 44 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count = 1, do not show "store" div
+                   ------------------------------------------------------------------------------------- -->
+                <div class="mini store">
+                
+                <!-- Annotation 45 and 46 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Store count = 1, remove "s", show "Store"
+                   if Store count > 1, add "s", show "Stores"
+                   ------------------------------------------------------------------------------------- -->
+                  <div class="smallLabel">Stores</div>
+                  
+                  <!-- Annotation 47 and 48 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Store count = 1, show store NAME
+                   if Store count > 1, show store COUNT
+                   ------------------------------------------------------------------------------------- -->
+                  <div class="value"># or store name</div>
+                </div> 
+                
+                <!-- Annotation 49 and 50 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count = 1, do not show div "unscheduled"
+                   ------------------------------------------------------------------------------------- -->
+                <div class="mini unscheduled">
+                  <div class="smallLabel">Unscheduled tickets</div>
+                  <div class="value">#</div>
+                </div>  
+                
+                <!-- Annotation 51 - 53 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count = 1, do not show div "unassigned"
+                   ------------------------------------------------------------------------------------- -->
+                <div class="mini unassigned admin">
+                  <div class="smallLabel">Unassigned tickets</div>
+                  <div class="value">#</div>
+                </div>
+                   
+                <div class="mini due">
                   <div class="smallLabel">Due</div>
                   <div class="value">3 days (Monday)</div>
                 </div>
-                <div class="estimated worker"><!-- Jimmy only -->
+                <div class="mini estimated worker"><!-- Jimmy only -->
                   <div class="smallLabel">Estimated Time</div>
                   <div class="value">3 hours 30 minutes</div>
                 </div>
-                <div class="assigned admin"><!-- Grace only -->
+                <div class="mini assigned admin"><!-- Grace only -->
                   <div class="smallLabel">Assigned</div>
                   <div class="value">
                     <a href="javascript:;">Jimmy Stewart</a>
@@ -1003,6 +1084,7 @@
           <div class="pin paused"></div><!-- For Grace, this is a "scheduled" pin -->
           <div class="pin submitted"></div>
           <div class="pin expired admin"></div><!-- Grace only -->
+
           
         </div><!-- end map div -->
       </div><!-- end map holder div -->
@@ -1018,7 +1100,7 @@
     
       <!-- end map View -->
     
-      <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
+      <div style="margin: 10em 0; padding: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
     
     
     </div><!-- ends content -->

@@ -537,9 +537,6 @@ html, body {
 	.confirmation .icon-checkmark,
 	.Tickets .dash td.status span.submitted:before,
 	.map .requirements-list li:before,
-	.map .tab-pane .due .value,
-	.map .tab-pane .estimated .value,
-	.map .tab-pane .scheduled .value,
 	.tab-pane .confirm,
 	.confirmation a.closer {
 		color: #07a985;
@@ -701,7 +698,8 @@ select option,
 
 .datepicker tr th.switch,
 .instruction-footer .item.count .described,
-.table-list .controls .summary .selected span {
+.table-list .controls .summary .selected span,
+.map .tab-pane .mini .value {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }
