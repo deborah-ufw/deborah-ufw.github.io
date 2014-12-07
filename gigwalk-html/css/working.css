@@ -3,8 +3,15 @@
 .requirements-list,
 h1.super,
 .worker .action.panel.assign,
-.map .tab-pane .description,
-.map .tab-pane .requirements,
-.map .mini {
+.map .tab-pane .assign-action.detail,
+.map .tab-pane .buttonly.main,
+.map .mini,
+.map .description,
+.map .requirements,
+.map .quick-select {
 	display: none;
+}
+
+.map-holder {
+	overflow: visible;
 }

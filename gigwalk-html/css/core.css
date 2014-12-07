@@ -40,7 +40,8 @@ header nav .user-edit,
 	display: none;
 }
 
-.panel.action .choose.search .filters-choices {
+.panel.action .choose.search .filters-choices,
+.map-drawer .tabs-control a.collapse:before {
 	font-size: .8em;
 }
 
@@ -156,6 +157,7 @@ th.sorting:after,
 	font-size: 2.8em;
 }
 
+.map .icon-vacation,
 .map .pin.active,
 .map .tabs-control  {
 	font-size: 3.7em;
@@ -220,7 +222,8 @@ header .nav .number,
 .table-list table .zip,
 .map .tab-pane a.buttonly.main,
 .Groups .table-list table .subgroups,
-.section-no-content {
+.section-no-content,
+.map .icon-vacation {
 	text-align: center;
 }
 
@@ -589,7 +592,8 @@ th.sorting:after,
 a.page-action,
 .page-action-panel,
 .message.confirmation,
-.message.problem {
+.message.problem,
+.map .blocked-day {
 	position: relative;
 }
 
@@ -752,8 +756,8 @@ select,
 .filter.dropdown .btn.btn-default.dropdown-toggle,
 .filter.search,
 .key,
-.map .tabs-control a,
-.table-list .controls .actions a {
+.table-list .controls .actions a,
+.map .icon-vacation {
 	color: #9e9e9e;
 }
 
@@ -809,7 +813,13 @@ a.iconButton.disabled:focus,
 .search.disabled input:hover,
 .search.disabled input:focus,
 .instruction .item.targets .sub,
-.datepicker td.day.disabled {
+.datepicker td.day.disabled,
+.datepicker td.blocked,
+.datepicker td.active.blocked,
+.datepicker td.blocked:hover,
+.datepicker td.active.blocked:hover,
+.datepicker td.blocked:focus,
+.datepiacker td.active.blocked:focus {
 	background-color: #efefef;
 }
 
@@ -852,6 +862,7 @@ input[type="radio"]:after,
 .map .nav-tabs > li.active > a:focus,
 .map-drawer,
 .map .tab-pane .assign-action.detail,
+.map .tab-pane .blocked-day.detail,
 .filters-holder .view a,
 .page-action-panel a.cancel,
 .page-action-panel .actions a.buttonly.delete {
@@ -3485,7 +3496,7 @@ td.table-actions a {
 }
 
 .map a.collapse {
-	padding: 5px 10px 0px 5px; 
+	padding: 3px 10px 7px 5px; 
 }
 
 .map .tab-content {
@@ -3508,7 +3519,7 @@ td.table-actions a {
 }
 
 .map .tab-pane .mini {
-	margin-top: .6em;
+	margin-top: .5em;
 }
 
 .map .tab-pane .phone {
@@ -3529,10 +3540,11 @@ td.table-actions a {
 	padding-top: 8px;
 }
 
-.map .tab-pane .assign-action.detail {
+.map .tab-pane .assign-action.detail,
+.map .blocked-day.detail {
 	padding: 1em 0;
 	height: 300px;
-		bottom: 50px;
+		bottom: 65px;
 		left: 0;
 }
 
@@ -3575,14 +3587,18 @@ td.table-actions a {
 	margin: 8px 0 12px 0;
 }
 
-.tab-pane .confirm {
+.map .tab-pane .confirm {
 	margin: 5px 0 0 0;
 	padding: 3px 10px 3px 37px;
 }
 
-.tab-pane.actions .comment-action.detail:before {
+.map .tab-pane.actions .comment-action.detail:before {
 	top: -50px;
 	left: 18px;
+}
+
+.map .tab-pane.directions .mini.store {
+	margin-bottom: 1em;
 }
 
 
@@ -4737,6 +4753,19 @@ a.page-action.delete-button span.im {
 
 .map .tab-pane .quick-select {
 	margin-top: 1.5em;
+}
+
+.map .blocked-day .copy {
+	margin: .5em 0;
+}
+
+.map .blocked-day .button-holder {
+	margin-top: 1.5em;
+}
+
+.map .blocked-day .button-holder a {
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
 
 

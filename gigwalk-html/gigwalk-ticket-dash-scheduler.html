@@ -892,7 +892,7 @@
                    ------------------------------------------------------------------------------------- -->
                 <a class="ticketlink" href="javascript:;">
                 
-                <!-- Annotation 38 
+                <!-- Annotation 38, 86 
                    ---------------------------------------  LOGIC   ---------------------------------------  
                    if Ticket count > 1, shows # Tickets (even if all at same store)
                    if Ticket count = 1, shows Store Name
@@ -900,7 +900,7 @@
                   <span class="im icon-ticket"></span># Tickets (or store name)
                 </a>
                 
-                <!-- Annotation 41 
+                <!-- Annotation 41, 87 
                    ---------------------------------------  LOGIC   ---------------------------------------  
                    if Ticket count > 1, do not show div "description"
                    ------------------------------------------------------------------------------------- -->
@@ -908,7 +908,7 @@
                   Actions will focus on the client relationship management and item purchasing. Check on product availability.
                 </div>
                 
-                <!-- Annotation 42 
+                <!-- Annotation 42, 88 
                    ---------------------------------------  LOGIC   ---------------------------------------  
                    if Ticket count > 1, do not show "requirements" toggle link
                    ------------------------------------------------------------------------------------- -->
@@ -920,13 +920,13 @@
                   </ul>
                 </div>
                 
-                <!-- Annotation 44 
+                <!-- Annotation 44, 89 
                    ---------------------------------------  LOGIC   ---------------------------------------  
                    if Ticket count = 1, do not show "store" div
                    ------------------------------------------------------------------------------------- -->
                 <div class="mini store">
                 
-                <!-- Annotation 45 and 46 
+                <!-- Annotation 45, 46 
                    ---------------------------------------  LOGIC   ---------------------------------------  
                    if Store count = 1, remove "s", show "Store"
                    if Store count > 1, add "s", show "Stores"
@@ -941,7 +941,7 @@
                   <div class="value"># or store name</div>
                 </div> 
                 
-                <!-- Annotation 49 and 50 
+                <!-- Annotation 49, 50, 90
                    ---------------------------------------  LOGIC   ---------------------------------------  
                    if Ticket count = 1, do not show div "unscheduled"
                    ------------------------------------------------------------------------------------- -->
@@ -950,7 +950,7 @@
                   <div class="value">#</div>
                 </div>  
                 
-                <!-- Annotation 51, 52, 53 
+                <!-- Annotation 51, 52, 53, 91 
                    ---------------------------------------  LOGIC   ---------------------------------------  
                    if Ticket count = 1, do not show div "unassigned"
                    ------------------------------------------------------------------------------------- -->
@@ -961,7 +961,7 @@
                 
                 <div class="mini due">
                   <div class="smallLabel">Due</div>
-                  <!-- Annotation 54, 55, 56, 57 
+                  <!-- Annotation 54, 55, 56, 57, 92 
                    ---------------------------------------  LOGIC   ---------------------------------------  
                    if more than 1 ticket, construct date range "(soonest due) - (latest due)"
                    if 1 ticket, show only "(soonest due)" with no dash or second due statement
@@ -980,20 +980,16 @@
                   <!-- Annotation 58 - add "Unscheduled, de-capitalize "e" in "estimated time" -->
                   <div class="smallLabel">Unscheduled Estimated Time</div>
                   
-                  <!-- Annotation 59, 60, 61 --------------------------------------------------------------
+                  <!-- Annotation 59, 60, 61, 62, 93, 94 --------------------------------------------------------------
                     
-                   59 - calculate Unscheduled estimated time
-                      - if minutes > 1
-                        60 - standardize format to match with Android
-                        61 - if hours < than 1, show ":(xx)" (do not show a zero in the hours place)
-                      - if minutes < 1
-                        62 - show "No unscheduled estimated time"
+                      - see annotations if Ticket count > 1
+                      - see annotations if Ticket count = 1
                    
                    ------------------------------------------------------------------------------------- -->
                   <div class="value">(xx):(xx)</div>
                 </div>
                 
-                <!-- Annotation 63 
+                <!-- Annotation 63, 95 
                    ---------------------------------------  LOGIC   ---------------------------------------  
                    if Ticket count > 1, do not show div "assigned"
                    ------------------------------------------------------------------------------------- -->
@@ -1004,6 +1000,10 @@
                   </div>
                 </div>
                 
+                <!-- Annotation 96, 97  ---------------------------------------  
+                     - new html
+                     - if Ticket count = 1, do not show div "quick-select" 
+                ----------------------------------------------------------- -->
                 <div class="quick-select">
                   <!-- Annotation 64 - zooms the map -->
                   <a href="javascript:;">Zoom in</a>
@@ -1018,7 +1018,7 @@
                     <span class="im icon-search"></span>
                   </div>
                   
-                  <!-- Annotation 68 - added div "warning" -->
+                  <!-- Annotation 67 - added div "warning" -->
                   <div class="warning">Tickets already assigned will be re-assigned</div>
                   
                   <div class="filters-choices">
@@ -1034,30 +1034,145 @@
                     <a class="buttonly disabled" href="javascript:;">Assign</a>
                   </div>
                 </div>
+                
+                <!-- Annotation 98 - added div "blocked-day" -->
+                <div class="blocked-day detail">
+                  <div class="im icon-vacation"></div>
+                  <div class="copy">
+                  <!-- Annotation 99 LOGIC  ---------------------------------------  
+                    100 - if ticket state is "Assigned" or "Scheduled", use word "Starting"
+                    101 - if ticket state is "Paused / Saved", use word "Continuing"
+                ------------------------------------------------------------------- -->
+                     It looks like today is blocked. Starting the ticket will change today to a work day.
+                  </div>
+                  <div class="copy">   
+                    Change today to a work day?
+                  </div>
+                  <div class="button-holder">
+                  
+                    <!-- Annotation 106, 107  -->
+                    <a class="cancel" href="javascript:;">No</a>
+                    
+                    <!-- Annotation 102, 103, 104, 105  -->
+                    <a class="buttonly" href="javascript:;">Yes</a>
+                  </div>
+                </div>
+                
+                <!-- Annotation 68, 71, 72, 73, 110, 111, 112, 113, 114, 115, 116, 117, 118  ------------- 
+                     - remove the main action button if Stores > 1 
+                     - see annotations for actions for Grace and Jimmy if Stores = 1 and Tickets > 1
+                     - see annotations for actions for Jimmy if Tickets = 1
+                -------------------------------------------------------------------------------------- -->
                 <a class="buttonly main" href="javascript:;">Main action</a>
+                
               </div><!-- end info tab -->
               
+              <!-- Annotation 37, 69 - directions tab does not show if Stores > 1 -->
+              
               <div class="tab-pane directions worker" id="directions"><!-- directions tab - Jimmy only -->
-                <a class="ticketlink"><span class="im icon-ticket"></span>Safeway</a>
+              
+                <!-- Annotation 74 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count > 1, href goes to List view showing selected Tickets
+                   if Ticket count = 1, href goes to the Ticket
+                   ------------------------------------------------------------------------------------- -->
+                <a class="ticketlink" href="javascript:;">
+                
+                  <!-- Annotation 74 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count > 1, shows # Tickets (even if all at same store)
+                   if Ticket count = 1, shows Store Name
+                   ------------------------------------------------------------------------------------- -->
+                  <span class="im icon-ticket"></span># Tickets (or store name) 
+                </a>
+                
+                <!-- Annotation 75 - if selected Tickets > 1, show store div  -->
+                <div class="mini store">
+                  <div class="smallLabel">Store</div>
+                  <div class="value">Store name</div>
+                </div> 
+              
+              
                 <div class="address">16121 N. Snelling Rd</div>
                 <div class="address">Cupertino, CA 95014</div>
                 <div class="phone">
                   <a href="tel:+14088772113">(408) 877-2113</a>
                 </div>
                 
+                <!-- Annotation 98, 108 - added div "blocked-day" -->
+                <div class="blocked-day detail">
+                  <div class="im icon-vacation"></div>
+                  <div class="copy">
+                  <!-- Annotation 99 LOGIC  ---------------------------------------  
+                    100 - if ticket state is "Assigned" or "Scheduled", use word "Starting"
+                    101 - if ticket state is "Paused / Saved", use word "Continuing"
+                ------------------------------------------------------------------- -->
+                     It looks like today is blocked. Starting the ticket will change today to a work day.
+                  </div>
+                  <div class="copy">   
+                    Change today to a work day?
+                  </div>
+                  <div class="button-holder">
+                  
+                    <!-- Annotation 106, 107  -->
+                    <a class="cancel" href="javascript:;">No</a>
+                    
+                    <!-- Annotation 102, 103, 104, 105  -->
+                    <a class="buttonly" href="javascript:;">Yes</a>
+                  </div>
+                </div>
+                
+                <!-- Annotation 117 - same functionality as on the "info" tab for Jimmy + Store / Ticket count + Ticket state -->
                 <a class="buttonly main" href="javascript:;">Main action</a>
               </div><!-- end directions tab -->
               
+              <!-- Annotation 37, 70 - actions tab does not show if Stores > 1 -->
+              
               <div class="tab-pane actions" id="actions"><!-- actions tab -->
-                <a class="ticketlink" href="javascript:;"><span class="im icon-ticket"></span>Safeway</a>
+              
+              
+                
+                <!-- Annotation 75 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count > 1, href goes to List view showing selected Tickets
+                   if Ticket count = 1, href goes to the Ticket
+                   ------------------------------------------------------------------------------------- -->
+                <a class="ticketlink" href="javascript:;">
+                
+                  <!-- Annotation 75 
+                   ---------------------------------------  LOGIC   ---------------------------------------  
+                   if Ticket count > 1, shows # Tickets (even if all at same store)
+                   if Ticket count = 1, shows Store Name
+                   ------------------------------------------------------------------------------------- -->
+                  <span class="im icon-ticket"></span># Tickets (or store name) 
+                </a>
+
+                <!-- Annotation 76 - if selected Tickets > 1, do not show "scheduled" div  -->
                 <div class="scheduled">
-                  <div class="value">Scheduled for Today</div>
+                  <div class="value">Scheduled for (value)</div>
                 </div>
                 
+                <!-- Annotation 77 - if selected Tickets > 1, do not show "schedule" button --> 
                 <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
+                
                 <div class="schedule-action detail">
+                  <!-- Annotation 120, 122, 123 ------------------------------------------------ 
+                  120 - new check - is date blocked?
+                  122 - for blocked days, inject class "blocked" into datepicker day td's
+                        (do not disable them)
+                  123 - new check - is estimated time + scheduled time > 8 hours?
+                  ------------------------------------------------------------------------- -->
                   <input type="text" class="datepicker" placeholder="Select date" />
+                  
                   <div class="warning">This ticket is due before this date.</div>
+                  
+                  <!-- Annotation 121 - new warning --> 
+                  <div class="warning">This date is blocked. Scheduling on this date will set it to a work day.</div>
+                  
+                  <!-- Annotation 124 - new warning --> 
+                  <div class="warning">You will have more than 8 hours scheduled for this day.</div>
+
+                  
                   <div class="button-holder">
                     <a class="cancel" href="javascript:;">Cancel</a>
                     <a class="buttonly disabled" href="javascript:;">Schedule</a>
@@ -1065,6 +1180,7 @@
                 </div>
                 <div class="schedule-action confirm">Scheduled</div>
                 
+                <!-- Annotation 78 - if selected Tickets > 1, do not show "extend" button  -->
                 <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
                 <div class="extend-action detail">
                   <input type="text" class="datepicker" placeholder="Select date" />
@@ -1075,7 +1191,11 @@
                 </div>
                 <div class="extend-action confirm">Extended</div>
                 
-                <a class="iconButton comment" href="javascript:;">Add Comment</a>
+                <!-- Annotation 79, 80 ----------------------------------------------- 
+                     - if selected Tickets > 1, do not show "comment" button  
+                     - html change - remove "Add" from the text
+                     -------------------------------------------------------------- -->
+                <a class="iconButton comment" href="javascript:;">Comment</a>
                 <div class="comment-action detail">
                   <textarea placeholder="Comment"></textarea>
                   <div class="button-holder">
@@ -1085,14 +1205,41 @@
                 </div>  
                 <div class="comment-action confirm">Comment added</div>
                 
-                <a class="iconButton print" href="javascript:;">Print ticket</a>
+                <!-- Annotation 81 - html change - remove "ticket" from the text  -->
+                <a class="iconButton print" href="javascript:;">Print</a>
                 
+                <!-- Annotation 82 - if selected Tickets > 1, do not show "unassign" button   -->
                 <a class="iconButton unassign worker" href="javascript:;">Unassign</a><!-- Jimmy only -->
                 <div class="unassign-action confirm">Unassigned</div>
                 
-                <!-- inject class "disabled" into the a tag if ticket is started, and do not allow user to click it -->
+                
+                <!-- Annotation 83 - if selected Tickets > 1, do not show "cancel" button   -->
+                <!-- if Ticket count = 1, inject class "disabled" into the a tag if ticket is started, and do not allow user to click it -->
                 <a class="iconButton cancel admin" href="javascript:;">Cancel</a><!-- Grace only -->
                 <div class="cancel-action confirm">Canceled</div>
+                
+                <!-- Annotation 98, 109 - added div "blocked-day" -->
+                <div class="blocked-day detail">
+                  <div class="im icon-vacation"></div>
+                  <div class="copy">
+                  <!-- Annotation 99 LOGIC  ---------------------------------------  
+                    100 - if ticket state is "Assigned" or "Scheduled", use word "Starting"
+                    101 - if ticket state is "Paused / Saved", use word "Continuing"
+                ------------------------------------------------------------------- -->
+                     It looks like today is blocked. Starting the ticket will change today to a work day.
+                  </div>
+                  <div class="copy">   
+                    Change today to a work day?
+                  </div>
+                  <div class="button-holder">
+                  
+                    <!-- Annotation 106, 107  -->
+                    <a class="cancel" href="javascript:;">No</a>
+                    
+                    <!-- Annotation 102, 103, 104, 105  -->
+                    <a class="buttonly" href="javascript:;">Yes</a>
+                  </div>
+                </div>
                 
                 <div class="assign-action detail required">
                   <div class="plainLabel">Choose assignee</div>
@@ -1100,6 +1247,9 @@
                     <input type="text" placeholder="Search">
                     <span class="im icon-search"></span>
                   </div>
+                  
+                  <!-- Annotation 67, 84 - added div "warning" -->
+                  <div class="warning">Tickets already assigned will be re-assigned</div>
                   <div class="filters-choices">
                       <div class="selection">
                         <div class="choice searched">
@@ -1113,6 +1263,8 @@
                     <a class="buttonly disabled" href="javascript:;">Assign</a>
                   </div>
                 </div>
+                
+                <!-- Annotation 85, 118 - should always have same actions as on the "info" tab for Jimmy and Grace + Store / Ticket count + Ticket state -->
                 <a class="buttonly main" href="javascript:;">Main action</a>
               </div><!-- end actions tab -->
               
