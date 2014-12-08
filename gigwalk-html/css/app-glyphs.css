@@ -240,6 +240,7 @@ th.sorting_desc:after,
 .icon-calendar-add:before {
 	content: "\e633";
 }
+.iconButton.reschedule:before,
 .icon-reschedule:before {
 	content: "\e634";
 }

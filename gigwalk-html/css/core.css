@@ -31,6 +31,8 @@ header nav .user-edit,
 .admin .map .nav.nav-tabs > li > a.directions,
 .worker .map .tab-pane .admin,
 .admin .map .tab-pane .worker,
+.worker .map .tab-pane.actions .admin,
+.admin .map .tab-pane.actions .worker,
 .worker .Tickets .table-list tr.canceled,
 .worker .Tickets .table-list tr.expired,
 .worker .nav-active-holder,
@@ -40,14 +42,14 @@ header nav .user-edit,
 	display: none;
 }
 
-.panel.action .choose.search .filters-choices,
-.map-drawer .tabs-control a.collapse:before {
+.panel.action .choose.search .filters-choices {
 	font-size: .8em;
 }
 
 .action.panel .choose.list table,
 .map .assign-action.detail .filters-choices,
-.map .assign-action.detail .filters-choices span.im {
+.map .assign-action.detail .filters-choices span.im,
+.map-drawer .tabs-control a.collapse:before {
 	font-size: .9em;
 }
 
@@ -314,7 +316,8 @@ th.sorting,
 .Tickets th.project-title input:before,
 a.page-action,
 .section-actions a,
-.message a.closer {
+.message a.closer,
+.table-list .controls .actions.active a {
 	cursor: pointer;
 }
 
@@ -584,7 +587,6 @@ th.sorting:after,
 .tab-pane.action .detail,
 .tab-pane.actions .comment-action.detail:before,
 .tab-pane.actions textarea,
-.map .tab-pane .assign-action.detail,
 .instruction-footer .plainLabel,
 .instructions .positioner,
 .instruction .duplicate,
@@ -592,8 +594,7 @@ th.sorting:after,
 a.page-action,
 .page-action-panel,
 .message.confirmation,
-.message.problem,
-.map .blocked-day {
+.message.problem {
 	position: relative;
 }
 
@@ -609,7 +610,9 @@ header nav .number,
 .instruction .duplicating-message .icon-warning,
 .instruction .duplicating-message a.closer,
 a.page-action span.im,
-.message a.closer  {
+.message a.closer,
+.map .tab-pane .assign-action.detail,
+.map .blocked-day.detail  {
 	position: absolute;
 }
 
@@ -1525,6 +1528,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 		content: '*';
 		font-size: 1.4em;
 			left: 10px;
+	}
+	
+	.map .tab-pane.actions .blocked-day.detail:before {
+		display: none;
 	}
 	
 	.item.required.text input[type="text"],
@@ -3496,7 +3503,7 @@ td.table-actions a {
 }
 
 .map a.collapse {
-	padding: 3px 10px 7px 5px; 
+	padding: 7px 10px 3px 5px; 
 }
 
 .map .tab-content {
@@ -3542,10 +3549,14 @@ td.table-actions a {
 
 .map .tab-pane .assign-action.detail,
 .map .blocked-day.detail {
-	padding: 1em 0;
+	padding: 1em;
 	height: 300px;
-		bottom: 65px;
+		top: 65px;
 		left: 0;
+}
+
+.map .tab-pane .assign-action.detail {
+	padding-top: 3em;
 }
 
 .map .tab-pane .assign-action.detail .warning {
@@ -3579,7 +3590,7 @@ td.table-actions a {
 
 .map .tab-pane.actions textarea {
 	width: 85%;
-	height: 5em;
+	height: 4em;
 		left: 20px;
 }
 
@@ -3593,7 +3604,7 @@ td.table-actions a {
 }
 
 .map .tab-pane.actions .comment-action.detail:before {
-	top: -50px;
+	top: -40px;
 	left: 18px;
 }
 
