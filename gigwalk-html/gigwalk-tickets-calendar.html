@@ -214,1126 +214,364 @@
       </nav><!-- ends content tabs -->
       
       <!-- the content under the tabs -->
-      <div class="content dash">
+      <div class="content">
+        <div class="calendar">
       
-      
-      <!-- ****************************************************************** -->
-      <!--                              FILTERS                               -->
-      <!-- ****************************************************************** -->
-      
-      <div class="filters-holder"><!-- start view and filter buttons -->
-      
-        <div class="view">
-          <a class="map" href="javascript:;"><span class="im icon-map-pin-solid"></span>Map</a>
-          <a class="list active" href="javascript:;"><span class="im icon-list"></span>List</a>
-        </div><!-- end view toggle -->
-        
-        <div class="filters">
-          <div class="filter dropdown">
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                Show open
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                <li class="show-open" role="presentation"><a role="menuitem" href="javascript:;">Show open</a></li><!-- default for both -->
-                
-                <!-- Annotation 3 - add "Scheduled" with no view restrictions below "Show open" -->
-                <li class="scheduled"  role="presentation"><a role="menuitem" href="javascript:;">Scheduled</a></li>
-                
-                <!-- Annotation 4 - add "Unscheduled" with no view restrictions below "Scheduled" -->
-                <li class="unscheduled"  role="presentation"><a role="menuitem" href="javascript:;">Unscheduled</a></li>
-                <li class="assigned admin"  role="presentation"><a role="menuitem" href="javascript:;">Assigned</a></li><!-- Grace only -->
-                <li class="unassigned admin"  role="presentation"><a role="menuitem" href="javascript:;">Unassigned</a></li><!-- Grace only -->
-                
-                <!-- Annotation 5 - remove the worker-only "Scheduled" item that was here -->
-                
-                <!-- Annotation 6 - change "Paused" to "Saved" -->
-                <li class="paused worker"  role="presentation"><a role="menuitem" href="javascript:;">Saved</a></li><!-- Jimmy only -->
-                <li class="due"  role="presentation"><a role="menuitem" href="javascript:;">Due</a></li>
-                <li class="submitted admin"  role="presentation"><a role="menuitem" href="javascript:;">Submitted</a></li>
-                
-                <!-- Annotation 7 - add class "admin" to the li -->
-                <li class="expired admin"  role="presentation"><a role="menuitem" href="javascript:;">Expired</a></li><!-- Grace only -->
-              </ul>
+          <!-- ****************** CALENDAR CONTROL BAR ***************** -->
+          
+          <div class="controls">
+            <div class="date-nav">
+              <a href="javascript:;" class="page left im icon-previous"></a>
+              <span class="date-statement">November</span>
+              <a href="javascript:;" class="page right im icon-next"></a>
+            </div>
+            <div class="view">
+              <a href="javascript:;" class="active">Month</a>
+              &#124;
+              <a href="javascript:;">Day</a>
             </div>
           </div>
-          <div class="wrapper">
-            <div class="filter search">
-              <input type="text" placeholder="Search" />
-              <span class="im icon-search"></span>
-            </div>
-            <div class="filter dates"><span class="im icon-calendar"></span></div>
-            
-            <div class="choose-dates">
-              <div class="quick-select">
-                <a href="javascript:;">Today</a>
-                <a href="javascript:;">Tomorrow</a>
-                <a href="javascript:;">This week</a>
+          
+          
+          <!-- ****************************************************************** -->
+          <!--                     CALENDAR MONTH VIEW                            -->
+          <!-- ****************************************************************** -->
+          
+          <table class="calendar-days">
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+          <tr>
+            <td class="past">
+              <span class="date-num">26</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
               </div>
-              <div class="between">
-                <label>Between</label>
-                <input class="datepicker datetimepicker1" type="text" /> and <input class="datepicker datetimepicker2" type="text" />
+            </td>
+            <td class="past">
+              <span class="date-num">27</span>
+              <div class="work">
+                <div class="tickets">35</div>
+                <div class="time">6:21</div>
               </div>
-              <div class="warning">Please select a valid date range.</div>
-              <div class="actions">
-              
-                <!-- Annotation 8 - add the cancel button -->
-                <a class="cancel" href="javascript:;">Cancel</a>
-                
-                <a class="buttonly" href="javascript:;">Submit</a>
+            </td>
+            <td class="past">
+              <span class="date-num">28</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
               </div>
-            </div><!-- end date choosing panel -->
-          </div><!-- end wrapper -->
-        </div><!-- end filters (right side) -->
-      </div><!-- end filters holder (all) -->
-      
-      <div class="filters-choices">
-        <div class="choice searched">
-          <div class="value">Jimmy Stewart</div>
-          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-        </div>
-        <div class="choice date">
-          <div class="value">Today</div>
-          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-        </div>
-      </div><!-- end filters selections -->
-      
-      
-      <!-- ****************************************************************** -->
-      <!--                              LIST VIEW                             -->
-      <!-- ****************************************************************** -->
-      
-      <h1 class="super">List view</h1>
-      
-      
-      <!-- ****************** TABLE CONTROL BAR ***************** -->
-      
-      <!-- the summary area on the left with action buttons on the right -->
-      <div class="table-list">
-        <div class="controls has-buttons">
-          <div class="summary">
-            <div class="visible"><span class="value">(#)</span> <span class="descr-before"></span>Tickets <span class="descr-after"></span></div>
-            <div class="selected">&nbsp;|&nbsp; <span class="value">(#)</span><span> selected</span></div>
-          </div>
-          <div class="actions active">
-            <a class="iconButton cancel admin" href="javascript:;">Cancel</a><!-- Grace only -->
-            <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
-            <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
-            
-            <!-- Annotation 125, 126 - new button added, opens admin "reschedule" panel -->
-            <a class="iconButton reschedule admin" href="javascript:;">Reschedule</a><!-- Grace only -->
-            
-            <a class="iconButton print" href="javascript:;">Print</a>
-            <a class="iconButton assign admin last" href="javascript:;">Assign</a><!-- Grace only -->
-            <a class="iconButton unassign worker last" href="javascript:;">Unassign</a><!-- Jimmy only -->
-          </div>
-        </div>
-        
-        <!-- ****************************************************************** -->
-        <!-- **********  Action panel (drops down on action select  *********** -->
-        <!-- ****************************************************************** -->
-        
-        <!-- Panel for Admin "Assign" (Grace only) -->
-        
-        <div class="action panel assign">
-          <h1>Assign 20 Tickets <span>(estimated 53 hours 28 minutes)</span></h1>
-          <div class="item required">
-            <div class="plainLabel">Choose Assignee</div>
-            <div class="radios">
-              <div class="radio">
-                <label>
-                <input type="radio" name="choose" value="search" /> &nbsp;Search for assignee</label>
-                <div class="hint">Tickets already assigned will be re-assigned</div>
-                
-                <!-- Search subpanel shows if "Search for assignee" is selected -->
-                <div class="choose search">
-                  <div class="filter search">
-                    <input type="text" placeholder="Search" />
-                    <span class="im icon-search"></span>
-                  </div>
-                  <div class="filters-choices">
-                    <div class="selection">
-                      <div class="choice searched">
-                        <div class="value">Jimmy Stewart</div>
-                        <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-                      </div>
-                      <div class="detail">30 hours available this week</div>
-                    </div>
-                  </div>
-                </div><!-- end Search subpanel -->
-                
-              </div><!-- end first radio -->
-              
-              
-              <div class="radio">
-                <label>
-                <input type="radio" name="choose" value="list" /> &nbsp;Choose from a list</label>
-                <div class="hint">Tickets already assigned will be re-assigned</div>
-                
-                <!-- List subpanel shows if "Choose from a list" is selected -->
-                <div class="choose list">
-                  <table data-target="dataTable" class="dataTable no-footer" role="grid"><!-- it's a jQuery dataTable! :) -->
-                    <thead>
-                      <tr role="row">
-                        <th class="sorting user-name">
-                          Name
-                        </th>
-                        <th class="sorting location">
-                          Location
-                        </th>
-                        <th class="sorting availability"><!-- Grace only (assigned td also) -->
-                          Availability (week)
-                        </th>
-                      </tr>
-                    </thead>
-                    
-                    <tbody>
-                      <tr role="row" class="odd">
-                        <td class="sorting user-name">
-                          <input type="checkbox" value="select-all" /> 
-                          <a href="javascript:;">
-                            James Dean
-                          </a>
-                        </td>
-                        <td class="sorting location">
-                           Brentwood, SC
-                        </td>
-                        <td class="availability"> 
-                          32 hours
-                        </td>
-                      </tr>
-                      <tr role="row" class="odd">
-                        <td class="sorting user-name">
-                          <input type="checkbox" value="select-all" /> 
-                          <a href="javascript:;">
-                            Richard Gere
-                          </a>
-                        </td>
-                        <td class="sorting location">
-                           Blythewood, SC
-                        </td>
-                        <td class="availability"> 
-                          5 hours
-                        </td>
-                      </tr>
-                      <tr role="row" class="odd">
-                        <td class="sorting user-name">
-                          <input type="checkbox" value="select-all" /> 
-                          <a href="javascript:;">
-                            Val Kilmer
-                          </a>
-                        </td>
-                        <td class="sorting location">
-                           Greenville, SC
-                        </td>
-                        <td class="availability"> 
-                          1 day
-                        </td>
-                      </tr>
-                      <tr role="row" class="odd">
-                        <td class="sorting user-name">
-                          <input type="checkbox" value="select-all" /> 
-                          <a href="javascript:;">
-                            Jimmy Stewart
-                          </a>
-                        </td>
-                        <td class="sorting location">
-                           Columbia, SC
-                        </td>
-                        <td class="availability"> 
-                          30 minutes
-                        </td>
-                      </tr>
-                      <tr role="row" class="odd">
-                        <td class="sorting user-name">
-                          <input type="checkbox" value="select-all" /> 
-                          <a href="javascript:;">
-                            Kelly Wentworth 
-                          </a>
-                        </td>
-                        <td class="sorting location">
-                           Brentwood, SC
-                        </td>
-                        <td class="availability"> 
-                          30 hours
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  
-                  <!-- ******* PAGNINATION ******* -->
-                  <div class="pagination">
-                    <div class="inner">
-                      <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
-                      <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
-                    </div>
-                  </div>
-                  
-                </div><!-- end List subpanel -->
-                
-              </div><!-- end second radio -->
-              
-              
-              <div class="radio">
-                <label>
-                <input type="radio" name="choose" value="system" /> &nbsp;Let the system choose for me</label>
-                <div class="hint">Only unassigned tickets will be assigned</div>
-                <!-- no subpanel for "Let the system choose for me" -->
+            </td>
+            <td class="past">
+              <span class="date-num">29</span>
+              <div class="work">
+                <div class="tickets">6</div>
+                <div class="time">1:12</div>
               </div>
-              
-            </div><!-- end radios -->
-          </div><!-- end "item required" -->
-          
-          <div class="primary actions">
-            <div class="right">
-              <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly disabled" href="javascript:;">Assign</a>
-            </div>
-          </div>
-
-        </div><!-- end Admin "Assign" panel -->
-        
-        <!-- Panel for Admin "Extend" (Grace only) -->
-        
-        <div class="action panel extend">
-          <h1>Extend 20 Tickets</h1>
-          
-          <!-- Annotation 130 - update text in hint -->
-          <div class="hint">Due dates of tickets will be updated to the selected date.</div>
-          <div class="item required text">
-            <div class="plainLabel">Choose End Date</div>
-            <input type="text" class="datepicker" />
-          </div>
-          
-          <!-- Annotation 131, 132 ----------------------------------------------------------------------
-             - added div "warning"
-             - LOGIC: check if selected tickets are hard scheduled - if any ARE, show div "warning"
-             -------------------------------------------------------------------------------------- -->
-          <div class="warning">Some of the selected tickets are “hard scheduled”. These tickets will not be extended.</div>
-          <div class="primary actions">
-            <div class="right">
-              <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly disabled" href="javascript:;">Extend</a>
-            </div>
-          </div>
-        </div>
-        
-        
-        <!-- Annotation 127, 128, 129 ----------------------------------------------------------------------
-             - Reschedule action panel added 
-             - LOGIC: check if selected tickets are hard scheduled - if any are NOT, show div "warning"
-             -------------------------------------------------------------------------------------- -->
-        
-        <!-- Panel for Admin "Reschedule" (Grace only) -->
-        <div class="action panel reschedule">
-          <h1>Extend 20 Tickets</h1>
-          <div class="hint">Due dates of tickets that are “hard scheduled” will be updated to the selected date.</div>
-          <div class="item required text">
-            <div class="plainLabel">Choose Date</div>
-            <input type="text" class="datepicker" />
-          </div>
-          <div class="warning">Some of the selected tickets are not “hard scheduled”. These tickets will not be rescheduled.</div>
-          
-          <div class="primary actions">
-            <div class="right">
-              <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly disabled" href="javascript:;">Extend</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Panel for Admin "Cancel" (Grace only) -->
-        <div class="action panel cancel">
-          <h1>Cancel 20 Tickets</h1>
-          <div class="hint">Tickets that have not been started can be canceled.</div>
-          <div class="warning">Some of the selected tickets have been started. These tickets will not be canceled.</div>
-          
-          <div class="primary actions">
-            <div class="right">
-              <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly" href="javascript:;">Cancel Tickets</a>
-            </div>
-          </div>
-        </div>  
-        
-        <!-- Panel for Worker "Schedule" (Jimmy only) -->
-        
-        <div class="action panel schedule">
-          <h1>Schedule 20 Tickets</h1>
-          <div class="hint">Tickets already scheduled will be re-scheduled.</div>
-          <div class="item required text">
-            <div class="plainLabel">Choose Date</div>
-            <input type="text" class="datepicker" />
-          </div>
-          <div class="warning">Some of the selected tickets are due before this date. These tickets will not be scheduled.</div>
-          
-          <div class="primary actions">
-            <div class="right">
-              <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly disabled" href="javascript:;">Schedule</a>
-            </div>
-          </div>
-        </div>
-        
-        
-           
-        
-        <!-- ------------------------------------------------------------ -->
-        
-        
-        <!-- **********  Action Confirmation panel  *********** -->
-        
-        <!-- the panel that confirms the executed action -->
-        <div class="action messages">
-          <div class="message confirmation">
-            <h1><span class="im icon-checkmark"></span>20 Tickets were assigned (Confirmation message)</h1>
-          </div>
-          <div class="message problem">
-            <h1><span class="exclaim">!</span>Problem message</h1>
-          </div>
-        </div>
-      
-        <!-- ****************** TABLE ***************** -->
-      
-        <table data-target="dataTable" class="dataTable no-footer" role="grid">
-        
-          <thead>
-            <tr role="row">
-              <th class="sorting project-title">
-                <input type="checkbox" value="select-all" />
-                Project Name
-              </th>
-              <th class="sorting location">
-                Location
-              </th>
-              <th class="sorting assigned admin"><!-- Grace only (assigned td also) -->
-                Assigned
-              </th>
-              <th class="sorting scheduled worker"><!-- Jimmy only (scheduled td also) -->
-                Scheduled
-              </th>
-              <th class="sorting due">
-                Due
-              </th>
-              <th class="sorting estimated worker"><!-- Jimmy only (estimated td also) -->
-                Est. Time
-              </th>
-              <th class="sorting status">
-                Status
-              </th>
-            </tr>
-          </thead>
-          
-          <tbody>
-          
-            <tr role="row" class="odd">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Cover Girl Fall 2015 Eyeshadow Reset 
-                </a>
-              </td>
-              <td class="sorting location">
-                <a href="javascript:;">
-                  Walmart 
-                </a>
-              </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  Jimmy Stewart 
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                11/04/2014 
-              </td>
-              <td class="sorting due">
-                11/05/2014 
-              </td>
-              <td class="sorting estimated worker">
-                3:00 
-              </td>
-              <td class="status">
-                <span class="open"></span>
-              </td>
-            </tr>
-            
-            <tr role="row" class="even">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  05.16.15 Product Distribution - Snickers 
-                </a>
-              </td>
-              <td class="sorting location"> 
-                <a href="javascript:;">
-                  Walmart 
-                </a>
-              </td>
-              <td class="sorting assigned admin">
-                <a href="javascript:;">
-                  Kelly Wentworth
-                </a>
-              </td>
-              <td class="sorting scheduled">
-                11/05/2014 
-              </td>
-              <td class="sorting due worker">
-                11/03/2014 
-              </td>
-              <td class="sorting estimated worker">
-                :15 
-              </td>
-              <td class="status">
-                <span class="submitted"></span>
-              </td>
-            </tr>
-            
-            <tr role="row" class="odd">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  New Product Cut-in - Kikkoman Gluten-Free Soy Sauce 
-                </a>
-              </td>
-              <td class="sorting location">
-                <a href="javascript:;">
-                  Safeway 
-                </a>
-              </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  Kelly Wentworth
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                11/05/2014 
-              </td>
-              <td class="sorting due">
-                11/06/2014 
-              </td>
-              <td class="sorting estimated worker">
-                2 days 
-              </td>
-              <td class="status">
-                <span class="submitted"></span>
-              </td>
-            </tr>
-            
-            <tr role="row" class="even">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Atlas Alerts 918-215419650
-                </a>
-              </td>
-              <td class="sorting location"> 
-                <a href="javascript:;">
-                  Safeway 
-                </a>
-              </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  James Dean
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                <span>unscheduled</span>
-              </td>
-              <td class="sorting due">
-                11/06/2014 
-              </td>
-              <td class="sorting estimated worker">
-                2:20 
-              </td>
-              <td class="status">
-                <span class="started"></span>
-              </td>
-            </tr>
-            <tr role="row" class="odd">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  New Product Cut-in - Kikkoman Gluten-Free Soy Sauce
-                </a>
-              </td>
-              <td class="sorting location">
-                <a href="javascript:;">
-                  Kroeger's
-                </a>
-              </td>
-              <td class="sorting assigned admin"> 
-                <a href="javascript:;">
-                  Jimmy Stewart
-                </a>
-              </td>
-              <td class="sorting scheduled worker">
-                <span>unscheduled</span>
-              </td>
-              <td class="sorting due">
-                11/07/2014 
-              </td>
-              <td class="sorting estimated worker">
-                1:10
-              </td>
-              <td class="status">
-                <span class="started"></span>
-              </td>
-            </tr>
-            <tr role="row" class="even">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Atlas Alerts 918-215419650
-                </a>
-              </td>
-              <td class="sorting location"> 
-                <a href="javascript:;">
-                  Kroeger's 
-                </a>
-              </td>
-              <td class="sorting assigned admin">
-                <a href="javascript:;">
-                  James Dean
-                </a>
-              </td>
-              <td class="sorting scheduled worker"> 
-                11/03/2014 
-              </td>
-              <td class="sorting due"> 
-                11/06/2014 
-              </td>
-              <td class="sorting estimated worker"> 
-                1:00
-              </td>
-              <td class="status">
-                <span class="started paused"></span>
-              </td>
-            </tr>
-            <tr role="row" class="odd canceled">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Cover Girl Fall 2015 Eyeshadow Reset
-                </a>
-              </td>
-              <td class="sorting location">
-                <a href="javascript:;">
-                  Target
-                </a>
-              </td>
-              <td class="sorting assigned admin">
-                unassigned
-              </td>
-              <td class="sorting scheduled worker">
-                11/07/2014 
-              </td>
-              <td class="sorting due">
-                11/07/2014 
-              </td>
-              <td class="sorting estimated worker">
-                :40 
-              </td>
-              <td class="status">
-                <span class="canceled"></span>
-              </td>
-            </tr>
-            <tr role="row" class="even expired">
-              <td class="sorting project-title">
-                <input type="checkbox" value="select-all" /> 
-                <a href="javascript:;">
-                  Cover Girl Fall 2015 Eyeshadow Reset
-                </a>
-              </td>
-              <td class="sorting location"> 
-                <a href="javascript:;">
-                  Target
-                </a>
-              </td>
-              <td class="sorting assigned admin">
-                unassigned
-              </td>
-              <td class="sorting scheduled worker"> 
-                11/03/2014 
-              </td>
-              <td class="sorting due"> 
-                11/07/2014 
-              </td>
-              <td class="sorting estimated worker"> 
-                <span>not estimated</span> 
-              </td>
-              <td class="status">
-                <span class="expired"></span>
-              </td>
-            </tr>
-            
-          </tbody>
-          
+            </td>
+            <td class="past">
+              <span class="date-num">30</span>
+              <div class="work">
+                <div class="tickets">36</div>
+                <div class="time">30</div>
+              </div>
+            </td>
+            <td class="past blocked">
+              <span class="date-num">31</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="past month blocked">
+              <span class="date-num">Nov 1</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="past month">
+              <span class="date-num">2</span>
+              <div class="work">
+                <div class="tickets">6</div>
+                <div class="time">1:12</div>
+              </div>
+            </td>
+            <td class="past month">
+              <span class="date-num">3</span>
+              <div class="work">
+                <div class="tickets">27</div>
+                <div class="time">7:18</div>
+              </div>
+            </td>
+            <td class="past month">
+              <span class="date-num">4</span>
+              <div class="work">
+                <div class="tickets">35</div>
+                <div class="time">6:21</div>
+              </div>
+            </td>
+            <td class="past month">
+              <span class="date-num">5</span>
+              <div class="work">
+                <div class="tickets">11</div>
+                <div class="time">4:22</div>
+              </div>
+            </td>
+            <td class="past month">
+              <span class="date-num">6</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="past month">
+              <span class="date-num">7</span>
+              <div class="work">
+                <div class="tickets">27</div>
+                <div class="time">7:18</div>
+              </div>
+            </td>
+            <td class="past month blocked">
+              <span class="date-num">8</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="past month blocked">
+              <span class="date-num">9</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="past month">
+              <span class="date-num">10</span>
+              <div class="work">
+                <div class="tickets">35</div>
+                <div class="time">6:21</div>
+              </div>
+            </td>
+            <td class="month today">
+              <span class="date-num">11</span>
+              <div class="work">
+                <div class="tickets">4</div>
+                <div class="time">3:20</div>
+              </div>
+            </td>
+            <td class="month">
+              <span class="date-num">12</span>
+              <div class="work">
+                <div class="tickets">8</div>
+                <div class="time">7:18</div>
+              </div>
+            </td>
+            <td class="month">
+              <span class="date-num">13</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="month">
+              <span class="date-num">14</span>
+              <div class="work">
+                <div class="tickets">2</div>
+                <div class="time">2:00</div>
+              </div>
+            </td>
+            <td class="month blocked">
+              <span class="date-num">15</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="month blocked">
+              <span class="date-num">16</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="month blocked">
+              <span class="date-num">17</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="month blocked">
+              <span class="date-num">18</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="month blocked">
+              <span class="date-num">19</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="month blocked">
+              <span class="date-num">20</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="month">
+              <span class="date-num">21</span>
+              <div class="work">
+                <div class="tickets">6</div>
+                <div class="time">1:12</div>
+              </div>
+            </td>
+            <td class="month blocked">
+              <span class="date-num">22</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="month blocked">
+              <span class="date-num">23</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="month">
+              <span class="date-num">24</span>
+              <div class="work">
+                <div class="tickets">8</div>
+                <div class="time">4:00</div>
+              </div>
+            </td>
+            <td class="month">
+              <span class="date-num">25</span>
+              <div class="work">
+                <div class="tickets">2</div>
+                <div class="time">1:20</div>
+              </div>
+            </td>
+            <td class="month">
+              <span class="date-num">26</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="month">
+              <span class="date-num">27</span>
+            </td>
+            <td class="month">
+              <span class="date-num">28</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="month blocked">
+              <span class="date-num">29</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="month blocked">
+              <span class="date-num">30</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td>
+              <span class="date-num">Dec 1</span>
+              <div class="work">
+                <div class="tickets">1</div>
+                <div class="time">:35</div>
+              </div>
+            </td>
+            <td>
+              <span class="date-num">2</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td>
+              <span class="date-num">3</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td>
+              <span class="date-num">4</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td>
+              <span class="date-num">5</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+            <td class="blocked">
+              <span class="date-num">6</span>
+              <div class="work">
+                <div class="tickets"></div>
+                <div class="time"></div>
+              </div>
+            </td>
+          </tr>
         </table>
-      </div><!-- end table-list div -->
-
-      <!-- ****************** PAGINATION ***************** -->
-      <div class="pagination">
-        <div class="inner">
-          <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
-          <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
-        </div>
-      </div>
-      
-      
-      <!-- end List View -->
-        
-        
-        
-        
-      <!-- ****************************************************************** -->
-      <!--                              MAP VIEW                              -->
-      <!-- ****************************************************************** -->
-           
-      
-      <h1 class="super">Map view</h1>
-      
-      <div class="map-holder">
-        <div class="map">
-          <div class="map-drawer">
           
-          <!-- collapse button -->
-          <div class="tabs-control">
-            <a href="javascript:;" class="collapse"></a>
-          </div>
           
-          <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li class="active">
-                <a href="#info" class="info" role="tab" data-toggle="tab"></a>
-              </li>
-              <li>
-                <a href="#directions" class="directions" role="tab" data-toggle="tab"></a>
-              </li>
-              <li>
-                <a href="#actions" class="actions" role="tab" data-toggle="tab"></a>
-              </li>
-            </ul>
+          
+          <!-- ****************** END CALENDAR MONTH VIEW ***************** -->
+          
+          
+          
             
-            <!-- bootstrap tab panes -->
-            <div class="tab-content">
-            
-              <div class="tab-pane info active" id="info"><!-- info tab -->
-              
-              <!-- Annotation 39 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count > 1, href goes to List view showing selected Tickets
-                   if Ticket count = 1, href goes to the Ticket
-                   ------------------------------------------------------------------------------------- -->
-                <a class="ticketlink" href="javascript:;">
-                
-                <!-- Annotation 38, 86 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count > 1, shows # Tickets (even if all at same store)
-                   if Ticket count = 1, shows Store Name
-                   ------------------------------------------------------------------------------------- -->
-                  <span class="im icon-ticket"></span># Tickets (or store name)
-                </a>
-                
-                <!-- Annotation 41, 87 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count > 1, do not show div "description"
-                   ------------------------------------------------------------------------------------- -->
-                <div class="description ellipsify">
-                  Actions will focus on the client relationship management and item purchasing. Check on product availability.
-                </div>
-                
-                <!-- Annotation 42, 88 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count > 1, do not show "requirements" toggle link
-                   ------------------------------------------------------------------------------------- -->
-                <a class="requirements" href="javascript:;">Requirements <span class="cue">( + )</span></a>
-                <div class="requirements-list">
-                  <ul>
-                    <li>3+ megapixel camera</li>
-                    <li>Wal-mart certification</li>
-                  </ul>
-                </div>
-                
-                <!-- Annotation 44, 89 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count = 1, do not show "store" div
-                   ------------------------------------------------------------------------------------- -->
-                <div class="mini store">
-                
-                <!-- Annotation 45, 46 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Store count = 1, remove "s", show "Store"
-                   if Store count > 1, add "s", show "Stores"
-                   ------------------------------------------------------------------------------------- -->
-                  <div class="smallLabel">Stores</div>
-                  
-                  <!-- Annotation 47 and 48 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Store count = 1, show store NAME
-                   if Store count > 1, show store COUNT
-                   ------------------------------------------------------------------------------------- -->
-                  <div class="value"># or store name</div>
-                </div> 
-                
-                <!-- Annotation 49, 50, 90
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count = 1, do not show div "unscheduled"
-                   ------------------------------------------------------------------------------------- -->
-                <div class="mini unscheduled">
-                  <div class="smallLabel">Unscheduled tickets</div>
-                  <div class="value">#</div>
-                </div>  
-                
-                <!-- Annotation 51, 52, 53, 91 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count = 1, do not show div "unassigned"
-                   ------------------------------------------------------------------------------------- -->
-                <div class="mini unassigned admin"><!-- Grace only -->
-                  <div class="smallLabel">Unassigned tickets</div>
-                  <div class="value">#</div>
-                </div>
-                
-                <div class="mini due">
-                  <div class="smallLabel">Due</div>
-                  <!-- Annotation 54, 55, 56, 57, 92 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if more than 1 ticket, construct date range "(soonest due) - (latest due)"
-                   if 1 ticket, show only "(soonest due)" with no dash or second due statement
-                   
-                      - construct date statement(s) according to the annotation to match Android
-                      - construct date statement(s) according to the annotation to speak good English
-                   
-                   ------------------------------------------------------------------------------------- -->
-                  <div class="value">(soonest due) &ndash; (latest due)</div>
-                </div>
-                
-                
-                
-                <div class="mini estimated worker"><!-- Jimmy only -->
-                
-                  <!-- Annotation 58 - add "Unscheduled, de-capitalize "e" in "estimated time" -->
-                  <div class="smallLabel">Unscheduled Estimated Time</div>
-                  
-                  <!-- Annotation 59, 60, 61, 62, 93, 94 --------------------------------------------------------------
-                    
-                      - see annotations if Ticket count > 1
-                      - see annotations if Ticket count = 1
-                   
-                   ------------------------------------------------------------------------------------- -->
-                  <div class="value">(xx):(xx)</div>
-                </div>
-                
-                <!-- Annotation 63, 95 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count > 1, do not show div "assigned"
-                   ------------------------------------------------------------------------------------- -->
-                <div class="mini assigned admin"><!-- Grace only -->
-                  <div class="smallLabel">Assigned</div>
-                  <div class="value">
-                    <a href="javascript:;">Jimmy Stewart</a>
-                  </div>
-                </div>
-                
-                <!-- Annotation 96, 97  ---------------------------------------  
-                     - new html
-                     - if Ticket count = 1, do not show div "quick-select" 
-                ----------------------------------------------------------- -->
-                <div class="quick-select">
-                  <!-- Annotation 64 - zooms the map -->
-                  <a href="javascript:;">Zoom in</a>
-                  <!-- Annotation 65, 66 - show tickets in List view, update the "view" toggle buttons -->
-                  <a href="javascript:;">Show in list</a>
-                </div>
-                
-                <div class="assign-action detail required">
-                  <div class="plainLabel">Choose assignee</div>
-                  <div class="filter search required">
-                    <input type="text" placeholder="Search">
-                    <span class="im icon-search"></span>
-                  </div>
-                  
-                  <!-- Annotation 67 - added div "warning" -->
-                  <div class="warning">Tickets already assigned will be re-assigned</div>
-                  
-                  <div class="filters-choices">
-                      <div class="selection">
-                        <div class="choice searched">
-                          <div class="value">Jimmy Stewart</div>
-                          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-                        </div>
-                      </div>
-                    </div>
-                  <div class="button-holder">
-                    <a class="cancel" href="javascript:;">Cancel</a>
-                    <a class="buttonly disabled" href="javascript:;">Assign</a>
-                  </div>
-                </div>
-                
-                <!-- Annotation 98 - added div "blocked-day" -->
-                <div class="blocked-day detail">
-                  <div class="im icon-vacation"></div>
-                  <div class="copy">
-                  <!-- Annotation 99 LOGIC  ---------------------------------------  
-                    100 - if ticket state is "Assigned" or "Scheduled", use word "Starting"
-                    101 - if ticket state is "Paused / Saved", use word "Continuing"
-                ------------------------------------------------------------------- -->
-                     It looks like today is blocked. Starting the ticket will change today to a work day.
-                  </div>
-                  <div class="copy">   
-                    Change today to a work day?
-                  </div>
-                  <div class="button-holder">
-                  
-                    <!-- Annotation 106, 107  -->
-                    <a class="cancel" href="javascript:;">No</a>
-                    
-                    <!-- Annotation 102, 103, 104, 105  -->
-                    <a class="buttonly" href="javascript:;">Yes</a>
-                  </div>
-                </div>
-                
-                <!-- Annotation 68, 71, 72, 73, 110, 111, 112, 113, 114, 115, 116, 117, 118  ------------- 
-                     - remove the main action button if Stores > 1 
-                     - see annotations for actions for Grace and Jimmy if Stores = 1 and Tickets > 1
-                     - see annotations for actions for Jimmy if Tickets = 1
-                -------------------------------------------------------------------------------------- -->
-                <a class="buttonly main" href="javascript:;">Main action</a>
-                
-              </div><!-- end info tab -->
-              
-              <!-- Annotation 37, 69 - directions tab does not show if Stores > 1 -->
-              
-              <div class="tab-pane directions worker" id="directions"><!-- directions tab - Jimmy only -->
-              
-                <!-- Annotation 74 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count > 1, href goes to List view showing selected Tickets
-                   if Ticket count = 1, href goes to the Ticket
-                   ------------------------------------------------------------------------------------- -->
-                <a class="ticketlink" href="javascript:;">
-                
-                  <!-- Annotation 74 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count > 1, shows # Tickets (even if all at same store)
-                   if Ticket count = 1, shows Store Name
-                   ------------------------------------------------------------------------------------- -->
-                  <span class="im icon-ticket"></span># Tickets (or store name) 
-                </a>
-                
-                <!-- Annotation 75 - if selected Tickets > 1, show store div  -->
-                <div class="mini store">
-                  <div class="smallLabel">Store</div>
-                  <div class="value">Store name</div>
-                </div> 
-              
-              
-                <div class="address">16121 N. Snelling Rd</div>
-                <div class="address">Cupertino, CA 95014</div>
-                <div class="phone">
-                  <a href="tel:+14088772113">(408) 877-2113</a>
-                </div>
-                
-                <!-- Annotation 98, 108 - added div "blocked-day" -->
-                <div class="blocked-day detail">
-                  <div class="im icon-vacation"></div>
-                  <div class="copy">
-                  <!-- Annotation 99 LOGIC  ---------------------------------------  
-                    100 - if ticket state is "Assigned" or "Scheduled", use word "Starting"
-                    101 - if ticket state is "Paused / Saved", use word "Continuing"
-                ------------------------------------------------------------------- -->
-                     It looks like today is blocked. Starting the ticket will change today to a work day.
-                  </div>
-                  <div class="copy">   
-                    Change today to a work day?
-                  </div>
-                  <div class="button-holder">
-                  
-                    <!-- Annotation 106, 107  -->
-                    <a class="cancel" href="javascript:;">No</a>
-                    
-                    <!-- Annotation 102, 103, 104, 105  -->
-                    <a class="buttonly" href="javascript:;">Yes</a>
-                  </div>
-                </div>
-                
-                <!-- Annotation 117 - same functionality as on the "info" tab for Jimmy + Store / Ticket count + Ticket state -->
-                <a class="buttonly main" href="javascript:;">Main action</a>
-              </div><!-- end directions tab -->
-              
-              <!-- Annotation 37, 70 - actions tab does not show if Stores > 1 -->
-              
-              <div class="tab-pane actions" id="actions"><!-- actions tab -->
-              
-              
-                
-                <!-- Annotation 75 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count > 1, href goes to List view showing selected Tickets
-                   if Ticket count = 1, href goes to the Ticket
-                   ------------------------------------------------------------------------------------- -->
-                <a class="ticketlink" href="javascript:;">
-                
-                  <!-- Annotation 75 
-                   ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count > 1, shows # Tickets (even if all at same store)
-                   if Ticket count = 1, shows Store Name
-                   ------------------------------------------------------------------------------------- -->
-                  <span class="im icon-ticket"></span># Tickets (or store name) 
-                </a>
-
-                <!-- Annotation 76 - if selected Tickets > 1, do not show "scheduled" div  -->
-                <div class="scheduled">
-                  <div class="value">Scheduled for (value)</div>
-                </div>
-                
-                <!-- Annotation 77 - if selected Tickets > 1, do not show "schedule" button --> 
-                <a class="iconButton schedule worker" href="javascript:;">Schedule</a><!-- Jimmy only -->
-                
-                <div class="schedule-action detail">
-                  <!-- Annotation 120, 122, 123 ------------------------------------------------ 
-                  120 - new check - is date blocked?
-                  122 - for blocked days, inject class "blocked" into datepicker day td's
-                        (do not disable them)
-                  123 - new check - is estimated time + scheduled time > 8 hours?
-                  ------------------------------------------------------------------------- -->
-                  <input type="text" class="datepicker" placeholder="Select date" />
-                  
-                  <div class="warning">This ticket is due before this date.</div>
-                  
-                  <!-- Annotation 121 - new warning --> 
-                  <div class="warning">This date is blocked. Scheduling on this date will set it to a work day.</div>
-                  
-                  <!-- Annotation 124 - new warning --> 
-                  <div class="warning">You will have more than 8 hours scheduled for this day.</div>
-
-                  
-                  <div class="button-holder">
-                    <a class="cancel" href="javascript:;">Cancel</a>
-                    <a class="buttonly disabled" href="javascript:;">Schedule</a>
-                  </div>
-                </div>
-                <div class="schedule-action confirm">Scheduled</div>
-                
-                <!-- Annotation 78 - if selected Tickets > 1, do not show "extend" button  -->
-                <a class="iconButton extend admin" href="javascript:;">Extend</a><!-- Grace only -->
-                <div class="extend-action detail">
-                  <input type="text" class="datepicker" placeholder="Select date" />
-                  <div class="button-holder">
-                    <a class="cancel" href="javascript:;">Cancel</a>
-                    <a class="buttonly disabled" href="javascript:;">Extend</a>
-                  </div>
-                </div>
-                <div class="extend-action confirm">Extended</div>
-                
-                <!-- Annotation 79, 80 ----------------------------------------------- 
-                     - if selected Tickets > 1, do not show "comment" button  
-                     - html change - remove "Add" from the text
-                     -------------------------------------------------------------- -->
-                <a class="iconButton comment" href="javascript:;">Comment</a>
-                <div class="comment-action detail">
-                  <textarea placeholder="Comment"></textarea>
-                  <div class="button-holder">
-                    <a class="cancel" href="javascript:;">Cancel</a>
-                    <a class="buttonly disabled" href="javascript:;">Add</a>
-                  </div>
-                </div>  
-                <div class="comment-action confirm">Comment added</div>
-                
-                <!-- Annotation 81 - html change - remove "ticket" from the text  -->
-                <a class="iconButton print" href="javascript:;">Print</a>
-                
-                <!-- Annotation 82 - if selected Tickets > 1, do not show "unassign" button   -->
-                <a class="iconButton unassign worker" href="javascript:;">Unassign</a><!-- Jimmy only -->
-                <div class="unassign-action confirm">Unassigned</div>
-                
-                
-                <!-- Annotation 83 - if selected Tickets > 1, do not show "cancel" button   -->
-                <!-- if Ticket count = 1, inject class "disabled" into the a tag if ticket is started, and do not allow user to click it -->
-                <a class="iconButton cancel admin" href="javascript:;">Cancel</a><!-- Grace only -->
-                <div class="cancel-action confirm">Canceled</div>
-                
-                <!-- Annotation 98, 109 - added div "blocked-day" -->
-                <div class="blocked-day detail">
-                  <div class="im icon-vacation"></div>
-                  <div class="copy">
-                  <!-- Annotation 99 LOGIC  ---------------------------------------  
-                    100 - if ticket state is "Assigned" or "Scheduled", use word "Starting"
-                    101 - if ticket state is "Paused / Saved", use word "Continuing"
-                ------------------------------------------------------------------- -->
-                     It looks like today is blocked. Starting the ticket will change today to a work day.
-                  </div>
-                  <div class="copy">   
-                    Change today to a work day?
-                  </div>
-                  <div class="button-holder">
-                  
-                    <!-- Annotation 106, 107  -->
-                    <a class="cancel" href="javascript:;">No</a>
-                    
-                    <!-- Annotation 102, 103, 104, 105  -->
-                    <a class="buttonly" href="javascript:;">Yes</a>
-                  </div>
-                </div>
-                
-                <div class="assign-action detail required">
-                  <div class="plainLabel">Choose assignee</div>
-                  <div class="filter search required">
-                    <input type="text" placeholder="Search">
-                    <span class="im icon-search"></span>
-                  </div>
-                  
-                  <!-- Annotation 67, 84 - added div "warning" -->
-                  <div class="warning">Tickets already assigned will be re-assigned</div>
-                  <div class="filters-choices">
-                      <div class="selection">
-                        <div class="choice searched">
-                          <div class="value">Jimmy Stewart</div>
-                          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-                        </div>
-                      </div>
-                    </div>
-                  <div class="button-holder">
-                    <a class="cancel" href="javascript:;">Cancel</a>
-                    <a class="buttonly disabled" href="javascript:;">Assign</a>
-                  </div>
-                </div>
-                
-                <!-- Annotation 85, 118 - should always have same actions as on the "info" tab for Jimmy and Grace + Store / Ticket count + Ticket state -->
-                <a class="buttonly main" href="javascript:;">Main action</a>
-              </div><!-- end actions tab -->
-              
-            </div><!-- end bootstrap tabs -->
-          </div><!-- end map-drawer -->
+          <!-- ****************************************************************** -->
+          <!--                     CALENDAR DAY VIEW                            -->
+          <!-- ****************************************************************** -->  
           
           
-          <div class="pin scheduled active"></div>
-          <div class="pin unscheduled"></div>
-          <div class="pin unassigned admin"></div><!-- Grace only -->
-          <div class="pin paused"></div><!-- For Grace, this is a "scheduled" pin -->
-          <div class="pin submitted"></div>
-          <div class="pin expired admin"></div><!-- Grace only -->
-
           
-        </div><!-- end map div -->
-      </div><!-- end map holder div -->
-      
-      <div class="map keys">
-        <div class="key scheduled">Scheduled</div>
-        <div class="key unscheduled">Unscheduled</div>
-        <div class="key unassigned admin">Unassigned</div><!-- Grace only -->
-        <div class="key paused worker">Saved</div><!-- Jimmy only -->
-        <div class="key submitted">Submitted</div>
-        <div class="key expired admin">Expired</div><!-- Grace only -->
-      </div>
-    
-      <!-- end map View -->
+          <!-- ****************** END CALENDAR DAY VIEW ***************** -->
+          
+          
+        </div><!-- ends calendar -->
     
       <div style="margin: 10em 0; padding: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
     
-    
     </div><!-- ends content -->
-  
   </div><!-- ends right side ("inner wrapper")  -->
 </div><!-- ends main panel ("main wrapper") -->
 

@@ -352,7 +352,8 @@ html, body {
 	 .filters-choices .icon-cancel:before,
 	 .quick-select a,
 	 .map .nav-tabs > li.active > a:before,
-	 .table-list .controls .actions.active a {
+	 .table-list .controls .actions.active a,
+	 .calendar .controls .date-statement {
 		color: #4890e2;
 	}
 	
@@ -390,6 +391,10 @@ html, body {
 	a.new-button:hover,
 	a.new-button:focus {
 		background-color: #f2f7fd;
+	}
+	
+	.calendar-days td.month.today {
+		background: #eaf2fd;
 	}
 	
 	.filters-holder .view a:hover,
@@ -679,7 +684,8 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 a.page-action,
 .page-action-panel input,
 .section-controls .action.panel input[type="text"],
-.add-members .name {
+.add-members .name,
+.calendar .controls {
 	font-family: Helvetica-Neue-Light;
 }
 
@@ -694,7 +700,9 @@ select option,
 .iconly,
 .instruction-footer,
 .messages .problem span.exclaim,
-.section-no-content {
+.section-no-content,
+.calendar-days th,
+.calendar-days .date-num {
 	font-family: Helvetica-Neue-Medium;
 }
 

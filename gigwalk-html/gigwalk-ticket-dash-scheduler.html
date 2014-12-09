@@ -499,14 +499,14 @@
         <div class="action panel extend">
           <h1>Extend 20 Tickets</h1>
           
-          <!-- Annotation 130 - update text in hint -->
+          <!-- Annotation 131 - update text in hint -->
           <div class="hint">Due dates of tickets will be updated to the selected date.</div>
           <div class="item required text">
             <div class="plainLabel">Choose End Date</div>
             <input type="text" class="datepicker" />
           </div>
           
-          <!-- Annotation 131, 132 ----------------------------------------------------------------------
+          <!-- Annotation 132, 133 ----------------------------------------------------------------------
              - added div "warning"
              - LOGIC: check if selected tickets are hard scheduled - if any ARE, show div "warning"
              -------------------------------------------------------------------------------------- -->
@@ -520,10 +520,11 @@
         </div>
         
         
-        <!-- Annotation 127, 128, 129 ----------------------------------------------------------------------
+        <!-- Annotation 127, 128, 129, 130 ---------------------------------------------------------------
              - Reschedule action panel added 
              - LOGIC: check if selected tickets are hard scheduled - if any are NOT, show div "warning"
-             -------------------------------------------------------------------------------------- -->
+             - on execute action, show "confirmation" div with number of rescheduled tickets
+             --------------------------------------------------------------------------------------------- -->
         
         <!-- Panel for Admin "Reschedule" (Grace only) -->
         <div class="action panel reschedule">

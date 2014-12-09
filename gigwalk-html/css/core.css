@@ -97,7 +97,9 @@ header nav .user-edit,
 .instruction .duplicating-message a .im,
 .action.messages h1 span.icon-checkmark,
 .section-controls .action.panel input[type="text"],
-.add-members .checkbox.new .name {
+.add-members .checkbox.new .name,
+.calendar .controls,
+.calendar .controls .date-nav a {
 	font-size: 1.2em;
 }
 
@@ -151,7 +153,8 @@ th.sorting:after,
 }
 
 .map .pin,
-.iconButton:before {
+.iconButton:before,
+.calendar .controls .date-statement {
 	font-size: 2.3em;
 }
 
@@ -225,7 +228,8 @@ header .nav .number,
 .map .tab-pane a.buttonly.main,
 .Groups .table-list table .subgroups,
 .section-no-content,
-.map .icon-vacation {
+.map .icon-vacation,
+.calendar .controls {
 	text-align: center;
 }
 
@@ -234,6 +238,10 @@ header .nav .number,
 .filters-choices,
 .Groups table .members {
 	text-align: right;
+}
+
+.calendar-days th {
+	text-transform: uppercase;
 }
 
 nav li a,
@@ -274,7 +282,10 @@ a.page-action:focus,
 .section-detail a:hover,
 .section-detail a:focus,
 .message a.closer:hover,
-.message a.closer:focus {
+.message a.closer:focus,
+.calendar .controls a,
+ .calendar .controls a:hover,
+ .calendar .controls a:focus {
 	text-decoration: none;
 }
 
@@ -327,7 +338,9 @@ a.disabled,
 .iconButton.disabled,
 .admin .table-list td.location,
 .map .tab-pane a.buttonly.main.disabled,
-.table-list .controls .actions a {
+.table-list .controls .actions a,
+.calendar .view a.active,
+.calendar .date-statement {
 	cursor: default;
 }
 
@@ -367,7 +380,8 @@ a.disabled,
 .pagination.inner:before,
 .pagination:after,
 .map .tabs-control:after,
-.subgroups-toggle:after {
+.subgroups-toggle:after,
+.calendar .controls:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -440,7 +454,9 @@ a.iconly,
 .filter.search .icon-search,
 .instruction .duplicating-message a.closer,
 a.page-action,
-.subgroups-detail {
+.subgroups-detail,
+.calendar .date-nav,
+.calendar .date-nav a {
 	display: inline-block;
 }
 
@@ -471,7 +487,8 @@ a.page-action,
 .filters-holder .filters,
 .table-list .actions,
 .pagination .inner,
-.map a.collapse {
+.map a.collapse,
+.calendar .view {
 	display: inline-block;
 	float: right;
 }
@@ -594,7 +611,11 @@ th.sorting:after,
 a.page-action,
 .page-action-panel,
 .message.confirmation,
-.message.problem {
+.message.problem,
+.calendar .controls,
+.calendar .controls .view,
+.calendar .controls .date-nav,
+.calendar .controls .date-nav a {
 	position: relative;
 }
 
@@ -772,7 +793,13 @@ select,
  background-color: transparent;
 }
 
-.dropdown-header {
+.dropdown-header,
+.calendar .view,
+.calendar .view a.active,
+.calendar .view a.active:hover,
+.calendar .view a.active:focus,
+.calendar th,
+.calendar .past .date-num {
 	color: #ababab; 
 }
 
@@ -808,6 +835,10 @@ a.iconButton.disabled:focus,
 	background: #fafafa;
 }
 
+.calendar-days td.month {
+	background: #f7f7f7;
+}
+
 .key:before {
 	border: 8px solid #f7f7f7;
 }
@@ -822,7 +853,9 @@ a.iconButton.disabled:focus,
 .datepicker td.blocked:hover,
 .datepicker td.active.blocked:hover,
 .datepicker td.blocked:focus,
-.datepiacker td.active.blocked:focus {
+.datepiacker td.active.blocked:focus,
+.calendar-days td.blocked,
+.calendar-days td.month.blocked {
 	background-color: #efefef;
 }
 
@@ -1039,6 +1072,13 @@ input[type="radio"]:checked:after,
 	top: 8px;
 }
 
+.calendar .controls .date-nav a {
+	top: 2px
+}
+
+.calendar .controls .date-nav a.right {
+	top: 12px
+}
 
 
 /* borders */
@@ -1072,6 +1112,11 @@ header .nav ul.dropdown-menu li,
 	border-bottom: 1px solid #cccccc;
 }
 
+.calendar-days th {
+	border-top: 2px solid #cccccc;
+	border-bottom: 2px solid #cccccc;
+}
+
 .action.panel h1 span {
 	color: #cfcfcf;
 }
@@ -1103,6 +1148,10 @@ header .nav ul.dropdown-menu li,
 .mini-panel, .instruction .item.targets .sub,
 .group .mini-panel {
 	border-bottom: 2px solid #ffffff;
+}
+
+.calendar-days td {
+	border: 2px solid #ffffff;
 }
 
 .subnav li {
@@ -1629,7 +1678,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /*  left sidenav */
 
-nav.sidenav {  
+nav.sidenav,
+.calendar-days td {  
 	vertical-align: top;
 }
 
@@ -4778,6 +4828,37 @@ a.page-action.delete-button span.im {
 	padding-left: 1.5em;
 	padding-right: 1.5em;
 }
+
+.calendar .controls {
+	margin-top: 1.8em;
+}
+
+.calendar .controls .date-nav a {
+	padding: 0 1em;
+}
+
+.calendar .controls .view {
+	margin-top: 1.5em;
+}
+
+.calendar .controls .view a {
+	padding: 1em .5em;
+}
+
+.calendar-days {
+	width: 100%;
+}
+
+.calendar-days td,
+.calendar-days th {
+	padding: 6px;
+}
+
+.calendar-days th {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
 
 
 /* heredeb */
