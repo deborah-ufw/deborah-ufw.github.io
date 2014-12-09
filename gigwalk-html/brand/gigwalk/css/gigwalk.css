@@ -354,7 +354,7 @@ html, body {
 	 .quick-select a,
 	 .map .nav-tabs > li.active > a:before,
 	 .table-list .controls .actions.active a,
-	 .calendar .controls .date-statement {
+	 .calendar .view-bar .date-statement {
 		color: #4890e2;
 	}
 	
@@ -703,7 +703,7 @@ a.page-action,
 .page-action-panel input,
 .section-controls .action.panel input[type="text"],
 .add-members .name,
-.calendar .controls,
+.calendar .view-bar,
 .calendar .calendar-month .work {
 	font-family: Helvetica-Neue-Light;
 }

@@ -98,8 +98,8 @@ header nav .user-edit,
 .action.messages h1 span.icon-checkmark,
 .section-controls .action.panel input[type="text"],
 .add-members .checkbox.new .name,
-.calendar .controls,
-.calendar .controls .date-nav a {
+.calendar .view-bar,
+.calendar .view-bar .date-nav a {
 	font-size: 1.2em;
 }
 
@@ -157,7 +157,7 @@ th.sorting:after,
 
 .map .pin,
 .iconButton:before,
-.calendar .controls .date-statement {
+.calendar .view-bar .date-statement {
 	font-size: 2.3em;
 }
 
@@ -233,7 +233,7 @@ header .nav .number,
 .Groups .table-list table .subgroups,
 .section-no-content,
 .map .icon-vacation,
-.calendar .controls {
+.calendar .view-bar {
 	text-align: center;
 }
 
@@ -287,9 +287,9 @@ a.page-action:focus,
 .section-detail a:focus,
 .message a.closer:hover,
 .message a.closer:focus,
-.calendar .controls a,
- .calendar .controls a:hover,
- .calendar .controls a:focus {
+.calendar .view-bar a,
+ .calendar .view-bar a:hover,
+ .calendar .view-bar a:focus {
 	text-decoration: none;
 }
 
@@ -386,7 +386,7 @@ a.disabled,
 .pagination:after,
 .map .tabs-control:after,
 .subgroups-toggle:after,
-.calendar .controls:after {
+.calendar .view-bar:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -617,10 +617,10 @@ a.page-action,
 .page-action-panel,
 .message.confirmation,
 .message.problem,
-.calendar .controls,
-.calendar .controls .view,
-.calendar .controls .date-nav,
-.calendar .controls .date-nav a,
+.calendar .view-bar,
+.calendar .view-bar .view,
+.calendar .view-bar .date-nav,
+.calendar .view-bar .date-nav a,
 .calendar-month .work div,
 .calendar-month .work .time:before,
 .calendar-month .work .tickets:before {
@@ -1083,11 +1083,11 @@ input[type="radio"]:checked:after,
 	top: 8px;
 }
 
-.calendar .controls .date-nav a {
+.calendar .view-bar .date-nav a {
 	top: 2px
 }
 
-.calendar .controls .date-nav a.right {
+.calendar .view-bar .date-nav a.right {
 	top: 12px
 }
 
@@ -4857,23 +4857,23 @@ a.page-action.delete-button span.im {
 	padding-right: 1.5em;
 }
 
-.calendar .controls {
+.calendar .view-bar {
 	margin-top: 1.3em;
 }
 
-.calendar .controls .date-nav {
+.calendar .view-bar .date-nav {
 	margin-right: -124px;
 }
 
-.calendar .controls .date-nav a {
+.calendar .view-bar .date-nav a {
 	padding: 0 1em;
 }
 
-.calendar .controls .view {
+.calendar .view-bar .view {
 	margin-top: 1.5em;
 }
 
-.calendar .controls .view a {
+.calendar .view-bar .view a {
 	padding: 1em .4em;
 }
 

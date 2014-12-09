@@ -181,6 +181,7 @@ th.sorting_desc:after,
 .icon-direction:before {
 	content: "\e608";
 }
+.iconButton.list:before,
 .icon-list:before {
 	content: "\e609";
 }
@@ -239,6 +240,7 @@ th.sorting_desc:after,
 .icon-group:before {
 	content: "\e631";
 }
+.iconButton.unschedule:before,
 .icon-calendar-minus:before {
 	content: "\e632";
 }
