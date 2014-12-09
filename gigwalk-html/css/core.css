@@ -1226,6 +1226,10 @@ header .nav li {
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
+.calendar-day .controls {
+	border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
 .tabnav  li {
 	border-right: 1px solid rgba(0, 0, 0, .4);
 }
@@ -1261,11 +1265,7 @@ header .nav li {
 	border-bottom: 0px solid transparent;
 	border-left: 0px solid transparent;
 }
-
-.table-list .controls .iconButton.last {
-	border-right-width: 0;
-}
-
+                                           
 .group .sub.first,
 .instruction-content,
 .group .sub.more-info,
@@ -1284,7 +1284,8 @@ header nav .dropdown-menu {
 .tabnav .btn.btn-default.dropdown-toggle,
 .tabnav li .dropdown li,
 .tabnav li.active .dropdown li,
-.table-list .controls .iconButton.last {
+.table-list .controls .iconButton.last,
+.admin .calendar-day .iconButton.print {
 	border-right-width: 0px;
 }
 
@@ -4901,6 +4902,10 @@ a.page-action.delete-button span.im {
 
 .calendar-month .work div {
 	margin-top: -.5em;
+}
+
+.calendar-day .summary .visible {
+	padding-right: .5em;
 }
 
 
