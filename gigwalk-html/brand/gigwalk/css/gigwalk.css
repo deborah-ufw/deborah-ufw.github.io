@@ -150,7 +150,8 @@ html, body {
 	body,
 	a.buttonly,
 	.section.title a.navly:after,
-	.admin .table-list td.location a {
+	.admin .table-list td.location a,
+	.calendar td.incomplete .work {
 		color: #4a4a4a;
 	}
 	
@@ -393,7 +394,7 @@ html, body {
 		background-color: #f2f7fd;
 	}
 	
-	.calendar-days td.month.today {
+	.calendar-month td.this-month.today {
 		background: #eaf2fd;
 	}
 	
@@ -446,6 +447,23 @@ html, body {
 	
 	header nav .dropdown.open {
 		background: rgba(74, 144, 226, .2);
+	}
+	
+	.calendar-month td:hover {
+		background: rgba(74, 144, 226, .25);
+	}
+	
+	.calendar-month td.blocked:hover,
+	.calendar-month td.this-month.blocked:hover {
+		background: #c2d5e9;
+	}
+	
+	.calendar-month td.this-month:hover {
+		background: #cbdff3;
+	}
+	
+	.calendar-month td.today:hover {
+		background: #bdd8f6;
 	}
 	
 	.tabnav li.active,
@@ -685,7 +703,8 @@ a.page-action,
 .page-action-panel input,
 .section-controls .action.panel input[type="text"],
 .add-members .name,
-.calendar .controls {
+.calendar .controls,
+.calendar .calendar-month .work {
 	font-family: Helvetica-Neue-Light;
 }
 
@@ -701,8 +720,8 @@ select option,
 .instruction-footer,
 .messages .problem span.exclaim,
 .section-no-content,
-.calendar-days th,
-.calendar-days .date-num {
+.calendar-month th,
+.calendar-month .date-num {
 	font-family: Helvetica-Neue-Medium;
 }
 

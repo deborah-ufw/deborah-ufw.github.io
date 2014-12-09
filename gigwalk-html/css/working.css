@@ -3,7 +3,8 @@
 
 h1.super,
 .worker .action.panel.assign,
-.choose-dates {
+.choose-dates,
+.calendar-month {
 	display: none;
 }
 

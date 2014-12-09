@@ -110,7 +110,8 @@ header nav .user-edit,
 .map .tab-pane a.buttonly.main,
 a.page-action,
 .group.materials .ti.number,
-.iconly input[type="checkbox"]:after {
+.iconly input[type="checkbox"]:after,
+.calendar .calendar-month .work {
 	font-size: 1.3em;
 }
 
@@ -138,6 +139,8 @@ body,
 	font-size: 1.8em;
 }
 
+.calendar-month .work .time:before,
+.calendar-month .work .tickets:before,
 .Tickets .dash td.status span.paused:before,
 .action.panel h1,
 .action.messages h1,
@@ -202,7 +205,8 @@ th.sorting:after,
 .map .tab-pane .address,
 .button-holder a,
 .Tickets .table-list .action.panel .warning,
-.map .tab-pane .warning {
+.map .tab-pane .warning,
+.calendar-month .work {
 	line-height: 1.2em;
 }
 
@@ -240,7 +244,7 @@ header .nav .number,
 	text-align: right;
 }
 
-.calendar-days th {
+.calendar-month th {
 	text-transform: uppercase;
 }
 
@@ -328,7 +332,8 @@ th.sorting,
 a.page-action,
 .section-actions a,
 .message a.closer,
-.table-list .controls .actions.active a {
+.table-list .controls .actions.active a,
+.calendar-month td {
 	cursor: pointer;
 }
 
@@ -615,7 +620,10 @@ a.page-action,
 .calendar .controls,
 .calendar .controls .view,
 .calendar .controls .date-nav,
-.calendar .controls .date-nav a {
+.calendar .controls .date-nav a,
+.calendar-month .work div,
+.calendar-month .work .time:before,
+.calendar-month .work .tickets:before {
 	position: relative;
 }
 
@@ -799,7 +807,7 @@ select,
 .calendar .view a.active:hover,
 .calendar .view a.active:focus,
 .calendar th,
-.calendar .past .date-num {
+.calendar .past {
 	color: #ababab; 
 }
 
@@ -835,7 +843,7 @@ a.iconButton.disabled:focus,
 	background: #fafafa;
 }
 
-.calendar-days td.month {
+.calendar-month td.this-month {
 	background: #f7f7f7;
 }
 
@@ -853,14 +861,17 @@ a.iconButton.disabled:focus,
 .datepicker td.blocked:hover,
 .datepicker td.active.blocked:hover,
 .datepicker td.blocked:focus,
-.datepiacker td.active.blocked:focus,
-.calendar-days td.blocked,
-.calendar-days td.month.blocked {
+.datepiacker td.active.blocked:focus {
 	background-color: #efefef;
 }
 
 .search.disabled {
 	border-color: #efefef;
+}
+
+.calendar-month td.blocked,
+.calendar-month td.this-month.blocked {
+	background: #e6e6e6;
 }
 
 input.supercheck:after,
@@ -1080,6 +1091,15 @@ input[type="radio"]:checked:after,
 	top: 12px
 }
 
+.calendar-month .work .tickets:before {
+	bottom: -8px;
+}
+
+.calendar-month .work .time:before {
+	bottom: -7px;
+}
+
+
 
 /* borders */
 
@@ -1112,9 +1132,8 @@ header .nav ul.dropdown-menu li,
 	border-bottom: 1px solid #cccccc;
 }
 
-.calendar-days th {
+.calendar-month th {
 	border-top: 2px solid #cccccc;
-	border-bottom: 2px solid #cccccc;
 }
 
 .action.panel h1 span {
@@ -1146,11 +1165,20 @@ header .nav ul.dropdown-menu li,
 
 .map .nav-tabs > li.active > a,
 .mini-panel, .instruction .item.targets .sub,
-.group .mini-panel {
+.group .mini-panel,
+.calendar-month th {
 	border-bottom: 2px solid #ffffff;
 }
 
-.calendar-days td {
+.calendar-month th:after {
+	content: ' ';
+	height: 2px;
+	display: table;
+	width: 100%;
+	background: #cccccc;
+}
+
+.calendar-month td {
 	border: 2px solid #ffffff;
 }
 
@@ -1679,7 +1707,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 /*  left sidenav */
 
 nav.sidenav,
-.calendar-days td {  
+.calendar-month td {  
 	vertical-align: top;
 }
 
@@ -4830,7 +4858,11 @@ a.page-action.delete-button span.im {
 }
 
 .calendar .controls {
-	margin-top: 1.8em;
+	margin-top: 1.3em;
+}
+
+.calendar .controls .date-nav {
+	margin-right: -124px;
 }
 
 .calendar .controls .date-nav a {
@@ -4842,21 +4874,33 @@ a.page-action.delete-button span.im {
 }
 
 .calendar .controls .view a {
-	padding: 1em .5em;
+	padding: 1em .4em;
 }
 
-.calendar-days {
+.calendar-month {
 	width: 100%;
 }
 
-.calendar-days td,
-.calendar-days th {
-	padding: 6px;
+.calendar-month th {
+	width: 14%;
 }
 
-.calendar-days th {
+.calendar-month td,
+.calendar-month th span {
+	padding: 3px 6px;
+}
+
+.calendar-month th {
 	padding-top: 1px;
 	padding-bottom: 1px;
+}
+
+.calendar-month .work {
+	margin: -.7em 0 .8em 1em;
+}
+
+.calendar-month .work div {
+	margin-top: -.5em;
 }
 
 

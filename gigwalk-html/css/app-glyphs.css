@@ -30,7 +30,9 @@ th.sorting:after,
 .checker .supercheck:after,
 input[type="checkbox"]:after,
 .map .requirements-list li:before,
-.section-actions a:before {
+.section-actions a:before,
+.calendar-month .work .tickets:before,
+.calendar-month .work .time:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -44,7 +46,9 @@ input[type="checkbox"]:after,
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-empty:before {
+.icon-empty:before,
+.calendar-month .work .tickets:before,
+.calendar-month .work .time:before {
 	content: "\e612";
 }
 .collapsed .icon-arrow-up:before,
@@ -180,6 +184,7 @@ th.sorting_desc:after,
 .icon-list:before {
 	content: "\e609";
 }
+.calendar-month .has-tickets .work .tickets:before,
 .icon-ticket:before {
 	content: "\e60a";
 }
@@ -224,6 +229,7 @@ th.sorting_desc:after,
 .icon-ownership:before {
 	content: "\e62d";
 }
+.calendar-month .has-tickets .work .time:before,
 .icon-time:before {
 	content: "\e62e";
 }
