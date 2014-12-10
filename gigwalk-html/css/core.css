@@ -744,7 +744,7 @@ header .navbar-collapse.in {
 /* ellipsify */
 
 .map .tab-pane .description.ellipsify {
-	height: 65px;
+	height: 33px;
 }
 
 .opacity100,
@@ -3600,8 +3600,7 @@ a.iconly:before {
 	padding: 0 0 15px 10px;
 }
 
-.action.panel.extend input,
-.action.panel.schedule input {
+.action.panel input.datepicker{
 	width: 190px;
 }
 

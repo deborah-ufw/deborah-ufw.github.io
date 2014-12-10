@@ -5,12 +5,12 @@ h1.super,
 .worker .action.panel.assign,
 .choose-dates,
 .worker-selected,
-.calendar-view {
+.calendar-view,
+.worker .Tickets .table-list .action.messages,
+.worker .table-list .action.panel,
+.map .tab-pane .detail,
+.map .tab-pane .confirm {
 	display: none;
-}
-
-.map-holder {
-	overflow: visible;
 }
 
 
