@@ -69,7 +69,8 @@ header nav .user-edit,
 .page-action-panel input,
 .section-controls .action.panel .filter.search,
 .add-members .checkbox label,
-.map .tab-pane .quick-select {
+.map .tab-pane .quick-select,
+.calendar-day .ticket {
 	font-size: 1.1em;
 }
 
@@ -81,7 +82,8 @@ header nav .user-edit,
 .filter.dropdown .dropdown-menu,
 .table-list td,
 .map .tab-pane.actions .iconButton,
-.section-detail {
+.section-detail,
+.calendar .header {
 	font-size: 1.15em;
 }
 
@@ -111,7 +113,10 @@ header nav .user-edit,
 a.page-action,
 .group.materials .ti.number,
 .iconly input[type="checkbox"]:after,
-.calendar .calendar-month .work {
+.calendar .calendar-month .work,
+.calendar-day .ticket .ti .time,
+.calendar-day .ticket .ti .ticketname,
+.calendar-day a.get-more {
 	font-size: 1.3em;
 }
 
@@ -147,7 +152,8 @@ body,
 .filter.dropdown .btn.btn-default.dropdown-toggle .caret,
 th.sorting:after,
 .section-actions a.iconButton:before,
-.section-no-content {
+.section-no-content,
+.calendar-day .header .time:before {
 	font-size: 1.9em;
 }
 
@@ -233,14 +239,16 @@ header .nav .number,
 .Groups .table-list table .subgroups,
 .section-no-content,
 .map .icon-vacation,
-.calendar .view-bar {
+.calendar .view-bar,
+.calendar-day a.get-more {
 	text-align: center;
 }
 
 .map .tab-pane .button-holder,
 .table-list table .estimated,
 .filters-choices,
-.Groups table .members {
+.Groups table .members,
+.calendar-day .ticket .continue {
 	text-align: right;
 }
 
@@ -289,7 +297,10 @@ a.page-action:focus,
 .message a.closer:focus,
 .calendar .view-bar a,
  .calendar .view-bar a:hover,
- .calendar .view-bar a:focus {
+ .calendar .view-bar a:focus,
+ .calendar-day a.get-more,
+ .calendar-day a.get-more:hover,
+ .calendar-day a.get-more:focus {
 	text-decoration: none;
 }
 
@@ -386,7 +397,8 @@ a.disabled,
 .pagination:after,
 .map .tabs-control:after,
 .subgroups-toggle:after,
-.calendar .view-bar:after {
+.calendar .view-bar:after,
+.calendar-day .ticket:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -420,7 +432,8 @@ nav.subnav ul {
 .choose-dates .between label,
 .action-panel .choice.searched,
 .pagination,
-.map .tab-pane.actions .iconButton {
+.map .tab-pane.actions .iconButton,
+.calendar-day a.get-more {
 	display: block;
 }
 
@@ -461,7 +474,11 @@ a.iconly,
 a.page-action,
 .subgroups-detail,
 .calendar .date-nav,
-.calendar .date-nav a {
+.calendar .date-nav a,
+.calendar .store .time,
+.calendar .store .storename,
+.calendar-day .ticket .continue .status,
+.calendar-day .ticket .continue a {
 	display: inline-block;
 }
 
@@ -493,7 +510,8 @@ a.page-action,
 .table-list .actions,
 .pagination .inner,
 .map a.collapse,
-.calendar .view {
+.calendar .view,
+.calendar-day .ticket .due {
 	display: inline-block;
 	float: right;
 }
@@ -623,7 +641,8 @@ a.page-action,
 .calendar .view-bar .date-nav a,
 .calendar-month .work div,
 .calendar-month .work .time:before,
-.calendar-month .work .tickets:before {
+.calendar-month .work .tickets:before,
+.calendar .header .controls .ti {
 	position: relative;
 }
 
@@ -641,7 +660,8 @@ header nav .number,
 a.page-action span.im,
 .message a.closer,
 .map .tab-pane .assign-action.detail,
-.map .blocked-day.detail  {
+.map .blocked-day.detail,
+.calendar-day .header .time:before  {
 	position: absolute;
 }
 
@@ -793,7 +813,12 @@ select,
 	color: #9e9e9e;
 }
 
-.datepicker td.day.disabled {
+.datepicker td.day.disabled,
+.calendar .past,
+.calendar-day .store .header,
+.calendar-day .store .ticket,
+.calendar-day.past .ticket.today .due,
+.calendar-day a.ticketname {
 	color: #999999;
 }
 
@@ -806,8 +831,7 @@ select,
 .calendar .view a.active,
 .calendar .view a.active:hover,
 .calendar .view a.active:focus,
-.calendar th,
-.calendar .past {
+.calendar th {
 	color: #ababab; 
 }
 
@@ -843,12 +867,21 @@ a.iconButton.disabled:focus,
 	background: #fafafa;
 }
 
-.calendar-month td.this-month {
+.calendar-month td.this-month,
+.calendar-day .ticket {
 	background: #f7f7f7;
 }
 
 .key:before {
 	border: 8px solid #f7f7f7;
+}
+
+.calendar-day .store .header {
+	background: #dfdfdf;
+}
+
+.calendar-day .store .header .time {
+	background: #b4b4b4;
 }
 
 .search.disabled input,
@@ -888,8 +921,14 @@ input[type="checkbox"]:after,
 .map .tab-pane a.buttonly.main,
 .page-action-panel .actions a.buttonly.disabled,
 .page-action-panel .actions a.buttonly.disabled:hover,
-.page-action-panel .actions a.buttonly.disabled:focus {
+.page-action-panel .actions a.buttonly.disabled:focus,
+.calendar-day .header .time,
+.calendar-day .ticket .continue a {
 	color: #ffffff;
+}
+
+.calendar .header .arrow .im:before {
+	color: rgba(255, 255, 255, .85);
 }
 
 .checker .supercheck:after,
@@ -1099,6 +1138,15 @@ input[type="radio"]:checked:after,
 	bottom: -7px;
 }
 
+.calendar .header .controls .arrow {
+	top: 4px;
+}
+
+.calendar-day .header .time:before {
+	top: 0;
+	left: 0;
+}
+
 
 
 /* borders */
@@ -1247,6 +1295,10 @@ header .nav li {
 .tabnav .btn.btn-default.dropdown-toggle {
 	border-left: 1px solid rgba(255, 255, 255, .3);
 	border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.calendar-day .store .controls {
+	border-color: transparent;
 }
 
 .nav-tabs > li.active > a, 
@@ -2495,8 +2547,14 @@ div.main.wrapper + div.inner {
 }
 
 .instructions .item .actions a.buttonly,
-.group a.buttonly {
+.group a.buttonly,
+.calendar-day .ticket .continue a.buttonly,
+.calendar-day .ticket .continue .status {
 	padding: .5em 1.2em .5em 1em;
+}
+
+.calendar-day .ticket .continue .status {
+	padding-right: .5em;
 }
 
 .primary.actions .right {
@@ -4906,6 +4964,60 @@ a.page-action.delete-button span.im {
 
 .calendar-day .summary .visible {
 	padding-right: .5em;
+}
+
+.calendar-day .header .controls {
+	padding-top: 0;
+	padding-left: 0;
+}
+
+.calendar-day .store {
+	margin-top: 6px;
+}
+
+.calendar-day .header .time,
+.calendar-day .header .storename {
+	padding: 5px .5em 4px .5em;
+}
+
+.calendar-day .header .time {
+	padding-left: 1.8em;
+}
+
+.calendar-day .ticket,
+.calendar-day a.get-more {
+	margin: 2px 0 0 0;
+	padding: .5em 1em 1.5em 1em;
+}
+
+.calendar-day a.get-more {
+	padding-bottom: .5em;
+}
+
+.calendar-day .ticket .time {
+	padding-left: 2em;
+}
+
+.calendar-day .ticket .ticketname,
+.calendar-day .ticket .description {
+	width: 85%;
+}
+
+.calendar-day .ticket .ticketname {
+	padding-left: 2em;
+}
+
+.calendar-day .ticket .description {
+	padding: .4em 1em 0 7.3em;
+}
+
+.calendar-day .ticket .continue {
+	margin: 0 -1em -1.5em 0;
+	padding-top: 1em;
+}
+
+.calendar-day .ticket .continue a {
+	margin-bottom: 1px;
 }
 
 

@@ -32,7 +32,8 @@ input[type="checkbox"]:after,
 .map .requirements-list li:before,
 .section-actions a:before,
 .calendar-month .work .tickets:before,
-.calendar-month .work .time:before {
+.calendar-month .work .time:before,
+.calendar-day .header .time:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -231,6 +232,7 @@ th.sorting_desc:after,
 	content: "\e62d";
 }
 .calendar-month .has-tickets .work .time:before,
+.calendar-day .header .time:before,
 .icon-time:before {
 	content: "\e62e";
 }

@@ -151,7 +151,9 @@ html, body {
 	a.buttonly,
 	.section.title a.navly:after,
 	.admin .table-list td.location a,
-	.calendar td.incomplete .work {
+	.calendar td.incomplete .work,
+	.calendar-day .store.incomplete .header,
+	.calendar-day .ticket.incomplete {
 		color: #4a4a4a;
 	}
 	
@@ -264,7 +266,8 @@ html, body {
 	.remove,
 	.remove:hover,
 	.item.required > .plainLabel:after,
-	.tab-pane.actions .detail:before {
+	.tab-pane.actions .detail:before,
+	.calendar-day .ticket.incomplete.today {
 		color: #db2023;
 	}
 	
@@ -354,7 +357,8 @@ html, body {
 	 .quick-select a,
 	 .map .nav-tabs > li.active > a:before,
 	 .table-list .controls .actions.active a,
-	 .calendar .view-bar .date-statement {
+	 .calendar .view-bar .date-statement,
+	 .calendar-day .ticket.incomplete a.ticketname {
 		color: #4890e2;
 	}
 	
@@ -363,7 +367,8 @@ html, body {
 	.filter.dropdown .caret,
 	.filter.search .icon-search,
 	.key.submitted:before,
-	.map .nav-tabs > li > a {
+	.map .nav-tabs > li > a,
+	.calendar-day .ticket .continue a {
 		background: #4890e2;
 	}
 	
@@ -396,6 +401,22 @@ html, body {
 	
 	.calendar-month td.this-month.today {
 		background: #eaf2fd;
+	}
+	
+	.calendar-day.today .store .header {
+		background: #d5e7fa;
+	}
+	
+	.calendar-day.today .store .header .time {
+		background: #8db2db;
+	}
+	
+	.calendar-day.today .store .ticket {
+		background: #f5f9fe;
+	}
+	
+	.calendar-day a.get-more {
+		background: #ecf4fb;
 	}
 	
 	.filters-holder .view a:hover,
@@ -704,14 +725,17 @@ a.page-action,
 .section-controls .action.panel input[type="text"],
 .add-members .name,
 .calendar .view-bar,
-.calendar .calendar-month .work {
+.calendar .calendar-month .work,
+.calendar .header,
+.calendar-day .ticket .ti .time,
+.calendar-day .ticket .ti .ticketname {
 	font-family: Helvetica-Neue-Light;
 }
 
 .regular,
 select option,
 .subcontent.sub .subnav li,
-.tabnav li .dropdown li a {
+.tabnav li .dropdown li a{
 	font-family: Helvetica-Neue;
 }
 .sidenav .user-name,
@@ -728,7 +752,8 @@ select option,
 .datepicker tr th.switch,
 .instruction-footer .item.count .described,
 .table-list .controls .summary .selected span,
-.map .tab-pane .mini .value {
+.map .tab-pane .mini .value,
+.calendar-day .ticket .due .value {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }
