@@ -38,7 +38,9 @@ header nav .user-edit,
 .worker .nav-active-holder,
 .worker .map .tab-pane .assign-action.detail,
 .tab-pane.actions .assign-action.detail.required:before,
-.Groups .table-list table .org-name {
+.Groups .table-list table .org-name,
+.admin .calendar .worker,
+.worker .calendar .admin {
 	display: none;
 }
 
@@ -50,7 +52,8 @@ header nav .user-edit,
 .map .assign-action.detail .filters-choices,
 .map .assign-action.detail .filters-choices span.im,
 .map-drawer .tabs-control a.collapse:before,
-.calendar-day .no-scheduled .wrapper .primary.actions a {
+.calendar-day .no-scheduled .wrapper .primary.actions a,
+.calendar-day .blocked .wrapper .primary.actions a {
 	font-size: .9em;
 }
 
@@ -105,7 +108,8 @@ header nav .user-edit,
 .section-controls .action.panel input[type="text"],
 .add-members .checkbox.new .name,
 .calendar .view-bar,
-.calendar .view-bar .date-nav a {
+.calendar .view-bar .date-nav a,
+.calendar .worker-selected .filters-choices .copy {
 	font-size: 1.2em;
 }
 
@@ -159,7 +163,8 @@ body,
 th.sorting:after,
 .section-actions a.iconButton:before,
 .section-no-content,
-.calendar-day .header .time:before {
+.calendar-day .header .time:before,
+.calendar .calendar-search h1 {
 	font-size: 1.9em;
 }
 
@@ -251,7 +256,10 @@ header .nav .number,
 .map .icon-vacation,
 .calendar .view-bar,
 .calendar-day a.get-more,
-.calendar .action-panel .wrapper input {
+.calendar .action-panel .wrapper input,
+.calendar-day .blocked .action-panel,
+.calendar .calendar-search,
+.calendar .worker-selected .filters-choices {
 	text-align: center;
 }
 
@@ -496,7 +504,9 @@ a.page-action,
 .calendar-day .ticket .continue .status,
 .calendar-day .ticket .continue a,
 .calendar .action-panel .wrapper,
-.calendar-day .no-scheduled .primary.actions {
+.calendar-day .no-scheduled .primary.actions,
+.calendar .calendar-search .filter.search,
+.calendar .worker-selected .filters-choices .copy {
 	display: inline-block;
 }
 
@@ -700,7 +710,8 @@ header .navbar-collapse.in {
 .table-list table,
 .map .tab-pane .description.ellipsify,
 .instruction.duplicate,
-.page-action-panel input.name {
+.page-action-panel input.name,
+.calendar-month {
 	width: 100%;
 }
 
@@ -996,7 +1007,8 @@ input[type="radio"]:after,
 
 .map .tab-pane a.buttonly.main.disabled,
 .map .tab-pane a.buttonly.main.disabled:hover,
-.map .tab-pane a.buttonly.main.disabled:focus {
+.map .tab-pane a.buttonly.main.disabled:focus,
+.calendar-day h1.graphic {
 	background: #cccccc;
 }
 
@@ -1309,12 +1321,9 @@ header .nav li {
 .table-list .controls,
 .table-list tr,
 .action.panel,
-.table-list .action.messages .message {
+.table-list .action.messages .message,
+.calendar .view-bar {
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
-}
-
-.calendar-day .controls {
-	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 .tabnav  li {
@@ -4979,7 +4988,7 @@ a.page-action.delete-button span.im {
 }
 
 .calendar-month {
-	width: 100%;
+	margin-top: -1px;
 }
 
 .calendar-month th {
@@ -5082,7 +5091,7 @@ a.page-action.delete-button span.im {
 
 .calendar-day h1.graphic {
 	margin: 5px 0 -6px 0;
-	padding: .5em 1em .8em .5em;
+	padding: .3em 1em .8em .5em;
 }
 
 .calendar-day .no-scheduled .wrapper {
@@ -5098,9 +5107,11 @@ a.page-action.delete-button span.im {
 
 .calendar-day .action-panel h1 {
 	padding-top: .8em;
+	padding-bottom: 0;
 }
 
-.calendar-day .no-scheduled .primary.actions a {
+.calendar-day .no-scheduled .primary.actions a,
+.calendar-day .blocked .primary.actions a {
 	padding-left: 0;
 	padding-right: 0;
 	width: 136px;
@@ -5116,6 +5127,18 @@ a.page-action.delete-button span.im {
 
 .calendar-day .no-scheduled .wrapper.blocker:before {
 	bottom: -10px;
+}
+
+.calendar-day .blocked .action-panel h1 {
+	margin-bottom: .5em;
+}
+
+.calendar .calendar-search {
+	margin-top: 3em;
+}
+
+.calendar .worker-selected {
+	margin: 1em 0 -1em 0;
 }
 
 

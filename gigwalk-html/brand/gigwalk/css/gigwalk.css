@@ -153,7 +153,8 @@ html, body {
 	.admin .table-list td.location a,
 	.calendar td.incomplete .work,
 	.calendar-day .store.incomplete .header,
-	.calendar-day .ticket.incomplete {
+	.calendar-day .ticket.incomplete,
+	.calendar .worker-selected .filters-choices .copy {
 		color: #4a4a4a;
 	}
 	
@@ -166,10 +167,6 @@ html, body {
 	.subnav li a,
 	.section-no-content {
 		color: #aaaaaa;
-	}
-	
-	.calendar-day h1.graphic {
-		background: #b4b4b4;
 	}
 	
 	.gray-cancel,
