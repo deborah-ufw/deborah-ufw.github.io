@@ -168,6 +168,10 @@ html, body {
 		color: #aaaaaa;
 	}
 	
+	.calendar-day h1.graphic {
+		background: #b4b4b4;
+	}
+	
 	.gray-cancel,
 	.primary.actions a.cancel,
 	.button-holder a.cancel,
@@ -181,7 +185,8 @@ html, body {
 	.primary.actions a.cancel,
 	.button-holder a.cancel,
 	.choose-dates a.cancel,
-	.page-action-panel a.cancel {
+	.page-action-panel a.cancel,
+	.calendar .action-panel .primary.actions a.buttonly.cancel {
 		border-color: #c6c6c6;
 	}
 	
@@ -267,7 +272,7 @@ html, body {
 	.remove:hover,
 	.item.required > .plainLabel:after,
 	.tab-pane.actions .detail:before,
-	.calendar-day .ticket.incomplete.today {
+	.calendar-day .ticket.incomplete.today .due {
 		color: #db2023;
 	}
 	
@@ -368,12 +373,17 @@ html, body {
 	.filter.search .icon-search,
 	.key.submitted:before,
 	.map .nav-tabs > li > a,
-	.calendar-day .ticket .continue a {
+	.calendar-day .ticket .continue a,
+	.calendar .action-panel .primary.actions a.buttonly {
 		background: #4890e2;
 	}
 	
 	.map .nav-tabs > li > a:hover,
-	.map .nav-tabs > li > a:focus {
+	.map .nav-tabs > li > a:focus,
+	.calendar-day .ticket .continue a:hover,
+	.calendar-day .ticket .continue a:focus,
+	.calendar .action-panel .primary.actions a.buttonly:hover,
+	.calendar .action-panel .primary.actions a.buttonly:focus {
 		background: #539ce9;
 	}
 	
@@ -496,7 +506,8 @@ html, body {
 	.filters-choices .choice,
 	.filters-choices .choice .close,
 	.choose-dates a,
-	.quick-select a {
+	.quick-select a,
+	.calendar .action-panel .primary.actions a.buttonly {
 		border-color: rgba(64, 145, 230, .7);
 	}
 	
@@ -728,7 +739,8 @@ a.page-action,
 .calendar .calendar-month .work,
 .calendar .header,
 .calendar-day .ticket .ti .time,
-.calendar-day .ticket .ti .ticketname {
+.calendar-day .ticket .ti .ticketname,
+.calendar-day h1.graphic {
 	font-family: Helvetica-Neue-Light;
 }
 

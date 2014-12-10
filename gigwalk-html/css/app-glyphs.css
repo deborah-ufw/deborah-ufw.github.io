@@ -33,7 +33,9 @@ input[type="checkbox"]:after,
 .section-actions a:before,
 .calendar-month .work .tickets:before,
 .calendar-month .work .time:before,
-.calendar-day .header .time:before {
+.calendar-day .header .time:before,
+.calendar-day h1.graphic:before,
+.calendar-day .no-scheduled .wrapper.blocker:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -236,6 +238,7 @@ th.sorting_desc:after,
 .icon-time:before {
 	content: "\e62e";
 }
+.calendar-day .no-scheduled .wrapper.blocker:before,
 .icon-vacation-illust:before {
 	content: "\e630";
 }
@@ -253,6 +256,10 @@ th.sorting_desc:after,
 .iconButton.reschedule:before,
 .icon-reschedule:before {
 	content: "\e634";
+}
+.calendar-day h1.graphic:before,
+.icon-ticket-solid:before {
+	content: "\e635";
 }
 
 

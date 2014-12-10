@@ -632,16 +632,68 @@
                 </div>
               </div><!-- ENDS ticket -->
               
+              <!-- "get-more-holder" after last ticket in store ------------------------------------------  
+                    -- place "get-more" button IF scheduled time for the day < 7 hours 
+              ---------------------------------------------------------------------------------------- -->
+              <div class="get-more-holder">
+                <a href="javascript:;" class="get-more">Get more tickets (nearby or) at this location</a>
+              </div>      
+              
             </div><!-- ENDS tickets -->
-            
-            <a href="javascript:;" class="get-more">Get more tickets (nearby or) at this location</a>
             
           </div><!-- ENDS store -->
           
-          
-          
         </div><!-- ENDS stores -->
         
+        <!-- "search-more-holder" after last store in day ------------------------------------------  
+              -- place "search-more" div IF scheduled time for the day < 7 hours 
+        ---------------------------------------------------------------------------------------- -->
+        <div class="search-more-holder">
+          <div class="search-more action-panel">
+            <h1>Schedule more tickets</h1>
+            <div class="center">
+              <div class="wrapper">
+                <div class="finder">
+                  <span>Find tickets within</span> 
+                  <input type="text" placeholder="25" /> miles of <input type="text" placeholder="Zip Code" class="zip" />
+                </div>
+              </div>
+            </div>
+            <div class="primary actions">
+              <div class="right">
+                <a class="buttonly cancel" href="javascript:;">Cancel</a>
+                <a class="buttonly" href="javascript:;">Show list</a>
+              </div>
+            </div>
+          </div><!-- ENDS search-more -->
+        </div><!-- ENDS search-more holder --> 
+        
+        <!-- "no-scheduled-holder"   --------------------------------------------------------------- 
+              -- place "no-scheduled" div IF not past day, if not blocked day, if no tickets
+        ---------------------------------------------------------------------------------------- -->
+        <div class="no-scheduled-holder">
+          <div class="no-scheduled">
+            <h1 class="graphic">No scheduled tickets</h1>
+            <div class="action-panel">
+              <h1>What would you like to do?</h1>
+              <div class="center">
+                <div class="wrapper blocker">
+                  <div class="primary actions">
+                    <a class="buttonly" href="javascript:;">Block day</a>
+                  </div>
+                </div>
+                <div class="wrapper finder">
+                  <span class="copy">Find tickets within</span> 
+                  <input type="text" placeholder="25" /> <span class="miles">miles of</span> <input type="text" placeholder="Zip Code" class="zip" />
+                  <div class="primary actions">
+                    <a class="buttonly" href="javascript:;">Show list</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- ENDS no-scheduled -->
+        </div><!-- ENDS no-scheduled holder --> 
+
         
         
         <!-- ****************** END CALENDAR DAY VIEW *****************
