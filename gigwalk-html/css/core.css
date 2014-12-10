@@ -772,7 +772,8 @@ header .navbar-collapse.in {
 .iconButton,
 .filters-choices .choice .value,
 .filters-choices .choice .close,
-a.page-action {
+a.page-action,
+.calendar-month .work div {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
@@ -3945,7 +3946,7 @@ td.table-actions a {
 
 @media (min-width: 736px) and (max-width: 855px) {
 	
-	.admin .Tickets .view {
+	.admin .Tickets .filters-holder .view {
 		width: 100%; 
 		clear: both;
 	}
@@ -5178,6 +5179,79 @@ a.page-action.delete-button span.im {
 .calendar .worker-selected .filters-choices .choice {
 	margin-left: 0;
 }
+
+/* Calendar month sizes down while sidebar shows - Grace */
+
+@media (max-width: 990px) {
+	
+	.admin .view-bar {
+		text-align: left;
+	}
+	
+	.admin .calendar .view-bar .date-nav a.left {
+		padding-left: 0;
+	}
+	
+}
+
+@media (min-width: 775px) and (max-width: 990px) {
+	
+	.admin .calendar-month .work {
+		margin-top: -.6em;
+	}
+	
+	.admin .calendar-month .work div {
+		font-size: .8em;
+	}
+	
+	.admin .calendar-month .work .time {
+		margin-top: -.8em;
+	}
+		
+}
+
+/* Calendar month goes responsive while sidebar shows - Grace */
+
+@media (min-width: 665px) and (max-width: 774px) {
+	
+	.admin .calendar-month th,
+	.admin .calendar-month td {
+		display: none;
+	}
+	
+	.admin .calendar-month td.this-month {
+		display: block;
+		float: left;
+		width: 100%;
+		border-left-width: 0px;
+		border-right-width: 0px;
+		border-top-width: 0px;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
+	
+	.admin .calendar-month td.this-month {
+		background: #ffffff;
+	}
+	
+	.admin .calendar-month td.this-month.past {
+		background: #f7f7f7;
+	}
+	
+	.admin .calendar-month td.this-month.blocked {
+		background: #e6e6e6;
+	}
+	
+	.admin .calendar-month td.blocked:hover,
+	.admin .calendar-month td.blocked:focus {
+		background: #dadada !important;
+	}
+	
+	.admin .calendar-month td.today {
+		border-top: 5px solid #71adec;
+	}
+	
+}
+
 
 
 /* heredeb */
