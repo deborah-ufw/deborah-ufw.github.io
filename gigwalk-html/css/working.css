@@ -4,7 +4,9 @@
 h1.super,
 .worker .action.panel.assign,
 .choose-dates,
-.calendar-search {
+.calendar-search,
+.worker-selected,
+.calendar-view {
 	display: none;
 }
 
