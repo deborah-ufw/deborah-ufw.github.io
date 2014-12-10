@@ -457,7 +457,8 @@ nav.subnav ul {
 .pagination,
 .map .tab-pane.actions .iconButton,
 .calendar-day a.get-more,
-.calendar-day .no-scheduled .wrapper.finder span.copy {
+.calendar-day .no-scheduled .wrapper.finder span.copy,
+.map .tab-pane a.requirements {
 	display: block;
 }
 
@@ -1335,7 +1336,7 @@ header .nav li {
 }
 
 .tabnav  li.active {
-	border-right: 1px solid rgba(0, 0, 0, .2);
+	border-right: 1px solid rgba(0, 0, 0, .5);
 }
 
 .viewing.icon-buttons a,
@@ -1382,6 +1383,7 @@ header nav .dropdown-menu {
 
 .tabnav li.buttonly a,
 .tabnav .btn.btn-default.dropdown-toggle,
+.tabnav li.dropdownly.right,
 .tabnav li .dropdown li,
 .tabnav li.active .dropdown li,
 .table-list .controls .iconButton.last,
@@ -2071,7 +2073,7 @@ div.main.wrapper + div.inner {
 		padding: 0 25px 0 5px;
 			top: 5px;
 		width: auto;	
-		max-width: 200px;
+		max-width: 160px;
 		background: none;	
 		border-left-width: 0;
 		border-bottom-width: 0;
@@ -3520,7 +3522,7 @@ a.iconly:before {
 }
 
 .action.messages .message {
-	padding: 0 4.5em .5em 1em;
+	padding: 0 2em .5em 1em;
 }
 
 .table-list h1,
@@ -3876,6 +3878,7 @@ td.table-actions a {
 	}
 	
 	.admin .Tickets .table-list .action.panel {
+		padding-right: .5em;
 		padding-left: .5em;
 	}
 	
@@ -3890,7 +3893,7 @@ td.table-actions a {
 	
 	.action.panel.assign .radios {
 		margin-top: 1em;
-		margin-left: 10px; 
+		margin-left: 5px; 
 	}
 	
 	.admin .Tickets .table-list .action.panel .warning {
@@ -3916,6 +3919,15 @@ td.table-actions a {
 		margin: 0 8px 8px 1px;
 	}
 	
+	.admin .Tickets .dash > .filters-choices .choice .close {
+		padding-top: 0;
+	}
+	
+	.admin .Tickets .dash > .filters-choices .choice, 
+	.admin .Tickets .dash > .filters-choices .choice .close {
+	height: 36px;
+	}
+		
 	.admin .Tickets .dash > .filters-choices .choice .value {
 		font-size: 1.1em;
 		padding-left: .8em;
@@ -3924,10 +3936,6 @@ td.table-actions a {
 	
 	.admin .Tickets .dash > .filters-choices .choice .im {
 		font-size: .9em;
-	}
-	
-	.admin .Tickets .dash > .filters-choices .choice .close {
-		padding-top: 0;
 	}
 	
 }
@@ -4274,7 +4282,7 @@ td.table-actions a {
 
 /* Grace */
 
-@media (max-width: 990px) {
+@media (max-width: 1210px) {
 	
 	.admin .Tickets .table-list .summary {
 		margin-bottom: 8px;
@@ -4293,6 +4301,11 @@ td.table-actions a {
 		padding-right: .5em;
 		padding-left: 0;
 		border-right-color: transparent;
+	}
+	
+	.admin .action.panel .item, 
+	.admin .action.panel .warning {
+		margin: 1em 0 0 .5em;
 	}
 	
 	
@@ -4523,7 +4536,7 @@ td.table-actions a {
 @media (max-width: 805px) {
 	
 	.admin .Tickets .action.panel.assign .radio .choose.list {
-		margin-left: 0;
+		margin-left: -5px;
 	}
 	
 	.admin .Tickets .table-list .choose.list th {
@@ -4541,7 +4554,7 @@ td.table-actions a {
 	
 }
 
-@media (min-width: 501px) and (max-width: 805px) {
+@media (min-width: 501px) and (max-width: 1025px) {
 	
 	.admin .Tickets .table-list .choose.list th:after {
 		float: none;
@@ -5155,6 +5168,14 @@ a.page-action.delete-button span.im {
 
 .calendar .worker-selected {
 	margin: 1em 0 -1em 0;
+}
+
+.calendar .worker-selected .copy {
+	margin-right: 8px;
+}
+
+.calendar .worker-selected .filters-choices .choice {
+	margin-left: 0;
 }
 
 

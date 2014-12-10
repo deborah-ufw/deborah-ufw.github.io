@@ -288,14 +288,11 @@ html, body {
 	.primary.actions a.delete,
 	.messages .message.problem,
 	.problem a.closer,
-	.map .tab-pane .warning,
-	.tab-pane.actions .warning,
-	.choose-dates .warning,
+	.warning,
 	.Tickets .dash td.status span.expired:before,
 	.messages .problem span.exclaim:before,
 	.instructions .duplicating-message,
 	.instructions .duplicating-message a .im,
-	.page-action-panel .warning,
 	a.page-action.delete-button,
 	.page-action-panel a.buttonly.delete {
 		color: #ff5157;

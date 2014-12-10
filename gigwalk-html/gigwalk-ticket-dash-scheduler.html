@@ -69,7 +69,7 @@
 
  
 </head>
-<body class="body">
+<body class="body admin">
 
 <!-- top navigation -->
 <header>
@@ -528,7 +528,7 @@
         
         <!-- Panel for Admin "Reschedule" (Grace only) -->
         <div class="action panel reschedule">
-          <h1>Extend 20 Tickets</h1>
+          <h1>Reschedule 20 Tickets</h1>
           <div class="hint">Due dates of tickets that are “hard scheduled” will be updated to the selected date.</div>
           <div class="item required text">
             <div class="plainLabel">Choose Date</div>
@@ -676,10 +676,10 @@
                   Kelly Wentworth
                 </a>
               </td>
-              <td class="sorting scheduled">
+              <td class="sorting scheduled worker">
                 11/05/2014 
               </td>
-              <td class="sorting due worker">
+              <td class="sorting due">
                 11/03/2014 
               </td>
               <td class="sorting estimated worker">
@@ -909,7 +909,11 @@
                 <a href="#info" class="info" role="tab" data-toggle="tab"></a>
               </li>
               <li>
-                <a href="#directions" class="directions" role="tab" data-toggle="tab"></a>
+                <!-- Annotation 69 -----------------------------------------
+                       - shows for worker only when store count = 1
+                       - html change - add class "worker"
+                -------------------------------------------------------- -->
+                <a href="#directions" class="directions worker" role="tab" data-toggle="tab"></a>
               </li>
               <li>
                 <a href="#actions" class="actions" role="tab" data-toggle="tab"></a>
@@ -946,9 +950,10 @@
                 
                 <!-- Annotation 42, 88 
                    ---------------------------------------  LOGIC   ---------------------------------------  
-                   if Ticket count > 1, do not show "requirements" toggle link
+                    - if Ticket count > 1, do not show "requirements" toggle link
+                    - add class "worker" to the toggle
                    ------------------------------------------------------------------------------------- -->
-                <a class="requirements" href="javascript:;">Requirements <span class="cue">( + )</span></a>
+                <a class="requirements worker" href="javascript:;">Requirements <span class="cue">( + )</span></a>
                 <div class="requirements-list">
                   <ul>
                     <li>3+ megapixel camera</li>

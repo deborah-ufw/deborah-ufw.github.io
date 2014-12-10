@@ -4,7 +4,6 @@
 h1.super,
 .worker .action.panel.assign,
 .choose-dates,
-.calendar-search,
 .worker-selected,
 .calendar-view {
 	display: none;
@@ -13,3 +12,6 @@ h1.super,
 .map-holder {
 	overflow: visible;
 }
+
+
+
