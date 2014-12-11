@@ -5960,13 +5960,16 @@ html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-titl
 		top: 0;
 	}
 	
-	.map a.collapse {
-    padding: 6px 10px 1px 5px;
-	}
-	
 	.map .assign-action.detail .choice.searched,
 	.map .assign-action-detail .choice.searched .close {
 		height: 35px;
+	}
+	
+	.action.panel.assign .choice.searched,
+	.action.panel.assign .choice.searched .close,
+	.calendar .worker-selected .choice,
+	.calendar .worker-selected .choice .close {
+		height: 40px;
 	}
 	
 	.map .assign-action.detail .filter.search input[type="text"] {

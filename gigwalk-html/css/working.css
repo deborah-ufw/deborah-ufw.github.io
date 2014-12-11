@@ -5,13 +5,10 @@ h1.super,
 .worker .action.panel.assign,
 .choose-dates,
 .calendar-search,
-.worker .Tickets .table-list .action.messages,
-.worker .table-list .action.panel,
+.map .blocked-day.detail,
 .map .tab-pane .detail,
 .map .tab-pane .confirm,
-.calendar-day {
+.calendar-month {
 	display: none;
 }
-
-
 
