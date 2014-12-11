@@ -505,7 +505,7 @@ html, body {
 		border-color: rgba(64, 145, 230, .7);
 	}
 	
-	.admin .calendar-month td.today {
+	.calendar-month td.today {
 		border-top-color: rgba(64, 145, 230, .9);
 	}
 	

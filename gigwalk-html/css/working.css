@@ -8,7 +8,8 @@ h1.super,
 .worker .Tickets .table-list .action.messages,
 .worker .table-list .action.panel,
 .map .tab-pane .detail,
-.map .tab-pane .confirm {
+.map .tab-pane .confirm,
+.calendar-month {
 	display: none;
 }
 
