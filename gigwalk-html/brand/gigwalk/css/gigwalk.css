@@ -534,7 +534,11 @@ html, body {
 	.group a.buttonly:hover,
 	.group a.buttonly:focus,
 	.filter.dates:hover,
-	.filter.dates:focus {
+	.filter.dates:focus,
+	.filter.search .icon-search:hover,
+	.filter.search .icon-search:focus,
+	.filter.dropdown .caret:hover,
+	.filter.dropdown .caret:focus {
 		background: #2771da;
 	}
 	

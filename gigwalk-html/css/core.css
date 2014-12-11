@@ -1153,6 +1153,10 @@ input[type="radio"]:checked:after,
 		left: 33px;
 }
 
+.map .ticketlink {
+	top: -5px;
+}
+
 .map .ticketlink .icon-ticket:before {
 	margin-right: -5px;
 		left: -5px;
@@ -1336,7 +1340,7 @@ header .nav li {
 .action.panel,
 .table-list .action.messages .message,
 .calendar .view-bar {
-	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	border-bottom: 1px solid rgba(0, 0, 0, .15);
 }
 
 .tabnav  li {
@@ -3766,6 +3770,7 @@ td.table-actions a {
 
 .map .tab-pane .assign-action.detail,
 .map .blocked-day.detail {
+	margin-top: 0;
 	padding: 1em;
 	height: 300px;
 		top: 65px;
@@ -3895,6 +3900,10 @@ td.table-actions a {
 	
 	.admin .Tickets .table-list .action.panel .item {
 		margin-left: 0;  
+	}
+	
+	.admin .Tickets .table-list .action.panel h1 {
+		padding-left: 0;  
 	}
 	
 	.admin .Tickets .table-list .action.panel .item .plainLabel {
@@ -4304,7 +4313,7 @@ td.table-actions a {
 	}
 	
 	.admin .Tickets .dash .table-list .controls .actions {
-		margin: .5em 0;
+		margin: .5em 0 -2px 0;
 		float: none;
 	}
 	
