@@ -53,7 +53,8 @@ header nav .user-edit,
 .map .assign-action.detail .filters-choices span.im,
 .map-drawer .tabs-control a.collapse:before,
 .calendar-day .no-scheduled .wrapper .primary.actions a,
-.calendar-day .blocked .wrapper .primary.actions a {
+.calendar-day .blocked .wrapper .primary.actions a,
+.calendar-month .date-num {
 	font-size: .9em;
 }
 
@@ -509,7 +510,8 @@ a.page-action,
 .calendar-day .no-scheduled .primary.actions,
 .calendar .calendar-search .filter.search,
 .calendar .worker-selected .filters-choices .copy,
-.calendar-month .work {
+.calendar-month .work,
+.calendar-month .date-num:after {
 	display: inline-block;
 }
 
@@ -851,7 +853,7 @@ select,
 }
 
 .datepicker td.day.disabled,
-.calendar .past,
+.calendar-day .past,
 .calendar-day .store .header,
 .calendar-day .store .ticket,
 .calendar-day.past .ticket.today .due,
@@ -870,7 +872,8 @@ select,
 .calendar .view a.active,
 .calendar .view a.active:hover,
 .calendar .view a.active:focus,
-.calendar th {
+.calendar th,
+.calendar .past {
 	color: #ababab; 
 }
 
@@ -907,9 +910,9 @@ a.iconButton.disabled:focus,
 	background: #fafafa;
 }
 
-.calendar-month td.this-month,
+.calendar-month td.past,
 .calendar-day .ticket {
-	background: #f7f7f7;
+	background: #f9f9f9;
 }
 
 .key:before {
@@ -5028,7 +5031,7 @@ a.page-action.delete-button span.im {
 
 .calendar-month td,
 .calendar-month th span {
-	padding: 3px 6px;
+	padding: 2px 4px 6px 4px;
 }
 
 .calendar-month th {
@@ -5037,7 +5040,7 @@ a.page-action.delete-button span.im {
 }
 
 .calendar-month .work {
-	margin: -.9em 0 .8em 0;
+	margin: -.8em 0 .8em 0;
 }
 
 .calendar-month .work .time {
@@ -5192,6 +5195,13 @@ a.page-action.delete-button span.im {
 		padding-left: 0;
 	}
 	
+	.admin .calendar-day .ticket .due {
+		margin: .7em 0 .2em 7.2em;
+		display: block;
+		width: 100%;
+		float: none;
+	}
+	
 }
 
 @media (min-width: 775px) and (max-width: 990px) {
@@ -5229,12 +5239,8 @@ a.page-action.delete-button span.im {
 		border-bottom: 1px solid rgba(0, 0, 0, .1);
 	}
 	
-	.admin .calendar-month td.this-month {
-		background: #ffffff;
-	}
-	
-	.admin .calendar-month td.this-month.past {
-		background: #f7f7f7;
+	.admin .calendar-month td.past {
+		background: #fbfbfb;
 	}
 	
 	.admin .calendar-month td.this-month.blocked {
@@ -5242,12 +5248,57 @@ a.page-action.delete-button span.im {
 	}
 	
 	.admin .calendar-month td.blocked:hover,
-	.admin .calendar-month td.blocked:focus {
+	.admin .calendar-month td.blocked:focus,
+	.admin .calendar-month td.past.blocked:hover,
+	.admin .calendar-month td.past.blocked:focus {
 		background: #dadada !important;
 	}
 	
+	.admin .calendar-month td.past:hover,
+	.admin .calendar-month td.past:focus {
+		background: #f3f3f3 !important;
+	}
+	
 	.admin .calendar-month td.today {
-		border-top: 5px solid #71adec;
+		border-top-width: 10px;
+		border-top-style: solid;
+	}
+	
+	.calendar-month .date-num {
+		font-size: 1.3em;
+	}
+	
+	.calendar-month .date-num:after {
+		padding-left: .5em;
+		opacity: .5;
+	}
+	
+	.calendar-month tr td:nth-of-type(1) .date-num:after {
+		content: 'SUN ';
+	}
+	
+	.calendar-month tr td:nth-of-type(2) .date-num:after {
+		content: 'MON ';
+	}
+	
+	.calendar-month tr td:nth-of-type(3) .date-num:after {
+		content: 'TUE ';
+	}
+	
+	.calendar-month tr td:nth-of-type(4) .date-num:after {
+		content: 'WED ';
+	}
+	
+	.calendar-month tr td:nth-of-type(5) .date-num:after {
+		content: 'THU ';
+	}
+	
+	.calendar-month tr td:nth-of-type(6) .date-num:after {
+		content: 'FRI ';
+	}
+	
+	.calendar-month tr td:nth-of-type(7) .date-num:after {
+		content: 'SAT ';
 	}
 	
 }

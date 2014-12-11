@@ -479,12 +479,12 @@ html, body {
 	}
 	
 	.calendar-month td.blocked:hover,
-	.calendar-month td.this-month.blocked:hover {
+	.calendar-month td.past.blocked:hover {
 		background: #c2d5e9;
 	}
 	
-	.calendar-month td.this-month:hover {
-		background: #cbdff3;
+	.calendar-month td.past:hover {
+		background: #cbdef2;
 	}
 	
 	.calendar-month td.today:hover {
@@ -503,6 +503,10 @@ html, body {
 	.quick-select a,
 	.calendar .action-panel .primary.actions a.buttonly {
 		border-color: rgba(64, 145, 230, .7);
+	}
+	
+	.admin .calendar-month td.today {
+		border-top-color: rgba(64, 145, 230, .9);
 	}
 	
 	a.new-button {
@@ -734,7 +738,8 @@ a.page-action,
 .calendar .header,
 .calendar-day .ticket .ti .time,
 .calendar-day .ticket .ti .ticketname,
-.calendar-day h1.graphic {
+.calendar-day h1.graphic,
+.calendar-month .date-num:after {
 	font-family: Helvetica-Neue-Light;
 }
 
