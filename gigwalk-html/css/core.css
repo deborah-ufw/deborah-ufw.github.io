@@ -4490,19 +4490,22 @@ td.table-actions a {
 		padding-top: 12px;
 		padding-bottom: 13px;
 	}
-	
+
+
+/* have to move the mis-positioned "select all" off screen */	
 	.admin .Tickets th.project-title input {
 		margin: 1em 0 .5em 0;
 		display: block;
 		width: 100%;
-			left: -70px;
+			left: -370px;
 	}
-	
+
+/* now have to move the custom checkbox back into place */		
 	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
 		font-size: 20px;
 		margin-top: -6px;
 		position: relative;
-			left: 70px;
+			left: 370px;
 	}
 	
 	.admin .Tickets .dash .table-list table td.project-title input[type="checkbox"]:after {
