@@ -775,7 +775,9 @@ header .navbar-collapse.in {
 .filters-choices .choice .value,
 .filters-choices .choice .close,
 a.page-action,
-.calendar-month .work div {
+.calendar-month .work div,
+.calendar .date-nav a,
+.calendar .date-nav span {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
@@ -5183,7 +5185,7 @@ a.page-action.delete-button span.im {
 	margin-left: 0;
 }
 
-/* Calendar month sizes down while sidebar shows - Grace */
+/* Calendar sizes down - Grace */
 
 @media (max-width: 990px) {
 	
@@ -5192,6 +5194,7 @@ a.page-action.delete-button span.im {
 	}
 	
 	.admin .calendar .view-bar .date-nav a.left {
+		margin-left: -5px;
 		padding-left: 0;
 	}
 	
@@ -5200,6 +5203,26 @@ a.page-action.delete-button span.im {
 		display: block;
 		width: 100%;
 		float: none;
+	}
+	
+}
+
+/* shrink the nav for intermediate stage - Grace */
+
+@media (max-width: 850px) {
+	
+	.admin .calendar .date-nav span {
+		font-size: 2em;
+	}
+	
+	.admin .calendar .date-nav a.left {
+		padding-right: .3em
+	}
+	
+	.admin .calendar .date-nav a.right {
+		padding-left: .3em;
+		padding-right: .3em;
+			top: 7px;
 	}
 	
 }
@@ -5220,9 +5243,19 @@ a.page-action.delete-button span.im {
 		
 }
 
-/* Calendar month goes responsive while sidebar shows - Grace */
+/* Calendar month goes responsive - Grace */
 
-@media (min-width: 665px) and (max-width: 774px) {
+@media (max-width: 774px) {
+	
+	.admin .calendar .view-bar .view a {
+		font-size: 1.2em;
+	}
+	
+	.admin .calendar .view-bar .view {
+		margin: .5em 0;
+		display: block;
+		width: 100%;
+	}
 	
 	.admin .calendar-month th,
 	.admin .calendar-month td {
@@ -5303,7 +5336,56 @@ a.page-action.delete-button span.im {
 	
 }
 
+/* both Grace and Jimmy - make sure date nav fits on phone */
 
+@media (max-width: 400px) {
+	
+	.admin .calendar .date-nav span,
+	.worker .calendar .date-nav span {
+		font-size: 1.5em;
+	}
+	
+	.admin .calendar .date-nav a.left,
+	.worker .calendar .date-nav a.left  {
+		padding-right: 0;
+			top: 7px;
+	}
+	
+	.admin .calendar .date-nav a.right,
+	.worker .calendar .date-nav a.right {
+		padding-left: .2em;
+		padding-right: .2em;
+			top: 7px;
+	} 
+	
+}
+
+/* both Grace and Jimmy - make sure day view works on phone */
+
+@media (max-width: 475px) {
+	
+	.calendar .calendar-day .ticket .ti .time {
+		margin-bottom: .5em;
+		display: block;
+		width: 100%;
+	}
+	
+	.calendar .calendar-day .ticket .ti .ticketname,
+	.calendar .calendar-day .ticket .description,
+	.calendar .calendar-day .ticket .ti .time {
+		padding-left: 0;
+	}
+	
+	.admin .calendar .calendar-day .ticket .ti .due,
+	.worker .calendar .calendar-day .ticket .ti .due {
+		margin-left: 0;
+	}
+	
+	.calendar .calendar-day .ticket .description {
+		margin-bottom: 1em;
+	}
+	
+}
 
 /* heredeb */
 
