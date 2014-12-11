@@ -4295,7 +4295,7 @@ td.table-actions a {
 
 @media (max-width: 1210px) {
 	
-	.admin .Tickets .table-list .summary {
+	.admin .Tickets .dash .table-list .summary {
 		margin-bottom: 8px;
 		padding-bottom: 5px;
 		display: block;
@@ -4303,12 +4303,12 @@ td.table-actions a {
 		border-bottom: 1px solid rgba(0, 0, 0, .1);
 	}
 	
-	.admin .Tickets .table-list .controls .actions {
+	.admin .Tickets .dash .table-list .controls .actions {
 		margin: .5em 0;
 		float: none;
 	}
 	
-	.admin .Tickets .table-list .controls .iconButton {
+	.admin .Tickets .dash .table-list .controls .iconButton {
 		padding-right: .5em;
 		padding-left: 0;
 		border-right-color: transparent;
@@ -5245,7 +5245,7 @@ a.page-action.delete-button span.im {
 	
 }
 
-/* shrink the nav for intermediate stage - Grace */
+/* shrink nav for intermediate stage - Grace */
 
 @media (max-width: 850px) {
 	
@@ -5264,6 +5264,8 @@ a.page-action.delete-button span.im {
 	}
 	
 }
+
+/* shrink month view for intermediate stage - Grace */
 
 @media (min-width: 775px) and (max-width: 990px) {
 	
@@ -5335,8 +5337,11 @@ a.page-action.delete-button span.im {
 		border-top-style: solid;
 	}
 	
-	.admin calendar .calendar-month .date-num {
+	.admin .calendar .calendar-month .date-num {
 		font-size: 1.3em;
+	}
+	
+	.admin .calendar .calendar-month .date-num:after {
 		display: inline-block;
 	}
 	
@@ -5429,8 +5434,11 @@ a.page-action.delete-button span.im {
 		border-top-style: solid;
 	}
 	
-	.worker .calendar-month .date-num {
+	.worker .calendar .calendar-month .date-num {
 		font-size: 1.3em;
+	}
+	
+	.worker .calendar .calendar-month .date-num:after {
 		display: inline-block;
 	}
 	
@@ -5574,6 +5582,10 @@ a.page-action.delete-button span.im {
 	.calendar .search-more h1 {
 		padding-right: 0;
 		padding-left: 0;
+	}
+	
+	.calendar .calendar-day h1.graphic {
+		padding-left: .3em;
 	}
 	
 }
