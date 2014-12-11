@@ -1,14 +1,7 @@
 /* ------- temporary CSS -------- */
 
 
-h1.super,
-.worker .action.panel.assign,
-.choose-dates,
-.calendar-search,
-.map .blocked-day.detail,
-.map .tab-pane .detail,
-.map .tab-pane .confirm,
-.calendar-day {
+h1.super {
 	display: none;
 }
 
