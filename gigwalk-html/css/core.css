@@ -2112,9 +2112,8 @@ div.main.wrapper + div.inner {
 	
 	/* fix FF ellipsis bug */
 	@-moz-document url-prefix() {
-		.tabnav .dropdownly .dropdown-toggle:after {
-			width: 2.8em;
-			background-color: #179eb1;
+		.tabnav .dropdownly .dropdown-toggle {
+			overflow: hidden;
 		} 
 	}
 	
