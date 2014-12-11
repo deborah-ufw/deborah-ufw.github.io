@@ -781,7 +781,8 @@ header .navbar-collapse.in {
 a.page-action,
 .calendar-month .work div,
 .calendar .date-nav a,
-.calendar .date-nav span {
+.calendar .date-nav span,
+.calendar-month td {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
@@ -5870,7 +5871,7 @@ textarea:-ms-input-placeholder {
 
 @media (max-width: 400px) {
 	/* icons in the calendar-day action panels for worker */
-	html[data-useragent*='MSIE 10.0'] .calendar h1.graphic:before,
+	html[data-useragent*='MSIE 10.0'] .calendar .no-scheduled h1.graphic:before,
 html[data-useragent*='Trident'] .calendar h1.graphic:before {
 		font-size: .5em;
 	}	
@@ -5919,6 +5920,10 @@ html[data-useragent*='MSIE 10.0'] .instruction.edit-mode .item.answer .more-info
 html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 	padding-top: 10px;
 }	
+
+html[data-useragent*='MSIE 10.0'] .map .tab-pane .assign-action .filters-choices .choice {
+	height: 36px;
+}
 
 html[data-useragent*='MSIE 10.0'] .map .assign-action.detail .filter.search input[type="text"],
 html[data-useragent*='Trident'] .map .assign-action.detail .filter.search input[type="text"] {
