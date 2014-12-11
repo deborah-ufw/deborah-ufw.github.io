@@ -5536,14 +5536,18 @@ a.page-action.delete-button span.im {
 	.admin .calendar .date-nav a.left,
 	.worker .calendar .date-nav a.left  {
 		padding-right: 0;
-			top: 7px;
 	}
 	
 	.admin .calendar .date-nav a.right,
 	.worker .calendar .date-nav a.right {
-		padding-left: .2em;
+		padding-left: .1em;
 		padding-right: .2em;
 	} 
+	
+	.calendar .view-bar .date-nav a {
+		font-size: 1em;
+		top: 3px;
+	}
 	
 	.calendar .calendar-day h1.graphic {
 		text-align: center;
