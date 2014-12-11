@@ -4495,11 +4495,14 @@ td.table-actions a {
 		margin: 1em 0 .5em 0;
 		display: block;
 		width: 100%;
+			left: -70px;
 	}
 	
 	.admin .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
 		font-size: 20px;
 		margin-top: -6px;
+		position: relative;
+			left: 70px;
 	}
 	
 	.admin .Tickets .dash .table-list table td.project-title input[type="checkbox"]:after {
