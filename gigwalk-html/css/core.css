@@ -2120,7 +2120,7 @@ div.main.wrapper + div.inner {
 }
 
 
-/* tabbed nav width adjustments for content areas */
+/* tabbed nav width adjustments for content areas */ 
 
 @media (min-width: 665px) and (max-width: 715px) {
 	

@@ -12,7 +12,7 @@ h1.super,
 	display: none;
 }
 
-.map .tab-pane .blocked-day.detail {
+.map .tab-pane .assign-action.detail {
 	display: block;
 }
 
