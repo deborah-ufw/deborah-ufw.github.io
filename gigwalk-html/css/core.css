@@ -676,6 +676,7 @@ a.page-action,
 .calendar .view-bar .view,
 .calendar .view-bar .date-nav,
 .calendar .view-bar .date-nav a,
+.calendar .view-bar .date-nav a:before,
 .calendar-month .work div,
 .calendar-month .work .time:before,
 .calendar-month .work .tickets:before,
@@ -1185,7 +1186,7 @@ input[type="radio"]:checked:after,
 }
 
 .calendar .view-bar .date-nav a.right {
-	top: 12px
+	float: none;
 }
 
 .calendar-month .work .tickets:before {
@@ -5281,7 +5282,6 @@ a.page-action.delete-button span.im {
 	.admin .calendar .date-nav a.right {
 		padding-left: .3em;
 		padding-right: .3em;
-			top: 7px;
 	}
 	
 }
@@ -5543,7 +5543,6 @@ a.page-action.delete-button span.im {
 	.worker .calendar .date-nav a.right {
 		padding-left: .2em;
 		padding-right: .2em;
-			top: 7px;
 	} 
 	
 	.calendar .calendar-day h1.graphic {
