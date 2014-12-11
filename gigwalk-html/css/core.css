@@ -230,7 +230,8 @@ th.sorting:after,
 .button-holder a,
 .Tickets .table-list .action.panel .warning,
 .map .tab-pane .warning,
-.calendar-month .work {
+.calendar-month .work,
+.calendar-day a.get-more {
 	line-height: 1.2em;
 }
 
@@ -371,7 +372,9 @@ a.page-action,
 .section-actions a,
 .message a.closer,
 .table-list .controls .actions.active a,
-.calendar-month td {
+.calendar-month td,
+input[type="checkbox"]:after,
+input[type="radio"]:after {
 	cursor: pointer;
 }
 
@@ -4443,8 +4446,8 @@ td.table-actions a {
 	
 	.admin .Tickets .dash .table-list table th.project-title {
 		padding-bottom: 3px;
-		min-width: 200px;
-		max-width: 200px;
+		min-width: 210px;
+		max-width: 210px;
 	}
 	
 	.admin .Tickets .dash .table-list table td.project-title {
@@ -4710,8 +4713,8 @@ td.table-actions a {
 	
 	.worker .Tickets .dash .table-list table th.project-title {
 		padding-bottom: 3px;
-		min-width: 200px;
-		max-width: 200px;
+		min-width: 210px;
+		max-width: 210px;
 	}
 	
 	.worker .Tickets .dash .table-list table td.project-title {
@@ -4761,11 +4764,14 @@ td.table-actions a {
 		margin: 1em 0 .5em 0;
 		display: block;
 		width: 100%;
+			left: -70px;
 	}
 	
 	.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
 		font-size: 20px;
 		margin-top: -6px;
+		position: relative;
+		left: 70px;
 	}
 	
 	.worker .Tickets .dash .table-list table td.project-title input[type="checkbox"]:after {
@@ -5859,10 +5865,20 @@ textarea:-ms-input-placeholder {
 
 /* ie10 & 11 --- also will be picked up by ie9 */
 
+@media (max-width: 400px) {
+	/* icons in the calendar-day action panels for worker */
+	html[data-useragent*='MSIE 10.0'] .calendar h1.graphic:before,
+html[data-useragent*='Trident'] .calendar h1.graphic:before {
+		font-size: .5em;
+	}	
+}
+
 html[data-useragent*='Trident'] .buttonly .im.icon-pencil-box:before {
 	font-size: .6em;
 }
 
+html[data-useragent*='MSIE 10.0'] .blocked h1.graphic:before,
+html[data-useragent*='Trident'] .blocked h1.graphic:before, 
 html[data-useragent*='MSIE 10.0'] .buttonly .im.icon-pencil-box:before {
 	font-size: .8em;
 }		
@@ -5906,9 +5922,28 @@ html[data-useragent*='Trident'] .map .assign-action.detail .filter.search input[
 	height: 38px;
 }
 
-html[data-useragent*='MSIE 10.0'] .filters-choices .choice,
-html[data-useragent*='Trident'] .filters-choices .choice {
+html[data-useragent*='MSIE 10.0'] .Tickets .dash .action.panel .filters-choices .choice,
+html[data-useragent*='Trident'] .Tickets .dash .action.panel .filters-choices .choice,
+html[data-useragent*='MSIE 10.0'] .Tickets .dash .action.panel .filters-choices .choice .value,
+html[data-useragent*='Trident'] .Tickets .dash .action.panel .filters-choices .choice .value,
+html[data-useragent*='MSIE 10.0'] .Tickets .dash .action.panel .filters-choices .choice .close,
+html[data-useragent*='Trident'].Tickets .dash .action.panel .filters-choices .choice .close {
 	height: 40px;
+}
+
+html[data-useragent*='MSIE 10.0'] .worker-selected .filters-choices .choice .value,
+html[data-useragent*='Trident'] .worker-selected .filters-choices .choice .value,
+html[data-useragent*='MSIE 10.0'] .worker-selected .filters-choices .choice .close,
+html[data-useragent*='Trident']  .worker-selected .filters-choices .choice .close,
+html[data-useragent*='MSIE 10.0'] .worker-selected .filters-choices .choice .close,
+html[data-useragent*='Trident'] .worker-selected .filters-choices .choice .close,
+html[data-useragent*='MSIE 10.0'] .content > .filters-choices .choice .value,
+html[data-useragent*='Trident'] .content > .filters-choices .choice .value,
+html[data-useragent*='MSIE 10.0'] .content > .filters-choices .choice .close,
+html[data-useragent*='Trident']  .content > .filters-choices .choice .close,
+html[data-useragent*='MSIE 10.0'] .content > .filters-choices .choice .close,
+html[data-useragent*='Trident'] .content > .filters-choices .choice .close {
+	height: 39px;
 }
 
 html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list table th.project-title input[type="checkbox"],
@@ -5996,7 +6031,7 @@ html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-titl
 	/* Tickets tables snap to responsive display - Jimmy */
 	@media (max-width: 750px) {
 		.worker .Tickets .dash .table-list table th.project-title input[type="checkbox"] {
-			 left: -80px;
+			 left: -70px;
 		}
 	}
 }
