@@ -119,8 +119,7 @@ th.sorting_desc:after,
 .icon-map-pin:before {
 	content: "\e623";
 }
-.pin:after,
-.icon-map-pin-solid:before {
+.pin:after {
 	content: "\e625";
 }
 .iconButton.assign:before,
@@ -265,7 +264,10 @@ th.sorting_desc:after,
 .icon-vacation-solid:before {
 	content: "\e636";
 }
-
+.icon-map-pin-solid:before,
+.icon-map-toggle:before {
+	content: "\e637";
+}
 
 /* paste new characters just above this line */
 
