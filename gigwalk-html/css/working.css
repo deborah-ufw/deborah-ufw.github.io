@@ -1,7 +1,8 @@
 /* ------- temporary CSS -------- */
 
 
-h1.super {
+h1.super,
+.calendar-month {
 	display: none;
 }
 
