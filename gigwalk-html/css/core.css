@@ -323,12 +323,9 @@ a.page-action:focus,
 .section-detail a:focus,
 .message a.closer:hover,
 .message a.closer:focus,
-.calendar .view-bar a,
- .calendar .view-bar a:hover,
- .calendar .view-bar a:focus,
- .calendar-day a.get-more,
- .calendar-day a.get-more:hover,
- .calendar-day a.get-more:focus {
+.calendar-day a.get-more,
+.calendar-day a.get-more:hover,
+.calendar-day a.get-more:focus {
 	text-decoration: none;
 }
 
