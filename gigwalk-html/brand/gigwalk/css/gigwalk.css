@@ -250,7 +250,7 @@ html, body {
 	.choose-dates a.cancel:hover,
 	.choose-dates a.cancel:focus,
 	.page-action-panel a.cancel:hover,
-	.page-action-panel a.cancel:focus
+	.page-action-panel a.cancel:focus,
 	.expander,
 	.section-no-content {
 		background: #f8f8f8;

@@ -53,7 +53,6 @@ header nav .user-edit,
 
 .action.panel .choose.list table,
 .map .assign-action.detail .filters-choices,
-.map .assign-action.detail .filters-choices span.im,
 .calendar-day .no-scheduled .wrapper .primary.actions a,
 .calendar-day .blocked .wrapper .primary.actions a,
 .calendar-month .date-num {
@@ -71,7 +70,6 @@ header nav .user-edit,
 .table-list .controls,
 .table-list .action.panel .item,
 .action.panel .warning,
-.map .tab-pane .search,
 .page-action-panel,
 .page-action-panel input,
 .add-members .checkbox label,
@@ -173,8 +171,6 @@ body,
 	font-size: 2em;
 }
 
-.map .pin,
-.iconButton:before,
 .calendar .view-bar .date-statement {
 	font-size: 2.3em;
 }
@@ -189,6 +185,7 @@ body,
 	font-size: 31px;
 }
 
+.map .choice.searched .close .icon-cancel:before ,
 .map .pin {
 	font-size: 32px;
 }
@@ -197,7 +194,7 @@ th.sorting:after {
 	font-size: 34px;
 }
 
-.choice.searched .close .icon-cancel:before {
+.choice .close .icon-cancel:before {
 	font-size: 35px;
 }
 
@@ -205,6 +202,10 @@ th.sorting:after {
 .section-actions a.iconButton:before,
 .filter.search .icon-search:before {
 	font-size: 36px;
+}
+
+.iconButton:before {
+	font-size: 37px;
 }
 
 .im.icon-pencil-box:before {
@@ -215,6 +216,7 @@ th.sorting:after {
 	font-size: 39px;
 }
 
+.map .ticketlink .icon-ticket:before,
 .filters-holder .view a .im:before {
 	font-size: 40px;
 }
@@ -930,11 +932,11 @@ select,
 .calendar .view a.active:hover,
 .calendar .view a.active:focus,
 .calendar th,
-.calendar .past {
+.calendar .past,
+.editable:after {
 	color: #ababab; 
 }
 
-.view-mode .numeric .currency:before,
 .disabled,
 .action.panel .item .hint,
 th.sorting:after,
@@ -947,10 +949,6 @@ a.iconButton.disabled:focus,
 .map .tab-pane .assigned .value,
 .map .tab-pane .scheduled .value span {
 	color: #bcbcbc;
-}
-
-.editable:after {
-	color: #cbcbcb;
 }
 
 .mini-panel,
@@ -1302,8 +1300,7 @@ header .nav ul.dropdown-menu li,
 }
 
 .filter.dropdown .btn.btn-default.dropdown-toggle,
-.filter.search,
-.map .tab-pane .assign-action.detail .filter.search input[type="text"] {
+.filter.search {
 	border: 1px solid #cfcfcf;
 }
 
@@ -1413,8 +1410,7 @@ header .nav li {
 
 .nav-tabs > li.active > a, 
 .nav-tabs > li.active > a:hover, 
-.nav-tabs > li.active > a:focus,
-.map .tab-pane .assign-action.detail .filter.search {
+.nav-tabs > li.active > a:focus {
 	border: 0px solid transparent;
 }
 
@@ -2047,7 +2043,7 @@ div.main.wrapper + div.inner {
 	}
 	
 	.tabnav li.buttonly a .im.icon-pencil-box {
-		top: 2px;
+		top: -3px;
 		left: 5px;
 	}
 	
@@ -2114,7 +2110,7 @@ div.main.wrapper + div.inner {
 	
 	.tabnav li.buttonly a span.im {
 		margin-left: -30px;
-			top: 5px;
+			top: 0;
 	}
 	
 	.tabnav li.buttonly a span.im.icon-building {
@@ -3403,7 +3399,7 @@ a.iconly:before {
 }
 
 .filter.search input[type="text"] {
-	margin: 0 -8px 0 0;
+	margin: 0 -12px 0 0;
 }
 
 .filter.dropdown .dropdown-menu {
@@ -3833,7 +3829,6 @@ td.table-actions a {
 }
 
 .map .tab-pane .filter.search input {
-	padding: 7px 0 7px 12px;
 	width: 180px;
 }
 
