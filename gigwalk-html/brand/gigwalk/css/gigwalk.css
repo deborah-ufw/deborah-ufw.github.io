@@ -117,6 +117,8 @@ html, body {
 	.instructions .header .actions,
 	.primary.actions a,
 	.icon-buttons a,
+	.icon-buttons a:hover,
+	.icon-buttons a:focus,
 	.instructions .item .actions a.buttonly,
 	.projects .settings,
 	.group a.buttonly,
@@ -175,6 +177,8 @@ html, body {
 	.choose-dates a.cancel,
 	.page-action-panel a.cancel,
 	.expander a,
+	.expander a:hover,
+	.expander a:focus,
 	.Group .table-list .user-name a span {
 		color: #c6c6c6;
 	}
@@ -259,6 +263,11 @@ html, body {
 	.page-action-panel .actions a.buttonly.delete:hover,
 	.page-action-panel .actions a.buttonly.delete:focus {
 		background-color: #f8f8f8;
+	}
+	
+	.expander:hover,
+	.expander:focus {
+		background: #f1f1f1;
 	}
 	
 	
