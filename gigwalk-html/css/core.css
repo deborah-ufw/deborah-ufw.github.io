@@ -37,10 +37,12 @@ header nav .user-edit,
 .worker .Tickets .table-list tr.expired,
 .worker .nav-active-holder,
 .worker .map .tab-pane .assign-action.detail,
-.tab-pane.actions .assign-action.detail.required:before,
-.Groups .table-list table .org-name,
 .admin .calendar .worker,
 .worker .calendar .admin,
+.worker .Ticket .admin,
+.admin .Ticket .worker,
+.tab-pane.actions .assign-action.detail.required:before,
+.Groups .table-list table .org-name,
 .calendar .calendar-month .date-num:after {
 	display: none;
 }
@@ -52,7 +54,6 @@ header nav .user-edit,
 .action.panel .choose.list table,
 .map .assign-action.detail .filters-choices,
 .map .assign-action.detail .filters-choices span.im,
-.map-drawer .tabs-control a.collapse:before,
 .calendar-day .no-scheduled .wrapper .primary.actions a,
 .calendar-day .blocked .wrapper .primary.actions a,
 .calendar-month .date-num {
@@ -60,12 +61,12 @@ header nav .user-edit,
 }
 
 .table-list table table td,
-.section-controls .action.panel .table-list table {
+.section-controls .action.panel .table-list table,
+.section-controls .action.panel .filter.search {
 	font-size: 1em;
 }
 
 .panel.action .choose.search .filter.search,
-.filter.search .icon-search,
 .choose-dates,
 .table-list .controls,
 .table-list .action.panel .item,
@@ -73,7 +74,6 @@ header nav .user-edit,
 .map .tab-pane .search,
 .page-action-panel,
 .page-action-panel input,
-.section-controls .action.panel .filter.search,
 .add-members .checkbox label,
 .map .tab-pane .quick-select,
 .calendar-day .ticket,
@@ -126,7 +126,8 @@ a.page-action,
 .calendar .calendar-month .work,
 .calendar-day .ticket .ti .time,
 .calendar-day .ticket .ti .ticketname,
-.calendar-day a.get-more {
+.calendar-day a.get-more,
+.section-controls .action.panel .filter.search .icon-search {
 	font-size: 1.3em;
 }
 
@@ -141,7 +142,6 @@ body,
 	font-size: 1.4em;
 }
 
-.filters-holder .view a .im:before,
 .calendar-day h1.graphic:before {
 	font-size: 1.6em;
 }
@@ -163,8 +163,6 @@ body,
 .action.messages h1,
 .calendar .action-panel h1,
 .filter.dropdown .btn.btn-default.dropdown-toggle .caret,
-th.sorting:after,
-.section-actions a.iconButton:before,
 .section-no-content,
 .calendar-day .header .time:before,
 .calendar .calendar-search h1 {
@@ -181,19 +179,75 @@ th.sorting:after,
 	font-size: 2.3em;
 }
 
-.map .nav.nav-tabs {
-	font-size: 2.8em;
-}
-
-.map .icon-vacation,
-.map .pin.active,
-.map .tabs-control  {
-	font-size: 3.7em;
-}
-
 .calendar-day .no-scheduled .wrapper.blocker:before {
 	font-size: 8.5em;
 }
+
+/* icon font sizes - convert to pixels so IE doesn't mess up */
+
+.im:before {
+	font-size: 31px;
+}
+
+.map .pin {
+	font-size: 32px;
+}
+
+th.sorting:after {
+	font-size: 34px;
+}
+
+.choice.searched .close .icon-cancel:before {
+	font-size: 35px;
+}
+
+.action.messages .message .im.icon-cancel:before,
+.section-actions a.iconButton:before,
+.filter.search .icon-search:before {
+	font-size: 36px;
+}
+
+.im.icon-pencil-box:before {
+	font-size: 38px;
+}
+
+.map .nav.nav-tabs {
+	font-size: 39px;
+}
+
+.filters-holder .view a .im:before {
+	font-size: 40px;
+}
+
+.filter.dates .im:before {
+	font-size: 42px;
+}
+
+.map-drawer .tabs-control a.collapse:before {
+	font-size: 46px;
+}
+
+.action.messages .message .im:before {
+	font-size: 48px;
+}
+
+header .nav li.alerts .im:before,
+header .nav li.messages .im:before {
+	font-size: 50px;	
+}
+
+.map .pin.active {
+	font-size: 52px;
+}
+
+.map .icon-vacation:before {
+	font-size: 88px;
+}
+
+
+
+/* line heights */
+
 
 .filter.search .icon-search:before {
 	line-height: .7em;
@@ -207,7 +261,6 @@ th.sorting:after,
 .sidenav .user-name,
 .filters-holder .view a .im,
 .iconButton:before,
-th.sorting:after,
 .Tickets .dash td.status span:before,
 .map .nav.nav-tabs,
 .map .tabs-control,
@@ -1068,13 +1121,9 @@ input[type="radio"]:checked:after,
 	content: ' ';
 }
 
-.im:before {
-	font-size: 1.7em;
-	line-height: 1em;
-}
-
-.im.icon-pencil-box:before {
-	font-size: 2.1em;
+.nav li.messages.buttonly,
+.nav li.alerts.buttonly {
+	padding-bottom: 0;
 }
 
 .tabnav .buttonly .im {
@@ -1095,13 +1144,7 @@ input[type="radio"]:checked:after,
 		right: 25px;
 }
 
-.filter.dates .im:before {
-	font-size: 3em;
-		top: -1px;
-}
-
 .confirmation .icon-checkmark:before {
-	font-size: 1.5em;
 		top: 10px;
 }
 
@@ -1577,7 +1620,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	}
 	
 	header .dropdown-menu > li > a {
-		padding: .3em 4em .6em 1em;
+		padding: 0 4em .9em 1em;
 	}
 	
 	header .nav ul.dropdown li {
@@ -1590,7 +1633,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	}
 	
 	header nav .dropdown li a .im {
-		top: .3em;
+		top: .4em;
 	}
 	
 	.nav > li > a.dropdown-toggle {
@@ -1761,11 +1804,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 		margin: .5em 0  0 .2em;
 		height: 51px;
 		width: 220px;
-	}
-	
-	header .nav li.alerts .im,
-	header .nav li.messages .im {
-		font-size: 1.8em;
 	}
 	
 	header .nav .number {
@@ -3320,12 +3358,12 @@ a.iconly:before {
 }
 
 .filters-holder .view {
-	margin-top: -4px;
+	margin-top: -7px;
 }
 
 .filters-holder .view a {
 	margin-right: 1px;
-	padding: .4em 1.1em .5em .8em;
+	padding: .5em 1.1em .5em .8em;
 }
 
 .filters-holder .view a.map {
@@ -3334,7 +3372,7 @@ a.iconly:before {
 }
 
 .filters-holder .view a .im {
-	top: .4em;
+	top: .5em;
 	left: -.2em;
 }
 
@@ -3622,7 +3660,7 @@ a.iconly:before {
 }
 
 th.sorting:after {
-	margin-left: -8px;
+	margin-left: -10px;
 	top: 8px;
 }
 
@@ -3725,7 +3763,7 @@ td.table-actions a {
 }
 
 .map a.collapse {
-	padding: 7px 10px 3px 5px; 
+	padding: 7px 10px 8px 5px; 
 }
 
 .map .tab-content {

@@ -154,17 +154,9 @@
   </nav>
 </header>
 
-<!-- --------------------------------------------------------
-        Dave Valerie
-        inject role name in to div "main wrapper" class
-        example "main wrapper worker" or
-                "main wrapper admin" -->
-                
 <!-- start the main panel -->
 <div class="main wrapper">
                 
-<!-- ----------------------------------------------------- --> 
-
   <!-- side navigation (left side) -->
   <nav class="sidenav">
   
@@ -200,119 +192,42 @@
   <div class="inner wrapper Group">
       
       <!-- tabs for the content -->
-      <!-- remove class "active" from the Groups li (since this is not the home page for Groups) -->
       <nav class="tabnav">
         <ul>
-          <li><a href="javascript:;">Users</a></li>
-          <li><a href="javascript:;">Groups</a></li>
+          <li><a href="javascript:;">Tickets</a></li>
+          <li><a href="javascript:;">Calendar</a></li>
+          
+          <li class="dropdownly right">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle ellipsify" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                P&G Dedicated Really Long Team 
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Team Name 1</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Extremely long overflowing Team Name 2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Team Name 3</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav><!-- ends content tabs -->
       
       <!-- the content under the tabs -->
       <div class="content dash">
       
-      
-      <!-- ****************************************************************** - ->
-      <!--                              FILTERS                               -->
-      <!-- ****************************************************************** -->
-      
-      <div class="filters-holder">
-      
-        <div class="filters">
-          <div class="wrapper">
-          
-            <!-- ---------------- Search behavior ---------------- 
-            
-                in a dash context, Search should always
-                  1. auto suggest as the user types
-                  2. filter the table on the term when the user presses "enter" 
-                  
-                  (example: user types "Wa", auto suggest shows "Walmart, Washington", 
-                   user presses enter on "Walmart", List is filtered for "Walmart"
-                   
-                  3. create the filter-choice div showing the filtered term
-                  4. on close the filter-choice div, refresh list and remove the filter 
-                   
-            ------------------------------------------------------- -->
-            
-            <div class="filter search">
-              <input type="text" placeholder="Search" />
-              <span class="im icon-search"></span>
-            </div>
-            <a class="page-action delete-button"><span class="im icon-trash"></span>Delete</a>
-            <div class="page-action-panel">
-              <div class="wrapper">
-                This group contains 2 subgroups.
-                <div class="radios">
-                  <div class="radio">
-                    <label>
-                    <input type="radio" name="choose" value="keep-subgroups" /> &nbsp;Don't delete the subgroups</label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                    <input type="radio" name="choose" value="delete-subgroups" /> &nbsp;Delete the subgroups also</label>
-                  </div>
-                </div>  
-              </div>
-              <div class="actions">
-                <a class="cancel" href="javascript:;">Cancel</a>
-                <a class="buttonly delete" href="javascript:;">Delete</a>
-              </div>
-            </div>
-          </div><!-- end wrapper -->
-        </div><!-- end filters -->
-      </div><!-- end filters holder (all) -->
-      
-      <div class="filters-choices">
-        <div class="choice searched">
-          <div class="value">Search filtering term</div>
-          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-        </div>
-      </div><!-- end filters selections -->
-      
       <div class="section-controls">
         <div class="section title">
-          <a class="navly" href="javascript:;">All Groups</a> Awesome Group
-        </div>
-        
-        <!-- --------------------------- -->
-        <!-- ------ NEEDS LOGIC -------- -->
-        <!-- --------------------------- -->
-        <div class="section-detail">
-          <!-- if no subroups, put this in the div -->
-          <div class="none">This group has no subgroups</div>
-          <!-- -----------------------------------------------
-               if subgroup(s), put this in the div and 
-               create the js to 
-                 * toggle the subroups viewer open and closed 
-                 * toggle the word "Show" or "Hide"
-               ----------------------------------------------- -->
-          <a class="subgroups-toggle" href="javascript:;">Show Subgroups</a> 
-          
-          <div class="mini-panel subgroups-detail">
-            <a href="javascript:;">Bionic</a> 
-            <a href="javascript:;">Interstellar</a> 
-            <a href="javascript:;">Galactic</a> 
-            <a href="javascript:;">Narnian</a> 
-            <a href="javascript:;">Hobbitly</a> 
-            <a href="javascript:;">Interplanetary</a> 
-            
-            <!-- -----------------------------------------------
-            
-              only show "helper" button if more than 5 subgroups
-              on a mobile device, this will help user when
-              the other button is out of sight at the top
-              of long list
-            
-              ----------------------------------------------- -->
-            <a class="helper">Hide Subgroups</a>
-          </div>    
+          <a class="navly" href="javascript:;">Tickets</a> Gluten-Free Soy Sauce at Walmart
         </div>
         
         <div class="section-actions">
-          <a class="iconButton ownership">Ownership</a>
-          <a class="iconButton members">Add Members</a>
-          <a class="iconButton new">New Subgroup</a>
+          <a class="iconButton unassign worker">Unassign</a>
+          <a class="iconButton assign admin">Assign</a>
+          <a class="iconButton schedule worker">Schedule</a>
+          <a class="iconButton unschedule worker">Unschedule</a>
+          <a class="iconButton extend admin">Extend</a>
+          <a class="iconButton print">Print</a>
         </div>
         
         <!-- Ownership action panel -->
