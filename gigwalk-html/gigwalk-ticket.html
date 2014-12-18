@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Basic Page Needs 
+================================================== -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" /> 
+
+<title>Ticket!</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+
+
+<!-- device and shortcut icons
+================================================== -->
+
+<link rel="shortcut icon" type="image/x-icon" href="brand/gigwalk/images/favicon-gigwalk.ico">
+<link rel="apple-touch-icon" href="brand/gigwalk/images/apple-touch-icon.png" /> 
+
+
+<!-- Global CSS and JS
+================================================== -->
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/DataTables.all.min.js"></script>
+<script src="js/jquery.signature.js"></script>
+<script src="js/interactions-working.js"></script>
+
+<link href="css/bootstrap.css" media="screen" rel="stylesheet" />
+<link href="css/font-awesome.css" media="screen" rel="stylesheet" />
+<link href="css/app-glyphs.css" media="screen" rel="stylesheet" />
+<link href="css/datepicker.css" media="screen" rel="stylesheet" />
+<link href="css/core.css" media="screen" rel="stylesheet" />
+
+<!-- Brand CSS
+================================================== -->
+
+<link href="brand/gigwalk/css/fonts-gigwalk.css" media="screen" rel="stylesheet" />
+<link href="brand/gigwalk/css/gigwalk.css" media="screen" rel="stylesheet" />
+
+<link href="css/working.css" media="screen" rel="stylesheet" />
+
+
+<!-- Manage IE
+================================================== -->
+
+<!--[if lte IE 8]>
+  <script type="text/javascript">       
+      window.location="unsupported.html";
+  </script>
+<![endif]-->
+
+<!--[if IE 9]>
+  <link href="/css/ie9.css" media="screen" rel="stylesheet" />
+  <script src=="js/html5.min.js"></script> 
+<![endif]-->
+
+<script>
+  var doc = document.documentElement;
+  doc.setAttribute('data-useragent', navigator.userAgent);
+  // detect IE10 and IE11 from string
+</script>
+
+ 
+</head>
+
+<body class="body">
+
+<!-- top navigation -->
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+  
+  <!-- hold the responsive sidenav button -->
+  <div class="nav-active-holder">Holds nav location<span class="caret"></span></div>
+  
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:;">&nbsp;</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="alerts buttonly">
+            <a href="javascript:;">
+              <span class="im icon-bell"></span>
+              <span class="number">6</span>
+            </a>
+          </li>
+          <li class="messages buttonly">
+            <a href="javascript:;">
+             <span class="im icon-email"></span>
+             <span class="number">18</span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <!-- use this same "user-info" div in the sidenav -->
+            <div class="user-info">
+              <div class="user-image">
+                <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+              </div>
+              <div class="inner">
+                <div class="user-name">Grace Kelly</div>
+                <div class="user-org">Crossmark</div>
+                <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+              </div>
+            </div><!-- ends user info -->
+            
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="header">Manage Organization</li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-checkmark"></span>
+                  <span>Admin Dashboard</span>
+                </a>
+              </li>
+              <li class="disabled">
+                <a href="javascript:;">
+                  <span class="im icon-empty"></span>
+                  <span>Org Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-settings"></span>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li class="last">
+                <a href="javascript:;">
+                  <span class="im icon-lock"></span>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- ends navbar-collapse -->
+    </div><!-- ends container-fluid -->
+  </nav>
+</header>
+
+<!-- --------------------------------------------------------
+        Dave Valerie
+        inject role name in to div "main wrapper" class
+        example "main wrapper worker" or
+                "main wrapper admin" -->
+                
+<!-- start the main panel -->
+<div class="main wrapper">
+                
+<!-- ----------------------------------------------------- --> 
+
+  <!-- side navigation (left side) -->
+  <nav class="sidenav">
+  
+    <!-- use the same "user-info" div as in the top nav -->
+    <div class="user-info">
+      <div class="user-image">
+        <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+      </div>
+      <div class="inner">
+        <div class="user-name">Grace Kelly</div>
+        <div class="user-org">Crossmark</div>
+        <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+      </div>
+    </div><!-- ends user info -->
+    
+    <ul class="nav-sections">
+      <li><a href="gigwalk-groups-dash.html">Organizations</a></li>
+      <li><a href="gigwalk-project-builder.html">Projects</a></li>
+      <li class="active"><a href="gigwalk-ticket-dash-schedluer.html">Tickets</a></li>
+      <li><a href="javascript:;">People</a></li>
+      <li><a href="javascript:;">Resources</a></li>
+      
+      <li class="divider">Support</li>
+      <li class="support"><a href="javascript:;">Demos and FAQs</a></li>
+      <li class="support"><a href="javascript:;">Support</a></li>
+      <li class="support"><a href="javascript:;">Contact Us</a></li>
+      
+    </ul>
+  </nav><!-- ends side nav -->
+  
+  <!-- content (right side) -->
+  <!-- inject page name "Group" -->
+  <div class="inner wrapper Group">
+      
+      <!-- tabs for the content -->
+      <!-- remove class "active" from the Groups li (since this is not the home page for Groups) -->
+      <nav class="tabnav">
+        <ul>
+          <li><a href="javascript:;">Users</a></li>
+          <li><a href="javascript:;">Groups</a></li>
+        </ul>
+      </nav><!-- ends content tabs -->
+      
+      <!-- the content under the tabs -->
+      <div class="content dash">
+      
+      
+      <!-- ****************************************************************** - ->
+      <!--                              FILTERS                               -->
+      <!-- ****************************************************************** -->
+      
+      <div class="filters-holder">
+      
+        <div class="filters">
+          <div class="wrapper">
+          
+            <!-- ---------------- Search behavior ---------------- 
+            
+                in a dash context, Search should always
+                  1. auto suggest as the user types
+                  2. filter the table on the term when the user presses "enter" 
+                  
+                  (example: user types "Wa", auto suggest shows "Walmart, Washington", 
+                   user presses enter on "Walmart", List is filtered for "Walmart"
+                   
+                  3. create the filter-choice div showing the filtered term
+                  4. on close the filter-choice div, refresh list and remove the filter 
+                   
+            ------------------------------------------------------- -->
+            
+            <div class="filter search">
+              <input type="text" placeholder="Search" />
+              <span class="im icon-search"></span>
+            </div>
+            <a class="page-action delete-button"><span class="im icon-trash"></span>Delete</a>
+            <div class="page-action-panel">
+              <div class="wrapper">
+                This group contains 2 subgroups.
+                <div class="radios">
+                  <div class="radio">
+                    <label>
+                    <input type="radio" name="choose" value="keep-subgroups" /> &nbsp;Don't delete the subgroups</label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                    <input type="radio" name="choose" value="delete-subgroups" /> &nbsp;Delete the subgroups also</label>
+                  </div>
+                </div>  
+              </div>
+              <div class="actions">
+                <a class="cancel" href="javascript:;">Cancel</a>
+                <a class="buttonly delete" href="javascript:;">Delete</a>
+              </div>
+            </div>
+          </div><!-- end wrapper -->
+        </div><!-- end filters -->
+      </div><!-- end filters holder (all) -->
+      
+      <div class="filters-choices">
+        <div class="choice searched">
+          <div class="value">Search filtering term</div>
+          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+        </div>
+      </div><!-- end filters selections -->
+      
+      <div class="section-controls">
+        <div class="section title">
+          <a class="navly" href="javascript:;">All Groups</a> Awesome Group
+        </div>
+        
+        <!-- --------------------------- -->
+        <!-- ------ NEEDS LOGIC -------- -->
+        <!-- --------------------------- -->
+        <div class="section-detail">
+          <!-- if no subroups, put this in the div -->
+          <div class="none">This group has no subgroups</div>
+          <!-- -----------------------------------------------
+               if subgroup(s), put this in the div and 
+               create the js to 
+                 * toggle the subroups viewer open and closed 
+                 * toggle the word "Show" or "Hide"
+               ----------------------------------------------- -->
+          <a class="subgroups-toggle" href="javascript:;">Show Subgroups</a> 
+          
+          <div class="mini-panel subgroups-detail">
+            <a href="javascript:;">Bionic</a> 
+            <a href="javascript:;">Interstellar</a> 
+            <a href="javascript:;">Galactic</a> 
+            <a href="javascript:;">Narnian</a> 
+            <a href="javascript:;">Hobbitly</a> 
+            <a href="javascript:;">Interplanetary</a> 
+            
+            <!-- -----------------------------------------------
+            
+              only show "helper" button if more than 5 subgroups
+              on a mobile device, this will help user when
+              the other button is out of sight at the top
+              of long list
+            
+              ----------------------------------------------- -->
+            <a class="helper">Hide Subgroups</a>
+          </div>    
+        </div>
+        
+        <div class="section-actions">
+          <a class="iconButton ownership">Ownership</a>
+          <a class="iconButton members">Add Members</a>
+          <a class="iconButton new">New Subgroup</a>
+        </div>
+        
+        <!-- Ownership action panel -->
+        <div class="action panel ownership">
+          <h1>Ownership</h1>
+          <div class="group">
+            <div class="filter search">
+              <input type="text" placeholder="Search" />
+              <span class="im icon-search"></span>
+            </div>
+            <div class="sub first">
+              <div class="selected-item">Clark Gable <span>(Admin)</span></div>
+              <a class="remove" href="javascript:;">Remove</a>
+            </div>
+            <div class="sub last">
+              <div class="selected-item">Rudolph Valentino <span>(Operator)</span></div>
+              <a class="remove" href="javascript:;">Remove</a>
+            </div>
+          </div>
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly" href="javascript:;">Save</a>
+            </div>
+          </div>
+        </div><!-- END Ownership action panel -->
+        
+        <!-- Add Members action panel -->
+        <div class="action panel add-members">
+          <h1>Add Members</h1>
+          
+          <div class="group">
+            <div class="filter search">
+              <input type="text" placeholder="Search" />
+              <span class="im icon-search"></span>
+            </div>
+          </div>  
+          
+          <div class="table-list">
+            <div class="controls">
+              <div class="summary">
+                <div class="visible"><span class="value">(#)</span> Users </div>
+                <div class="selected">&nbsp;|&nbsp; <span class="value">(#)</span><span> selected</span></div>
+              </div>
+            </div>
+          <div class="choose list">
+            <table data-target="dataTable" class="dataTable no-footer" role="grid"><!-- it's a jQuery dataTable! :) -->
+              <thead>
+                <tr role="row">
+                  <th class="sorting user-name">
+                    Name
+                  </th>
+                  <th class="sorting location">
+                    Location
+                  </th>
+                  <th class="sorting zip"> 
+                    Zip Code
+                  </th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                <tr role="row" class="odd">
+                  <td class="sorting user-name">
+                    <input type="checkbox" value="select-all" /> 
+                    <a href="javascript:;">Vilma Banky</a>
+                  </td>
+                  <td class="sorting location">
+                     Hollywood, CA</td>
+                  <td class="zip"> 
+                    90274
+                  </td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="sorting user-name">
+                    <input type="checkbox" value="select-all" /> 
+                    <a href="javascript:;">Lionel Barrymore</a>
+                  </td>
+                  <td class="sorting location">
+                     Beverly Hills, CA
+                  </td>
+                  <td class="zip"> 
+                    90210
+                  </td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="sorting user-name">
+                    <input type="checkbox" value="select-all" /> 
+                    <a href="javascript:;">Clark Gable  <span>(Admin)</span></a>
+                  </td>
+                  <td class="sorting location">
+                     Malibu, CA
+                  </td>
+                  <td class="zip"> 
+                    90221
+                  </td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="sorting user-name">
+                    <input type="checkbox" value="select-all" /> 
+                    <a href="javascript:;">Douglas Fairbanks</a>
+                  </td>
+                  <td class="sorting location">
+                     Los Feliz, CA
+                  </td>
+                  <td class="zip"> 
+                    90219
+                  </td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="sorting user-name">
+                    <input type="checkbox" value="select-all" /> 
+                    <a href="javascript:;">Rudolph Valentino <span>(Operator)</span></a>
+                  </td>
+                  <td class="sorting location">
+                     Bel Air, CA
+                  </td>
+                  <td class="zip"> 
+                    90244
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <!-- ******* PAGNINATION ******* -->
+            <!-- Don't show if there aren't any pages -->
+            <div class="pagination">
+              <div class="inner">
+                <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
+                <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
+              </div>
+            </div>
+            
+          </div><!-- end "choose list" subpanel -->
+          </div><!-- end "table-list" -->
+
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              
+              <!-- On select any, remove class "disabled" -->
+              <a class="buttonly disabled" href="javascript:;">Add</a>
+              
+            </div>
+          </div>
+        </div><!-- END Add Members action panel -->
+        
+        <!-- New Subgroup action panel -->
+        <div class="action panel new-subgroup">
+          <h1>New Subgroup</h1>
+          <div class="wrapper">
+            <input type="text" class="name" placeholder="Group Name" />
+              <div class="warning">Must be at least 3 characters</div>
+              <div class="warning">A group already exists with this name</div>
+          </div>
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly" href="javascript:;">Create</a>
+            </div>
+          </div>
+        </div><!-- END Ownership action panel -->
+        
+      </div>
+      
+      <!-- --------------------------------------------------------
+      
+           Show "section-no-content" div if there are no members
+           If there are no members, don't show div "table-list"
+           
+       --------------------------------------------------------  -->
+      <div class="section-no-content">There aren't any members in this group.</div>
+      
+      
+      <!-- ****************** TABLE CONTROL BAR ***************** -->
+      
+      <!-- the summary area on the left with action buttons on the right -->
+      <div class="table-list">
+        <div class="controls has-buttons">
+          <div class="summary">
+            <div class="visible"><span class="value">(#)</span> Groups </div>
+            <div class="selected">&nbsp;|&nbsp; <span class="value">(#)</span><span> selected</span></div>
+          </div>
+          
+          <!-- on select any, inject class "active" into div "actions" -->
+          <div class="actions">
+            <a class="iconButton add" href="javascript:;">Add to Subgroup</a>
+            <a class="iconButton subtract last" href="javascript:;">Remove</a>
+          </div>
+        </div>
+        
+        <!-- ****************************************************************** -->
+        <!-- **********  Action panel (drops down on action select)  *********** -->
+        <!-- ****************************************************************** -->
+        
+        <!-- Panel for Add Members -->
+        
+        <div class="action panel add-members">
+          <h1>Add (#) Members to Subgroup</h1>
+          <div class="wrapper">
+            <div class="checkboxes">
+            
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" class="supercheck" value="repeats" />
+                    Bionic
+                </label>
+              </div>
+              
+              <!-- Create New Subgroup option should always be last -->
+              <div class="checkbox new">
+                <label>
+                  <input type="checkbox" class="supercheck" value="repeats" />
+                    Create New Subgroup
+                </label>
+                <div class="inner">
+                  <input type="text" class="name" placeholder="Group Name" />
+                  <div class="warning">Must be at least 3 characters</div>
+                  <div class="warning">A group already exists with this name</div>
+                </div>
+              </div><!-- END new -->
+              
+            </div><!-- END checkboxes -->
+          </div><!-- END wrapper -->
+          
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly disabled" href="javascript:;">Add</a>
+            </div>
+          </div>
+           
+        </div><!-- END Add Members panel -->
+        
+        
+        <!-- ------------------------------------------------------------ -->
+        
+        
+        <!-- **********  Action Confirmation panel  *********** -->
+        
+        <!-- the panel that confirms the executed action -->
+        <div class="action messages">
+          <div class="message confirmation">
+          
+            <!-- ------------------------------------------------------------------- 
+            
+                 Would like all "message" divs in "action-messages" div to 
+                 delay 5 seconds, then smoothly fade and animate up
+                   * if this can be done, remove the "closer" link
+                   * if not, please js the "closer" link to close the "message" div
+                   
+            ---------------------------------------------------------------------- -->
+            <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+            
+            <h1><span class="im icon-checkmark"></span>20 Tickets were assigned (Confirmation message)</h1>
+          </div>
+
+          <div class="message problem">
+          
+          <!-- ------------------------------------------------------------------- 
+            
+                 Would like all "message" divs in "action-messages" div to 
+                 delay 5 seconds, then smoothly fade and animate up
+                   * if this can be done, remove the "closer" link
+                   * if not, please js the "closer" link to close the "message" div
+                   
+            ---------------------------------------------------------------------- -->
+            <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+          
+            <h1><span class="im icon-warning"></span>Problem message</h1>
+          </div>
+        </div>
+      
+        <!-- ****************** TABLE ***************** -->
+      
+        <table data-target="dataTable" class="dataTable no-footer" role="grid">
+        
+          <thead>
+            <tr role="row">
+              <th class="sorting user-name">
+                <input type="checkbox" value="select-all" />
+                Name
+              </th>
+              <th class="sorting location">
+                Location
+              </th>
+              <th class="sorting zip">
+                Zip Code
+              </th>
+            </tr>
+          </thead>
+          
+          <tbody>
+          
+            <tr role="row" class="odd">
+              <td class="sorting user-name">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">Vilma Banky</a>
+              </td>
+              <td class="sorting location">
+                Hollywood, CA
+              </td>
+              <td class="sorting zip">
+                90274 
+              </td>
+            </tr>
+            
+            <tr role="row" class="even">
+              <td class="sorting user-name">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">Lionel Barrymore</a>
+              </td>
+              <td class="sorting location">Beverly Hills, CA </td>
+              <td class="sorting zip">
+                90210 
+              </td>
+            </tr>
+            
+            <tr role="row" class="odd">
+              <td class="sorting user-name">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">Clark Gable <span>(Admin)</span></a>
+              </td>
+              <td class="sorting location">Malibu, CA </td>
+              <td class="sorting zip">
+                90221 
+              </td>
+            </tr>
+            
+            <tr role="row" class="even">
+              <td class="sorting user-name">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">Douglas Fairbanks</a>
+              </td>
+              <td class="sorting location">Los Feliz, CA </td>
+              <td class="sorting zip">
+                90219 
+              </td>
+            </tr>
+            <tr role="row" class="odd">
+              <td class="sorting user-name">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">Rudolph Valentino</a>
+              </td>
+              <td class="sorting location">Bel Air, CA </td>
+              <td class="sorting zip">
+                90244 
+              </td>
+            </tr>
+            <tr role="row" class="even">
+              <td class="sorting user-name">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">Rudolph Valentino <span>(Operator)</span></a>
+              </td>
+              <td class="sorting location">Bel Air, CA </td>
+              <td class="sorting zip"> 
+                90244 
+              </td>
+            </tr>
+            <tr role="row" class="odd canceled">
+              <td class="sorting user-name">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">Jane Weymouth</a>
+              </td>
+              <td class="sorting location">Bel Air, CA </td>
+              <td class="sorting zip">
+                90244 
+              </td>
+            </tr>
+            <tr role="row" class="even expired">
+              <td class="sorting user-name">
+                <input type="checkbox" value="select-all" /> 
+                <a href="javascript:;">Jeff York</a>
+              </td>
+              <td class="sorting location">Bel Air, CA </td>
+              <td class="sorting zip"> 
+                90244 
+              </td>
+            </tr>
+            
+          </tbody>
+          
+        </table>
+      </div><!-- end table-list div -->
+
+      <!-- ****************** PAGINATION ***************** -->
+      <!-- Don't show if there aren't any pages -->
+      <div class="pagination">
+        <div class="inner">
+          <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
+          <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
+        </div>
+      </div>
+      
+    
+      <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
+    
+    
+    </div><!-- ends content -->
+  
+  </div><!-- ends right side ("inner wrapper")  -->
+</div><!-- ends main panel ("main wrapper") -->
+
+</body>
+</html>
