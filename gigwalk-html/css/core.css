@@ -182,7 +182,9 @@ body,
 /* icon font sizes - convert to pixels so IE doesn't mess up */
 
 .instruction .item.targets .sub .mini-panel.targets input:after,
-.group.additional .sub .plainLabel input:after {
+.group.additional .sub .plainLabel input:after,
+.checker .supercheck:after, 
+input[type="checkbox"]:after {
 	font-size: 19px;
 }
 
