@@ -507,11 +507,14 @@ html, body {
 	}
 	
 	.filters-choices .choice,
-	.filters-choices .choice .close,
 	.choose-dates a,
 	.quick-select a,
 	.calendar .action-panel .primary.actions a.buttonly {
 		border-color: rgba(64, 145, 230, .7);
+	}
+	
+	.filters-choices .choice .close {
+		border-left-color: rgba(64, 145, 230, .7);
 	}
 	
 	.calendar-month td.today {

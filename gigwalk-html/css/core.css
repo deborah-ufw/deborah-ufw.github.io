@@ -1365,7 +1365,6 @@ header .nav ul.dropdown-menu li,
 .instructions .item .actions a.buttonly,
 .primary.actions a,
 .filters-choices .choice,
-.filters-choices .choice .close,
 .pagination .previous,
 .pagination .next,
 .button-holder a,
@@ -1378,6 +1377,10 @@ a.page-action,
 }
 
 header .nav li {
+	border-left: 1px solid;
+}
+
+.filters-choices .choice .close {
 	border-left: 1px solid;
 }
 
@@ -3440,10 +3443,6 @@ a.iconly:before {
 	margin-top: 0;
 }
 
-.filters-choices .choice {
-	height: 39px;
-}
-
 .map .tab-pane .filters-choices .choice {
 	height: 35px;
 }
@@ -3458,8 +3457,8 @@ a.iconly:before {
 
 .filters-choices .close {
 	padding: 1px 3px 0px 3px;
-		top: -1px;
-		right: -1px;
+		top: 0;
+		right: 0;
 }
 
 .choose-dates {
@@ -3615,7 +3614,7 @@ a.iconly:before {
 }
 
 .action.messages h1 span.im {
-	padding: 0 5px;
+	padding: 0 5px 0 0;
 }
 
 .table-list .controls .iconButton {
@@ -4941,14 +4940,6 @@ a.page-action.delete-button span.im {
 	top: 4px;
 }
 
-.Groups .filters-choices {
-	padding-right: 177px;
-}
-
-.Group .filters-choices {
-	padding-right: 135px;
-}
-
 .page-action-panel {
 	width: 305px;
 }
@@ -5282,6 +5273,14 @@ a.page-action.delete-button span.im {
 	padding-left: .5em;
 	opacity: .5;
 } 
+
+@media (min-width: 600px) {
+	
+	.Groups .filters-choices {
+		padding-right: 135px;
+	}
+	
+}
 
 
 
@@ -5966,37 +5965,9 @@ html[data-useragent*='Trident'] .instruction.edit-mode .item.answer .more-info {
 	padding-top: 10px;
 }	
 
-html[data-useragent*='MSIE 10.0'] .map .tab-pane .assign-action .filters-choices .choice {
-	height: 36px;
-}
-
 html[data-useragent*='MSIE 10.0'] .map .assign-action.detail .filter.search input[type="text"],
 html[data-useragent*='Trident'] .map .assign-action.detail .filter.search input[type="text"] {
 	height: 38px;
-}
-
-html[data-useragent*='MSIE 10.0'] .Tickets .dash .action.panel .filters-choices .choice,
-html[data-useragent*='Trident'] .Tickets .dash .action.panel .filters-choices .choice,
-html[data-useragent*='MSIE 10.0'] .Tickets .dash .action.panel .filters-choices .choice .value,
-html[data-useragent*='Trident'] .Tickets .dash .action.panel .filters-choices .choice .value,
-html[data-useragent*='MSIE 10.0'] .Tickets .dash .action.panel .filters-choices .choice .close,
-html[data-useragent*='Trident'].Tickets .dash .action.panel .filters-choices .choice .close {
-	height: 40px;
-}
-
-html[data-useragent*='MSIE 10.0'] .worker-selected .filters-choices .choice .value,
-html[data-useragent*='Trident'] .worker-selected .filters-choices .choice .value,
-html[data-useragent*='MSIE 10.0'] .worker-selected .filters-choices .choice .close,
-html[data-useragent*='Trident']  .worker-selected .filters-choices .choice .close,
-html[data-useragent*='MSIE 10.0'] .worker-selected .filters-choices .choice .close,
-html[data-useragent*='Trident'] .worker-selected .filters-choices .choice .close,
-html[data-useragent*='MSIE 10.0'] .content > .filters-choices .choice .value,
-html[data-useragent*='Trident'] .content > .filters-choices .choice .value,
-html[data-useragent*='MSIE 10.0'] .content > .filters-choices .choice .close,
-html[data-useragent*='Trident']  .content > .filters-choices .choice .close,
-html[data-useragent*='MSIE 10.0'] .content > .filters-choices .choice .close,
-html[data-useragent*='Trident'] .content > .filters-choices .choice .close {
-	height: 39px;
 }
 
 html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list table th.project-title input[type="checkbox"],
@@ -6046,18 +6017,6 @@ html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-titl
 	
 	.more-info .set-required input[type="checkbox"] {
 		top: 0;
-	}
-	
-	.map .assign-action.detail .choice.searched,
-	.map .assign-action-detail .choice.searched .close {
-		height: 35px;
-	}
-	
-	.action.panel.assign .choice.searched,
-	.action.panel.assign .choice.searched .close,
-	.calendar .worker-selected .choice,
-	.calendar .worker-selected .choice .close {
-		height: 40px;
 	}
 	
 	.map .assign-action.detail .filter.search input[type="text"] {
