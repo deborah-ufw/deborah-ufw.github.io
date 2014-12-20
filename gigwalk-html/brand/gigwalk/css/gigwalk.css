@@ -501,7 +501,7 @@ html, body {
 	}
 	
 	.tabnav li.active,
-	.tabnav li.active:hover,
+	.tabnav li.active:hover,]
 	.tabnav li.active:focus {
 		background: #32b0e8;
 	}
@@ -529,6 +529,15 @@ html, body {
 		background: #f2f7fd;
 	}
 	
+	.messages .message.info {
+		background: #e3effb;
+	}
+	
+	.messages .message.info,
+	.message.info a.closer {
+		color: #1e436f;
+	}
+	
 	.nav-sections li.active {
 		border-left-color: #4890e2;
 	}
@@ -541,6 +550,7 @@ html, body {
 		background: #256aa8;
 	}
 	
+	/* blue button hovers */
 	.instructions .item .actions a.buttonly:hover,
 	.instructions .item .actions a.buttonly:focus,
 	.group a.buttonly:hover,
@@ -772,7 +782,8 @@ select option,
 .messages .problem span.exclaim,
 .section-no-content,
 .calendar-month th,
-.calendar-month .date-num {
+.calendar-month .date-num,
+.messages .message h1 {
 	font-family: Helvetica-Neue-Medium;
 }
 

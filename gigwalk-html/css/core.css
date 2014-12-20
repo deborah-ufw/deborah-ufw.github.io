@@ -140,29 +140,21 @@ body,
 	font-size: 1.4em;
 }
 
-.calendar-day h1.graphic:before {
-	font-size: 1.6em;
-}
-
 .map .tab-pane .ticketlink,
 .instruction .duplicating-message .im.icon-warning {
 	font-size: 1.7em;
 }
 
-.Tickets .dash td.status span:before,
-.calendar-day .blocked h1.graphic:before {
+.Tickets .dash td.status span:before {
 	font-size: 1.8em;
 }
 
-.calendar-month .work .time:before,
-.calendar-month .work .tickets:before,
 .Tickets .dash td.status span.paused:before,
 .action.panel h1,
 .action.messages h1,
 .calendar .action-panel h1,
 .filter.dropdown .btn.btn-default.dropdown-toggle .caret,
 .section-no-content,
-.calendar-day .header .time:before,
 .calendar .calendar-search h1 {
 	font-size: 1.9em;
 }
@@ -175,9 +167,6 @@ body,
 	font-size: 2.3em;
 }
 
-.calendar-day .no-scheduled .wrapper.blocker:before {
-	font-size: 8.5em;
-}
 
 /* icon font sizes - convert to pixels so IE doesn't mess up */
 
@@ -206,6 +195,8 @@ th.sorting:after {
 	font-size: 34px;
 }
 
+.calendar-month .work .time:before,
+.calendar-month .work .tickets:before,
 .choice .close .icon-cancel:before {
 	font-size: 35px;
 }
@@ -245,6 +236,10 @@ th.sorting:after {
 	font-size: 48px;
 }
 
+.calendar-day .header .time:before {
+	font-size: 49px;
+}
+
 header .nav li.alerts .im:before,
 header .nav li.messages .im:before {
 	font-size: 50px;	
@@ -254,8 +249,21 @@ header .nav li.messages .im:before {
 	font-size: 52px;
 }
 
+.calendar-day h1.graphic:before {
+	font-size: 58px;
+}
+
+
+.calendar-day .blocked h1.graphic:before {
+	font-size: 65px;
+}
+
 .map .icon-vacation:before {
 	font-size: 88px;
+}
+
+.calendar-day .no-scheduled .wrapper.blocker:before {
+	font-size: 131px;
 }
 
 
@@ -392,7 +400,9 @@ a.page-action:focus,
 .message a.closer:focus,
 .calendar-day a.get-more,
 .calendar-day a.get-more:hover,
-.calendar-day a.get-more:focus {
+.calendar-day a.get-more:focus,
+.page.right.icon-next,
+.page.left.icon-previous {
 	text-decoration: none;
 }
 
@@ -439,7 +449,8 @@ a.page-action,
 .table-list .controls .actions.active a,
 .calendar-month td,
 input[type="checkbox"]:after,
-input[type="radio"]:after {
+input[type="radio"]:after,
+.messages .message .closer {
 	cursor: pointer;
 }
 
@@ -735,8 +746,7 @@ th.sorting:after,
 .instruction .duplicating-message,
 a.page-action,
 .page-action-panel,
-.message.confirmation,
-.message.problem,
+.messages .message,
 .calendar .view-bar,
 .calendar .view-bar .view,
 .calendar .view-bar .date-nav,
@@ -1175,7 +1185,8 @@ input[type="radio"]:checked:after,
 .messages .problem span.exclaim,
 .map .pin,
 .map .pin:after,
-.map .pin.active:before {
+.map .pin.active:before,
+.messages .message .closer {
 	z-index: 1;
 }
 
@@ -3599,14 +3610,9 @@ a.iconly:before {
 	padding-bottom: 0;
 }
 
-.action.messages h1,
-.page.action.messages h1 {
+.action.messages .message h1 {
 	padding-top: .1em;
 	padding-left: 50px;
-}
-
-.action.messages h1 span.icon-checkmark {
-	margin-left: -55px;
 }
 
 .action.messages h1 span.im {
@@ -3615,6 +3621,10 @@ a.iconly:before {
 
 .action.messages h1 span.im {
 	padding: 0 5px 0 0;
+}
+
+.action.messages .info h1 {
+	padding-left: .5em;
 }
 
 .table-list .controls .iconButton {
@@ -3660,7 +3670,8 @@ a.iconly:before {
 	padding: 0 0 15px 10px;
 }
 
-.action.panel input.datepicker{
+.action.panel input.datepicker,
+.section-controls .action.panel input[type="text"].datepicker {
 	width: 190px;
 }
 
@@ -4880,7 +4891,7 @@ td.table-actions a {
 
 /* Groups */
 
-.page.action.messages {
+.page.action.messages .message {
 	margin: 1em 0;
 }
 

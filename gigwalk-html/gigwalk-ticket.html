@@ -214,14 +214,12 @@
       </nav><!-- ends content tabs -->
       
       <!-- the content under the tabs -->
-      <div class="content dash">
+      <div class="content">
       
       <div class="page action messages">
-          <div class="message confirmation info">
-          
+          <div class="message info">
             <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
-            
-            <h1><span class="im"></span>(Name or You) updated this ticket (time statement).</h1>
+            <h1><span class="im icon-empty"></span>(Name or You) updated this ticket (time statement).</h1>
           </div>
         </div>
       
@@ -231,158 +229,43 @@
         </div>
         
         <div class="section-actions">
-          <a class="iconButton unassign worker">Unassign</a>
+          <a class="iconButton unassign worker">Opt out</a>
           <a class="iconButton assign admin">Assign</a>
           <a class="iconButton schedule worker">Schedule</a>
           <a class="iconButton unschedule worker">Unschedule</a>
           <a class="iconButton extend admin">Extend</a>
+          <a class="iconButton reschedule admin">Reschedule</a>
           <a class="iconButton print">Print</a>
         </div>
         
-        <!-- Ownership action panel -->
-        <div class="action panel ownership">
-          <h1>Ownership</h1>
+        <!-- Assign action panel -->
+        <div class="action panel assign">
+          <h1>Assign</h1>
+          <div class="hint">If the ticket is already assigned, it will be re-assigned.</div>
           <div class="group">
             <div class="filter search">
               <input type="text" placeholder="Search" />
               <span class="im icon-search"></span>
             </div>
-            <div class="sub first">
-              <div class="selected-item">Clark Gable <span>(Admin)</span></div>
-              <a class="remove" href="javascript:;">Remove</a>
-            </div>
-            <div class="sub last">
-              <div class="selected-item">Rudolph Valentino <span>(Operator)</span></div>
-              <a class="remove" href="javascript:;">Remove</a>
-            </div>
           </div>
-          <div class="primary actions">
-            <div class="right">
-              <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly" href="javascript:;">Save</a>
-            </div>
-          </div>
-        </div><!-- END Ownership action panel -->
+        </div><!-- END Assign action panel -->
         
-        <!-- Add Members action panel -->
-        <div class="action panel add-members">
-          <h1>Add Members</h1>
+        <!-- Schedule action panel -->
+        <div class="action panel schedule">
+          <h1>Schedule <span>(estimated 3 hours 30 minutes)</span></h1>
+          <div class="item required text">
+            <div class="plainLabel">Choose Date</div>
+            <input type="text" class="datepicker" />
+          </div>
+          <div class="warning">This ticket is due before this date. This ticket will not be scheduled.</div>
           
-          <div class="group">
-            <div class="filter search">
-              <input type="text" placeholder="Search" />
-              <span class="im icon-search"></span>
-            </div>
-          </div>  
-          
-          <div class="table-list">
-            <div class="controls">
-              <div class="summary">
-                <div class="visible"><span class="value">(#)</span> Users </div>
-                <div class="selected">&nbsp;|&nbsp; <span class="value">(#)</span><span> selected</span></div>
-              </div>
-            </div>
-          <div class="choose list">
-            <table data-target="dataTable" class="dataTable no-footer" role="grid"><!-- it's a jQuery dataTable! :) -->
-              <thead>
-                <tr role="row">
-                  <th class="sorting user-name">
-                    Name
-                  </th>
-                  <th class="sorting location">
-                    Location
-                  </th>
-                  <th class="sorting zip"> 
-                    Zip Code
-                  </th>
-                </tr>
-              </thead>
-              
-              <tbody>
-                <tr role="row" class="odd">
-                  <td class="sorting user-name">
-                    <input type="checkbox" value="select-all" /> 
-                    <a href="javascript:;">Vilma Banky</a>
-                  </td>
-                  <td class="sorting location">
-                     Hollywood, CA</td>
-                  <td class="zip"> 
-                    90274
-                  </td>
-                </tr>
-                <tr role="row" class="even">
-                  <td class="sorting user-name">
-                    <input type="checkbox" value="select-all" /> 
-                    <a href="javascript:;">Lionel Barrymore</a>
-                  </td>
-                  <td class="sorting location">
-                     Beverly Hills, CA
-                  </td>
-                  <td class="zip"> 
-                    90210
-                  </td>
-                </tr>
-                <tr role="row" class="odd">
-                  <td class="sorting user-name">
-                    <input type="checkbox" value="select-all" /> 
-                    <a href="javascript:;">Clark Gable  <span>(Admin)</span></a>
-                  </td>
-                  <td class="sorting location">
-                     Malibu, CA
-                  </td>
-                  <td class="zip"> 
-                    90221
-                  </td>
-                </tr>
-                <tr role="row" class="even">
-                  <td class="sorting user-name">
-                    <input type="checkbox" value="select-all" /> 
-                    <a href="javascript:;">Douglas Fairbanks</a>
-                  </td>
-                  <td class="sorting location">
-                     Los Feliz, CA
-                  </td>
-                  <td class="zip"> 
-                    90219
-                  </td>
-                </tr>
-                <tr role="row" class="odd">
-                  <td class="sorting user-name">
-                    <input type="checkbox" value="select-all" /> 
-                    <a href="javascript:;">Rudolph Valentino <span>(Operator)</span></a>
-                  </td>
-                  <td class="sorting location">
-                     Bel Air, CA
-                  </td>
-                  <td class="zip"> 
-                    90244
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <!-- ******* PAGNINATION ******* -->
-            <!-- Don't show if there aren't any pages -->
-            <div class="pagination">
-              <div class="inner">
-                <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
-                <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
-              </div>
-            </div>
-            
-          </div><!-- end "choose list" subpanel -->
-          </div><!-- end "table-list" -->
-
           <div class="primary actions">
             <div class="right">
               <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              
-              <!-- On select any, remove class "disabled" -->
-              <a class="buttonly disabled" href="javascript:;">Add</a>
-              
+              <a class="buttonly disabled" href="javascript:;">Schedule</a>
             </div>
           </div>
-        </div><!-- END Add Members action panel -->
+        </div><!-- END Schedule action panel -->
         
         <!-- New Subgroup action panel -->
         <div class="action panel new-subgroup">
@@ -401,15 +284,6 @@
         </div><!-- END Ownership action panel -->
         
       </div>
-      
-      <!-- --------------------------------------------------------
-      
-           Show "section-no-content" div if there are no members
-           If there are no members, don't show div "table-list"
-           
-       --------------------------------------------------------  -->
-      <div class="section-no-content">There aren't any members in this group.</div>
-      
       
       <!-- ****************** TABLE CONTROL BAR ***************** -->
       
