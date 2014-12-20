@@ -610,6 +610,7 @@ a.page-action,
 .filters-holder view a,
 .table-list .summary,
 .table-list .action.panel .plainLabel,
+.action.panel.schedule .plainLabel,
 .subgroups-detail a {
 	display: inline-block;
 	float: left;
