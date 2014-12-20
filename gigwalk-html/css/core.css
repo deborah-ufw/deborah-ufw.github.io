@@ -338,12 +338,14 @@ header .nav .number,
 .calendar .action-panel .wrapper input,
 .calendar-day .blocked .action-panel,
 .calendar .calendar-search,
-.calendar .worker-selected .filters-choices {
+.calendar .worker-selected .filters-choices,
+.section-controls .action.panel.schedule .wrapper {
 	text-align: center;
 }
 
 .calendar-day .no-scheduled .wrapper.finder span.copy,
-.calendar-month .work {
+.calendar-month .work,
+.section-controls .action.panel.schedule .wrapper .inner {
 	text-align: left;
 }
 
@@ -591,7 +593,8 @@ a.page-action,
 .calendar-day .no-scheduled .primary.actions,
 .calendar .calendar-search .filter.search,
 .calendar .worker-selected .filters-choices .copy,
-.calendar-month .work {
+.calendar-month .work,
+.section-controls .action.panel.schedule .wrapper .inner {
 	display: inline-block;
 }
 
@@ -5012,7 +5015,8 @@ a.page-action.delete-button span.im {
 	margin-top: 1.3em;
 }
 
-.section-controls .group {
+.section-controls .group,
+.section-controls .action.panel. {
 	margin: 1em auto;
 }
 
@@ -5028,6 +5032,10 @@ a.page-action.delete-button span.im {
 	margin-left: 0;
 }
 
+.section-controls .group {
+	margin: 1.3em auto 0 auto;
+}
+
 .section-controls .action.panel .group .filter.search input {
 	width: 260px;
 }
@@ -5038,6 +5046,10 @@ a.page-action.delete-button span.im {
 
 .section-controls .action.panel .table-list {
 	margin: 1em 1em 3em 1em;
+}
+
+.section-controls .action.panel.schedule .wrapper {
+	margin: 2em 0;
 }
 
 .add-members .checkbox {

@@ -70,7 +70,7 @@
  
 </head>
 
-<body class="body admin">
+<body class="body">
 
 <!-- top navigation -->
 <header>
@@ -254,11 +254,13 @@
         <div class="action panel schedule">
           <h1>Schedule <span>(estimated 3 hours 30 minutes)</span></h1>
           <div class="wrapper">
-            <div class="item required text">
-              <div class="plainLabel">Choose Date</div>
-              <input type="text" class="datepicker" />
+            <div class="inner">
+              <div class="item required text">
+                <div class="plainLabel">Choose Date</div>
+                <input type="text" class="datepicker" />
+              </div>
+              <div class="warning">This ticket is due before this date. This ticket will not be scheduled.</div>
             </div>
-            <div class="warning">This ticket is due before this date. This ticket will not be scheduled.</div>
           </div>
           <div class="primary actions">
             <div class="right">
