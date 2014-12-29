@@ -3753,10 +3753,6 @@ td.table-actions a {
 	max-height: 390px;
 }
 
-.map-holder {
-	overflow: hidden;
-}
-
 .map-holder,
 .map.keys {
 	margin-top: 10px;
