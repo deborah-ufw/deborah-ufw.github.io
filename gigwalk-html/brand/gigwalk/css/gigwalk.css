@@ -377,7 +377,8 @@ html, body {
 	.key.submitted:before,
 	.map .nav-tabs > li > a,
 	.calendar-day .ticket .continue a,
-	.calendar .action-panel .primary.actions a.buttonly {
+	.calendar .action-panel .primary.actions a.buttonly,
+	.section-controls .buttons a.buttonly {
 		background: #4890e2;
 	}
 	
@@ -386,7 +387,9 @@ html, body {
 	.calendar-day .ticket .continue a:hover,
 	.calendar-day .ticket .continue a:focus,
 	.calendar .action-panel .primary.actions a.buttonly:hover,
-	.calendar .action-panel .primary.actions a.buttonly:focus {
+	.calendar .action-panel .primary.actions a.buttonly:focus,
+	.section-controls .buttons a.buttonly:hover,
+	.section-controls .buttons a.buttonly:focus {
 		background: #539ce9;
 	}
 	
@@ -509,7 +512,8 @@ html, body {
 	.filters-choices .choice,
 	.choose-dates a,
 	.quick-select a,
-	.calendar .action-panel .primary.actions a.buttonly {
+	.calendar .action-panel .primary.actions a.buttonly,
+	.section-controls .buttons a.buttonly {
 		border-color: rgba(64, 145, 230, .7);
 	}
 	
@@ -529,7 +533,12 @@ html, body {
 		background: #f2f7fd;
 	}
 	
-	.messages .message.info {
+	.completion-bar .text {
+		color: #e3effb;
+	}
+	
+	.messages .message.info,
+	.completion-bar {
 		background: #e3effb;
 	}
 	
@@ -542,13 +551,26 @@ html, body {
 		border-left-color: #4890e2;
 	}
 	
+	/* dark blue */
+	
 	.pin.unassigned:after {
 		color: #256aa8;
 	}
 	
-	.key.unassigned:before {
+	.key.unassigned:before,
+	.completion-bar .text {
 		background: #256aa8;
 	}
+	
+	.completion-bar {
+		border-color: #256aa8;
+	}
+	
+	.completion-bar .percent-complete {
+		background: #739ac2;
+	}
+	
+	
 	
 	/* blue button hovers */
 	.instructions .item .actions a.buttonly:hover,
@@ -791,7 +813,9 @@ select option,
 .instruction-footer .item.count .described,
 .table-list .controls .summary .selected span,
 .map .tab-pane .mini .value,
-.calendar-day .ticket .due .value {
+.calendar-day .ticket .due .value,
+.Ticket .ticket-summary .scheduled span,
+.Ticket .ticket-summary .due span {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }

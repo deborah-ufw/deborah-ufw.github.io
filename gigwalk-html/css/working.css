@@ -5,5 +5,10 @@ h1.super {
 	display: none;
 }
 
+.action.panel,
+.section-controls .admin {
+	display: none;
+}
+
 
 

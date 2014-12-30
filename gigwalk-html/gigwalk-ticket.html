@@ -216,13 +216,20 @@
       <!-- the content under the tabs -->
       <div class="content">
       
+      <!-- page-level notifications and confirmations -->
       <div class="page action messages">
-          <div class="message info">
-            <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
-            <h1><span class="im icon-empty"></span>(Name or You) updated this ticket (time statement).</h1>
-          </div>
+        <div class="message info">
+          <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+          <h1><span class="im icon-empty"></span>(Name or You) updated this ticket (time statement).</h1>
         </div>
+        <div class="message confirmation">
+          <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+          <h1><span class="im icon-empty"></span>You have (action-ed) this ticket.</h1>
+        </div>
+      </div>
       
+      
+      <!-- the breadcrumb and buttons with action panels at the top -->
       <div class="section-controls">
         <div class="section title">
           <a class="navly" href="javascript:;">Tickets</a> Gluten-Free Soy Sauce at Walmart
@@ -251,7 +258,7 @@
         </div><!-- END Assign action panel -->
         
         <!-- Schedule action panel -->
-        <div class="action panel schedule">
+        <div class="action panel date schedule">
           <h1>Schedule <span>(estimated 3 hours 30 minutes)</span></h1>
           <div class="wrapper">
             <div class="inner">
@@ -270,7 +277,112 @@
           </div>
         </div><!-- END Schedule action panel -->
         
-      </div>
+        <!-- Extend action panel -->
+        <div class="action panel date extend">
+          <h1>Extend</h1>
+          <div class="hint">The due date of this ticket will be updated to the selected date.</div>
+          <div class="wrapper">
+            <div class="inner">
+              <div class="item required text">
+                <div class="plainLabel">Choose Date</div>
+                <input type="text" class="datepicker" />
+              </div>
+            </div>
+          </div>
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly disabled" href="javascript:;">Extend</a>
+            </div>
+          </div>
+        </div><!-- END Extend action panel -->
+        
+        <!-- Reschedule action panel -->
+        <div class="action panel date reschedule">
+          <h1>Reschedule</h1>
+          <div class="hint">The due date of this ticket will be updated to the selected date.</div>
+          <div class="wrapper">
+            <div class="inner">
+              <div class="item required text">
+                <div class="plainLabel">Choose Date</div>
+                <input type="text" class="datepicker" />
+              </div>
+            </div>
+          </div>
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly disabled" href="javascript:;">Reschedule</a>
+            </div>
+          </div>
+        </div><!-- END Extend action panel -->
+        
+        <!-- main action button and little nav back to ticket summary -->
+        <div class="buttons">
+          <div class="left">
+            <a class="navly">Ticket Summary</a>
+            <a class="buttonly">Start Ticket</a>
+          </div>
+        </div><!-- END main action button and little nav -->
+        
+         <!-- Ticket completion progress bar -->
+      <div class="completion-bar">
+        <div class="completion">
+          <div class="percent-complete" style="width: 11%;"></div> 
+        </div>
+        <div class="text">
+          <span class="percent-text">11%</span>&nbsp;
+          <span class="copy">Complete</span>
+        </div>
+      </div><!-- END ticket completion progress bar -->
+        
+      </div><!-- END section controls -->
+      
+      
+      <!-- Ticket Summary panel -->
+      <div class="ticket-summary">
+        <div class="preview widget-panel"><!-- Preview section -->
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti">Preview</div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+            
+            <!-- description area -->
+            <div class="description area">
+              <div class="item wrapper">
+                <div class="scheduled">Scheduled for <span>Today</span></div>
+                <div class="due today">Due in <span>4 hours</span></div>
+              </div>
+              <div class="item description">This is a standard new-product cut-in for Kikkoman Gluten-Free soy sauce.</div>
+            </div>
+            
+            <!-- details area -->
+            <div class="details area">
+              <div class="item assigned admin">Jimmy Stewart</div>
+              <div class="item estimated">3:30</div>
+              <div class="item storename">Walmart</div>
+              <div class="wrapper">
+                <div class="address">16121 N. Snelling Rd</div>
+                <div class="address">Cupertino, CA 95014</div>
+                <div class="phone">
+                  <a href="tel:+14088772113">(408) 877-2113</a>
+                </div>
+                <div class="item materials">04117 Kikkoman shelf attachment with coupons</div>
+              </div>
+            </div>
+              
+          </div><!-- END widget content -->
+          
+        </div><!-- END Preview section --> 
+      
+      </div><!-- END Ticket Summary panel -->
       
         
         

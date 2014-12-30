@@ -36,7 +36,8 @@ input[type="checkbox"]:after,
 .calendar-month .work .time:before,
 .calendar-day .header .time:before,
 .calendar-day h1.graphic:before,
-.calendar-day .no-scheduled .wrapper.blocker:before {
+.calendar-day .no-scheduled .wrapper.blocker:before,
+.Ticket .completion-bar.complete .text:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -68,6 +69,8 @@ input[type="checkbox"]:after,
 .icon-bell:before {
 	content: "\e615";
 }
+.Ticket .completion-bar.complete .text:before,
+.action.messages .message.confirmation h1 span.im.icon-empty:before,
 .map .requirements-list li:before,
 .checker .supercheck:after,
 input[type="checkbox"]:after,
