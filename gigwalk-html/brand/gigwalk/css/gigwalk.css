@@ -278,7 +278,8 @@ html, body {
 	.remove:hover,
 	.item.required > .plainLabel:after,
 	.tab-pane.actions .detail:before,
-	.calendar-day .ticket.incomplete.today .due {
+	.calendar-day .ticket.incomplete.today .due,
+	.due.today {
 		color: #db2023;
 	}
 	

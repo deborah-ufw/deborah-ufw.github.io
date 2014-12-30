@@ -37,7 +37,8 @@ input[type="checkbox"]:after,
 .calendar-day .header .time:before,
 .calendar-day h1.graphic:before,
 .calendar-day .no-scheduled .wrapper.blocker:before,
-.Ticket .completion-bar.complete .text:before {
+.Ticket .completion-bar.complete .text:before,
+a[href*="tel"]:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -271,6 +272,19 @@ th.sorting_desc:after,
 .icon-map-pin-solid:before,
 .icon-map-toggle:before {
 	content: "\e637";
+}
+.icon-checkmark-box:before {
+	content: "\e638";
+}
+.icon-shield-system:before {
+	content: "\e639";
+}
+a[href*="tel"]:before,
+.icon-telephone:before {
+	content: "\e63b";
+}
+.icon-map-pin-outline:before {
+	content: "\e63c";
 }
 
 /* paste new characters just above this line */

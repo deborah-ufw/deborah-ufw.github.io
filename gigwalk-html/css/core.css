@@ -186,6 +186,10 @@ input[type="checkbox"]:after {
 	font-size: 23px;
 }
 
+a[href*="tel"]:before {
+	font-size: 29px;
+}
+
 .im:before {
 	font-size: 31px;
 }
@@ -410,7 +414,9 @@ a.page-action:focus,
 .calendar-day a.get-more:hover,
 .calendar-day a.get-more:focus,
 .page.right.icon-next,
-.page.left.icon-previous {
+.page.left.icon-previous,
+a[href*="tel"]:hover,
+a[href*="tel"]:focus {
 	text-decoration: none;
 }
 
@@ -785,7 +791,9 @@ a.page-action,
 .calendar-day h1.graphic:before,
 .calendar-day .no-scheduled .wrapper.blocker,
 .calendar-day .no-scheduled .wrapper.blocker:before,
-.Ticket .completion-bar {
+.Ticket .completion-bar,
+a[href*="tel"],
+a[href*="tel"]:before {
 	position: relative;
 }
 
@@ -1023,12 +1031,10 @@ a.iconButton.disabled:focus,
 	background: #f8f8f8;
 }
 
+
 .duplicating-message,
 .table-list table table td,
-.widget-panel .area {
-	background: #fafafa;
-}
-
+.widget-panel .area,
 .calendar-month td.past,
 .calendar-day .ticket {
 	background: #f9f9f9;
@@ -1325,6 +1331,11 @@ input[type="radio"]:checked:after,
 .Ticket .completion-bar.complete .text:before {
 	top: -3px;
 	right: 100px;
+}
+
+a[href*="tel"]:before {
+	top: 7px;
+	margin: 0 -7px;
 }
 
 
@@ -3676,8 +3687,11 @@ a.iconly:before {
 }
 
 .action.messages .info h1 {
-	margin-left: -1.5em;
-	padding-left: 0;
+	padding-left: .3em;
+}
+
+.action.messages .info h1 .icon-empty {
+	margin-left: -2em;
 }
 
 .table-list .controls .iconButton {
@@ -5033,7 +5047,7 @@ a.page-action.delete-button span.im {
 
 .Ticket .section-controls,
 .Ticket .ticket-summary .widget-panel {
-	margin-bottom: .3em;
+	margin-bottom: .4em;
 }
 
 .section-detail {
