@@ -196,7 +196,8 @@ a[href*="tel"]:before {
 
 .item.checker .supercheck:after,
 .map .choice.searched .close .icon-cancel:before ,
-.map .pin {
+.map .pin,
+.ticket-summary .details.area .im {
 	font-size: 32px;
 }
 
@@ -793,7 +794,9 @@ a.page-action,
 .calendar-day .no-scheduled .wrapper.blocker:before,
 .Ticket .completion-bar,
 a[href*="tel"],
-a[href*="tel"]:before {
+a[href*="tel"]:before,
+.Ticket .ticket-summary .details-area .item,
+.Ticket .ticket-summary .details-area .item .im {
 	position: relative;
 }
 
@@ -1336,6 +1339,10 @@ input[type="radio"]:checked:after,
 a[href*="tel"]:before {
 	top: 7px;
 	margin: 0 -7px;
+}
+
+.ticket-summary .details.area .im {
+	top: 7px;
 }
 
 
@@ -5783,8 +5790,17 @@ a.page-action.delete-button span.im {
 	margin-right: 1.2em;
 }
 
-.ticket-summary .item {
+.ticket-summary .description.area .item {
 	margin-bottom: .7em;
+}
+
+.ticket-summary .details.area {
+	padding-bottom: 2em;
+}
+
+.ticket-summary .details.area .wrapper,
+.ticket-summary .details.area .phone {
+	margin-left: 2.1em;
 }
 
 
