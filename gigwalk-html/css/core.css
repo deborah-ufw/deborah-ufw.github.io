@@ -91,7 +91,8 @@ header nav .user-edit,
 .map .tab-pane.actions .iconButton,
 .section-detail,
 .calendar .header,
-.calendar .action-panel .primary.actions {
+.calendar .action-panel .primary.actions,
+.ticket-summary .widget-panel .area {
 	font-size: 1.15em;
 }
 
@@ -112,8 +113,7 @@ header nav .user-edit,
 .calendar .view-bar .date-nav a,
 .calendar .worker-selected .filters-choices .copy,
 .section-controls .buttons,
-.completion-bar .text,
-.ticket-summary .widget-panel .area {
+.completion-bar .text {
 	font-size: 1.2em;
 }
 
@@ -516,7 +516,8 @@ a.disabled,
 .calendar .view-bar:after,
 .calendar-day .ticket:after,
 .completion-bar:after,
-.widget-panel .header:after {
+.widget-panel .header:after,
+.Ticket .ticket-summary .address span:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -612,7 +613,8 @@ a.page-action,
 .calendar .calendar-search .filter.search,
 .calendar .worker-selected .filters-choices .copy,
 .calendar-month .work,
-.section-controls .action.panel.date .wrapper .inner {
+.section-controls .action.panel.date .wrapper .inner,
+.ticket-summary .description .wrapper div {
 	display: inline-block;
 }
 
@@ -5737,7 +5739,7 @@ a.page-action.delete-button span.im {
 }
 
 .completion-bar .percent-complete {
-	height:1.7em;
+	height: 1.7em;
 }
 
 .completion-bar .text {
@@ -5761,6 +5763,14 @@ a.page-action.delete-button span.im {
 .widget-panel .area {
 	margin: 2px 0;
 	padding: 1em 1em 1em .5em;
+}
+
+.ticket-summary .description .wrapper div {
+	margin-right: 1.2em;
+}
+
+.ticket-summary .item {
+	margin-bottom: .7em;
 }
 
 
