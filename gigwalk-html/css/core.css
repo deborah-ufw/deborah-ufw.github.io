@@ -5783,7 +5783,7 @@ a.page-action.delete-button span.im {
 
 .widget-panel .area {
 	margin: 2px 0;
-	padding: 1em 1em 1em .5em;
+	padding: 1em 1em 1em 1em;
 }
 
 .ticket-summary .description .wrapper div {
@@ -5796,6 +5796,7 @@ a.page-action.delete-button span.im {
 
 .ticket-summary .details.area {
 	padding-bottom: 2em;
+	padding-left: .8em;
 }
 
 .ticket-summary .details.area .wrapper,
