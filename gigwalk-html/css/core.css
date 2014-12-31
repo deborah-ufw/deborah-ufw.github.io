@@ -365,7 +365,8 @@ header .nav .number,
 .section-controls .action.panel.date .wrapper,
 .completion-bar .text,
 .ticket-instructions,
-.answerButton {
+.answerButton,
+.Ticket .instruction .numeric input {
 	text-align: center;
 }
 
@@ -554,7 +555,8 @@ a.disabled,
 .completion-bar:after,
 .widget-panel .header:after,
 .Ticket .ticket-summary .address span:after,
-.comments .new textarea:after {
+.comments .new textarea:after,
+.Ticket .instruction .time .answer:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -712,7 +714,9 @@ input[type="radio"],
 .instruction-content .plainLabel,
 .group .value,
 .sub .selected-item,
-.primary.actions a.delete {
+.primary.actions a.delete,
+.Ticket .instruction .time .dropdown,
+.Ticket .instruction .time input {
 	float: left;
 }
 
@@ -3014,7 +3018,8 @@ instruction .viewing.icon-buttons {
 }
 
 .instruction.view-mode .numeric input,
-.instruction.view-mode .time input {
+.instruction.view-mode .time input,
+.Ticket .instruction .time input {
 	margin: 0 0 0 0;
 	padding-right: 4px;
 	width: 60px;
@@ -3031,7 +3036,8 @@ instruction .viewing.icon-buttons {
 	padding-top: 0;
 }
 
-.instruction.view-mode input.datepicker {
+.instruction.view-mode input.datepicker,
+.Ticket input.datepicker {
 	margin: 0 6.5em 0 0;
 	padding-right: 4px;
 	width: 120px;
@@ -3042,21 +3048,27 @@ instruction .viewing.icon-buttons {
 	padding-top: .3em;
 }
 
-.instruction.view-mode .time .dropdown {
+.instruction.view-mode .time .dropdown,
+.Ticket .instruction .time .dropdown {
 	margin: 0 1em 0 .5em;
 }
 
+.instruction.view-mode .time .btn.btn-default.dropdown-toggle,
+.Ticket .instruction .time .btn.btn-default.dropdown-toggle {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 .instruction.view-mode .time .btn.btn-default.dropdown-toggle {
-	padding-top: 4px;
-	padding-bottom: 4px;
-		top: 5px;
+		top: 4px;
 }
 
 .view-mode .instruction-content .time .dropdown-menu {
 	right: -2px;
 }
 
-.view-mode .numeric .currency:before {
+.view-mode .numeric .currency:before,
+.Ticket .numeric .currency:before {
 	content: '$';
 }
 
@@ -6024,6 +6036,16 @@ a.page-action.delete-button span.im {
 
 .answerButton {
 	padding: .4em 1em;
+}
+
+.Ticket .instruction .numeric input {
+	width: 107px;
+}
+
+.Ticket .instruction .answer textarea {
+	max-width: 400px;
+	width: 100%;
+	height: 100px;
 }
 
 

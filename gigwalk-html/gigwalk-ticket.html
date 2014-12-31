@@ -577,6 +577,59 @@
                   </div>
                 </div>
               </div><!-- END Checkboxes -->
+              
+              <!-- question type is Numeric -->
+              <div class="type numeric">
+                <!-- this oneis numeric but not currency -->
+                <div class="answers">
+                  <div class="answer">
+                    <input type="text" name="target2 answer number" placeholder="ex. 7" />
+                  </div>
+                  <!-- this one is currency -->
+                  <div class="answer currency">
+                    <input type="text" name="target3 answer number" placeholder="ex. 7" />
+                  </div>
+                </div>
+              </div><!-- END Numeric -->
+              
+              <!-- question type is Date -->
+              <div class="type date">
+                <div class="answers">
+                  <div class="answer">
+                    <input type="text" class="datepicker" name="target3 answer date" placeholder="ex. 12/15/2015" />
+                  </div>
+                </div>
+              </div><!-- END Date -->
+              
+              <!-- question type is Time -->
+              <div class="type time">
+                <div class="answers">
+                  <div class="answer">
+                        <input type="text" name="target1 answer time" placeholder="ex. 3" />
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Minutes
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                </div>
+              </div><!-- END Time -->
+              
+              <!-- question type is Free Text -->
+              <div class="type text">
+                <div class="answers">
+                  <div class="answer">
+                    <textarea name="target1 answer text" placeholder="Enter your answer" ></textarea>
+                  </div>
+                </div>
+              </div><!-- END Time -->
             
             </div><!-- END inner -->
             
