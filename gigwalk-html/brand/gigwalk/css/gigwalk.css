@@ -379,7 +379,8 @@ html, body {
 	.map .nav-tabs > li > a,
 	.calendar-day .ticket .continue a,
 	.calendar .action-panel .primary.actions a.buttonly,
-	.section-controls .buttons a.buttonly {
+	.section-controls .buttons a.buttonly,
+	.Ticket .comments .primary.actions a.buttonly {
 		background: #4890e2;
 	}
 	
@@ -390,7 +391,9 @@ html, body {
 	.calendar .action-panel .primary.actions a.buttonly:hover,
 	.calendar .action-panel .primary.actions a.buttonly:focus,
 	.section-controls .buttons a.buttonly:hover,
-	.section-controls .buttons a.buttonly:focus {
+	.section-controls .buttons a.buttonly:focus,
+	.Ticket .comments .primary.actions a.buttonly:hover,
+	.Ticket .comments .primary.actions a.buttonly:focus {
 		background: #539ce9;
 	}
 	
@@ -514,7 +517,8 @@ html, body {
 	.choose-dates a,
 	.quick-select a,
 	.calendar .action-panel .primary.actions a.buttonly,
-	.section-controls .buttons a.buttonly {
+	.section-controls .buttons a.buttonly,
+	.Ticket .comments .primary.actions a.buttonly {
 		border-color: rgba(64, 145, 230, .7);
 	}
 	
@@ -816,7 +820,8 @@ select option,
 .map .tab-pane .mini .value,
 .calendar-day .ticket .due .value,
 .Ticket .ticket-summary .scheduled span,
-.Ticket .ticket-summary .due span {
+.Ticket .ticket-summary .due span,
+.Ticket .comments .area .ti {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }

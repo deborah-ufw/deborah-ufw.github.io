@@ -56,7 +56,8 @@ header nav .user-edit,
 .map .assign-action.detail .filters-choices,
 .calendar-day .no-scheduled .wrapper .primary.actions a,
 .calendar-day .blocked .wrapper .primary.actions a,
-.calendar-month .date-num {
+.calendar-month .date-num,
+.comments .attached-file span {
 	font-size: .9em;
 }
 
@@ -184,6 +185,10 @@ input[type="checkbox"]:after {
 
 .instruction.view-mode .answer.exception .plainLabel:after {
 	font-size: 23px;
+}
+
+.comments .attached-file span.im:before {
+	font-size: 25px;
 }
 
 a[href*="tel"]:before {
@@ -364,7 +369,10 @@ header .nav .number,
 .table-list table .estimated,
 .filters-choices,
 .Groups table .members,
-.calendar-day .ticket .continue {
+.calendar-day .ticket .continue,
+.Ticket .comments .new .attacher,
+.Ticket .comments .new .actions,
+.comments .new .attached-file {
 	text-align: right;
 }
 
@@ -417,7 +425,9 @@ a.page-action:focus,
 .page.right.icon-next,
 .page.left.icon-previous,
 a[href*="tel"]:hover,
-a[href*="tel"]:focus {
+a[href*="tel"]:focus,
+.comments a:hover,
+.comments a:focus {
 	text-decoration: none;
 }
 
@@ -467,7 +477,8 @@ a.page-action,
 input[type="checkbox"]:after,
 input[type="radio"]:after,
 .messages .message .closer,
-.section-controls .buttons a {
+.section-controls .buttons a,
+.Ticket a.buttonly {
 	cursor: pointer;
 }
 
@@ -524,7 +535,8 @@ a.disabled,
 .calendar-day .ticket:after,
 .completion-bar:after,
 .widget-panel .header:after,
-.Ticket .ticket-summary .address span:after {
+.Ticket .ticket-summary .address span:after,
+.comments .new textarea:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -621,7 +633,11 @@ a.page-action,
 .calendar .worker-selected .filters-choices .copy,
 .calendar-month .work,
 .section-controls .action.panel.date .wrapper .inner,
-.ticket-summary .description .wrapper div {
+.ticket-summary .description .wrapper div,
+.comments a,
+.comments .area .ti div,
+.comments .new a.attach,
+.comments .comment a.attached-file {
 	display: inline-block;
 }
 
@@ -685,14 +701,16 @@ input[type="radio"],
 .remove,
 .instruction.view-mode .type,
 .filters-choices .choice.date,
-.choose-dates .actions {
+.choose-dates .actions,
+.comments .area .ti div.time {
 	float: right;
 }
 
 .tabnav li .dropdown li,
 .group.repeats .every .dropdown .plainLabel,
 .group.repeats .set-repeats .radios .plainLabel,
-.instruction.edit-mode .instruction-content .numeric .more-info > .plainLabel {
+.instruction.edit-mode .instruction-content .numeric .more-info > .plainLabel,
+.comments .new .attached-file .remove {
 	float: none;
 }
 
@@ -796,7 +814,13 @@ a.page-action,
 a[href*="tel"],
 a[href*="tel"]:before,
 .Ticket .ticket-summary .details-area .item,
-.Ticket .ticket-summary .details-area .item .im {
+.Ticket .ticket-summary .details-area .item .im,
+.comments .area,
+.comments .wrapper,
+a.attach,
+a.attach .im,
+.attached-file,
+.attached-file span {
 	position: relative;
 }
 
@@ -974,7 +998,8 @@ select,
 	color: #dedede;
 }
 
-.ticket-summary .widget-panel .controls {
+.ticket-summary .widget-panel .controls,
+.comments .new .attachment {
 	color: #6e6e6e;
 }
 
@@ -1066,7 +1091,8 @@ a.iconButton.disabled:focus,
 .datepicker td.blocked:hover,
 .datepicker td.active.blocked:hover,
 .datepicker td.blocked:focus,
-.datepiacker td.active.blocked:focus {
+.datepiacker td.active.blocked:focus,
+.comments .new .attachment {
 	background-color: #efefef;
 }
 
@@ -1345,6 +1371,16 @@ a[href*="tel"]:before {
 	top: 7px;
 }
 
+a.attach .im {
+	margin-right: -4px;
+	top: 5px; 
+}
+
+.comments .attached-file span.im {
+	margin-right: -4px;
+	top: 5px;
+}
+
 
 
 /* borders */
@@ -1354,6 +1390,7 @@ input[type="checkbox"]:after,
 input[type="radio"]:after,
 input[type="text"],
 input[type="textarea"],
+textarea,
 .instruction-content,
 .map-holder {
 	border: 1px solid #cccccc;
@@ -1921,6 +1958,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 		background-size: 100%;
 	}
 	
+	img.user-image {
+		margin: 0 0 0 0;
+	}
+	
 	header .user-info .inner {
 		width: auto;
 		max-width: 140px;
@@ -1980,6 +2021,7 @@ div.main.wrapper + div.inner {
 	line-height: 1.4em;
 }
 
+.comments.widget-panel .user-image,
 .sidenav .user-image {
 	width: 70px;
 	height: 70px;
@@ -5795,14 +5837,60 @@ a.page-action.delete-button span.im {
 }
 
 .ticket-summary .details.area {
-	padding-bottom: 2em;
-	padding-left: .8em;
+	padding: 0 1em 1.5em .8em;
 }
 
 .ticket-summary .details.area .wrapper,
 .ticket-summary .details.area .phone {
 	margin-left: 2.1em;
 }
+
+.comments .wrapper {
+	margin-bottom: -55px;
+	top: -70px;
+	left: 80px;
+}
+
+.comments .wrapper {
+	max-width: 440px;
+	width: 100%;
+}
+
+.comments .new textarea {
+	margin-bottom: -2px;
+	width: 100%;
+	height: 70px;
+}
+
+.comments .area .ti {
+	margin-bottom: .5em;
+}
+
+.comments .new a.attach {
+	margin: .5em 5px 1em 0;
+}
+
+.comments .attachment {
+	margin:0 0 2px 0;
+	padding-bottom: .3em; 
+}
+
+.comments .comment .attachment {
+	padding-bottom: 0;
+}
+
+.comments .new .attached-file .remove {
+	margin: 0 5px 0 2em;
+	padding-top: 10px;
+	padding-bottom: 3px;
+}
+
+.comment .comment-copy {
+	margin-bottom: .5em;
+}
+
+
+
 
 
 
