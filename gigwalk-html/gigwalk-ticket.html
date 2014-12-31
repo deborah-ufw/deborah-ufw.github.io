@@ -216,6 +216,10 @@
       <!-- the content under the tabs -->
       <div class="content">
       
+      <!-- ******************************************************************  
+                                    TOP SECTION
+           ****************************************************************** -->
+      
       <!-- page-level notifications and confirmations -->
       <div class="page action messages">
         <div class="message info">
@@ -339,9 +343,15 @@
       </div><!-- END section controls -->
       
       
-      <!-- Ticket Summary panel -->
+      <!-- ******************************************************************  
+                                    SUMMARY PANEL
+           ****************************************************************** -->
+      
+      <!-- --------------------- Ticket Summary panel --------------------- -->
       <div class="ticket-summary">
-        <div class="preview widget-panel"><!-- Preview section -->
+      
+        <!-- --------------------- Preview --------------------- -->
+        <div class="preview widget-panel">
           <!-- widget header -->
           <div class="header">
             <div class="controls">
@@ -354,7 +364,7 @@
           <!-- widget content -->
           <div class="widget-panel-content">
             
-            <!-- description area -->
+            <!-- --------- Description area ------------ -->
             <div class="description area">
               <div class="item wrapper">
                 <div class="scheduled">
@@ -366,7 +376,7 @@
               <div class="item description">This is a standard new-product cut-in for Kikkoman Gluten-Free soy sauce.</div>
             </div>
             
-            <!-- details area -->
+            <!-- --------- Details area ------------ -->
             <div class="details area">
               <div class="item assigned admin">
                 <span class="im icon-people"></span>
@@ -397,7 +407,9 @@
           </div><!-- END widget content -->
         </div><!-- END Preview section --> 
       
-        <div class="comments widget-panel"><!-- Comments section -->
+      
+        <!-- --------------------- Comments section --------------------- -->
+        <div class="comments widget-panel">
           <!-- widget header -->
           <div class="header">
             <div class="controls">
@@ -409,7 +421,8 @@
           
           <!-- widget content -->
           <div class="widget-panel-content">
-            <!-- new comment area -->
+
+            <!-- ---------- New comments area ------------ -->
             <div class="new area">
               <div class="user-image">
                 <img class="user-image" src="brand/gigwalk/images/grace.jpg">
@@ -419,7 +432,7 @@
                 <div class="attachment">
                   <div class="attached-file">
                     <span class="im icon-paperclip"></span>  
-                    <span class="filename">gluten-free-aisle-location.pdf</span>     
+                    <span class="filename">Gluten-free-aisle-location.pdf</span>     
                     <a href="javascript:;" class="remove">Remove</a>           
                   </div>
                 </div>
@@ -432,7 +445,7 @@
               </div>
             </div>
             
-            <!-- stacked comments -->
+            <!-- ---------------------stacked comments --------------------- -->
             <div class="comment area">
               <div class="user-image">
                 <img class="user-image" src="images/system-image.png">
@@ -448,16 +461,133 @@
                 <div class="attachment">
                   <a href="javascript:;" class="attached-file">
                     <span class="im icon-paperclip"></span>  
-                    <span class="filename">gluten-free-aisle-location.pdf</span>     
+                    <span class="filename">Gluten-free-aisle-location.pdf</span>     
                   </a>
                 </div>
               </div>
             </div>
+          </div><!-- END widget content -->
+          
+        </div><!-- END Comments section --> 
+      </div><!-- END Ticket Summary panel -->
+      
+      <!-- ******************************************************************  
+                                INSTRUCTIONS PANEL
+           ****************************************************************** -->
+      
+      <!-- Ticket Instructions panel -->
+      <div class="ticket-instructions">
+      
+        <!-- -------------------- Hint --------------------- -->
+        <div class="hint widget-panel">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti">
+                <span class="im icon-shield"></span>
+                <span class="tip-title">
+                  Location of the product in the store 
+                </span>
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+            <div class="hint-copy">
+              In some stores, the gluten-free soy sauce is in a gluten-free product area, 
+              and is not found with the soy sauces or condiments.
+            </div>
+            <div class="attachment image">
+              <img src="images/sample-img.gif" />
+              <span class="im icon-magnify"></span>
+            </div>
+            <div class="attachment file">
+              <a href="javascript:;" class="attached-file">
+                <span class="im icon-paperclip"></span>  
+                <span class="filename">Gluten-free-aisle-location.pdf</span>     
+              </a>
+            </div>
+          </div><!-- END widget content -->
+        </div><!-- END hint -->
+        
+        
+        <!-- -------------------- Question --------------------- -->
+        <div class="instruction question widget-panel edit-mode">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti type">
+                Question
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+            <div class="actions">
+              <div class="ti target">Kikkoman Gluten-Free Soy Sauce 24 oz.</div>
+              <div class="viewing icon-buttons">
+                <a class="im icon-edit" href="javascript:;"></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+          
+            <div class="inner">
+              <div class="ti">Where was the product located in the store?</div>
+              <div class="description">
+                Check each location the product was stocked (example description for the checkbox question type)
+              </div>
+            
+              <!-- question type is Item Grid -->
+              <div class="type item-grid">
+                <div class="answers">
+                  <div class="answer exception">
+                    <label class="plainLabel">
+                      <input type="radio" name="target1 answer">
+                      Not on Shelf
+                    </label>
+                  </div>
+                  <div class="answer">
+                    <label class="plainLabel">
+                      <input type="radio" name="target1 answer">
+                      On shelf
+                    </label>
+                  </div>
+                </div>
+              </div><!-- END Item Grid -->
+              
+              <!-- question type is Checkboxes -->
+              <div class="type checkboxes">
+                <div class="answers">
+                  <div class="answer exception">
+                    <label class="plainLabel">
+                      <input type="checkbox" name="target1 answer soda" />
+                      Soda aisle
+                    </label>
+                  </div>
+                  <div class="answer">
+                    <label class="plainLabel">
+                      <input type="checkbox" name="target1 answer check-out" />
+                      Check-out
+                    </label>
+                  </div>
+                </div>
+              </div><!-- END Checkboxes -->
+            
+            </div><!-- END inner -->
+            
+            <!-- main action button -->
+            <a href="javascript:;" class="answerButton">Save</a>
             
           </div><!-- END widget content -->
-        </div><!-- END Preview section --> 
+        </div><!-- END hint -->
       
-      </div><!-- END Ticket Summary panel -->
+      
+      </div><!-- END Ticket Instructions panel -->
       
         
         

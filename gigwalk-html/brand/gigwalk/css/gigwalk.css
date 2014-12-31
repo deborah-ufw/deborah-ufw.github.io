@@ -156,7 +156,8 @@ html, body {
 	.calendar td.incomplete .work,
 	.calendar-day .store.incomplete .header,
 	.calendar-day .ticket.incomplete,
-	.calendar .worker-selected .filters-choices .copy {
+	.calendar .worker-selected .filters-choices .copy,
+	.Ticket .instruction .widget-panel-content .answer > .plainLabel {
 		color: #4a4a4a;
 	}
 	
@@ -333,12 +334,22 @@ html, body {
 	}
 	
 	.messages .message.problem,
-	.instructions .duplicating-message {
-		background: #ffe5e6;
+	.instructions .duplicating-message,
+	.hint.widget-panel {
+		background: #fffde1;
 	}
 
 	
 	/* blues */
+	
+	.Ticket .instruction.required.widget-panel .header,
+	.Ticket .instruction.widget-panel .header {
+		background: #3874b6; 
+	}
+	
+	.Ticket .instruction .header .actions .ti {
+		color: #234871;
+	}
 	
 	.step .arrow {
 		color: #59beec;
@@ -423,8 +434,14 @@ html, body {
 		background: #eaf2fd;
 	}
 	
-	.calendar-day.today .store .header {
+	.calendar-day.today .store .header,
+	.Ticket .instruction .header .actions {
 		background: #d5e7fa;
+	}
+	
+	.Ticket .instruction a.answerButton:hover,
+	.Ticket .instruction a.answerButton:focus {
+		background: #e0edfb;
 	}
 	
 	.calendar-day.today .store .header .time {
@@ -435,7 +452,8 @@ html, body {
 		background: #f5f9fe;
 	}
 	
-	.calendar-day a.get-more {
+	.calendar-day a.get-more,
+	.Ticket .instruction a.answerButton {
 		background: #ecf4fb;
 	}
 	
@@ -792,7 +810,8 @@ a.page-action,
 .calendar-day .ticket .ti .time,
 .calendar-day .ticket .ti .ticketname,
 .calendar-day h1.graphic,
-.calendar-month .date-num:after {
+.calendar-month .date-num:after,
+.answerButton {
 	font-family: Helvetica-Neue-Light;
 }
 
@@ -810,7 +829,8 @@ select option,
 .section-no-content,
 .calendar-month th,
 .calendar-month .date-num,
-.messages .message h1 {
+.messages .message h1,
+.hint.widget-panel .header .ti {
 	font-family: Helvetica-Neue-Medium;
 }
 
@@ -821,7 +841,8 @@ select option,
 .calendar-day .ticket .due .value,
 .Ticket .ticket-summary .scheduled span,
 .Ticket .ticket-summary .due span,
-.Ticket .comments .area .ti {
+.Ticket .comments .area .ti,
+.Ticket .instruction .widget-panel-content .inner > .ti {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }
