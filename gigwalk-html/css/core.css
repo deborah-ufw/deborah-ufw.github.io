@@ -44,7 +44,8 @@ header nav .user-edit,
 .tab-pane.actions .assign-action.detail.required:before,
 .Groups .table-list table .org-name,
 .calendar .calendar-month .date-num:after,
-.Ticket .completion-bar.complete span.percent-text {
+.Ticket .completion-bar.complete span.percent-text,
+.Ticket .instruction.required .optional {
 	display: none;
 }
 
@@ -78,7 +79,8 @@ header nav .user-edit,
 .map .tab-pane .quick-select,
 .calendar-day .ticket,
 .calendar .action-panel .wrapper,
-.calendar .action-panel .wrapper input {
+.calendar .action-panel .wrapper input,
+.bigButton {
 	font-size: 1.1em;
 }
 
@@ -274,7 +276,8 @@ header .nav li.messages .im:before {
 }
 
 
-.calendar-day .blocked h1.graphic:before {
+.calendar-day .blocked h1.graphic:before,
+.bigButton:before {
 	font-size: 65px;
 }
 
@@ -367,14 +370,17 @@ header .nav .number,
 .completion-bar .text,
 .ticket-instructions,
 .answerButton,
-.Ticket .instruction .numeric input {
+.Ticket .instruction .numeric input,
+.bigButton,
+.Ticket .instruction.photo .answers {
 	text-align: center;
 }
 
 .calendar-day .no-scheduled .wrapper.finder span.copy,
 .calendar-month .work,
 .section-controls .action.panel.date .wrapper .inner,
-.widget-panel {
+.widget-panel,
+.Ticket .instruction.photo .answer {
 	text-align: left;
 }
 
@@ -444,7 +450,9 @@ a[href*="tel"]:focus,
 .attached-file:hover,
 .attached-file:focus,
 .answerButton:hover,
-.answerButton:focus {
+.answerButton:focus,
+a.bigButton:hover,
+a.bigButton:focus {
 	text-decoration: none;
 }
 
@@ -590,8 +598,6 @@ nav.subnav ul {
 	display: table-cell;
 }
 
-
-
 .tabnav .dropdown.open ul.dropdown-menu,
 .tabnav li .dropdown li,
 .tabnav li .dropdown li a,
@@ -603,7 +609,9 @@ nav.subnav ul {
 .map .tab-pane.actions .iconButton,
 .calendar-day a.get-more,
 .calendar-day .no-scheduled .wrapper.finder span.copy,
-.map .tab-pane a.requirements {
+.map .tab-pane a.requirements,
+.Ticket .instruction.photo .answer .plainLabel,
+.bigButton:before {
 	display: block;
 }
 
@@ -662,7 +670,9 @@ a.page-action,
 .attached-file,
 .hint.widget-panel .tip-title,
 .hint.widget-panel .widget-panel-content div.attachment.image a,
-.answerButton {
+.answerButton,
+.bigButton,
+.Ticket .instruction.photo .answer {
 	display: inline-block;
 }
 
@@ -698,7 +708,8 @@ a.page-action,
 .calendar .view,
 .calendar-day .ticket .due,
 .completion-bar .text,
-.Ticket .instruction.edit-mode.complete .viewing.icon-buttons {
+.Ticket .instruction.edit-mode.complete .viewing.icon-button,
+.Ticket .instruction.photo .answers:before {
 	display: inline-block;
 	float: right;
 }
@@ -853,7 +864,10 @@ a.attach .im,
 .hint.widget-panel .header .controls .ti,
 .hint.widget-panel .tip-title,
 .attachment.image,
-.attachment.image .im {
+.attachment.image .im,
+.bigButton,
+.bigButton:after,
+.Ticket .instruction.photo .answers:before {
 	position: relative;
 }
 
@@ -923,6 +937,11 @@ header .navbar-collapse.in {
 .view-mode .instruction-content .time .dropdown-menu,
 .more-info:before,.instruction.edit-mode .numeric .dropdown-menu {
 	left: auto;
+}
+
+.instruction .image,
+.hint .image {
+	vertical-align: top;
 }
 
 /* ellipsify */
@@ -1025,6 +1044,8 @@ select,
 	background: rgba(255, 255, 255, .2);
 }
 
+.Ticket .instruction.required .arrow, 
+.Ticket .instruction.required .header .controls .ti,
 .Ticket .instruction .arrow, 
 .Ticket .instruction .header .controls .ti {
 	color: rgba(255, 255, 255, .4);
@@ -1033,8 +1054,7 @@ select,
 .tabnav li.dropdownly:hover,
 .tabnav li.dropdownly:focus,
 .tabnav li.buttonly:hover,
-.tabnav li.buttonly:focus,
-.Ticket .instruction .header .controls {
+.tabnav li.buttonly:focus {
 	background: rgba(255, 255, 255, .0);
 }
 
@@ -1207,7 +1227,9 @@ input[type="radio"]:after,
 .page-action-panel a.cancel,
 .page-action-panel .actions a.buttonly.delete,
 .calendar .action-panel .primary.actions a.buttonly.cancel,
-.instruction.widget-panel {
+.instruction.widget-panel,
+.Ticket .instruction.required.widget-panel .header,
+.Ticket .instruction.widget-panel .header {
 	background: #ffffff;
 }
 
@@ -1253,8 +1275,9 @@ input[type="radio"]:after,
 	.invalid input[type="text"],
 	.invalid input[type="textarea"],
 	input[type="text"].invalid,
-	input[type="textarea"].invalid {
-		border-color: #f03;
+	input[type="textarea"].invalid,
+	textarea.invalid {
+		border-color: rgba(255, 81, 87, .5);
 	}
 	
 /* highlight */
@@ -1262,7 +1285,8 @@ input[type="radio"]:after,
 	.invalid input[type="text"],
 	.invalid input[type="textarea"],
 	input[type="text"].invalid,
-	input[type="textarea"].invalid {
+	input[type="textarea"].invalid,
+	textarea.invalid {
 		background: #fcfec3;
 	}
 
@@ -1456,7 +1480,7 @@ a.attach .im,
 }
 
 .attachment.image .im {
-	top: -10px;
+	top: -25px;
 	left: -40px;
 }
 
@@ -1583,12 +1607,17 @@ header .nav li,
 	border: 10px solid;
 }
 
+.bigButton {
+	border: 2px dashed;
+}
+
 .worker header .nav li {
 	border-left-color: transparent;
 }
 
 .topborder,
-.section-controls .action.panel {
+.section-controls .action.panel,
+.Ticket .instruction.photo .answers:before {
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -6024,6 +6053,10 @@ a.page-action.delete-button span.im {
 	margin-top: -12px;
 }
 
+.Ticket .instruction .optional:before {
+	content: 'Optional ';
+}
+
 .Ticket .header .actions .ti {
 	padding-right: 3em;
 }
@@ -6032,7 +6065,8 @@ a.page-action.delete-button span.im {
 	padding: 1.5em 2em;
 }
 
-.Ticket .instruction .widget-panel-content .type {
+.Ticket .instruction .widget-panel-content .type,
+.Ticket .instruction.question .hint {
 	padding-left: 3em;
 }
 
@@ -6065,6 +6099,23 @@ a.page-action.delete-button span.im {
 
 .Ticket .instruction.complete .ti.type {
 	padding-left: 1.3em;
+}
+
+.bigButton {
+	padding-top: .3em;
+	height: 115px;
+	width: 150px;
+}
+
+.Ticket .instruction.photo .answers {
+	margin: 2.5em -2em 0 0;
+}
+
+.Ticket .instruction.photo .answers:before {
+	content: ' ';
+		top: -1.3em;
+	height: 1px;
+	width: 100%;
 }
 
 

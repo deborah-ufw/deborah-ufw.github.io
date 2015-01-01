@@ -157,13 +157,14 @@ html, body {
 	.calendar-day .store.incomplete .header,
 	.calendar-day .ticket.incomplete,
 	.calendar .worker-selected .filters-choices .copy,
-	.Ticket .instruction .widget-panel-content .answer > .plainLabel {
+	.Ticket .instruction.question .widget-panel-content .answer > .plainLabel {
 		color: #4a4a4a;
 	}
 	
 	.user-org,
 	.plainLabel,
-	.section-detail {
+	.section-detail,
+	.Ticket .instruction .hint {
 		color: #ababab;
 	}
 	
@@ -342,9 +343,33 @@ html, body {
 	
 	/* blues */
 	
-	.Ticket .instruction.required.widget-panel .header,
-	.Ticket .instruction.widget-panel .header {
-		background: #3874b6; 
+	.calendar-day a.get-more,
+	.Ticket .instruction a.answerButton,
+	.bigButton {
+		background: rgba(64, 145, 230, .1);
+	}
+	
+	.messages .message.info,
+	.completion-bar {
+		background: rgba(64, 145, 230, .15);
+	}
+	
+	.completion-bar .text {
+		color: rgba(64, 145, 230, .15);
+	}
+	
+	.calendar-day.today .store .header,
+	.Ticket .instruction .header .actions {
+		background: rgba(64, 145, 230, .2);
+	}
+	
+	.pagination .previous,
+	.pagination .next {
+		border-color: rgba(64, 145, 230, .2);
+	}
+	
+	.bigButton {
+		border-color: rgba(64, 145, 230, 1);
 	}
 	
 	.Ticket .instruction .header .actions,
@@ -437,11 +462,6 @@ html, body {
 		background: #eaf2fd;
 	}
 	
-	.calendar-day.today .store .header,
-	.Ticket .instruction .header .actions {
-		background: #d5e7fa;
-	}
-	
 	.Ticket .instruction a.answerButton:hover,
 	.Ticket .instruction a.answerButton:focus {
 		background: #e0edfb;
@@ -455,20 +475,10 @@ html, body {
 		background: #f5f9fe;
 	}
 	
-	.calendar-day a.get-more,
-	.Ticket .instruction a.answerButton {
-		background: #ecf4fb;
-	}
-	
 	.filters-holder .view a:hover,
 	.filters-holder .view a:active,
 	.filters-holder .view a:focus {
 		background: #d9e9fa;
-	}
-	
-	.pagination .previous,
-	.pagination .next {
-		border-color: rgba(64, 145, 230, .2);
 	}
 	
 	.filters-choices .choice .close:hover,
@@ -559,15 +569,6 @@ html, body {
 		background: #f2f7fd;
 	}
 	
-	.completion-bar .text {
-		color: #e3effb;
-	}
-	
-	.messages .message.info,
-	.completion-bar {
-		background: #e3effb;
-	}
-	
 	.messages .message.info,
 	.message.info a.closer {
 		color: #1e436f;
@@ -584,7 +585,8 @@ html, body {
 	}
 	
 	.key.unassigned:before,
-	.completion-bar .text {
+	.completion-bar .text,
+	.Ticket .instruction .header .controls {
 		background: #256aa8;
 	}
 	

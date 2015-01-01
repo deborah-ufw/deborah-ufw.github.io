@@ -515,12 +515,13 @@
         
         
         <!-- -------------------- Question --------------------- -->
-        <div class="instruction question widget-panel edit-mode complete">
+        <div class="instruction required question widget-panel edit-mode complete">
           <!-- widget header -->
           <div class="header">
             <div class="controls">
               <div class="ti type">
-                Question
+                <span class="optional"></span>
+                <span class="type">Question</span>
               </div>
               <div class="arrow"><span class="im icon-arrow-up"></span></div>
               <div class="dragger"><span class="im icon-empty"></span></div>
@@ -629,15 +630,78 @@
                     <textarea name="target1 answer text" placeholder="Enter your answer" ></textarea>
                   </div>
                 </div>
-              </div><!-- END Time -->
-            
+              </div><!-- END free text -->
+              <div class="hint">Must be a number</div>
             </div><!-- END inner -->
             
             <!-- main action button -->
             <a href="javascript:;" class="answerButton">Save</a>
             
           </div><!-- END widget content -->
-        </div><!-- END hint -->
+        </div><!-- END question -->
+        
+        <!-- -------------------- Photo --------------------- -->
+        <div class="instruction required photo widget-panel edit-mode">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti type">
+                <span class="optional"></span>
+                <span class="type">Photo</span>
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+            <div class="actions">
+              <div class="ti target">Kikkoman Gluten-Free Soy Sauce 24 oz.</div>
+              <div class="viewing icon-buttons">
+                <a class="im icon-edit" href="javascript:;"></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+          
+            <div class="inner">
+              <div class="ti">Where was the product located in the store?</div>
+              <div class="description">
+                Take a photo of each Kikkoman product in its location on the shelf.
+              </div>
+            
+              <div class="answers">
+              <!-- example image -->
+                <div class="answer example">
+                  <label class="plainLabel">
+                    Example
+                  </label>
+                  <div class="attachment image">
+                    <img src="images/sample-img.gif" />
+                    <span class="im icon-magnify"></span>
+                  </div>
+                </div>
+                <!-- the image the worker takes -->
+                <div class="answer image">
+                  <label class="plainLabel">
+                    Photo
+                  </label>
+                  <a href="javascript:;" class="bigButton photo">
+                    Add Photo
+                  </a>
+                  <div class="attachment image">
+                    <img src="images/sample-img2.gif" />
+                    <span class="im icon-magnify"></span>
+                  </div>
+                </div>
+              </div><!-- END Item Grid -->
+              
+            </div><!-- END inner -->
+            
+            <!-- main action button -->
+            <a href="javascript:;" class="answerButton">Save</a>
+            
+          </div><!-- END widget content -->
+        </div><!-- END photo -->
       
       
       </div><!-- END Ticket Instructions panel -->

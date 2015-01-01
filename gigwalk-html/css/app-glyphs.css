@@ -39,7 +39,8 @@ input[type="checkbox"]:after,
 .calendar-day .no-scheduled .wrapper.blocker:before,
 .Ticket .completion-bar.complete .text:before,
 .Ticket .instruction.complete .ti.type:before,
-a[href*="tel"]:before {
+a[href*="tel"]:before,
+a.bigButton:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -134,6 +135,7 @@ th.sorting_desc:after,
 .icon-people:before {
 	content: "\e624";
 }
+a.bigButton.photo:before,
 .icon-camera:before {
 	content: "\e60f";
 }
@@ -148,6 +150,7 @@ th.sorting_desc:after,
 .icon-lightning-strike:before {
 	content: "\e60d";
 }
+a.bigButton.barcode:before,
 .icon-barcode:before {
 	content: "\e610";
 }
