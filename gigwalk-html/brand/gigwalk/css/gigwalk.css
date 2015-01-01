@@ -173,11 +173,14 @@ html, body {
 		color: #aaaaaa;
 	}
 	
-	.gray-cancel,
 	.primary.actions a.cancel,
 	.button-holder a.cancel,
 	.choose-dates a.cancel,
-	.page-action-panel a.cancel,
+	.page-action-panel a.cancel {
+		color: #bbb;
+	}
+	
+	.gray-cancel,
 	.expander a,
 	.expander a:hover,
 	.expander a:focus,
@@ -345,7 +348,8 @@ html, body {
 	
 	.calendar-day a.get-more,
 	.Ticket .instruction a.answerButton,
-	.bigButton {
+	.bigButton,
+	.Ticket .instruction.photo .icon-buttons a {
 		background: rgba(64, 145, 230, .1);
 	}
 	
@@ -359,7 +363,9 @@ html, body {
 	}
 	
 	.calendar-day.today .store .header,
-	.Ticket .instruction .header .actions {
+	.Ticket .instruction .header .actions,
+	.Ticket .instruction.photo .icon-buttons a:hover,
+	.Ticket .instruction.photo .icon-buttons a:focus {
 		background: rgba(64, 145, 230, .2);
 	}
 	
@@ -406,7 +412,8 @@ html, body {
 	 .map .nav-tabs > li.active > a:before,
 	 .table-list .controls .actions.active a,
 	 .calendar .view-bar .date-statement,
-	 .calendar-day .ticket.incomplete a.ticketname {
+	 .calendar-day .ticket.incomplete a.ticketname,
+	 .Ticket .instruction.photo .icon-buttons a {
 		color: #4890e2;
 	}
 	
@@ -823,9 +830,12 @@ a.page-action,
 .regular,
 select option,
 .subcontent.sub .subnav li,
-.tabnav li .dropdown li a{
+.tabnav li .dropdown li a,
+a.cancel,
+.buttonly.cancel {
 	font-family: Helvetica-Neue;
 }
+
 .sidenav .user-name,
 .remove,
 .iconly,

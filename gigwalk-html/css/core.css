@@ -372,7 +372,8 @@ header .nav .number,
 .answerButton,
 .Ticket .instruction .numeric input,
 .bigButton,
-.Ticket .instruction.photo .answers {
+.Ticket .instruction.photo .answers,
+.Ticket .instruction.photo .icon-buttons a {
 	text-align: center;
 }
 
@@ -589,12 +590,14 @@ nav.subnav ul {
 .section-controls .group,
 .section-controls .action.panel.new-subgroup .wrapper,
 .table-list .action.panel .wrapper,
-.completion-bar {
+.completion-bar,
+.Ticket .instruction.photo .added .icon-buttons {
 	display: table;
 }
 
 .completion-bar .completion,
-.completion-bar .text {
+.completion-bar .text,
+.Ticket .instruction.photo .icon-buttons a {
 	display: table-cell;
 }
 
@@ -610,7 +613,6 @@ nav.subnav ul {
 .calendar-day a.get-more,
 .calendar-day .no-scheduled .wrapper.finder span.copy,
 .map .tab-pane a.requirements,
-.Ticket .instruction.photo .answer .plainLabel,
 .bigButton:before {
 	display: block;
 }
@@ -730,7 +732,8 @@ input[type="radio"],
 .sub .selected-item,
 .primary.actions a.delete,
 .Ticket .instruction .time .dropdown,
-.Ticket .instruction .time input {
+.Ticket .instruction .time input,
+.Ticket .instruction.photo .icon-buttons {
 	float: left;
 }
 
@@ -864,7 +867,6 @@ a.attach .im,
 .hint.widget-panel .header .controls .ti,
 .hint.widget-panel .tip-title,
 .attachment.image,
-.attachment.image .im,
 .bigButton,
 .bigButton:after,
 .Ticket .instruction.photo .answers:before {
@@ -889,7 +891,8 @@ a.page-action span.im,
 .calendar-day .header .time:before,
 .Ticket .completion-bar.complete .text:before,
 .hint.widget-panel .im.icon-shield,
-.Ticket .instruction.complete .ti.type:before {
+.Ticket .instruction.complete .ti.type:before,
+.attachment.image .im {
 	position: absolute;
 }
 
@@ -910,7 +913,8 @@ header .navbar-collapse.in {
 .calendar-month,
 .completion-bar,
 .completion-bar .completion,
-.answerButton {
+.answerButton,
+.Ticket .instruction.photo .added .icon-buttons {
 	width: 100%;
 }
 
@@ -1480,8 +1484,8 @@ a.attach .im,
 }
 
 .attachment.image .im {
-	top: -25px;
-	left: -40px;
+	top: 10px;
+	right: 8px;
 }
 
 
@@ -2954,6 +2958,10 @@ instruction .viewing.icon-buttons {
 
 .icon-buttons a:before {
 	top: 4px;
+}
+
+.Ticket .instruction.photo .icon-buttons a:before {
+	top: 0;
 }
 
 .instruction-footer .item {
@@ -6111,11 +6119,28 @@ a.page-action.delete-button span.im {
 	margin: 2.5em -2em 0 0;
 }
 
+.Ticket .instruction.photo .answer.example {
+	margin: 0 2em 0 -2em;
+}
+
 .Ticket .instruction.photo .answers:before {
 	content: ' ';
 		top: -1.3em;
 	height: 1px;
 	width: 100%;
+}
+
+.Ticket .instruction.photo .icon-buttons  {
+	margin-top: 4px;
+}
+
+.Ticket .instruction.photo .icon-buttons a {
+	padding: .3em 0;
+	width: 50%;
+}
+
+.Ticket .instruction.photo .icon-buttons a.icon-edit {
+	border-right: 4px solid #ffffff;
 }
 
 

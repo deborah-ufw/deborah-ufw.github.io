@@ -688,9 +688,15 @@
                   <a href="javascript:;" class="bigButton photo">
                     Add Photo
                   </a>
-                  <div class="attachment image">
-                    <img src="images/sample-img2.gif" />
-                    <span class="im icon-magnify"></span>
+                  <div class="added">
+                    <div class="attachment image">
+                      <img src="images/sample-img2.gif" />
+                      <span class="im icon-magnify"></span>
+                    </div>
+                    <div class="icon-buttons">
+                      <a class="im icon-edit" href="javascript:;"></a>
+                      <a class="im icon-trash" href="javascript:;"></a>
+                    </div>
                   </div>
                 </div>
               </div><!-- END Item Grid -->
@@ -715,6 +721,44 @@
   
   </div><!-- ends right side ("inner wrapper")  -->
 </div><!-- ends main panel ("main wrapper") -->
+
+
+<!-- I had big plans to polish up the image upload modal but ran out of time! so ignore this please -->
+<div style="display: none;">
+<div class="modal upload" style="display: block;">
+<table>
+<tr>
+<td>
+  <div class="inner">
+    <div data-target="buttons" class="buttons" style="display: block;">
+      <div class="button" data-action="filePicker">
+        <span class="im icon-file"></span>
+        <a href="javascript:;">File Picker</a>
+      </div>
+      <div class="button" data-action="takePhoto">
+        <span class="im icon-camera"></span>
+        <a href="javascript:;">Camera</a>
+      </div>
+    </div>
+    <div data-target="preview" class="preview" style="display: none;">
+      <div data-target="video" id="webcam-video-stream" style="display: none;"></div>
+      <a href="javascript:;" data-target="video" data-action="getStill" style="display: none;"><span class="im icon-camera linkly"></span></a>
+      <img>
+      <div data-buffering="" class="buffering-outer">
+        <div><div class="loading-xsm black"><span class="glyphicon glyphicon-refresh"></span></div></div>
+        <a href="javascript:;" data-action="cancel">Cancel</a>
+      </div>
+    </div>
+    <div class="primary actions right">
+      <a href="javascript:;" class="buttonly cancel" data-action="close">Cancel</a>
+      <a href="javascript:;" class="buttonly disabled" data-action="save">Save</a>
+    </div>
+  </div>
+</td>
+</tr>
+</table><input type="file" style="display: none;">
+</div>
+</div>
 
 </body>
 </html>
