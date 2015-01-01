@@ -741,16 +741,49 @@
                 the UPC for every stocked Kikkoman product.
               </div>
             
-              <div class="answers divider">
+              <div class="answers">
                 <!-- the image the worker takes -->
-                <div class="answer">
-                  <div class="wrapper">
-                    <a href="javascript:;" class="bigButton barcode">
-                      Scan
-                    </a>
-                    <a href="javascript:;" class="linkly">Enter UPC manually</a>
+                <div class="answer showing">
+                  <!-- stacked upc divs -->
+                  <div class="added">
+                    <div class="upc">
+                      <span class="plainLabel">UPC</span>
+                      <span class="number">4139000082</span>
+                    </div>
+                    <div class="count">
+                      <span class="plainLabel">COUNT</span>
+                      <input type="text" value="1" />
+                      <a href="javascript:;" class="remove">Remove</a>
+                    </div>
                   </div>
+                  
+                  <div class="added">
+                    <div class="upc">
+                      <span class="plainLabel">UPC</span>
+                      <span class="number">4139000082</span>
+                    </div>
+                    <div class="count">
+                      <span class="plainLabel">COUNT</span>
+                      <input type="text" value="5" />
+                      <a href="javascript:;" class="remove">Remove</a>
+                    </div>
+                  </div>
+                </div><!-- end answer -->
+                
+                <div class="wrapper divider">
+                  <a href="javascript:;" class="bigButton barcode">
+                    Scan
+                  </a>
+                  <div class="manual-entry">
+                    <input type="text" placeholder="Enter UPC" />
+                    <div class="primary actions">
+                      <a href="javascript:;" class="buttonly cancel">Cancel</a>
+                      <a href="javascript:;" class="buttonly">Enter</a>
+                    </div>
+                  </div>
+                  <a href="javascript:;" class="linkly">Enter UPC manually</a>
                 </div>
+                
               </div><!-- END answers -->
               
             </div><!-- END inner -->

@@ -375,7 +375,8 @@ header .nav .number,
 .bigButton,
 .Ticket .instruction.photo .answers,
 .Ticket .instruction.barcode .answers .wrapper,
-.Ticket .instruction.photo .icon-buttons a {
+.Ticket .instruction.photo .icon-buttons a,
+.Ticket .instruction.barcode input {
 	text-align: center;
 }
 
@@ -455,7 +456,9 @@ a[href*="tel"]:focus,
 .answerButton:hover,
 .answerButton:focus,
 a.bigButton:hover,
-a.bigButton:focus {
+a.bigButton:focus,
+.Ticket .instruction.barcode a.linkly:hover,
+.Ticket .instruction.barcode a.linkly:focus {
 	text-decoration: none;
 }
 
@@ -521,7 +524,8 @@ a.disabled,
 .map .tab-pane a.buttonly.main.disabled,
 .table-list .controls .actions a,
 .calendar .view a.active,
-.calendar .date-statement {
+.calendar .date-statement,
+a.linkly.disabled {
 	cursor: default;
 }
 
@@ -570,7 +574,9 @@ a.disabled,
 .Ticket .ticket-summary .address span:after,
 .comments .new textarea:after,
 .Ticket .instruction .time .answer:after,
-.Ticket .instruction.photo .wrapper:before {
+.Ticket .instruction.barcode .answer:after,
+.Ticket .instruction.photo .wrapper:before,
+.Ticket .instruction.barcode .added:before {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -698,7 +704,8 @@ a.page-action,
 .table-list .summary,
 .table-list .action.panel .plainLabel,
 .action.panel.date .plainLabel,
-.subgroups-detail a {
+.subgroups-detail a,
+.Ticket .instruction.barcode .added .upc {
 	display: inline-block;
 	float: left;
 }
@@ -715,7 +722,8 @@ a.page-action,
 .calendar-day .ticket .due,
 .completion-bar .text,
 .Ticket .instruction.edit-mode.complete .viewing.icon-button,
-.Ticket .instruction .divider:before {
+.Ticket .instruction .divider:before,
+.Ticket .instruction.barcode .added .count {
 	display: inline-block;
 	float: right;
 }
@@ -756,7 +764,8 @@ input[type="radio"],
 .group.repeats .every .dropdown .plainLabel,
 .group.repeats .set-repeats .radios .plainLabel,
 .instruction.edit-mode .instruction-content .numeric .more-info > .plainLabel,
-.comments .new .attached-file .remove {
+.comments .new .attached-file .remove,
+.Ticket .instruction.barcode .remove {
 	float: none;
 }
 
@@ -1220,7 +1229,8 @@ input[type="checkbox"]:after,
 input[type="checkbox"]:after,
 input[type="radio"]:after,
 .instructions .item .actions a.buttonly,
-.filter.dropdown .btn.btn-default.dropdown-toggle {
+.filter.dropdown .btn.btn-default.dropdown-toggle,
+a.linkly.disabled {
 	background-color: #ffffff;
 }
 
@@ -1240,7 +1250,8 @@ input[type="radio"]:after,
 .calendar .action-panel .primary.actions a.buttonly.cancel,
 .instruction.widget-panel,
 .Ticket .instruction.required.widget-panel .header,
-.Ticket .instruction.widget-panel .header {
+.Ticket .instruction.widget-panel .header,
+a.linkly.disabled {
 	background: #ffffff;
 }
 
@@ -1628,7 +1639,8 @@ header .nav li,
 
 .topborder,
 .section-controls .action.panel,
-.Ticket .instruction .divider:before {
+.Ticket .instruction .divider:before,
+.Ticket .instruction.barcode .answer.showing {
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -6122,9 +6134,8 @@ a.page-action.delete-button span.im {
 	width: 150px;
 }
 
-.Ticket .instruction.photo .answers,
-.Ticket .instruction.barcode .answers {
-	margin: 2.5em -2em 0 0;
+.Ticket .instruction.photo .answers {
+	margin: 45px -2em 0 0;
 }
 
 .Ticket .instruction.photo .answer.example {
@@ -6136,6 +6147,14 @@ a.page-action.delete-button span.im {
 		top: -1.3em;
 	height: 1px;
 	width: 100%;
+}
+
+.Ticket .instruction.barcode .divider:before {
+	top: 0;
+}
+
+.Ticket .instruction.barcode .widget-panel-content .inner > .ti {
+	margin-bottom: 1.5em;
 }
 
 .Ticket .instruction.photo .icon-buttons  {
@@ -6151,14 +6170,59 @@ a.page-action.delete-button span.im {
 	border-right: 4px solid #ffffff;
 }
 
-.Ticket .instruction.barcode .answer {
-	padding-right: 2em;
+.Ticket .instruction.barcode .wrapper {
+	margin: 0 -2em 0 0;
+}
+
+.Ticket .instruction.barcode .wrapper a,
+.Ticket .instruction.barcode .manual-entry {
+	margin: 2em 2em 0 0;
 }
 
 .Ticket .instruction.barcode .linkly {
 	margin-top: 1.3em;
 }
 
+.Ticket .instruction.barcode .added {
+	padding-bottom: .2em;
+}
+
+.Ticket .instruction.barcode .answer {
+	margin-right: -2em;
+	padding-right: 2em;
+}
+
+.Ticket .instruction.barcode .upc {
+	padding-top: 7px;
+}
+
+.Ticket .instruction.barcode .upc .number {
+	padding-left: .3em;
+}
+
+.Ticket .instruction.barcode .count input {
+	margin: .2em 1em .2em 0;
+	width: 60px;
+}
+
+.Ticket .instruction.barcode .manual-entry input {
+	width: 250px;
+}
+
+.Ticket .instruction.barcode .primary.actions {
+	margin: 0 0 0 0;
+}
+
+.Ticket .instruction.barcode .wrapper .manual-entry a {
+	margin: 4px 0 0 0;
+	padding-left: 0;
+	padding-right: 0;
+	width: 121px;
+}
+
+.Ticket .instruction.barcode .wrapper .manual-entry a.cancel {
+	margin-right: 4px;
+}
 
 
 /* heredeb */
