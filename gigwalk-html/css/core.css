@@ -222,7 +222,8 @@ th.sorting:after {
 
 .action.messages .message .im.icon-cancel:before,
 .section-actions a.iconButton:before,
-.filter.search .icon-search:before {
+.filter.search .icon-search:before,
+.Ticket .instruction.complete .ti.type:before {
 	font-size: 36px;
 }
 
@@ -536,6 +537,7 @@ a.disabled,
 .instruction.view-mode .target .answers:after,
 .instruction.view-mode .target .answer:after,
 .instruction.view-mode .ti:after,
+.Ticket .instruction.complete .ti:after,
 .instruction.edit-mode .instruction-content .numeric .more-info:before,
 .instruction.edit-mode .numeric .between:before,
 .instruction .header:after,
@@ -667,7 +669,7 @@ a.page-action,
 .inline-left,
 .subnav li,
 .adjacent .wrapper,
-.instructions .header .ti,
+.instruction .header .ti,
 .set-repeats .radios,
 .group.materials .ti.number,
 .instruction-footer .item,
@@ -695,7 +697,8 @@ a.page-action,
 .map a.collapse,
 .calendar .view,
 .calendar-day .ticket .due,
-.completion-bar .text {
+.completion-bar .text,
+.Ticket .instruction.edit-mode.complete .viewing.icon-buttons {
 	display: inline-block;
 	float: right;
 }
@@ -871,7 +874,8 @@ a.page-action span.im,
 .map .blocked-day.detail,
 .calendar-day .header .time:before,
 .Ticket .completion-bar.complete .text:before,
-.hint.widget-panel .im.icon-shield {
+.hint.widget-panel .im.icon-shield,
+.Ticket .instruction.complete .ti.type:before {
 	position: absolute;
 }
 
@@ -1271,6 +1275,15 @@ input[type="radio"]:checked:after,
 	content: ' ';
 }
 
+.Ticket .instruction.complete .ti.type:before {
+	top: -4px;
+	left: -4px; 
+}
+
+.Ticket .instruction.complete .header .actions .icon-buttons a {
+	top: 5px;
+}
+
 .nav li.messages.buttonly,
 .nav li.alerts.buttonly {
 	padding-bottom: 0;
@@ -1636,7 +1649,8 @@ header nav .dropdown-menu {
 .Projects .group.date,
 .Projects .group.repeats,
 .instruction .item.targets .sub .mini-panel,
-.nav-tabs {
+.nav-tabs,
+.Ticket .viewing.icon-buttons a {
 	border-bottom-width: 0;
 }
 
@@ -1650,7 +1664,8 @@ header nav .dropdown-menu {
 	border-right-width: 0px;
 }
 
-header .nav .dropdown li {
+header .nav .dropdown li,
+.Ticket .viewing.icon-buttons a {
 	border-left: 0px solid #ffffff;
 }
 
@@ -6048,6 +6063,9 @@ a.page-action.delete-button span.im {
 	height: 100px;
 }
 
+.Ticket .instruction.complete .ti.type {
+	padding-left: 1.3em;
+}
 
 
 

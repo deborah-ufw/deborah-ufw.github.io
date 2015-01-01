@@ -347,7 +347,10 @@ html, body {
 		background: #3874b6; 
 	}
 	
-	.Ticket .instruction .header .actions .ti {
+	.Ticket .instruction .header .actions,
+	.Ticket .instruction .header .actions .icon-buttons a,
+	.Ticket .instruction .header .actions .icon-buttons a:hover,
+	.Ticket .instruction .header .actions .icon-buttons a:focus {
 		color: #234871;
 	}
 	

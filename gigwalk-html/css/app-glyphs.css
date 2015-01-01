@@ -38,6 +38,7 @@ input[type="checkbox"]:after,
 .calendar-day h1.graphic:before,
 .calendar-day .no-scheduled .wrapper.blocker:before,
 .Ticket .completion-bar.complete .text:before,
+.Ticket .instruction.complete .ti.type:before,
 a[href*="tel"]:before {
 	font-family: 'icomoon';
 	speak: none;
@@ -71,6 +72,7 @@ a[href*="tel"]:before {
 	content: "\e615";
 }
 .Ticket .completion-bar.complete .text:before,
+.Ticket .instruction.complete .ti.type:before,
 .action.messages .message.confirmation h1 span.im.icon-empty:before,
 .map .requirements-list li:before,
 .checker .supercheck:after,
