@@ -844,7 +844,8 @@ select option,
 .tabnav li .dropdown li a,
 a.cancel,
 .buttonly.cancel,
-.Ticket .instruction.barcode .widget-panel-content .inner > .ti {
+.Ticket .instruction.barcode .widget-panel-content .inner > .ti,
+.Ticket .instruction.task .widget-panel-content .inner > .ti {
 	font-family: Helvetica-Neue;
 }
 

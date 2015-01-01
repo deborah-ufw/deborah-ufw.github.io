@@ -742,7 +742,7 @@
               </div>
             
               <div class="answers">
-                <!-- the image the worker takes -->
+                <!-- the upc div holder -->
                 <div class="answer showing">
                   <!-- stacked upc divs -->
                   <div class="added">
@@ -792,7 +792,247 @@
             <a href="javascript:;" class="answerButton">Save</a>
             
           </div><!-- END widget content -->
-        </div><!-- END photo -->
+        </div><!-- END barcode -->
+        
+        
+        <!-- -------------------- Step Task --------------------- -->
+        <div class="instruction required task widget-panel edit-mode">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti type">
+                <span class="optional"></span>
+                <span class="type">Task</span>
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+            <div class="actions">
+              <div class="ti target">Kikkoman Gluten-Free Soy Sauce 24 oz.</div>
+              <div class="viewing icon-buttons">
+                <a class="im icon-edit" href="javascript:;"></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+          
+            <div class="inner">
+              <div class="ti">Check on stock and gather information for Kikkoman</div>
+              <div class="description"></div>
+              
+              <!-- images added to the step task -->
+              <div class="images">
+                <div class="attachment image">
+                  <img src="images/sample-img.gif" />
+                  <span class="im icon-magnify"></span>
+                </div>
+                <div class="attachment image">
+                  <img src="images/sample-img2.gif" />
+                  <span class="im icon-magnify"></span>
+                </div>
+              </div>
+              
+              <!-- ------------------- STEPS ------------------------ -->
+              
+              <!-- question type is logic choices (Item Grid) -->
+              <div class="type item-grid">
+                <div class="answers">
+                  <div class="answer exception">
+                    <div class="description">
+                      Where is the product? 
+                    </div>
+                    <label class="plainLabel">
+                      <input type="radio" name="target1 answer">
+                      In the condiments aisle 
+                    </label>
+                  </div>
+                  <div class="answer">
+                    <label class="plainLabel">
+                      <input type="radio" name="target1 answer">
+                      In a gluten-free aisle 
+                    </label>
+                  </div>
+                  <div class="answer">
+                    <label class="plainLabel">
+                      <input type="radio" name="target1 answer">
+                      No product found 
+                    </label>
+                  </div>
+                </div>
+              </div><!-- END Item Grid -->
+              
+              <!-- question type is "follow written instructions" -->
+              <div class="type written-instructions">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description">
+                      Eat a Snickers bar. 
+                    </div>
+                  </div>
+                </div>
+              </div><!-- END follow written instructions -->
+              
+              <!-- question type is "enter a description" -->
+              <div class="type written-description">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description">
+                      Describe any issues with cleanliness in the bathroom.
+                    </div>
+                    <textarea name="target1 answer text" placeholder="Enter your answer" ></textarea>
+                  </div>
+                </div>
+              </div><!-- END enter a description -->
+              
+              <!-- question type is photo -->
+              <div class="type photo">
+                <div class="answers">
+                  <div class="answer image">
+                    <div class="description">
+                      Take a photo of the product on the shelf.
+                    </div>
+                    
+                    <!-- the image the worker takes -->
+                    <label class="plainLabel">
+                      Photo
+                    </label>
+                    <div class="wrapper">
+                      <a href="javascript:;" class="bigButton photo">
+                        Add Photo
+                      </a>
+                    </div>
+                    <div class="added">
+                      <div class="attachment image">
+                        <img src="images/sample-img2.gif" />
+                        <span class="im icon-magnify"></span>
+                      </div>
+                      <div class="icon-buttons">
+                        <a class="im icon-edit" href="javascript:;"></a>
+                        <a class="im icon-trash" href="javascript:;"></a>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div><!-- END photo -->
+              
+              <!-- question type is barcode -->
+              <div class="type barcode">
+                <div class="answers">
+                  <!-- the upc div holder -->
+                  <div class="answer showing">
+                    <!-- stacked upc divs -->
+                    <div class="added">
+                      <div class="upc">
+                        <span class="plainLabel">UPC</span>
+                        <span class="number">4139000082</span>
+                      </div>
+                      <div class="count">
+                        <span class="plainLabel">COUNT</span>
+                        <input type="text" value="1" />
+                        <a href="javascript:;" class="remove">Remove</a>
+                      </div>
+                    </div>
+                    
+                    <div class="added">
+                      <div class="upc">
+                        <span class="plainLabel">UPC</span>
+                        <span class="number">4139000082</span>
+                      </div>
+                      <div class="count">
+                        <span class="plainLabel">COUNT</span>
+                        <input type="text" value="5" />
+                        <a href="javascript:;" class="remove">Remove</a>
+                      </div>
+                    </div>
+                  </div><!-- end answer -->
+                
+                <div class="wrapper divider">
+                  <a href="javascript:;" class="bigButton barcode">
+                    Scan
+                  </a>
+                  <div class="manual-entry">
+                    <input type="text" placeholder="Enter UPC" />
+                    <div class="primary actions">
+                      <a href="javascript:;" class="buttonly cancel">Cancel</a>
+                      <a href="javascript:;" class="buttonly">Enter</a>
+                    </div>
+                  </div>
+                  <a href="javascript:;" class="linkly">Enter UPC manually</a>
+                </div>
+                
+              </div><!-- END answers -->
+              </div><!-- END photo -->
+            
+              <!-- question type is Numeric (number) -->
+              <div class="type numeric">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description">
+                      Enter the number of items on the shelf.
+                    </div>
+                    <input type="text" name="target2 answer number" placeholder="ex. 7" />
+                  </div>
+              </div><!-- END Numeric (number) -->
+              
+              <!-- question type is Numeric (currency) -->
+              <div class="type numeric currency">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description">
+                      Enter the sale price.
+                    </div>
+                    <input type="text" name="target2 answer number" placeholder="ex. 7" />
+                  </div>
+              </div><!-- END Numeric (number) -->
+              
+              <!-- question type is Numeric (date) -->
+              <div class="type numeric date">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description">
+                      Enter the expiration date.
+                    </div>
+                    <input type="text" class="datepicker" name="target3 answer date" placeholder="ex. 12/15/2015" />
+                  </div>
+                </div>
+              </div><!-- END Numeric (date) -->
+              
+              <!-- question type is Numeric (time) -->
+              <div class="type numeric time">
+                <div class="answers">
+                  <div class="answer">
+                        <div class="description">
+                          Enter how long it took to locate the gluten-free area.
+                        </div>
+                        <input type="text" name="target1 answer time" placeholder="ex. 3" />
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Minutes
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                </div>
+              </div><!-- END numeric (time) -->
+              
+              <!-- ----------------- ENDS STEPS ------------------- -->
+              
+            </div><!-- END inner -->
+            
+            <!-- main action button -->
+            <a href="javascript:;" class="answerButton">Next or Save</a>
+            
+          </div><!-- END widget content -->
+        </div><!-- END step task -->
       
       
       </div><!-- END Ticket Instructions panel -->

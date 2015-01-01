@@ -1644,6 +1644,10 @@ header .nav li,
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
+.Ticket .instruction.task .widget-panel-content .inner > .ti {
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
 .table-list .controls,
 .table-list tr,
 .action.panel,
@@ -6153,7 +6157,8 @@ a.page-action.delete-button span.im {
 	top: 0;
 }
 
-.Ticket .instruction.barcode .widget-panel-content .inner > .ti {
+.Ticket .instruction.barcode .widget-panel-content .inner > .ti,
+.Ticket .instruction.task .widget-panel-content .inner > .ti {
 	margin-bottom: 1.5em;
 }
 
@@ -6170,7 +6175,8 @@ a.page-action.delete-button span.im {
 	border-right: 4px solid #ffffff;
 }
 
-.Ticket .instruction.barcode .wrapper {
+.Ticket .instruction.barcode .wrapper,
+.Ticket .instruction.task .widget-panel-content .inner > .ti {
 	margin: 0 -2em 0 0;
 }
 
@@ -6222,6 +6228,11 @@ a.page-action.delete-button span.im {
 
 .Ticket .instruction.barcode .wrapper .manual-entry a.cancel {
 	margin-right: 4px;
+}
+
+.Ticket .instruction.task .widget-panel-content .inner > .ti {
+	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
 }
 
 
