@@ -364,6 +364,8 @@ html, body {
 	
 	.calendar-day.today .store .header,
 	.Ticket .instruction .header .actions,
+	.bigButton:hover,
+	.bigButton:focus,
 	.Ticket .instruction.photo .icon-buttons a:hover,
 	.Ticket .instruction.photo .icon-buttons a:focus {
 		background: rgba(64, 145, 230, .2);
@@ -832,7 +834,8 @@ select option,
 .subcontent.sub .subnav li,
 .tabnav li .dropdown li a,
 a.cancel,
-.buttonly.cancel {
+.buttonly.cancel,
+.Ticket .instruction.barcode .widget-panel-content .inner > .ti {
 	font-family: Helvetica-Neue;
 }
 

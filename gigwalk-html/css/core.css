@@ -58,7 +58,8 @@ header nav .user-edit,
 .calendar-day .no-scheduled .wrapper .primary.actions a,
 .calendar-day .blocked .wrapper .primary.actions a,
 .calendar-month .date-num,
-.comments .attached-file span {
+.comments .attached-file span,
+.Ticket .instruction.barcode .linkly {
 	font-size: .9em;
 }
 
@@ -373,6 +374,7 @@ header .nav .number,
 .Ticket .instruction .numeric input,
 .bigButton,
 .Ticket .instruction.photo .answers,
+.Ticket .instruction.barcode .answers .wrapper,
 .Ticket .instruction.photo .icon-buttons a {
 	text-align: center;
 }
@@ -614,7 +616,8 @@ nav.subnav ul {
 .calendar-day a.get-more,
 .calendar-day .no-scheduled .wrapper.finder span.copy,
 .map .tab-pane a.requirements,
-.bigButton:before {
+.bigButton:before,
+.Ticket .instruction.barcode .answers .linkly {
 	display: block;
 }
 
@@ -712,7 +715,7 @@ a.page-action,
 .calendar-day .ticket .due,
 .completion-bar .text,
 .Ticket .instruction.edit-mode.complete .viewing.icon-button,
-.Ticket .instruction.photo .answers:before {
+.Ticket .instruction .divider:before {
 	display: inline-block;
 	float: right;
 }
@@ -870,7 +873,7 @@ a.attach .im,
 .attachment.image,
 .bigButton,
 .bigButton:after,
-.Ticket .instruction.photo .answers:before {
+.Ticket .instruction .divider:before {
 	position: relative;
 }
 
@@ -989,7 +992,10 @@ a.page-action,
 .calendar .date-nav a,
 .calendar .date-nav span,
 .calendar-month td,
-.Ticket .completion-bar.complete .copy {
+.Ticket .completion-bar.complete .copy,
+.bigButton,
+.answerButton,
+.icon-buttons a {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
@@ -1622,7 +1628,7 @@ header .nav li,
 
 .topborder,
 .section-controls .action.panel,
-.Ticket .instruction.photo .answers:before {
+.Ticket .instruction .divider:before {
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -6116,7 +6122,8 @@ a.page-action.delete-button span.im {
 	width: 150px;
 }
 
-.Ticket .instruction.photo .answers {
+.Ticket .instruction.photo .answers,
+.Ticket .instruction.barcode .answers {
 	margin: 2.5em -2em 0 0;
 }
 
@@ -6124,7 +6131,7 @@ a.page-action.delete-button span.im {
 	margin: 0 2em 0 -2em;
 }
 
-.Ticket .instruction.photo .answers:before {
+.Ticket .instruction .divider:before {
 	content: ' ';
 		top: -1.3em;
 	height: 1px;
@@ -6142,6 +6149,14 @@ a.page-action.delete-button span.im {
 
 .Ticket .instruction.photo .icon-buttons a.icon-edit {
 	border-right: 4px solid #ffffff;
+}
+
+.Ticket .instruction.barcode .answer {
+	padding-right: 2em;
+}
+
+.Ticket .instruction.barcode .linkly {
+	margin-top: 1.3em;
 }
 
 

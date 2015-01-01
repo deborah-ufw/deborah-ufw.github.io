@@ -150,7 +150,6 @@ a.bigButton.photo:before,
 .icon-lightning-strike:before {
 	content: "\e60d";
 }
-a.bigButton.barcode:before,
 .icon-barcode:before {
 	content: "\e610";
 }
@@ -290,6 +289,10 @@ a[href*="tel"]:before,
 }
 .icon-map-pin-outline:before {
 	content: "\e63c";
+}
+a.bigButton.barcode:before,
+.icon-upc:before {
+	content: "\e63d";
 }
 
 /* paste new characters just above this line */
