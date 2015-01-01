@@ -567,7 +567,8 @@ a.disabled,
 .widget-panel .header:after,
 .Ticket .ticket-summary .address span:after,
 .comments .new textarea:after,
-.Ticket .instruction .time .answer:after {
+.Ticket .instruction .time .answer:after,
+.Ticket .instruction.photo .wrapper:before {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
