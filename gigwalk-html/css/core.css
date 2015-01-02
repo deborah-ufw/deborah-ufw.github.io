@@ -600,13 +600,15 @@ nav.subnav ul {
 .section-controls .action.panel.new-subgroup .wrapper,
 .table-list .action.panel .wrapper,
 .completion-bar,
-.Ticket .instruction.photo .added .icon-buttons {
+.Ticket .instruction.photo .added .icon-buttons,
+.Ticket .instruction.task .images .attachment.image {
 	display: table;
 }
 
 .completion-bar .completion,
 .completion-bar .text,
-.Ticket .instruction.photo .icon-buttons a {
+.Ticket .instruction.photo .icon-buttons a,
+.Ticket .instruction.task .images .attachment.image img {
 	display: table-cell;
 }
 
@@ -684,7 +686,8 @@ a.page-action,
 .hint.widget-panel .widget-panel-content div.attachment.image a,
 .answerButton,
 .bigButton,
-.Ticket .instruction.photo .answer {
+.Ticket .instruction.photo .answer,
+.Ticket .instruction.task .images .attachment.image {
 	display: inline-block;
 }
 
@@ -1644,7 +1647,8 @@ header .nav li,
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
-.Ticket .instruction.task .widget-panel-content .inner > .ti {
+.Ticket .instruction.task .widget-panel-content .inner > .ti,
+.Ticket .instruction.task .images {
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -6176,7 +6180,8 @@ a.page-action.delete-button span.im {
 }
 
 .Ticket .instruction.barcode .wrapper,
-.Ticket .instruction.task .widget-panel-content .inner > .ti {
+.Ticket .instruction.task .widget-panel-content .inner > .ti,
+.Ticket .instruction.task .images {
 	margin: 0 -2em 0 0;
 }
 
@@ -6230,10 +6235,25 @@ a.page-action.delete-button span.im {
 	margin-right: 4px;
 }
 
-.Ticket .instruction.task .widget-panel-content .inner > .ti {
+.Ticket .instruction.task .widget-panel-content .inner > .ti,
+.Ticket .instruction.task .images {
 	margin-bottom: 1.5em;
 	padding-bottom: 1.5em;
 }
+
+.Ticket .instruction.task .images {
+	display: table;
+}
+
+.Ticket .instruction.task .images .attachment.image {
+	padding: 0 4px 4px 0;
+}
+
+
+
+/* step task */
+
+
 
 
 /* heredeb */
