@@ -6841,11 +6841,7 @@ textarea:-ms-input-placeholder {
 }
 
 /* ie10 & 11 --- also will be picked up by ie9 */
-
-
-html[data-useragent*='MSIE 10.0'] .buttonly .im.icon-pencil-box:before {
-	font-size: .8em;
-}		
+		
 
 html[data-useragent*='MSIE 10.0'] a.page-action.new-button span,
 html[data-useragent*='Trident'] a.page-action.new-button span {
