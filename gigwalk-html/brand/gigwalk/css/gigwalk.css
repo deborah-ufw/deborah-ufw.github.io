@@ -385,7 +385,7 @@ html, body {
 	}
 	
 	.completion-bar .text {
-		color: rgba(64, 145, 230, .15);
+		color: #e3eefa;
 	}
 	
 	.calendar-day.today .store .header,

@@ -407,7 +407,7 @@ header .nav .number,
 .calendar-day .ticket .continue,
 .Ticket .comments .new .attacher,
 .Ticket .comments .new .actions,
-.comments .new .attached-file {
+.comments .new .attachment {
 	text-align: right;
 }
 
@@ -1043,12 +1043,14 @@ a.page-action,
 .Ticket .completion-bar.complete .copy,
 .bigButton,
 .answerButton,
-.icon-buttons a {
+.icon-buttons a,
+.user-image,
+.comments-wrapper {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
 
-.Ticket .completion-bar .percent-complete {
+.Ticket .completion-bar .percent-complete, {
 	-webkit-transition: all 0.7s ease-in-out;
           transition: all 0.7s ease-in-out;
 }
@@ -3566,6 +3568,28 @@ a.iconly:before {
 	.section.title .navly {
 		font-size: .8em;
 	  display: block;
+	}
+	
+	.section-controls .section.title .navly {
+		font-size: 1em;
+	}
+	
+	.section-controls .section.title {
+		font-size: 1.4em;
+		margin-bottom: .5em;
+	}
+	
+	.section-actions a {
+		font-size: .8em;
+	}
+	
+	.section-controls .buttons .navly {
+		font-size: .9em;
+	}
+	
+	.Tickets .section-controls .buttons a.buttonly {
+		padding-left: 1.5em;
+		padding-right: 1.5em;
 	}
 	
 	.group .set-repeats .plainLabel,
@@ -6101,12 +6125,20 @@ a.page-action.delete-button span.im {
 	padding-bottom: .3em; 
 }
 
+.comments .new .attachment {
+	padding-left: 1em;
+}
+
 .comments .comment .attachment {
 	padding-bottom: 0;
 }
 
+.comments .new .attached-file .filename {
+	padding-right: .5em;
+}
+
 .comments .new .attached-file .remove {
-	margin: 0 5px 0 2em;
+	margin: 0 5px 0 .5em;
 	padding-top: 10px;
 	padding-bottom: 3px;
 }
@@ -6355,6 +6387,48 @@ a.page-action.delete-button span.im {
 
 /* Ticket sizes down - admin */
 
+@media (max-width: 860px) {
+
+	.admin .comments .wrapper {
+			max-width: 280px;
+	}
+	
+	.ticket-summary .widget-panel .area {
+		font-size: 1em;
+	}
+	
+	.ticket-summary .widget-panel.comments .area .remove,
+	.comments .attached-file span {
+		font-size: .9em;
+	}
+
+}
+
+@media (max-width: 420px) {
+
+	.admin .comments .wrapper,
+	.worker .comments .wrapper {
+		margin-bottom: -30px;
+		max-width: 220px;
+			top: -40px;
+			left: 50px;
+	}
+	
+	.comments.widget-panel .user-image {
+		width: 40px;
+		height: 40px;
+	}
+	
+	.widget-panel .new.area,
+	.widget-panel .comment.area {
+		padding-left: .5em;
+	}
+	
+	.comments .attachment .icon-paperclip {
+		display: none;
+	}
+
+}
 
 /* heredeb */
 
@@ -6452,7 +6526,7 @@ a.page-action.delete-button span.im {
 }
 
 
-@media (max-width: 664px) {
+@media (max-width: 664px) {  
 	
 	.navbar-collapse {
 		-webkit-box-shadow: none;
@@ -6500,6 +6574,25 @@ a.page-action.delete-button span.im {
 	
 	.nav > li > a.dropdown-toggle {
 		padding-left: 0;
+	}
+	
+	.action.messages .message {
+		padding: 0 3em .5em .5em;
+	}
+	
+	.action.messages h1 {
+		font-size: 1.4em;
+	}
+	
+	.action.messages .message .im:before,
+	.confirmation .icon-checkmark:before, 
+	.page.action.messages .message.confirmation .icon-empty:before {
+		font-size: 32px;
+			top: 7px;
+	}
+	
+	.action.messages .message .im.icon-cancel:before {
+		top: -11px;
 	}
 	
 }
