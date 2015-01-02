@@ -12,6 +12,8 @@ html, body {
 	font-family: Helvetica-Neue, Arial, sans-serif;
 	background: #ffffff;
 	min-width: 315px;
+	-webkit-font-smoothing: antialiased;
+
 }
 
 .hide,
@@ -149,7 +151,8 @@ body,
 .instruction.edit-mode .answer .more-info .set-required input.supercheck[type="checkbox"]:after,
 .pagination,
 .message a.closer,
-.Ticket .instruction .header .actions .ti {
+.instruction .header .actions .ti,
+.answerButton.submit {
 	font-size: 1.4em;
 }
 
@@ -260,7 +263,8 @@ th.sorting:after {
 	font-size: 48px;
 }
 
-.calendar-day .header .time:before {
+.calendar-day .header .time:before,
+.Ticket .instruction.enter-time .header .icon-time:before {
 	font-size: 49px;
 }
 
@@ -373,6 +377,8 @@ header .nav .number,
 .ticket-instructions,
 .answerButton,
 .Ticket .instruction .numeric input,
+.Ticket .instruction .date input,
+.Ticket .instruction .time input,
 .bigButton,
 .Ticket .instruction.photo .answers,
 .Ticket .instruction.barcode .answers .wrapper,
@@ -380,7 +386,9 @@ header .nav .number,
 .Ticket .instruction.photo .icon-buttons a,
 .Ticket .instruction.task .photo .icon-buttons a,
 .Ticket .instruction.barcode input,
-.Ticket .instruction.task .type.barcode input {
+.Ticket .instruction.task .type.barcode input,
+.Ticket .instruction.enter-time .widget-panel-content .type,
+.Ticket .instruction.enter-time .time input {
 	text-align: center;
 }
 
@@ -522,6 +530,7 @@ input[type="radio"]:after,
 
 .defaultmouse,
 a.disabled,
+.disabled,
 .tabnav li.active a,
 .iconButton.disabled,
 .admin .table-list td.location,
@@ -529,7 +538,7 @@ a.disabled,
 .table-list .controls .actions a,
 .calendar .view a.active,
 .calendar .date-statement,
-a.linkly.disabled {
+.Ticket a.buttonly.disabled {
 	cursor: default;
 }
 
@@ -582,7 +591,8 @@ a.linkly.disabled {
 .Ticket .instruction.barcode .answer:after,
 .Ticket .instruction.barcode .added:before,
 .Ticket .instruction.task .type.barcode .answer:after,
-.Ticket .instruction.task .type.barcode .added:before {
+.Ticket .instruction.task .type.barcode .added:before,
+.Ticket .instruction.enter-time .answers .answer:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -696,7 +706,8 @@ a.page-action,
 .bigButton,
 .Ticket .instruction.photo .answer,
 .Ticket .instruction.task .images .attachment.image,
-.Ticket .instruction.task .type.photo .placement {
+.Ticket .instruction.task .type.photo .placement,
+.instruction.enter-time .answers {
 	display: inline-block;
 }
 
@@ -760,7 +771,9 @@ input[type="radio"],
 .Ticket .instruction.photo .icon-buttons,
 .Ticket .instruction.task .photo .icon-buttons,
 .Ticket .instruction.task .time input,
-.Ticket .instruction.time .time input {
+.Ticket .instruction.time .time input,
+.Ticket .instruction.enter-time .time .dropdown,
+.Ticket .instruction.task .type.photo .placement .plainLabel {
 	float: left;
 }
 
@@ -897,7 +910,8 @@ a.attach .im,
 .attachment.image,
 .bigButton,
 .bigButton:after,
-.Ticket .instruction .divider:before {
+.Ticket .instruction .divider:before,
+.Ticket .instruction.enter-time .header .ti .copy {
 	position: relative;
 }
 
@@ -917,6 +931,7 @@ a.page-action span.im,
 .map .tab-pane .assign-action.detail,
 .map .blocked-day.detail,
 .calendar-day .header .time:before,
+.Ticket .instruction.enter-time .header .icon-time:before,
 .Ticket .completion-bar.complete .text:before,
 .hint.widget-panel .im.icon-shield,
 .Ticket .instruction.complete .ti.type:before,
@@ -996,6 +1011,14 @@ header .navbar-collapse.in {
 	filter: alpha(opacity=80);
      -moz-opacity: .8;
           opacity: .8;
+}
+
+.bigButton.disabled,
+.Ticket .instruction.task .photo .icon-buttons a.disabled,
+.Ticket a.buttonly.disabled {
+	filter: alpha(opacity=50);
+     -moz-opacity: .5;
+          opacity: .5;
 }
 
 .transition,
@@ -1180,9 +1203,21 @@ a.iconButton.disabled:focus,
 	border: 8px solid #f7f7f7;
 }
 
+input.disabled[type="checkbox"]:after {
+	color: #dfdfdf;
+}
+
 .calendar-day .store .header,
 .ticket-summary .widget-panel .header,
-.ticket-instructions {
+.ticket-instructions,
+input.disabled,
+input.disabled:after,
+.checker .supercheck.disabled:after,
+input.disabled[type="checkbox"]:after,
+input.disabled[type="radio"]:after,
+textarea.disabled,
+.datepicker.disabled:hover,
+.datepicker.disabled:focus {
 	background: #dfdfdf;
 }
 
@@ -1267,7 +1302,9 @@ a.linkly.disabled {
 .instruction.widget-panel,
 .Ticket .instruction.required.widget-panel .header,
 .Ticket .instruction.widget-panel .header,
-a.linkly.disabled {
+a.linkly.disabled,
+a.buttonly.cancel.disabled:hover,
+a.buttonly.cancel.disabled:focus {
 	background: #ffffff;
 }
 
@@ -1335,6 +1372,11 @@ input[type="radio"]:after,
 input[type="radio"]:checked:after,
 .map .pin:before {
 	content: ' ';
+}
+
+.Ticket .instruction.enter-time .header .icon-time {
+	top: -10px;
+	left: -5px;
 }
 
 .Ticket .instruction.complete .ti.type:before {
@@ -1471,6 +1513,11 @@ input[type="radio"]:checked:after,
 .calendar-day .header .time:before {
 	top: 0;
 	left: 0;
+}
+
+.Ticket .instruction.enter-time .header .icon-time:before {
+	top: -6px;
+	left: -5px;
 }
 
 .calendar-day h1.graphic:before {
@@ -2994,7 +3041,7 @@ instruction .viewing.icon-buttons {
 
 .icon-buttons a {
 	margin-right: -5px;
-	padding: .6em .8em;
+	padding: .5em .8em .8em .8em;
 }
 
 .icon-buttons a:before {
@@ -3146,7 +3193,8 @@ instruction .viewing.icon-buttons {
 
 .instruction.view-mode .time .dropdown,
 .Ticket .instruction .time .dropdown,
-.Ticket .instruction.edit-mode .numeric.time .dropdown {
+.Ticket .instruction.edit-mode .numeric.time .dropdown,
+.Ticket .instruction.enter-time .time .dropdown {
 	margin: 0 1em 0 .5em;
 }
 
@@ -3165,7 +3213,7 @@ instruction .viewing.icon-buttons {
 }
 
 .view-mode .numeric .currency:before,
-.Ticket .numeric .currency:before {
+.Ticket .numeric .currency-input:before  {
 	content: '$';
 }
 
@@ -6074,7 +6122,8 @@ a.page-action.delete-button span.im {
 	padding: 1.5em 1.5em 4em 1.5em;
 }
 
-.ticket-instructions .widget-panel {
+.ticket-instructions .widget-panel,
+.ticket-instructions .submit {
 	margin: 0 auto 1.5em auto;
 	max-width: 635px;
 	width: 100%;
@@ -6122,6 +6171,10 @@ a.page-action.delete-button span.im {
 .Ticket .instruction.question .hint,
 .Ticket .instruction.task .validation.hint {
 	padding-left: 3em;
+}
+
+.Ticket .instruction.enter-time .widget-panel-content .type {
+	padding-left: 0;
 }
 
 .Ticket .instruction .widget-panel-content .inner > .ti,
@@ -6282,9 +6335,25 @@ a.page-action.delete-button span.im {
 	margin: 0 0 1em 1em;
 }
 
+.Ticket .instruction.task .type.barcode .answers .description {
+	margin: 0 0 1em -2em;
+}
+
 .Ticket .task .widget-panel-content .type.photo {
 	padding-left: 0;
 }
+
+.Ticket .instruction.enter-time .header .ti .copy {
+	padding-left: 1.7em;
+		top: -1px;
+}
+
+.Ticket .instruction.enter-time .dropdown .btn {
+	width: 112px;
+}
+
+
+/* Ticket sizes down - admin */
 
 
 /* heredeb */
@@ -6445,6 +6514,7 @@ a.page-action.delete-button span.im {
 
 input::-webkit-input-placeholder { 
 	color: #bcbcbc;
+	font-family: Helvetica-Neue-Light;
 }
 
 input:-ms-input-placeholder { 

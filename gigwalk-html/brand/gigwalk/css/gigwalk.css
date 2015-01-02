@@ -122,7 +122,9 @@ html, body {
 	.instructions .item .actions a.buttonly,
 	.projects .settings,
 	.group a.buttonly,
-	.button-holder a.buttonly {
+	.button-holder a.buttonly,
+	.Ticket .instruction.enter-time .header .ti span,
+	.answerButton.submit {
 		color: #ffffff;
 	}
 	
@@ -158,14 +160,18 @@ html, body {
 	.calendar-day .store.incomplete .header,
 	.calendar-day .ticket.incomplete,
 	.calendar .worker-selected .filters-choices .copy,
-	.Ticket .instruction.question .widget-panel-content .answer > .plainLabel {
+	.Ticket .instruction.question .widget-panel-content .answer > .plainLabel,
+	.Ticket .instruction.task .widget-panel-content .answer > .plainLabel {
 		color: #4a4a4a;
 	}
 	
 	.user-org,
 	.plainLabel,
 	.section-detail,
-	.Ticket .instruction .hint {
+	.Ticket .instruction .hint,
+	.answerButton.disabled,
+	.answerButton.disabled:hover,
+	.answerButton.submit.disabled {
 		color: #ababab;
 	}
 	
@@ -275,7 +281,13 @@ html, body {
 	}
 	
 	.expander:hover,
-	.expander:focus {
+	.expander:focus,
+	.answerButton.disabled,
+	.answerButton.disabled:hover,
+	.answerButton.disabled:focus,
+	.answerButton.submit.disabled,
+	.answerButton.submit.disabled:hover,
+	.answerButton.submit.disabled:focus {
 		background: #f1f1f1;
 	}
 	
@@ -338,10 +350,13 @@ html, body {
 	
 	.invalid input[type="text"],
 	.invalid input[type="textarea"] {
-		border-color:  #fe8e92;
+		border-color:  #ffe5e6;
 	}
 	
-	.messages .message.problem,
+	.messages .message.problem {
+		background: #ffe5e6;
+	}
+	
 	.instructions .duplicating-message,
 	.hint.widget-panel {
 		background: #fffde1;
@@ -351,10 +366,16 @@ html, body {
 	/* blues */
 	
 	.calendar-day a.get-more,
-	.Ticket .instruction a.answerButton,
+	.answerButton,
 	.bigButton,
+	.bigButton.disabled,
+	.bigButton.disabled:hover,
+	.bigButton.disabled:focus,
 	.Ticket .instruction.photo .icon-buttons a,
-	.Ticket .instruction.task .photo .icon-buttons a {
+	.Ticket .instruction.task .photo .icon-buttons a,
+	.Ticket .instruction.task .photo .icon-buttons a.disabled,
+	.Ticket .instruction.task .photo .icon-buttons a.disabled:hover,
+	.Ticket .instruction.task .photo .icon-buttons a.disabled:focus {
 		background: rgba(64, 145, 230, .1);
 	}
 	
@@ -423,7 +444,10 @@ html, body {
 	 .calendar .view-bar .date-statement,
 	 .calendar-day .ticket.incomplete a.ticketname,
 	 .Ticket .instruction.photo .icon-buttons a,
-	 .Ticket .instruction.task .photo .icon-buttons a {
+	 .Ticket .instruction.task .photo .icon-buttons a,
+	 .Ticket .instruction.photo .icon-buttons a.disabled,
+	 .Ticket .instruction.task .photo .icon-buttons a.disabled,
+	 a.bigButton.disabled {
 		color: #4890e2;
 	}
 	
@@ -437,7 +461,8 @@ html, body {
 	.calendar .action-panel .primary.actions a.buttonly,
 	.Ticket .section-controls .buttons a.buttonly,
 	.Ticket .comments .primary.actions a.buttonly,
-	.Ticket .barcode .primary.actions a.buttonly {
+	.Ticket .barcode .primary.actions a.buttonly,
+	.answerButton.submit {
 		background: #4890e2;
 	}
 	
@@ -452,7 +477,9 @@ html, body {
 	.Ticket .comments .primary.actions a.buttonly:hover,
 	.Ticket .comments .primary.actions a.buttonly:focus,
 	.Ticket .barcode .primary.actions a.buttonly:hover,
-	.Ticket .barcode .primary.actions a.buttonly:focus {
+	.Ticket .barcode .primary.actions a.buttonly:focus,
+	.answerButton.submit:hover,
+	.answerButton.submit:focus {
 		background: #539ce9;
 	}
 	
@@ -482,8 +509,8 @@ html, body {
 		background: #eaf2fd;
 	}
 	
-	.Ticket .instruction a.answerButton:hover,
-	.Ticket .instruction a.answerButton:focus {
+	.answerButton:hover,
+	.answerButton:focus {
 		background: #e0edfb;
 	}
 	
@@ -812,33 +839,10 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 /* fonts */
 
 .nav-sections li.divider,
-.tabnav li a,
 .tabnav .btn.btn-default.dropdown-toggle,
-.header .actions .ti,
-.subnav li,
-.filters-holder .view a,
-.filter.dropdown .btn.btn-default.dropdown-toggle,
-.filter.search,
-.keys .key,
-.filters-choices .value,
-.table-list .controls .actions,
-.filters-choices .selection .detail,
-.table-list td,
-.map .tab-pane .ticketlink,
-.map .tab-pane.actions .iconButton,
-a.page-action,
-.page-action-panel input,
-.section-controls .action.panel input[type="text"],
-.add-members .name,
-.calendar .view-bar,
-.calendar .calendar-month .work,
 .calendar .header,
-.calendar-day .ticket .ti .time,
-.calendar-day .ticket .ti .ticketname,
-.calendar-day h1.graphic,
 .calendar-month .date-num:after,
-.answerButton,
-.Ticket .barcode .plainLabel {
+.filter.dropdown .btn.btn-default.dropdown-toggle {
 	font-family: Helvetica-Neue-Light;
 }
 
@@ -846,8 +850,6 @@ a.page-action,
 select option,
 .subcontent.sub .subnav li,
 .tabnav li .dropdown li a,
-a.cancel,
-.buttonly.cancel,
 .Ticket .instruction.barcode .widget-panel-content .inner > .ti,
 .Ticket .instruction.task .widget-panel-content .inner > .ti {
 	font-family: Helvetica-Neue;
@@ -856,13 +858,20 @@ a.cancel,
 .sidenav .user-name,
 .remove,
 .iconly,
+.tabnav li a,
+.nav-sections li,
+.buttonly,
 .instruction-footer,
 .messages .problem span.exclaim,
 .section-no-content,
 .calendar-month th,
 .calendar-month .date-num,
 .messages .message h1,
-.hint.widget-panel .header .ti {
+.hint.widget-panel .header .ti,
+.Ticket .instruction .header .controls .ti,
+.Ticket .barcode .upc .number,
+.answerButton,
+.warning {
 	font-family: Helvetica-Neue-Medium;
 }
 
@@ -874,7 +883,8 @@ a.cancel,
 .Ticket .ticket-summary .scheduled span,
 .Ticket .ticket-summary .due span,
 .Ticket .comments .area .ti,
-.Ticket .instruction .widget-panel-content .inner > .ti {
+.Ticket .instruction .widget-panel-content .inner > .ti,
+header .nav .number  {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }

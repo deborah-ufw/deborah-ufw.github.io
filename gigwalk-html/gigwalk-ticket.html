@@ -581,13 +581,13 @@
               
               <!-- question type is Numeric -->
               <div class="type numeric">
-                <!-- this oneis numeric but not currency -->
+                <!-- this one is numeric but not currency -->
                 <div class="answers">
                   <div class="answer">
                     <input type="text" name="target2 answer number" placeholder="ex. 7" />
                   </div>
                   <!-- this one is currency -->
-                  <div class="answer currency">
+                  <div class="answer currency-input">
                     <input type="text" name="target3 answer number" placeholder="ex. 7" />
                   </div>
                 </div>
@@ -631,7 +631,7 @@
                   </div>
                 </div>
               </div><!-- END free text -->
-              <div class="hint">Must be a number</div>
+              <div class="validation hint">Must be a number</div>
             </div><!-- END inner -->
             
             <!-- main action button -->
@@ -925,6 +925,9 @@
               <!-- question type is barcode -->
               <div class="type barcode">
                 <div class="answers">
+                  <div class="description">
+                    Scan the product and provide a count.
+                  </div>
                   <!-- the upc div holder -->
                   <div class="answer showing">
                     <!-- stacked upc divs -->
@@ -989,7 +992,9 @@
                     <div class="description">
                       Enter the sale price.
                     </div>
-                    <input type="text" name="target2 answer number" placeholder="ex. 7" />
+                    <div class="currency-input">
+                      <input type="text" name="target2 answer number" placeholder="ex. 7" />
+                    </div>
                   </div>
                 </div>  
               </div><!-- END Numeric (number) -->
@@ -1031,7 +1036,7 @@
               </div><!-- END numeric (time) -->
               <div class="validation hint">Must be a number</div>
               
-              <!-- ----------------- ENDS STEPS ------------------- -->
+              <!-- END steps -->
               
             </div><!-- END inner -->
             
@@ -1039,10 +1044,86 @@
             <a href="javascript:;" class="answerButton">Next or Save</a>
             
           </div><!-- END widget content -->
-        </div><!-- END step task -->
+        </div>
+
+        <!-- ----------------- ENDS STEP TASK ------------------- -->
+        
+        <!-- ----------------- worker's time entry --------------------- -->
+        <div class="instruction required enter-time widget-panel edit-mode">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti">
+                <span class="im icon-time"></span>
+                <span class="copy">Enter your time</span>
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+          
+            <div class="inner">
+            
+              <!-- question type is Time -->
+              <div class="type time">
+                <div class="answers">
+                  <div class="wrapper">
+                  
+                  <!-- Hours -->
+                    <div class="answer hours">
+                      <input type="text" name="target1 answer time" placeholder="ex. 3" />
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                          Hours
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <!-- Minutes -->
+                    <div class="answer minutes">
+                      <input type="text" name="target1 answer time" placeholder="ex. 15" />
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                          Minutes
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div><!-- END Time -->
+              
+            </div><!-- END inner -->
+            
+            <!-- main action button -->
+            <a href="javascript:;" class="answerButton">Save</a>
+            
+          </div><!-- END widget content -->
+        </div><!-- END worker's time entry -->
+        
+        
+        <!-- ---------------------- Submit this Ticket button ----------------------- -->
+        <a href="javascript:;" class="answerButton submit disabled">Submit this ticket</a>
       
       
-      </div><!-- END Ticket Instructions panel -->
+      </div><!-- ----------------- END Ticket Instructions panel ---------------- -->
       
         
         

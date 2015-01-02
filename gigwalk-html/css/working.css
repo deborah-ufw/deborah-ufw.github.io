@@ -6,7 +6,8 @@ h1.super {
 }
 
 .action.panel,
-.section-controls .admin,
+.section-controls .worker,
+.ticket-instructions,
 .ticket-summary {
 	display: none;
 }
