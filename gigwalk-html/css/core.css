@@ -701,7 +701,7 @@ a.page-action,
 .comments .new a.attach,
 .attached-file,
 .hint.widget-panel .tip-title,
-.hint.widget-panel .widget-panel-content div.attachment.image a,
+.hint.widget-panel .widget-panel-content div.attachment.image,
 .answerButton,
 .bigButton,
 .Ticket .instruction.photo .answer,
@@ -1630,7 +1630,7 @@ header .nav ul.dropdown-menu li,
 	border-bottom: 1px solid #b3b3b3;
 }
 
-.hint.widget-panel .attachment {
+.hint.widget-panel .attachment.file {
 	border-top: 1px solid #dfdfdf;
 }
 
@@ -1656,6 +1656,10 @@ header .nav ul.dropdown-menu li,
 	display: table;
 	width: 100%;
 	background: #cccccc;
+}
+
+.Ticket .instruction.task .images {
+	border-top: 1px solid #ffffff;
 }
 
 .calendar-month td {
@@ -1710,8 +1714,8 @@ header .nav li,
 }
 
 .Ticket .instruction.task .widget-panel-content .inner > .ti,
-.Ticket .instruction.task .images,
-.Ticket .instruction.task .barcode .answer.showing {
+.Ticket .instruction.task .barcode .answer.showing,
+.Ticket .instruction.task .images {
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -6174,17 +6178,16 @@ a.page-action.delete-button span.im {
 	content: "TIP: ";
 }
 
-.hint.widget-panel .widget-panel-content div {
+.hint.widget-panel .widget-panel-content > div {
 	padding: 0 2em 1em 86px;
 }
 
 .hint.widget-panel .widget-panel-content div.attachment {
-	padding-top: .7em;
-	padding-bottom: .7em;
+	margin-top: 4px;
 }
 
-.hint.widget-panel .widget-panel-content div.attachment.file a {
-	margin-top: -12px;
+.hint.widget-panel .widget-panel-content div.attachment.file {
+	padding-bottom: .6em;
 }
 
 .Ticket .instruction .optional:before {
@@ -6355,7 +6358,11 @@ a.page-action.delete-button span.im {
 	padding-bottom: 1.5em;
 }
 
-.Ticket .instruction.task .images .attachment.image {
+.Ticket .instruction.task .images {
+	margin-top: -26px;
+}
+
+.Ticket .images .attachment.image {
 	padding: 0 4px 4px 0;
 }
 

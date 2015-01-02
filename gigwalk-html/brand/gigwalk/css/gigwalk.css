@@ -671,6 +671,13 @@ html, body {
 		}
 	}
 	
+	/* breadcrumbs need bold when smaller */
+	@media (max-width: 664px) {
+		.section-controls .section.title  {
+			font-family: Helvetica-Neue-Bold;
+		}
+	}
+	
 	/* admin filters stacked bg - no sidebar */
 	@media (max-width: 590px) {
 		.admin .Tickets .dash > .filters-holder,
