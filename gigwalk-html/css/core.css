@@ -5421,7 +5421,7 @@ a.page-action.delete-button span.im {
 }
 
 .section-controls .action.panel.date .wrapper {
-	margin: 1.5em 0 2em 0;
+	margin: .5em 0 2em 0;
 }
 
 .add-members .checkbox {
@@ -6435,6 +6435,19 @@ a.page-action.delete-button span.im {
 		margin: 0 0 1em 0;
 	}
 	
+	.section-controls .action.panel.date .item {
+		margin-left: 0;
+	}
+	
+	.section-controls .action.panel.date .plainLabel {
+		width: 100%;
+		float: none;
+	}
+	
+	.section-controls .action.panel.date .datepicker {
+		margin-top: 0;
+	}
+	
 }
 
 @media (max-width: 420px) {
@@ -6504,6 +6517,11 @@ a.page-action.delete-button span.im {
 	
 	.Ticket .barcode .answer .added {
 		padding-right: .5em;
+	}
+	
+	.section-controls .action.panel .group .filter.search input,
+	.section-controls .action.panel input[type="text"].datepicker {
+		width: 160px;
 	}
 	
 }

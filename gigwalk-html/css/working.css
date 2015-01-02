@@ -5,13 +5,6 @@ h1.super {
 	display: none;
 }
 
-.action.panel,
-.section-controls .worker,
-.ticket-summary,
-.page.action.messages,
-.section-controls {
-	display: none;
-}
 
 
 
