@@ -469,6 +469,8 @@ a[href*="tel"]:focus,
 .answerButton:focus,
 a.bigButton:hover,
 a.bigButton:focus,
+.remove:hover,
+.remove:focus,
 .Ticket .barcode a.linkly:hover,
 .Ticket .barcode a.linkly:focus {
 	text-decoration: none;
@@ -588,10 +590,9 @@ a.disabled,
 .comments .new textarea:after,
 .Ticket .instruction .time .answer:after,
 .Ticket .instruction.photo .wrapper:before,
-.Ticket .instruction.barcode .answer:after,
-.Ticket .instruction.barcode .added:before,
-.Ticket .instruction.task .type.barcode .answer:after,
-.Ticket .instruction.task .type.barcode .added:before,
+.Ticket .barcode .answer:after,
+.Ticket .barcode .added:before,
+.Ticket .barcode .added:after,
 .Ticket .instruction.enter-time .answers .answer:after {
 	 content: ' ';
 	 visibility: hidden;
@@ -1659,7 +1660,7 @@ header .nav ul.dropdown-menu li,
 }
 
 .Ticket .instruction.task .images {
-	border-top: 1px solid #ffffff;
+	border-top: 5px solid #ffffff;
 }
 
 .calendar-month td {
@@ -1708,13 +1709,12 @@ header .nav li,
 
 .topborder,
 .section-controls .action.panel,
-.Ticket .instruction .divider:before,
-.Ticket .barcode .answer.showing {
+.Ticket .instruction .divider:before {
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 .Ticket .instruction.task .widget-panel-content .inner > .ti,
-.Ticket .instruction.task .barcode .answer.showing,
+.Ticket .barcode .answer .added,
 .Ticket .instruction.task .images {
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
@@ -6310,7 +6310,7 @@ a.page-action.delete-button span.im {
 	padding-bottom: .2em;
 }
 
-.Ticket .instruction.barcode .answer {
+.Ticket .barcode .answer .added {
 	margin-right: -2em;
 	padding-right: 2em;
 }
@@ -6324,7 +6324,7 @@ a.page-action.delete-button span.im {
 }
 
 .Ticket .barcode .count input {
-	margin: .2em 1em .2em 0;
+	margin: .4em 1em .3em 0;
 	width: 60px;
 }
 
@@ -6359,7 +6359,7 @@ a.page-action.delete-button span.im {
 }
 
 .Ticket .instruction.task .images {
-	margin-top: -26px;
+	margin-top: -27px;
 }
 
 .Ticket .images .attachment.image {
