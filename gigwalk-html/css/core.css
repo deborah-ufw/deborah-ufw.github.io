@@ -162,8 +162,7 @@ body,
 	font-size: 1.7em;
 }
 
-.Tickets .dash td.status span:before,
-.Ticket .completion-bar.complete .text:before {
+.Tickets .dash td.status span:before {
 	font-size: 1.8em;
 }
 
@@ -207,6 +206,10 @@ a[href*="tel"]:before {
 	font-size: 29px;
 }
 
+.Ticket .completion-bar.complete .text:before {
+	font-size: 30px;
+}
+
 .im:before {
 	font-size: 31px;
 }
@@ -231,7 +234,8 @@ th.sorting:after {
 .action.messages .message .im.icon-cancel:before,
 .section-actions a.iconButton:before,
 .filter.search .icon-search:before,
-.Ticket .instruction.complete .ti.type:before {
+.Ticket .instruction.complete .ti.type:before,
+.tabnav .icon-pencil-box:before {
 	font-size: 36px;
 }
 
@@ -5982,7 +5986,7 @@ a.page-action.delete-button span.im {
 	}
 	
 	.calendar .calendar-day h1.graphic:before {
-		font-size: 2.2em;
+		font-size: 56px;
 		margin-bottom: .2em;
 		display: block;
 		width: 100%;
@@ -6838,20 +6842,7 @@ textarea:-ms-input-placeholder {
 
 /* ie10 & 11 --- also will be picked up by ie9 */
 
-@media (max-width: 400px) {
-	/* icons in the calendar-day action panels for worker */
-	html[data-useragent*='MSIE 10.0'] .calendar .no-scheduled h1.graphic:before,
-html[data-useragent*='Trident'] .calendar h1.graphic:before {
-		font-size: .5em;
-	}	
-}
 
-html[data-useragent*='Trident'] .buttonly .im.icon-pencil-box:before {
-	font-size: .6em;
-}
-
-html[data-useragent*='MSIE 10.0'] .blocked h1.graphic:before,
-html[data-useragent*='Trident'] .blocked h1.graphic:before, 
 html[data-useragent*='MSIE 10.0'] .buttonly .im.icon-pencil-box:before {
 	font-size: .8em;
 }		
@@ -6861,8 +6852,6 @@ html[data-useragent*='Trident'] a.page-action.new-button span {
 	font-size: 11px;
 }
 
-html[data-useragent*='MSIE 10.0'] .view .im:before,
-html[data-useragent*='Trident'] .view .im:before, 
 html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list td.status span.started.paused:before,
 html[data-useragent*='Trident'] .Tickets .dash .table-list td.status span.started.paused:before {
 	font-size: 30px;
@@ -6904,6 +6893,11 @@ html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-titl
 html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list table th.project-title,
 html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-title {
 	 white-space: nowrap;
+}
+
+html[data-useragent*='MSIE 10.0'] .Ticket .instruction.task .type.photo .placement .plainLabel,
+html[data-useragent*='Trident']	.Ticket .instruction.task .type.photo .placement .plainLabel {
+	float: none;
 }
 
 
