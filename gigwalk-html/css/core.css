@@ -59,7 +59,8 @@ header nav .user-edit,
 .calendar-day .blocked .wrapper .primary.actions a,
 .calendar-month .date-num,
 .comments .attached-file span,
-.Ticket .instruction.barcode .linkly {
+.Ticket .instruction.barcode .linkly,
+.Ticket .instruction.task .type.barcode .linkly {
 	font-size: .9em;
 }
 
@@ -375,8 +376,11 @@ header .nav .number,
 .bigButton,
 .Ticket .instruction.photo .answers,
 .Ticket .instruction.barcode .answers .wrapper,
+.Ticket .instruction.task .type.barcode .answers .wrapper,
 .Ticket .instruction.photo .icon-buttons a,
-.Ticket .instruction.barcode input {
+.Ticket .instruction.task .photo .icon-buttons a,
+.Ticket .instruction.barcode input,
+.Ticket .instruction.task .type.barcode input {
 	text-align: center;
 }
 
@@ -457,8 +461,8 @@ a[href*="tel"]:focus,
 .answerButton:focus,
 a.bigButton:hover,
 a.bigButton:focus,
-.Ticket .instruction.barcode a.linkly:hover,
-.Ticket .instruction.barcode a.linkly:focus {
+.Ticket .barcode a.linkly:hover,
+.Ticket .barcode a.linkly:focus {
 	text-decoration: none;
 }
 
@@ -574,9 +578,11 @@ a.linkly.disabled {
 .Ticket .ticket-summary .address span:after,
 .comments .new textarea:after,
 .Ticket .instruction .time .answer:after,
-.Ticket .instruction.barcode .answer:after,
 .Ticket .instruction.photo .wrapper:before,
-.Ticket .instruction.barcode .added:before {
+.Ticket .instruction.barcode .answer:after,
+.Ticket .instruction.barcode .added:before,
+.Ticket .instruction.task .type.barcode .answer:after,
+.Ticket .instruction.task .type.barcode .added:before {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -601,6 +607,7 @@ nav.subnav ul {
 .table-list .action.panel .wrapper,
 .completion-bar,
 .Ticket .instruction.photo .added .icon-buttons,
+.Ticket .instruction.task .photo .added .icon-buttons,
 .Ticket .instruction.task .images .attachment.image {
 	display: table;
 }
@@ -608,6 +615,7 @@ nav.subnav ul {
 .completion-bar .completion,
 .completion-bar .text,
 .Ticket .instruction.photo .icon-buttons a,
+.Ticket .instruction.task .photo .icon-buttons a,
 .Ticket .instruction.task .images .attachment.image img {
 	display: table-cell;
 }
@@ -625,7 +633,7 @@ nav.subnav ul {
 .calendar-day .no-scheduled .wrapper.finder span.copy,
 .map .tab-pane a.requirements,
 .bigButton:before,
-.Ticket .instruction.barcode .answers .linkly {
+.Ticket .barcode .linkly {
 	display: block;
 }
 
@@ -687,7 +695,8 @@ a.page-action,
 .answerButton,
 .bigButton,
 .Ticket .instruction.photo .answer,
-.Ticket .instruction.task .images .attachment.image {
+.Ticket .instruction.task .images .attachment.image,
+.Ticket .instruction.task .type.photo .placement {
 	display: inline-block;
 }
 
@@ -708,7 +717,7 @@ a.page-action,
 .table-list .action.panel .plainLabel,
 .action.panel.date .plainLabel,
 .subgroups-detail a,
-.Ticket .instruction.barcode .added .upc {
+.Ticket .barcode .added .upc {
 	display: inline-block;
 	float: left;
 }
@@ -726,7 +735,7 @@ a.page-action,
 .completion-bar .text,
 .Ticket .instruction.edit-mode.complete .viewing.icon-button,
 .Ticket .instruction .divider:before,
-.Ticket .instruction.barcode .added .count {
+.Ticket .barcode .added .count {
 	display: inline-block;
 	float: right;
 }
@@ -748,7 +757,10 @@ input[type="radio"],
 .primary.actions a.delete,
 .Ticket .instruction .time .dropdown,
 .Ticket .instruction .time input,
-.Ticket .instruction.photo .icon-buttons {
+.Ticket .instruction.photo .icon-buttons,
+.Ticket .instruction.task .photo .icon-buttons,
+.Ticket .instruction.task .time input,
+.Ticket .instruction.time .time input {
 	float: left;
 }
 
@@ -768,7 +780,7 @@ input[type="radio"],
 .group.repeats .set-repeats .radios .plainLabel,
 .instruction.edit-mode .instruction-content .numeric .more-info > .plainLabel,
 .comments .new .attached-file .remove,
-.Ticket .instruction.barcode .remove {
+.Ticket .barcode .remove {
 	float: none;
 }
 
@@ -930,7 +942,8 @@ header .navbar-collapse.in {
 .completion-bar,
 .completion-bar .completion,
 .answerButton,
-.Ticket .instruction.photo .added .icon-buttons {
+.Ticket .instruction.photo .added .icon-buttons,
+.Ticket .instruction.task .photo .added .icon-buttons {
 	width: 100%;
 }
 
@@ -1643,12 +1656,13 @@ header .nav li,
 .topborder,
 .section-controls .action.panel,
 .Ticket .instruction .divider:before,
-.Ticket .instruction.barcode .answer.showing {
+.Ticket .barcode .answer.showing {
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 .Ticket .instruction.task .widget-panel-content .inner > .ti,
-.Ticket .instruction.task .images {
+.Ticket .instruction.task .images,
+.Ticket .instruction.task .barcode .answer.showing {
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -2987,7 +3001,8 @@ instruction .viewing.icon-buttons {
 	top: 4px;
 }
 
-.Ticket .instruction.photo .icon-buttons a:before {
+.Ticket .instruction.photo .icon-buttons a:before,
+.Ticket .instruction.task .photo .icon-buttons a:before {
 	top: 0;
 }
 
@@ -3098,7 +3113,9 @@ instruction .viewing.icon-buttons {
 
 .instruction.view-mode .numeric input,
 .instruction.view-mode .time input,
-.Ticket .instruction .time input {
+.Ticket .instruction .time input,
+.Ticket .instruction.task .time input,
+.Ticket .instruction.time .time input {
 	margin: 0 0 0 0;
 	padding-right: 4px;
 	width: 60px;
@@ -3128,7 +3145,8 @@ instruction .viewing.icon-buttons {
 }
 
 .instruction.view-mode .time .dropdown,
-.Ticket .instruction .time .dropdown {
+.Ticket .instruction .time .dropdown,
+.Ticket .instruction.edit-mode .numeric.time .dropdown {
 	margin: 0 1em 0 .5em;
 }
 
@@ -6101,7 +6119,8 @@ a.page-action.delete-button span.im {
 }
 
 .Ticket .instruction .widget-panel-content .type,
-.Ticket .instruction.question .hint {
+.Ticket .instruction.question .hint,
+.Ticket .instruction.task .validation.hint {
 	padding-left: 3em;
 }
 
@@ -6166,35 +6185,40 @@ a.page-action.delete-button span.im {
 	margin-bottom: 1.5em;
 }
 
-.Ticket .instruction.photo .icon-buttons  {
+.Ticket .instruction.photo .icon-buttons,
+.Ticket .instruction.task .photo .icon-buttons {
 	margin-top: 4px;
 }
 
-.Ticket .instruction.photo .icon-buttons a {
+.Ticket .instruction.photo .icon-buttons a,
+.Ticket .instruction.task .photo .icon-buttons a {
 	padding: .3em 0;
 	width: 50%;
 }
 
-.Ticket .instruction.photo .icon-buttons a.icon-edit {
+.Ticket .instruction.photo .icon-buttons a.icon-edit,
+.Ticket .instruction.task .photo .icon-buttons a.icon-edit {
 	border-right: 4px solid #ffffff;
 }
 
 .Ticket .instruction.barcode .wrapper,
+.Ticket .instruction.task .type.barcode .wrapper,
 .Ticket .instruction.task .widget-panel-content .inner > .ti,
 .Ticket .instruction.task .images {
 	margin: 0 -2em 0 0;
 }
 
 .Ticket .instruction.barcode .wrapper a,
-.Ticket .instruction.barcode .manual-entry {
+.Ticket .instruction.task .type.barcode .wrapper a,
+.Ticket .barcode .manual-entry {
 	margin: 2em 2em 0 0;
 }
 
-.Ticket .instruction.barcode .linkly {
+.Ticket .barcode .linkly {
 	margin-top: 1.3em;
 }
 
-.Ticket .instruction.barcode .added {
+.Ticket .barcode .added {
 	padding-bottom: .2em;
 }
 
@@ -6203,37 +6227,42 @@ a.page-action.delete-button span.im {
 	padding-right: 2em;
 }
 
-.Ticket .instruction.barcode .upc {
+.Ticket .barcode .upc {
 	padding-top: 7px;
 }
 
-.Ticket .instruction.barcode .upc .number {
+.Ticket .barcode .upc .number {
 	padding-left: .3em;
 }
 
-.Ticket .instruction.barcode .count input {
+.Ticket .barcode .count input {
 	margin: .2em 1em .2em 0;
 	width: 60px;
 }
 
-.Ticket .instruction.barcode .manual-entry input {
+.Ticket .barcode .manual-entry input {
 	width: 250px;
 }
 
-.Ticket .instruction.barcode .primary.actions {
+.Ticket .instruction.barcode .primary.actions,
+.Ticket .instruction.task .type.barcode .primary.actions {
 	margin: 0 0 0 0;
 }
 
-.Ticket .instruction.barcode .wrapper .manual-entry a {
+.Ticket .barcode .wrapper .manual-entry a,
+.Ticket .instruction.task .type.barcode .wrapper .manual-entry a {
 	margin: 4px 0 0 0;
 	padding-left: 0;
 	padding-right: 0;
 	width: 121px;
 }
 
-.Ticket .instruction.barcode .wrapper .manual-entry a.cancel {
+.Ticket .barcode .wrapper .manual-entry a.cancel {
 	margin-right: 4px;
 }
+
+
+/* step task */
 
 .Ticket .instruction.task .widget-panel-content .inner > .ti,
 .Ticket .instruction.task .images {
@@ -6241,19 +6270,21 @@ a.page-action.delete-button span.im {
 	padding-bottom: 1.5em;
 }
 
-.Ticket .instruction.task .images {
-	display: table;
-}
-
 .Ticket .instruction.task .images .attachment.image {
 	padding: 0 4px 4px 0;
 }
 
+.Ticket .instruction.task .answer .description {
+	margin: 0 0 1em -2em;
+}
 
+.Ticket .instruction.task .type.photo .answer .description {
+	margin: 0 0 1em 1em;
+}
 
-/* step task */
-
-
+.Ticket .task .widget-panel-content .type.photo {
+	padding-left: 0;
+}
 
 
 /* heredeb */

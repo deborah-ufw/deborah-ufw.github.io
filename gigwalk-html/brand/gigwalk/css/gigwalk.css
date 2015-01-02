@@ -132,7 +132,7 @@ html, body {
 	.primary.actions a.delete,
 	.primary.actions a.delete:hover,
 	.primary.actions a.delete:focus,
-	.Ticket .instruction.barcode .primary.actions a.buttonly.cancel {
+	.Ticket .barcode .primary.actions a.buttonly.cancel {
 		background-color: #ffffff;
 	}
 	
@@ -194,7 +194,7 @@ html, body {
 	.choose-dates a.cancel,
 	.page-action-panel a.cancel,
 	.calendar .action-panel .primary.actions a.buttonly.cancel,
-	.Ticket .instruction.barcode .primary.actions a.buttonly.cancel {
+	.Ticket .barcode .primary.actions a.buttonly.cancel {
 		border-color: #c6c6c6;
 	}
 	
@@ -264,8 +264,8 @@ html, body {
 	.page-action-panel a.cancel:focus,
 	.expander,
 	.section-no-content,
-	.Ticket .instruction.barcode .primary.actions a.buttonly.cancel:hover,
-	.Ticket .instruction.barcode .primary.actions a.buttonly.cancel:focus {
+	.Ticket .barcode .primary.actions a.buttonly.cancel:hover,
+	.Ticket .barcode .primary.actions a.buttonly.cancel:focus {
 		background: #f8f8f8;
 	}
 	
@@ -353,7 +353,8 @@ html, body {
 	.calendar-day a.get-more,
 	.Ticket .instruction a.answerButton,
 	.bigButton,
-	.Ticket .instruction.photo .icon-buttons a {
+	.Ticket .instruction.photo .icon-buttons a,
+	.Ticket .instruction.task .photo .icon-buttons a {
 		background: rgba(64, 145, 230, .1);
 	}
 	
@@ -371,7 +372,9 @@ html, body {
 	.bigButton:hover,
 	.bigButton:focus,
 	.Ticket .instruction.photo .icon-buttons a:hover,
-	.Ticket .instruction.photo .icon-buttons a:focus {
+	.Ticket .instruction.photo .icon-buttons a:focus,
+	.Ticket .instruction.task .photo .icon-buttons a:hover,
+	.Ticket .instruction.task .photo .icon-buttons a:focus {
 		background: rgba(64, 145, 230, .2);
 	}
 	
@@ -419,7 +422,8 @@ html, body {
 	 .table-list .controls .actions.active a,
 	 .calendar .view-bar .date-statement,
 	 .calendar-day .ticket.incomplete a.ticketname,
-	 .Ticket .instruction.photo .icon-buttons a {
+	 .Ticket .instruction.photo .icon-buttons a,
+	 .Ticket .instruction.task .photo .icon-buttons a {
 		color: #4890e2;
 	}
 	
@@ -433,7 +437,7 @@ html, body {
 	.calendar .action-panel .primary.actions a.buttonly,
 	.Ticket .section-controls .buttons a.buttonly,
 	.Ticket .comments .primary.actions a.buttonly,
-	.Ticket .instruction.barcode .primary.actions a.buttonly {
+	.Ticket .barcode .primary.actions a.buttonly {
 		background: #4890e2;
 	}
 	
@@ -447,8 +451,8 @@ html, body {
 	.Ticket .section-controls .buttons a.buttonly:focus,
 	.Ticket .comments .primary.actions a.buttonly:hover,
 	.Ticket .comments .primary.actions a.buttonly:focus,
-	.Ticket .instruction.barcode .primary.actions a.buttonly:hover,
-	.Ticket .instruction.barcode .primary.actions a.buttonly:focus {
+	.Ticket .barcode .primary.actions a.buttonly:hover,
+	.Ticket .barcode .primary.actions a.buttonly:focus {
 		background: #539ce9;
 	}
 	
@@ -566,7 +570,7 @@ html, body {
 	.calendar .action-panel .primary.actions a.buttonly,
 	.Ticket .section-controls .buttons a.buttonly,
 	.Ticket .comments .primary.actions a.buttonly,
-	.Ticket .instruction.barcode .primary.actions a.buttonly {
+	.Ticket .barcode .primary.actions a.buttonly {
 		border-color: rgba(64, 145, 230, .7);
 	}
 	
@@ -834,7 +838,7 @@ a.page-action,
 .calendar-day h1.graphic,
 .calendar-month .date-num:after,
 .answerButton,
-.Ticket .instruction.barcode .plainLabel {
+.Ticket .barcode .plainLabel {
 	font-family: Helvetica-Neue-Light;
 }
 
