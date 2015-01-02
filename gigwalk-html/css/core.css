@@ -708,7 +708,8 @@ a.page-action,
 .Ticket .instruction.photo .answer,
 .Ticket .instruction.task .images .attachment.image,
 .Ticket .instruction.task .type.photo .placement,
-.instruction.enter-time .answers {
+.instruction.enter-time .answers,
+.breaker {
 	display: inline-block;
 }
 
@@ -1046,7 +1047,10 @@ a.page-action,
 .answerButton,
 .icon-buttons a,
 .user-image,
-.comments-wrapper {
+.comments-wrapper,
+.Ticket .barcode .manual-entry input,
+	.Ticket .barcode .wrapper .manual-entry a,
+	.Ticket .instruction.task .type.barcode .wrapper .manual-entry a {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
@@ -6316,7 +6320,7 @@ a.page-action.delete-button span.im {
 }
 
 .Ticket .barcode .upc {
-	padding-top: 7px;
+	padding-top: 11px;
 }
 
 .Ticket .barcode .upc .number {
@@ -6358,6 +6362,15 @@ a.page-action.delete-button span.im {
 	padding-bottom: 1.5em;
 }
 
+.Ticket .instruction.task .widget-panel-content .inner > .ti {
+	padding-right: 2em;
+}
+
+.Ticket .instruction.task .type,
+.Ticket .instruction.task .validation.hint {
+	padding-left: 2em;
+}
+
 .Ticket .instruction.task .images {
 	margin-top: -27px;
 }
@@ -6374,11 +6387,8 @@ a.page-action.delete-button span.im {
 	margin: 0 0 1em 1em;
 }
 
-.Ticket .instruction.task .type.barcode .answers .description {
-	margin: 0 0 1em -2em;
-}
-
-.Ticket .task .widget-panel-content .type.photo {
+.Ticket .task .widget-panel-content .type.photo,
+.Ticket .task .widget-panel-content .type.barcode {
 	padding-left: 0;
 }
 
@@ -6392,7 +6402,7 @@ a.page-action.delete-button span.im {
 }
 
 
-/* Ticket sizes down - admin */
+/* Ticket sizes down */
 
 @media (max-width: 860px) {
 
@@ -6409,6 +6419,22 @@ a.page-action.delete-button span.im {
 		font-size: .9em;
 	}
 
+}
+
+@media (max-width: 480px) {
+	
+	.Ticket .barcode .added .count .plainLabel {
+		display: none;
+	}
+	
+	.Ticket .instruction.photo .breaker {
+		display: block;
+	}
+	
+	.Ticket .instruction.photo .answer.example {
+		margin: 0 0 1em 0;
+	}
+	
 }
 
 @media (max-width: 420px) {
@@ -6435,6 +6461,87 @@ a.page-action.delete-button span.im {
 		display: none;
 	}
 
+}
+
+@media (max-width: 400px) {
+	
+	.ticket-instructions {
+		margin-right: -.5em;
+		margin-left: -.5em;
+	}
+	
+	.Ticket .barcode .manual-entry input {
+		width: 200px;
+	}
+	
+	.Ticket .barcode .wrapper .manual-entry a,
+	.Ticket .instruction.task .type.barcode .wrapper .manual-entry a {
+		width: 97px;
+	}
+	
+	.Ticket .instruction.question .widget-panel-content .type {
+		padding-left: 1em;
+	}
+	
+	.Ticket .instruction.question .widget-panel-content .type,
+	.Ticket .instruction.question .hint,
+	.Ticket .instruction.task .widget-panel-content .type,
+	.Ticket .instruction.task .validation.hint {
+		padding-left: 0;
+	}
+	
+	.Ticket .instruction.task .type .description {
+		margin-left: 0;
+	}
+	
+	.Ticket .task .widget-panel-content .type.photo {
+		margin-left: -1.5em;
+	}
+	
+	.Ticket .task .widget-panel-content .type.barcode {
+		margin-left: -.5em;
+	}
+	
+	.Ticket .barcode .answer .added {
+		padding-right: .5em;
+	}
+	
+}
+
+@media (max-width: 350px) {
+	
+	.ticket-instructions {
+		padding-right: .5em;
+		padding-left: .5em;
+	}
+	
+	.Ticket .instruction .widget-panel-content > .inner {
+		padding-left: 1.2em;
+	}
+	
+	.Ticket .instruction.barcode .wrapper a, 
+	.Ticket .instruction.task .type.barcode .wrapper a, 
+	.Ticket .barcode .manual-entry {
+		margin: 1em 1em 0 0;
+	}
+	
+	.Ticket .barcode .added .upc .plainLabel {
+		display: none;
+	}
+	
+	.Ticket .barcode .manual-entry input {
+		width: 170px;
+	}
+	
+	.Ticket .barcode .wrapper .manual-entry a,
+	.Ticket .instruction.task .type.barcode .wrapper .manual-entry a {
+		width: 82px;
+	}
+	
+	.hint.widget-panel .widget-panel-content div.attachment.file {
+		padding-left: .7em; 
+	}
+	
 }
 
 /* heredeb */
