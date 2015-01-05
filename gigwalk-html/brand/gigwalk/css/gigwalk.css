@@ -294,20 +294,6 @@ html, body {
 	
 	/* reds */
 	
-	.table-remove,
-	.remove,
-	.remove:hover,
-	.item.required > .plainLabel:after,
-	.tab-pane.actions .detail:before,
-	.calendar-day .ticket.incomplete.today .due,
-	.due.today {
-		color: #db2023;
-	}
-	
-	.invalid input[type="text"],
-	.invalid input[type="textarea"] {
-		color: #ff5056;
-	}
 	
 	.instruction.incomplete .arrow,
 	.instruction.required.incomplete .arrow,
@@ -316,6 +302,15 @@ html, body {
 		color: #fe8e92;
 	}
 	
+	.table-remove,
+	.remove,
+	.remove:hover,
+	.item.required > .plainLabel:after,
+	.tab-pane.actions .detail:before,
+	.calendar-day .ticket.incomplete.today .due,
+	.due.today,
+	.invalid input[type="text"],
+	.invalid input[type="textarea"],
 	.primary.actions a.delete,
 	.messages .message.problem,
 	.problem a.closer,
@@ -326,7 +321,14 @@ html, body {
 	.instructions .duplicating-message a .im,
 	a.page-action.delete-button,
 	.page-action-panel a.buttonly.delete {
-		color: #ff5157;
+		color: #ec383d;
+	}
+	
+	a.page-action.delete-button,
+	.page-action-panel a.buttonly.delete,
+	.invalid input[type="text"],
+	.invalid input[type="textarea"] {
+		border-color: #ec383d;
 	}
 	
 	.instruction.incomplete .header,
@@ -341,16 +343,6 @@ html, body {
 	
 	.key.expired:before {
 		background: #ff5157;
-	}
-	
-	a.page-action.delete-button,
-	.page-action-panel a.buttonly.delete {
-		border-color: #ff5157;
-	}
-	
-	.invalid input[type="text"],
-	.invalid input[type="textarea"] {
-		border-color:  #ffe5e6;
 	}
 	
 	.messages .message.problem {
