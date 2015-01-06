@@ -185,7 +185,12 @@ body,
 }
 
 
-/* icon font sizes - convert to pixels so IE doesn't mess up */
+/* all icon font sizes - convert to pixels xince IE 
+   does not correctly calculate em's in befores and afters */
+
+.map .requirements-list li:before {
+	font-size: 15px;
+}
 
 .instruction .item.targets .sub .mini-panel.targets input:after,
 .group.additional .sub .plainLabel input:after,
@@ -261,7 +266,7 @@ th.sorting:after {
 }
 
 .map-drawer .tabs-control a.collapse:before {
-	font-size: 46px;
+	font-size: 42px;
 }
 
 .action.messages .message .im:before {
@@ -324,7 +329,8 @@ header .nav li.messages .im:before {
 .Tickets .dash td.status span:before,
 .map .nav.nav-tabs,
 .map .tabs-control,
-.map .tab-pane .ticketlink {
+.map .tab-pane .ticketlink,
+.map .tab-pane .requirements-list li {
 	line-height: 1em; 
 }
 
@@ -337,7 +343,6 @@ header .nav li.messages .im:before {
 .set-repeats .summary-dynamic,
 .tabnav li .dropdown .dropdown-menu > li > a,
 .dash .table-list table td,
-.map .tab-pane .requirements-list li,
 .map .tab-pane .description,
 .map .tab-pane .address,
 .button-holder a,
@@ -922,7 +927,9 @@ a.attach .im,
 .bigButton,
 .bigButton:after,
 .Ticket .instruction .divider:before,
-.Ticket .instruction.enter-time .header .ti .copy {
+.Ticket .instruction.enter-time .header .ti .copy,
+.map .nav-tabs > li > a:before,
+.map .tab-pane .requirements-list li {
 	position: relative;
 }
 
@@ -946,7 +953,8 @@ a.page-action span.im,
 .Ticket .completion-bar.complete .text:before,
 .hint.widget-panel .im.icon-shield,
 .Ticket .instruction.complete .ti.type:before,
-.attachment.image .im {
+.attachment.image .im,
+.map .requirements-list li:before {
 	position: absolute;
 }
 
@@ -1388,6 +1396,14 @@ input[type="radio"]:checked:after,
 	content: ' ';
 }
 
+.map .requirements-list li:before {
+	left: 0;
+}
+
+.map .nav-tabs > li > a.requirements:before {
+	top: 3px;
+}
+
 .icon-buttons a:before {
 	top: 7px;
 }
@@ -1493,10 +1509,6 @@ input[type="radio"]:checked:after,
 	margin-right: -5px;
 		left: -5px;
 		top: 9px;
-}
-
-.map .requirements-list li:before {
-	margin: 0 2px 0 -2px;
 }
 
 .instruction.duplicate .duplicating-message .icon-warning {
@@ -4140,7 +4152,7 @@ td.table-actions a {
 }
 
 .map .nav-tabs > li > a {
-	padding: 5px 7px 2px 7px;
+	padding: 3px 3px 0 2px;
 }
 
 .map a.collapse {
@@ -4164,6 +4176,7 @@ td.table-actions a {
 
 .map .requirements-list li {
 	margin: .4em 0;
+	padding-left: 18px;
 }
 
 .map .tab-pane .mini {

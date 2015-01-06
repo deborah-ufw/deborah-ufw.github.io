@@ -147,6 +147,7 @@ a.bigButton.photo:before,
 .icon-magnify:before {
 	content: "\e60e";
 }
+.map .nav-tabs > li > a.actions:before,
 .icon-lightning-strike:before {
 	content: "\e60d";
 }
@@ -184,7 +185,6 @@ a.bigButton.photo:before,
 .icon-comment:before {
 	content: "\e606";
 }
-.map .nav-tabs > li > a.actions:before,
 .icon-lightning-solid:before {
 	content: "\e607";
 }
@@ -277,6 +277,7 @@ a.bigButton.photo:before,
 .icon-map-toggle:before {
 	content: "\e637";
 }
+.map .nav-tabs > li > a.requirements:before,
 .icon-checkmark-box:before {
 	content: "\e638";
 }

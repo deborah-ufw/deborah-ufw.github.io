@@ -5,6 +5,11 @@
 	display: none;
 }
 
+.table-list,
+.choose-dates,
+.tab-pane .detail {
+	display: none;
+}
 
 
 

@@ -43,6 +43,9 @@
 <link href="brand/gigwalk/css/fonts-gigwalk.css" media="screen" rel="stylesheet" />
 <link href="brand/gigwalk/css/gigwalk.css" media="screen" rel="stylesheet" />
 
+<link href="css/working.css" media="screen" rel="stylesheet" />
+
+
 <!-- Manage IE
 ================================================== -->
 
@@ -912,6 +915,19 @@
               <li class="active">
                 <a href="#info" class="info" role="tab" data-toggle="tab"></a>
               </li>
+              <!-- ---------------------- NEW REQUIREMENTS TAB -------------------- -->
+              <!--
+                     - Both worker and admin can see the tab
+                        * "requirements" link on the info tab is only visible to worker
+                     - if no requirements OR if Ticket count > 1
+                       1. don't show the "requirements" tab 
+                       2. don't show the "requirements" link on the info tab
+                                                                                    -->
+              <!-- ---------------------------------------------------------------- -->
+              <li>
+                <a href="#requirements" class="requirements" role="tab" data-toggle="tab"></a>
+              </li>
+              
               <li>
                 <!-- Annotation 69 -----------------------------------------
                        - shows for worker only when store count = 1
@@ -952,18 +968,15 @@
                   Actions will focus on the client relationship management and item purchasing. Check on product availability.
                 </div>
                 
-                <!-- Annotation 42, 88 
+                <!-- Annotation 42, 88 UPDATED 
                    ---------------------------------------  LOGIC   ---------------------------------------  
-                    - if Ticket count > 1, do not show "requirements" toggle link
-                    - add class "worker" to the toggle
+                    - add class "worker" to the toggle link
+                    - if no requirements OR if Ticket count > 1
+                       1. don't show the "requirements" tab 
+                       2. don't show this "requirements" link on the info tab
                    ------------------------------------------------------------------------------------- -->
-                <a class="requirements worker" href="javascript:;">Requirements <span class="cue">( + )</span></a>
-                <div class="requirements-list">
-                  <ul>
-                    <li>3+ megapixel camera</li>
-                    <li>Wal-mart certification</li>
-                  </ul>
-                </div>
+                <a class="requirements worker" href="javascript:;"><span class="number">8</span> Requirements</a>
+                
                 
                 <!-- Annotation 44, 89 
                    ---------------------------------------  LOGIC   ---------------------------------------  
@@ -1112,7 +1125,51 @@
                 
               </div><!-- end info tab -->
               
-              <!-- Annotation 37, 69 - directions tab does not show if Stores > 1 -->
+              <!-- ---------------------- NEW REQUIREMENTS TAB -------------------- -->
+              <!--
+                     - Both worker and admin can see the tab
+                        * "requirements" link on the info tab is only visible to worker
+                     - if no requirements OR if Ticket count > 1
+                       1. don't show the "requirements" tab  
+                       2. don't show the "requirements" link on the info tab
+                                                                                    -->
+              <!-- ---------------------------------------------------------------- -->
+              <div class="tab-pane requirements" id="requirements"><!-- requirements tab -->
+              
+                <a class="ticketlink" href="javascript:;">
+                  <span class="im icon-ticket"></span># Tickets (or store name) 
+                </a>
+                
+                <div class="requirements-list">
+                  <ul>
+                    <li>3+ megapixel camera</li>
+                    <li>Wal-mart certification</li>
+                    <li>A really long, overflowing requirement that takes 2 lines</li>
+                    <li>Snickers bar</li>
+                    <li>Donut</li>
+                    <li>Magic ring</li>
+                    <li>Light sabre</li>
+                    <li>Transporter</li>
+                  </ul>
+                </div>
+              
+                <div class="blocked-day detail">
+                  <div class="im icon-vacation"></div>
+                  <div class="copy">
+                     It looks like today is blocked. Starting the ticket will change today to a work day.
+                  </div>
+                  <div class="copy">   
+                    Change today to a work day?
+                  </div>
+                  <div class="button-holder">
+                    <a class="cancel" href="javascript:;">No</a>
+                    <a class="buttonly" href="javascript:;">Yes</a>
+                  </div>
+                </div>
+                
+                <!-- Annotation 117 - same functionality as on the "info" tab for Jimmy + Store / Ticket count + Ticket state -->
+                <a class="buttonly main" href="javascript:;">Main action</a>
+              </div><!-- end requirements tab -->
               
               <div class="tab-pane directions worker" id="directions"><!-- directions tab - Jimmy only -->
               
