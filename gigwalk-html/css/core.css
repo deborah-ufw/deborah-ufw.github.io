@@ -260,12 +260,9 @@ th.sorting:after {
 	font-size: 39px;
 }
 
-.filters-holder .view a .im:before {
-	font-size: 40px;
-}
-
+.filters-holder .view a .im:before,
 .filter.dates .im:before {
-	font-size: 42px;
+	font-size: 40px;
 }
 
 .map-drawer .tabs-control a.collapse:before {
@@ -3790,8 +3787,7 @@ a.iconly:before {
 }
 
 .filter.dates {
-	padding: 0 .5em;
-		top: 2px;
+	padding: .1em .5em;
 }
 
 .filter.dropdown {
