@@ -157,7 +157,10 @@ body,
 	font-size: 1.4em;
 }
 
-.map .tab-pane .ticketlink,
+.map .tab-pane .ticketlink {
+	font-size: 1.5em;
+}
+
 .instruction .duplicating-message .im.icon-warning {
 	font-size: 1.7em;
 }
