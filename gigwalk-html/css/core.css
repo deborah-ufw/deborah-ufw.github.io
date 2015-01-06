@@ -344,7 +344,8 @@ header .nav li.messages .im:before {
 .Tickets .table-list .action.panel .warning,
 .map .tab-pane .warning,
 .calendar-month .work,
-.calendar-day a.get-more {
+.calendar-day a.get-more,
+.Ticket .instruction .header .controls .ti {
 	line-height: 1.2em;
 }
 
@@ -598,7 +599,8 @@ a.disabled,
 .Ticket .barcode .answer:after,
 .Ticket .barcode .added:before,
 .Ticket .barcode .added:after,
-.Ticket .instruction.enter-time .answers .answer:after {
+.Ticket .instruction.enter-time .answers .answer:after,
+.instruction.view-mode .type:before {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -624,7 +626,8 @@ nav.subnav ul {
 .completion-bar,
 .Ticket .instruction.photo .added .icon-buttons,
 .Ticket .instruction.task .photo .added .icon-buttons,
-.Ticket .instruction.task .images .attachment.image {
+.Ticket .instruction.task .images .attachment.image,
+.instruction.view-mode .instruction-content .ti {
 	display: table;
 }
 
@@ -753,7 +756,8 @@ a.page-action,
 .completion-bar .text,
 .Ticket .instruction.edit-mode.complete .viewing.icon-button,
 .Ticket .instruction .divider:before,
-.Ticket .barcode .added .count {
+.Ticket .barcode .added .count,
+.instruction.edit-mode.complete .viewing.icon-buttons {
 	display: inline-block;
 	float: right;
 }
@@ -965,7 +969,8 @@ header .navbar-collapse.in {
 .completion-bar .completion,
 .answerButton,
 .Ticket .instruction.photo .added .icon-buttons,
-.Ticket .instruction.task .photo .added .icon-buttons {
+.Ticket .instruction.task .photo .added .icon-buttons,
+.instruction.view-mode .instruction-content .ti {
 	width: 100%;
 }
 
@@ -1054,8 +1059,9 @@ a.page-action,
 .user-image,
 .comments-wrapper,
 .Ticket .barcode .manual-entry input,
-	.Ticket .barcode .wrapper .manual-entry a,
-	.Ticket .instruction.task .type.barcode .wrapper .manual-entry a {
+.Ticket .barcode .wrapper .manual-entry a,
+.Ticket .instruction.task .type.barcode .wrapper .manual-entry a,
+.Projects .header .controls .ti {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
@@ -1115,10 +1121,10 @@ select,
 	background: rgba(255, 255, 255, .2);
 }
 
-.Ticket .instruction.required .arrow, 
-.Ticket .instruction.required .header .controls .ti,
-.Ticket .instruction .arrow, 
-.Ticket .instruction .header .controls .ti {
+.instruction.required .arrow, 
+.instruction.required .header .controls .ti,
+.instruction .arrow, 
+.instruction .header .controls .ti {
 	color: rgba(255, 255, 255, .4);
 }
 
@@ -1127,10 +1133,6 @@ select,
 .tabnav li.buttonly:hover,
 .tabnav li.buttonly:focus {
 	background: rgba(255, 255, 255, .0);
-}
-
-.instruction .header .controls {
-	 background: rgba(0, 0, 0, .17);
 }
 
 .icon-dragger {
@@ -1386,6 +1388,14 @@ input[type="radio"]:checked:after,
 	content: ' ';
 }
 
+.icon-buttons a:before {
+	top: 7px;
+}
+
+.icon-buttons a.icon-edit:before {
+	top: 8px;
+}
+
 .Ticket .instruction.enter-time .header .icon-time {
 	top: -10px;
 	left: -5px;
@@ -1394,10 +1404,6 @@ input[type="radio"]:checked:after,
 .Ticket .instruction.complete .ti.type:before {
 	top: -4px;
 	left: -4px; 
-}
-
-.Ticket .instruction.complete .header .actions .icon-buttons a {
-	top: 5px;
 }
 
 .nav li.messages.buttonly,
@@ -1699,6 +1705,7 @@ a.page-action,
 	border: 1px solid;
 }
 
+.instruction .actions .icon-buttons a,
 header .nav li,
 .filters-choices .choice .close {
 	border-left: 1px solid;
@@ -1748,7 +1755,6 @@ header .nav li,
 	border-right: 1px solid rgba(0, 0, 0, .5);
 }
 
-.viewing.icon-buttons a,
 .tabnav li.buttonly a,
 .tabnav .btn.btn-default.dropdown-toggle {
 	border-left: 1px solid rgba(255, 255, 255, .3);
@@ -2983,9 +2989,7 @@ div.main.wrapper + div.inner {
 		right: .7em;
 }
 
-.instruction {
-	margin-bottom: 1.5em;
-}
+/* put heredeb */
 
 .instruction-content .inner {
 	padding: 1.2em 1em 1em 1em;
@@ -3043,17 +3047,13 @@ div.main.wrapper + div.inner {
 	padding: .3em 1.5em;
 }
 
-instruction .viewing.icon-buttons {
-	min-height: 45px;
+.instruction .viewing.icon-buttons {
+	margin-top: -1px;
 }
 
 .icon-buttons a {
 	margin-right: -5px;
 	padding: .5em .8em .8em .8em;
-}
-
-.icon-buttons a:before {
-	top: 4px;
 }
 
 .Ticket .instruction.photo .icon-buttons a:before,
@@ -3141,6 +3141,7 @@ instruction .viewing.icon-buttons {
 
 
 /* add question */
+
 
 .instruction.view-mode .type {
 	margin: 1em -1em 1em 1em;
@@ -3630,7 +3631,7 @@ a.iconly:before {
 	}
 	
 	.header .actions .ti {
-		border-bottom: 1px solid rgba(255, 255, 255, .3);
+		border-bottom: 1px solid rgba(255, 255, 255, .5);
 	}
 	
 	.instruction-footer .item.required {
@@ -6053,7 +6054,8 @@ a.page-action.delete-button span.im {
 }
 
 .completion-bar .percent-complete {
-	height: 1.7em;
+	margin: -1px 0;
+	height: 1.75em;
 }
 
 .completion-bar .text {
@@ -6159,7 +6161,9 @@ a.page-action.delete-button span.im {
 }
 
 .ticket-instructions .widget-panel,
-.ticket-instructions .submit {
+.ticket-instructions .submit,
+.instructions .instruction,
+.instructions .expander {
 	margin: 0 auto 1.5em auto;
 	max-width: 635px;
 	width: 100%;
@@ -6190,8 +6194,13 @@ a.page-action.delete-button span.im {
 	padding-bottom: .6em;
 }
 
-.Ticket .instruction .optional:before {
+.Ticket .instruction .optional:before,
+.Projects .header .controls .ti:before {
 	content: 'Optional ';
+}
+
+.Projects .instruction.required .header .controls .ti:before  {
+	content: ' ';
 }
 
 .Ticket .header .actions .ti {

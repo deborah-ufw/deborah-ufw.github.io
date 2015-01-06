@@ -320,23 +320,7 @@ html, body {
 	.instructions .duplicating-message,
 	.instructions .duplicating-message a .im,
 	a.page-action.delete-button,
-	.page-action-panel a.buttonly.delete {
-		color: #ec383d;
-	}
-	
-	a.page-action.delete-button,
 	.page-action-panel a.buttonly.delete,
-	.invalid input[type="text"],
-	.invalid input[type="textarea"] {
-		border-color: #ec383d;
-	}
-	
-	.instruction.incomplete .header,
-	.instruction.required.incomplete .header,
-	.invalid .btn.btn-default.dropdown-toggle {
-		background: #ff797e;
-	}
-	
 	.pin.expired:after {
 		color: #ff5157;
 	}
@@ -345,9 +329,24 @@ html, body {
 		background: #ff5157;
 	}
 	
+	a.page-action.delete-button,
+	.page-action-panel a.buttonly.delete,
+	.invalid input[type="text"],
+	.invalid input[type="textarea"] {
+		border-color: #ff5157;
+	}
+	
+	.instruction.incomplete .header,
+	.instruction.required.incomplete .header,
+	.invalid .btn.btn-default.dropdown-toggle {
+		background: #ff797e;
+	}
+	
 	.messages .message.problem {
 		background: #ffe5e6;
 	}
+	
+	/* highlight */
 	
 	.instructions .duplicating-message,
 	.hint.widget-panel {
@@ -381,7 +380,7 @@ html, body {
 	}
 	
 	.calendar-day.today .store .header,
-	.Ticket .instruction .header .actions,
+	.instruction .header .actions,
 	.bigButton:hover,
 	.bigButton:focus,
 	.Ticket .instruction.photo .icon-buttons a:hover,
@@ -400,10 +399,10 @@ html, body {
 		border-color: rgba(64, 145, 230, 1);
 	}
 	
-	.Ticket .instruction .header .actions,
-	.Ticket .instruction .header .actions .icon-buttons a,
-	.Ticket .instruction .header .actions .icon-buttons a:hover,
-	.Ticket .instruction .header .actions .icon-buttons a:focus {
+	.instruction .header .actions,
+	.instruction .header .actions .icon-buttons a,
+	.instruction .header .actions .icon-buttons a:hover,
+	.instruction .header .actions .icon-buttons a:focus {
 		color: #234871;
 	}
 	
@@ -626,12 +625,16 @@ html, body {
 	
 	.key.unassigned:before,
 	.completion-bar .text,
-	.Ticket .instruction .header .controls {
+	.instruction .header .controls {
 		background: #256aa8;
 	}
 	
 	.completion-bar {
 		border-color: #256aa8;
+	}
+	
+	.instruction .actions .icon-buttons a {
+		border-color: rgba(36, 105, 167, .3);
 	}
 	
 	.completion-bar .percent-complete {
@@ -720,17 +723,11 @@ html, body {
 		color: #07a985;
 	}
 	
-	.instruction .arrow,
-	.instruction .header .controls .ti {
-		color: #39af95;
-	}
-	
 	ul.dropdown-menu li.header,
 	input.supercheck:checked:after,
 	input[type="checkbox"]:checked:after,
 	.primary.actions a,
 	.instruction-footer .icon-checkmark,
-	.instruction .header,
 	.key.scheduled:before,
 	.choose-dates .actions a.buttonly,
 	.page-action-panel .actions a.buttonly,
@@ -789,21 +786,16 @@ html, body {
 	
 	/* purple */
 	
-	.instruction.required .arrow,
-	.instruction.required .controls .ti {
-		color: #ae7dbc;
-	}
 	
 	.pin.unscheduled:after {
 		color: #9a5cab;
 	}
 	
-	.instruction.required .header,
 	.key.unscheduled:before {
 		background: #9a5cab;
 	}
 	
-	/* yellow */
+	/* yellow (gold) */
 	
 	.Tickets .dash td.status span.started.paused:before,
 	.pin.paused:after {
