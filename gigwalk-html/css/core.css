@@ -261,7 +261,8 @@ th.sorting:after {
 }
 
 .filters-holder .view a .im:before,
-.filter.dates .im:before {
+.filter.dates .im:before,
+.map .nav-tabs > li > a.requirements:before {
 	font-size: 40px;
 }
 
@@ -1401,7 +1402,8 @@ input[type="radio"]:checked:after,
 }
 
 .map .nav-tabs > li > a.requirements:before {
-	top: 3px;
+	top: 4px;
+	left: 1px;
 }
 
 .icon-buttons a:before {
