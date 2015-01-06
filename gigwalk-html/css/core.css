@@ -229,7 +229,8 @@ a[href*="tel"]:before {
 	font-size: 32px;
 }
 
-th.sorting:after {
+th.sorting:after,
+.map .nav-tabs > li > a {
 	font-size: 34px;
 }
 
@@ -243,7 +244,8 @@ th.sorting:after {
 .section-actions a.iconButton:before,
 .filter.search .icon-search:before,
 .Ticket .instruction.complete .ti.type:before,
-.tabnav .icon-pencil-box:before {
+.tabnav .icon-pencil-box:before,
+.map-drawer .tabs-control a.collapse:before {
 	font-size: 36px;
 }
 
@@ -256,18 +258,9 @@ th.sorting:after {
 	font-size: 38px;
 }
 
-.map .nav.nav-tabs {
-	font-size: 39px;
-}
-
 .filters-holder .view a .im:before,
-.filter.dates .im:before,
-.map .nav-tabs > li > a.requirements:before {
+.filter.dates .im:before {
 	font-size: 40px;
-}
-
-.map-drawer .tabs-control a.collapse:before {
-	font-size: 42px;
 }
 
 .action.messages .message .im:before {
@@ -1395,6 +1388,10 @@ input[type="radio"]:after,
 input[type="radio"]:checked:after,
 .map .pin:before {
 	content: ' ';
+} 
+
+.map .nav-tabs > li > a:before {
+	top: 1px;
 }
 
 .map .requirements-list li:before {
@@ -4153,11 +4150,11 @@ td.table-actions a {
 }
 
 .map .nav-tabs > li > a {
-	padding: 3px 3px 0 2px;
+	padding: 3px 5px 0 3px;
 }
 
 .map a.collapse {
-	padding: 7px 10px 8px 5px; 
+	padding: 7px 10px 7px 5px; 
 }
 
 .map .tab-content {
