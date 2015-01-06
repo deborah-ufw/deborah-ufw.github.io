@@ -251,6 +251,7 @@ th.sorting:after {
 	font-size: 37px;
 }
 
+.map .ticketlink .icon-ticket:before,
 .im.icon-pencil-box:before {
 	font-size: 38px;
 }
@@ -259,7 +260,6 @@ th.sorting:after {
 	font-size: 39px;
 }
 
-.map .ticketlink .icon-ticket:before,
 .filters-holder .view a .im:before {
 	font-size: 40px;
 }
