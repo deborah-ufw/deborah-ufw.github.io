@@ -599,7 +599,8 @@ a.disabled,
 .Ticket .barcode .added:before,
 .Ticket .barcode .added:after,
 .Ticket .instruction.enter-time .answers .answer:after,
-.instruction.view-mode .type:before {
+.instruction.view-mode .type:before,
+.instruction .actions .icon-buttons a.icon-edit:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -923,7 +924,8 @@ a.attach .im,
 .Ticket .instruction .divider:before,
 .Ticket .instruction.enter-time .header .ti .copy,
 .map .nav-tabs > li > a:before,
-.map .tab-pane .requirements-list li {
+.map .tab-pane .requirements-list li,
+.instruction .header .actions {
 	position: relative;
 }
 
@@ -948,7 +950,8 @@ a.page-action span.im,
 .hint.widget-panel .im.icon-shield,
 .Ticket .instruction.complete .ti.type:before,
 .attachment.image .im,
-.map .requirements-list li:before {
+.map .requirements-list li:before,
+.Ticket .instruction .header .actions .icon-buttons {
 	position: absolute;
 }
 
@@ -1409,6 +1412,11 @@ input[type="radio"]:checked:after,
 
 .icon-buttons a.icon-edit:before {
 	top: 8px;
+}
+
+.Ticket .instruction .header .actions .icon-buttons {
+	top: 0;
+	right: 0;
 }
 
 .Ticket .instruction.enter-time .header .icon-time {
@@ -3058,8 +3066,9 @@ div.main.wrapper + div.inner {
 	padding: .3em 1.5em;
 }
 
-.instruction .viewing.icon-buttons {
+.instruction .header .actions .icon-buttons {
 	margin-top: -1px;
+	max-height: 46px;
 }
 
 .icon-buttons a {
@@ -3739,10 +3748,6 @@ a.iconly:before {
 	.instruction .primary.actions {
 		margin-top: 1em;
 		margin-bottom: 1em;
-	}
-	
-	.instruction .header .actions .icon-buttons {
-		max-height: 44px;
 	}
 	
 	.instruction-footer .item.count {
