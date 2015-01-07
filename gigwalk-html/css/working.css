@@ -5,9 +5,7 @@
 	display: none;
 }
 
-.table-list,
-.choose-dates,
-.tab-pane .detail {
+.choose-dates {
 	display: none;
 }
 
