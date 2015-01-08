@@ -318,6 +318,7 @@ header .nav li.messages .im:before {
 	line-height: .9em;
 }
 
+.table-list table td:before,
 .sidenav .user-name,
 .filters-holder .view a .im,
 .iconButton:before,
@@ -4855,6 +4856,7 @@ td.table-actions a {
 	
 	.admin .Tickets .table-list > table th, 
 	.admin .Tickets .table-list > table td {
+		padding-top: 0;
 		padding-bottom: 0;
 		padding-left: 45px;
 	}
@@ -4864,7 +4866,7 @@ td.table-actions a {
 	}
 	 
 	.admin .Tickets .table-list > table td {
-		font-size: 1.4em;
+		font-size: 1.3em;
 		padding-top: 10px;
 		display: block;
 		float: left;
@@ -4872,11 +4874,15 @@ td.table-actions a {
 	}
 	
 	.admin .Tickets .table-list > table th {
-		font-size: 1.3em;
-		margin-bottom: .3em;
+		font-size: 1.2em;
+		padding-bottom: 0;
 		display: block;
 		float: left;
 		width: 100%;
+	}
+	
+	.admin .Tickets .table-list > table th.sorting:after {
+		font-size: 30px;
 	}
 	
 	.admin .Tickets .table-list > table thead {
@@ -4909,7 +4915,7 @@ td.table-actions a {
 	
 	.admin .Tickets .table-list table td.status {  
 		font-size: 1.4em;
-		margin-bottom: 1em;
+		margin-bottom: .5em;
 	}
 	
 	.admin .table-list > table tr.even {
@@ -4925,7 +4931,6 @@ td.table-actions a {
 		padding: 8px 0 15px 0;
 		width: 100%;
 		background: #f7f7f7;
-		border-top: 1px solid rgba(0, 0, 0, .1);
 	}
 	
 	.admin .Tickets .table-list .controls .actions a {
@@ -4977,7 +4982,7 @@ td.table-actions a {
 	.admin .Tickets .table-list table td.assigned:before,
 	.admin .Tickets .table-list table td.due:before,
 	.admin .Tickets .table-list table td.status:before {
-		color: #bcbcbc;
+		color: #999999;
 		font-size: .8em;
 		display: block;
 	}
@@ -5106,7 +5111,6 @@ td.table-actions a {
 		padding-bottom: 5px;
 		display: block;
 		width: 100%;
-		border-bottom: 1px solid rgba(0, 0, 0, .1);
 	}
 	
 	.worker .Tickets .table-list .controls .actions {
@@ -5122,12 +5126,13 @@ td.table-actions a {
 	
 	.worker .Tickets .table-list table th, 
 	.worker .Tickets .table-list table td {
+		padding-top: 0;
 		padding-bottom: 0;
 		padding-left: 45px;
 	}
 	 
 	.worker .Tickets .table-list table td {
-		font-size: 1.4em;
+		font-size: 1.3em;
 		padding-top: 10px;
 		display: block;
 		float: left;
@@ -5135,11 +5140,15 @@ td.table-actions a {
 	}
 	
 	.worker .Tickets .table-list > table th {
-		font-size: 1.3em;
-		margin-bottom: .3em;
+		font-size: 1.2em;
+		padding-bottom: 0;
 		display: block;
 		float: left;
 		width: 100%;
+	}
+	
+	.worker .Tickets .table-list > table th.sorting:after {
+		font-size: 30px;
 	}
 	
 	.worker .Tickets .table-list table thead {
@@ -5178,7 +5187,7 @@ td.table-actions a {
 	
 	.worker .Tickets .table-list table td.status {  
 		font-size: 1.4em;
-		margin-bottom: 1em;
+		margin-bottom: .5em;
 	}
 	
 	.worker .table-list table tr.even {
@@ -5246,7 +5255,7 @@ td.table-actions a {
 	.worker .Tickets .table-list table td.due:before,
 	.worker .Tickets .table-list table td.estimated:before,
 	.worker .Tickets .table-list table td.status:before {
-		color: #bcbcbc;
+		color: #999999;
 		font-size: .8em;
 		display: block;
 	}
