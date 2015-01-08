@@ -356,6 +356,11 @@ html, body {
 	
 	/* blues */
 	
+	.table-list table table td {
+		background: rgba(64, 145, 230, .05);	
+	}
+	
+	.table-list tr.shown td,
 	.calendar-day a.get-more,
 	.answerButton,
 	.bigButton,
@@ -490,7 +495,6 @@ html, body {
 	.filters-choices .choice .close,
 	.pagination .previous,
 	.pagination .next,
-	.table-list tr.shown td,
 	a.new-button:hover,
 	a.new-button:focus {
 		background-color: #f2f7fd;
@@ -894,6 +898,13 @@ header .nav .number  {
 
 @media (max-width: 825px) {
 	.worker .Tickets .table-list th {
+		font-family: Helvetica-Neue-Bold;
+		font-weight: normal !important;
+	}
+}
+
+@media (max-width: 800px) {
+	.Groups .table-list th {
 		font-family: Helvetica-Neue-Bold;
 		font-weight: normal !important;
 	}
