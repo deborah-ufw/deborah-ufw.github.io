@@ -48,7 +48,8 @@ header nav .user-edit,
 .Groups .table-list table .org-name,
 .calendar .calendar-month .date-num:after,
 .Ticket .completion-bar.complete span.percent-text,
-.Ticket .instruction.required .optional {
+.Ticket .instruction.required .optional,
+.picker-switch.accordion-toggle {
 	display: none;
 }
 
@@ -1251,14 +1252,20 @@ textarea.disabled,
 .search.disabled input:focus,
 .instruction .item.targets .sub,
 .datepicker td.day.disabled,
+.comments .new .attachment {
+	background-color: #efefef;
+}
+
 .datepicker td.blocked,
 .datepicker td.active.blocked,
 .datepicker td.blocked:hover,
 .datepicker td.active.blocked:hover,
 .datepicker td.blocked:focus,
+.datepiacker td.active.blocked:hover,
 .datepiacker td.active.blocked:focus,
-.comments .new .attachment {
-	background-color: #efefef;
+.datepiacker td.old.disabled.blocked:hover,
+.datepiacker td.old.disabled.blocked:focus { 
+	background-color: #d9d9d9;
 }
 
 .search.disabled {
@@ -1302,7 +1309,8 @@ input[type="checkbox"]:after,
 input[type="radio"]:after,
 .instructions .item .actions a.buttonly,
 .filter.dropdown .btn.btn-default.dropdown-toggle,
-a.linkly.disabled {
+a.linkly.disabled,
+.datepicker th.disabled {
 	background-color: #ffffff;
 }
 
@@ -1729,7 +1737,6 @@ header .nav li,
 
 .table-list table td.expanded {
 	border-top: 1px solid rgba(0, 0, 0, 0);
-	border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 
 .table-list .expanded table tr {
@@ -1758,7 +1765,8 @@ header .nav li,
 .table-list tr,
 .Ticket .instruction.task .widget-panel-content .inner > .ti,
 .Ticket .barcode .answer .added,
-.Ticket .instruction.task .images {
+.Ticket .instruction.task .images,
+.table-list table td.expanded {
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -3793,7 +3801,7 @@ a.iconly:before {
 }
 
 .filters-holder .filters .filter {
-	margin-left: 8px;
+	margin-right: 8px;
 }
 
 .filter.dates {
@@ -4384,19 +4392,18 @@ td.table-actions a {
 		padding-top: 0;
 	}
 	
-	.admin .Tickets .dash > .filters-choices .choice, 
+	.admin .Tickets .dash > .filters-choices .choice {
+		height: 38px;	
+	}
+	
 	.admin .Tickets .dash > .filters-choices .choice .close {
-	height: 36px;
+		height: 36px;
 	}
 		
 	.admin .Tickets .dash > .filters-choices .choice .value {
 		font-size: 1.1em;
 		padding-left: .8em;
 		padding-right: 3.5em;
-	}
-	
-	.admin .Tickets .dash > .filters-choices .choice .im {
-		font-size: .9em;
 	}
 	
 }
@@ -4515,23 +4522,22 @@ td.table-actions a {
 	
 	.admin .Tickets .filters .wrapper {
 		margin-top: -5px;
-		margin-left: -130px;
+		margin-left: -136px;
 		display: block;
 		clear: both;
 	}
 	
 	.admin .Tickets .dash > .filters-holder {
-		 margin: -14px -10px 0 -10px;
+		 margin: -14px 0 0 0;
 		 padding: 10px 0 0 10px;
 	}
 	
 	.admin .Tickets .dash > .filters-choices {
-		margin: 0 -10px;
 		padding: 0 10px;
 	}
 	
 	.admin .Tickets .filters .filter.search {
-		margin-right: -3px;
+		margin-right: 5px;
 		margin-left: 0;
 	}
 	
@@ -4670,12 +4676,11 @@ td.table-actions a {
 @media (max-width: 560px) {
 	
 	.worker .Tickets .filters-holder {
-		 margin: -14px -10px 0 -10px;
+		 margin: -14px 0 0 0;
 		 padding: 10px 0 0 10px;
 	}
 	
 	.worker .Tickets .filters-choices {
-		margin: 0 -10px;
 		padding: 0 10px;
 	}
 	
@@ -4687,13 +4692,13 @@ td.table-actions a {
 	
 	.worker .Tickets .filters .wrapper {
 		margin-top: -5px;
-		margin-left: -130px;
+		margin-left: -136px;
 		display: block;
 		clear: both;
 	}
 	
 	.worker .Tickets .filters .filter.search {
-		margin-right: -3px;
+		margin-right: 5px;
 	}
 	
 	.worker .Tickets .filters .filter.search input {
@@ -4912,7 +4917,6 @@ td.table-actions a {
 	}
 	
 	.admin .Tickets .table-list .summary {
-		font-size: 1.3em;
 		border-bottom: 0px solid #ffffff;
 	}
 	
@@ -4989,11 +4993,6 @@ td.table-actions a {
 	}
 	.admin .Tickets .table-list table td.status:before {
 		content: 'Status';
-	}
-	
-	.admin .Tickets .dash > .filters-choices .choice,
-	.admin .Tickets .dash > .filters-choices .choice .close {
-		height: 36px;
 	}
 	
 }
