@@ -196,6 +196,10 @@ body,
 	font-size: 15px;
 }
 
+.editable:after {
+	font-size: 18px;
+}
+
 .instruction .item.targets .sub .mini-panel.targets input:after,
 .group.additional .sub .plainLabel input:after,
 .checker .supercheck:after, 
@@ -318,7 +322,6 @@ header .nav li.messages .im:before {
 	line-height: .9em;
 }
 
-.table-list table td:before,
 .sidenav .user-name,
 .filters-holder .view a .im,
 .iconButton:before,
@@ -331,6 +334,7 @@ header .nav li.messages .im:before {
 	line-height: 1em; 
 }
 
+.table-list table td:before,
 .group .sub .selected-item,
 .instruction .sub .selected-item,
 .description .value,
@@ -1148,10 +1152,6 @@ select,
 	 color: rgba(0, 0, 0, .25);
 }
 
-.Tickets .dash td.status span:before {
-	color: #dedede;
-}
-
 .ticket-summary .widget-panel .controls,
 .comments .new .attachment {
 	color: #6e6e6e;
@@ -1350,6 +1350,10 @@ a.buttonly.cancel.disabled:focus {
 	border-radius: 0;
 }
 
+.Tickets .dash td.status span:before {
+	color: #cccccc;
+}
+
 .map .tab-pane a.buttonly.main.disabled,
 .map .tab-pane a.buttonly.main.disabled:hover,
 .map .tab-pane a.buttonly.main.disabled:focus,
@@ -1404,6 +1408,10 @@ input[type="radio"]:checked:after,
 	content: ' ';
 } 
 
+.filters .icon-calendar {
+	left: 1px;
+}
+
 .map .nav-tabs > li > a:before {
 	top: 1px;
 }
@@ -1431,7 +1439,7 @@ input[type="radio"]:checked:after,
 }
 
 .Ticket .instruction.enter-time .header .icon-time {
-	top: -10px;
+	top: -8px;
 	left: -5px;
 }
 
@@ -2328,7 +2336,7 @@ div.main.wrapper + div.inner {
 	}
 	
 	.nav-active-holder:after {
-		font-size: 1.2em;
+		font-size: 24px;
 		vertical-align: middle;
 		color: rgba(255, 255, 255, .3);
 	}
@@ -2552,7 +2560,7 @@ div.main.wrapper + div.inner {
 	
 }
 
-@media (min-width: 721px) and (max-width: 825px) {
+@media (min-width: 721px) and (max-width: 830px) {
 	
 	 .Projects .tabnav li a,
 	 .admin .Tickets .tabnav li a {
@@ -2728,7 +2736,7 @@ div.main.wrapper + div.inner {
 }
 
 .ti.editable:after {
-	font-size: .8em;
+	font-size: 22px;
 	top: 2px;
 }
 
@@ -2812,10 +2820,6 @@ div.main.wrapper + div.inner {
 	font-size: .9em;
 }
 
-.set-repeats .dropdown .dropdown-toggle .caret {
-	margin-top: -2px;
-}
-
 .set-repeats .radios input[type="text"].ends-after {
 	width: 4em;
 }
@@ -2851,7 +2855,6 @@ div.main.wrapper + div.inner {
 }
 
 .description .value {
-	font-size: .95em;
 	float: none;
 		left: 0;
 }
@@ -3554,11 +3557,11 @@ a.iconly:before {
 	}
 	
 	.set-repeats .every {
-		margin-top: 1.5em;
+		margin-top: .5em;
 	}
 	
 	.set-repeats .ends {
-		margin: 1.5em 0;
+		margin: .5em 0;
 	}
 	
 	.set-repeats .every .plainLabel, 
@@ -3571,10 +3574,6 @@ a.iconly:before {
 		margin-right: 5px;
 		float: left;
 		left: 0;
-	}
-	
-	.primary.actions a.delete {
-		padding: 2em .3em 2em 0;
 	}
 	
 	.instruction-footer .item.count {
@@ -3608,15 +3607,11 @@ a.iconly:before {
 	}
 
 	.section.title .navly {
-		font-size: .8em;
+		font-size: 1em;
 	  display: block;
 	}
 	
-	.section-controls .section.title .navly {
-		font-size: 1em;
-	}
-	
-	.section-controls .section.title {
+	.section.title {
 		font-size: 1.4em;
 	}
 	
@@ -3649,12 +3644,6 @@ a.iconly:before {
 	
 	.item.numeric .sub .more-info .btn.btn-default.dropdown-toggle {
 		font-size: 1.2em;
-	}
-	
-	.group .plainLabel,
-	.instruction .plainLabel,
-	.instruction .mini-panel .ti {
-		font-size: 1.3em;
 	}
 	
 	.instructions > .ti {
@@ -4470,7 +4459,7 @@ td.table-actions a {
 	}
 	
 	.admin .Tickets .filters .filter.search input {
-		width: 185px;
+		width: 188px;
 	}
 	
 	.admin .Tickets .view {
@@ -4703,7 +4692,7 @@ td.table-actions a {
 	}
 	
 	.worker .Tickets .filters .filter.search input {
-		width: 185px;
+		width: 188px;
 	}
 	
 	.worker .Tickets .view {
@@ -4982,7 +4971,7 @@ td.table-actions a {
 	.admin .Tickets .table-list table td.assigned:before,
 	.admin .Tickets .table-list table td.due:before,
 	.admin .Tickets .table-list table td.status:before {
-		color: #999999;
+		color: #888888;
 		font-size: .8em;
 		display: block;
 	}
@@ -5013,10 +5002,6 @@ td.table-actions a {
 	.admin .Tickets .table-list .choose.list th {
 		line-height: 1em;
 		vertical-align: top;
-	}
-	
-	.admin .Tickets .table-list .choose.list th:after {
-		margin-left: 0;
 	}
 	
 	.admin .Tickets .table-list .choose.list th.availability {
@@ -5056,7 +5041,7 @@ td.table-actions a {
 	}
 	
 	.admin .Tickets .table-list .action.panel.assign table th {
-		font-size: 1.3em;
+		font-size: 1.2em;
 		margin-bottom: 1em;
 	}
 	 
@@ -5066,6 +5051,7 @@ td.table-actions a {
 	}
 	
 	.admin .Tickets .table-list .action.panel.assign table th.sorting:after {
+		font-size: 30px;
 		line-height: 0;
 	}
 	
@@ -5194,11 +5180,6 @@ td.table-actions a {
 		background: #fbfbfb;
 	}
 	
-	.worker .Tickets .table-list .summary {
-		font-size: 1.3em;
-		border-bottom: 0px solid #ffffff;
-	}
-	
 	.worker .Tickets .table-list .controls .actions {
 		margin-bottom: -2px; 
 		padding: 8px 0 15px 0;
@@ -5255,7 +5236,7 @@ td.table-actions a {
 	.worker .Tickets .table-list table td.due:before,
 	.worker .Tickets .table-list table td.estimated:before,
 	.worker .Tickets .table-list table td.status:before {
-		color: #999999;
+		color: #888888;
 		font-size: .8em;
 		display: block;
 	}
@@ -5276,7 +5257,9 @@ td.table-actions a {
 		content: 'Status';
 	}
 	
-	.worker .Tickets .dash > .filters-choices .choice,
+	.worker .Tickets .dash > .filters-choices .choice {
+		height: 38px;
+	}
 	.worker .Tickets .dash > .filters-choices .choice .close {
 		height: 36px;
 	}
@@ -6448,7 +6431,6 @@ a.page-action.delete-button span.im {
 
 .Ticket .instruction.enter-time .header .ti .copy {
 	padding-left: 1.7em;
-		top: -1px;
 }
 
 .Ticket .instruction.enter-time .dropdown .btn {

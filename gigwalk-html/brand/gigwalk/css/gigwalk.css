@@ -672,7 +672,7 @@ html, body {
 	
 	/* breadcrumbs need bold when smaller */
 	@media (max-width: 664px) {
-		.section-controls .section.title  {
+		.section.title  {
 			font-family: Helvetica-Neue-Bold;
 		}
 	}
@@ -889,27 +889,6 @@ header .nav .number  {
 	font-family: Helvetica-Neue-Italic;
 }
 
-@media (max-width: 1000px) {
-	.admin .Tickets .table-list th {
-		font-family: Helvetica-Neue-Bold;
-		font-weight: normal !important;
-	}
-}
-
-@media (max-width: 825px) {
-	.worker .Tickets .table-list th {
-		font-family: Helvetica-Neue-Bold;
-		font-weight: normal !important;
-	}
-}
-
-@media (max-width: 800px) {
-	.Groups .table-list th {
-		font-family: Helvetica-Neue-Bold;
-		font-weight: normal !important;
-	}
-}
-
 @media (max-width: 750px) {
 	.worker .Tickets th.project-title:before,
 	.worker .Tickets td:before  {
@@ -925,6 +904,43 @@ header .nav .number  {
 	}
 }
 
+@media (max-width: 774px) {
+	.Projects .group > .plainLabel,
+	.Projects .group .repeats-selection .plainLabel,
+	.Projects .group .set-repeats .plainLabel,
+	.Projects .instruction .plainLabel,
+	.Projects.instruction .mini-panel .ti {
+		font-family: Helvetica-Neue-Bold;
+		font-weight: normal !important;
+	}
+	
+	.Projects .group .set-repeats .dropdown .plainLabel,
+	.Projects .group .set-repeats .radio .plainLabel,
+	.Projects .instruction .more-info .plainLabel,
+	.Projects .instruction .sub .plainLabel,
+	.Projects .instruction .answer .plainLabel {
+		font-family: Helvetica-Neue;
+	}
+	
+	.Projects .instruction .instruction-footer .estimated .plainLabel {
+		font-family: Helvetica-Neue-Medium;
+	}
+}
+
+@media (max-width: 800px) {
+	.Groups .table-list th {
+		font-family: Helvetica-Neue-Bold;
+		font-weight: normal !important;
+	}
+}
+
+@media (max-width: 825px) {
+	.worker .Tickets .table-list th {
+		font-family: Helvetica-Neue-Bold;
+		font-weight: normal !important;
+	}
+}
+
 @media (max-width: 920px) {
 	.admin .Tickets th.project-title:before,
 	.admin .Tickets .table-list > table td:before  {
@@ -935,6 +951,13 @@ header .nav .number  {
 		font-family: Helvetica-Neue;
 	}
 	.admin .Tickets .dash .table-list table th.project-title:before {
+		font-family: Helvetica-Neue-Bold;
+		font-weight: normal !important;
+	}
+}
+
+@media (max-width: 1000px) {
+	.admin .Tickets .table-list th {
 		font-family: Helvetica-Neue-Bold;
 		font-weight: normal !important;
 	}
@@ -992,6 +1015,18 @@ header .nav .number  {
 	
 }
 
+@media (max-width: 774px) {
+
+	/* project builder */
+	
+	.Projects .group .plainLabel,
+	.Projects .instruction .plainLabel,
+	.Projects.instruction .mini-panel .ti {
+		color: #4a4a4a;
+	}
+	
+}
+
 @media (max-width: 664px) {
 	
 	/* navs */
@@ -1039,12 +1074,6 @@ header .nav .number  {
 	.sidenav li:hover,
 	.sidenav li:focus {
 		background: #f5f5f5;
-	}
-	
-	/* project builder */
-	
-	.editable:after {
-		color: #4890e2;
 	}
 	
 }
