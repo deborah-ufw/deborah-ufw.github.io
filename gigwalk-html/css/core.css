@@ -3026,8 +3026,6 @@ div.main.wrapper + div.inner {
 		right: .7em;
 }
 
-/* put heredeb */
-
 .instruction-content .inner {
 	padding: 1.2em 1em 1em 1em;
 }
@@ -4853,21 +4851,22 @@ td.table-actions a {
 	.admin .Tickets .dash .table-list table .project-title {
 		padding-left: 45px;
 	}
+	
+	.admin .Tickets .table-list > table td,
+	.admin .Tickets .table-list > table th {
+		display: block;
+		float: left;
+		width: 100%;
+	}
 	 
 	.admin .Tickets .table-list > table td {
 		font-size: 1.3em;
 		padding-top: 10px;
-		display: block;
-		float: left;
-		width: 100%;
 	}
 	
 	.admin .Tickets .table-list > table th {
 		font-size: 1.2em;
 		padding-bottom: 0;
-		display: block;
-		float: left;
-		width: 100%;
 	}
 	
 	.admin .Tickets .table-list > table th.sorting:after {
@@ -5116,21 +5115,22 @@ td.table-actions a {
 		padding-bottom: 0;
 		padding-left: 45px;
 	}
+	
+	.worker .Tickets .table-list > table th,
+	.worker .Tickets .table-list table td {
+		display: block;
+		float: left;
+		width: 100%;
+	}
 	 
 	.worker .Tickets .table-list table td {
 		font-size: 1.3em;
 		padding-top: 10px;
-		display: block;
-		float: left;
-		width: 100%;
 	}
 	
 	.worker .Tickets .table-list > table th {
 		font-size: 1.2em;
 		padding-bottom: 0;
-		display: block;
-		float: left;
-		width: 100%;
 	}
 	
 	.worker .Tickets .table-list > table th.sorting:after {
@@ -5291,9 +5291,9 @@ td.table-actions a {
 }
 
 .Groups .table-list table .members {
-	width: 200px;
-	min-width: 200px;
-	max-width: 200px;
+	width: 130px;
+	min-width: 130px;
+	max-width: 130px;
 }
 
 .user-gigwalk .Groups .table-list table .subgroups {
@@ -5303,7 +5303,7 @@ td.table-actions a {
 }
 
 .Groups .table-list table td.members {
-	padding-right: 2.5em;
+	padding-right: 2.2em;
 }
 
 .table-list table td.expanded {
@@ -5455,6 +5455,10 @@ a.page-action.delete-button span.im {
 		font-size: 1.1em;
 	}
 	
+	.Groups .table-list td.expanded td {
+		font-size: 1em;
+	}
+	
 	.Groups th.subgroups {
 		padding-top: 1.4em
 	}
@@ -5465,6 +5469,21 @@ a.page-action.delete-button span.im {
 	
 }
 
+/* Groups Dash snaps to responsive */
+
+@media (max-width: 450px) {
+	
+.Groups	.table-list > table th {
+	font-size: 1.2em;
+	padding-bottom: 0;
+	display: block;
+	float: left;
+	width: 100%;
+}
+	
+}
+
+/* heredeb */
 
 /* Scheduler */
 
