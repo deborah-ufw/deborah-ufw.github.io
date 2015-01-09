@@ -230,25 +230,30 @@
               <span class="im icon-search"></span>
             </div>
             <a class="page-action delete-button"><span class="im icon-trash"></span>Delete</a>
-            <div class="page-action-panel">
-              <div class="wrapper">
-                This group contains 2 subgroups.
-                <div class="radios">
-                  <div class="radio">
-                    <label>
-                    <input type="radio" name="choose" value="keep-subgroups" /> &nbsp;Don't delete the subgroups</label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                    <input type="radio" name="choose" value="delete-subgroups" /> &nbsp;Delete the subgroups also</label>
-                  </div>
-                </div>  
+            
+            <!-- addition - please add this wrapper div around "page-action-panel" -->
+            <div class="wrapper">
+              <div class="page-action-panel">
+                <div class="wrapper">
+                  This group contains 2 subgroups.
+                  <div class="radios">
+                    <div class="radio">
+                      <label>
+                      <input type="radio" name="choose" value="keep-subgroups" /> &nbsp;Don't delete the subgroups</label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                      <input type="radio" name="choose" value="delete-subgroups" /> &nbsp;Delete the subgroups also</label>
+                    </div>
+                  </div>  
+                </div>
+                <div class="actions">
+                  <a class="cancel" href="javascript:;">Cancel</a>
+                  <a class="buttonly delete" href="javascript:;">Delete</a>
+                </div>
               </div>
-              <div class="actions">
-                <a class="cancel" href="javascript:;">Cancel</a>
-                <a class="buttonly delete" href="javascript:;">Delete</a>
-              </div>
-            </div>
+            </div><!-- closes wrapper div around "page-action-panel" -->
+            
           </div><!-- end wrapper -->
         </div><!-- end filters -->
       </div><!-- end filters holder (all) -->

@@ -235,15 +235,20 @@
               <span class="im icon-search"></span>
             </div>
             <a class="page-action new-button"><span class="im icon-pencil-box"></span>New Group</a>
-            <div class="page-action-panel">
-              <input type="text" class="name" placeholder="Group Name" />
-              <div class="warning">Must be at least 3 characters</div>
-              <div class="warning">A group already exists with this name</div>
-              <div class="actions">
-                <a class="cancel" href="javascript:;">Cancel</a>
-                <a class="buttonly" href="javascript:;">Submit</a>
+            
+            <!-- addition - please add this wrapper div around "page-action-panel" -->
+            <div class="wrapper">
+              <div class="page-action-panel">
+                <input type="text" class="name" placeholder="Group Name" />
+                <div class="warning">Must be at least 3 characters</div>
+                <div class="warning">A group already exists with this name</div>
+                <div class="actions">
+                  <a class="cancel" href="javascript:;">Cancel</a>
+                  <a class="buttonly" href="javascript:;">Submit</a>
+                </div>
               </div>
-            </div>
+            </div><!-- closes wrapper div around "page-action-panel" -->
+            
           </div><!-- end wrapper -->
         </div><!-- end filters -->
       </div><!-- end filters holder (all) -->

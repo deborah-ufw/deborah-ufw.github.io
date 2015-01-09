@@ -725,7 +725,8 @@ a.page-action,
 .Ticket .instruction.task .images .attachment.image,
 .Ticket .instruction.task .type.photo .placement,
 .instruction.enter-time .answers,
-.breaker {
+.breaker,
+.Groups .table-list .details-control a {
 	display: inline-block;
 }
 
@@ -933,7 +934,9 @@ a.attach .im,
 .Ticket .instruction.enter-time .header .ti .copy,
 .map .nav-tabs > li > a:before,
 .map .tab-pane .requirements-list li,
-.instruction .header .actions {
+.instruction .header .actions,
+.nav-active-holder:after,
+.filters-holder {
 	position: relative;
 }
 
@@ -1334,7 +1337,8 @@ a.linkly.disabled,
 .Ticket .instruction.widget-panel .header,
 a.linkly.disabled,
 a.buttonly.cancel.disabled:hover,
-a.buttonly.cancel.disabled:focus {
+a.buttonly.cancel.disabled:focus,
+.filters .filter.search {
 	background: #ffffff;
 }
 
@@ -2326,8 +2330,8 @@ div.main.wrapper + div.inner {
 		font-size: 1.3em;
 		display: inline-block;
 		position: absolute;
-			top: 2px;
-		left: 60px;
+			top: 3px;
+			left: 60px;
 		z-index: 100;
 	}
 	
@@ -2336,9 +2340,10 @@ div.main.wrapper + div.inner {
 	}
 	
 	.nav-active-holder:after {
-		font-size: 24px;
+		font-size: 28px;
 		vertical-align: middle;
 		color: rgba(255, 255, 255, .3);
+			top: 2px;
 	}
 	
 	nav.sidenav {
@@ -3871,12 +3876,7 @@ a.iconly:before {
 	margin: -5px 0 .5em 0;
 	padding: 1.5em 1.5em 2em 1em;
 		top: 0;
-		right: -72px;
 	z-index: 1;
-}
-
-.Group .page-action-panel {
-	right: -25px;
 }
 
 .choose-dates a,
@@ -4861,7 +4861,7 @@ td.table-actions a {
 	 
 	.admin .Tickets .table-list > table td {
 		font-size: 1.3em;
-		padding-top: 10px;
+		padding-top: .5em;
 	}
 	
 	.admin .Tickets .table-list > table th {
@@ -4898,7 +4898,7 @@ td.table-actions a {
 	}
 	
 	.admin .Tickets .table-list table th.status {  
-		margin-bottom: 20px;
+		margin-bottom: 1em;
 	}
 	
 	.admin .Tickets .table-list table td.status {  
@@ -4973,7 +4973,7 @@ td.table-actions a {
 		color: #888888;
 		font-size: .8em;
 		display: block;
-	}
+	}  
 	
 	.admin .Tickets .table-list > table td.location:before {
 		content: 'Location';
@@ -5319,9 +5319,8 @@ td.table-actions a {
 }
 
 a.page-action {
-	margin-left: .5em;
-	padding: .4em 1.2em .4em 2.5em;
-		top: -10px;
+	padding: .4em 1.2em .5em 2.5em;
+		top: -12px;
 }
 
 a.page-action span.im {
@@ -5471,15 +5470,93 @@ a.page-action.delete-button span.im {
 
 /* Groups Dash snaps to responsive */
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
 	
-.Groups	.table-list > table th {
-	font-size: 1.2em;
-	padding-bottom: 0;
-	display: block;
-	float: left;
-	width: 100%;
-}
+	.Groups .table-list table th.details-control {
+		display: none;
+	}
+		
+	.Groups	.table-list table th,
+	.Groups	.table-list table td,
+	.Groups .table-list table .group-name,
+	.Groups .table-list table .org-name,
+	.Groups .table-list table .members,
+	.Groups .table-list table td.details-control {
+		font-size: 1.2em;
+		text-align: left;
+		display: block;
+		float: left;
+		width: 100%;
+		min-width: 100%;
+		max-width: 100%;
+	}
+	
+	.Groups	.table-list table th,
+	.Groups	.table-list table th.group-name {
+		padding: 0 1em 0 1em;
+	}
+	
+	.Groups	.table-list table td,
+	.Groups .table-list table td.group-name {
+		padding: 1em 1em 0 1em;
+	}
+	
+	.Groups .table-list .details-control a {
+		padding-bottom: 1em;
+	}
+	
+	.Groups	.table-list table td.expanded {
+		margin: -1px 0 -1px 0;
+		padding: 0 0 0 0;
+	}
+	
+	.table-list .expanded table tr {
+		border-bottom: 1px solid rgba(0, 0, 0, .05);
+	}
+	
+	.Groups	.table-list table th.group-name {
+		margin-top: .3em;
+	}
+	
+	.Groups .table-list table th.members {
+		margin-bottom: 1em;
+	}
+	
+	.Groups	.table-list th.sorting:after {
+		font-size: 30px;
+	}
+	
+	.Groups .table-list td.expanded td {
+		font-size: 1em;
+	}
+	
+	.Groups .table-list > table thead {
+		background: #fcfcfc;
+	}
+	
+	.Groups .table-list table tr.even {
+		background: #fbfbfb;
+	}
+	
+	.Groups .table-list table td:before {
+		color: #888888;
+		font-size: .8em;
+		display: block;
+	}
+	
+	.Groups .table-list table td.group-name:before {
+		content: 'Group Name';
+	}
+	.Groups .table-list table td.org-name:before {
+		content: 'Organization Name';
+	}
+	.Groups .table-list table td.members:before {
+		content: 'Members';
+	}
+	
+	.Groups .table-list table td.details-control a:after {
+		content: ' Subgroups';
+	}
 	
 }
 
@@ -5717,14 +5794,6 @@ a.page-action.delete-button span.im {
 	padding-left: .5em;
 	opacity: .5;
 } 
-
-@media (min-width: 600px) {
-	
-	.Groups .filters-choices {
-		padding-right: 135px;
-	}
-	
-}
 
 
 
