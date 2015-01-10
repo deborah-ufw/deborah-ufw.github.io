@@ -320,9 +320,16 @@ html, body {
 	.instructions .duplicating-message,
 	.instructions .duplicating-message a .im,
 	a.page-action.delete-button,
-	.page-action-panel a.buttonly.delete,
+	.page-action-panel .actions a.buttonly.delete,
 	.pin.expired:after {
 		color: #ff5157;
+	}
+	
+	a.page-action.delete-button:hover,
+	a.page-action.delete-button:focus,
+	.page-action-panel .actions a.buttonly.delete:hover,
+	.page-action-panel .actions a.buttonly.delete:focus {
+		background: rgba(255, 81, 87, .1);
 	}
 	
 	.key.expired:before {
@@ -330,7 +337,7 @@ html, body {
 	}
 	
 	a.page-action.delete-button,
-	.page-action-panel a.buttonly.delete,
+	.page-action-panel .actions a.buttonly.delete,
 	.invalid input[type="text"],
 	.invalid input[type="textarea"] {
 		border-color: #ff5157;

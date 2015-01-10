@@ -1339,7 +1339,8 @@ a.linkly.disabled,
 a.linkly.disabled,
 a.buttonly.cancel.disabled:hover,
 a.buttonly.cancel.disabled:focus,
-.filters .filter.search {
+.filters .filter.search,
+.panel.action .filter.search {
 	background: #ffffff;
 }
 
@@ -5561,22 +5562,47 @@ a.page-action.delete-button span.im {
 	
 	.Groups .filters,
 	.Groups a.page-action,
-	.Groups .page-action-panel {
+	.Groups .page-action-panel,
+	.Groups .filters .filter.search,
+	.Group .filters,
+	.Group a.page-action,
+	.Group .page-action-panel,
+	.Group .filters .filter.search {
 		float: left;
 	}
-	
-	.Groups .filters-choices {
+
+	.Groups .filters-choices,
+	.Group .filters-choices {
 		text-align: left;
 	}
 	
-	.Groups .filters-choices .choice {
+	.Groups .filters-choices .choice,
+	.Group .filters-choices .choice {
 		margin-left: 0;
 		margin-right: 8px;
 	}
 	
-	.Groups a.page-action {
+	.Groups a.page-action,
+	.Group a.page-action {
 		margin-top: .5em;
-		padding-right: 2.7em;
+	}
+	
+	.Groups a.page-action.new-button {
+		padding-right: 2em;
+		padding-left: 3.2em;
+	}
+	
+	.Groups a.page-action.new-button span.im {
+		left: 21px;
+	}
+	
+	.Group a.page-action.delete-button {
+		padding-right: 3.4em;
+		padding-left: 4em;
+	}
+	
+	.Group a.page-action.delete-button span.im {
+		left: 35px;
 	}
 	
 }
