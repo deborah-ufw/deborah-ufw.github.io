@@ -766,7 +766,8 @@ html, body {
 	.button-holder a,
 	.button-holder a.buttonly:hover,
 	.button-holder a.buttonly:focus,
-	.choose-dates a.buttonly {
+	.choose-dates a.buttonly,
+	.page-action-panel .actions a.buttonly {
 		border-color: #08aa86;
 	}
 	

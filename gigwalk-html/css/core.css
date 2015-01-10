@@ -804,7 +804,8 @@ input[type="radio"],
 .instruction.view-mode .type,
 .filters-choices .choice.date,
 .choose-dates .actions,
-.comments .area .ti div.time {
+.comments .area .ti div.time,
+.page-action-panel {
 	float: right;
 }
 
@@ -1466,8 +1467,8 @@ input[type="radio"]:checked:after,
 }
 
 .editable:after {
-	padding-left: 5px;
-		top: 1px;
+	padding-left: 2px;
+		top: 2px;
 }
 
 .date .wrapper.editable:after {
@@ -5332,10 +5333,6 @@ a.page-action.delete-button span.im {
 	top: 4px;
 }
 
-.page-action-panel {
-	width: 305px;
-}
-
 .section-controls .action.panel input[type="text"],
 .add-members .name {
 	width: 270px;
@@ -5556,6 +5553,30 @@ a.page-action.delete-button span.im {
 	
 	.Groups .table-list table td.details-control a:after {
 		content: ' Subgroups';
+	}
+	
+}
+
+@media (max-width: 410px) {
+	
+	.Groups .filters,
+	.Groups a.page-action,
+	.Groups .page-action-panel {
+		float: left;
+	}
+	
+	.Groups .filters-choices {
+		text-align: left;
+	}
+	
+	.Groups .filters-choices .choice {
+		margin-left: 0;
+		margin-right: 8px;
+	}
+	
+	.Groups a.page-action {
+		margin-top: .5em;
+		padding-right: 2.7em;
 	}
 	
 }
