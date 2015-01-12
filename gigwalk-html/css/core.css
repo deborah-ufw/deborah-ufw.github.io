@@ -5677,7 +5677,6 @@ a.page-action.delete-button span.im {
 	}
 	
 	.Group .content > .table-list td {
-		font-size: 1.3em;
 		padding-top: .5em;
 	}
 	
@@ -5692,7 +5691,7 @@ a.page-action.delete-button span.im {
 	.Groups .table-list table td:before,
 	.Group .content > .table-list td:before {
 		color: #888888;
-		font-size: .8em;
+		font-size: .9em;
 		display: block;
 	}
 	
@@ -5767,6 +5766,37 @@ a.page-action.delete-button span.im {
 	
 	.Group a.page-action.delete-button span.im {
 		left: 35px;
+	}
+	
+	.Group .action.panel {
+		padding-right: .5em;
+		padding-left: .5em;
+	}
+	
+	.Group .action.panel h1 {
+		padding-left: 0;
+	}
+	
+	.Group .action.panel.ownership .sub {
+		width: auto;
+	}
+	
+	.Group .action.panel.ownership .sub .selected-item {
+		font-size: .9em;
+		width: 150px;
+	}
+	
+	.Group .section-controls .action.panel input[type="text"],
+	.Group .action.panel.add-members input {
+		width: auto;
+	}
+	
+	.Group .subgroups-detail {
+		min-width: 200px;
+	}
+	
+	.Group .section-controls .action.panel .group .filter.search input {
+		width: 190px;
 	}
 	
 }
