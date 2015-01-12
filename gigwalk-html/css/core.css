@@ -4800,6 +4800,8 @@ td.table-actions a {
 
 @media (max-width: 1000px) {
 	
+	.Group .choose.list th,
+	.Group .choose.list td,
 	.admin .Tickets .table-list th,
 	.admin .Tickets .table-list td {
 		font-size: 1.1em;
@@ -4992,7 +4994,7 @@ td.table-actions a {
 	
 }
 
-/* assign panel for Grace - starts to size down */
+/* Tickets assign panel for Grace - starts to size down */
 
 @media (max-width: 805px) {
 	
@@ -5443,9 +5445,33 @@ a.page-action.delete-button span.im {
 	margin: .5em 0 0 3.3em;
 }
 
+.Group .choose.list th.zip {
+	min-width: 110px;
+}
+
+
+/* Group starts to size down */
+
+@media (min-width: 800px) and (max-width: 1000px) {
+	
+	.Group .section-controls .choose.list th:after {
+		float: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	
+	.Group .section-controls .action.panel .table-list {
+		margin-right: 0;
+		margin-left: -5px;
+	}
+	
+}
+
 /* Groups Dash starts to size down */
 
 @media (max-width: 800px) {
+	
 	
 	.Groups .table-list th,
 	.Groups .table-list td {
@@ -5464,9 +5490,76 @@ a.page-action.delete-button span.im {
 		font-size: 1.4em;
 	}
 	
+	.Group .section-controls .choose.list table {
+		margin: 0 0 1em 0em;
+		background: #fcfcfc;
+	}
+	
+	.Group .section-controls .choose.list tr.odd {
+		background: #ffffff;
+	}
+	
+	.Group .section-controls .action.panel .table-list {
+		margin-right: 0;
+		margin-left: -5px;
+	}
+	
+	.Group .section-controls .action.panel .table-list th {
+		margin-bottom: .5em;
+	}
+	
+	.Group .section-controls .choose.list th.user-name {
+		margin-top: .5em;
+	}
+	
+	.Group .section-controls .action.panel .table-list th.zip {
+		margin-bottom: 1em;
+	}
+	
+	.Group .section-controls .choose.list th.sorting:after {
+		font-size: 30px;
+		line-height: 0;
+	}
+	
+	.Group .section-controls .choose.list td,
+	.Group .section-controls .choose.list th {
+		font-size: 1.2em;
+		text-align: left;
+		padding-bottom: 0;
+		padding-left: .5em;
+		display: block;
+		float: left;
+		width: 100%;
+	}
+	
+	.Group .section-controls .action.panel .choose.list td {
+		padding: 3px 5px 3px 40px;
+	}
+	
+	.Group .section-controls .action.panel .choose.list td.user-name {
+		padding-top: 1em;
+	}
+	
+	.Group .section-controls .action.panel .choose.list td.zip {
+		padding-bottom: 1em;
+	}
+	
+	.Group .section-controls .choose.list td:before {
+		color: #888888;
+		font-size: .9em;
+		display: block;
+	}  
+	
+	.Group .section-controls .choose.list td.location:before {
+		content: 'Location';
+	}
+	.Group .section-controls .choose.list td.zip:before {
+		content: 'Zip Code';
+	}
+	
 }
 
-/* Groups Dash snaps to responsive */
+/* Group dash snaps to responsive */
 
 @media (max-width: 500px) {
 	
