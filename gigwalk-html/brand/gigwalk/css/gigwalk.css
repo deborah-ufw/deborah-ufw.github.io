@@ -897,6 +897,15 @@ header .nav .number  {
 	font-family: Helvetica-Neue-Italic;
 }
 
+@media (max-width: 500px) {
+	
+	.Group .content > .table-list th.user-name:before {
+		font-family: Helvetica-Neue-Bold;
+		font-weight: normal !important;
+	}
+	
+}
+
 @media (max-width: 750px) {
 	.worker .Tickets th.project-title:before,
 	.worker .Tickets td:before  {
