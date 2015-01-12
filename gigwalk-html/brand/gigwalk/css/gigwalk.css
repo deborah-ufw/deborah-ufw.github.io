@@ -936,7 +936,8 @@ header .nav .number  {
 }
 
 @media (max-width: 800px) {
-	.Groups .table-list th {
+	.Groups .table-list th,
+	.Group .table-list th {
 		font-family: Helvetica-Neue-Bold;
 		font-weight: normal !important;
 	}

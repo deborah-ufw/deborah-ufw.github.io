@@ -4068,10 +4068,12 @@ th.sorting:after {
 	top: 8px;
 }
 
+.Group .table-list table .user-name,
 .Tickets .dash .table-list table .project-title {
 	padding-left: 35px;
 }
 
+.Group .table-list table .user-name input[type="checkbox"], 
 .Tickets .dash .table-list table .project-title input[type="checkbox"] {
 	margin-left: -32px;
 	margin-right: 15px;
@@ -5445,7 +5447,7 @@ a.page-action.delete-button span.im {
 	margin: .5em 0 0 3.3em;
 }
 
-.Group .choose.list th.zip {
+.Group .table-list th {
 	min-width: 110px;
 }
 
@@ -5555,6 +5557,24 @@ a.page-action.delete-button span.im {
 	}
 	.Group .section-controls .choose.list td.zip:before {
 		content: 'Zip Code';
+	}
+	
+	.Group .content > .table-list .summary {
+		margin-bottom: 8px;
+		padding-bottom: 5px;
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
+	
+	.Group .content > .table-list .controls .actions {
+		margin: .5em 0 -2px 0;
+		float: none;
+	}
+	
+	.Group .content > .table-list th,
+	.Group .content > .table-list td {
+		font-size: 1.1em;
 	}
 	
 }
