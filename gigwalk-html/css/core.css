@@ -235,6 +235,8 @@ a[href*="tel"]:before {
 }
 
 th.sorting:after,
+th.sorting_asc:after, 
+th.sorting_desc:after,
 .map .nav-tabs > li > a {
 	font-size: 34px;
 }
@@ -878,6 +880,8 @@ a.iconly:before,
 .table-list .controls.has-buttons .summary,
 th.sorting,
 th.sorting:after,
+th.sorting_asc:after, 
+th.sorting_desc:after,
 .pagination .previous,
 .pagination .next,
 .pagination a span.im:before,
@@ -1197,6 +1201,8 @@ select,
 .disabled,
 .action.panel .item .hint,
 th.sorting:after,
+th.sorting_asc:after, 
+th.sorting_desc:after,
 .table-list table td.assigned,
 .table-list table td.scheduled span,
 .table-list table td.estimated span,
@@ -4063,7 +4069,9 @@ a.iconly:before {
 	width: 190px;
 }
 
-th.sorting:after {
+th.sorting:after,
+th.sorting_asc:after, 
+th.sorting_desc:after {
 	margin-left: -10px;
 	top: 8px;
 }
@@ -5771,6 +5779,10 @@ a.page-action.delete-button span.im {
 	.Group a.page-action.delete-button {
 		padding-right: 1.6em;
 		padding-left: 2.7em;
+	}
+	
+	.Group a.page-action.delete-button .im {
+		left: 12px;
 	}
 	
 	.Group .action.panel {
