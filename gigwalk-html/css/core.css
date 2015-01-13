@@ -7272,6 +7272,12 @@ html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-titl
 		left: 0;
 }
 
+html[data-useragent*='MSIE 10.0'] .Group .content > .table-list th.user-name input,
+html[data-useragent*='Trident'] .Group .content > .table-list th.user-name input {
+	width: 15px;
+		left: -35px;
+}
+
 html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list table th.project-title,
 html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-title {
 	 white-space: nowrap;
