@@ -7272,10 +7272,19 @@ html[data-useragent*='Trident'] .Tickets .dash .table-list table th.project-titl
 		left: 0;
 }
 
-html[data-useragent*='MSIE 10.0'] .Group .content > .table-list th.user-name input,
-html[data-useragent*='Trident'] .Group .content > .table-list th.user-name input {
-	width: 15px;
-		left: -35px;
+html[data-useragent*='Trident'] .Group .content > .table-list th,
+html[data-useragent*='MSIE 10.0'] .Group .content > .table-list th.user-name {
+	position: relative;
+}
+
+@media (max-width: 500px) {
+
+	html[data-useragent*='Trident'] .Group .content > .table-list th.user-name input,
+	html[data-useragent*='MSIE 10.0'] .Group .content > .table-list th.user-name input {
+		width: 15px;
+			left: -35px;
+	}
+	
 }
 
 html[data-useragent*='MSIE 10.0'] .Tickets .dash .table-list table th.project-title,
