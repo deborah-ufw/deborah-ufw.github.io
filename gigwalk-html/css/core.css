@@ -1113,6 +1113,8 @@ input[type="radio"]:after,
 }
 
 select,
+input,
+textarea,
 .nav.nav-tabs > li > a {
 	-moz-border-radius: 0;
 	-webkit-border-radius: 0;
@@ -1127,6 +1129,12 @@ select,
 	text-shadow: 0 0 15px rgba(0, 0, 0, .8);
 }
 
+input,
+textarea {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
 
 /* colors */
 
