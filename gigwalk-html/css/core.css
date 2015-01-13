@@ -4073,6 +4073,10 @@ th.sorting:after {
 	padding-left: 35px;
 }
 
+.Group .section-controls .table-list table th.user-name {
+	padding-left: 0;
+}
+
 .Group .table-list table .user-name input[type="checkbox"], 
 .Tickets .dash .table-list table .project-title input[type="checkbox"] {
 	margin-left: -32px;
@@ -5350,7 +5354,7 @@ a.page-action.delete-button span.im {
 }
 
 .page-action-panel .radios {
-	margin: 1em 1em 1.5em 1em;
+	margin: 1em 0 1.5em .5em;
 }
 
 .page-action-panel .radio {
@@ -5451,6 +5455,10 @@ a.page-action.delete-button span.im {
 	min-width: 110px;
 }
 
+.Group .page-action-panel {
+	max-width: 380px;
+}
+
 
 /* Group starts to size down */
 
@@ -5512,6 +5520,7 @@ a.page-action.delete-button span.im {
 	
 	.Group .section-controls .choose.list th.user-name {
 		margin-top: .5em;
+		padding-left: .5em;
 	}
 	
 	.Group .section-controls .action.panel .table-list th.zip {
@@ -5760,12 +5769,8 @@ a.page-action.delete-button span.im {
 	}
 	
 	.Group a.page-action.delete-button {
-		padding-right: 3.4em;
-		padding-left: 4em;
-	}
-	
-	.Group a.page-action.delete-button span.im {
-		left: 35px;
+		padding-right: 1.6em;
+		padding-left: 2.7em;
 	}
 	
 	.Group .action.panel {
@@ -7317,6 +7322,14 @@ html[data-useragent*='Trident']	.Ticket .instruction.task .type.photo .placement
 			 left: -70px;
 		}
 	}
+	
+	/* Group detail table snaps to responsive display */
+	@media (max-width: 500px) {
+		.Group .content > .table-list th.user-name input {
+		 left: -155px;
+		}
+	}
+	
 }
 	
 	

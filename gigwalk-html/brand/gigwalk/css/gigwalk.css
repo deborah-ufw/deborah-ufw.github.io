@@ -367,7 +367,6 @@ html, body {
 		background: rgba(64, 145, 230, .05);	
 	}
 	
-	.table-list tr.shown td,
 	.calendar-day a.get-more,
 	.answerButton,
 	.bigButton,
@@ -380,6 +379,10 @@ html, body {
 	.Ticket .instruction.task .photo .icon-buttons a.disabled:hover,
 	.Ticket .instruction.task .photo .icon-buttons a.disabled:focus {
 		background: rgba(64, 145, 230, .1);
+	}
+	
+	.table-list tr.shown td {
+		background: rgba(64, 145, 230, .2);
 	}
 	
 	.messages .message.info,
@@ -887,7 +890,8 @@ select option,
 .Ticket .ticket-summary .due span,
 .Ticket .comments .area .ti,
 .Ticket .instruction .widget-panel-content .inner > .ti,
-header .nav .number  {
+header .nav .number,
+.Group .page-action-panel .copy span  {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }
