@@ -941,7 +941,9 @@ a.attach .im,
 .map .tab-pane .requirements-list li,
 .instruction .header .actions,
 .nav-active-holder:after,
-.filters-holder {
+.filters-holder,
+.Projects .settings .group.required > .plainLabel,
+.Projects .settings .group.required > .plainLabel:after {
 	position: relative;
 }
 
@@ -1169,7 +1171,8 @@ textarea {
 }
 
 .ticket-summary .widget-panel .controls,
-.comments .new .attachment {
+.comments .new .attachment,
+.calendar .header .arrow .im:before {
 	color: #6e6e6e;
 }
 
@@ -1187,7 +1190,8 @@ textarea {
 .calendar-day .store .ticket,
 .calendar-day.past .ticket.today .due,
 .calendar-day a.ticketname,
-.calendar-day .no-scheduled .wrapper.blocker:before {
+.calendar-day .no-scheduled .wrapper.blocker:before,
+.table-list th.disabled {
 	color: #999999;
 }
 
@@ -1230,7 +1234,6 @@ a.iconButton.disabled:focus,
 .calendar .action-panel {
 	background: #f8f8f8;
 }
-
 
 .duplicating-message,
 .table-list table table td,
@@ -1319,17 +1322,14 @@ input[type="checkbox"]:after,
 	color: #ffffff;
 }
 
-.calendar .header .arrow .im:before {
-	color: rgba(255, 255, 255, .85);
-}
-
 .checker .supercheck:after,
 input[type="checkbox"]:after,
 input[type="radio"]:after,
 .instructions .item .actions a.buttonly,
 .filter.dropdown .btn.btn-default.dropdown-toggle,
 a.linkly.disabled,
-.datepicker th.disabled {
+.datepicker th.disabled,
+.table-list th.disabled {
 	background-color: #ffffff;
 }
 
@@ -1583,7 +1583,7 @@ input[type="radio"]:checked:after,
 }
 
 .calendar .header .controls .arrow {
-	top: 4px;
+	top: 8px;
 }
 
 .calendar-day .header .time:before {
@@ -2180,10 +2180,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	
 	.item.required > .plainLabel:after,
 	.tab-pane.actions .detail:before,
+	.Projects .settings .group.required > .plainLabel:after,
 	.map .tab-pane .assign-action.detail .plainLabel:after {
 		content: '*';
 		font-size: 1.4em;
 			left: 10px;
+	}
+	
+	.Projects .settings .group.required > .plainLabel:after {
+		top: 5px;
+		left: 5px;
 	}
 	
 	.map .tab-pane.actions .blocked-day.detail:before {
@@ -3433,8 +3439,8 @@ a.iconly:before {
 	
 	.group .plainLabel {
 		text-align: right;
-		margin-right: 15px;
-		width: 100px;
+		margin-right: 25px;
+		width: 90px;
 	}
 	
 	.group .sub,
@@ -3567,6 +3573,12 @@ a.iconly:before {
 	.instruction .item .plainLabel {
 		text-align: left;
 		margin: 0 1em .5em 0;
+	}
+	
+	.Projects .settings .group.required > .plainLabel:after {
+		left: 0;
+		float: left;
+		margin-right: 5px;
 	}
 	
 	.group .sub,
@@ -6460,7 +6472,8 @@ a.page-action.delete-button span.im {
 
 /* Ticket summary */
 
-.ticket-summary .widget-panel .controls .arrow {
+.ticket-summary .widget-panel .controls .arrow,
+.calendar .header .arrow .im:before {
 	filter: alpha(opacity=50);
      -moz-opacity: .5;
           opacity: .5;

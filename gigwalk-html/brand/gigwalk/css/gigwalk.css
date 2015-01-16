@@ -321,7 +321,8 @@ html, body {
 	.instructions .duplicating-message a .im,
 	a.page-action.delete-button,
 	.page-action-panel .actions a.buttonly.delete,
-	.pin.expired:after {
+	.pin.expired:after,
+	.Projects .settings .group.required > .plainLabel:after {
 		color: #ff5157;
 	}
 	
@@ -891,7 +892,8 @@ select option,
 .Ticket .comments .area .ti,
 .Ticket .instruction .widget-panel-content .inner > .ti,
 header .nav .number,
-.Group .page-action-panel .copy span  {
+.Group .page-action-panel .copy span,
+.Projects .settings .group.required > .plainLabel:after  {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }
