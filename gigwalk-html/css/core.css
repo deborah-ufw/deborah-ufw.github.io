@@ -57,6 +57,10 @@ header nav .user-edit,
 	font-size: .8em;
 }
 
+.Profile .section-actions .button-holder a {
+	font-size: .85em;
+}
+
 .action.panel .choose.list table,
 .map .assign-action.detail .filters-choices,
 .calendar-day .no-scheduled .wrapper .primary.actions a,
@@ -332,7 +336,8 @@ header .nav li.messages .im:before {
 .map .tabs-control,
 .map .tab-pane .ticketlink,
 .map .tab-pane .requirements-list li,
-.page-action-panel .warning {
+.page-action-panel .warning,
+.subnav .nav.nav-tabs > li > a {
 	line-height: 1em; 
 }
 
@@ -403,7 +408,8 @@ header .nav .number,
 .Ticket .instruction.barcode input,
 .Ticket .instruction.task .type.barcode input,
 .Ticket .instruction.enter-time .widget-panel-content .type,
-.Ticket .instruction.enter-time .time input {
+.Ticket .instruction.enter-time .time input,
+.Profile .section-actions .button-holder a {
 	text-align: center;
 }
 
@@ -487,7 +493,9 @@ a.bigButton:focus,
 .remove:hover,
 .remove:focus,
 .Ticket .barcode a.linkly:hover,
-.Ticket .barcode a.linkly:focus {
+.Ticket .barcode a.linkly:focus,
+.Profile .section-actions .button-holder a:hover,
+.Profile .section-actions .button-holder a:focus {
 	text-decoration: none;
 }
 
@@ -525,6 +533,7 @@ header .user-org,
 select:hover,
 select:focus,
 .nav-active-holder,
+.subnav .nav.nav-tabs > li,
 th.sorting,
 .worker .table-list .controls .actions.active a,
 .Tickets th.project-title input:before,
@@ -610,7 +619,8 @@ a.disabled,
 .Ticket .barcode .added:after,
 .Ticket .instruction.enter-time .answers .answer:after,
 .instruction.view-mode .type:before,
-.instruction .actions .icon-buttons a.icon-edit:after {
+.instruction .actions .icon-buttons a.icon-edit:after,
+.section-wrapper:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -728,7 +738,8 @@ a.page-action,
 .Ticket .instruction.task .type.photo .placement,
 .instruction.enter-time .answers,
 .breaker,
-.Groups .table-list .details-control a {
+.Groups .table-list .details-control a,
+.Profile .section-actions .button-holder a {
 	display: inline-block;
 }
 
@@ -749,7 +760,9 @@ a.page-action,
 .table-list .action.panel .plainLabel,
 .action.panel.date .plainLabel,
 .subgroups-detail a,
-.Ticket .barcode .added .upc {
+.Ticket .barcode .added .upc,
+.Profile .user-info,
+.Profile .section-controls {
 	display: inline-block;
 	float: left;
 }
@@ -993,7 +1006,8 @@ header .navbar-collapse.in {
 .answerButton,
 .Ticket .instruction.photo .added .icon-buttons,
 .Ticket .instruction.task .photo .added .icon-buttons,
-.instruction.view-mode .instruction-content .ti {
+.instruction.view-mode .instruction-content .ti,
+.Profile .section-actions .button-holder a {
 	width: 100%;
 }
 
@@ -1057,11 +1071,8 @@ header .navbar-collapse.in {
 }
 
 .transition,
+a,
 .dropdown .dropdown-menu,
-.tabnav li,
-.tabnav li a,
-.subnav li,
-.subnav li a,
 .primary.actions a,
 .choose-dates,
 .map .pin,
@@ -1070,20 +1081,15 @@ header .navbar-collapse.in {
 .iconButton,
 .filters-choices .choice .value,
 .filters-choices .choice .close,
-a.page-action,
 .calendar-month .work div,
-.calendar .date-nav a,
 .calendar .date-nav span,
 .calendar-month td,
 .Ticket .completion-bar.complete .copy,
 .bigButton,
 .answerButton,
-.icon-buttons a,
 .user-image,
 .comments-wrapper,
 .Ticket .barcode .manual-entry input,
-.Ticket .barcode .wrapper .manual-entry a,
-.Ticket .instruction.task .type.barcode .wrapper .manual-entry a,
 .Projects .header .controls .ti {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
@@ -1428,6 +1434,10 @@ input[type="radio"]:checked:after,
 	content: ' ';
 } 
 
+.section-controls .iconButton.camera:before {
+	top: 8px;
+}
+
 .filters .icon-calendar {
 	left: 1px;
 }
@@ -1741,7 +1751,7 @@ header .nav ul.dropdown-menu li,
 }
 
 .subnav li {
-	border-bottom: 7px solid #ffffff;
+	border-bottom: 7px solid transparent;
 }
 
 .instructions .item .actions a.buttonly,
@@ -1823,6 +1833,7 @@ header .nav li,
 	border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
+.Profile .section-actions .button-holder a,
 .calendar-day .store .controls {
 	border-color: transparent;
 }
@@ -1908,12 +1919,20 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   padding: 0 0 0 0;
 }
 
+.subnav .nav-tabs > li > a:hover,
+.subnav .nav-tabs > li > a:focus {
+	background: transparent;
+}
+
 .map .nav-tabs > li > a,
 .map .nav-tabs > li > a:hover,
 .map .nav-tabs > li > a:focus,
 .map .nav-tabs > li.active > a,
 .map .nav-tabs > li.active > a:hover,
-.map .nav-tabs > li.active > a:focus {
+.map .nav-tabs > li.active > a:focus,
+.subnav .nav-tabs > li > a,
+.subnav .nav-tabs > li > a:hover,
+.subnav .nav-tabs > li > a:focus {
 	border: 0px solid transparent;
 }
 
@@ -2251,6 +2270,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 		width: 40px;
 		background: url(../images/default-user-image.gif) 0 0 no-repeat;
 		background-size: 100%;
+	}
+	
+	.Profile .user-image {
+		height: 150px;
+		width: 150px;
 	}
 	
 	img.user-image {
@@ -2706,7 +2730,7 @@ div.main.wrapper + div.inner {
 @media (min-width: 665px) {
 	
 	.subnav li {
-		font-size: 1.5em;
+		font-size: 1.4em;
 		margin-right: 2em;
 	}
 
@@ -5839,7 +5863,6 @@ a.page-action.delete-button span.im {
 	
 }
 
-/* heredeb */
 
 /* Scheduler */
 
@@ -6968,6 +6991,20 @@ a.page-action.delete-button span.im {
 		padding-left: .7em; 
 	}
 	
+}
+
+
+/* Profile */
+
+.Profile .section-actions .button-holder {
+	margin-left: 4px;
+	width: 200px;
+}
+
+.Profile .section-actions .button-holder a {
+	margin-right: 0;
+	margin-bottom: 1px;
+	padding: .7em 1.5em;
 }
 
 /* heredeb */

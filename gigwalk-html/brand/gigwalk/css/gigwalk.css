@@ -161,7 +161,8 @@ html, body {
 	.calendar-day .ticket.incomplete,
 	.calendar .worker-selected .filters-choices .copy,
 	.Ticket .instruction.question .widget-panel-content .answer > .plainLabel,
-	.Ticket .instruction.task .widget-panel-content .answer > .plainLabel {
+	.Ticket .instruction.task .widget-panel-content .answer > .plainLabel,
+	.Profile .user-org {
 		color: #4a4a4a;
 	}
 	
@@ -378,12 +379,27 @@ html, body {
 	.Ticket .instruction.task .photo .icon-buttons a,
 	.Ticket .instruction.task .photo .icon-buttons a.disabled,
 	.Ticket .instruction.task .photo .icon-buttons a.disabled:hover,
-	.Ticket .instruction.task .photo .icon-buttons a.disabled:focus {
+	.Ticket .instruction.task .photo .icon-buttons a.disabled:focus,
+	.Profile .section-actions .button-holder a:hover,
+	.Profile .section-actions .button-holder a:focus {
 		background: rgba(64, 145, 230, .1);
 	}
 	
-	.table-list tr.shown td {
+	.table-list tr.shown td,
+	.calendar-day.today .store .header,
+	.instruction .header .actions,
+	.bigButton:hover,
+	.bigButton:focus,
+	.Ticket .instruction.photo .icon-buttons a:hover,
+	.Ticket .instruction.photo .icon-buttons a:focus,
+	.Ticket .instruction.task .photo .icon-buttons a:hover,
+	.Ticket .instruction.task .photo .icon-buttons a:focus,
+	.Profile .section-actions .button-holder a {
 		background: rgba(64, 145, 230, .2);
+	}
+	
+	.bigButton {
+		border-color: rgba(64, 145, 230, 1);
 	}
 	
 	.messages .message.info,
@@ -393,26 +409,6 @@ html, body {
 	
 	.completion-bar .text {
 		color: #e3eefa;
-	}
-	
-	.calendar-day.today .store .header,
-	.instruction .header .actions,
-	.bigButton:hover,
-	.bigButton:focus,
-	.Ticket .instruction.photo .icon-buttons a:hover,
-	.Ticket .instruction.photo .icon-buttons a:focus,
-	.Ticket .instruction.task .photo .icon-buttons a:hover,
-	.Ticket .instruction.task .photo .icon-buttons a:focus {
-		background: rgba(64, 145, 230, .2);
-	}
-	
-	.pagination .previous,
-	.pagination .next {
-		border-color: rgba(64, 145, 230, .2);
-	}
-	
-	.bigButton {
-		border-color: rgba(64, 145, 230, 1);
 	}
 	
 	.instruction .header .actions,
@@ -597,6 +593,8 @@ html, body {
 		background: #32b0e8;
 	}
 	
+	.pagination .previous,
+	.pagination .next,
 	.filters-choices .choice,
 	.choose-dates a,
 	.quick-select a,
@@ -604,11 +602,11 @@ html, body {
 	.Ticket .section-controls .buttons a.buttonly,
 	.Ticket .comments .primary.actions a.buttonly,
 	.Ticket .barcode .primary.actions a.buttonly {
-		border-color: rgba(64, 145, 230, .7);
+		border-color: rgba(64, 145, 230, .2);
 	}
 	
 	.filters-choices .choice .close {
-		border-left-color: rgba(64, 145, 230, .7);
+		border-left-color: rgba(64, 145, 230, .2);
 	}
 	
 	.calendar-month td.today {
@@ -724,7 +722,9 @@ html, body {
 	
 	header .nav li.alerts .im,
 	header .nav li.messages .im,
-	.subnav li.active a,
+	.subnav .nav-tabs > li > a:hover,
+	.subnav .nav-tabs > li > a:focus,
+	.subnav .nav.nav-tabs > li.active > a, 
 	.instruction-footer .item.count .described,
 	.instruction.view-mode .answer.exception .plainLabel:after,
 	.pin.scheduled:after,

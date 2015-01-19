@@ -136,6 +136,7 @@ th.sorting_desc:after,
 	content: "\e624";
 }
 a.bigButton.photo:before,
+.iconButton.camera:before,
 .icon-camera:before {
 	content: "\e60f";
 }
