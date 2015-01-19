@@ -68,7 +68,8 @@ header nav .user-edit,
 .calendar-month .date-num,
 .comments .attached-file span,
 .Ticket .instruction.barcode .linkly,
-.Ticket .instruction.task .type.barcode .linkly {
+.Ticket .instruction.task .type.barcode .linkly,
+.Profile .user-details {
 	font-size: .9em;
 }
 
@@ -359,7 +360,8 @@ header .nav li.messages .im:before {
 .calendar-month .work,
 .calendar-day a.get-more,
 .Ticket .instruction .header .controls .ti,
-.page-action-panel .warning {
+.page-action-panel .warning,
+.Profile .user-details {
 	line-height: 1.2em;
 }
 
@@ -620,7 +622,8 @@ a.disabled,
 .Ticket .instruction.enter-time .answers .answer:after,
 .instruction.view-mode .type:before,
 .instruction .actions .icon-buttons a.icon-edit:after,
-.section-wrapper:after {
+.section-wrapper:after,
+.Profile .user-details .plainLabel:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -762,7 +765,9 @@ a.page-action,
 .subgroups-detail a,
 .Ticket .barcode .added .upc,
 .Profile .user-info,
-.Profile .section-controls {
+.Profile .section-controls,
+.Profile .user-org,
+.Profile .user-role {
 	display: inline-block;
 	float: left;
 }
@@ -6996,6 +7001,18 @@ a.page-action.delete-button span.im {
 
 /* Profile */
 
+.Profile .user-image {
+	margin-right: 1em;
+}
+
+.Profile .section-controls {
+	margin-top: 1.2em;
+} 
+
+.Profile .change-picture {
+	margin: .8em 0 0 -4px;
+}
+
 .Profile .section-actions .button-holder {
 	margin-left: 4px;
 	width: 200px;
@@ -7005,6 +7022,15 @@ a.page-action.delete-button span.im {
 	margin-right: 0;
 	margin-bottom: 1px;
 	padding: .7em 1.5em;
+}
+
+.Profile .user-org {
+	margin-right: 1.5em;
+}
+
+.Profile .last-activity,
+.Profile .user-details .inner {
+	margin-top: .5em;
 }
 
 /* heredeb */

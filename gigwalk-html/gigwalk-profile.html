@@ -211,11 +211,13 @@
           </div>
           
           <div class="section-controls">
+            <!-- Don't place section-title if user is "me" -->
             <div class="section title">
               Grace Kelly
             </div>
             
             <div class="section-actions">
+              <!-- Don't place change-picture if user is NOT "me" -->
               <div class="change-picture">
                 <a class="iconButton camera">Change Picture</a>
                 <div class="button-holder">
@@ -226,9 +228,10 @@
                 </div>
               </div>
               
-              <div class="user-info">
+              <div class="user-details">
+                <!-- Don't place user-activity if user is "me" -->
                 <div class="user-activity">
-                  <span class="plainLabel">Last Login</span>
+                  <span class="plainLabel">Last activity</span>
                   <span>01/15/2015 at 3:30 p.m.</span>
                 </div>
                 <div class="inner">

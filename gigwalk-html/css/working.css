@@ -5,7 +5,11 @@
 	display: none;
 }
 
-
+.me .section.title,
+.not-me .change-picture,
+.-me .user-activity {
+	display: none;
+}
 
 
 
