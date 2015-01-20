@@ -484,6 +484,7 @@
                   </div>
                 </div>
               </div><!-- ends scheduling preferences -->
+              
               <div class="primary actions">
                 <div class="right">
                   <a class="buttonly cancel" href="javascript:;">Cancel</a>
@@ -797,6 +798,19 @@
                           </div>
                         </div>
                         
+                        <!-- ---------------------------------------------------------------------------------------------- -->
+                        <!-- -------------------------------------DAVE DAVE DAVE------------------------------------------- -->
+                        
+                        <!--  Don't nest subgroups here, since user can belong to a "subgroup" without belonging to parent  -->
+                        
+                        <!--          the groups-subgroups are just nested clusters, not strictly hierarchical 
+                                           though they are visually presented that way (per Merci and CSMK)
+                                               so list by name alphabetically whether group or subgroup                     -->
+                               
+                        <!-- ---------------------------------------------------------------------------------------------- -->
+                        <!-- ---------------------------------------------------------------------------------------------- -->
+                        
+                        
                         <table data-target="dataTable" class="dataTable no-footer" role="grid">
                           <thead>
                             <tr role="row">
@@ -894,131 +908,49 @@
             
             <!-- --------------------- Certifications tab -------------------- -->
             <div class="tab-pane certifications" id="certifications">
-              certifications here
+              
+              <!-- scheduling preferences -->
+              <div class="widget-panel">
+                <div class="header">
+                  <div class="controls">
+                    <div class="ti">
+                      <span class="im icon-checkmark-box"></span>
+                      Certifications
+                    </div>
+                    <div class="arrow">
+                      <span class="im icon-arrow-up"></span>
+                    </div>
+                    <div class="dragger">
+                      <span class="im icon-empty"></span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="widget-panel-content">
+                <!-- --------------------- No "s" in "Certifications" if there is only one -------------------- -->
+                  <div class="section">
+                    <h1>(#) Certifications</h1>
+                    
+                    <div class="cert">Alcoholic Beverage Certification</div>
+                    <div class="cert">Cosmetics Certified</div>
+                    <div class="cert">Digital Signage Certification</div>
+                    <div class="cert">Display Assembly and Deconstruction Certified</div>
+                    <div class="cert">Parks & Recreation</div>
+                    <div class="cert">Pharmaceuticals Certified</div>
+                    <div class="cert">Premier Food Safety Certification&reg;</div>
+                    <div class="cert">Sams Club Warehouse Certification</div>
+                    <div class="cert">Wal-mart Produce and Dairy</div>
+                    
+                  </div>
+                </div>
+              </div><!-- ends certifications -->
+
             </div><!-- ENDS certifications tab -->
             
           </div><!-- ENDS tab panes --> 
         </div> <!-- ENDS Profile tabs --> 
             
       
-      
-        <!-- ****************** TABLE CONTROL BAR ***************** -->
-        
-        <!-- the summary area on the left with action buttons on the right -->
-        <div class="table-list">
-          <div class="controls">
-            <div class="summary">
-              <div class="visible"><span class="value">(#)</span> Groups </div>
-            </div>
-          </div>
-          
-          <!-- ****************** TABLE ***************** -->
-        
-          <table data-target="dataTable" class="dataTable no-footer" role="grid">
-          
-            <thead>
-              <tr role="row">
-                <th class="sorting user-name">
-                  <input type="checkbox" value="select-all" />
-                  Name
-                </th>
-                <th class="sorting zip">
-                  Zip Code
-                </th>
-              </tr>
-            </thead>
-            
-            <tbody>
-            
-              <tr role="row" class="odd">
-                <td class="sorting user-name">
-                  <input type="checkbox" value="select-all" /> 
-                  <a href="javascript:;">Vilma Banky</a>
-                </td>
-                <td class="sorting zip">
-                  90274 
-                </td>
-              </tr>
-              
-              <tr role="row" class="even">
-                <td class="sorting user-name">
-                  <input type="checkbox" value="select-all" /> 
-                  <a href="javascript:;">Lionel Barrymore</a>
-                </td>
-                <td class="sorting zip">
-                  90210 
-                </td>
-              </tr>
-              
-              <tr role="row" class="odd">
-                <td class="sorting user-name">
-                  <input type="checkbox" value="select-all" /> 
-                  <a href="javascript:;">Clark Gable <span>(Admin)</span></a>
-                </td>
-                <td class="sorting zip">
-                  90221 
-                </td>
-              </tr>
-              
-              <tr role="row" class="even">
-                <td class="sorting user-name">
-                  <input type="checkbox" value="select-all" /> 
-                  <a href="javascript:;">Douglas Fairbanks</a>
-                </td>
-                <td class="sorting zip">
-                  90219 
-                </td>
-              </tr>
-              <tr role="row" class="odd">
-                <td class="sorting user-name">
-                  <input type="checkbox" value="select-all" /> 
-                  <a href="javascript:;">Rudolph Valentino</a>
-                </td>
-                <td class="sorting zip">
-                  90244 
-                </td>
-              </tr>
-              <tr role="row" class="even">
-                <td class="sorting user-name">
-                  <input type="checkbox" value="select-all" /> 
-                  <a href="javascript:;">Rudolph Valentino <span>(Operator)</span></a>
-                </td>
-                <td class="sorting zip"> 
-                  90244 
-                </td>
-              </tr>
-              <tr role="row" class="odd canceled">
-                <td class="sorting user-name">
-                  <input type="checkbox" value="select-all" /> 
-                  <a href="javascript:;">Jane Weymouth</a>
-                </td>
-                <td class="sorting zip">
-                  90244 
-                </td>
-              </tr>
-              <tr role="row" class="even expired">
-                <td class="sorting user-name">
-                  <input type="checkbox" value="select-all" /> 
-                  <a href="javascript:;">Jeff York</a>
-                </td>
-                <td class="sorting zip"> 
-                  90244 
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div><!-- end table-list div -->
-  
-        <!-- ****************** PAGINATION ***************** -->
-        <!-- Don't show if there aren't any pages -->
-        <div class="pagination">
-          <div class="inner">
-            <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
-            <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
-          </div>
-        </div>
-        
       <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
     
     

@@ -738,7 +738,8 @@ html, body {
 	.map .requirements-list li:before,
 	.tab-pane .confirm,
 	.confirmation a.closer,
-	.Profile td.number {
+	.Profile td.number,
+	.Profile .cert:before {
 		color: #07a985;
 	}
 	

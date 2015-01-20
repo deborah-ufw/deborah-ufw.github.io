@@ -94,7 +94,8 @@ header nav .user-edit,
 .calendar .action-panel .wrapper input,
 .bigButton,
 .ticket-instructions .widget-panel-content input[type="text"],
-.Profile .scheduling .section.days .plainLabel {
+.Profile .scheduling .section.days .plainLabel,
+.Profile .cert {
 	font-size: 1.1em;
 }
 
@@ -184,11 +185,6 @@ body,
 	font-size: 1.7em;
 }
 
-.Profile .groups td.status span:before,
-.Tickets .dash td.status span:before {
-	font-size: 1.8em;
-}
-
 .Tickets .dash td.status span.paused:before,
 .action.panel h1,
 .action.messages h1,
@@ -230,7 +226,8 @@ input[type="checkbox"]:after {
 	font-size: 19px;
 }
 
-.instruction.view-mode .answer.exception .plainLabel:after {
+.instruction.view-mode .answer.exception .plainLabel:after,
+.Profile .cert:before {
 	font-size: 23px;
 }
 
@@ -238,6 +235,8 @@ input[type="checkbox"]:after {
 	font-size: 25px;
 }
 
+.Profile .groups td.status span:before,
+.Tickets .dash td.status span:before,
 a[href*="tel"]:before {
 	font-size: 29px;
 }
@@ -395,7 +394,8 @@ input[type="password"] {
 .page-action-panel .warning,
 .Profile .user-details,
 .Profile .account .widget-panel-content .section,
-.Profile .static .copy {
+.Profile .static .copy,
+.Profile .cert {
 	line-height: 1.2em;
 }
 
@@ -1023,7 +1023,8 @@ a.attach .im,
 .Projects .settings .group.required > .plainLabel:after,
 .Profile .social .inner,
 .Profile .social .holder,
-.Profile .required {
+.Profile .required,
+.Profile .cert {
 	position: relative;
 }
 
@@ -1051,7 +1052,8 @@ a.page-action span.im,
 .map .requirements-list li:before,
 .Ticket .instruction .header .actions .icon-buttons,
 .Profile .widget-panel .header .ti .im,
-.Profile .required:before {
+.Profile .required:before,
+.Profile .cert:before {
 	position: absolute;
 }
 
@@ -1515,6 +1517,11 @@ input[type="radio"]:checked:after,
 .map .pin:before {
 	content: ' ';
 } 
+
+.Profile .cert:before {
+	top: -1px;
+	left: -28px;
+}
 
 .Profile .social .im {
 	top: 1px;
@@ -7273,6 +7280,14 @@ a.page-action.delete-button span.im {
 
 .Profile .groups th.ownership {
 	width: 135px;
+}
+
+.Profile .certifications .section {
+	margin-left: 1em;
+}
+
+.Profile .cert {
+	margin: .5em 2em .2em 1.8em;
 }
 
 
