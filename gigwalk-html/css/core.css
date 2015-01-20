@@ -152,7 +152,7 @@ a.page-action,
 .calendar-day .ticket .ti .ticketname,
 .calendar-day a.get-more,
 .section-controls .action.panel .filter.search .icon-search,
-.Profile .widget-panel-content .section input {
+.Profile .account .widget-panel-content .section input {
 	font-size: 1.3em;
 }
 
@@ -393,7 +393,7 @@ input[type="password"] {
 .Ticket .instruction .header .controls .ti,
 .page-action-panel .warning,
 .Profile .user-details,
-.Profile .widget-panel-content .section,
+.Profile .account .widget-panel-content .section,
 .Profile .static .copy {
 	line-height: 1.2em;
 }
@@ -449,7 +449,8 @@ header .nav .number,
 .Ticket .instruction.enter-time .widget-panel-content .type,
 .Ticket .instruction.enter-time .time input,
 .Profile .section-actions .button-holder a,
-.Profile .scheduling input {
+.Profile .scheduling input,
+.Profile table .date {
 	text-align: center;
 }
 
@@ -457,7 +458,7 @@ header .nav .number,
 .calendar-month .work,
 .section-controls .action.panel.date .wrapper .inner,
 .widget-panel,
-.Ticket .instruction.photo .answer {
+.Ticket .instruction.photo .answer{
 	text-align: left;
 }
 
@@ -471,7 +472,8 @@ header .nav .number,
 .comments .new .attachment,
 .Profile .password .section .hint,
 .Profile td.primary.actions,
-.Profile td.number {
+.Profile td.number,
+.Profile table .hours {
 	text-align: right;
 }
 
@@ -1074,7 +1076,7 @@ header .navbar-collapse.in {
 .instruction.view-mode .instruction-content .ti,
 .Profile .section-actions .button-holder a,
 .Profile .widget-panel-content .section .plainLabel,
-.Profile .widget-panel-content .section input[type="text"],
+.Profile .account .widget-panel-content .section input[type="text"],
 .Profile .widget-panel-content .section input[type="password"],
 .Profile .scheduling .hint,
 .Profile table {
@@ -4026,8 +4028,8 @@ a.iconly:before {
 .choose-dates {
 	margin-top: -11px;
 	padding: 1.5em 1.5em 2em 1em;
-		top: 55px;
-		right: 0;
+		top: 57px;
+		right: 7px;
 	z-index: 1;
 }
 
@@ -4896,6 +4898,27 @@ td.table-actions a {
 	
 	.worker .Tickets .choose-dates .between input {
 		width: 100px;
+	}
+	
+}
+
+/* Tickets filters fit on small screen */
+@media (max-width: 350px) {
+	
+	.admin .Tickets .filters-holder .view a.map, .admin .Tickets .filters-holder .view a,
+	.worker .Tickets .filters-holder .view a.map, .admin .Tickets .filters-holder .view a {
+		padding-left: .5em;
+		padding-right: .5em;
+	}
+	
+	.admin .Tickets .filters .filter.search input,
+	.worker .Tickets .filters .filter.search input {
+		width: 162px;
+	}
+	
+	.admin .Tickets .filters .wrapper,
+	.worker .Tickets .filters .wrapper {
+		margin-left: -110px;
 	}
 	
 }
@@ -7181,7 +7204,7 @@ a.page-action.delete-button span.im {
 	margin-bottom: -2px;
 }
 
-.Profile .widget-panel-content .section input {
+.Profile .account .widget-panel-content .section input {
 	margin-bottom: 5px;
 }
 
@@ -7230,8 +7253,20 @@ a.page-action.delete-button span.im {
 	margin-top: 2em;
 }
 
-.Profile .summary table td {
-	padding: 8px 0;
+.Profile .filters-holder {
+	padding-top: 0;
+}
+
+.Profile .filter.dates {
+	margin-right: 0;
+}
+
+.Profile .choose-dates {
+	min-width: 330px;
+}
+
+.Profile table td.hours {
+	padding-right: 15px;
 }
 
 
