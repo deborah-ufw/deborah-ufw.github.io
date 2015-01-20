@@ -278,6 +278,14 @@
             <!-- ------------------------- Info tab -------------------------- -->
             <div class="tab-pane account active" id="account">
             
+            <!-- confirmation message -->
+            <div class="tab action messages">
+              <div class="message confirmation">
+                <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+                <h1><span class="im icon-checkmark"></span>Your changes were saved.</h1>
+              </div>
+            </div>
+            
               <div class="widget-panel personal-info">
                 <div class="header">
                   <div class="controls">
@@ -298,50 +306,54 @@
                   <div class="section name">
                     <div class="wrapper">
                       <label class="plainLabel">First Name</label>
-                      <input placeholder="First Name" />
+                      <input type="text" placeholder="First Name" />
                     </div>
                     <div class="wrapper">
                       <label class="plainLabel">Last Name</label>
-                      <input placeholder="Last Name" />
+                      <input type="text" placeholder="Last Name" />
                     </div>
                   </div>
                   <div class="section contact">
                     <div class="wrapper">
                       <label class="plainLabel">Mobile Phone Number</label>
-                      <input placeholder="(000) 000-0000" />
-                      <input placeholder="email@company.com" />
+                      <input type="text" placeholder="(000) 000-0000" />
+                      <input type="text" placeholder="email@company.com" />
                     </div>
                   </div>
                   <div class="section address">
                     <div class="wrapper">
                       <label class="plainLabel">Address</label>
-                      <input placeholder="Street Address" />
-                      <input placeholder="Suite" />
-                      <input placeholder="city" />
+                      <input type="text" placeholder="Street Address" />
+                      <input type="text" placeholder="Suite" />
+                      <input type="text" placeholder="City" />
                       <div class="inner">
-                        <input class="state" placeholder="State" />
-                        <input class="zip" placeholder="Zip Code" />
+                        <input type="text" class="state" placeholder="State" />
+                        <input type="text" class="zip" placeholder="Zip Code" />
                       </div>
                     </div>
                   </div>
                   <div class="section social">
-                    <div class="wrapper">
-                      <label class="plainLabel">
-                        Linking your accounts does not allow other users 
-                        to post to them or see your activity.
-                      </label>
-                      <div class="inner">
-                        <span class="im icon-LinkedIn"></span>
-                        <input placeholder="Your LinkedIn profile URL" />
+                    <div class="hint">
+                      Linking your accounts does not allow other users 
+                      to post to them or see your activity.
+                    </div>
+                    <div class="inner">
+                      <span class="im icon-LinkedIn"></span>
+                      <div class="holder">
+                        <input type="text" placeholder="Your LinkedIn profile URL" />
                       </div>
-                      <div class="inner">
-                        <span class="im icon-Facebook"></span>
-                        <input placeholder="Your Facebook profile URL" />
-                      </div>
-                      <div class="inner">
-                        <span class="im icon-GooglePlus"></span>
-                        <input placeholder="Your Google&#43; profile URL" />
-                      </div>
+                    </div>
+                    <div class="inner">
+                      <span class="im icon-Facebook"></span>
+                      <div class="holder">
+                        <input type="text" placeholder="Your Facebook profile URL" />
+                      </div>  
+                    </div>
+                    <div class="inner">
+                      <span class="im icon-GooglePlus"></span>
+                      <div class="holder">
+                        <input type="text" placeholder="Your Google&#43; profile URL" />
+                      </div>  
                     </div>
                   </div>
                 </div><!-- ends widget panel content -->
@@ -360,6 +372,15 @@
                     <div class="dragger">
                       <span class="im icon-empty"></span>
                     </div>
+                  </div>
+                </div>
+                
+                <div class="widget-panel-content">
+                  <div class="section">
+                    <input type="password" maxlength="255" placeholder="Old Password" data-action="oldPassword" />
+                    <div class="hint">Must be at least 6 characters</div>
+                    <input type="password" maxlength="255" placeholder="New Password" data-action="newPassword" />
+                    <input type="password" maxlength="255" placeholder="Re-type New Password" data-action="retypedPassword" />
                   </div>
                 </div>
               </div><!-- ends password -->
@@ -382,10 +403,43 @@
                 
                 <div class="widget-panel-content">
                   <div class="section">
+                    <h1>Preferred working days</h1>
+                    <label class="plainLabel"><input type="checkbox" value="Monday">
+                      Monday
+                    </label>
+                    <label class="plainLabel"><input type="checkbox" value="Tuesday">
+                      Tuesday
+                    </label>
+                    <label class="plainLabel"><input type="checkbox" value="Wednesday">
+                      Wednesday
+                    </label>
+                    <label class="plainLabel"><input type="checkbox" value="Thursday">
+                      Thursday
+                    </label>
+                    <label class="plainLabel"><input type="checkbox" value="Friday">
+                      Friday
+                    </label>
+                    <label class="plainLabel"><input type="checkbox" value="Saturday">
+                      Saturday
+                    </label>
+                    <label class="plainLabel"><input type="checkbox" value="Sunday">
+                      Sunday
+                    </label>
+                    
+                  </div>
+                  <div class="section">
+                    <h1>Desired hours per week</h1>
+                    <span>For internal use only</span>
+                    <input placeholder="ex. 8" />
                   </div>
                 </div>
               </div><!-- ends scheduling preferences -->
-              
+              <div class="primary actions">
+                <div class="right">
+                  <a class="buttonly cancel" href="javascript:;">Cancel</a>
+                  <a class="buttonly" href="javascript:;">Save</a>
+                </div>
+              </div>
               
             </div><!-- ENDS info tab -->
             

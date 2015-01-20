@@ -92,7 +92,8 @@ header nav .user-edit,
 .calendar-day .ticket,
 .calendar .action-panel .wrapper,
 .calendar .action-panel .wrapper input,
-.bigButton {
+.bigButton,
+.ticket-instructions .widget-panel-content input[type="text"] {
 	font-size: 1.1em;
 }
 
@@ -108,7 +109,9 @@ header nav .user-edit,
 .calendar .header,
 .calendar .action-panel .primary.actions,
 .ticket-summary .widget-panel .area,
-.ticket-instructions .widget-panel-content {
+.ticket-instructions .widget-panel-content,
+.Profile .tab-pane.account .primary.actions,
+.item.time-estimate input[type="text"] {
 	font-size: 1.15em;
 }
 
@@ -147,7 +150,8 @@ a.page-action,
 .calendar-day .ticket .ti .time,
 .calendar-day .ticket .ti .ticketname,
 .calendar-day a.get-more,
-.section-controls .action.panel .filter.search .icon-search {
+.section-controls .action.panel .filter.search .icon-search,
+.Profile .widget-panel-content .section input {
 	font-size: 1.3em;
 }
 
@@ -348,7 +352,10 @@ header .nav li.messages .im:before {
 .map .tab-pane .ticketlink,
 .map .tab-pane .requirements-list li,
 .page-action-panel .warning,
-.subnav .nav.nav-tabs > li > a {
+.subnav .nav.nav-tabs > li > a,
+.Profile .widget-panel-content .section .plainLabel,
+input[type="text"],
+input[type="password"] {
 	line-height: 1em; 
 }
 
@@ -371,7 +378,8 @@ header .nav li.messages .im:before {
 .calendar-day a.get-more,
 .Ticket .instruction .header .controls .ti,
 .page-action-panel .warning,
-.Profile .user-details {
+.Profile .user-details,
+.Profile .widget-panel-content .section {
 	line-height: 1.2em;
 }
 
@@ -440,7 +448,8 @@ header .nav .number,
 .calendar-day .ticket .continue,
 .Ticket .comments .new .attacher,
 .Ticket .comments .new .actions,
-.comments .new .attachment {
+.comments .new .attachment,
+.Profile .password .section .hint {
 	text-align: right;
 }
 
@@ -778,7 +787,8 @@ a.page-action,
 .Profile .user-info,
 .Profile .section-controls,
 .Profile .user-org,
-.Profile .user-role {
+.Profile .user-role,
+.Profile .widget-panel-content .section {
 	display: inline-block;
 	float: left;
 }
@@ -824,7 +834,8 @@ input[type="radio"],
 .Ticket .instruction.task .time input,
 .Ticket .instruction.time .time input,
 .Ticket .instruction.enter-time .time .dropdown,
-.Ticket .instruction.task .type.photo .placement .plainLabel {
+.Ticket .instruction.task .type.photo .placement .plainLabel,
+.Profile .social .im {
 	float: left;
 }
 
@@ -847,6 +858,14 @@ input[type="radio"],
 .comments .new .attached-file .remove,
 .Ticket .barcode .remove {
 	float: none;
+}
+
+.Profile .widget-panel .header,
+.subgroups-detail,
+.subgroups-detail a,
+.Profile .section.address,
+.Profile .account .primary.actions {
+	clear: both;
 }
 
 .custom-select,
@@ -972,7 +991,9 @@ a.attach .im,
 .nav-active-holder:after,
 .filters-holder,
 .Projects .settings .group.required > .plainLabel,
-.Projects .settings .group.required > .plainLabel:after {
+.Projects .settings .group.required > .plainLabel:after,
+.Profile .social .inner,
+.Profile .social .holder {
 	position: relative;
 }
 
@@ -1024,7 +1045,9 @@ header .navbar-collapse.in {
 .Ticket .instruction.photo .added .icon-buttons,
 .Ticket .instruction.task .photo .added .icon-buttons,
 .instruction.view-mode .instruction-content .ti,
-.Profile .section-actions .button-holder a {
+.Profile .section-actions .button-holder a,
+.Profile .widget-panel-content .section .plainLabel,
+.Profile .widget-panel-content .section input {
 	width: 100%;
 }
 
@@ -1453,6 +1476,10 @@ input[type="radio"]:checked:after,
 	content: ' ';
 } 
 
+.Profile .social .im {
+	top: 1px;
+}
+
 .Profile .widget-panel .header .ti .im.icon-settings {
 	top: -7px;
 	left: 0;
@@ -1831,7 +1858,8 @@ header .nav li,
 
 .topborder,
 .section-controls .action.panel,
-.Ticket .instruction .divider:before {
+.Ticket .instruction .divider:before,
+.Profile .tab-pane.account .primary.actions {
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -2204,9 +2232,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	}
 	
 	input[type="text"],
-	input[type="textarea"] {
+	input[type="textarea"],
+	input[type="password"] {
 		margin-top: 1px;
-		padding: 4px;
+		padding: 5px 4px 3px 4px;
 	}
 	
 	input.datepicker {
@@ -3295,7 +3324,7 @@ div.main.wrapper + div.inner {
 .Ticket .instruction.task .time input,
 .Ticket .instruction.time .time input {
 	margin: 0 0 0 0;
-	padding-right: 4px;
+	padding: 5px 4px 4px 4px;
 	width: 60px;
 }
 
@@ -3330,7 +3359,8 @@ div.main.wrapper + div.inner {
 }
 
 .instruction.view-mode .time .btn.btn-default.dropdown-toggle,
-.Ticket .instruction .time .btn.btn-default.dropdown-toggle {
+.Ticket .instruction .time .btn.btn-default.dropdown-toggle,
+.item.time-estimate .btn.btn-default.dropdown-toggle {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
@@ -4072,6 +4102,7 @@ a.iconly:before {
 
 .table-list h1,
 .page.action.messages h1,
+.tab.action.messages h1,
 .section-controls .action.panel h1,
 .calendar .action-panel h1,
 .calendar-day h1.graphic {
@@ -4084,7 +4115,8 @@ a.iconly:before {
 	padding-bottom: 0;
 }
 
-.action.messages .message h1 {
+.action.messages .message h1,
+.tab.action.messages .message h1 {
 	padding-top: .1em;
 }
 
@@ -5477,13 +5509,11 @@ a.page-action.delete-button span.im {
 	margin-top: 3px;
 	padding-bottom: 2em;
 	min-width: 310px;
-	clear: both;
 }
 
 .subgroups-detail a {
 	margin: .2em 0;
 	padding: 0 1em;
-	clear: both;
 }
 
 .subgroups-detail a.helper {
@@ -6697,7 +6727,7 @@ a.page-action.delete-button span.im {
 }
 
 .Ticket .instruction .numeric input {
-	width: 107px;
+	width: 135px;
 }
 
 .Ticket .instruction .answer textarea {
@@ -7068,12 +7098,60 @@ a.page-action.delete-button span.im {
 }
 
 .Profile .widget-panel .header {
-	margin-bottom: 4px;
+	margin-bottom: 1em;
 	padding: 2px 0 1px 0;
 }
 
 .Profile .widget-panel .header .ti {
 	padding-left: 1.8em;
+}
+
+.tab.action.messages {
+	margin: -.5em 0 .5em 0;
+}
+
+.tab.action.messages .message h1 {
+	margin: 0 0 0 0;
+}
+
+.Profile .tab-pane.account .primary.actions {
+	margin-top: 3em;
+	padding-top: 1em;
+}
+
+.Profile .widget-panel-content .section {
+	margin-bottom: 1.5em;
+	padding-right: 1.5em;
+	width: 50%;
+}
+
+.Profile .widget-panel-content .plainLabel {
+	margin-bottom: -2px;
+}
+
+.Profile .widget-panel-content .section input {
+	margin-bottom: 5px;
+}
+
+.Profile .section.address input.state {
+	margin-right: .5em;
+	width: 60px;
+}
+
+.Profile .section.address input.zip {
+	width: 105px;
+}
+
+.Profile .password .section .hint {
+	margin: -3px 0 8px 0;
+}
+
+.Profile .primary.actions .right {
+	margin-right: 0;
+}
+
+.Profile .social .holder  {
+	padding-left: 38px;
 }
 
 /* heredeb */
