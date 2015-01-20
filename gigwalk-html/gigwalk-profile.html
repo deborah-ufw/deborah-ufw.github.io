@@ -748,7 +748,148 @@
             
             <!-- ------------------------ Groups tab ------------------------- -->
             <div class="tab-pane groups" id="groups">
-              groups here
+             
+            <!-- hours submitted -->
+                <div class="widget-panel groups">
+                  <div class="header">
+                    <div class="controls">
+                      <div class="ti">
+                        <span class="im icon-group"></span>
+                        Groups
+                      </div>
+                      <div class="arrow">
+                        <span class="im icon-arrow-up"></span>
+                      </div>
+                      <div class="dragger">
+                        <span class="im icon-empty"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="widget-panel-content">
+                    <div class="section">
+                      <!-- -------------- filters for the groups table ---------------- -->
+                      <div class="filters-holder">
+                        <div class="filters">
+                          <div class="wrapper">
+                            <div class="filter search">
+                              <input type="text" placeholder="Search" />
+                              <span class="im icon-search"></span>
+                            </div>
+                          </div><!-- end wrapper -->
+                        </div><!-- end filters (right side) -->
+                      </div><!-- end filters holder (all) -->
+                      
+                      <div class="filters-choices">
+                        <div class="choice searched">
+                          <div class="value">I'm a choice</div>
+                          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+                        </div>
+                      </div><!-- end filters selections -->
+                      
+                      <!-- -------------------- groups table ------------------- -->
+                      
+                      <div class="table-list">
+                        <div class="controls">
+                          <div class="summary">
+                            <!-- ------------------------- No "s" in "Groups" if only one Group ------------------------- -->
+                            <div class="visible"><span class="value">(#)</span> <span class="descr-before"></span>Groups</div>
+                          </div>
+                        </div>
+                        
+                        <table data-target="dataTable" class="dataTable no-footer" role="grid">
+                          <thead>
+                            <tr role="row">
+                              <th class="sorting name">
+                                Group Name
+                              </th>
+                              <th class="sorting ownership status">
+                                Ownership
+                              </th>
+                            </tr>
+                          </thead>
+                          
+                          <tbody>
+                          
+                            <tr role="row" class="odd">
+                              <td class="sorting name">
+                                <a href="javascript:;">
+                                  Alerts Alpha 
+                                </a>
+                              </td>
+                              <td class="sorting status">
+                              </td>
+                            </tr>
+                            
+                            <tr role="row" class="even">
+                              <td class="sorting name">
+                                <a href="javascript:;">
+                                  Drug Stores
+                                </a>
+                              </td>
+                              <td class="sorting status">
+                              </td>
+                            </tr>
+                            
+                            <tr role="row" class="odd">
+                              <td class="sorting name">
+                                <a href="javascript:;">
+                                  Grocery Stores
+                                </a>
+                              </td>
+                              <td class="sorting status">
+                              </td>
+                            </tr>
+                            
+                            <tr role="row" class="even"> 
+                              <td class="sorting name">
+                                <a href="javascript:;">
+                                  Keebler
+                                </a>
+                              </td>
+                              <td class="sorting status">
+                                <span class="submitted"></span> 
+                              </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                              <td class="sorting name">
+                                <a href="javascript:;">
+                                  Maybelline
+                                </a>
+                              </td>
+                              <td class="sorting status">
+                                <span class="submitted"></span>
+                              </td>
+                            </tr>
+                            <tr role="row" class="even">
+                              <td class="sorting name">
+                                <a href="javascript:;">
+                                  Megastores
+                                </a>
+                              </td>
+                              <td class="sorting status">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      
+                      <!-- -------------------- ENDS hours table ------------------- -->
+                      
+                      <!-- ----------------------- Pagination ---------------------- -->
+                      <!-- ****** If there are no pages, do not place the div ****** -->
+                      <div class="pagination">
+                        <div class="inner">
+                          <a class="previous" href="javascript:;"><span class="im icon-previous"></span></a>
+                          <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+                </div><!-- ENDS groups section -->
+
             </div><!-- ENDS groups tab -->
             
             <!-- --------------------- Certifications tab -------------------- -->

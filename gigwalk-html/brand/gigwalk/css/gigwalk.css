@@ -734,6 +734,7 @@ html, body {
 	.confirmation h1,
 	.confirmation .icon-checkmark,
 	.Tickets .dash td.status span.submitted:before,
+	.Profile .groups td.status span:before,
 	.map .requirements-list li:before,
 	.tab-pane .confirm,
 	.confirmation a.closer,

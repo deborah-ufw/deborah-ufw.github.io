@@ -26,6 +26,7 @@
 .iconButton:before,
 th.sorting:after,
 .Tickets .dash td.status span:before,
+.Profile .groups td.status span:before,
 .map .nav-tabs > li > a:before,
 .map a.collapse:before,
 .checker .supercheck:after,
@@ -80,6 +81,7 @@ a.bigButton:before {
 input[type="checkbox"]:after,
 .Tickets .dash td.status span:before,
 .admin .Tickets .dash td.status span.started.paused:before, 
+.Profile .groups td.status span:before,
 .icon-checkmark:before {
 	content: "\e616";
 }

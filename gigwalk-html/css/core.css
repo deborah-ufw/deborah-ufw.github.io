@@ -184,6 +184,7 @@ body,
 	font-size: 1.7em;
 }
 
+.Profile .groups td.status span:before,
 .Tickets .dash td.status span:before {
 	font-size: 1.8em;
 }
@@ -450,7 +451,8 @@ header .nav .number,
 .Ticket .instruction.enter-time .time input,
 .Profile .section-actions .button-holder a,
 .Profile .scheduling input,
-.Profile table .date {
+.Profile table .date,
+.Profile .groups td.ownership {
 	text-align: center;
 }
 
@@ -7267,6 +7269,10 @@ a.page-action.delete-button span.im {
 
 .Profile table td.hours {
 	padding-right: 15px;
+}
+
+.Profile .groups th.ownership {
+	width: 135px;
 }
 
 
