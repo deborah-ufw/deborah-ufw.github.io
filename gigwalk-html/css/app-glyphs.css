@@ -296,6 +296,18 @@ a.bigButton.barcode:before,
 .icon-upc:before {
 	content: "\e63d";
 }
+.icon-LinkedIn:before {
+	content: "\e63e";
+	color: #0075b6;
+}
+.icon-Facebook:before {
+	content: "\e63f";
+	color: #365a9b;
+}
+.icon-GooglePlus:before {
+	content: "\e640";
+	color: #de4d31;
+}
 
 /* paste new characters just above this line */
 

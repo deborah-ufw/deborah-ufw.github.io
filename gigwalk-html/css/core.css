@@ -49,7 +49,8 @@ header nav .user-edit,
 .calendar .calendar-month .date-num:after,
 .Ticket .completion-bar.complete span.percent-text,
 .Ticket .instruction.required .optional,
-.picker-switch.accordion-toggle {
+.picker-switch.accordion-toggle,
+.Profile .widget-panel .header .arrow {
 	display: none;
 }
 
@@ -270,9 +271,18 @@ th.sorting_desc:after,
 	font-size: 38px;
 }
 
+.Profile .widget-panel .header .ti .im.icon-settings:before,
 .filters-holder .view a .im:before,
 .filter.dates .im:before {
 	font-size: 40px;
+}
+
+.Profile .widget-panel .header .ti .im.icon-lock:before {
+	font-size: 44px;
+}
+
+.Profile .widget-panel .header .ti .im.icon-time:before {
+	font-size: 46px;
 }
 
 .action.messages .message .im:before {
@@ -742,7 +752,8 @@ a.page-action,
 .instruction.enter-time .answers,
 .breaker,
 .Groups .table-list .details-control a,
-.Profile .section-actions .button-holder a {
+.Profile .section-actions .button-holder a,
+.Profile .widget-panel .header .ti .im {
 	display: inline-block;
 }
 
@@ -987,7 +998,8 @@ a.page-action span.im,
 .Ticket .instruction.complete .ti.type:before,
 .attachment.image .im,
 .map .requirements-list li:before,
-.Ticket .instruction .header .actions .icon-buttons {
+.Ticket .instruction .header .actions .icon-buttons,
+.Profile .widget-panel .header .ti .im {
 	position: absolute;
 }
 
@@ -1217,7 +1229,8 @@ textarea {
 .calendar .view a.active:focus,
 .calendar th,
 .calendar .past,
-.editable:after {
+.editable:after,
+.Profile .widget-panel .header {
 	color: #ababab; 
 }
 
@@ -1242,7 +1255,8 @@ a.iconButton.disabled:focus,
 .instruction .item.targets .sub .mini-panel,
 .action.panel,
 .map .tabs-control,
-.calendar .action-panel {
+.calendar .action-panel,
+.Profile .widget-panel .header {
 	background: #f8f8f8;
 }
 
@@ -1439,6 +1453,21 @@ input[type="radio"]:checked:after,
 	content: ' ';
 } 
 
+.Profile .widget-panel .header .ti .im.icon-settings {
+	top: -7px;
+	left: 0;
+}
+
+.Profile .widget-panel .header .ti .im.icon-lock {
+	top: -10px;
+	left: -4px;
+}
+
+.Profile .widget-panel .header .ti .im.icon-time {
+	top: -9px;
+	left: -4px;
+}
+
 .section-controls .iconButton.camera:before {
 	top: 8px;
 }
@@ -1601,7 +1630,8 @@ input[type="radio"]:checked:after,
 	top: 8px;
 }
 
-.calendar-day .header .time:before {
+.calendar-day .header .time:before,
+.Profile .widget-panel .header .ti .im:before {
 	top: 0;
 	left: 0;
 }
@@ -7031,6 +7061,19 @@ a.page-action.delete-button span.im {
 .Profile .last-activity,
 .Profile .user-details .inner {
 	margin-top: .5em;
+}
+
+.Profile .subcontent.primary  {
+	max-width: 700px;
+}
+
+.Profile .widget-panel .header {
+	margin-bottom: 4px;
+	padding: 2px 0 1px 0;
+}
+
+.Profile .widget-panel .header .ti {
+	padding-left: 1.8em;
 }
 
 /* heredeb */
