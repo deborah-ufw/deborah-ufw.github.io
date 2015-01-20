@@ -176,7 +176,6 @@
       <li class="active"><a href="gigwalk-groups-dash.html">Organizations</a></li>
       <li><a href="gigwalk-project-builder.html">Projects</a></li>
       <li><a href="gigwalk-ticket-dash-schedluer.html">Tickets</a></li>
-      <li><a href="javascript:;">People</a></li>
       <li><a href="javascript:;">Resources</a></li>
     </ul>
   </nav><!-- ends side nav -->
@@ -286,6 +285,7 @@
               </div>
             </div>
             
+              <!-- personal information -->
               <div class="widget-panel personal-info">
                 <div class="header">
                   <div class="controls">
@@ -401,6 +401,7 @@
                 </div><!-- ends widget panel content -->
               </div><!-- ends personal information -->
               
+              <!-- password -->
               <div class="widget-panel password">
                 <div class="header">
                   <div class="controls">
@@ -433,6 +434,7 @@
                 </div>
               </div><!-- ends password -->
               
+              <!-- scheduling preferences -->
               <div class="widget-panel scheduling">
                 <div class="header">
                   <div class="controls">
@@ -493,7 +495,259 @@
             
             <!-- ------------------------- Work tab -------------------------- -->
             <div class="tab-pane work" id="work">
-              work here
+              
+              <!-- summary -->
+              <div class="widget-panel summary">
+                  <div class="header">
+                    <div class="controls">
+                      <div class="ti">
+                        <span class="im icon-ticket"></span>
+                        Summary
+                      </div>
+                      <div class="arrow">
+                        <span class="im icon-arrow-up"></span>
+                      </div>
+                      <div class="dragger">
+                        <span class="im icon-empty"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="widget-panel-content">
+                    <div class="section">
+                      <table>
+                        <tr>
+                          <td class="tickets">Active Tickets</td>
+                          <td class="number">206</td>
+                          <td class="primary actions">
+                            <a class="buttonly">Show in List</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tickets">Submitted Tickets</td>
+                          <td class="number">12,513</td>
+                          <td class="primary actions">
+                            <a class="buttonly">Show in List</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div><!-- ends summary -->
+                
+                <!-- hours submitted -->
+                <div class="widget-panel submitted">
+                  <div class="header">
+                    <div class="controls">
+                      <div class="ti">
+                        <span class="im icon-time"></span>
+                        Hours Submitted
+                      </div>
+                      <div class="arrow">
+                        <span class="im icon-arrow-up"></span>
+                      </div>
+                      <div class="dragger">
+                        <span class="im icon-empty"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="widget-panel-content">
+                    <div class="section">
+                      <!-- -------------- filters for the hours table ---------------- -->
+                      <div class="filters-holder">
+                        
+                        <div class="filters">
+                          <div class="wrapper">
+                            <div class="filter search">
+                              <input type="text" placeholder="Search" />
+                              <span class="im icon-search"></span>
+                            </div>
+                            <div class="filter dates"><span class="im icon-calendar"></span></div>
+                            
+                            <div class="choose-dates">
+                              <div class="quick-select">
+                                <a href="javascript:;">Today</a>
+                                <a href="javascript:;">Tomorrow</a>
+                                <a href="javascript:;">This week</a>
+                              </div>
+                              <div class="between">
+                                <label>Between</label>
+                                <input class="datepicker datetimepicker1" type="text" /> and <input class="datepicker datetimepicker2" type="text" />
+                              </div>
+                              <div class="warning">Please select a valid date range.</div>
+                              <div class="actions">
+                              
+                                <!-- Annotation 8 - add the cancel button -->
+                                <a class="cancel" href="javascript:;">Cancel</a>
+                                
+                                <a class="buttonly" href="javascript:;">Submit</a>
+                              </div>
+                            </div><!-- end date choosing panel -->
+                          </div><!-- end wrapper -->
+                        </div><!-- end filters (right side) -->
+                      </div><!-- end filters holder (all) -->
+                      
+                      <div class="filters-choices">
+                        <div class="choice searched">
+                          <div class="value">Jimmy Stewart</div>
+                          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+                        </div>
+                        <div class="choice date">
+                          <div class="value">Today</div>
+                          <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+                        </div>
+                      </div><!-- end filters selections -->
+                      
+                      <!-- -------------------- hours table ------------------- -->
+                      
+                      <div class="table-list">
+                        <table data-target="dataTable" class="dataTable no-footer" role="grid">
+                          <thead>
+                            <tr role="row">
+                              <th class="sorting project-title">
+                                Ticket
+                              </th>
+                              <th class="sorting date">
+                                Date
+                              </th>
+                              <th class="sorting hours">
+                                Hours
+                              </th>
+                            </tr>
+                          </thead>
+                          
+                          <tbody>
+                          
+                            <tr role="row" class="odd">
+                              <td class="sorting project-title">
+                                <input type="checkbox" value="select-all" /> 
+                                <a href="javascript:;">
+                                  Cover Girl Fall 2015 Eyeshadow Reset 
+                                </a>
+                              </td>
+                              <td class="sorting date">
+                                11/04/2014 
+                              </td>
+                              <td class="sorting hours">
+                                3:00 
+                              </td>
+                            </tr>
+                            
+                            <tr role="row" class="even">
+                              <td class="sorting project-title">
+                                <input type="checkbox" value="select-all" /> 
+                                <a href="javascript:;">
+                                  05.16.15 Product Distribution - Snickers 
+                                </a>
+                              </td>
+                              <td class="sorting date">
+                                11/04/2014 
+                              </td>
+                              <td class="sorting hours">
+                                3:00 
+                              </td>
+                            </tr>
+                            
+                            <tr role="row" class="odd">
+                              <td class="sorting project-title">
+                                <input type="checkbox" value="select-all" /> 
+                                <a href="javascript:;">
+                                  New Product Cut-in - Kikkoman Gluten-Free Soy Sauce 
+                                </a>
+                              </td>
+                              <td class="sorting date">
+                                11/04/2014 
+                              </td>
+                              <td class="sorting hours">
+                                3:00 
+                              </td>
+                            </tr>
+                            
+                            <tr role="row" class="even">
+                              <td class="sorting project-title">
+                                <input type="checkbox" value="select-all" /> 
+                                <a href="javascript:;">
+                                  Atlas Alerts 918-215419650
+                                </a>
+                              </td>
+                              <td class="sorting date">
+                                11/04/2014 
+                              </td>
+                              <td class="sorting hours">
+                                3:00 
+                              </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                              <td class="sorting project-title">
+                                <input type="checkbox" value="select-all" /> 
+                                <a href="javascript:;">
+                                  New Product Cut-in - Kikkoman Gluten-Free Soy Sauce
+                                </a>
+                              </td>
+                              <td class="sorting date">
+                                11/04/2014 
+                              </td>
+                              <td class="sorting hours">
+                                3:00 
+                              </td>
+                            </tr>
+                            <tr role="row" class="even">
+                              <td class="sorting project-title">
+                                <input type="checkbox" value="select-all" /> 
+                                <a href="javascript:;">
+                                  Atlas Alerts 918-215419650
+                                </a>
+                              </td>
+                              <td class="sorting date">
+                                11/04/2014 
+                              </td>
+                              <td class="sorting hours">
+                                3:00 
+                              </td>
+                            </tr>
+                            <tr role="row" class="odd canceled">
+                              <td class="sorting project-title">
+                                <input type="checkbox" value="select-all" /> 
+                                <a href="javascript:;">
+                                  Cover Girl Fall 2015 Eyeshadow Reset
+                                </a>
+                              </td>
+                              <td class="sorting date">
+                                11/04/2014 
+                              </td>
+                              <td class="sorting hours">
+                                3:00 
+                              </td>
+                            </tr>
+                            <tr role="row" class="even expired">
+                              <td class="sorting project-title">
+                                <input type="checkbox" value="select-all" /> 
+                                <a href="javascript:;">
+                                  Cover Girl Fall 2015 Eyeshadow Reset
+                                </a>
+                              </td>
+                              <td class="sorting date">
+                                11/04/2014 
+                              </td>
+                              <td class="sorting hours">
+                                3:00 
+                              </td>
+                            </tr>
+                            
+                          </tbody>
+                          
+                        </table>
+                      
+                      </div>
+                      
+                      <!-- -------------------- ENDS hours table ------------------- -->
+                      
+                      
+                    </div>
+                  </div>
+                </div><!-- ENDS hours submitted -->
+
             </div><!-- ENDS work tab -->
             
             <!-- ------------------------ Groups tab ------------------------- -->

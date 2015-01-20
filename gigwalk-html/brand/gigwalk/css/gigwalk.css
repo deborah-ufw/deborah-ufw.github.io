@@ -173,7 +173,8 @@ html, body {
 	.Ticket .instruction .hint,
 	.answerButton.disabled,
 	.answerButton.disabled:hover,
-	.answerButton.submit.disabled {
+	.answerButton.submit.disabled,
+	.Profile .hint  {
 		color: #ababab;
 	}
 	
@@ -735,7 +736,8 @@ html, body {
 	.Tickets .dash td.status span.submitted:before,
 	.map .requirements-list li:before,
 	.tab-pane .confirm,
-	.confirmation a.closer {
+	.confirmation a.closer,
+	.Profile td.number {
 		color: #07a985;
 	}
 	

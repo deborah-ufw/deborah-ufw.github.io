@@ -111,7 +111,7 @@ header nav .user-edit,
 .calendar .action-panel .primary.actions,
 .ticket-summary .widget-panel .area,
 .ticket-instructions .widget-panel-content,
-.Profile .tab-pane.account .primary.actions,
+.Profile .primary.actions,
 .item.time-estimate input[type="text"] {
 	font-size: 1.15em;
 }
@@ -175,7 +175,8 @@ body,
 }
 
 .header .controls .ti,
-.Profile h1 {
+.Profile h1,
+.Profile td.tickets {
 	font-size: 1.6em;
 }
 
@@ -203,6 +204,10 @@ body,
 
 .calendar .view-bar .date-statement {
 	font-size: 2.3em;
+}
+
+.Profile td.number {
+	font-size: 3em;
 }
 
 
@@ -269,7 +274,8 @@ th.sorting_desc:after,
 .filter.search .icon-search:before,
 .Ticket .instruction.complete .ti.type:before,
 .tabnav .icon-pencil-box:before,
-.map-drawer .tabs-control a.collapse:before {
+.map-drawer .tabs-control a.collapse:before,
+.Profile .widget-panel .header .ti .im.icon-ticket:before {
 	font-size: 36px;
 }
 
@@ -392,6 +398,10 @@ input[type="password"] {
 	line-height: 1.2em;
 }
 
+.Profile td.primary.actions a.buttonly {
+	line-height: 1.4em;
+}
+
 label,
 th {
 	font-weight: normal;
@@ -459,7 +469,9 @@ header .nav .number,
 .Ticket .comments .new .attacher,
 .Ticket .comments .new .actions,
 .comments .new .attachment,
-.Profile .password .section .hint {
+.Profile .password .section .hint,
+.Profile td.primary.actions,
+.Profile td.number {
 	text-align: right;
 }
 
@@ -801,7 +813,7 @@ a.page-action,
 .Profile .section-controls,
 .Profile .user-org,
 .Profile .user-role,
-.Profile .widget-panel-content .section {
+.Profile .account .widget-panel-content .section {
 	display: inline-block;
 	float: left;
 }
@@ -1064,7 +1076,8 @@ header .navbar-collapse.in {
 .Profile .widget-panel-content .section .plainLabel,
 .Profile .widget-panel-content .section input[type="text"],
 .Profile .widget-panel-content .section input[type="password"],
-.Profile .scheduling .hint {
+.Profile .scheduling .hint,
+.Profile table {
 	width: 100%;
 }
 
@@ -1094,7 +1107,10 @@ header .navbar-collapse.in {
 }
 
 .instruction .image,
-.hint .image {
+.hint .image,
+nav.sidenav,
+.calendar-month td,
+div.main.wrapper + div.inner {
 	vertical-align: top;
 }
 
@@ -1235,8 +1251,7 @@ textarea {
 
 .ticket-summary .widget-panel .controls,
 .comments .new .attachment,
-.calendar .header .arrow .im:before,
-.Profile .hint {
+.calendar .header .arrow .im:before {
 	color: #6e6e6e;
 }
 
@@ -1272,7 +1287,8 @@ textarea {
 .calendar .past,
 .editable:after,
 .Profile .widget-panel .header,
-.Profile .widget-panel-content h1 {
+.Profile .widget-panel-content h1,
+.Profile td.tickets {
 	color: #ababab; 
 }
 
@@ -1500,6 +1516,10 @@ input[type="radio"]:checked:after,
 	top: 1px;
 }
 
+.Profile .widget-panel .header .ti .im.icon-ticket {
+	top: -3px;
+}
+
 .Profile .widget-panel .header .ti .im.icon-settings {
 	top: -7px;
 	left: 0;
@@ -1678,7 +1698,8 @@ input[type="radio"]:checked:after,
 }
 
 .calendar-day .header .time:before,
-.Profile .widget-panel .header .ti .im:before {
+.Profile .widget-panel .header .ti .im:before,
+.Profile .widget-panel .header .ti .im {
 	top: 0;
 	left: 0;
 }
@@ -1885,6 +1906,7 @@ header .nav li,
 
 .table-list .controls,
 .table-list tr,
+.Profile table tr,
 .Ticket .instruction.task .widget-panel-content .inner > .ti,
 .Ticket .barcode .answer .added,
 .Ticket .instruction.task .images,
@@ -1917,6 +1939,7 @@ header .nav li,
 }
 
 .Profile .section-actions .button-holder a,
+.Profile table a.buttonly,
 .calendar-day .store .controls {
 	border-color: transparent;
 }
@@ -2404,14 +2427,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /*  left sidenav */
 
-nav.sidenav,
-.calendar-month td {  
-	vertical-align: top;
-}
-
 div.main.wrapper + div.inner {
 	display: table-cell;
-	vertical-align: top;
 }
 
 .sidenav .user-info {
@@ -7153,6 +7170,9 @@ a.page-action.delete-button span.im {
 
 .Profile .widget-panel-content .section {
 	margin-bottom: 1.5em;
+}
+
+.Profile .account .widget-panel-content .section {
 	padding-right: 1.5em;
 	width: 50%;
 }
@@ -7204,6 +7224,14 @@ a.page-action.delete-button span.im {
 
 .Profile .social.static .im {
 	margin-right: 5px;
+}
+
+.Profile .summary table {
+	margin-top: 2em;
+}
+
+.Profile .summary table td {
+	padding: 8px 0;
 }
 
 
