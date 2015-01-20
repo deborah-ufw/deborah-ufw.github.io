@@ -303,21 +303,47 @@
                 </div><!-- ends widget header -->
                 
                 <div class="widget-panel-content">
+                
+                  <div class="section static location">
+                    <h1>Location</h1>
+                    <div class="copy">
+                      <div class="loc1"><span class="city">Mountain View</span></div>
+                      <div class="loc2"><span class="state">CA</span>,&nbsp;</span class="zip">95014</span></div>
+                    </div>
+                  </div>
+                  
                   <div class="section name">
                     <div class="wrapper">
                       <label class="plainLabel">First Name</label>
-                      <input type="text" placeholder="First Name" />
+                      <div class="required">
+                        <input type="text" placeholder="First Name" />
+                      </div>
                     </div>
                     <div class="wrapper">
                       <label class="plainLabel">Last Name</label>
-                      <input type="text" placeholder="Last Name" />
+                      <div class="required">
+                        <input type="text" placeholder="Last Name" />
+                      </div>
                     </div>
                   </div>
+                  
+                  <div class="section static contact">
+                  <h1>Contact Information</h1>
+                    <div class="copy">
+                      <div class="phone"><span class="value">(000) 000-0000</span></div>
+                      <a class="email value" href="javascript:;">grace.kelly@crossmark.com</a>
+                    </div>
+                  </div>
+                  
                   <div class="section contact">
                     <div class="wrapper">
                       <label class="plainLabel">Mobile Phone Number</label>
-                      <input type="text" placeholder="(000) 000-0000" />
-                      <input type="text" placeholder="email@company.com" />
+                      <div class="required">
+                        <input type="text" placeholder="(000) 000-0000" />
+                      </div>
+                      <div class="required">  
+                        <input type="text" placeholder="email@company.com" />
+                      </div>  
                     </div>
                   </div>
                   <div class="section address">
@@ -325,13 +351,29 @@
                       <label class="plainLabel">Address</label>
                       <input type="text" placeholder="Street Address" />
                       <input type="text" placeholder="Suite" />
-                      <input type="text" placeholder="City" />
+                      <div class="required">
+                        <input type="text" placeholder="City" />
+                      </div>
                       <div class="inner">
-                        <input type="text" class="state" placeholder="State" />
-                        <input type="text" class="zip" placeholder="Zip Code" />
+                        <div class="required">
+                          <input type="text" class="state" placeholder="State" />
+                        </div>
+                        <div class="required">  
+                          <input type="text" class="zip" placeholder="Zip Code" />
+                        </div>  
                       </div>
                     </div>
                   </div>
+                  
+                  <div class="section static social">
+                    <h1>Verified for</h1>
+                    <div class="inner">
+                      <span class="im icon-LinkedIn"></span>
+                      <span class="im icon-Facebook"></span>
+                      <span class="im icon-GooglePlus"></span>
+                    </div>
+                  </div>
+                  
                   <div class="section social">
                     <div class="hint">
                       Linking your accounts does not allow other users 
@@ -377,10 +419,16 @@
                 
                 <div class="widget-panel-content">
                   <div class="section">
-                    <input type="password" maxlength="255" placeholder="Old Password" data-action="oldPassword" />
+                    <div class="required">
+                      <input type="password" maxlength="255" placeholder="Old Password" data-action="oldPassword" />
+                    </div>
                     <div class="hint">Must be at least 6 characters</div>
-                    <input type="password" maxlength="255" placeholder="New Password" data-action="newPassword" />
-                    <input type="password" maxlength="255" placeholder="Re-type New Password" data-action="retypedPassword" />
+                    <div class="required">
+                      <input type="password" maxlength="255" placeholder="New Password" data-action="newPassword" />
+                    </div>
+                    <div class="required">
+                      <input type="password" maxlength="255" placeholder="Re-type New Password" data-action="retypedPassword" />
+                    </div>
                   </div>
                 </div>
               </div><!-- ends password -->
@@ -402,7 +450,7 @@
                 </div>
                 
                 <div class="widget-panel-content">
-                  <div class="section">
+                  <div class="section days">
                     <h1>Preferred working days</h1>
                     <label class="plainLabel"><input type="checkbox" value="Monday">
                       Monday
@@ -427,10 +475,10 @@
                     </label>
                     
                   </div>
-                  <div class="section">
+                  <div class="section hours">
                     <h1>Desired hours per week</h1>
-                    <span>For internal use only</span>
-                    <input placeholder="ex. 8" />
+                    <div class="hint">For internal use only</div>
+                    <input type="text" placeholder="ex. 8" />
                   </div>
                 </div>
               </div><!-- ends scheduling preferences -->

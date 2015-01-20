@@ -93,7 +93,8 @@ header nav .user-edit,
 .calendar .action-panel .wrapper,
 .calendar .action-panel .wrapper input,
 .bigButton,
-.ticket-instructions .widget-panel-content input[type="text"] {
+.ticket-instructions .widget-panel-content input[type="text"],
+.Profile .scheduling .section.days .plainLabel {
 	font-size: 1.1em;
 }
 
@@ -164,12 +165,18 @@ body,
 .pagination,
 .message a.closer,
 .instruction .header .actions .ti,
-.answerButton.submit {
+.answerButton.submit,
+.Profile .copy {
 	font-size: 1.4em;
 }
 
 .map .tab-pane .ticketlink {
 	font-size: 1.5em;
+}
+
+.header .controls .ti,
+.Profile h1 {
+	font-size: 1.6em;
 }
 
 .instruction .duplicating-message .im.icon-warning {
@@ -271,7 +278,8 @@ th.sorting_desc:after,
 }
 
 .map .ticketlink .icon-ticket:before,
-.im.icon-pencil-box:before {
+.im.icon-pencil-box:before,
+.Profile .social.static .im:before {
 	font-size: 38px;
 }
 
@@ -379,7 +387,8 @@ input[type="password"] {
 .Ticket .instruction .header .controls .ti,
 .page-action-panel .warning,
 .Profile .user-details,
-.Profile .widget-panel-content .section {
+.Profile .widget-panel-content .section,
+.Profile .static .copy {
 	line-height: 1.2em;
 }
 
@@ -429,7 +438,8 @@ header .nav .number,
 .Ticket .instruction.task .type.barcode input,
 .Ticket .instruction.enter-time .widget-panel-content .type,
 .Ticket .instruction.enter-time .time input,
-.Profile .section-actions .button-holder a {
+.Profile .section-actions .button-holder a,
+.Profile .scheduling input {
 	text-align: center;
 }
 
@@ -642,7 +652,8 @@ a.disabled,
 .instruction.view-mode .type:before,
 .instruction .actions .icon-buttons a.icon-edit:after,
 .section-wrapper:after,
-.Profile .user-details .plainLabel:after {
+.Profile .user-details .plainLabel:after,
+.Profile .widget-panel-content:after {
 	 content: ' ';
 	 visibility: hidden;
 	 display: block;
@@ -658,7 +669,8 @@ nav.subnav ul {
 	list-style: none;
 }
 
-.filters-holder .view a {
+.filters-holder .view a,
+.Profile .required {
 	display: inline;
 }
 
@@ -762,7 +774,8 @@ a.page-action,
 .breaker,
 .Groups .table-list .details-control a,
 .Profile .section-actions .button-holder a,
-.Profile .widget-panel .header .ti .im {
+.Profile .widget-panel .header .ti .im,
+.Profile .scheduling .hint {
 	display: inline-block;
 }
 
@@ -993,7 +1006,8 @@ a.attach .im,
 .Projects .settings .group.required > .plainLabel,
 .Projects .settings .group.required > .plainLabel:after,
 .Profile .social .inner,
-.Profile .social .holder {
+.Profile .social .holder,
+.Profile .required {
 	position: relative;
 }
 
@@ -1020,7 +1034,8 @@ a.page-action span.im,
 .attachment.image .im,
 .map .requirements-list li:before,
 .Ticket .instruction .header .actions .icon-buttons,
-.Profile .widget-panel .header .ti .im {
+.Profile .widget-panel .header .ti .im,
+.Profile .required:before {
 	position: absolute;
 }
 
@@ -1047,7 +1062,9 @@ header .navbar-collapse.in {
 .instruction.view-mode .instruction-content .ti,
 .Profile .section-actions .button-holder a,
 .Profile .widget-panel-content .section .plainLabel,
-.Profile .widget-panel-content .section input {
+.Profile .widget-panel-content .section input[type="text"],
+.Profile .widget-panel-content .section input[type="password"],
+.Profile .scheduling .hint {
 	width: 100%;
 }
 
@@ -1218,7 +1235,8 @@ textarea {
 
 .ticket-summary .widget-panel .controls,
 .comments .new .attachment,
-.calendar .header .arrow .im:before {
+.calendar .header .arrow .im:before,
+.Profile .hint {
 	color: #6e6e6e;
 }
 
@@ -1253,7 +1271,8 @@ textarea {
 .calendar th,
 .calendar .past,
 .editable:after,
-.Profile .widget-panel .header {
+.Profile .widget-panel .header,
+.Profile .widget-panel-content h1 {
 	color: #ababab; 
 }
 
@@ -1441,6 +1460,7 @@ a.buttonly.cancel.disabled:focus,
 /* reds */
 
 	.item.required > .plainLabel:after,
+	.Profile .required:before,
 	.invalid > input[type="text"],
 	.invalid > input[type="textarea"],
 	input[type="text"].invalid,
@@ -2262,12 +2282,18 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	}
 	
 	.item.required > .plainLabel:after,
+	.Profile .required:before,
 	.tab-pane.actions .detail:before,
 	.Projects .settings .group.required > .plainLabel:after,
 	.map .tab-pane .assign-action.detail .plainLabel:after {
 		content: '*';
 		font-size: 1.4em;
 			left: 10px;
+	}
+	
+	.Profile .required:before {
+		top: -3px;
+		left: -10px;
 	}
 	
 	.Projects .settings .group.required > .plainLabel:after {
@@ -3124,7 +3150,6 @@ div.main.wrapper + div.inner {
 }
 
 .header .controls .ti {
-	font-size: 1.6em;
 	padding-right: 2em;
 }
 
@@ -7088,7 +7113,7 @@ a.page-action.delete-button span.im {
 	margin-right: 1.5em;
 }
 
-.Profile .last-activity,
+.Profile .user-activity,
 .Profile .user-details .inner {
 	margin-top: .5em;
 }
@@ -7115,8 +7140,15 @@ a.page-action.delete-button span.im {
 }
 
 .Profile .tab-pane.account .primary.actions {
-	margin-top: 3em;
 	padding-top: 1em;
+}
+
+.Profile .primary.actions .right {
+	margin-right: 0;
+}
+
+.Profile .widget-panel-content {
+	padding-bottom: 2em;
 }
 
 .Profile .widget-panel-content .section {
@@ -7134,11 +7166,12 @@ a.page-action.delete-button span.im {
 }
 
 .Profile .section.address input.state {
-	margin-right: .5em;
+	margin-right: 1em;
 	width: 60px;
 }
 
-.Profile .section.address input.zip {
+.Profile .section.address input.zip,
+.Profile .widget-panel-content .section.hours input[type="text"] {
 	width: 105px;
 }
 
@@ -7146,13 +7179,33 @@ a.page-action.delete-button span.im {
 	margin: -3px 0 8px 0;
 }
 
-.Profile .primary.actions .right {
-	margin-right: 0;
+.Profile .social .hint {
+	margin-bottom: 1.4em;
 }
 
 .Profile .social .holder  {
 	padding-left: 38px;
 }
+
+.Profile .scheduling .section.days .plainLabel {
+	margin: 0 0 .5em .3em;
+}
+
+.Profile h1 {
+	margin-top: .5em;
+}
+
+.Profile .personal-info .section.name,
+.Profile .personal-info .section.contact:not(.static),
+.Profile .personal-info .section.address,
+.Profile .password .section {
+	padding-left: 10px;
+}
+
+.Profile .social.static .im {
+	margin-right: 5px;
+}
+
 
 /* heredeb */
 
