@@ -5,19 +5,5 @@
 	display: none;
 }
 
-.choose-dates,
-.me .Profile .section.title,
-.me .Profile .user-activity,
-.me .Profile .personal-info h1,
-.me .Profile .static,
-.not-me .Profile .change-picture,
-.not-me .Profile .password,
-.not-me .Profile .name,
-.not-me .Profile .address,
-.not-me .Profile .contact:not(.static),
-.not-me .Profile .social:not(.static)  {
-	display: none;
-}
-
 
 
