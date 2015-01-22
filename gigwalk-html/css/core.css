@@ -815,6 +815,7 @@ a.page-action,
 .action.panel.date .plainLabel,
 .subgroups-detail a,
 .Ticket .barcode .added .upc,
+.Ticket .instruction.enter-time .plainLabel,
 .Profile .user-info,
 .Profile .section-controls,
 .Profile .user-org,
@@ -6963,7 +6964,9 @@ a.page-action.delete-button span.im {
 }
 
 .Ticket .instruction.enter-time .plainLabel {
+	margin-right: 0;
 	padding-top: 5px;
+	padding-left: 1.1em;
 }
 
 .Ticket .instruction.enter-time .header .ti .copy,
@@ -6973,7 +6976,7 @@ a.page-action.delete-button span.im {
 }
 
 .Ticket .instruction.enter-time .dropdown .btn {
-	width: 112px;
+	width: 105px;
 }
 
 
@@ -7103,6 +7106,19 @@ a.page-action.delete-button span.im {
 		width: 160px;
 	}
 	
+	.Ticket .instruction.enter-time .inner {
+		padding-right: 1.2em; 
+	}
+	
+	.Ticket .instruction.enter-time .plainLabel {
+		padding-left: .5em;
+	}
+	
+	.Ticket .instruction.enter-time .hours.numeric input,
+	.Ticket .instruction.enter-time .minutes.numeric input {
+		width: 100px;
+	}
+	
 }
 
 @media (max-width: 350px) {
@@ -7114,6 +7130,11 @@ a.page-action.delete-button span.im {
 	
 	.Ticket .instruction .widget-panel-content > .inner {
 		padding-left: 1.2em;
+	}
+	
+	
+	.Ticket .instruction.enter-time .type.time {
+		text-align: left;
 	}
 	
 	.Ticket .instruction.barcode .wrapper a, 
