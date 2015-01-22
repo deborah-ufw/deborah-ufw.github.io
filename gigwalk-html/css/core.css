@@ -49,6 +49,7 @@ header nav .user-edit,
 .calendar .calendar-month .date-num:after,
 .Ticket .completion-bar.complete span.percent-text,
 .Ticket .instruction.required .optional,
+.Ticket .instruction.enter-time .dragger,
 .picker-switch.accordion-toggle,
 .Profile .widget-panel .header .arrow {
 	display: none;
@@ -697,7 +698,8 @@ nav.subnav ul {
 .Ticket .instruction.photo .added .icon-buttons,
 .Ticket .instruction.task .photo .added .icon-buttons,
 .Ticket .instruction.task .images .attachment.image,
-.instruction.view-mode .instruction-content .ti {
+.instruction.view-mode .instruction-content .ti,
+.Ticket .instruction.enter-time .controls {
 	display: table;
 }
 
@@ -1013,7 +1015,6 @@ a.attach .im,
 .bigButton,
 .bigButton:after,
 .Ticket .instruction .divider:before,
-.Ticket .instruction.enter-time .header .ti .copy,
 .map .nav-tabs > li > a:before,
 .map .tab-pane .requirements-list li,
 .instruction .header .actions,
@@ -1024,7 +1025,8 @@ a.attach .im,
 .Profile .social .inner,
 .Profile .social .holder,
 .Profile .required,
-.Profile .cert {
+.Profile .cert,
+.Ticket .instruction.enter-time .controls .ti {
 	position: relative;
 }
 
@@ -1077,6 +1079,7 @@ header .navbar-collapse.in {
 .answerButton,
 .Ticket .instruction.photo .added .icon-buttons,
 .Ticket .instruction.task .photo .added .icon-buttons,
+.Ticket .instruction.enter-time .controls,
 .instruction.view-mode .instruction-content .ti,
 .Profile .section-actions .button-holder a,
 .Profile .widget-panel-content .section .plainLabel,
@@ -1581,8 +1584,8 @@ input[type="radio"]:checked:after,
 }
 
 .Ticket .instruction.enter-time .header .icon-time {
-	top: -8px;
-	left: -5px;
+	margin-left: -2.2em;
+		top: -8px;
 }
 
 .Ticket .instruction.complete .ti.type:before {
@@ -6959,8 +6962,14 @@ a.page-action.delete-button span.im {
 	padding-left: 0;
 }
 
-.Ticket .instruction.enter-time .header .ti .copy {
-	padding-left: 1.7em;
+.Ticket .instruction.enter-time .plainLabel {
+	padding-top: 5px;
+}
+
+.Ticket .instruction.enter-time .header .ti .copy,
+.Ticket .instruction.enter-time .header .ti {
+	padding-bottom: .4em;
+	padding-left: 2em;
 }
 
 .Ticket .instruction.enter-time .dropdown .btn {

@@ -1059,7 +1059,7 @@
             <div class="controls">
               <div class="ti">
                 <span class="im icon-time"></span>
-                <span class="copy">Enter your time</span>
+                <span class="copy">Enter date and time worked</span>
               </div>
               <div class="arrow"><span class="im icon-arrow-up"></span></div>
               <div class="dragger"><span class="im icon-empty"></span></div>
@@ -1076,8 +1076,14 @@
                 <div class="answers">
                   <div class="wrapper">
                   
+                  <!-- Date -->
+                    <div class="answer date numeric">
+                      <input type="text" name="target1 answer date" class="datepicker" placeholder="ex. 01/22/2015" />
+                      <div class="plainLabel">Date worked</div>
+                    </div>
+                  
                   <!-- Hours -->
-                    <div class="answer hours">
+                    <div class="answer hours numeric">
                       <input type="text" name="target1 answer time" placeholder="ex. 3" />
                       <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -1094,7 +1100,7 @@
                     </div>
                     
                     <!-- Minutes -->
-                    <div class="answer minutes">
+                    <div class="answer minutes numeric">
                       <input type="text" name="target1 answer time" placeholder="ex. 15" />
                       <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">

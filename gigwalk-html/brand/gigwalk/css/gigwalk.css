@@ -162,6 +162,7 @@ html, body {
 	.calendar .worker-selected .filters-choices .copy,
 	.Ticket .instruction.question .widget-panel-content .answer > .plainLabel,
 	.Ticket .instruction.task .widget-panel-content .answer > .plainLabel,
+	.Ticket .instruction.enter-time .plainLabel,
 	.Profile .user-org,
 	.Profile .scheduling .section.days .plainLabel {
 		color: #4a4a4a;
