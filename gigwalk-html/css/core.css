@@ -103,6 +103,7 @@ header nav .user-edit,
 .nav-sections,
 .group,
 .instruction-content,
+.instructions .primary.actions,
 .filters-holder .view a .im,
 .action.panel .primary.actions,
 .filter.dropdown .dropdown-menu,
@@ -6729,10 +6730,15 @@ a.page-action.delete-button span.im {
 .ticket-instructions .widget-panel,
 .ticket-instructions .submit,
 .instructions .instruction,
-.instructions .expander {
+.instructions .expander,
+.instructions .primary.actions {
 	margin: 0 auto 1.5em auto;
 	max-width: 635px;
 	width: 100%;
+}
+
+.instructions .primary.actions .right {
+	margin-right: 0;
 }
 
 .hint.widget-panel .controls {
