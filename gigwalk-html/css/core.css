@@ -51,7 +51,8 @@ header nav .user-edit,
 .Ticket .instruction.required .optional,
 .Ticket .instruction.enter-time .dragger,
 .picker-switch.accordion-toggle,
-.Profile .widget-panel .header .arrow {
+.Profile .widget-panel .header .arrow,
+.popup.metadata .primary.actions {
 	display: none;
 }
 
@@ -303,6 +304,10 @@ th.sorting_desc:after,
 	font-size: 40px;
 }
 
+.has-metadata:after {
+	font-size: 42px;
+}
+
 .Profile .widget-panel .header .ti .im.icon-lock:before {
 	font-size: 44px;
 }
@@ -354,6 +359,10 @@ header .nav li.messages .im:before {
 
 
 /* line heights */
+
+.has-metadata:after {
+	line-height: 0;
+}
 
 
 .filter.search .icon-search:before {
@@ -485,7 +494,8 @@ header .nav .number,
 .Profile .password .section .hint,
 .Profile td.primary.actions,
 .Profile td.number,
-.Profile table .hours {
+.Profile table .hours,
+.popup .primary.actions {
 	text-align: right;
 }
 
@@ -636,7 +646,6 @@ a.disabled,
 .group .sub:after,
 .instruction .item .sub:after,
 .group.additional .sub .checker:after,
-.header .actions:after,
 .item .sub.more-info:after,
 .primary.actions:after,
 .subnav:after,
@@ -648,8 +657,7 @@ a.disabled,
 .instruction.view-mode .target:after,
 .instruction.view-mode .target .answers:after,
 .instruction.view-mode .target .answer:after,
-.instruction.view-mode .ti:after,
-.Ticket .instruction.complete .ti:after,
+.Ticket .instruction.complete .controls .ti:after,
 .instruction.edit-mode .instruction-content .numeric .more-info:before,
 .instruction.edit-mode .numeric .between:before,
 .instruction .header:after,
@@ -709,7 +717,8 @@ nav.subnav ul {
 .Ticket .instruction.task .photo .added .icon-buttons,
 .Ticket .instruction.task .images .attachment.image,
 .instruction.view-mode .instruction-content .ti,
-.Ticket .instruction.enter-time .controls {
+.Ticket .instruction.enter-time .controls,
+.header .actions {
 	display: table;
 }
 
@@ -804,7 +813,7 @@ a.page-action,
 .Profile .section-actions .button-holder a,
 .Profile .widget-panel .header .ti .im,
 .Profile .scheduling .hint,
-.storename-value.has-metadata {
+.has-metadata:after {
 	display: inline-block;
 }
 
@@ -1040,7 +1049,8 @@ a.attach .im,
 .Ticket .instruction.enter-time .controls .ti,
 .has-metadata,
 .popup .popup-header,
-.popup .popup-ti {
+.popup .popup-ti,
+.has-metadata:after {
 	position: relative;
 }
 
@@ -1102,7 +1112,8 @@ header .navbar-collapse.in {
 .Profile .account .widget-panel-content .section input[type="text"],
 .Profile .widget-panel-content .section input[type="password"],
 .Profile .scheduling .hint,
-.Profile table {
+.Profile table,
+.header .actions {
 	width: 100%;
 }
 
@@ -1539,6 +1550,11 @@ input[type="radio"]:checked:after,
 .map .pin:before {
 	content: ' ';
 } 
+
+.has-metadata:after {
+	top: 9px;
+	right: 8px;
+}
 
 .Profile .cert:before {
 	top: -1px;
@@ -2385,9 +2401,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	left: -1px;
 }
 
-.popup.metadata {
+.popup {
 	padding: 1em 1em 1.2em 1em;
-	width: 315px;
+}
+
+.popup.metadata {
+	width: 300px;
 }
 
 .popup a.close {
@@ -2397,6 +2416,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .popup-ti {
 	margin: 0 40px 1em 0;
+}
+
+.popup.metadata .popup-ti {
 		top: 10px;
 }
 
@@ -2413,8 +2435,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	left: 5px;
 }
 
-.instruction .popup.metadata .primary.actions {
-	margin: 0 0 0 0;
+.popup .primary.actions a {
+	margin-top: 1.5em;
+}
+
+.has-metadata:after {
+	width: 20px;
 }
 	
 	
@@ -3254,6 +3280,10 @@ div.main.wrapper + div.inner {
 	padding-right: 2em;
 }
 
+.view-mode .header .actions .ti {
+	max-width: 450px;
+}
+
 .header .icon-dragger {
 	 top: -2px;
 }
@@ -3470,7 +3500,7 @@ div.main.wrapper + div.inner {
 .Ticket input.datepicker {
 	margin: 0 6.5em 0 0;
 	padding-right: 4px;
-	width: 120px;
+	width: 140px;
 }
 
 .instruction.view-mode .numeric .name,
@@ -6885,7 +6915,7 @@ a.page-action.delete-button span.im {
 }
 
 .Ticket .instruction .numeric input {
-	width: 135px;
+	width: 100px;
 }
 
 .Ticket .instruction .answer textarea {
@@ -7184,15 +7214,6 @@ a.page-action.delete-button span.im {
 		width: 160px;
 	}
 	
-	.Ticket .instruction.enter-time .hours.numeric input,
-	.Ticket .instruction.enter-time .minutes.numeric input {
-		width: 100px;
-	}
-	
-	.Ticket .instruction.enter-time .numeric .datepicker {
-		width: 213px;
-	}
-	
 }
 
 @media (max-width: 350px) {
@@ -7205,12 +7226,7 @@ a.page-action.delete-button span.im {
 	.Ticket .instruction .widget-panel-content > .inner {
 		padding-left: 1.2em;
 	}
-	
-	
-	.Ticket .instruction.enter-time .type.time {
-		text-align: left;
-	}
-	
+
 	.Ticket .instruction.barcode .wrapper a, 
 	.Ticket .instruction.task .type.barcode .wrapper a, 
 	.Ticket .barcode .manual-entry {

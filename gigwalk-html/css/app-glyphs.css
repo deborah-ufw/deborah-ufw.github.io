@@ -42,7 +42,8 @@ input[type="checkbox"]:after,
 .Ticket .instruction.complete .ti.type:before,
 a[href*="tel"]:before,
 a.bigButton:before,
-.Profile .cert:before {
+.Profile .cert:before,
+.has-metadata:after {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -311,6 +312,10 @@ a.bigButton.barcode:before,
 .icon-GooglePlus:before {
 	content: "\e640";
 	color: #de4d31;
+}
+.has-metadata:after,
+.icon-metadata:before {
+	content: "\e641";
 }
 
 /* paste new characters just above this line */
