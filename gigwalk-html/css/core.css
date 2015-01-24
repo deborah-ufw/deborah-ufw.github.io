@@ -103,7 +103,7 @@ header nav .user-edit,
 .nav-sections,
 .group,
 .instruction-content,
-.instructions .primary.actions,
+.instructions > .primary.actions,
 .filters-holder .view a .im,
 .action.panel .primary.actions,
 .filter.dropdown .dropdown-menu,
@@ -1448,7 +1448,9 @@ a.linkly.disabled,
 a.buttonly.cancel.disabled:hover,
 a.buttonly.cancel.disabled:focus,
 .filters .filter.search,
-.panel.action .filter.search {
+.panel.action .filter.search,
+.popup,
+.ticket-summary .widget-panel .popup .header {
 	background: #ffffff;
 }
 
@@ -1911,6 +1913,10 @@ header .nav li,
 
 .worker header .nav li {
 	border-left-color: transparent;
+}
+
+.tabnav li.buttonly {
+	border-right-color: transparent;
 }
 
 .topborder,
@@ -3242,7 +3248,7 @@ div.main.wrapper + div.inner {
 .primary.actions a,
 .section-controls .buttons a.buttonly {
 	margin-left: .5em;
-	padding: .3em 3em;
+	padding: .5em 3em;
 }
 
 .section-controls .buttons a.buttonly,
@@ -3252,7 +3258,8 @@ div.main.wrapper + div.inner {
 }
 
 .primary.actions a.delete {
-	padding: .3em 1.5em;
+	padding-right: 1.5em;
+	padding-left: 1.5em;
 }
 
 .instruction .header .actions .icon-buttons {
@@ -6731,15 +6738,20 @@ a.page-action.delete-button span.im {
 .ticket-instructions .submit,
 .instructions .instruction,
 .instructions .expander,
-.instructions .primary.actions {
+.instructions > .primary.actions {
 	margin: 0 auto 1.5em auto;
 	max-width: 635px;
 	width: 100%;
 }
 
-.instructions .primary.actions .right {
+.instructions > .primary.actions .right {
 	margin-right: 0;
 }
+
+.instructions > .primary.actions .delete {
+	margin-left: 0;
+}
+
 
 .hint.widget-panel .controls {
 	padding-bottom: .5em;

@@ -5,5 +5,10 @@
 	display: none;
 }
 
+.action.panel,
+.message {
+	display: none;
+}
+
 
 
