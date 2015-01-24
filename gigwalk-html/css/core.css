@@ -123,7 +123,7 @@ header nav .user-edit,
 .instructions .item .actions a.buttonly,
 .set-repeats .checker .supercheck, 
 .set-repeats input[type="checkbox"],
-.key,
+.map .key,
 .filters-choices .choice .value,
 .filters-choices .selection .detail,
 .action.panel .choose.list .pagination,
@@ -277,7 +277,8 @@ th.sorting_desc:after,
 .Ticket .instruction.complete .ti.type:before,
 .tabnav .icon-pencil-box:before,
 .map-drawer .tabs-control a.collapse:before,
-.Profile .widget-panel .header .ti .im.icon-ticket:before {
+.Profile .widget-panel .header .ti .im.icon-ticket:before,
+.popup a.close .im.icon-cancel:before {
 	font-size: 36px;
 }
 
@@ -371,7 +372,8 @@ header .nav li.messages .im:before {
 .subnav .nav.nav-tabs > li > a,
 .Profile .widget-panel-content .section .plainLabel,
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+.popup.metadata .key-pair {
 	line-height: 1em; 
 }
 
@@ -397,7 +399,8 @@ input[type="password"] {
 .Profile .user-details,
 .Profile .account .widget-panel-content .section,
 .Profile .static .copy,
-.Profile .cert {
+.Profile .cert,
+.popup .header .ti {
 	line-height: 1.2em;
 }
 
@@ -1027,7 +1030,9 @@ a.attach .im,
 .Profile .social .holder,
 .Profile .required,
 .Profile .cert,
-.Ticket .instruction.enter-time .controls .ti {
+.Ticket .instruction.enter-time .controls .ti,
+.popup .header,
+.popup .header .ti {
 	position: relative;
 }
 
@@ -1056,7 +1061,9 @@ a.page-action span.im,
 .Ticket .instruction .header .actions .icon-buttons,
 .Profile .widget-panel .header .ti .im,
 .Profile .required:before,
-.Profile .cert:before {
+.Profile .cert:before,
+.popup,
+.popup a.close {
 	position: absolute;
 }
 
@@ -1268,7 +1275,7 @@ textarea {
 
 .filter.dropdown .btn.btn-default.dropdown-toggle,
 .filter.search,
-.key,
+.map .key,
 .table-list .controls .actions a,
 .map .icon-vacation {
 	color: #9e9e9e;
@@ -1315,7 +1322,8 @@ a.iconButton.disabled:hover,
 a.iconButton.disabled:focus,
 .map .tab-pane .estimated .value span,
 .map .tab-pane .assigned .value,
-.map .tab-pane .scheduled .value span {
+.map .tab-pane .scheduled .value span,
+.popup .header .ti {
 	color: #bcbcbc;
 }
 
@@ -1646,6 +1654,10 @@ input[type="radio"]:checked:after,
 	z-index: 1;
 }
 
+.popup {
+	z-index: 3;
+}
+
 .messages .problem span.exclaim:before,
 .map .pin:before {
 	z-index: -1;
@@ -1747,7 +1759,7 @@ a[href*="tel"]:before {
 	margin: 0 -7px;
 }
 
-.ticket-summary .details.area .im {
+.ticket-summary .details.area > .im {
 	top: 7px;
 }
 
@@ -1946,8 +1958,9 @@ header .nav li,
 	border-right: 1px solid rgba(0, 0, 0, .4);
 }
 
-.choose-dates {
-	border: 1px solid rgba(0, 0, 0, .15);
+.choose-dates,
+.popup {
+	border: 1px solid rgba(0, 0, 0, .1);
 }
 
 .tabnav  li.active {
@@ -2132,7 +2145,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	/* fix drop shadows */
 	
 	.dropdown-menu,
-	.choose-dates {
+	.choose-dates,
+	.popup {
 		box-shadow: -2px 2px 2px rgba(0, 0, 0, .3);
 		-webkit-box-shadow: -2px 2px 2px rgba(0, 0, 0, .3);
 	}
@@ -2354,6 +2368,24 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	.item .required.text input[type="textarea"] {
 		margin-left: 15px;
 	}
+	
+	
+/* popup heredeb */
+
+.popup.metadata {
+	padding: 1em;
+	width: 315px;
+}
+
+.popup a.close {
+	top: -5px;
+	right: -5px;
+}
+
+.popup .header .ti {
+	margin: 0 40px 1em 0;
+		top: 8px;
+}
 	
 	
 	
@@ -4466,11 +4498,11 @@ td.table-actions a {
 
 /* map key */
 
-.key {
+.map .key {
 	padding: 0 1em .5em 0em;
 }
 
-.key:before {
+.map .key:before {
 	content: ' ';
 	margin: 0 2px -8px 0;
 	display: inline-block;
@@ -6670,7 +6702,7 @@ a.page-action.delete-button span.im {
 	padding: 0 1em 1.5em .8em;
 }
 
-.ticket-summary .details.area .wrapper,
+.ticket-summary .details.area > .wrapper,
 .ticket-summary .details.area .phone {
 	margin-left: 2.1em;
 }
@@ -7331,6 +7363,8 @@ a.page-action.delete-button span.im {
 .Profile .cert {
 	margin: .5em 2em .2em 1.8em;
 }
+
+
 
 
 /* heredeb */
