@@ -163,7 +163,8 @@ html, body {
 	.Ticket .instruction.question .widget-panel-content .answer > .plainLabel,
 	.Ticket .instruction.task .widget-panel-content .answer > .plainLabel,
 	.Profile .user-org,
-	.Profile .scheduling .section.days .plainLabel {
+	.Profile .scheduling .section.days .plainLabel,
+	.popup {
 		color: #4a4a4a;
 	}
 	

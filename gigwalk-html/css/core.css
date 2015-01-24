@@ -59,7 +59,8 @@ header nav .user-edit,
 	font-size: .8em;
 }
 
-.Profile .section-actions .button-holder a {
+.Profile .section-actions .button-holder a,
+.popup.metadata .key-pair {
 	font-size: .85em;
 }
 
@@ -215,6 +216,10 @@ body,
 
 .map .requirements-list li:before {
 	font-size: 15px;
+}
+
+.popup.metadata {
+	font-size: 16px;
 }
 
 .editable:after {
@@ -400,7 +405,7 @@ input[type="password"],
 .Profile .account .widget-panel-content .section,
 .Profile .static .copy,
 .Profile .cert,
-.popup .header .ti {
+.popup-header .ti {
 	line-height: 1.2em;
 }
 
@@ -484,7 +489,8 @@ header .nav .number,
 	text-align: right;
 }
 
-.calendar-month th {
+.calendar-month th,
+.popup.metadata .key {
 	text-transform: uppercase;
 }
 
@@ -797,7 +803,8 @@ a.page-action,
 .Groups .table-list .details-control a,
 .Profile .section-actions .button-holder a,
 .Profile .widget-panel .header .ti .im,
-.Profile .scheduling .hint {
+.Profile .scheduling .hint,
+.storename-value.has-metadata {
 	display: inline-block;
 }
 
@@ -1031,8 +1038,9 @@ a.attach .im,
 .Profile .required,
 .Profile .cert,
 .Ticket .instruction.enter-time .controls .ti,
-.popup .header,
-.popup .header .ti {
+.has-metadata,
+.popup .popup-header,
+.popup .popup-ti {
 	position: relative;
 }
 
@@ -1323,7 +1331,7 @@ a.iconButton.disabled:focus,
 .map .tab-pane .estimated .value span,
 .map .tab-pane .assigned .value,
 .map .tab-pane .scheduled .value span,
-.popup .header .ti {
+.popup-ti {
 	color: #bcbcbc;
 }
 
@@ -1457,8 +1465,7 @@ a.buttonly.cancel.disabled:hover,
 a.buttonly.cancel.disabled:focus,
 .filters .filter.search,
 .panel.action .filter.search,
-.popup,
-.ticket-summary .widget-panel .popup .header {
+.popup {
 	background: #ffffff;
 }
 
@@ -1934,7 +1941,8 @@ header .nav li,
 .topborder,
 .section-controls .action.panel,
 .Ticket .instruction .divider:before,
-.Profile .tab-pane.account .primary.actions {
+.Profile .tab-pane.account .primary.actions,
+.popup.metadata .key-pair {
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -2372,8 +2380,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	
 /* popup heredeb */
 
+.popup {
+	top: 1.5em;
+	left: -1px;
+}
+
 .popup.metadata {
-	padding: 1em;
+	padding: 1em 1em 1.2em 1em;
 	width: 315px;
 }
 
@@ -2382,9 +2395,26 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	right: -5px;
 }
 
-.popup .header .ti {
+.popup-ti {
 	margin: 0 40px 1em 0;
-		top: 8px;
+		top: 10px;
+}
+
+.popup.metadata .key-pair {
+	padding: 10px 0 5px 0;
+}
+
+.popup.metadata .key-pair div {
+	margin-bottom: 5px;
+}
+
+.instruction .target.has-metadata .popup.metadata {
+	top: 2.5em;
+	left: 5px;
+}
+
+.instruction .popup.metadata .primary.actions {
+	margin: 0 0 0 0;
 }
 	
 	

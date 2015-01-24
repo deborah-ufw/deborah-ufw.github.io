@@ -391,43 +391,44 @@
                 <span class="im icon-map-pin-outline"></span>
                 
                 <!-- metadata - if it exists, inject class "has-metadata" here -->
-                <span class="storename-value has-metadata">Walmart</span>
+                <span class="storename-value has-metadata">Walmart
                 
-                <!-- metadata popup div - same for target -->
-                <!-- re-use the popup anywhere, 
-                     inject a class for type, 
-                     and I can provide CSS so it looks good in any context
-                     just let me know when it's needed -->
-                
-                <div class="popup metadata">
-                  <div class="wrapper">
-                    <div class="header">
-                      <div class="ti">Metadata</div>
-                      <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
-                    </div>
-                    
-                    <div class="popup-content"><!-- content area -->
-                    
-                      <!-- key pairs can stack -->
-                      <div class="key-pair">
-                        <div class="key">Key</div>
-                        <div class="value">Value</div>
+                  <!-- metadata popup div - same for target -->
+                  <!-- re-use the popup anywhere, 
+                       inject a class for type, 
+                       and I can provide CSS so it looks good in any context
+                       just let me know when it's needed -->
+                  
+                  <div class="popup metadata">
+                    <div class="wrapper">
+                      <div class="popup-header">
+                        <div class="popup-ti">Metadata</div>
+                        <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
                       </div>
                       
-                      <div class="key-pair">
-                        <div class="key">Key I'm a super long overflowing key that goes to the next line</div>
-                        <div class="value">Value I'm a very extended value that spills over to the next line</div>
+                      <div class="popup-content"><!-- content area -->
+                      
+                        <!-- key pairs can stack -->
+                        <div class="key-pair">
+                          <div class="key">Key</div>
+                          <div class="value">Value</div>
+                        </div>
+                        
+                        <div class="key-pair">
+                          <div class="key">Key I'm a super long overflowing key that goes to the next line</div>
+                          <div class="value">Value I'm a very extended value that spills over to the next line</div>
+                        </div>
+                      
+                      </div><!-- ends popup content area -->
+                      
+                      <div class="primary actions">
+                        <!-- some popups will have buttons, so I'm taking care of that now -->
                       </div>
-                    
-                    </div><!-- ends popup content area -->
-                    
-                    <div class="primary actions">
-                      <!-- some popups will have buttons, so I'm taking care of that now -->
+                      
                     </div>
-                    
-                  </div>
-                </div><!-- ends metadata popup -->
-              
+                  </div><!-- ends metadata popup -->
+                
+                </span><!-- ends storename when it has metadata -->
               </div>
               
               <div class="item wrapper">
@@ -570,7 +571,7 @@
             </div>
             <div class="actions">
               <!-- metadata - inject class "has-metadata" if metadata exists -->
-              <div class="ti target has-metadata">Kikkoman Gluten-Free Soy Sauce 24 oz.</div>
+              <div class="ti target has-metadata">Kikkoman Gluten-Free Soy Sauce 24 oz.
               
               <!-- metadata popup div - same for target -->
                 <!-- re-use the popup anywhere, 
@@ -580,8 +581,8 @@
                 
                 <div class="popup metadata">
                   <div class="wrapper">
-                    <div class="header">
-                      <div class="ti">Metadata</div>
+                    <div class="popup-header">
+                      <div class="popup-ti">Metadata</div>
                       <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
                     </div>
                     
@@ -607,6 +608,7 @@
                   </div>
                 </div><!-- ends metadata popup -->
               
+                </div>
               
               <div class="viewing icon-buttons">
                 <a class="im icon-edit" href="javascript:;"></a>
