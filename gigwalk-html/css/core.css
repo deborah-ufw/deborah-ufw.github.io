@@ -1536,6 +1536,7 @@ a.buttonly.cancel.disabled:focus,
 	
 /* highlight */
 
+	.highlight,
 	.invalid input[type="text"],
 	.invalid input[type="textarea"],
 	input[type="text"].invalid,
