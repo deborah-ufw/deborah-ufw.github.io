@@ -317,6 +317,9 @@ a.bigButton.barcode:before,
 .icon-metadata:before {
 	content: "\e641";
 }
+.icon-calendar-empty:before {
+	content: "\e642";
+}
 
 /* paste new characters just above this line */
 

@@ -1,0 +1,1216 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Basic Page Needs 
+================================================== -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" /> 
+
+<title>Ticket!</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+
+
+<!-- device and shortcut icons
+================================================== -->
+
+<link rel="shortcut icon" type="image/x-icon" href="brand/gigwalk/images/favicon-gigwalk.ico">
+<link rel="apple-touch-icon" href="brand/gigwalk/images/apple-touch-icon.png" /> 
+
+
+<!-- Global CSS and JS
+================================================== -->
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/DataTables.all.min.js"></script>
+<script src="js/jquery.signature.js"></script>
+<script src="js/interactions-working.js"></script>
+
+<link href="css/bootstrap.css" media="screen" rel="stylesheet" />
+<link href="css/font-awesome.css" media="screen" rel="stylesheet" />
+<link href="css/app-glyphs.css" media="screen" rel="stylesheet" />
+<link href="css/datepicker.css" media="screen" rel="stylesheet" />
+<link href="css/core.css" media="screen" rel="stylesheet" />
+
+<!-- Brand CSS
+================================================== -->
+
+<link href="brand/gigwalk/css/fonts-gigwalk.css" media="screen" rel="stylesheet" />
+<link href="brand/gigwalk/css/gigwalk.css" media="screen" rel="stylesheet" />
+
+<link href="css/working.css" media="screen" rel="stylesheet" />
+
+
+<!-- Manage IE
+================================================== -->
+
+<!--[if lte IE 8]>
+  <script type="text/javascript">       
+      window.location="unsupported.html";
+  </script>
+<![endif]-->
+
+<!--[if IE 9]>
+  <link href="/css/ie9.css" media="screen" rel="stylesheet" />
+  <script src=="js/html5.min.js"></script> 
+<![endif]-->
+
+<script>
+  var doc = document.documentElement;
+  doc.setAttribute('data-useragent', navigator.userAgent);
+  // detect IE10 and IE11 from string
+</script>
+
+ 
+</head>
+
+<body class="body">
+
+<!-- top navigation -->
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+  
+  <!-- hold the responsive sidenav button -->
+  <div class="nav-active-holder">Holds nav location<span class="caret"></span></div>
+  
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:;">&nbsp;</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="alerts buttonly">
+            <a href="javascript:;">
+              <span class="im icon-bell"></span>
+              <span class="number">6</span>
+            </a>
+          </li>
+          <li class="messages buttonly">
+            <a href="javascript:;">
+             <span class="im icon-email"></span>
+             <span class="number">18</span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <!-- use this same "user-info" div in the sidenav -->
+            <div class="user-info">
+              <div class="user-image">
+                <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+              </div>
+              <div class="inner">
+                <div class="user-name">Grace Kelly</div>
+                <div class="user-org">Crossmark</div>
+                <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+              </div>
+            </div><!-- ends user info -->
+            
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="header">Manage Organization</li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-checkmark"></span>
+                  <span>Admin Dashboard</span>
+                </a>
+              </li>
+              <li class="disabled">
+                <a href="javascript:;">
+                  <span class="im icon-empty"></span>
+                  <span>Org Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-settings"></span>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li class="last">
+                <a href="javascript:;">
+                  <span class="im icon-lock"></span>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- ends navbar-collapse -->
+    </div><!-- ends container-fluid -->
+  </nav>
+</header>
+
+<!-- start the main panel -->
+<div class="main wrapper">
+                
+  <!-- side navigation (left side) -->
+  <nav class="sidenav">
+  
+    <!-- use the same "user-info" div as in the top nav -->
+    <div class="user-info">
+      <div class="user-image">
+        <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+      </div>
+      <div class="inner">
+        <div class="user-name">Grace Kelly</div>
+        <div class="user-org">Crossmark</div>
+        <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+      </div>
+    </div><!-- ends user info -->
+    
+    <ul class="nav-sections">
+      <li><a href="gigwalk-groups-dash.html">Organizations</a></li>
+      <li><a href="gigwalk-project-builder.html">Projects</a></li>
+      <li class="active"><a href="gigwalk-ticket-dash-schedluer.html">Tickets</a></li>
+      <li><a href="javascript:;">People</a></li>
+      <li><a href="javascript:;">Resources</a></li>
+      
+      <li class="divider">Support</li>
+      <li class="support"><a href="javascript:;">Demos and FAQs</a></li>
+      <li class="support"><a href="javascript:;">Support</a></li>
+      <li class="support"><a href="javascript:;">Contact Us</a></li>
+      
+    </ul>
+  </nav><!-- ends side nav -->
+  
+  <!-- content (right side) -->
+  <!-- inject page name "Ticket" -->
+  <div class="inner wrapper Tickets">
+      
+      <!-- tabs for the content -->
+      <nav class="tabnav">
+        <ul>
+          <li><a href="javascript:;">Tickets</a></li>
+          <li><a href="javascript:;">Calendar</a></li>
+          
+          <li class="dropdownly right">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle ellipsify" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                P&G Dedicated Really Long Team 
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Team Name 1</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Extremely long overflowing Team Name 2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Team Name 3</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav><!-- ends content tabs -->
+      
+      <!-- the content under the tabs -->
+      <div class="content Ticket">
+      
+      <!-- ******************************************************************  
+                                    TOP SECTION
+           ****************************************************************** -->
+      
+      <!-- page-level notifications and confirmations -->
+      <div class="page action messages">
+        <div class="message info">
+          <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+          <h1><span class="im icon-empty"></span>(Name or You) updated this ticket (time statement).</h1>
+        </div>
+        <div class="message confirmation">
+          <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+          <h1><span class="im icon-empty"></span>You have (action-ed) this ticket.</h1>
+        </div>
+      </div>
+      
+      
+      <!-- the breadcrumb and buttons with action panels at the top -->
+      <div class="section-controls">
+        <div class="section title">
+          <a class="navly" href="javascript:;">Tickets</a> Gluten-Free Soy Sauce at Walmart
+        </div>
+        
+        <div class="section-actions">
+          <a class="iconButton unassign worker">Opt out</a>
+          <a class="iconButton assign admin">Assign</a>
+          <a class="iconButton schedule worker">Schedule</a>
+          <a class="iconButton unschedule worker">Unschedule</a>
+          
+          <!-- GWP-1011 - remove Admin's "Extend" and "Reschedule" buttons -->
+          
+          <a class="iconButton print">Print</a>
+        </div>
+        
+        <!-- Assign action panel -->
+        <div class="action panel assign">
+          <h1>Assign</h1>
+          <div class="hint">If the ticket is already assigned, it will be re-assigned.</div>
+          <div class="group">
+            <div class="filter search">
+              <input type="text" placeholder="Search" />
+              <span class="im icon-search"></span>
+            </div>
+          </div>
+        </div><!-- END Assign action panel -->
+        
+        <!-- Schedule action panel -->
+        <div class="action panel date schedule">
+          <h1>Schedule <span>(estimated 3 hours 30 minutes)</span></h1>
+          <div class="wrapper">
+            <div class="inner">
+              <div class="item required text">
+                <div class="plainLabel">Choose Date</div>
+                <input type="text" class="datepicker" />
+              </div>
+              <div class="warning">This ticket is due before this date. This ticket will not be scheduled.</div>
+            </div>
+          </div>
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly disabled" href="javascript:;">Schedule</a>
+            </div>
+          </div>
+        </div><!-- END Schedule action panel -->
+        
+        <!-- GWP-1011 - remove Admin's "Extend" and "Reschedule" panels -->
+        
+        <!-- main action button and little nav back to ticket summary -->
+        <div class="buttons">
+          <div class="left">
+            <a class="navly">Ticket Summary</a>
+            <a class="buttonly">Start Ticket</a>
+          </div>
+        </div><!-- END main action button and little nav -->
+        
+         <!-- Ticket completion progress bar -->
+      <div class="completion-bar">
+        <div class="completion">
+          <div class="percent-complete" style="width: 11%;"></div> 
+        </div>
+        <div class="text">
+          <span class="percent-text">11%</span>&nbsp;
+          <span class="copy">Complete</span>
+        </div>
+      </div><!-- END ticket completion progress bar -->
+        
+      </div><!-- END section controls -->
+      
+      
+      <!-- ******************************************************************  
+                                    SUMMARY PANEL
+           ****************************************************************** -->
+      
+      <!-- --------------------- Ticket Summary panel --------------------- -->
+      <div class="ticket-summary">
+      
+        <!-- --------------------- Preview --------------------- -->
+        <div class="preview widget-panel">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti">Preview</div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+            
+            <!-- --------- Description area ------------ -->
+            <div class="description area">
+              <div class="item wrapper">
+                <div class="scheduled">
+                  <span class="copy">Scheduled for</span> 
+                  <span class="scheduled-statement">Today</span>
+                </div>
+                <div class="due today">Due in <span class="due-statement">4 hours</span></div>
+              </div>
+              <div class="item description">This is a standard new-product cut-in for Kikkoman Gluten-Free soy sauce.</div>
+            </div>
+            
+            <!-- --------- Details area ------------ -->
+            
+            <div class="details area">
+            
+            <!-- GWP-1011 -------------------------------------------------------------------
+            
+                 - add Start Date and End Date
+                 - if Ticket is not started
+                   -- for Admin, make the date spans editable (see annotation)
+                   
+             -------------------------------------------------------------------------------- -->
+                 
+              <div class="item dates">
+                <span class="im icon-calendar-empty"></span>
+                <div class="start">
+                  <span class="start-value editable">01/15/2015</span>
+                </div>
+                <div class="end">
+                  <span class="end-value editable">01/15/2015</span>
+                </div>
+              </div>   
+            
+              <div class="item assigned admin">
+                <span class="im icon-people"></span>
+                <a class="assigned-value" href="javascript:;">Jimmy Stewart</a>
+              </div>
+              
+              <!-- GWP-1011 -------------------------------------------------------------------
+            
+                 - if Ticket is not started
+                   -- for Admin, inject class "editable" into the "estimated value" field
+                   -- for Admin, make the estimated time span editable (see annotation)
+                   
+              --------------------------------------------------------------------------------- -->
+              <div class="item estimated">
+                <span class="im icon-time"></span>
+                <span class="estimated-value editable">3:30</span>
+              </div>
+              
+              <div class="storename">
+                <span class="im icon-map-pin-outline"></span>
+                
+                <!-- metadata - if it exists, inject class "has-metadata" here -->
+                <span class="storename-value has-metadata">Walmart
+                
+                  <!-- metadata popup div - same for target -->
+                  <!-- re-use the popup anywhere, 
+                       inject a class for type, 
+                       and I can provide CSS so it looks good in any context
+                       just let me know when it's needed -->
+                  
+                  <div class="popup metadata">
+                    <div class="wrapper">
+                      <div class="popup-header">
+                        <div class="popup-ti">Metadata</div>
+                        <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+                      </div>
+                      
+                      <div class="popup-content"><!-- content area -->
+                      
+                        <!-- key pairs can stack -->
+                        <div class="key-pair">
+                          <div class="key">Key</div>
+                          <div class="value">Value</div>
+                        </div>
+                        
+                        <div class="key-pair">
+                          <div class="key">Key I'm a super long overflowing key that goes to the next line</div>
+                          <div class="value">Value I'm a very extended value that spills over to the next line</div>
+                        </div>
+                      
+                      </div><!-- ends popup content area -->
+                      
+                      <div class="primary actions">
+                        <!-- some popups will have buttons - put the primary actions div here if you are making a template and it will be suppressed for metadata -->
+                      </div>
+                      
+                    </div>
+                  </div><!-- ends metadata popup -->
+                
+                </span><!-- ends storename when it has metadata -->
+              </div>
+              
+              <div class="item wrapper">
+                <a href="javascript:;" class="address">
+                  <span>16121 N. Snelling Rd</span>
+                  <span>Cupertino, CA 95014</span>
+                </a>
+              </div>
+              <div class="item phone">
+                <a href="tel:+14088772113">(408) 877-2113</a>
+              </div>
+              <div class="item materials">
+                <span class="im icon-checkmark-box"></span>
+                <span class="materials-value">04117 Kikkoman shelf attachment with coupons</span>
+              </div>
+            </div><!-- END details area -->
+          </div><!-- END widget content -->
+        </div><!-- END Preview section --> 
+      
+      
+        <!-- --------------------- Comments section --------------------- -->
+        <div class="comments widget-panel">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti">Comments</div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+
+            <!-- ---------- New comments area ------------ -->
+            <div class="new area">
+              <div class="user-image">
+                <img class="user-image" src="brand/gigwalk/images/grace.jpg">
+              </div>
+              <div class="wrapper">
+                <textarea></textarea>
+                <div class="attachment">
+                  <div class="attached-file">
+                    <span class="im icon-paperclip"></span>  
+                    <span class="filename">Gluten-free-aisle-location.pdf</span>     
+                    <a href="javascript:;" class="remove">Remove</a>           
+                  </div>
+                </div>
+                <div class="attacher">
+                  <a href="javascript:;" class="attach"><span class="im icon-paperclip"></span>Attach a file</a>
+                </div>
+                <div class="primary actions">
+                  <a class="buttonly">Comment</a>
+                </div>  
+              </div>
+            </div>
+            
+            <!-- ---------------------stacked comments --------------------- -->
+            <div class="comment area">
+              <div class="user-image">
+                <img class="user-image" src="images/system-image.png">
+              </div>
+              <div class="wrapper">
+                <div class="ti">
+                  <div class="name">System</div>
+                  <div class="time">3 days ago</div>
+                </div>
+                <div class="comment-copy">
+                  Jimmy Stewart has scheduled a ticket for Gluten-Free Soy Sauce at Walmart for 12/15/04.
+                </div>
+                <div class="attachment">
+                  <a href="javascript:;" class="attached-file">
+                    <span class="im icon-paperclip"></span>  
+                    <span class="filename">Gluten-free-aisle-location.pdf</span>     
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- END widget content -->
+          
+        </div><!-- END Comments section --> 
+      </div><!-- END Ticket Summary panel -->
+      
+      <!-- ******************************************************************  
+                                INSTRUCTIONS PANEL
+           ****************************************************************** -->
+      
+      <!-- Ticket Instructions panel -->
+      <div class="ticket-instructions">
+      
+        <!-- -------------------- Hint --------------------- -->
+        <div class="hint widget-panel">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti">
+                <span class="im icon-shield"></span>
+                <span class="tip-title">
+                  Location of the product in the store 
+                </span>
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+            <div class="hint-copy">
+              In some stores, the gluten-free soy sauce is in a gluten-free product area, 
+              and is not found with the soy sauces or condiments.
+            </div>
+            <div class="images">
+              <div class="attachment image">
+                <img src="images/sample-img.gif" />
+                <span class="im icon-magnify"></span>
+              </div>
+            </div>
+            <div class="attachment file">
+              <a href="javascript:;" class="attached-file">
+                <span class="im icon-paperclip"></span>  
+                <span class="filename">Gluten-free-aisle-location.pdf</span>     
+              </a>
+            </div>
+          </div><!-- END widget content -->
+        </div><!-- END hint -->
+        
+        
+        <!-- -------------------- Question --------------------- -->
+        <div class="instruction required question widget-panel edit-mode complete">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti type">
+                <span class="optional"></span>
+                <span class="type">Question</span>
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+            <div class="actions">
+              <!-- metadata - inject class "has-metadata" if metadata exists -->
+              <div class="ti target has-metadata">Kikkoman Gluten-Free Soy Sauce 24 oz.
+              
+              <!-- metadata popup div - same for target -->
+                <!-- re-use the popup anywhere, 
+                     inject a class for type, 
+                     and I can provide CSS so it looks good in any context
+                     just let me know when it's needed -->
+                
+                <div class="popup metadata">
+                  <div class="wrapper">
+                    <div class="popup-header">
+                      <div class="popup-ti">Metadata</div>
+                      <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+                    </div>
+                    
+                    <div class="popup-content"><!-- content area -->
+                    
+                      <!-- key pairs can stack -->
+                      <div class="key-pair">
+                        <div class="key">Key</div>
+                        <div class="value">Value</div>
+                      </div>
+                      
+                      <div class="key-pair">
+                        <div class="key">Key I'm a super long overflowing key that goes to the next line</div>
+                        <div class="value">Value I'm a very extended value that spills over to the next line</div>
+                      </div>
+                    
+                    </div><!-- ends popup content area -->
+                    
+                    <div class="primary actions">
+                      <!-- some popups will have buttons - put the primary actions div here if you are making a template and it will be suppressed for metadata popups -->
+                    </div>
+                    
+                  </div>
+                </div><!-- ends metadata popup -->
+              
+                </div>
+              
+              <div class="viewing icon-buttons">
+                <a class="im icon-edit" href="javascript:;"></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+          
+            <div class="inner">
+              <div class="ti">Where was the product located in the store?</div>
+              <div class="description">
+                Check each location the product was stocked (example description for the checkbox question type)
+              </div>
+            
+              <!-- question type is Item Grid -->
+              <div class="type item-grid">
+                <div class="answers">
+                  <div class="answer exception">
+                    <label class="plainLabel">
+                      <input type="radio" name="target1 answer">
+                      Not on Shelf
+                    </label>
+                  </div>
+                  <div class="answer">
+                    <label class="plainLabel">
+                      <input type="radio" name="target1 answer">
+                      On shelf
+                    </label>
+                  </div>
+                </div>
+              </div><!-- END Item Grid -->
+              
+              <!-- question type is Checkboxes -->
+              <div class="type checkboxes">
+                <div class="answers">
+                  <div class="answer exception">
+                    <label class="plainLabel">
+                      <input type="checkbox" name="target1 answer soda" />
+                      Soda aisle
+                    </label>
+                  </div>
+                  <div class="answer">
+                    <label class="plainLabel">
+                      <input type="checkbox" name="target1 answer check-out" />
+                      Check-out
+                    </label>
+                  </div>
+                </div>
+              </div><!-- END Checkboxes -->
+              
+              <!-- question type is Numeric -->
+              <div class="type numeric">
+                <!-- this one is numeric but not currency -->
+                <div class="answers">
+                  <div class="answer">
+                    <input type="text" name="target2 answer number" placeholder="ex. 7" />
+                  </div>
+                  <!-- this one is currency -->
+                  <div class="answer currency-input">
+                    <input type="text" name="target3 answer number" placeholder="ex. 7" />
+                  </div>
+                </div>
+              </div><!-- END Numeric -->
+              
+              <!-- question type is Date -->
+              <div class="type date">
+                <div class="answers">
+                  <div class="answer">
+                    <input type="text" class="datepicker" name="target3 answer date" placeholder="ex. 12/15/2015" />
+                  </div>
+                </div>
+              </div><!-- END Date -->
+              
+              <!-- question type is Time -->
+              <div class="type time">
+                <div class="answers">
+                  <div class="answer">
+                        <input type="text" name="target1 answer time" placeholder="ex. 3" />
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Minutes
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                </div>
+              </div><!-- END Time -->
+              
+              <!-- question type is Free Text -->
+              <div class="type text">
+                <div class="answers">
+                  <div class="answer">
+                    <textarea name="target1 answer text" placeholder="Enter your answer" ></textarea>
+                  </div>
+                </div>
+              </div><!-- END free text -->
+              <div class="validation hint">Must be a number</div>
+            </div><!-- END inner -->
+            
+            <!-- main action button -->
+            <a href="javascript:;" class="answerButton">Save</a>
+            
+          </div><!-- END widget content -->
+        </div><!-- END question -->
+        
+        <!-- -------------------- Photo --------------------- -->
+        <div class="instruction required photo widget-panel edit-mode">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti type">
+                <span class="optional"></span>
+                <span class="type">Photo</span>
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+            <div class="actions">
+              <div class="ti target">Kikkoman Gluten-Free Soy Sauce 24 oz.</div>
+              <div class="viewing icon-buttons">
+                <a class="im icon-edit" href="javascript:;"></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+          
+            <div class="inner">
+              <div class="ti">Where was the product located in the store?</div>
+              <div class="description">
+                Take a photo of each Kikkoman product in its location on the shelf.
+              </div>
+            
+              <div class="answers divider">
+                <!-- example image -->
+                <div class="breaker">
+                  <div class="answer example">
+                    <label class="plainLabel">
+                      Example
+                    </label>
+                    <div class="attachment image">
+                      <img src="images/sample-img.gif" />
+                      <span class="im icon-magnify"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- the image the worker takes -->
+                <div class="answer image">
+                  <label class="plainLabel">
+                    Photo
+                  </label>
+                  <div class="wrapper">
+                    <a href="javascript:;" class="bigButton photo">
+                      Add Photo
+                    </a>
+                  </div>
+                  <div class="added">
+                    <div class="attachment image">
+                      <img src="images/sample-img2.gif" />
+                      <span class="im icon-magnify"></span>
+                    </div>
+                    <div class="icon-buttons">
+                      <a class="im icon-edit" href="javascript:;"></a>
+                      <a class="im icon-trash" href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- END answers -->
+              
+            </div><!-- END inner -->
+            
+            <!-- main action button -->
+            <a href="javascript:;" class="answerButton">Save</a>
+            
+          </div><!-- END widget content -->
+        </div><!-- END photo -->
+        
+        
+        <!-- -------------------- Barcode --------------------- -->
+        <div class="instruction required barcode widget-panel edit-mode">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti type">
+                <span class="optional"></span>
+                <span class="type">Barcode</span>
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+            <div class="actions">
+              <div class="ti target">Kikkoman Gluten-Free Soy Sauce 24 oz.</div>
+              <div class="viewing icon-buttons">
+                <a class="im icon-edit" href="javascript:;"></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+          
+            <div class="inner">
+              <div class="ti">
+                Find the Kikkoman product family in the condiments aisle and capture 
+                the UPC for every stocked Kikkoman product.
+              </div>
+            
+              <div class="answers">
+                <!-- the upc div holder -->
+                <div class="answer showing">
+                  <!-- stacked upc divs -->
+                  <div class="added">
+                    <div class="upc">
+                      <span class="plainLabel">UPC</span>
+                      <span class="number">4139000082</span>
+                    </div>
+                    <div class="count">
+                      <span class="plainLabel">COUNT</span>
+                      <input type="text" value="1" />
+                      <a href="javascript:;" class="remove">Remove</a>
+                    </div>
+                  </div>
+                  
+                  <div class="added">
+                    <div class="upc">
+                      <span class="plainLabel">UPC</span>
+                      <span class="number">4139000088</span>
+                    </div>
+                    <div class="count">
+                      <span class="plainLabel">COUNT</span>
+                      <input type="text" value="5" />
+                      <a href="javascript:;" class="remove">Remove</a>
+                    </div>
+                  </div>
+                </div><!-- end answer -->
+                
+                <div class="wrapper">
+                  <a href="javascript:;" class="bigButton barcode">
+                    Scan
+                  </a>
+                  <div class="manual-entry">
+                    <input type="text" placeholder="Enter UPC" />
+                    <div class="primary actions">
+                      <a href="javascript:;" class="buttonly cancel">Cancel</a>
+                      <a href="javascript:;" class="buttonly">Enter</a>
+                    </div>
+                  </div>
+                  <a href="javascript:;" class="linkly">Enter UPC manually</a>
+                </div>
+                
+              </div><!-- END answers -->
+              
+            </div><!-- END inner -->
+            
+            <!-- main action button -->
+            <a href="javascript:;" class="answerButton">Save</a>
+            
+          </div><!-- END widget content -->
+        </div><!-- END barcode -->
+        
+        
+        <!-- -------------------- Step Task --------------------- -->
+        <div class="instruction required task widget-panel edit-mode">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti type">
+                <span class="optional"></span>
+                <span class="type">Task</span>
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+            <div class="actions">
+              <div class="ti target">Kikkoman Gluten-Free Soy Sauce 24 oz.</div>
+              <div class="viewing icon-buttons">
+                <a class="im icon-edit" href="javascript:;"></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+          
+            <div class="inner">
+              <div class="ti">Check on stock and gather information for Kikkoman</div>
+              <div class="description"></div>
+              
+              <!-- images added to the step task -->
+              <div class="images">
+                <div class="attachment image">
+                  <img src="images/sample-img.gif" />
+                  <span class="im icon-magnify"></span>
+                </div>
+                <div class="attachment image">
+                  <img src="images/sample-img2.gif" />
+                  <span class="im icon-magnify"></span>
+                </div>
+              </div>
+              
+              <!-- ------------------- STEPS ------------------------ -->
+              
+              <!-- question type is logic choices (Item Grid) -->
+              <div class="type item-grid">
+                <div class="answers">
+                  <div class="answer exception">
+                    <div class="description">
+                      Where is the product? 
+                    </div>
+                    <label class="plainLabel">
+                      <input type="radio" name="target1 answer">
+                      In the condiments aisle 
+                    </label>
+                  </div>
+                  <div class="answer">
+                    <label class="plainLabel">
+                      <input type="radio" name="target1 answer">
+                      In a gluten-free aisle 
+                    </label>
+                  </div>
+                  <div class="answer">
+                    <label class="plainLabel">
+                      <input type="radio" name="target1 answer">
+                      No product found 
+                    </label>
+                  </div>
+                </div>
+              </div><!-- END Item Grid -->
+              
+              <!-- question type is "follow written instructions" -->
+              <div class="type written-instructions">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description">
+                      Eat a Snickers bar. 
+                    </div>
+                  </div>
+                </div>
+              </div><!-- END follow written instructions -->
+              
+              <!-- question type is "enter a description" -->
+              <div class="type written-description">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description">
+                      Describe any issues with cleanliness in the bathroom.
+                    </div>
+                    <textarea name="target1 answer text" placeholder="Enter your answer" ></textarea>
+                  </div>
+                </div>
+              </div><!-- END enter a description -->
+              
+              <!-- question type is photo -->
+              <div class="type photo">
+                <div class="answers">
+                  <div class="answer image">
+                    <div class="description">
+                      Take a photo of the product on the shelf.
+                    </div>
+                    
+                    <!-- the image the worker takes -->
+                    <div class="center">
+                      <div class="placement">
+                        <label class="plainLabel">
+                          Photo
+                        </label>
+                        <div class="wrapper">
+                          <a href="javascript:;" class="bigButton photo">
+                            Add Photo
+                          </a>
+                        </div>
+                        <div class="added">
+                          <div class="attachment image">
+                            <img src="images/sample-img2.gif" />
+                            <span class="im icon-magnify"></span>
+                          </div>
+                          <div class="icon-buttons">
+                            <a class="im icon-edit" href="javascript:;"></a>
+                            <a class="im icon-trash" href="javascript:;"></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div><!-- END photo -->
+              
+              <!-- question type is barcode -->
+              <div class="type barcode">
+                <div class="answers">
+                  <div class="description">
+                    Scan the product and provide a count.
+                  </div>
+                  <!-- the upc div holder -->
+                  <div class="answer showing">
+                    <!-- stacked upc divs -->
+                    <div class="added">
+                      <div class="upc">
+                        <span class="plainLabel">UPC</span>
+                        <span class="number">4139000082</span>
+                      </div>
+                      <div class="count">
+                        <span class="plainLabel">COUNT</span>
+                        <input type="text" value="1" />
+                        <a href="javascript:;" class="remove">Remove</a>
+                      </div>
+                    </div>
+                    
+                    <div class="added">
+                      <div class="upc">
+                        <span class="plainLabel">UPC</span>
+                        <span class="number">4139000088</span>
+                      </div>
+                      <div class="count">
+                        <span class="plainLabel">COUNT</span>
+                        <input type="text" value="5" />
+                        <a href="javascript:;" class="remove">Remove</a>
+                      </div>
+                    </div>
+                  </div><!-- end answer -->
+                  
+                  <div class="wrapper">
+                    <a href="javascript:;" class="bigButton barcode">
+                      Scan
+                    </a>
+                    <div class="manual-entry">
+                      <input type="text" placeholder="Enter UPC" />
+                      <div class="primary actions">
+                        <a href="javascript:;" class="buttonly cancel">Cancel</a>
+                        <a href="javascript:;" class="buttonly">Enter</a>
+                      </div>
+                    </div>
+                    <a href="javascript:;" class="linkly">Enter UPC manually</a>
+                  </div>
+                </div><!-- end answers -->
+                
+              </div><!-- END barcode -->
+            
+              <!-- question type is Numeric (number) -->
+              <div class="type numeric">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description">
+                      Enter the number of items on the shelf.
+                    </div>
+                    <input type="text" name="target2 answer number" placeholder="ex. 7" />
+                  </div>
+                </div>  
+              </div><!-- END Numeric (number) -->
+              
+              <!-- question type is Numeric (currency) -->
+              <div class="type numeric currency">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description">
+                      Enter the sale price.
+                    </div>
+                    <div class="currency-input">
+                      <input type="text" name="target2 answer number" placeholder="ex. 7" />
+                    </div>
+                  </div>
+                </div>  
+              </div><!-- END Numeric (number) -->
+              
+              <!-- question type is Numeric (date) -->
+              <div class="type numeric date">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description">
+                      Enter the expiration date.
+                    </div>
+                    <input type="text" class="datepicker" name="target3 answer date" placeholder="ex. 12/15/2015" />
+                  </div>
+                </div>
+              </div><!-- END Numeric (date) -->
+              
+              <!-- question type is Numeric (time) -->
+              <div class="type numeric time">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description">
+                      Enter how long it took to locate the gluten-free area.
+                    </div>
+                    <input type="text" name="target1 answer time" placeholder="ex. 3" />
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        Minutes
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- END numeric (time) -->
+              <div class="validation hint">Must be a number</div>
+              
+              <!-- END steps -->
+              
+            </div><!-- END inner -->
+            
+            <!-- main action button -->
+            <a href="javascript:;" class="answerButton">Next or Save</a>
+            
+          </div><!-- END widget content -->
+        </div>
+
+        <!-- ----------------- ENDS STEP TASK ------------------- -->
+        
+        <!-- ----------------- worker's time entry --------------------- -->
+        <div class="instruction required enter-time widget-panel edit-mode">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti">
+                <span class="im icon-time"></span>
+                <!-- CSMK-155 edit the title -->
+                <span class="copy">Enter date and time worked</span>
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+          
+            <div class="inner">
+            
+              <!-- question type is Time -->
+              <div class="type time">
+                <div class="answers">
+                  <div class="wrapper">
+                  
+                  <!-- Hours -->
+                    <div class="answer hours numeric">
+                      <input type="text" name="target1 answer time" placeholder="ex. 3" />
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                          Hours
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <!-- Minutes -->
+                    <div class="answer minutes numeric">
+                      <input type="text" name="target1 answer time" placeholder="ex. 15" />
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                          Minutes
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div><!-- END Time -->
+              
+            </div><!-- END inner -->
+            
+            <!-- main action button -->
+            <a href="javascript:;" class="answerButton">Save</a>
+            
+          </div><!-- END widget content -->
+        </div><!-- END worker's time entry -->
+        
+        
+        <!-- ---------------------- Submit this Ticket button ----------------------- -->
+        <a href="javascript:;" class="answerButton submit disabled">Submit this ticket</a>
+      
+      
+      </div><!-- ----------------- END Ticket Instructions panel ---------------- -->
+      
+        
+        
+      <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
+    
+    
+    </div><!-- ends content -->
+  
+  </div><!-- ends right side ("inner wrapper")  -->
+</div><!-- ends main panel ("main wrapper") -->
+
+
+</body>
+</html>
