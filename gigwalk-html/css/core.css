@@ -465,6 +465,7 @@ header .nav .number,
 .Ticket .instruction.barcode input,
 .Ticket .instruction.task .type.barcode input,
 .Ticket .instruction .widget-panel-content .type.text,
+.Ticket .instruction .widget-panel-content .type.written-description,
 .Ticket .instruction.task .widget-panel-content .type.numeric,
 .Ticket .instruction.task .widget-panel-content .type.numeric.time .answer,
 .Profile .section-actions .button-holder a,
@@ -479,7 +480,8 @@ header .nav .number,
 .section-controls .action.panel.date .wrapper .inner,
 .widget-panel,
 .Ticket .instruction.photo .answer,
-.Ticket .instruction.task .widget-panel-content .type.numeric .description {
+.Ticket .instruction.task .widget-panel-content .type.numeric .description,
+.Ticket .instruction .widget-panel-content .type.written-description .description {
 	text-align: left;
 }
 
@@ -6957,8 +6959,6 @@ a.page-action.delete-button span.im {
 	top: -3px;
 }
 
-/* heredeb */
-
 .bigButton {
 	padding-top: .3em;
 	height: 115px;
@@ -7091,6 +7091,11 @@ a.page-action.delete-button span.im {
 	margin: 0 0 1em 0;
 }
 
+.Ticket .instruction.task .type.item-grid .description,
+.Ticket .instruction.task .type.checkboxes .description {
+	margin-left: -2em;
+}
+
 .Ticket .task .widget-panel-content .type.photo,
 .Ticket .task .widget-panel-content .type.barcode {
 	padding-left: 0;
@@ -7200,6 +7205,8 @@ a.page-action.delete-button span.im {
 		padding-left: 0;
 	}
 	
+	.Ticket .instruction.task .type.item-grid .description,
+	.Ticket .instruction.task .type.checkboxes .description,
 	.Ticket .instruction.task .type .description {
 		margin-left: 0;
 	}
