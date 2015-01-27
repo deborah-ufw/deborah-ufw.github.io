@@ -495,7 +495,8 @@ header .nav .number,
 .Profile td.primary.actions,
 .Profile td.number,
 .Profile table .hours,
-.popup .primary.actions {
+.popup .primary.actions,
+.content.drafts .group.group .warning {
 	text-align: right;
 }
 
@@ -915,7 +916,8 @@ input[type="radio"],
 .subgroups-detail,
 .subgroups-detail a,
 .Profile .section.address,
-.Profile .account .primary.actions {
+.Profile .account .primary.actions,
+.content.drafts .group .warning {
 	clear: both;
 }
 
@@ -3239,6 +3241,10 @@ div.main.wrapper + div.inner {
 
 .group .mini-panel .adjacent .plainLabel {
 	margin-right: 2em;
+}
+
+.content.drafts .group .warning {
+	clear: both; heredeb
 }
 
 
