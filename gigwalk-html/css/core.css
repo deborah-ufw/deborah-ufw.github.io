@@ -49,7 +49,6 @@ header nav .user-edit,
 .calendar .calendar-month .date-num:after,
 .Ticket .completion-bar.complete span.percent-text,
 .Ticket .instruction.required .optional,
-.Ticket .instruction.enter-time .dragger,
 .picker-switch.accordion-toggle,
 .Profile .widget-panel .header .arrow,
 .popup.metadata .primary.actions {
@@ -320,8 +319,7 @@ th.sorting_desc:after,
 	font-size: 48px;
 }
 
-.calendar-day .header .time:before,
-.Ticket .instruction.enter-time .header .icon-time:before {
+.calendar-day .header .time:before {
 	font-size: 49px;
 }
 
@@ -466,8 +464,9 @@ header .nav .number,
 .Ticket .instruction.task .photo .icon-buttons a,
 .Ticket .instruction.barcode input,
 .Ticket .instruction.task .type.barcode input,
-.Ticket .instruction.enter-time .widget-panel-content .type,
-.Ticket .instruction.enter-time .time input,
+.Ticket .instruction .widget-panel-content .type.text,
+.Ticket .instruction.task .widget-panel-content .type.numeric,
+.Ticket .instruction.task .widget-panel-content .type.numeric.time .answer,
 .Profile .section-actions .button-holder a,
 .Profile .scheduling input,
 .Profile table .date,
@@ -479,7 +478,8 @@ header .nav .number,
 .calendar-month .work,
 .section-controls .action.panel.date .wrapper .inner,
 .widget-panel,
-.Ticket .instruction.photo .answer{
+.Ticket .instruction.photo .answer,
+.Ticket .instruction.task .widget-panel-content .type.numeric .description {
 	text-align: left;
 }
 
@@ -619,7 +619,8 @@ input[type="radio"]:after,
 .Ticket a.buttonly,
 .widget-panel .attachment.image img,
 .Ticket .instruction .item-grid .answer .plainLabel,
-.Ticket .instruction .checkboxes .answer .plainLabel {
+.Ticket .instruction .checkboxes .answer .plainLabel,
+.has-metadata {
 	cursor: pointer;
 }
 
@@ -684,7 +685,6 @@ a.disabled,
 .Ticket .barcode .answer:after,
 .Ticket .barcode .added:before,
 .Ticket .barcode .added:after,
-.Ticket .instruction.enter-time .answers .answer:after,
 .instruction.view-mode .type:before,
 .instruction .actions .icon-buttons a.icon-edit:after,
 .section-wrapper:after,
@@ -718,8 +718,8 @@ nav.subnav ul {
 .Ticket .instruction.task .photo .added .icon-buttons,
 .Ticket .instruction.task .images .attachment.image,
 .instruction.view-mode .instruction-content .ti,
-.Ticket .instruction.enter-time .controls,
-.header .actions {
+.header .actions,
+.Ticket .instruction .widget-panel-content .type {
 	display: table;
 }
 
@@ -808,13 +808,13 @@ a.page-action,
 .Ticket .instruction.photo .answer,
 .Ticket .instruction.task .images .attachment.image,
 .Ticket .instruction.task .type.photo .placement,
-.instruction.enter-time .answers,
 .breaker,
 .Groups .table-list .details-control a,
 .Profile .section-actions .button-holder a,
 .Profile .widget-panel .header .ti .im,
 .Profile .scheduling .hint,
-.has-metadata:after {
+.has-metadata:after,
+.ticket-summary .details.area .dates .copy {
 	display: inline-block;
 }
 
@@ -883,9 +883,7 @@ input[type="radio"],
 .Ticket .instruction .time input,
 .Ticket .instruction.photo .icon-buttons,
 .Ticket .instruction.task .photo .icon-buttons,
-.Ticket .instruction.task .time input,
 .Ticket .instruction.time .time input,
-.Ticket .instruction.enter-time .time .dropdown,
 .Ticket .instruction.task .type.photo .placement .plainLabel,
 .Profile .social .im {
 	float: left;
@@ -908,7 +906,9 @@ input[type="radio"],
 .group.repeats .set-repeats .radios .plainLabel,
 .instruction.edit-mode .instruction-content .numeric .more-info > .plainLabel,
 .comments .new .attached-file .remove,
-.Ticket .barcode .remove {
+.Ticket .barcode .remove,
+.Ticket .instruction.task .time input,
+.Ticket .instruction.task .time .dropdown {
 	float: none;
 }
 
@@ -1048,7 +1048,6 @@ a.attach .im,
 .Profile .social .holder,
 .Profile .required,
 .Profile .cert,
-.Ticket .instruction.enter-time .controls .ti,
 .has-metadata,
 .popup .popup-header,
 .popup .popup-ti,
@@ -1072,7 +1071,6 @@ a.page-action span.im,
 .map .tab-pane .assign-action.detail,
 .map .blocked-day.detail,
 .calendar-day .header .time:before,
-.Ticket .instruction.enter-time .header .icon-time:before,
 .Ticket .completion-bar.complete .text:before,
 .hint.widget-panel .im.icon-shield,
 .Ticket .instruction.complete .ti.type:before,
@@ -1107,7 +1105,9 @@ header .navbar-collapse.in {
 .answerButton,
 .Ticket .instruction.photo .added .icon-buttons,
 .Ticket .instruction.task .photo .added .icon-buttons,
-.Ticket .instruction.enter-time .controls,
+.Ticket .instruction .widget-panel-content .type.text,
+.Ticket .instruction.task .widget-panel-content .type,
+.Ticket .task .widget-panel-content,
 .instruction.view-mode .instruction-content .ti,
 .Profile .section-actions .button-holder a,
 .Profile .widget-panel-content .section .plainLabel,
@@ -1201,8 +1201,7 @@ a,
 .user-image,
 .comments-wrapper,
 .Ticket .barcode .manual-entry input,
-.Projects .header .controls .ti,
-.Ticket .instruction.enter-time .numeric input {
+.Projects .header .controls .ti {
 	-webkit-transition: all 0.1s ease-in-out;
           transition: all 0.1s ease-in-out;
 }
@@ -1554,6 +1553,10 @@ input[type="radio"]:checked:after,
 	content: ' ';
 } 
 
+.ticket-summary .details.area .im {
+	top: 7px;
+}
+
 .has-metadata:after {
 	top: 9px;
 	right: 8px;
@@ -1619,11 +1622,6 @@ input[type="radio"]:checked:after,
 .Ticket .instruction .header .actions .icon-buttons {
 	top: 0;
 	right: 0;
-}
-
-.Ticket .instruction.enter-time .header .icon-time {
-	margin-left: -2.2em;
-		top: -8px;
 }
 
 .Ticket .instruction.complete .ti.type:before {
@@ -1758,11 +1756,6 @@ input[type="radio"]:checked:after,
 .Profile .widget-panel .header .ti .im {
 	top: 0;
 	left: 0;
-}
-
-.Ticket .instruction.enter-time .header .icon-time:before {
-	top: -6px;
-	left: -5px;
 }
 
 .calendar-day h1.graphic:before {
@@ -3485,8 +3478,8 @@ div.main.wrapper + div.inner {
 .instruction.view-mode .numeric input,
 .instruction.view-mode .time input,
 .Ticket .instruction .time input,
-.Ticket .instruction.task .time input,
-.Ticket .instruction.time .time input {
+.Ticket .instruction.time .time input,
+.Ticket .instruction .numeric.time input {
 	margin: 0 0 0 0;
 	padding: 5px 4px 4px 4px;
 	width: 60px;
@@ -3517,8 +3510,7 @@ div.main.wrapper + div.inner {
 
 .instruction.view-mode .time .dropdown,
 .Ticket .instruction .time .dropdown,
-.Ticket .instruction.edit-mode .numeric.time .dropdown,
-.Ticket .instruction.enter-time .time .dropdown {
+.Ticket .instruction.edit-mode .numeric.time .dropdown {
 	margin: 0 1em 0 .5em;
 }
 
@@ -6770,8 +6762,21 @@ a.page-action.delete-button span.im {
 }
 
 .ticket-summary .details.area > .wrapper,
-.ticket-summary .details.area .phone {
+.ticket-summary .details.area .phone,
+.ticket-summary .details.area .dates .wrapper {
 	margin-left: 2.1em;
+}
+
+.ticket-summary .details.area .storename {
+	margin-bottom: .5em;
+}
+
+.ticket-summary .details.area .dates .wrapper {
+	margin-top: -19px;
+}
+
+.ticket-summary .details.area .dates .copy {
+	width: 50px;
 }
 
 .comments .wrapper {
@@ -6894,16 +6899,6 @@ a.page-action.delete-button span.im {
 	padding: 1.5em 2em;
 }
 
-.Ticket .instruction .widget-panel-content .type,
-.Ticket .instruction.question .hint,
-.Ticket .instruction.task .validation.hint {
-	padding-left: 3em;
-}
-
-.Ticket .instruction.enter-time .widget-panel-content .type {
-	padding-left: 0;
-}
-
 .Ticket .instruction .widget-panel-content .inner > .ti,
 .Ticket .instruction .widget-panel-content .inner > .description {
 	margin-bottom: .5em;
@@ -6925,6 +6920,10 @@ a.page-action.delete-button span.im {
 	width: 100px;
 }
 
+.Ticket .instruction .numeric input.datepicker {
+	width: 150px;
+}
+
 .Ticket .instruction .answer textarea {
 	max-width: 400px;
 	width: 100%;
@@ -6934,6 +6933,31 @@ a.page-action.delete-button span.im {
 .Ticket .instruction.complete .ti.type {
 	padding-left: 1.3em;
 }
+
+.Ticket .instruction .widget-panel-content .type {
+	margin: 1em auto 0 auto;
+}
+
+.Ticket .instruction .widget-panel-content .type.item-grid,
+.Ticket .instruction .widget-panel-content .type.checkboxes {
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 2em;
+}
+
+.Ticket .instruction .widget-panel-content .type.date .answer input.datepicker {
+	margin-right: 0;
+}
+
+.Ticket .instruction.task .time input {
+	margin-right: -5px;
+}
+
+.Ticket .instruction.task .time .dropdown {
+	top: -3px;
+}
+
+/* heredeb */
 
 .bigButton {
 	padding-top: .3em;
@@ -7054,11 +7078,6 @@ a.page-action.delete-button span.im {
 	padding-right: 2em;
 }
 
-.Ticket .instruction.task .widget-panel-content .type,
-.Ticket .instruction.task .validation.hint {
-	padding-left: 2em;
-}
-
 .Ticket .instruction.task .images {
 	margin-top: -27px;
 }
@@ -7067,10 +7086,7 @@ a.page-action.delete-button span.im {
 	padding: 0 4px 4px 0;
 }
 
-.Ticket .instruction.task .answer .description {
-	margin: 0 0 1em -2em;
-}
-
+.Ticket .instruction.task .answer .description,
 .Ticket .instruction.task .type.photo .answer .description {
 	margin: 0 0 1em 0;
 }
@@ -7080,19 +7096,7 @@ a.page-action.delete-button span.im {
 	padding-left: 0;
 }
 
-.Ticket .instruction.enter-time .numeric .datepicker {
-	width: 250px;
-}
 
-.Ticket .instruction.enter-time .header .ti .copy,
-.Ticket .instruction.enter-time .header .ti {
-	padding-bottom: .4em;
-	padding-left: 2em;
-}
-
-.Ticket .instruction.enter-time .dropdown .btn {
-	width: 105px;
-}
 
 
 /* Ticket sizes down */

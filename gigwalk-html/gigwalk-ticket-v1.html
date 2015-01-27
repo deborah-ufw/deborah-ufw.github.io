@@ -345,21 +345,31 @@
             
             <!-- GWP-1011 -------------------------------------------------------------------
             
-                 - add Start Date and End Date
-                 - if Ticket is not started
-                   -- for Admin, make the date spans editable (see annotation)
+                 - add "item dates" div
+                 
+                 - make end date editable for Admin
+                   -- for Admin, inject class "editable" to span "end-value"
+                   -- for Admin, make "end-value" editable (see annotation)
+                   
+                 - if Ticket is NOT started, also make the start date editable for Admin
+                   -- for Admin, inject class "editable" to span "start-value"
+                   -- for Admin, make "start-value" editable (see annotation)
                    
              -------------------------------------------------------------------------------- -->
                  
               <div class="item dates">
                 <span class="im icon-calendar-empty"></span>
-                <div class="start">
-                  <span class="start-value editable">01/15/2015</span>
+                <div class="wrapper">
+                  <div class="start">
+                    <span class="copy">Starts</span>
+                    <span class="start-value editable">01/15/2015</span>
+                  </div>
+                  <div class="end">
+                    <span class="copy">Ends</span>
+                    <span class="end-value editable">01/15/2015</span>
+                  </div>
                 </div>
-                <div class="end">
-                  <span class="end-value editable">01/15/2015</span>
-                </div>
-              </div>   
+              </div><!-- ends dates -->   
             
               <div class="item assigned admin">
                 <span class="im icon-people"></span>
@@ -368,8 +378,8 @@
               
               <!-- GWP-1011 -------------------------------------------------------------------
             
-                 - if Ticket is not started
-                   -- for Admin, inject class "editable" into the "estimated value" field
+                 - if Ticket is NOT started
+                   -- for Admin, inject class "editable" into the "estimated-value" field
                    -- for Admin, make the estimated time span editable (see annotation)
                    
               --------------------------------------------------------------------------------- -->
@@ -384,13 +394,7 @@
                 <!-- metadata - if it exists, inject class "has-metadata" here -->
                 <span class="storename-value has-metadata">Walmart
                 
-                  <!-- metadata popup div - same for target -->
-                  <!-- re-use the popup anywhere, 
-                       inject a class for type, 
-                       and I can provide CSS so it looks good in any context
-                       just let me know when it's needed -->
-                  
-                  <div class="popup metadata">
+                  <div class="popup metadata hide">
                     <div class="wrapper">
                       <div class="popup-header">
                         <div class="popup-ti">Metadata</div>
@@ -564,13 +568,7 @@
               <!-- metadata - inject class "has-metadata" if metadata exists -->
               <div class="ti target has-metadata">Kikkoman Gluten-Free Soy Sauce 24 oz.
               
-              <!-- metadata popup div - same for target -->
-                <!-- re-use the popup anywhere, 
-                     inject a class for type, 
-                     and I can provide CSS so it looks good in any context
-                     just let me know when it's needed -->
-                
-                <div class="popup metadata">
+                <div class="popup metadata hide">
                   <div class="wrapper">
                     <div class="popup-header">
                       <div class="popup-ti">Metadata</div>
@@ -1123,15 +1121,13 @@
 
         <!-- ----------------- ENDS STEP TASK ------------------- -->
         
-        <!-- ----------------- worker's time entry --------------------- -->
-        <div class="instruction required enter-time widget-panel edit-mode">
+        <!-- ----------------- worker's time entry - time --------------------- -->
+        <div class="instruction required question widget-panel edit-mode">
           <!-- widget header -->
           <div class="header">
             <div class="controls">
               <div class="ti">
-                <span class="im icon-time"></span>
-                <!-- CSMK-155 edit the title -->
-                <span class="copy">Enter date and time worked</span>
+                <span class="copy">Question</span>
               </div>
               <div class="arrow"><span class="im icon-arrow-up"></span></div>
               <div class="dragger"><span class="im icon-empty"></span></div>
@@ -1142,49 +1138,29 @@
           <div class="widget-panel-content">
           
             <div class="inner">
+            <div class="ti">How long did it take you to complete this ticket?</div>
             
-              <!-- question type is Time -->
-              <div class="type time">
+              <!-- question type is Numeric (time) -->
+              <div class="type numeric time">
                 <div class="answers">
-                  <div class="wrapper">
-                  
-                  <!-- Hours -->
-                    <div class="answer hours numeric">
-                      <input type="text" name="target1 answer time" placeholder="ex. 3" />
-                      <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                          Hours
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
-                        </ul>
-                      </div>
+                  <div class="answer">
+                    <div class="description"></div>
+                    <input type="text" name="target1 answer time" placeholder="ex. 3" />
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        Minutes
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                      </ul>
                     </div>
-                    
-                    <!-- Minutes -->
-                    <div class="answer minutes numeric">
-                      <input type="text" name="target1 answer time" placeholder="ex. 15" />
-                      <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                          Minutes
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  
                   </div>
                 </div>
-              </div><!-- END Time -->
+              </div><!-- END numeric (time) -->
               
             </div><!-- END inner -->
             
@@ -1193,6 +1169,43 @@
             
           </div><!-- END widget content -->
         </div><!-- END worker's time entry -->
+        
+        <!-- ----------------- worker's time entry - date --------------------- -->
+        <div class="instruction required question widget-panel edit-mode">
+          <!-- widget header -->
+          <div class="header">
+            <div class="controls">
+              <div class="ti">
+                <span class="copy">Question</span>
+              </div>
+              <div class="arrow"><span class="im icon-arrow-up"></span></div>
+              <div class="dragger"><span class="im icon-empty"></span></div>
+            </div>
+          </div>
+          
+          <!-- widget content -->
+          <div class="widget-panel-content">
+          
+            <div class="inner">
+            <div class="ti">What date did you work this ticket?</div>
+            
+              <!-- question type is Numeric (date) -->
+              <div class="type numeric date">
+                <div class="answers">
+                  <div class="answer">
+                    <div class="description"></div>
+                    <input type="text" class="datepicker" name="target3 answer date" placeholder="ex. 12/15/2015" />
+                  </div>
+                </div>
+              </div><!-- END Numeric (date) -->
+              
+            </div><!-- END inner -->
+            
+            <!-- main action button -->
+            <a href="javascript:;" class="answerButton">Save</a>
+            
+          </div><!-- END widget content -->
+        </div><!-- END worker's date entry -->
         
         
         <!-- ---------------------- Submit this Ticket button ----------------------- -->
