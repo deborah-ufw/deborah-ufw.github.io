@@ -360,13 +360,17 @@
               <div class="item dates">
                 <span class="im icon-calendar-empty"></span>
                 <div class="wrapper">
+                  <div class="scheduled">
+                    <span class="copy">Scheduled</span>
+                    <span class="scheduled-value editable">01/15/2015</span>
+                  </div>
                   <div class="start">
                     <span class="copy">Starts</span>
                     <span class="start-value editable">01/15/2015</span>
                   </div>
                   <div class="end">
                     <span class="copy">Ends</span>
-                    <span class="end-value editable">01/15/2015</span>
+                    <span class="end-value editable">01/22/2015</span>
                   </div>
                 </div>
               </div><!-- ends dates -->   
@@ -386,6 +390,23 @@
               <div class="item estimated">
                 <span class="im icon-time"></span>
                 <span class="estimated-value editable">3:30</span>
+                <div class="estimator">
+                  <div class="wrapper">
+                    <input type="text" name="target1 answer time" placeholder="ex. 3">
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        Minutes
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Seconds</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minutes</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Hours</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Days</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div><!-- ends estimator -->
               </div>
               
               <div class="storename">

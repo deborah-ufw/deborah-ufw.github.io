@@ -96,6 +96,7 @@ header nav .user-edit,
 .calendar .action-panel .wrapper input,
 .bigButton,
 .ticket-instructions .widget-panel-content input[type="text"],
+.estimator input,
 .Profile .scheduling .section.days .plainLabel,
 .Profile .cert {
 	font-size: 1.1em;
@@ -420,6 +421,10 @@ input[type="password"],
 	line-height: 1.4em;
 }
 
+.ticket-summary .details.area .dates .wrapper {
+	line-height: 1.8em;
+}
+
 label,
 th {
 	font-weight: normal;
@@ -456,6 +461,7 @@ header .nav .number,
 .Ticket .instruction .numeric input,
 .Ticket .instruction .date input,
 .Ticket .instruction .time input,
+.estimator input,
 .bigButton,
 .Ticket .instruction.photo .answers,
 .Ticket .instruction.barcode .answers .wrapper,
@@ -471,7 +477,8 @@ header .nav .number,
 .Profile .section-actions .button-holder a,
 .Profile .scheduling input,
 .Profile table .date,
-.Profile .groups td.ownership {
+.Profile .groups td.ownership,
+input.datepicker {
 	text-align: center;
 }
 
@@ -883,6 +890,8 @@ input[type="radio"],
 .primary.actions a.delete,
 .Ticket .instruction .time .dropdown,
 .Ticket .instruction .time input,
+.estimator .dropdown,
+.estimator input,
 .Ticket .instruction.photo .icon-buttons,
 .Ticket .instruction.task .photo .icon-buttons,
 .Ticket .instruction.time .time input,
@@ -1126,6 +1135,7 @@ header .navbar-collapse.in {
 .instructions .instruction-footer .item .plainLabel,
 .time-estimate .btn.btn-default.dropdown-toggle,
 .instruction .time .btn.btn-default.dropdown-toggle,
+.details.area .item .estimator .btn.btn-default.dropdown-toggle,
 .instruction-content .time-estimate .dropdown-menu,
 .view-mode .instruction-content .time .dropdown-menu,
 .more-info:before,.instruction.edit-mode .numeric .dropdown-menu,
@@ -2392,7 +2402,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	}
 	
 	
-/* popup heredeb */
+/* popup */
 
 .popup {
 	top: 1.5em;
@@ -3239,10 +3249,6 @@ div.main.wrapper + div.inner {
 	margin-right: 2em;
 }
 
-.content.drafts .group .warning {
-	clear: both; heredeb
-}
-
 
 /* widgets */
 
@@ -3481,7 +3487,9 @@ div.main.wrapper + div.inner {
 .instruction.view-mode .time input,
 .Ticket .instruction .time input,
 .Ticket .instruction.time .time input,
-.Ticket .instruction .numeric.time input {
+.Ticket .instruction .numeric.time input,
+.estimator input,
+.details.area .item .estimator input {
 	margin: 0 0 0 0;
 	padding: 5px 4px 4px 4px;
 	width: 60px;
@@ -3512,13 +3520,17 @@ div.main.wrapper + div.inner {
 
 .instruction.view-mode .time .dropdown,
 .Ticket .instruction .time .dropdown,
-.Ticket .instruction.edit-mode .numeric.time .dropdown {
+.Ticket .instruction.edit-mode .numeric.time .dropdown,
+.estimator .dropdown,
+.details.area .item .estimator .dropdown {
 	margin: 0 1em 0 .5em;
 }
 
 .instruction.view-mode .time .btn.btn-default.dropdown-toggle,
 .Ticket .instruction .time .btn.btn-default.dropdown-toggle,
-.item.time-estimate .btn.btn-default.dropdown-toggle {
+.item.time-estimate .btn.btn-default.dropdown-toggle,
+.estimator .btn.btn-default.dropdown-toggle,
+.details.area .item .estimator .btn.btn-default.dropdown-toggle {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
@@ -4333,8 +4345,8 @@ a.iconly:before {
 	padding: 0 0 15px 10px;
 }
 
-.action.panel input.datepicker,
-.section-controls .action.panel input[type="text"].datepicker {
+input.datepicker,
+input[type="text"].datepicker {
 	width: 190px;
 }
 
@@ -6765,7 +6777,8 @@ a.page-action.delete-button span.im {
 
 .ticket-summary .details.area > .wrapper,
 .ticket-summary .details.area .phone,
-.ticket-summary .details.area .dates .wrapper {
+.ticket-summary .details.area .dates .wrapper,
+.ticket-summary .details.area .estimator {
 	margin-left: 2.1em;
 }
 
@@ -6777,8 +6790,15 @@ a.page-action.delete-button span.im {
 	margin-top: -19px;
 }
 
-.ticket-summary .details.area .dates .copy {
-	width: 50px;
+.ticket-summary .details.area .dates .start .copy,
+.ticket-summary .details.area .dates .end .copy {
+	width: 45px;
+}
+
+.ticket-summary .details.area .estimator {
+	display: table;
+	margin-top: .5em;
+	margin-bottom: .5em;
 }
 
 .comments .wrapper {
