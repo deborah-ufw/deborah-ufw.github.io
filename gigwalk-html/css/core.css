@@ -219,7 +219,7 @@ body,
 	font-size: 15px;
 }
 
-.popup.metadata {
+.popup {
 	font-size: 16px;
 }
 
@@ -478,7 +478,8 @@ header .nav .number,
 .Profile .scheduling input,
 .Profile table .date,
 .Profile .groups td.ownership,
-input.datepicker {
+input.datepicker,
+.modal td {
 	text-align: center;
 }
 
@@ -488,7 +489,8 @@ input.datepicker {
 .widget-panel,
 .Ticket .instruction.photo .answer,
 .Ticket .instruction.task .widget-panel-content .type.numeric .description,
-.Ticket .instruction .widget-panel-content .type.written-description .description {
+.Ticket .instruction .widget-panel-content .type.written-description .description,
+.popup {
 	text-align: left;
 }
 
@@ -823,7 +825,8 @@ a.page-action,
 .Profile .widget-panel .header .ti .im,
 .Profile .scheduling .hint,
 .has-metadata:after,
-.ticket-summary .details.area .dates .copy {
+.ticket-summary .details.area .dates .copy,
+.popup {
 	display: inline-block;
 }
 
@@ -1091,7 +1094,7 @@ a.page-action span.im,
 .Profile .widget-panel .header .ti .im,
 .Profile .required:before,
 .Profile .cert:before,
-.popup,
+.popup.metadata,
 .popup a.close {
 	position: absolute;
 }
@@ -1299,6 +1302,10 @@ textarea {
 	 color: rgba(0, 0, 0, .25);
 }
 
+.modal {
+	background: rgba(0, 0, 0, 0.33);
+}
+
 .ticket-summary .widget-panel .controls,
 .comments .new .attachment,
 .calendar .header .arrow .im:before {
@@ -1355,7 +1362,7 @@ a.iconButton.disabled:focus,
 .map .tab-pane .estimated .value span,
 .map .tab-pane .assigned .value,
 .map .tab-pane .scheduled .value span,
-.popup-ti {
+.popup.metadata .popup-ti {
 	color: #bcbcbc;
 }
 
@@ -1567,6 +1574,10 @@ input[type="radio"]:checked:after,
 
 .ticket-summary .details.area .im {
 	top: 7px;
+}
+
+.ticket-summary .details.area .popup .close .im {
+	top: 0;
 }
 
 .ticket-summary .details.area .dates .im {
@@ -2182,7 +2193,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	
 	.dropdown-menu,
 	.choose-dates,
-	.popup {
+	.popup.metadata {
 		box-shadow: -2px 2px 2px rgba(0, 0, 0, .3);
 		-webkit-box-shadow: -2px 2px 2px rgba(0, 0, 0, .3);
 	}
@@ -2409,15 +2420,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 /* popup */
 
 .popup {
-	top: 1.5em;
-	left: -1px;
-}
-
-.popup {
-	padding: 1em 1em 1.2em 1em;
+	padding: 1em 1em 1.5em 1em;
 }
 
 .popup.metadata {
+	padding-bottom: 1.2em;
+		top: 1.5em;
+		left: -1px;
+}
+
+.popup {
 	width: 300px;
 }
 
@@ -2428,9 +2440,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .popup-ti {
 	margin: 0 40px 1em 0;
-}
-
-.popup.metadata .popup-ti {
 		top: 10px;
 }
 

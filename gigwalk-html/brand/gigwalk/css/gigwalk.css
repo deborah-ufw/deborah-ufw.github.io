@@ -867,7 +867,8 @@ select option,
 .subcontent.sub .subnav li,
 .tabnav li .dropdown li a,
 .Ticket .instruction.barcode .widget-panel-content .inner > .ti,
-.Ticket .instruction.task .widget-panel-content .inner > .ti {
+.Ticket .instruction.task .widget-panel-content .inner > .ti,
+.popup.metadata .popup-ti {
 	font-family: Helvetica-Neue;
 }
 
@@ -903,7 +904,8 @@ select option,
 .Ticket .instruction .widget-panel-content .inner > .ti,
 header .nav .number,
 .Group .page-action-panel .copy span,
-.Projects .settings .group.required > .plainLabel:after  {
+.Projects .settings .group.required > .plainLabel:after,
+.popup-ti  {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }

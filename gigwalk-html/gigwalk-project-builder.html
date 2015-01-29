@@ -381,13 +381,6 @@
             <a class="buttonly secondary" href="javascript:;">Add</a>
           </div>
           
-          <!-- --------------------------------------------------------
-                Dave Valerie
-                the js that shows/hides the panel is
-                "project "materials" options panel" in interactions.js 
-                in the dom ready
-          ----------------------------------------------------------- -->
-          
           <div class="sub mini-panel first last">
             <div class="wrapper">
               <div class="ti number">
@@ -434,7 +427,6 @@
             <a class="remove" href="javascript:;">Remove</a>
             <div class="more-info">
             
-              <!-- ------------------ DAVE YouTrack GWP-534 - Add "billing code" for CSMK ------------------ -->
               
               <!-- This html block if CSMK -->
               <div class="billing-code">
@@ -456,7 +448,6 @@
                   </label>
                 </div>
               </div><!-- END if NOT CSMK -->
-              <!-- ------------------ END Add "billing code" for CSMK ------------------ -->
               
             </div>
           </div>
@@ -493,7 +484,6 @@
           </div>
         </div>
         
-        <!-- ------------------ DAVE YouTrack GWP-534 - Add "Division" for CSMK ------------------ -->
         <!-- division -->
         <div class="group division">
             <div class="plainLabel">Division</div>
@@ -514,7 +504,6 @@
             <a class="remove" href="javascript:;">Remove</a>
           </div>
         </div>
-        <!-- ------------------ END Add "Division" for CSMK ------------------ -->
         
         <!-- additional info -->
         <div class="group additional last">
@@ -645,9 +634,6 @@
                   </div>
                 </div>
               </div><!-- ------------- End div to display for "Numeric entry" ------------- -->
-              
-              <!-- ------------- Added exceptions selection to html  ------------- -->
-              <h2 class="super">Added exceptions selection divs for single and list targets (did not do any show/hide js)</h2>
               
               <div class="item required targets">
                 <div class="plainLabel">Question Targets</div>
@@ -1187,6 +1173,59 @@
   
   </div><!-- ends right side ("inner wrapper")  -->
 </div><!-- ends main panel ("main wrapper") -->
+
+
+<!-- GWP-1000 -->
+<!-- this is the same modal already in use, but with the re-usable popup inside -->
+
+<div class="modal" style="display: block;">
+  <table>
+  <tbody>
+    <tr>
+      <td>
+          <!-- don't use div "inner" for modals containing the re-usable div "popup" -->
+          <div class="popup">
+            <div class="wrapper">
+              <div class="popup-header">
+                <div class="popup-ti">
+                  <!-- if no tickets were assigned -->
+                  No Tickets Assigned
+                  
+                  <!-- if some tickets were not assigned 
+                  
+                  Some Tickets Not Assigned 
+                  ---------------------------------- -->
+                </div>
+                <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+              </div>
+              
+              <div class="popup-content"><!-- content area -->
+              
+                <div class="copy">
+                  <!-- if no tickets were assigned -->
+                  None of the tickets were assigned as no workers with the selected qualifications are available.
+                  
+                  <!-- if some tickets were not assigned 
+                  
+                  Some of the tickets were not assigned as there are not enough
+                  workers with the selected qualifications available.
+                  ---------------------------------------------------------------------- -->
+                </div>
+              
+              </div><!-- ends popup content area -->
+              
+              <div class="primary actions">
+                <!-- some popups will have buttons - put the primary actions div here if you are making a template and it will be suppressed for metadata -->
+              </div>
+              
+            </div>
+          </div><!-- ends metadata popup -->
+
+      </td>
+    </tr>
+  </tbody>
+  </table>
+</div>
 
 </body>
 </html>
