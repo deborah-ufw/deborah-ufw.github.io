@@ -507,7 +507,8 @@ input.datepicker,
 .Profile td.number,
 .Profile table .hours,
 .popup .primary.actions,
-.content.drafts .group.group .warning {
+.content.drafts .group.group .warning,
+.Resources .filters {
 	text-align: right;
 }
 
@@ -778,11 +779,12 @@ a.iconly,
 .pin,
 .filters-choices .choice,
 .filters-choices .choice .close,
+.filter.search,
+.filter.search .icon-search,
 .choose-dates,
 .choose-dates .actions a,
 .page-action-panel .actions a,
 .table-list .summary div,
-.action.panel .filter.search,
 .filters-choices .selection .detail,
 .messages .problem span.exclaim:before,
 .messages .problem span.exclaim,
@@ -791,7 +793,6 @@ a.iconly,
 .map .nav.nav-tabs > li > a,
 .map .pin:before,
 .Tickets .filters .wrapper,
-.filter.search .icon-search,
 .instruction .duplicating-message a.closer,
 a.page-action,
 .subgroups-detail,
@@ -803,7 +804,6 @@ a.page-action,
 .calendar-day .ticket .continue a,
 .calendar .action-panel .wrapper,
 .calendar-day .no-scheduled .primary.actions,
-.calendar .calendar-search .filter.search,
 .calendar .worker-selected .filters-choices .copy,
 .calendar-month .work,
 .section-controls .action.panel.date .wrapper .inner,
@@ -7461,7 +7461,11 @@ a.page-action.delete-button span.im {
 	margin: .5em 2em .2em 1.8em;
 }
 
+/* Resources temporary fix */
 
+.Resources .filters {
+	margin: 1em 0;
+}
 
 
 /* heredeb */
