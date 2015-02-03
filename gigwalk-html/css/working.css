@@ -9,18 +9,6 @@ while putting together html
 	display: none;
 }
 
-.modal table,
-.modal tr,
-.modal td {
-	width: 100%;
-	height: 100%;
-	vertical-align: middle;
-}
-
-.modal > td {
-	width: auto;
-}
-
 
 
 

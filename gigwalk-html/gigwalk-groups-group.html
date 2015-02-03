@@ -203,6 +203,21 @@
       <!-- the content under the tabs -->
       <div class="content">
       
+      <!-- GWP-986 
+           1. add div "page action messages" 
+           2. move the "Add Members" confirmation out of the "table-list" 
+              confirmation area and into this one
+                -- h1 should contain "(#) Members were added to this group."
+                -- use good English: if only 1 member was added, remove the "s" from "Members"
+           --------------------------------------------------------------------------------- -->
+      <!-- page-level notifications and confirmations -->
+      <div class="page action messages">
+        <div class="message confirmation">
+          <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+          <h1><span class="im icon-empty"></span>Confirmation message here.</h1>
+        </div>
+      </div>
+      
       
       <!-- ****************************************************************** - ->
       <!--                              FILTERS                               -->
