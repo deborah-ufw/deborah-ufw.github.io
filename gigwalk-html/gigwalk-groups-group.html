@@ -315,6 +315,8 @@
           <a class="iconButton ownership">Ownership</a>
           <a class="iconButton members">Add Members</a>
           <a class="iconButton new">New Subgroup</a>
+          <!-- GWP-986 add "move" button -->
+          <a class="iconButton move">Move</a>
         </div>
         
         <!-- Ownership action panel -->
@@ -464,6 +466,23 @@
         
         <!-- New Subgroup action panel -->
         <div class="action panel new-subgroup">
+          <h1>New Subgroup</h1>
+          <div class="wrapper">
+            <input type="text" class="name" placeholder="Group Name" />
+              <div class="warning">Must be at least 3 characters</div>
+              <div class="warning">A group already exists with this name</div>
+          </div>
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly" href="javascript:;">Create</a>
+            </div>
+          </div>
+        </div><!-- END New Subgroup action panel -->
+        
+        <!-- GWP-986 add "Move" action panel -->
+        <!-- Move action panel -->
+        <div class="action panel move">
           <h1>New Subgroup</h1>
           <div class="wrapper">
             <input type="text" class="name" placeholder="Group Name" />

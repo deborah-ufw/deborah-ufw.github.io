@@ -320,6 +320,13 @@ a.bigButton.barcode:before,
 .icon-calendar-empty:before {
 	content: "\e642";
 }
+.icon-clipboard:before {
+	content: "\e643";
+}
+.iconButton.move:before,
+.icon-move:before {
+	content: "\e644";
+}
 
 /* paste new characters just above this line */
 
