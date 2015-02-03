@@ -55,7 +55,7 @@ header nav .user-edit,
 	display: none;
 }
 
-.panel.action .choose.search .filters-choices {
+.action.panel .choose.search .filters-choices {
 	font-size: .8em;
 }
 
@@ -65,6 +65,7 @@ header nav .user-edit,
 }
 
 .action.panel .choose.list table,
+.section-controls .action.panel .choose.search .filters-choices,
 .map .assign-action.detail .filters-choices,
 .calendar-day .no-scheduled .wrapper .primary.actions a,
 .calendar-day .blocked .wrapper .primary.actions a,
@@ -156,7 +157,6 @@ a.page-action,
 .calendar-day .ticket .ti .time,
 .calendar-day .ticket .ti .ticketname,
 .calendar-day a.get-more,
-.section-controls .action.panel .filter.search .icon-search,
 .Profile .account .widget-panel-content .section input {
 	font-size: 1.3em;
 }
@@ -413,7 +413,8 @@ input[type="password"],
 .Profile .account .widget-panel-content .section,
 .Profile .static .copy,
 .Profile .cert,
-.popup-header .ti {
+.popup-header .ti,
+.action.panel .warning {
 	line-height: 1.2em;
 }
 
@@ -724,6 +725,7 @@ nav.subnav ul {
 
 .section-controls .group,
 .section-controls .action.panel.new-subgroup .wrapper,
+.section-controls .action.panel.move .wrapper,
 .table-list .action.panel .wrapper,
 .completion-bar,
 .Ticket .instruction.photo .added .icon-buttons,
@@ -1350,7 +1352,7 @@ textarea {
 }
 
 .disabled,
-.action.panel .item .hint,
+.action.panel .hint,
 th.sorting:after,
 th.sorting_asc:after, 
 th.sorting_desc:after,
@@ -1413,6 +1415,8 @@ textarea.disabled,
 .search.disabled input,
 .search.disabled input:hover,
 .search.disabled input:focus,
+.filter.search.disabled,
+.action.panel .filter.search.disabled,
 .instruction .item.targets .sub,
 .datepicker td.day.disabled,
 .comments .new .attachment {
@@ -1495,7 +1499,7 @@ a.linkly.disabled,
 a.buttonly.cancel.disabled:hover,
 a.buttonly.cancel.disabled:focus,
 .filters .filter.search,
-.panel.action .filter.search,
+.action.panel .filter.search,
 .popup {
 	background: #ffffff;
 }
@@ -1528,7 +1532,9 @@ a.buttonly.cancel.disabled:focus,
 .disabled:focus,
 .primary.actions a.buttonly.disabled:hover,
 .primary.actions a.buttonly.disabled:focus,
-.search.disabled .im.icon-search {
+.search.disabled .im.icon-search,
+.search.disabled .im.icon-search:hover,
+.search.disabled .im.icon-search:focus {
 	background-color: #cccccc;
 }
 
@@ -3358,10 +3364,22 @@ div.main.wrapper + div.inner {
 	margin-right: 1em;
 }
 
+.section-controls .action.panel .primary.actions .right {
+	margin-right: 0;
+}
+
 .primary.actions a,
 .section-controls .buttons a.buttonly {
 	margin-left: .5em;
 	padding: .5em 3em;
+}
+
+.section-controls .radios .checkbox label {
+	padding-left: 0;
+}
+
+.section-controls .radios .checkbox .hint {
+	margin-left: 2em;
 }
 
 .section-controls .buttons a.buttonly,
@@ -4251,10 +4269,6 @@ a.iconly:before {
 	margin-left: 148px;
 }
 
-.action.panel .selection {
-	padding-left: 1em;
-}
-
 .action.panel .filters-choices {
 	text-align: left;
 }
@@ -4263,11 +4277,21 @@ a.iconly:before {
 	margin: .5em 0 1em 0;
 }
 
+.section-controls .action.panel .choose.search {
+	margin: 1em 0 2em 1.8em;
+}
+
+.section-controls .action.panel .radio {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
 .action.panel .choice.searched {
 	margin: .8em .5em 0 0;
 }
 
-.action.panel .filter.search input {
+.action.panel .filter.search input,
+.section-controls .action.panel .filter.search input[type="text"] {
 	width: 170px;
 }
 
@@ -5729,8 +5753,12 @@ a.page-action.delete-button span.im {
 	margin: 1em auto;
 }
 
-.section-controls .action.panel.new-subgroup .wrapper{
+.section-controls .action.panel.new-subgroup .wrapper {
 	margin: 2em auto;
+}
+
+.section-controls .action.panel.move .wrapper {
+	margin: 1em auto .5em auto;
 }
 
 .table-list .action.panel .wrapper {
@@ -6128,6 +6156,11 @@ a.page-action.delete-button span.im {
 	
 	.Group .section-controls .action.panel .group .filter.search input {
 		width: 190px;
+	}
+	
+	.Group .action.panel .checkbox label,
+	.Group .action.panel .radio label {
+		padding-left: 0;
 	}
 	
 }

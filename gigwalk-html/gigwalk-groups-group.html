@@ -483,21 +483,58 @@
         <!-- GWP-986 add "Move" action panel -->
         <!-- Move action panel -->
         <div class="action panel move">
-          <h1>New Subgroup</h1>
+          <h1>Move</h1>
+          
           <div class="wrapper">
-            <input type="text" class="name" placeholder="Group Name" />
-              <div class="warning">Must be at least 3 characters</div>
-              <div class="warning">A group already exists with this name</div>
-          </div>
+            <div class="radios">
+            
+              <div class="radio">
+                <label>
+                <input type="radio" name="choose" value="existing" /> &nbsp;To existing group or subgroup</label>
+                
+                <!-- Search subpanel shows if "Search for assignee" is selected -->
+                <div class="choose search">
+                  <div class="filter search">
+                    <input type="text" placeholder="Search" />
+                    <span class="im icon-search"></span>
+                  </div>
+                  <div class="filters-choices">
+                    <div class="selection">
+                      <div class="choice searched">
+                        <div class="value">Chosen Group</div>
+                        <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="choose" value="copy" /> &nbsp;Copy</label>
+                    <div class="hint">
+                      Original group will stay here
+                    </div>    
+                  </div>
+                </div><!-- end Search subpanel -->
+                
+              </div><!-- end first radio -->
+              
+              <div class="radio">
+                <label>
+                <input type="radio" name="choose" value="top-level" /> &nbsp;To top level</label>
+              </div><!-- end second radio -->  
+              
+            </div><!-- END radios -->
+          </div><!-- END wrapper -->
+          
           <div class="primary actions">
             <div class="right">
               <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly" href="javascript:;">Create</a>
+              <a class="buttonly disabled" href="javascript:;">Move</a>
             </div>
           </div>
-        </div><!-- END New Subgroup action panel -->
+          
+        </div><!-- end Move action panel -->
         
-      </div>
+      </div><!-- end section controls -->
       
       <!-- --------------------------------------------------------
       
