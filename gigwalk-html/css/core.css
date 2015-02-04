@@ -2244,6 +2244,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	
 	/* form parts */
 	
+	input:focus {
+		outline: none;
+		box-shadow: none;
+		border-color: transparent;
+	}
+	
 	.navbar-default .navbar-nav > .open > a, 
 	.navbar-default .navbar-nav > .open > a:hover, 
 	.navbar-default .navbar-nav > .open > a:focus {
@@ -4279,6 +4285,10 @@ a.iconly:before {
 
 .section-controls .action.panel .choose.search {
 	margin: 1em 0 2em 1.8em;
+}
+
+.section-controls .action.panel .checkbox.top-level {
+	margin-left: 1.8em;
 }
 
 .section-controls .action.panel .radio {

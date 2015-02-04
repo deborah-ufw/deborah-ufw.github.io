@@ -291,6 +291,8 @@
         <div class="section title">
           <a class="navly" href="javascript:;">All Groups</a> Awesome Group
         </div>
+        <!-- GWP-986 / GWP-1095 show div "warning" on attempt to re-name to duplicate name -->
+        <div class="warning">This name is already being used by another group.</div>
         
         <!-- --------------------------- -->
         <!-- ------ NEEDS LOGIC -------- -->
@@ -535,6 +537,13 @@
               <div class="radio">
                 <label>
                 <input type="radio" name="choose" value="top-level" /> &nbsp;To top level</label>
+                <div class="checkbox top-level">
+                    <label>
+                        <input type="checkbox" name="choose" value="copy" /> &nbsp;Copy</label>
+                    <div class="hint">
+                      Original group will stay here
+                    </div>    
+                  </div>
               </div><!-- end second radio -->  
               
             </div><!-- END radios -->
