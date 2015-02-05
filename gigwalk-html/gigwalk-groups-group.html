@@ -271,7 +271,7 @@
                 </div>
                 <div class="actions">
                   <a class="cancel" href="javascript:;">Cancel</a>
-                  <a class="buttonly delete" href="javascript:;">Delete</a>
+                  <a class="buttonly delete disabled" href="javascript:;">Delete</a>
                 </div>
               </div>
             </div><!-- closes wrapper div around "page-action-panel" -->
@@ -292,7 +292,7 @@
           <a class="navly" href="javascript:;">All Groups</a> Awesome Group
         </div>
         <!-- GWP-986 / GWP-1095 show div "warning" on attempt to re-name to duplicate name -->
-        <div class="warning">This name is already being used by another group.</div>
+        <div class="warning">A group already exists with this name</div>
         
         <!-- --------------------------- -->
         <!-- ------ NEEDS LOGIC -------- -->
@@ -581,7 +581,10 @@
           
           <!-- on select any, inject class "active" into div "actions" -->
           <div class="actions">
-            <a class="iconButton add" href="javascript:;">Add to Subgroup</a>
+          
+          <!-- GWP-986 - change button to "Add to Group" -->
+            <a class="iconButton add" href="javascript:;">Add to Group</a>
+            
             <a class="iconButton subtract last" href="javascript:;">Remove</a>
           </div>
         </div>
@@ -590,34 +593,70 @@
         <!-- **********  Action panel (drops down on action select)  *********** -->
         <!-- ****************************************************************** -->
         
-        <!-- Panel for Add Members -->
+        
+        <!-- GWP-986 - replace the old panel with this one -  -->
+        <!-- Panel for (new) Add Members -->
         
         <div class="action panel add-members">
-          <h1>Add (#) Members to Subgroup</h1>
+          <h1>Add (#) Members to Group</h1>
+          
           <div class="wrapper">
-            <div class="checkboxes">
+            <div class="radios">
             
-              <div class="checkbox">
+              <div class="radio">
                 <label>
-                  <input type="checkbox" class="supercheck" value="repeats" />
-                    Bionic
-                </label>
-              </div>
+                <input type="radio" name="choose" value="existing" /> &nbsp;To existing group or subgroup</label>
+                
+                <div class="choose search">
+                  <div class="filter search">
+                    <input type="text" placeholder="Search" />
+                    <span class="im icon-search"></span>
+                  </div>
+                  <div class="filters-choices">
+                    <div class="selection">
+                      <div class="choice searched">
+                        <div class="value">Chosen Group</div>
+                        <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="choose" value="copy" /> &nbsp;Move</label>
+                    <div class="hint">
+                      Members will be moved to the selected groups
+                    </div>    
+                  </div>
+                </div><!-- end Search subpanel -->
+                
+              </div><!-- end first radio -->
               
-              <!-- Create New Subgroup option should always be last -->
-              <div class="checkbox new">
+              <div class="radio">
                 <label>
-                  <input type="checkbox" class="supercheck" value="repeats" />
-                    Create New Subgroup
-                </label>
-                <div class="inner">
-                  <input type="text" class="name" placeholder="Group Name" />
-                  <div class="warning">Must be at least 3 characters</div>
-                  <div class="warning">A group already exists with this name</div>
-                </div>
-              </div><!-- END new -->
+                <input type="radio" name="choose" value="top-level" /> &nbsp;To new subgroup</label>
+                <div class="subpanel">
+                  <div class="inner">
+                    <input type="text" class="name" placeholder="Group Name" />
+                    <div class="warning">Must be at least 3 characters</div>
+                    <div class="warning">A group already exists with this name</div>
+                  </div>
+                
+                  <div class="checkbox top-level">
+                    <label>
+                        <input type="checkbox" name="choose" value="copy" />&nbsp;Create as a subgroup of this group</label>
+                  </div>
+                  
+                  <div class="checkbox top-level">
+                    <label>
+                        <input type="checkbox" name="choose" value="copy" /> &nbsp;Move</label>
+                    <div class="hint">
+                      Members will be moved to the new group
+                    </div>    
+                  </div>
+                </div><!-- end subpanel wrapper --> 
+              </div><!-- end second radio -->  
               
-            </div><!-- END checkboxes -->
+            </div><!-- END radios -->
           </div><!-- END wrapper -->
           
           <div class="primary actions">

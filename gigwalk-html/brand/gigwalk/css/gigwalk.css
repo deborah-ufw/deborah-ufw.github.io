@@ -248,6 +248,7 @@ html, body {
 	.page-action-panel .actions a.buttonly.disabled,
 	.page-action-panel .actions a.buttonly.disabled:hover,
 	.page-action-panel .actions a.buttonly.disabled:focus,
+	.page-action-panel .actions a.buttonly.delete.disabled,
 	.page-action-panel .actions a.buttonly.delete.disabled:hover,
 	.page-action-panel .actions a.buttonly.delete.disabled:focus {
 		background: #bbb;
@@ -258,7 +259,10 @@ html, body {
 	.primary.actions a.buttonly.disabled:focus,
 	.page-action-panel .actions a.buttonly.disabled,
 	.page-action-panel .actions a.buttonly.disabled:hover,
-	.page-action-panel .actions a.buttonly.disabled:focus {
+	.page-action-panel .actions a.buttonly.disabled:focus,
+	.page-action-panel .actions a.buttonly.delete.disabled,
+	.page-action-panel .actions a.buttonly.delete.disabled:hover,
+	.page-action-panel .actions a.buttonly.delete.disabled:focus {
 		border-color: #bbb;
 	}
 	

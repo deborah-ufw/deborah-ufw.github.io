@@ -83,7 +83,7 @@ header nav .user-edit,
 	font-size: 1em;
 }
 
-.panel.action .choose.search .filter.search,
+.action.panel .choose.search .filter.search,
 .choose-dates,
 .table-list .controls,
 .table-list .action.panel .item,
@@ -134,6 +134,7 @@ header nav .user-edit,
 .instruction .duplicating-message a .im,
 .action.messages h1 span.icon-checkmark,
 .section-controls .action.panel input[type="text"],
+.Group .table-list .action.panel.add-members input[type="text"],
 .add-members .checkbox.new .name,
 .calendar .view-bar,
 .calendar .view-bar .date-nav a,
@@ -157,7 +158,8 @@ a.page-action,
 .calendar-day .ticket .ti .time,
 .calendar-day .ticket .ti .ticketname,
 .calendar-day a.get-more,
-.Profile .account .widget-panel-content .section input {
+.Profile .account .widget-panel-content .section input,
+.Group .table-list .action.panel.add-members .choice .value {
 	font-size: 1.3em;
 }
 
@@ -1460,6 +1462,7 @@ input[type="checkbox"]:after,
 .page-action-panel .actions a.buttonly.disabled,
 .page-action-panel .actions a.buttonly.disabled:hover,
 .page-action-panel .actions a.buttonly.disabled:focus,
+.page-action-panel .actions a.buttonly.delete.disabled,
 .calendar-day .header .time,
 .calendar-day .ticket .continue a,
 .calendar-day h1.graphic,
@@ -3380,12 +3383,18 @@ div.main.wrapper + div.inner {
 	padding: .5em 3em;
 }
 
-.section-controls .radios .checkbox label {
+.section-controls .radios .checkbox label,
+.Group .table-list .radios .checkbox label {
 	padding-left: 0;
 }
 
-.section-controls .radios .checkbox .hint {
+.section-controls .radios .checkbox .hint,
+.Group .table-list .add-members .hint {
 	margin-left: 2em;
+}
+
+.Group .table-list .add-members .subpanel {
+	margin: .5em 0 0 1.8em;
 }
 
 .section-controls .buttons a.buttonly,
@@ -5707,7 +5716,7 @@ a.page-action.delete-button span.im {
 .page-action-panel input[type="text"],
 .section-controls .action.panel input[type="text"],
 .add-members .name {
-	padding-left: 1em;
+	padding-left: .7em;
 }
 
 .page-action-panel .radios {
