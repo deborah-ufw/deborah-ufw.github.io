@@ -416,7 +416,8 @@ input[type="password"],
 .Profile .static .copy,
 .Profile .cert,
 .popup-header .ti,
-.action.panel .warning {
+.action.panel .warning ,
+.hint {
 	line-height: 1.2em;
 }
 
@@ -493,7 +494,9 @@ input.datepicker,
 .Ticket .instruction.photo .answer,
 .Ticket .instruction.task .widget-panel-content .type.numeric .description,
 .Ticket .instruction .widget-panel-content .type.written-description .description,
-.popup {
+.popup,
+.page-action-panel,
+.Group .filters-holder .wrapper .wrapper {
 	text-align: left;
 }
 
@@ -511,7 +514,9 @@ input.datepicker,
 .Profile table .hours,
 .popup .primary.actions,
 .content.drafts .group.group .warning,
-.Resources .filters {
+.Resources .filters,
+.page-action-panel .actions,
+.Group .filters-holder .wrapper {
 	text-align: right;
 }
 
@@ -2250,7 +2255,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	input:focus {
 		outline: none;
 		box-shadow: none;
-		border-color: transparent;
+		border-width: 1px;
 	}
 	
 	.navbar-default .navbar-nav > .open > a, 
@@ -3393,6 +3398,7 @@ div.main.wrapper + div.inner {
 	margin-left: 2em;
 }
 
+.Group .table-list .add-members .choose.search,
 .Group .table-list .add-members .subpanel {
 	margin: .5em 0 0 1.8em;
 }
@@ -5720,7 +5726,7 @@ a.page-action.delete-button span.im {
 }
 
 .page-action-panel .radios {
-	margin: 1em 0 1.5em .5em;
+	margin: 1em 0 1.5em 3em;
 }
 
 .page-action-panel .radio {
@@ -5850,6 +5856,11 @@ a.page-action.delete-button span.im {
 /* Groups Dash starts to size down */
 
 @media (max-width: 800px) {
+	
+	.Group a.page-action.delete-button {
+		padding: .4em .8em .5em 2em;
+	}
+	
 	
 	
 	.Groups .table-list th,
@@ -6165,7 +6176,7 @@ a.page-action.delete-button span.im {
 	}
 	
 	.Group .section-controls .action.panel input[type="text"],
-	.Group .action.panel.add-members input {
+	.add-members .name {
 		width: auto;
 	}
 	
@@ -6177,9 +6188,26 @@ a.page-action.delete-button span.im {
 		width: 190px;
 	}
 	
-	.Group .action.panel .checkbox label,
-	.Group .action.panel .radio label {
+	.Group .section-controls .action.panel .checkbox label,
+	.Group .section-controls .action.panel .radio label {
 		padding-left: 0;
+	}
+	
+	.Group .section-controls .action.panel .checkbox.top-level,
+	.Group .section-controls .action.panel .choose.search {
+		margin-left: .5em;
+	}
+	
+	.add-members .subpanel .checkbox.top-level {
+		padding-left: 2.3em;
+	}
+	
+	.add-members .subpanel .checkbox.top-level input[type="checkbox"] {
+		margin-left: -1.8em;
+	}
+	
+	.Group .table-list .add-members .subpanel .hint {
+		margin-left: 0;
 	}
 	
 }

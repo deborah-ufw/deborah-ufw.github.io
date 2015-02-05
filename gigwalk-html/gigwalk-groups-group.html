@@ -248,6 +248,7 @@
             </div>
             <a class="page-action delete-button"><span class="im icon-trash"></span>Delete Group</a>
             
+            <!-- GWP-925 page action panel for "Delete" button -->
             <!-- addition - please add this wrapper div around "page-action-panel" -->
             <div class="wrapper">
               <div class="page-action-panel">
@@ -257,15 +258,15 @@
                 </div>
               
                 <div class="wrapper subgroups">
-                  This group contains 2 subgroups.
+                  This group contains <span class="number">2</span> subgroups. Should they be deleted?
                   <div class="radios">
                     <div class="radio">
                       <label>
-                      <input type="radio" name="choose" value="keep-subgroups" /> &nbsp;Don't delete the subgroups</label>
+                      <input type="radio" name="choose" value="delete-subgroups" /> &nbsp;Yes</label>
                     </div>
                     <div class="radio">
                       <label>
-                      <input type="radio" name="choose" value="delete-subgroups" /> &nbsp;Delete the subgroups also</label>
+                      <input type="radio" name="choose" value="keep-subgroups" /> &nbsp;No</label>
                     </div>
                   </div>  
                 </div>
@@ -643,7 +644,7 @@
                 
                   <div class="checkbox top-level">
                     <label>
-                        <input type="checkbox" name="choose" value="copy" />&nbsp;Create as a subgroup of this group</label>
+                        <input type="checkbox" name="choose" value="copy" /> &nbsp;Create as a subgroup of this group</label>
                   </div>
                   
                   <div class="checkbox top-level">
