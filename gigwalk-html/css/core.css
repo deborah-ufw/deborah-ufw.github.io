@@ -2004,7 +2004,8 @@ header .nav li,
 .Profile table tr,
 .Ticket .instruction.task .widget-panel-content .inner > .ti,
 .Ticket .barcode .answer .added,
-.Ticket .instruction.task .images,
+.Ticket .instruction.task .images, 
+.Ticket .instruction .files,
 .table-list table td.expanded {
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
@@ -2067,7 +2068,8 @@ header nav .dropdown-menu {
 .Projects .group.repeats,
 .instruction .item.targets .sub .mini-panel,
 .nav-tabs,
-.Ticket .viewing.icon-buttons a {
+.Ticket .viewing.icon-buttons a,
+.Ticket .instruction.photo .files {
 	border-bottom-width: 0;
 }
 
@@ -3765,11 +3767,11 @@ a.iconly:before {
 		margin-left: 150px;
 	}
 	
-	.instruction.edit-mode .attached-file {
+	.Projects .instruction.edit-mode .attached-file {
 		width: 300px;
 	}
 	
-	.instruction.edit-mode .attachment .filename {
+	.Projects .instruction.edit-mode .attachment .filename {
 		max-width: 240px;
 	}
 	
@@ -7176,6 +7178,10 @@ a.page-action.delete-button span.im {
 	margin-bottom: 1.5em;
 }
 
+.Ticket .instruction .added .attachment {
+	margin-bottom: 0;
+}
+
 .Ticket .instruction.photo .icon-buttons,
 .Ticket .instruction.task .photo .icon-buttons {
 	margin-top: 4px;
@@ -7250,6 +7256,40 @@ a.page-action.delete-button span.im {
 
 .Ticket .barcode .wrapper .manual-entry a.cancel {
 	margin-right: 4px;
+}
+
+.Ticket .instruction .files {
+	margin-right: -2em;
+	padding-right: 2em;
+}
+
+.Ticket .instruction .files .filename .im {
+	display: inline-block;
+}
+
+.Ticket .instruction .files .attachment {
+	display: table;
+	width: 100%;
+}
+
+.Ticket .instruction .files .attachment .plainLabel,
+.Ticket .instruction .files .attachment .remove,
+.Ticket .hint .files .attachment .plainLabel,
+.Ticket .hint .files .attachment .remove  {
+	display: none;
+}
+
+.Ticket .instruction.photo .files {
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.Ticket .instruction.task .files {
+	margin-bottom: 3em;
+}
+
+.Ticket .instruction.task .files {
+	margin-top: -.5em;
 }
 
 
