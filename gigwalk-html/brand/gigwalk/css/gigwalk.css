@@ -164,7 +164,8 @@ html, body {
 	.Ticket .instruction.task .widget-panel-content .answer > .plainLabel,
 	.Profile .user-org,
 	.Profile .scheduling .section.days .plainLabel,
-	.popup {
+	.popup,
+	.instruction.view-mode .attachment .plainLabel {
 		color: #4a4a4a;
 	}
 	

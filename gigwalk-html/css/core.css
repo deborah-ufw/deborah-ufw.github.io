@@ -3507,6 +3507,60 @@ div.main.wrapper + div.inner {
 	right: .8em;
 }
 
+.instruction .attachment {
+	margin-bottom: 1em;
+	display: block;
+	clear: both;
+}
+
+.instruction .attached-file {
+	position: relative;
+	display: table;
+}
+
+.instruction.edit-mode .attached-file {
+	position: relative;
+	padding-bottom: .5em;
+	display: table;
+}
+
+.instruction.view-mode .attached-file {
+	padding-left: 33px;
+	width: 100%;
+}
+
+.instruction.view-mode .attached-file .im {
+	margin-left: -33px;
+}
+
+.instruction.view-mode .attached-file .remove,
+.instruction.edit-mode .attached-file .im {
+	display: none;
+}
+
+.instruction .attachment .filename,
+.instruction .attachment .remove {
+	display: inline-block;
+	top: 0;
+}
+
+.instruction .attachment .filename {
+	position: relative;
+}
+
+.instruction .attachment .remove {
+	padding-top: 5px;
+	position: absolute;
+		right: 8px;
+}
+
+.instruction .attachment .plainLabel {
+	text-align: left;
+	margin: 0 0 .5em 0;
+	display: block;
+	width: 100%;
+}
+
 
 /* add question */
 
@@ -3705,8 +3759,18 @@ a.iconly:before {
 
 @media (min-width: 775px) {
 	
+	.instruction.edit-mode .attacher,
+	.instruction.edit-mode .attachment,
 	.instruction-content .sub {
 		margin-left: 150px;
+	}
+	
+	.instruction.edit-mode .attached-file {
+		width: 300px;
+	}
+	
+	.instruction.edit-mode .attachment .filename {
+		max-width: 240px;
 	}
 	
 	.instruction-content .dropdown-menu {
@@ -3892,10 +3956,20 @@ a.iconly:before {
 		margin-right: 5px;
 	}
 	
+	.instruction.edit-mode .attacher,
+	.instruction.edit-mode .attachment,
 	.group .sub,
 	.set-repeats,
 	.instruction-content .sub {
 		margin-left: 0;
+	}
+	
+	.instruction.edit-mode .attached-file {
+		width: 275px;
+	}
+	
+	.instruction.edit-mode .attachment .filename {
+		max-width: 200px;
 	}
 	
 	.set-repeats .every {
