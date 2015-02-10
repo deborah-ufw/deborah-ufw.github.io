@@ -3760,7 +3760,7 @@ a.iconly:before {
 @media (min-width: 775px) {
 	
 	.instruction.edit-mode .attacher,
-	.instruction.edit-mode .attachment,
+	.Projects .instruction.edit-mode .attachment,
 	.instruction-content .sub {
 		margin-left: 150px;
 	}
@@ -3957,7 +3957,7 @@ a.iconly:before {
 	}
 	
 	.instruction.edit-mode .attacher,
-	.instruction.edit-mode .attachment,
+	.Projects .instruction.edit-mode .attachment,
 	.group .sub,
 	.set-repeats,
 	.instruction-content .sub {
