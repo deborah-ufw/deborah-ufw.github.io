@@ -1,20 +1,23 @@
 /* ---------- CORE APP CSS ---------- */
 
+
+/* fix iOS orientation resize bug */
+html, body {
+	-webkit-text-size-adjust: 100%;
+}
+
 /* everywhere */
 
 html, body {
 	font-family: Helvetica-Neue, Arial, sans-serif;
-	font-size: 16px;
 	background: #ffffff;
 	min-width: 315px;
-	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
 }
 
 .hide,
-.hidden,
 header nav .user-edit,
 .set-repeats,
 .tabnav .dropdown ul.dropdown-menu,
@@ -22,29 +25,28 @@ header nav .user-edit,
 .instruction.edit-mode .viewing.icon-buttons,
 .instruction.view-mode .instruction-footer .primary.actions,
 .instruction.edit-mode .instruction-footer .instruction-summary,
+.admin .Tickets .dash .worker,
 .worker .Tickets .dash .admin,
 .worker .sidenav,
 .worker .tabnav li.dropdownly,
 .worker .filters .dropdown li.admin,
 .worker header:after,
+.admin .map .nav.nav-tabs > li > a.directions,
 .worker .map .tab-pane .admin,
+.admin .map .tab-pane .worker,
 .worker .map .tab-pane.actions .admin,
+.admin .map .tab-pane.actions .worker,
 .worker .Tickets .table-list tr.canceled,
 .worker .Tickets .table-list tr.expired,
 .worker .nav-active-holder,
 .worker .map .tab-pane .assign-action.detail,
+.admin .calendar .worker,
 .worker .calendar .admin,
 .worker .Ticket .admin,
-.admin .Tickets .dash .worker,
-.admin .map .nav.nav-tabs > li > a.directions,
-.admin .map .tab-pane .worker,
-.admin .map .tab-pane.actions .worker,
-.admin .calendar .worker,
 .admin .Ticket .worker,
 .tab-pane.actions .assign-action.detail.required:before,
 .Groups .table-list table .org-name,
 .calendar .calendar-month .date-num:after,
-.map .tab-pane.actions .blocked-day.detail:before,
 .Ticket .completion-bar.complete span.percent-text,
 .Ticket .instruction.required .optional,
 .picker-switch.accordion-toggle,
@@ -53,16 +55,174 @@ header nav .user-edit,
 	display: none;
 }
 
-table,
-td,
-th {
+.action.panel .choose.search .filters-choices {
+	font-size: .8em;
+}
+
+.Profile .section-actions .button-holder a,
+.popup.metadata .key-pair {
+	font-size: .85em;
+}
+
+.action.panel .choose.list table,
+.section-controls .action.panel .choose.search .filters-choices,
+.map .assign-action.detail .filters-choices,
+.calendar-day .no-scheduled .wrapper .primary.actions a,
+.calendar-day .blocked .wrapper .primary.actions a,
+.calendar-month .date-num,
+.comments .attached-file span,
+.Ticket .instruction.barcode .linkly,
+.Ticket .instruction.task .type.barcode .linkly,
+.Profile .user-details {
+	font-size: .9em;
+}
+
+.table-list table table td,
+.section-controls .action.panel .table-list table,
+.section-controls .action.panel .filter.search {
 	font-size: 1em;
 }
 
-/* refactoring */
+.action.panel .choose.search .filter.search,
+.choose-dates,
+.table-list .controls,
+.table-list .action.panel .item,
+.action.panel .warning,
+.page-action-panel,
+.page-action-panel input,
+.add-members .checkbox label,
+.map .tab-pane .quick-select,
+.calendar-day .ticket,
+.calendar .action-panel .wrapper,
+.calendar .action-panel .wrapper input,
+.bigButton,
+.ticket-instructions .widget-panel-content input[type="text"],
+.estimator input,
+.Profile .scheduling .section.days .plainLabel,
+.Profile .cert {
+	font-size: 1.1em;
+}
+
+.nav-sections,
+.group,
+.instruction-content,
+.instructions > .primary.actions,
+.filters-holder .view a .im,
+.action.panel .primary.actions,
+.filter.dropdown .dropdown-menu,
+.table-list td,
+.map .tab-pane.actions .iconButton,
+.section-detail,
+.calendar .header,
+.calendar .action-panel .primary.actions,
+.ticket-summary .widget-panel .area,
+.ticket-instructions .widget-panel-content,
+.Profile .primary.actions,
+.item.time-estimate input[type="text"] {
+	font-size: 1.15em;
+}
+
+.header .actions .ti,
+.instructions .item .actions a.buttonly,
+.set-repeats .checker .supercheck, 
+.set-repeats input[type="checkbox"],
+.map .key,
+.filters-choices .choice .value,
+.filters-choices .selection .detail,
+.action.panel .choose.list .pagination,
+.instruction-footer .icon-checkmark,
+.instruction .duplicating-message a .im,
+.action.messages h1 span.icon-checkmark,
+.section-controls .action.panel input[type="text"],
+.Group .table-list .action.panel.add-members input[type="text"],
+.add-members .checkbox.new .name,
+.calendar .view-bar,
+.calendar .view-bar .date-nav a,
+.calendar .worker-selected .filters-choices .copy,
+.section-controls .buttons,
+.completion-bar .text,
+.hint.widget-panel .header .ti,
+.answerButton {
+	font-size: 1.2em;
+}
+
+.filter.dropdown .btn.btn-default.dropdown-toggle, 
+.filter.search,
+.filters-holder .view a,
+.table-list th,
+.map .tab-pane a.buttonly.main,
+a.page-action,
+.group.materials .ti.number,
+.iconly input[type="checkbox"]:after,
+.calendar .calendar-month .work,
+.calendar-day .ticket .ti .time,
+.calendar-day .ticket .ti .ticketname,
+.calendar-day a.get-more,
+.Profile .account .widget-panel-content .section input,
+.Group .table-list .action.panel.add-members .choice .value {
+	font-size: 1.3em;
+}
+
+.section-actions {
+	font-size: 1.35em;
+}
+
+body,
+.instruction.edit-mode .answer .more-info .set-required input.supercheck[type="checkbox"]:after,
+.pagination,
+.message a.closer,
+.instruction .header .actions .ti,
+.answerButton.submit,
+.Profile .copy {
+	font-size: 1.4em;
+}
+
+.map .tab-pane .ticketlink {
+	font-size: 1.5em;
+}
+
+.header .controls .ti,
+.Profile h1,
+.Profile td.tickets {
+	font-size: 1.6em;
+}
+
+.instruction .duplicating-message .im.icon-warning {
+	font-size: 1.7em;
+}
+
+.Tickets .dash td.status span.paused:before,
+.action.panel h1,
+.action.messages h1,
+.calendar .action-panel h1,
+.filter.dropdown .btn.btn-default.dropdown-toggle .caret,
+.section-no-content,
+.calendar .calendar-search h1 {
+	font-size: 1.9em;
+}
+
+.Tickets .dash td.status span.paused:before {
+	font-size: 2em;
+}
+
+.calendar .view-bar .date-statement {
+	font-size: 2.3em;
+}
+
+.Profile td.number {
+	font-size: 3em;
+}
+
+
+/* all icon font sizes - convert to pixels xince IE 
+   does not correctly calculate em's in befores and afters */
 
 .map .requirements-list li:before {
 	font-size: 15px;
+}
+
+.popup {
+	font-size: 16px;
 }
 
 .editable:after {
@@ -201,6 +361,10 @@ header .nav li.messages .im:before {
 
 /* line heights */
 
+.has-metadata:after {
+	line-height: 0;
+}
+
 
 .filter.search .icon-search:before {
 	line-height: .7em;
@@ -223,7 +387,8 @@ header .nav li.messages .im:before {
 .subnav .nav.nav-tabs > li > a,
 .Profile .widget-panel-content .section .plainLabel,
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+.popup.metadata .key-pair {
 	line-height: 1em; 
 }
 
@@ -237,18 +402,21 @@ input[type="password"] {
 .set-repeats .summary-dynamic,
 .tabnav li .dropdown .dropdown-menu > li > a,
 .dash .table-list table td,
-.button-holder a,
 .map .tab-pane .description,
 .map .tab-pane .address,
+.button-holder a,
+.Tickets .table-list .action.panel .warning,
+.map .tab-pane .warning,
 .calendar-month .work,
 .calendar-day a.get-more,
 .Ticket .instruction .header .controls .ti,
+.page-action-panel .warning,
 .Profile .user-details,
 .Profile .account .widget-panel-content .section,
 .Profile .static .copy,
 .Profile .cert,
 .popup-header .ti,
-.warning ,
+.action.panel .warning ,
 .hint {
 	line-height: 1.2em;
 }
@@ -284,6 +452,8 @@ header .nav .number,
 .Groups .table-list table .subgroups,
 .section-no-content,
 .map .icon-vacation,
+.calendar .view-bar,
+.calendar-day a.get-more,
 .calendar .action-panel .wrapper input,
 .calendar-day .blocked .action-panel,
 .calendar .calendar-search,
@@ -308,6 +478,7 @@ header .nav .number,
 .Ticket .instruction .widget-panel-content .type.written-description,
 .Ticket .instruction.task .widget-panel-content .type.numeric,
 .Ticket .instruction.task .widget-panel-content .type.numeric.time .answer,
+.Profile .section-actions .button-holder a,
 .Profile .scheduling input,
 .Profile table .date,
 .Profile .groups td.ownership,
@@ -323,6 +494,7 @@ input.datepicker,
 .Ticket .instruction.photo .answer,
 .Ticket .instruction.task .widget-panel-content .type.numeric .description,
 .Ticket .instruction .widget-panel-content .type.written-description .description,
+.popup,
 .page-action-panel,
 .Group .filters-holder .wrapper .wrapper {
 	text-align: left;
@@ -348,7 +520,8 @@ input.datepicker,
 	text-align: right;
 }
 
-.calendar-month th {
+.calendar-month th,
+.popup.metadata .key {
 	text-transform: uppercase;
 }
 
@@ -517,6 +690,7 @@ a.disabled,
 .table-list .controls:after,
 .table-list .action.panel:after,
 .dash .action.panel .primary.actions .right:before,
+.pagination.inner:before,
 .pagination:after,
 .map .tabs-control:after,
 .subgroups-toggle:after,
@@ -585,7 +759,9 @@ nav.subnav ul {
 .instruction .item.targets .sub .mini-panel.targets label,
 .choose-dates .between label,
 .action-panel .choice.searched,
+.pagination,
 .map .tab-pane.actions .iconButton,
+.calendar-day a.get-more,
 .calendar-day .no-scheduled .wrapper.finder span.copy,
 .map .tab-pane a.requirements,
 .bigButton:before,
@@ -597,8 +773,10 @@ nav.subnav ul {
 header nav .number,
 .tabnav li a,
 .subnav li a,
+a.buttonly,
 select,
 .custom-select,
+.caret,
 .set-repeats .dropdown,
 .set-repeats .mini-panel,
 .instruction-footer .icon-checkmark,
@@ -652,10 +830,12 @@ a.page-action,
 .Ticket .instruction.task .type.photo .placement,
 .breaker,
 .Groups .table-list .details-control a,
+.Profile .section-actions .button-holder a,
 .Profile .widget-panel .header .ti .im,
 .Profile .scheduling .hint,
 .has-metadata:after,
-.ticket-summary .details.area .dates .copy {
+.ticket-summary .details.area .dates .copy,
+.popup {
 	display: inline-block;
 }
 
@@ -692,6 +872,7 @@ a.page-action,
 .instruction.view-mode .time .dropdown,
 .filters-holder .filters,
 .table-list .actions,
+.pagination .inner,
 .map a.collapse,
 .calendar .view,
 .calendar-day .ticket .due,
@@ -705,6 +886,9 @@ a.page-action,
 }
 
 .navbar-toggle,
+nav .user-info,
+nav .user-image,
+nav .user-info .inner,
 header .navbar .dropdown-toggle,
 input[type="radio"],
 .section.title .navly,
@@ -775,8 +959,10 @@ header nav li a.imaqED,
 .checker,
 input[type="checkbox"],
 .expander,
+.im,
 .header .controls,
 .header .actions,
+.header .actions .icon-buttons .im,
 .instructions .primary.actions,
 .instructions .primary.actions:before,
 .icon-buttons,
@@ -809,6 +995,7 @@ a.iconly:before,
 .filters-choices .choice,
 .action.messages .message h1,
 .action.messages .message .im,
+.action.messages .message .im:before,
 .messages .problem span.exclaim:before,
 .messages .problem span.exclaim,
 .table-list .actions,
@@ -819,6 +1006,9 @@ th.sorting,
 th.sorting:after,
 th.sorting_asc:after, 
 th.sorting_desc:after,
+.pagination .previous,
+.pagination .next,
+.pagination a span.im:before,
 .map,
 .map-drawer,
 .Tickets .dash td.status span:before,
@@ -856,9 +1046,11 @@ a.page-action,
 a[href*="tel"],
 a[href*="tel"]:before,
 .Ticket .ticket-summary .details-area .item,
+.Ticket .ticket-summary .details-area .item .im,
 .comments .area,
 .comments .wrapper,
 a.attach,
+a.attach .im,
 .attached-file,
 .attached-file span,
 .hint.widget-panel .controls,
@@ -879,6 +1071,7 @@ a.attach,
 .Profile .social .holder,
 .Profile .required,
 .Profile .cert,
+.has-metadata,
 .popup .popup-header,
 .popup .popup-ti,
 .has-metadata:after {
@@ -890,6 +1083,7 @@ a.attach,
 header nav .number,
 .tabnav li.buttonly a span.im,
 .btn.btn-default.dropdown-toggle .caret,
+.filters-choices .choice .close,
 .choose-dates,
 .map .tabs-control,
 .map .tab-pane a.buttonly.main,
@@ -909,6 +1103,7 @@ a.page-action span.im,
 .Profile .widget-panel .header .ti .im,
 .Profile .required:before,
 .Profile .cert:before,
+.popup.metadata,
 .popup a.close {
 	position: absolute;
 }
@@ -937,6 +1132,7 @@ header .navbar-collapse.in {
 .Ticket .instruction.task .widget-panel-content .type,
 .Ticket .task .widget-panel-content,
 .instruction.view-mode .instruction-content .ti,
+.Profile .section-actions .button-holder a,
 .Profile .widget-panel-content .section .plainLabel,
 .Profile .account .widget-panel-content .section input[type="text"],
 .Profile .widget-panel-content .section input[type="password"],
@@ -1554,8 +1750,7 @@ input[type="radio"]:checked:after,
 	width: 14px;
 	height: 14px;
 		top: -22px;
-		left: 34px;
-	z-index: 2;		
+		left: 33px;
 }
 
 .map .ticketlink {
@@ -1577,14 +1772,6 @@ input[type="radio"]:checked:after,
 	top: 8px;
 }
 
-.calendar .view-bar {
-	text-align: center;
-}
-
-.calendar .view-bar .date-statement {
-	font-size: 38px;
-}
-
 .calendar .view-bar .date-nav a {
 	top: 2px
 }
@@ -1599,10 +1786,6 @@ input[type="radio"]:checked:after,
 
 .calendar-month .work .time:before {
 	bottom: -7px;
-}
-
-.calendar .header {
-	font-size: 26px;
 }
 
 .calendar .header .controls .arrow {
@@ -1800,6 +1983,14 @@ header .nav li,
 	border: 2px dashed;
 }
 
+.worker header .nav li {
+	border-left-color: transparent;
+}
+
+.tabnav li.buttonly {
+	border-right-color: transparent;
+}
+
 .topborder,
 .section-controls .action.panel,
 .Ticket .instruction .divider:before,
@@ -1844,9 +2035,6 @@ header .nav li,
 	border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
-/* border killers */
-
-.editable .datepicker,
 .Profile .section-actions .button-holder a,
 .Profile table a.buttonly,
 .calendar-day .store .controls {
@@ -1867,14 +2055,6 @@ header .nav li,
 	border-right: 0px solid transparent;
 	border-bottom: 0px solid transparent;
 	border-left: 0px solid transparent;
-}
-
-.worker header .nav li {
-	border-left-color: transparent;
-}
-
-.tabnav li.buttonly {
-	border-right-color: transparent;
 }
                                            
 .group .sub.first,
@@ -2072,241 +2252,207 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	}
 	 
 	
-/* form parts */
-
-input:focus {
-	outline: none;
-	box-shadow: none;
-	border-width: 1px;
-}
-
-.navbar-default .navbar-nav > .open > a, 
-.navbar-default .navbar-nav > .open > a:hover, 
-.navbar-default .navbar-nav > .open > a:focus {
-	background-color: transparent;
-}
-
-header .dropdown-menu > li > a {
-	padding: 0 4em .9em 1em;
-}
-
-header .nav ul.dropdown li {
-	 padding: 0 0 0 0;
-}
-
-header .nav ul.dropdown-menu li.header {
-	font-size: 1.1em;
-	padding: .3em .5em .5em 1em;
-}
-
-header nav .dropdown li a .im {
-	top: .4em;
-}
-
-.nav > li > a.dropdown-toggle {
-	padding-top: 0;
-}
-
-.dropdown-header {
-	font-size: 1em;
-	padding-left: 12px;
-}
-
-.dropdown-menu {
-	margin-top: 0;
-}
-
-.caret,
-.custom-select:before {
-	font-size: 2em;
-	margin-left: 2px;
-	width: 1em;
-	height: 1em;
-	vertical-align: top;
-}
-
-.btn.btn-default.dropdown-toggle {
-	text-align: left;
-	font-size: 1em;
-	padding-right: 40px;
-}
-
-.btn.btn-default.dropdown-toggle .caret {
-	font-size: 1.7em;
+	/* form parts */
+	
+	input:focus {
+		outline: none;
+		box-shadow: none;
+		border-width: 1px;
+	}
+	
+	.navbar-default .navbar-nav > .open > a, 
+	.navbar-default .navbar-nav > .open > a:hover, 
+	.navbar-default .navbar-nav > .open > a:focus {
+		background-color: transparent;
+	}
+	
+	header .dropdown-menu > li > a {
+		padding: 0 4em .9em 1em;
+	}
+	
+	header .nav ul.dropdown li {
+		 padding: 0 0 0 0;
+	}
+	
+	header .nav ul.dropdown-menu li.header {
+		font-size: 1.1em;
+		padding: .3em .5em .5em 1em;
+	}
+	
+	header nav .dropdown li a .im {
+		top: .4em;
+	}
+	
+	.nav > li > a.dropdown-toggle {
+		padding-top: .3em;
+	}
+	
+	.dropdown-header {
+		font-size: 1em;
+		padding-left: 12px;
+	}
+	
+	.dropdown-menu {
+		margin-top: 0;
+	}
+	
+	.caret,
+	.custom-select:before {
+		font-size: 2em;
+		margin-left: 2px;
+		width: 1em;
+		height: 1em;
+		vertical-align: top;
+	}
+	
+	.btn.btn-default.dropdown-toggle {
+		text-align: left;
+		font-size: 1em;
+		padding-right: 40px;
+	}
+	
+	.btn.btn-default.dropdown-toggle .caret {
+		font-size: 1.7em;
+			top: 5px;
+			right: 8px;
+	}
+	
+	.checker .supercheck,
+	input[type="checkbox"],
+	input[type="radio"] {
+		margin-right: 8px;
+	}
+	
+	.checker .supercheck:after,
+	input[type="checkbox"]:after,
+	input[type="radio"]:after {
+		display: block;
+		float: left;
+	}
+	
+	.checker .supercheck:after,
+	input[type="checkbox"]:after {
+		margin: -5px -2px -2px -2px;
+		height: 22px;
+		width: 22px;
+	}
+	
+	.Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
+		font-size: 20px;
+	}
+	
+	.instruction.view-mode input[type="checkbox"]:after {
+		font-size: 1.2em;
+	}
+	
+	input[type="radio"]:after {
+		margin-top: -5px;
+		height: 24px;
+		width: 24px;
+			left: -5px;
+	}
+	
+	input[type="radio"]:checked:after {
+		padding: 1px;
+	}
+	
+	.item.checker .supercheck:after {
+		padding-left: 1px;
+		height: 35px;
+		width: 35px;
+	}
+	
+	.set-repeats .checker .supercheck, 
+	.set-repeats input[type="checkbox"] {
+		margin-right: 12px;
+	}
+	
+	.set-repeats input.supercheck:checked:after {
+		font-size: 1.1em;
+	}
+	
+	.item.set-required {
+		margin-bottom: .5em;
+	}
+	
+	.item.set-required .plainLabel {
+		margin-top: .7em;
+	}
+	
+	input[type="text"],
+	input[type="textarea"],
+	input[type="password"] {
+		margin-top: 1px;
+		padding: 5px 4px 3px 4px;
+	}
+	
+	input.datepicker {
+		margin-bottom: -10px;
+		padding-right: 15px;
+		width: 205px;
+	}
+	
+	.editable .datepicker {
+		border-color: transparent;
+	}
+	
+	.datepicker {
+		padding: 10px;
+	}
+	
+	.datepicker td, 
+	.datepicker th {
+		width: 15px;
+	}
+	
+	input[type="radio"] {
+		margin-right: .5em;
+	}
+	
+	.item.required > .plainLabel:after,
+	.Profile .required:before,
+	.tab-pane.actions .detail:before,
+	.Projects .settings .group.required > .plainLabel:after,
+	.map .tab-pane .assign-action.detail .plainLabel:after {
+		content: '*';
+		font-size: 1.4em;
+			left: 10px;
+	}
+	
+	.Profile .required:before {
+		top: -3px;
+		left: -10px;
+	}
+	
+	.Projects .settings .group.required > .plainLabel:after {
 		top: 5px;
-		right: 8px;
-}
-
-.checker .supercheck,
-input[type="checkbox"],
-input[type="radio"] {
-	margin-right: 8px;
-}
-
-.checker .supercheck:after,
-input[type="checkbox"]:after,
-input[type="radio"]:after {
-	display: block;
-	float: left;
-}
-
-.checker .supercheck:after,
-input[type="checkbox"]:after {
-	margin: -5px -2px -2px -2px;
-	height: 22px;
-	width: 22px;
-}
-
-.Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
-	font-size: 20px;
-}
-
-.instruction.view-mode input[type="checkbox"]:after {
-	font-size: 1.2em;
-}
-
-input[type="radio"]:after {
-	margin-top: -5px;
-	height: 24px;
-	width: 24px;
-		left: -5px;
-}
-
-input[type="radio"]:checked:after {
-	padding: 1px;
-}
-
-.item.checker .supercheck:after {
-	padding-left: 1px;
-	height: 35px;
-	width: 35px;
-}
-
-.set-repeats .checker .supercheck, 
-.set-repeats input[type="checkbox"] {
-	margin-right: 12px;
-}
-
-.set-repeats input.supercheck:checked:after {
-	font-size: 1.1em;
-}
-
-.item.set-required {
-	margin-bottom: .5em;
-}
-
-.item.set-required .plainLabel {
-	margin-top: .7em;
-}
-
-input[type="text"],
-input[type="textarea"],
-input[type="password"] {
-	margin-top: 1px;
-	padding: .4em .5em .4em 7px;
-}
-
-input[type="radio"] {
-	margin-right: .5em;
-}
-
-.item.required > .plainLabel:after,
-.Profile .required:before,
-.tab-pane.actions .detail:before,
-.Projects .settings .group.required > .plainLabel:after,
-.map .tab-pane .assign-action.detail .plainLabel:after {
-	content: '*';
-	font-size: 1.4em;
-		left: 10px;
-}
-
-.Profile .required:before {
-	top: -3px;
-	left: -10px;
-}
-
-.Projects .settings .group.required > .plainLabel:after {
-	top: 5px;
-	left: 5px;
-}
-
-.item.required.text input[type="text"],
-.item .required.text input[type="textarea"] {
-	margin-left: 15px;
-}
-
-/* buttons */
-
-a.buttonly,
-.primary.actions a {
-	text-align: center;
-	padding: 8px 3em;
-	display: inline-block;
-}
-
-.primary.actions a.delete {
-	padding-right: 1.5em;
-	padding-left: 1.5em;
-}
-
-.choose-dates a,
-.quick-select a,
-.tab-pane .button-holder a,
-.page-action-panel .actions a {
-	font-size: 15px;
-	padding: 5px 1em;
-}
-
-.choose-dates .actions a,
-.page-action-panel .actions a {
-	width: 125px;
-}
-
-.remove {
-	font-size: 12px;
-	margin-right: 2px;
-	padding-top: 14px;
-}
-
-
-/* search */
-
-.filter.dropdown .btn.btn-default.dropdown-toggle,
-.filter.search input,
-.filter.search input[type="text"] {
-	font-size: 19px;
-}
-
-/* datepicker */
-
-input.datepicker,
-input[type="text"].datepicker {
-	margin-bottom: -10px;
-	padding-top: .5em;
-	padding-bottom: .3em;
-	width: 190px;
-}
-
-.datepicker td, 
-.datepicker th {
-	width: 15px;
-}
+		left: 5px;
+	}
+	
+	.map .tab-pane.actions .blocked-day.detail:before {
+		display: none;
+	}
+	
+	.item.required.text input[type="text"],
+	.item .required.text input[type="textarea"] {
+		margin-left: 15px;
+	}
 	
 	
 /* popup */
 
 .popup {
-	text-align: left;
 	padding: 1em 1em 1.5em 1em;
-	display: inline-block;
-	width: 300px;
 }
 
 .popup.metadata {
 	padding-bottom: 1.2em;
-	position: absolute;
 		top: 1.5em;
 		left: -1px;
+}
+
+.popup {
+	width: 300px;
 }
 
 .popup a.close {
@@ -2319,17 +2465,11 @@ input[type="text"].datepicker {
 		top: 10px;
 }
 
-.popup.metadata .key {
-	text-transform: uppercase;
-}
-
 .popup.metadata .key-pair {
-	line-height: 1em;
 	padding: 10px 0 5px 0;
 }
 
 .popup.metadata .key-pair div {
-	font-size: 14px;
 	margin-bottom: 5px;
 }
 
@@ -2342,100 +2482,92 @@ input[type="text"].datepicker {
 	margin-top: 1.5em;
 }
 
-.has-metadata, {
-	position: relative;
-}
-
 .has-metadata:after {
-	line-height: 0;
 	width: 20px;
 }
 	
 	
 	
 
+/* header */
 
-/* header nav */
-
-nav .user-info,
-nav .user-image,
-nav .user-info .inner {
-	font-size: 15px;
-	float: left;
-}
-
-header .nav li {
-	padding-top: 5px;
-	padding-bottom: 4px;
-}
-
-header .navbar-nav > li > a {
-	padding: 5px 15px;
-}
-
-.navbar > .container-fluid .navbar-brand {
-	margin: .5em 0  0 .2em;
-	height: 51px;
-	width: 220px;
-}
-
-header .nav .number {
-	font-size: .7em;
-	padding-top: 1px;
-	height: 22px;
-	width: 22px;
-		top: .7em;
-		right: 1.3em;
-}
-
-header .nav .dropdown {
-	padding: 10px 0 15px 15px;
-}
-
-header .nav .caret {
-	top: -3px;
-}
-
-header .nav .dropdown li {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-.user-image {
-	margin: .1em .5em 0 0;
-	height: 40px;
-	width: 40px;
-	background: url(../images/default-user-image.gif) 0 0 no-repeat;
-	background-size: 100%;
-}
-
-.Profile .user-image {
-	height: 150px;
-	width: 150px;
-}
-
-img.user-image {
-	margin: 0 0 0 0;
-}
-
-header .user-info .inner,
-header .user-info .user-name,
-header .user-info .user-org {
-	font-size: 15px;
-	width: auto;
-	max-width: 140px;
-}
-
-ul.dropdown-menu li.header {
-	margin-left: -1px;
-}
-
-header:after {
-	content: ' ';
-	margin: 0 1em -1px 0;
-	display: block;
-	height: 1px;
-}
+	/* header nav */
+	
+	header .nav li {
+		padding-top: 5px;
+		padding-bottom: 4px;
+	}
+	
+	header .navbar-nav > li > a {
+		padding: 5px 15px;
+	}
+	
+	nav {
+		font-size: 1.1em;
+	}
+	
+	.navbar > .container-fluid .navbar-brand {
+		margin: .5em 0  0 .2em;
+		height: 51px;
+		width: 220px;
+	}
+	
+	header .nav .number {
+		font-size: .7em;
+		padding-top: 1px;
+		height: 22px;
+		width: 22px;
+			top: .7em;
+			right: 1.3em;
+	}
+	
+	header .nav .dropdown {
+		padding: 10px 0 15px 15px;
+	}
+	
+	header .nav .dropdown li {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
+	.user-image {
+		margin: .1em .5em 0 0;
+		height: 40px;
+		width: 40px;
+		background: url(../images/default-user-image.gif) 0 0 no-repeat;
+		background-size: 100%;
+	}
+	
+	.Profile .user-image {
+		height: 150px;
+		width: 150px;
+	}
+	
+	img.user-image {
+		margin: 0 0 0 0;
+	}
+	
+	header .user-info .inner {
+		width: auto;
+		max-width: 140px;
+	}
+	
+	header .user-info .user-name,
+	header .user-info .user-org {
+		width: auto;
+		max-width: 140px;
+	}
+	
+	ul.dropdown-menu li.header {
+		margin-left: -1px;
+	}
+	
+	header:after {
+		content: ' ';
+		margin: 0 1em -1px 0;
+		display: block;
+		height: 1px;
+	}
 
 
 /* content structure */	
@@ -2582,7 +2714,7 @@ div.main.wrapper + div.inner {
 	}
 	
 	.tabnav li a {
-		font-size: 18px;
+		font-size: 1.2em;
 		padding: 16px 32px; 
 	}
 	
@@ -2911,7 +3043,7 @@ div.main.wrapper + div.inner {
 }
 
 .section.title {
-	font-size: 26px;
+	font-size: 1.9em;
 }
 
 .ti.editable:after {
@@ -2945,6 +3077,12 @@ div.main.wrapper + div.inner {
 .instruction .sub .selected-item {
 	padding: 14px 0 12px 0;
 	width: 245px;
+}
+
+.remove {
+	font-size: .75em;
+	margin-right: 2px;
+	padding-top: 14px;
 }
 
 .iconly {
@@ -3043,6 +3181,7 @@ div.main.wrapper + div.inner {
 }
 
 .date.group .plainLabel {
+	margin-right: 13px;
 	top: 2px;
 }
 
@@ -3062,14 +3201,16 @@ div.main.wrapper + div.inner {
 }
 
 .sub.more-info,
-.sub .more-info {
-	font-size: 13px;
+.sub .more-info,
+.instructions .item .actions {
+	font-size: .85em;
 }
 
 .sub.more-info input[type="text"],
 .sub .more-info input[type="text"] {
 	text-align: center;
 	margin: -5px 0 0 5px;
+	padding: 2px 4px;
 	width: 60px;
 }
 
@@ -3109,11 +3250,6 @@ div.main.wrapper + div.inner {
 
 .mini-panel  {
 	padding: 1em 2em 1em 1em;
-}
-
-.Projects .mini-panel .ti {
-	padding-bottom: .3em;
-	width: 100%;
 }
 
 .item.numeric .mini-panel {
@@ -3229,7 +3365,9 @@ div.main.wrapper + div.inner {
 	padding: 1em 0;
 }
 
+.instructions .item .actions a.buttonly,
 .group a.buttonly,
+.calendar-day .ticket .continue a.buttonly,
 .calendar-day .ticket .continue .status {
 	padding: .5em 1.2em .5em 1em;
 }
@@ -3249,6 +3387,7 @@ div.main.wrapper + div.inner {
 .primary.actions a,
 .section-controls .buttons a.buttonly {
 	margin-left: .5em;
+	padding: .5em 3em;
 }
 
 .section-controls .radios .checkbox label,
@@ -3270,6 +3409,11 @@ div.main.wrapper + div.inner {
 .section-controls .buttons a {
 	margin-right: 1em;
 	margin-left: 0;
+}
+
+.primary.actions a.delete {
+	padding-right: 1.5em;
+	padding-left: 1.5em;
 }
 
 .instruction .header .actions .icon-buttons {
@@ -3453,14 +3597,16 @@ div.main.wrapper + div.inner {
 .Ticket .instruction.time .time input,
 .Ticket .instruction .numeric.time input,
 .estimator input,
-.details.area .item .estimator input,
-.instruction.view-mode .numeric input {
+.details.area .item .estimator input {
 	margin: 0 0 0 0;
+	padding: 5px 4px 4px 4px;
 	width: 60px;
 }
 
 .instruction.view-mode .numeric input {
 	margin-right: 2em;
+	padding-right: 4px;
+	width: 60px;
 }
 
 .instruction.view-mode .type.date .answer {
@@ -3471,6 +3617,7 @@ div.main.wrapper + div.inner {
 .instruction.view-mode input.datepicker,
 .Ticket input.datepicker {
 	margin: 0 6.5em 0 0;
+	padding-right: 4px;
 	width: 140px;
 }
 
@@ -4043,9 +4190,8 @@ a.iconly:before {
 }
 
 .filters-holder .view a {
-	font-size: 18px;
 	margin-right: 1px;
-	padding: 12px 20px 9px 5px;
+	padding: .5em 1.1em .5em .8em;
 }
 
 .filters-holder .view a.map {
@@ -4067,7 +4213,7 @@ a.iconly:before {
 }
 
 .filter.dates {
-	padding: 2px 10px;
+	padding: .1em .5em;
 }
 
 .filter.dropdown {
@@ -4080,7 +4226,6 @@ a.iconly:before {
 
 .filter.dropdown .btn.btn-default.dropdown-toggle,
 .filter.search input[type="text"] {
-	line-height: 1.4em;
 	padding: 8px 0 7px 12px;
 }
 
@@ -4116,29 +4261,25 @@ a.iconly:before {
 	margin-top: 0;
 }
 
-.filters-choices .choice {
-	margin: 0 0 5px 8px;
-	display: inline-block;
+.map .tab-pane .filters-choices .choice {
+	height: 35px;
 }
 
-.filters-choices .close {
-	display: inline-block;
+.filters-choices .choice {
+	margin: 0 0 5px 8px;
 }
 
 .filters-choices .value {
-	padding: .5em 3.9em .5em 1em;
-	display: inline-block;
+	padding: .4em 3.9em .4em 1em;
 }
 
 .filters-choices .close {
 	padding: 1px 3px 0px 3px;
-	position: absolute;
 		top: 0;
 		right: 0;
 }
 
 .choose-dates {
-	font-size: 15px;
 	margin-top: -11px;
 	padding: 1.5em 1.5em 2em 1em;
 		top: 57px;
@@ -4147,11 +4288,22 @@ a.iconly:before {
 }
 
 .page-action-panel {
-	font-size: 15px;
 	margin: -5px 0 .5em 0;
 	padding: 1.5em 1.5em 2em 1em;
 		top: 0;
 	z-index: 1;
+}
+
+.choose-dates a,
+.quick-select a,
+.tab-pane .button-holder a,
+.page-action-panel .actions a {
+	padding: 5px 1em;
+}
+
+.choose-dates .actions a,
+.page-action-panel .actions a {
+	width: 125px;
 }
 
 .choose-dates .between {
@@ -4174,9 +4326,7 @@ a.iconly:before {
 	margin-top: 1.5em;
 }
 
-.map .assign-action.detail .filters-choices,
 .action.panel .choice.searched .value {
-	font-size: 15px;
 	padding-top: 8px;
 	padding-bottom: 8px;
 }
@@ -4191,8 +4341,10 @@ a.iconly:before {
 	margin: 1.5em 0 0 0;
 }
 
-.action.panel {
-	padding: .5em 1em 1em 1em;
+.table-list .action.panel,
+.section-controls .action.panel,
+.calendar .action-panel {
+	padding: 0 1em 1em 1em;
 }
 
 .action.panel .item,
@@ -4245,7 +4397,6 @@ a.iconly:before {
 }
 
 .action.panel .choose .detail {
-	font-size: 15px;
 	margin: 3px 0 10px 0;
 }
 
@@ -4258,11 +4409,13 @@ a.iconly:before {
 }
 
 .table-list h1,
+.page.action.messages h1,
+.tab.action.messages h1,
 .section-controls .action.panel h1,
 .calendar .action-panel h1,
 .calendar-day h1.graphic {
 	margin: 0;
-	padding: 0 1em .5em .3em;
+	padding: .3em 1em .5em .3em;
 }
 
 .table-list .action.panel h1,
@@ -4270,12 +4423,12 @@ a.iconly:before {
 	padding-bottom: 0;
 }
 
-.action.panel h1,
-.message h1 {
-	font-size: 26px;
+.action.messages .message h1,
+.tab.action.messages .message h1 {
+	padding-top: .1em;
 }
 
-.message h1 span.im {
+.action.messages h1 span.im {
 	padding: 0 5px 0 0;
 }
 
@@ -4288,7 +4441,6 @@ a.iconly:before {
 }
 
 .table-list .controls .iconButton {
-	font-size: 15px;
 	padding: .5em 1em .7em .5em;
 		top: -5px;
 }
@@ -4298,7 +4450,6 @@ a.iconly:before {
 }
 
 .table-list th {
-	font-size: 18px;
 	padding: 1em 5px 15px 0;
 }
 
@@ -4330,6 +4481,11 @@ a.iconly:before {
 
 .action.panel h1 + .hint {
 	padding: 0 0 15px 10px;
+}
+
+input.datepicker,
+input[type="text"].datepicker {
+	width: 190px;
 }
 
 th.sorting:after,
@@ -4392,19 +4548,17 @@ td.table-actions a {
 /* pagination */
 
 .pagination {
-	text-align: right;
 	margin: 1em 0;
-	display: block;
 }
 
-.pagination .inner {
-	display: inline-block;
-}
-
-.pagination a {
+.pagination .previous,
+.pagination .next {
 	margin-left: 2px;
-	padding: .5em 3em; 
-	display: inline-block;
+	padding: .5em 2em; 
+}
+
+.pagination span.im:before {
+	top: 8px;
 }
 
 
@@ -4446,12 +4600,7 @@ td.table-actions a {
 }
 
 .map .tab-content {
-	font-size: 14px;
 	padding: 0 15px 0 15px;
-}
-
-.map .ticketlink {
-	font-size: 21px;
 }
 
 .map .tab-pane .description {
@@ -4488,11 +4637,6 @@ td.table-actions a {
 	margin: .5em 0;
 }
 
-.map .warning,
-.map .hint {
-	font-size: 14px;
-}
-
 .map .tab-pane.actions .warning {
 	padding-top: 8px;
 }
@@ -4518,9 +4662,12 @@ td.table-actions a {
 	margin-bottom: 3px;
 }
 
-.map .tab-pane .datepicker,
+.map .tab-pane .datepicker {
+	width: 160px;
+}
+
 .map .tab-pane .filter.search input {
-	width: 170px;
+	width: 180px;
 }
 
 .map .tab-pane .filter.search .icon-search {
@@ -4529,6 +4676,10 @@ td.table-actions a {
 
 .map .tab-pane .search {
 	margin-bottom: 5px;
+}
+
+.map .tab-pane .filters-choices a.close {
+	padding-top: 0;
 }
 
 .map .tab-pane.actions textarea {
@@ -5626,8 +5777,8 @@ td.table-actions a {
 }
 
 a.page-action {
-	padding: .6em 1.2em .6em 2.5em;
-		top: -10px;
+	padding: .4em 1.2em .5em 2.5em;
+		top: -12px;
 }
 
 a.page-action span.im {
@@ -5676,12 +5827,10 @@ a.page-action.delete-button span.im {
 }
 
 .section-actions a {
-	font-size: 19px;
 	margin-right: 1em;
 }
 
 .section-no-content {
-	font-size: 26px;
 	padding: 1.2em;
 }
 
@@ -6235,10 +6384,7 @@ a.page-action.delete-button span.im {
 }
 
 .calendar-day a.get-more {
-	font-size: 18px;
-	text-align: center;
 	padding-bottom: .5em;
-	display: block;
 }
 
 .calendar-day .ticket .time {
@@ -6284,15 +6430,6 @@ a.page-action.delete-button span.im {
 	width: 6em;
 }
 
-.calendar .calendar-search h1 {
-	font-size: 26px;
-}
-
-.calendar-day .action-panel h1 {
-	font-size: 26px;
-	padding-top: .8em;
-}
-
 .calendar-day h1.graphic {
 	margin: 5px 0 -6px 0;
 	padding: .3em .3em .8em .5em;
@@ -6307,6 +6444,10 @@ a.page-action.delete-button span.im {
 .calendar-day .no-scheduled .wrapper.finder {
 	margin-left: 1em;
 	padding-left: 2em;
+}
+
+.calendar-day .action-panel h1 {
+	padding-top: .8em;
 }
 
 .calendar-day .no-scheduled .primary.actions a,
@@ -7377,12 +7518,9 @@ a.page-action.delete-button span.im {
 }
 
 .Profile .section-actions .button-holder a {
-	text-align: center;
 	margin-right: 0;
 	margin-bottom: 1px;
 	padding: .7em 1.5em;
-	display: inline-block;
-	width: 100%;
 }
 
 .Profile .user-org {
