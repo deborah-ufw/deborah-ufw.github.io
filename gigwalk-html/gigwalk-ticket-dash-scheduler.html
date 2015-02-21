@@ -256,12 +256,12 @@
                 <!-- Annotation 5 - remove the worker-only "Scheduled" item that was here -->
                 
                 <!-- Annotation 6 - change "Paused" to "Saved" -->
-                <li class="paused worker"  role="presentation"><a role="menuitem" href="javascript:;">Saved</a></li><!-- Jimmy only -->
+                <li class="paused"  role="presentation"><a role="menuitem" href="javascript:;">Started</a></li><!-- Jimmy only -->
                 <li class="due"  role="presentation"><a role="menuitem" href="javascript:;">Due</a></li>
                 <li class="submitted admin"  role="presentation"><a role="menuitem" href="javascript:;">Submitted</a></li>
                 
                 <!-- Annotation 7 - add class "admin" to the li -->
-                <li class="expired admin"  role="presentation"><a role="menuitem" href="javascript:;">Expired</a></li><!-- Grace only -->
+                <li class="expired"  role="presentation"><a role="menuitem" href="javascript:;">Expired</a></li><!-- Grace only -->
               </ul>
             </div>
           </div>
@@ -788,7 +788,7 @@
                 <span class="started"></span>
               </td>
             </tr>
-            <tr role="row" class="even">
+            <tr role="row" class="even expired">
               <td class="sorting project-title">
                 <input type="checkbox" value="select-all" /> 
                 <a href="javascript:;">
@@ -815,7 +815,7 @@
                 1:00
               </td>
               <td class="status">
-                <span class="started paused"></span>
+                <span class="started paused expired"></span>
               </td>
             </tr>
             <tr role="row" class="odd canceled">
@@ -1379,7 +1379,7 @@
           <div class="pin unassigned admin"></div><!-- Grace only -->
           <div class="pin paused"></div><!-- For Grace, this is a "scheduled" pin -->
           <div class="pin submitted"></div>
-          <div class="pin expired admin"></div><!-- Grace only -->
+          <div class="pin expired"></div>
 
           
         </div><!-- end map div -->
@@ -1389,7 +1389,7 @@
         <div class="key scheduled">Scheduled</div>
         <div class="key unscheduled">Unscheduled</div>
         <div class="key unassigned admin">Unassigned</div><!-- Grace only -->
-        <div class="key paused worker">Saved</div><!-- Jimmy only -->
+        <div class="key paused">Started</div><!-- Jimmy only -->
         <div class="key submitted">Submitted</div>
         <div class="key expired admin">Expired</div><!-- Grace only -->
       </div>

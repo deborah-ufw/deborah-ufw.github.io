@@ -29,6 +29,8 @@ header nav .user-edit,
 .worker header:after,
 .worker .map .tab-pane .admin,
 .worker .map .tab-pane.actions .admin,
+/* integrate the below line */
+.worker .map .pin.expired,
 .worker .Tickets .table-list tr.canceled,
 .worker .Tickets .table-list tr.expired,
 .worker .nav-active-holder,
@@ -209,10 +211,12 @@ input.datepicker,
 	text-transform: uppercase;
 }
 
+/* integrate a.disabled */
 nav li a,
 nav li a:hover,
 nav li a:focus,
 nav li a:visited,
+a.disabled,
 a.navly,
 .remove,
 .iconly,
@@ -995,12 +999,16 @@ textarea {
 .calendar-day .store .header,
 .calendar-day .store .ticket,
 .calendar-day.past .ticket.today .due,
-.calendar-day a.ticketname,
+.calendar-day a.ticketname.disabled,
 .calendar-day .no-scheduled .wrapper.blocker:before,
 .table-list th.disabled {
 	color: #999999;
 }
 
+/* integrate the following 3 lines */
+.ticketname.disabled,
+.ticketname.disabled:hover,
+.ticketname.disabled:focus,
 .dropdown-menu > li > a.link:hover {
  background-color: transparent;
 }
@@ -1743,7 +1751,9 @@ header .nav li,
 .editable .datepicker,
 .Profile .section-actions .button-holder a,
 .Profile table a.buttonly,
-.calendar-day .store .controls {
+.calendar-day .store .controls,
+/* integrate */
+.calendar .table-list .action.messages .message {
 	border-color: transparent;
 }
 
@@ -4181,6 +4191,21 @@ a.iconly:before {
 	font-size: 26px;
 }
 
+/* integrate 3 new styles */
+.messages .message h1 {
+	padding-right: 2em;
+}
+
+.messages .message .copy {
+	padding: 0 0 1em .7em;
+}
+
+.messages .message .copy a.stack {
+	padding: .5em 0 0 0;
+	display: inline-block;
+	width: 100%;
+}/* */
+
 .action.messages .message .im:before {
 	font-size: 48px;
 }
@@ -4266,6 +4291,11 @@ th.sorting_desc:after {
 	margin-right: 15px;
 }
 
+/* integrate - add the below style */
+.worker .Tickets .table-list tr.expired.still-editable {
+	display: table-row;
+}
+
 .Tickets .dash td.status span:before {
 	top: -4px;
 }
@@ -4336,6 +4366,11 @@ td.table-actions a {
 .map .pin {
 	font-size: 32px;
 	position: relative;
+}
+
+/* integrate the following style */
+.worker .map .pin.expired.still-editable {
+	display: inline-block;
 }
 
 .map-drawer {
@@ -6135,6 +6170,11 @@ a.page-action.delete-button span.im {
 	padding-top: 0;
 	padding-left: 0;
 }
+
+/* integrate */
+.calendar .table-list .action.messages .message {
+	margin-top: 6px;
+}/* */
 
 .calendar-day .store,
 .calendar .action-panel {

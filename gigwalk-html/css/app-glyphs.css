@@ -80,7 +80,10 @@ a.bigButton:before,
 .checker .supercheck:after,
 input[type="checkbox"]:after,
 .Tickets .dash td.status span:before,
-.admin .Tickets .dash td.status span.started.paused:before, 
+/* integrate - remove a line, add the 3 lines that follow */
+.Tickets .dash tr.expired.still-editable td.status span.started:before,
+.Tickets .dash tr.expired.still-editable td.status span.started.paused.expired:before,
+.Tickets .dash tr.expired.still-editable td.status span.started.expired:before, /* */
 .Profile .groups td.status span:before,
 .Profile .cert:before,
 .icon-checkmark:before {
@@ -158,7 +161,7 @@ a.bigButton.photo:before,
 .icon-barcode:before {
 	content: "\e610";
 }
-.Tickets .dash td.status span.started.paused:before,
+/* integrate - remove .Tickets .dash ... .paused:before */
 .icon-pause:before {
 	content: "\e600";
 }

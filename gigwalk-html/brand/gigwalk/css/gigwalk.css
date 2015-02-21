@@ -13,7 +13,7 @@
 
 .super span.regular {
 	color: #999999;
-}
+}.m
 
 .instructions div.super {
 	font-size: 1.4em;
@@ -311,6 +311,14 @@ html, body {
 		color: #fe8e92;
 	}
 	
+	/* integrate the following 7 styles */
+	.ticket.saved.incomplete.expired .due,
+	.worker .pin.expired.assigned:after,
+	.worker .pin.expired.scheduled:after,
+	.worker .pin.expired.still-editable:after,
+	.Tickets .dash tr.expired td.status span:before,
+	.Tickets .dash tr.expired td.status span.started:before,
+	.Tickets .dash tr.expired td.status span.started.paused:before,
 	.table-remove,
 	.remove,
 	.remove:hover,
@@ -342,6 +350,8 @@ html, body {
 		background: rgba(255, 81, 87, .1);
 	}
 	
+	/* integrate the following line */
+	.calendar-day .store .header .time.expired,
 	.key.expired:before {
 		background: #ff5157;
 	}
@@ -359,6 +369,9 @@ html, body {
 		background: #ff797e;
 	}
 	
+	/* integrate the following 2 lines */
+	.calendar-day .ticket.expired,
+	.calendar-day .ticket.today.expired,
 	.messages .message.problem {
 		background: #ffe5e6;
 	}
@@ -604,6 +617,16 @@ html, body {
 		background: #32b0e8;
 	}
 	
+	/* integrate 2 styles */
+	
+	.pin.paused:after {
+		color: #9fc8f2;
+	}
+	
+	.key.paused:before {
+		background: #9fc8f2;
+	}/* */
+	
 	.pagination .previous,
 	.pagination .next,
 	.filters-choices .choice,
@@ -731,6 +754,7 @@ html, body {
 	
 	/* greens */
 	
+	/* integrate - remove admin.pin.paused:after */
 	header .nav li.alerts .im,
 	header .nav li.messages .im,
 	.subnav .nav-tabs > li > a:hover,
@@ -739,7 +763,6 @@ html, body {
 	.instruction-footer .item.count .described,
 	.instruction.view-mode .answer.exception .plainLabel:after,
 	.pin.scheduled:after,
-	.admin .pin.paused:after,
 	.confirmation h1,
 	.confirmation .icon-checkmark,
 	.Tickets .dash td.status span.submitted:before,
@@ -804,8 +827,9 @@ html, body {
 		background: #84d5c3;
 	}
 	
+	/* integrate - remove .admin from the 2nd style */
 	.Tickets .dash td.status span.started:before,
-	.admin .Tickets .dash td.status span.started.paused:before {
+	.Tickets .dash td.status span.started.paused:before {
 		color: #8ad7c5;
 	}
 	
@@ -824,17 +848,7 @@ html, body {
 	.key.unscheduled:before {
 		background: #9a5cab;
 	}
-	
-	/* yellow (gold) */
-	
-	.Tickets .dash td.status span.started.paused:before,
-	.pin.paused:after {
-		color: #febb11;
-	}
-	
-	.key.paused:before {
-		background: #febb11;
-	}
+
 	
 	/* black */
 	
