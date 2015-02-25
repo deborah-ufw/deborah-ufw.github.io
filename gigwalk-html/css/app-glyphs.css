@@ -322,6 +322,10 @@ a.bigButton.barcode:before,
 .icon-move:before {
 	content: "\e644";
 }
+.iconButton.archive:before,
+.icon-archive:before {
+	content: "\e645";
+}
 
 /* paste new characters just above this line */
 

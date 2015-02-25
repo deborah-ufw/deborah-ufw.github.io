@@ -23,6 +23,11 @@ th {
 	font-weight: normal;
 }
 
+.modal-ios {
+  position: absolute;
+  overflow: visible;
+}
+
 /* end everywhere */
 
 .hide,
@@ -1567,7 +1572,6 @@ a.attach .im,
 
 /* borders */
 
-.checker .supercheck:after,
 input[type="checkbox"]:after,
 input[type="radio"]:after,
 input[type="text"],
@@ -2191,7 +2195,6 @@ input[type="text"].datepicker {
 .datepicker th {
 	width: 15px;
 }
-	
 	
 /* popup */
 
@@ -7714,11 +7717,11 @@ a.page-action.delete-button span.im {
 }
 
 
-/* - - - - - - - - - - - - - - - -
-	 CSS3 form hints  
-	 can not be combined with each other 
-	 or anything else 
-	 - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - -
+	 CSS3 form hints
+	 can not be combined with each other
+	 or anything else, or they break
+	 - - - - - - - - - - - - - - - - - -
 */
 
 input::-webkit-input-placeholder { 

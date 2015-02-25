@@ -548,7 +548,7 @@ html, body {
 	}
 	
 	.tabnav li.active,
-	.tabnav li.active:hover,]
+	.tabnav li.active:hover,
 	.tabnav li.active:focus {
 		background: #32b0e8;
 	}
