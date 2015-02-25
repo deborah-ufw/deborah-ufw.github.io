@@ -1,74 +1,5 @@
 /* ---------- GIGWALK CSS ----------  */
 
-
-/* temporary */ 
-
-.super {
-	color: #F60;
-}
-
-.super span {
-	color: #ff0099;
-}
-
-.super span.regular {
-	color: #999999;
-}.m
-
-.instructions div.super {
-	font-size: 1.4em;
-	margin: 1em 0;
-	padding: 1em;
-	border-top: 8px solid #f60;
-	border-bottom: 8px solid #f60;
-}
-
-h1.super {
-	font-family: Helvetica-Neue-Light;
-	font-size: 3em;
-}
-
-h2.super {
-	font-family: Helvetica-Neue-Light;
-	font-size: 2em;
-	margin: 0;
-}
-
-.temporary-message {
-	color: #f60;
-	text-align: center;
-	padding: 2em;
-}
-
-.instruction.view-mode h2.super:before,
-.instruction.edit-mode h2.super:after {
-	 content: ' ';
-	 visibility: hidden;
-	 display: block;
-	 font-size: 0;
-	 clear: both;
-	 height: 0;
-}
-
-.instruction.edit-mode h2.super {
-	margin-bottom: 15px;
-}
-
-.subcontent {
-	margin-bottom: 5em;
-}
-
-.map-holder .map {
-	background: url(../../../images/map.gif);
-}
-
-
-/* end temporary */
-
-
-
-/* base */
-
 html, body {
 	font-family: Helvetica-Neue, Arial, sans-serif;
 }
@@ -489,7 +420,9 @@ html, body {
 	.Ticket .section-controls .buttons a.buttonly,
 	.Ticket .comments .primary.actions a.buttonly,
 	.Ticket .barcode .primary.actions a.buttonly,
-	.answerButton.submit {
+	.answerButton.submit,
+	/* integrate below */
+	.project-type .primary.actions a.buttonly {
 		background: #4890e2;
 	}
 	
@@ -506,7 +439,10 @@ html, body {
 	.Ticket .barcode .primary.actions a.buttonly:hover,
 	.Ticket .barcode .primary.actions a.buttonly:focus,
 	.answerButton.submit:hover,
-	.answerButton.submit:focus {
+	.answerButton.submit:focus,
+	/* integrate below */
+	.project-type .primary.actions a.buttonly:hover,
+	.project-type .primary.actions a.buttonly:focus {
 		background: #539ce9;
 	}
 	
@@ -923,7 +859,8 @@ select option,
 header .nav .number,
 .Group .page-action-panel .copy span,
 .Projects .settings .group.required > .plainLabel:after,
-.popup-ti  {
+.popup-ti,
+.strong  {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }

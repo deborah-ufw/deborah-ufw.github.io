@@ -1,5 +1,4 @@
-/* ---------- APP GLYPHS CSS ---------- */
-
+/* ---------- APP GLYPHS CSS in sync Feb 24 ---------- */
 
 @font-face {
 	font-family: 'icomoon';
@@ -18,7 +17,6 @@
 .caret,
 .custom-select:before,
 .editable:after,
-.checker .supercheck:after,
 .nav-active-holder:after,
 .instruction.view-mode .answer.exception .plainLabel:after,
 .iconly:before,
@@ -30,7 +28,6 @@ th.sorting:after,
 .Profile .groups td.status span:before,
 .map .nav-tabs > li > a:before,
 .map a.collapse:before,
-.checker .supercheck:after,
 input[type="checkbox"]:after,
 .map .requirements-list li:before,
 .section-actions a:before,
@@ -77,10 +74,8 @@ a.bigButton:before,
 .Ticket .instruction.complete .ti.type:before,
 .action.messages .message.confirmation h1 span.im.icon-empty:before,
 .map .requirements-list li:before,
-.checker .supercheck:after,
 input[type="checkbox"]:after,
 .Tickets .dash td.status span:before,
-/* integrate - remove a line, add the 3 lines that follow */
 .Tickets .dash tr.expired.still-editable td.status span.started:before,
 .Tickets .dash tr.expired.still-editable td.status span.started.paused.expired:before,
 .Tickets .dash tr.expired.still-editable td.status span.started.expired:before, /* */
@@ -161,7 +156,6 @@ a.bigButton.photo:before,
 .icon-barcode:before {
 	content: "\e610";
 }
-/* integrate - remove .Tickets .dash ... .paused:before */
 .icon-pause:before {
 	content: "\e600";
 }

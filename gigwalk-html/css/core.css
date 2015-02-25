@@ -10,8 +10,20 @@ html, body {
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
 }
+
+table,
+td,
+th {
+	font-size: 1em;
+}
+
+label,
+th {
+	font-weight: normal;
+}
+
+/* end everywhere */
 
 .hide,
 .hidden,
@@ -29,7 +41,6 @@ header nav .user-edit,
 .worker header:after,
 .worker .map .tab-pane .admin,
 .worker .map .tab-pane.actions .admin,
-/* integrate the below line */
 .worker .map .pin.expired,
 .worker .Tickets .table-list tr.canceled,
 .worker .Tickets .table-list tr.expired,
@@ -53,12 +64,6 @@ header nav .user-edit,
 .Profile .widget-panel .header .arrow,
 .popup.metadata .primary.actions {
 	display: none;
-}
-
-table,
-td,
-th {
-	font-size: 1em;
 }
 
 
@@ -121,11 +126,6 @@ input[type="password"] {
 
 .ticket-summary .details.area .dates .wrapper {
 	line-height: 1.8em;
-}
-
-label,
-th {
-	font-weight: normal;
 }
 
 .center,
@@ -333,6 +333,7 @@ input[type="radio"]:after,
 }
 
 .defaultmouse,
+.disable,
 a.disabled,
 .disabled,
 .tabnav li.active a,
@@ -344,6 +345,7 @@ a.disabled,
 .calendar .date-statement,
 .Ticket a.buttonly.disabled {
 	cursor: default;
+	pointer-events: none;
 }
 
 .clearfix:after,
@@ -565,7 +567,6 @@ input[type="radio"],
 .section.title .ti,
 .date.group,
 .date.group div,
-.group .plainLabel,
 .instruction-content .plainLabel,
 .group .value,
 .sub .selected-item,
@@ -1120,7 +1121,6 @@ textarea.disabled,
 	background: #e6e6e6;
 }
 
-input.supercheck:after,
 input[type="checkbox"]:after,
 .desktop .date.group:after,
 .instruction-footer .icon-checkmark,
@@ -1187,10 +1187,6 @@ a.buttonly.cancel.disabled:focus,
 .calendar .action-panel .primary.actions a.buttonly.cancel:hover,
 .calendar .action-panel .primary.actions a.buttonly.cancel:focus {
 	background-color: transparent;
-}
-
-.navbar {
-	border-radius: 0;
 }
 
 .Tickets .dash td.status span:before {
@@ -1854,8 +1850,6 @@ header .nav .dropdown li,
 }
 
 
-/* boostrap customization */
-
 /* miscellaneous bootstrap overrides */
 
 .panel {
@@ -1876,6 +1870,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	float: none;
 	font-weight: normal;
 	text-shadow: none;
+}
+
+.navbar {
+	border-radius: 0;
 }
 
 .nav.nav-tabs > li > a {
@@ -2040,13 +2038,11 @@ header nav .dropdown li a .im {
 		right: 8px;
 }
 
-.checker .supercheck,
 input[type="checkbox"],
 input[type="radio"] {
 	margin-right: 8px;
 }
 
-.checker .supercheck:after,
 input[type="checkbox"]:after,
 input[type="radio"]:after {
 	font-size: 19px;
@@ -2054,7 +2050,6 @@ input[type="radio"]:after {
 	float: left;
 }
 
-.checker .supercheck:after,
 input[type="checkbox"]:after {
 	margin: -5px -2px -2px -2px;
 	height: 22px;
@@ -2505,8 +2500,8 @@ div.main.wrapper + div.inner {
 	
 	.tabnav li.buttonly a,
 	.tabnav .btn.btn-default.dropdown-toggle {
-		font-size: 1em;
-		margin: 10px;
+		font-size: 16px;
+		margin: 10px 10px 0 10px;
 		padding: 8px 12px 8px 40px;
 		background: rgba(0, 0, 0, .1);
 	}
@@ -3587,8 +3582,9 @@ a.iconly:before {
 	
 	.group .plainLabel {
 		text-align: right;
-		margin-right: 25px;
-		width: 90px;
+		margin-right: 15px;
+		width: 100px;
+		float: left;
 	}
 	
 	.group .sub,
