@@ -1001,11 +1001,19 @@ textarea {
 }
 
 .datepicker td.day.disabled,
+.datepicker td.day.disabled:hover,
+.datepicker td.day.disabled.active,
+.datepicker td.day.disabled.active:hover,
+.datepicker td.day.today.disabled,
+.datepicker td.day.today.disabled:hover,
+.datepicker td.day.today.disabled.active,
+.datepicker td.day.today.disabled.active:hover,
+.datepicker td span.disabled,
 .calendar-day .past,
 .calendar-day .store .header,
 .calendar-day .store .ticket,
 .calendar-day.past .ticket.today .due,
-.calendar-day a.ticketname.disabled,
+.calendar-day a.ticketname,
 .calendar-day .no-scheduled .wrapper.blocker:before,
 .table-list th.disabled {
 	color: #999999;
