@@ -2042,6 +2042,23 @@ header nav .dropdown li a .im {
 		right: 8px;
 }
 
+.filter.dropdown .btn.btn-default.dropdown-toggle .caret {
+	font-size: 32px;
+}
+
+.filter.dropdown.multi-state ul.dropdown-menu {
+	 padding: 1em 1.5em;
+}
+
+.filter.dropdown.multi-state ul.dropdown-menu > li {
+	 margin: .5em 0;
+}
+
+.filter.dropdown.multi-state ul.dropdown-menu > li.quick-select {
+	 text-align: center;
+	 margin-top: 1.5em;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
 	margin-right: 8px;
@@ -5533,7 +5550,7 @@ td.table-actions a {
 /* Groups */
 
 .page.action.messages {
-	margin: 0 0 2em 0;
+	margin: 0 0 1em 0;
 }
 
 .page.action.messages .message {

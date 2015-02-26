@@ -393,6 +393,9 @@ html, body {
 	 a.close:focus,
 	 .dropdown-menu > li > a.link,
 	 .dropdown-menu > li > a.link:hover,
+	 /* integrate the following 2 styles */
+	 .dropdown-menu > li.quick-select > a,
+	 .dropdown-menu > li.quick-select > a:hover,
 	 .pin.submitted:after,
 	 .filters-choices,
 	 .filters-choices .icon-cancel:before,

@@ -220,7 +220,39 @@
 
         <div class="filters">
           <div class="wrapper">
-          
+
+            <div class="filter dropdown multi-state">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                  Show active
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li class="launched"  role="presentation">
+                    <label>
+                      <input type="checkbox" value="launched" />
+                      Launched
+                    </label>
+                  </li>
+                  <li class="in-progress"  role="presentation">
+                    <label>
+                      <input type="checkbox" value="in-progress" />
+                      In progress
+                    </label>
+                  </li>
+                  <li class="complete"  role="presentation">
+                    <label>
+                      <input type="checkbox" value="complete" />
+                      Complete
+                    </label>
+                  </li>
+                  <li class="quick-select">
+                    <a href="javascript:;">Show</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             <!-- ---------------- Desired Search behavior ----------------
             
                 in a dash context, Search should always
