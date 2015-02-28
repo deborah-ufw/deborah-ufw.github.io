@@ -677,7 +677,10 @@ html, body {
 	
 	/* greens */
 	
-	/* integrate - remove admin.pin.paused:after */
+	/* integrate - remove admin.pin.paused:after,
+	include the following Project lines */
+	.Projects .dash .table-list td.status span.complete:before,
+	.Projects .dash .table-list td:nth-child(9) span.complete:before,
 	header .nav li.alerts .im,
 	header .nav li.messages .im,
 	.subnav .nav-tabs > li > a:hover,
@@ -750,7 +753,10 @@ html, body {
 		background: #84d5c3;
 	}
 	
-	/* integrate - remove .admin from the 2nd style */
+	/* integrate - remove .admin from the 2nd style,
+	   add the 2 project styles */
+	.Projects .dash .table-list td.status span.in-progress:before,
+	.Projects .dash .table-list td:nth-child(9) span.in-progress:before,
 	.Tickets .dash td.status span.started:before,
 	.Tickets .dash td.status span.started.paused:before {
 		color: #8ad7c5;

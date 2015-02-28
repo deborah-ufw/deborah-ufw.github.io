@@ -38,6 +38,8 @@ input[type="checkbox"]:after,
 .calendar-day .no-scheduled .wrapper.blocker:before,
 .Ticket .completion-bar.complete .text:before,
 .Ticket .instruction.complete .ti.type:before,
+.Projects .dash .table-list td.status span:before,
+.Projects .dash .table-list td:nth-child(9) span:before,
 a[href*="tel"]:before,
 a.bigButton:before,
 .Profile .cert:before,
@@ -75,6 +77,8 @@ th.sorting.ascending:after,
 .icon-bell:before {
 	content: "\e615";
 }
+.Projects .dash .table-list td.status span:before,
+.Projects .dash .table-list td:nth-child(9) span:before,
 .Ticket .completion-bar.complete .text:before,
 .Ticket .instruction.complete .ti.type:before,
 .action.messages .message.confirmation h1 span.im.icon-empty:before,

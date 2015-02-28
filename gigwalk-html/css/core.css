@@ -1231,6 +1231,8 @@ a.buttonly.cancel.disabled:focus,
 	background-color: transparent;
 }
 
+.Projects .dash .table-list td.status span.launched:before,
+.Projects .dash .table-list td:nth-child(9) span.launched:before,
 .Tickets .dash td.status span:before {
 	color: #cccccc;
 }
@@ -1300,6 +1302,8 @@ a.buttonly.cancel.disabled:focus,
 	font-size: 25px;
 }
 
+.Projects .dash .table-list td.status span:before,
+.Projects .dash .table-list td:nth-child(9) span:before,
 .Profile .groups td.status span:before,
 .Tickets .dash td.status span:before {
 	font-size: 29px;
@@ -5121,7 +5125,7 @@ td.table-actions a {
 	.Group .choose.list td,
 	.admin .Tickets .table-list th,
 	.admin .Tickets .table-list td {
-		font-size: 1.1em;
+		font-size: 14px;
 	}
 	
 	.admin .Tickets .pagination {
@@ -7616,6 +7620,10 @@ a.page-action.delete-button span.im {
 	top: -10px;
 }
 
+.Projects .dash .table-list :nth-child(1) input[type="checkbox"] {
+	left: 4px;
+}
+
 .Projects .dash .table-list th:nth-child(2) { /* project name */
 	min-width: 175px;
 	max-width: 365px;
@@ -7644,7 +7652,7 @@ a.page-action.delete-button span.im {
 
 .Projects .dash .table-list td:nth-child(5) { /* hours left td */
 	text-align: right;
-	padding-right: 15px;
+	padding-right: 55px;
 }
 
 .Projects .dash .table-list th:nth-child(6),
