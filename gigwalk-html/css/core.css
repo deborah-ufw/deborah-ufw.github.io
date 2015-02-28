@@ -65,6 +65,7 @@ header nav .user-edit,
 .map .tab-pane.actions .blocked-day.detail:before,
 .Ticket .completion-bar.complete span.percent-text,
 .Ticket .instruction.required .optional,
+.Projects .dash .table-list td .completion-bar .text .copy,
 .picker-switch.accordion-toggle,
 .Profile .widget-panel .header .arrow,
 .popup.metadata .primary.actions {
@@ -1018,6 +1019,10 @@ a.buttonly,
 	background: rgba(0, 0, 0, 0.33);
 }
 
+.Projects .dash .table-list td .completion-bar.zero {
+	border-color: #dedede;
+}
+
 .ticket-summary .widget-panel .controls,
 .comments .new .attachment,
 .calendar .header .arrow .im:before {
@@ -1113,6 +1118,7 @@ input.disabled[type="checkbox"]:after {
 	color: #dfdfdf;
 }
 
+.Projects .dash .table-list td .completion-bar.zero .text,
 .calendar-day .store .header,
 .ticket-summary .widget-panel .header,
 .ticket-instructions,
@@ -1214,6 +1220,7 @@ a.linkly.disabled,
 .instruction.widget-panel,
 .Ticket .instruction.required.widget-panel .header,
 .Ticket .instruction.widget-panel .header,
+.Projects .dash .table-list td .completion-bar.zero,
 a.linkly.disabled,
 a.buttonly.cancel.disabled:hover,
 a.buttonly.cancel.disabled:focus,
@@ -1665,6 +1672,10 @@ header .nav ul.dropdown-menu li,
 
 .map .tabs-control {
 	border-bottom: 1px solid #b3b3b3;
+}
+
+.Projects .dash .table-list td .completion-bar.zero {
+	border-color: #dfdfdf;
 }
 
 .hint.widget-panel .attachment.file {
@@ -7634,18 +7645,6 @@ a.page-action.delete-button span.im {
 	min-width: 115px;
 }
 
-.Projects .dash .table-list td .completion-bar,
-.Projects .dash .table-list td .text { /* progress bars text */
-	text-align: center;
-	display: inline-block;
-	width: 100%;
-}
-
-.Projects .dash .table-list td .percent-text { /* progress bars text */
-	text-align: right;
-	padding-right: 15px;
-}
-
 .Projects .dash .table-list th:nth-child(5) { /* hours left th */
 	min-width: 120px;
 }
@@ -7656,8 +7655,14 @@ a.page-action.delete-button span.im {
 }
 
 .Projects .dash .table-list th:nth-child(6),
-.Projects .dash .table-list th:nth-child(7) { /* dates */
+.Projects .dash .table-list th:nth-child(7) { /* dates th's */
 	min-width: 75px;
+}
+
+.Projects .dash .table-list td:nth-child(6),
+.Projects .dash .table-list td:nth-child(7) { /* dates td's */
+	padding-right: 20px;
+	text-align: right;
 }
 
 .Projects .dash .table-list th:nth-child(8) { /* locations th */
@@ -7673,24 +7678,46 @@ a.page-action.delete-button span.im {
 	min-width: 95px;
 }
 
-.Projects .dash .completion-bar {
-	border: 0px solid #ffffff;
-}
-
-.Projects .dash .completion-bar .text .copy,
-.Projects .dash .completion-bar .completion {
-	display: none;
-}
-
-.Projects .dash .completion-bar,
-.Projects .dash .completion-bar .text {
-	color: #333;
-	line-height: 1.2em;
-	width: auto;
-	background: transparent;
+.Projects .dash .table-list td .completion-bar .text {
+	text-align: right;
+	width: 55px;
 }
 
 
+
+/* when progress bars pop in on Projects Dash */
+
+@media (max-width: 1510px) {
+
+	.Projects .dash .table-list td .completion-bar,
+	.Projects .dash .table-list td .text { /* progress bars text */
+		text-align: center;
+		display: inline-block;
+		width: 100%;
+	}
+
+	.Projects .dash .table-list td .percent-text { /* progress bars text */
+		padding-right: 15px;
+	}
+
+
+	.Projects .dash .table-list td .completion-bar {
+		border: 0px solid #ffffff;
+	}
+	
+	.Projects .dash .table-list td .completion-bar .completion {
+		display: none;
+	}
+	
+	.Projects .dash .table-list td .completion-bar,
+	.Projects .dash .table-list td .completion-bar .text {
+		color: #333;
+		line-height: 1.2em;
+		width: auto;
+		background: transparent;
+	}
+
+}
 
 /* heredeb */
 

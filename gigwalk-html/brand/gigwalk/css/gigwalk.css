@@ -225,7 +225,7 @@ html, body {
 		color: #fe8e92;
 	}
 	
-	/* integrate the following 7 styles */
+	/* integrate the following 8 styles */
 	.ticket.saved.incomplete.expired .due,
 	.worker .pin.expired.assigned:after,
 	.worker .pin.expired.scheduled:after,
@@ -233,6 +233,7 @@ html, body {
 	.Tickets .dash tr.expired td.status span:before,
 	.Tickets .dash tr.expired td.status span.started:before,
 	.Tickets .dash tr.expired td.status span.started.paused:before,
+	.Projects .dash .table-list td .completion-bar.zero .text,
 	.table-remove,
 	.remove,
 	.remove:hover,
