@@ -1169,6 +1169,8 @@ textarea.disabled,
 	background: #e6e6e6;
 }
 
+/* whites */
+
 input[type="checkbox"]:after,
 .desktop .date.group:after,
 .instruction-footer .icon-checkmark,
@@ -1744,6 +1746,10 @@ header .nav li,
 
 .table-list .expanded table tr {
 	border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+.Projects .dash .table-list td .completion-bar {
+	border-width: 6px;
 }
 
 .completion-bar {
@@ -7681,6 +7687,14 @@ a.page-action.delete-button span.im {
 .Projects .dash .table-list td .completion-bar .text {
 	text-align: right;
 	width: 55px;
+}
+
+.Projects .dash .table-list td .completion-bar .text {
+	line-height: 1.3em;
+}
+
+.Projects .dash .table-list td .completion-bar .percent-complete {
+	height: 1.33em;
 }
 
 

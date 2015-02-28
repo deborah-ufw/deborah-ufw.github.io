@@ -254,8 +254,7 @@ html, body {
 	a.page-action.delete-button,
 	.page-action-panel .actions a.buttonly.delete,
 	.pin.expired:after,
-	.Projects .settings .group.required > .plainLabel:after,
-	.Projects .dash .completion-bar.zero .text {
+	.Projects .settings .group.required > .plainLabel:after {
 		color: #ff5157;
 	}
 	
@@ -549,7 +548,9 @@ html, body {
 	
 	.key.paused:before {
 		background: #9fc8f2;
-	}/* */
+	}
+	
+	/* */
 	
 	.pagination .previous,
 	.pagination .next,
