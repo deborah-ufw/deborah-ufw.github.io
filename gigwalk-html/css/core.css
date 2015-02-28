@@ -334,7 +334,9 @@ input[type="radio"]:after,
 .widget-panel .attachment.image img,
 .Ticket .instruction .item-grid .answer .plainLabel,
 .Ticket .instruction .checkboxes .answer .plainLabel,
-.has-metadata {
+.has-metadata,
+.remove,
+.subnav li a {
 	cursor: pointer;
 	pointer-events: auto;
 }
@@ -350,7 +352,8 @@ a.disabled,
 .table-list .controls .actions a,
 .calendar .view a.active,
 .calendar .date-statement,
-.Ticket a.buttonly.disabled {
+.Ticket a.buttonly.disabled,
+.subnav li:active a {
 	cursor: default;
 	pointer-events: none;
 }

@@ -225,7 +225,7 @@ html, body {
 		color: #fe8e92;
 	}
 	
-	/* integrate the following 8 styles */
+	/* integrate the following 9 styles */
 	.ticket.saved.incomplete.expired .due,
 	.worker .pin.expired.assigned:after,
 	.worker .pin.expired.scheduled:after,
@@ -247,6 +247,9 @@ html, body {
 	.messages .message.problem,
 	.problem a.closer,
 	.warning,
+	/* integrate these 2 styles */
+	.error,
+	.prompt.invalid,
 	.Tickets .dash td.status span.expired:before,
 	.messages .problem span.exclaim:before,
 	.instructions .duplicating-message,
@@ -687,6 +690,12 @@ html, body {
 	header .nav li.messages .im,
 	.subnav .nav-tabs > li > a:hover,
 	.subnav .nav-tabs > li > a:focus,
+	/* integrate the following subnav styles */
+	.subnav > ul > li > a:hover,
+	.subnav > ul > li > a:focus,
+	.subnav > ul > li.active > a,
+	.subnav > ul > li.active > a:hover,
+	.subnav > ul > li.active > a:focus,
 	.subnav .nav.nav-tabs > li.active > a, 
 	.instruction-footer .item.count .described,
 	.instruction.view-mode .answer.exception .plainLabel:after,

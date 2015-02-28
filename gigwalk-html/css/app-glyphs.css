@@ -43,7 +43,9 @@ input[type="checkbox"]:after,
 a[href*="tel"]:before,
 a.bigButton:before,
 .Profile .cert:before,
-.has-metadata:after {
+.has-metadata:after,
+.dataTables_paginate .pagination a, 
+.dataTables_paginate .pagination a.disabled {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -214,9 +216,11 @@ a.bigButton.photo:before,
 .icon-gig:before {
 	content: "\e60c";
 }
+.dataTables_paginate .pagination a:nth-child(1):before,
 .icon-previous:before {
 	content: "\e626";
 }
+.dataTables_paginate .pagination a:nth-child(2):before,
 .icon-next:before {
 	content: "\e627";
 }
