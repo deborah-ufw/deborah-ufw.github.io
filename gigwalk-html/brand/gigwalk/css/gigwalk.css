@@ -83,23 +83,6 @@ html, body {
 	
 	/* grays */
 	
-	body,
-	a.buttonly,
-	.section.title a.navly:after,
-	.admin .table-list td.location a,
-	.calendar td.incomplete .work,
-	.calendar-day .store.incomplete .header,
-	.calendar-day .ticket.incomplete,
-	.calendar .worker-selected .filters-choices .copy,
-	.Ticket .instruction.question .widget-panel-content .answer > .plainLabel,
-	.Ticket .instruction.task .widget-panel-content .answer > .plainLabel,
-	.Profile .user-org,
-	.Profile .scheduling .section.days .plainLabel,
-	.popup,
-	.instruction.view-mode .attachment .plainLabel {
-		color: #4a4a4a;
-	}
-	
 	.user-org,
 	.plainLabel,
 	.section-detail,
@@ -270,7 +253,8 @@ html, body {
 	a.page-action.delete-button,
 	.page-action-panel .actions a.buttonly.delete,
 	.pin.expired:after,
-	.Projects .settings .group.required > .plainLabel:after {
+	.Projects .settings .group.required > .plainLabel:after,
+	.Projects .dash .completion-bar.zero .text {
 		color: #ff5157;
 	}
 	

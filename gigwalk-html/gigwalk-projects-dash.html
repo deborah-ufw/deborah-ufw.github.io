@@ -204,13 +204,13 @@
         <!--                       PAGE ACTION MESSAGES                         -->
         <!-- ****************************************************************** -->
 
+        <!-- Projects Dash doesn't currently use these, but Drafts probably will at some point
         <div class="page action messages">
           <div class="message confirmation">
             <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
-            <h1><span class="im icon-checkmark"></span>25 projects were archived.</h1>
+            <h1><span class="im icon-checkmark"></span>I'm a confirmation.</h1>
           </div>
-        </div>
-      
+        </div> -->
 
       <!-- ****************************************************************** -->
       <!--                              FILTERS                               -->
@@ -299,270 +299,236 @@
             <a class="iconButton archive last" href="javascript:;">Archive</a>
           </div>
         </div>
-        
-      
+
+        <!-- ****************************************************************** -->
+        <!-- **********  Action panel (drops down on action select  *********** -->
+        <!-- ****************************************************************** -->
+
+        <div class="action panel archive">
+          <h1>Archive 20 Projects</h1>
+          <div class="warning">
+            Some of the selected projects will not be archived because they are
+            in progress. Completed projects will be archived.
+          </div>
+
+          <div class="primary actions">
+            <div class="right">
+              <a class="buttonly cancel" href="javascript:;">Cancel</a>
+              <a class="buttonly" href="javascript:;">Archive</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- **********  Action Confirmation panel  *********** -->
+        <!--    the panel that confirms the executed action     -->
+
+        <div class="action messages">
+          <div class="message confirmation">
+            <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+            <h1><span class="im icon-checkmark"></span>20 Projects were archived.</h1>
+          </div>
+        </div>
+
         <!-- ****************** TABLE ***************** -->
-      
+
         <table data-target="dataTable" class="dataTable no-footer" role="grid">
-        
+
           <thead>
-            <tr role="row">
-              <th class="sorting group-name">
-                Group Name
-              </th>
-              <!-- ------------------------------------------------------
-                don't show TH or TD for Organization if user is NOT Gigwalk user
-                CSS will handle this if class "user-gigwalk" is injected
-                in the "main wrapper" div if user is Gigwalk user
-                (this will help format the column widths responsively also)
-                ---------------------------------------------------------- -->
-              <th class="sorting org-name">
-                Organization
-              </th>
-              <th class="sorting members">
-                Members
-              </th>
-              <!-- don't add class "sorting" to this TH -->
-              <th class="subgroups details-control"> 
-                Subgroups
-              </th>
-            </tr>
+          <tr role="row">
+            <th class="checkbox">
+              <input type="checkbox" value="select-all" />
+            </th>
+            <th class="sorting project-title">
+              Project
+            </th>
+            <th class="sorting assigned">
+              Assigned
+            </th>
+            <th class="sorting execution">
+              Execution
+            </th>
+            <th class="sorting hours-left">
+              Hours Left
+            </th>
+            <th class="sorting date start">
+              Start
+            </th>
+            <th class="sorting date end">
+              End
+            </th>
+            <th class="sorting locations">
+              Loc<span class="descriptive">ation</span>s
+            </th>
+            <th class="sorting status">
+              Status
+            </th>
+            <th class="button">
+              &nbsp;
+            </th>
+          </tr>
           </thead>
-          
+
           <tbody>
-          
-            <tr role="row" class="odd">
-              <td class="sorting group-name">
-                <a href="javascript:;">
-                  Alerts Alpha 
-                </a>
-              </td>
-              <td class="sorting org-name">
-                  Crossmark
-              </td>
-              <td class="sorting members">
-                  2,025
-              </td>
-              <!-- don't add class "sorting" to this TD -->
-              <td class="subgroups"></td>
-            </tr>
-            
-            <tr role="row" class="even">
-              <td class="sorting group-name">
-                <a href="javascript:;">
-                  Drug Stores
-                </a>
-              </td>
-              <td class="sorting org-name">
-                  Crossmark
-              </td>
-              <td class="sorting members">
-                  644
-              </td>
-              <!-- don't add class "sorting" to this TD -->
-              <td class="subgroups details-control"> 
-                <a href="javascript:;">Show</a>
-              </td>  
-            </tr>
-            
-            <!-- *********** EXAMPLE EXPANDED ROW ***********
-            
-                   uses dynamic style names from the plugin 
-                   
-                   Valerie - make it as close as you can,
-                   if it's not possible to do it quite like this,
-                   ping me and I'll adjust the CSS to handle
-                   the next best way 
-                 
-                 ******************************************** -->
-                 
-            <tr role="row" class="odd shown">
-              <td class="sorting group-name">
-                <a href="javascript:;">
-                  Grocery Stores
-                </a>
-              </td>
-              <td class="sorting org-name">
-                  Crossmark
-              </td>
-              <td class="sorting members">
-                  5,911
-              </td>
-              <!-- don't add class "sorting" to this TD -->
-              <td class="subgroups details-control">
-                <a href="javascript:;">Hide</a>
-              </td>  
-            </tr>
-         
-            <!-- ****** EXAMPLE EXPANDED SUBGROUPS AREA *******
-            
-                        copied structure from plugin 
-                 
-                 ********************************************** -->
-            <tr>
-              <!-- please make the plugin add class "expanded" to this td -->
-              <td colspan="4" class="expanded">
-                  <!-- don't let it put inline styles in this table, it will mess things up 
-                  
-                       <table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">
-                  
-                  -->
-                <table>
-                  <tr role="row" class="odd">
-                    <td class="sorting group-name">
-                      <a href="javascript:;">
-                        Kroeger's
-                      </a>
-                    </td>
-                    <td class="sorting org-name">
-                        Crossmark
-                    </td>
-                    <td class="sorting members">
-                        2,299
-                    </td>
-                    <!-- don't add class "sorting" to this TD -->
-                    <td class="subgroups details-control"></td>  
-                  </tr>
-                  
-                  <tr role="row" class="even">
-                    <td class="sorting group-name">
-                      <a href="javascript:;">
-                        Lucky
-                      </a>
-                    </td>
-                    <td class="sorting org-name">
-                        Crossmark
-                    </td>
-                    <td class="sorting members">
-                        2,213
-                    </td>
-                    <!-- don't add class "sorting" to this TD -->
-                    <td class="subgroups details-control"></td>  
-                  </tr>
-                  
-                  <tr role="row" class="odd">
-                    <td class="sorting group-name">
-                      <a href="javascript:;">
-                        Piggly-Wiggly
-                      </a>
-                    </td>
-                    <td class="sorting org-name">
-                        Crossmark
-                    </td>
-                    <td class="sorting members">
-                        2426
-                    </td>
-                    <!-- don't add class "sorting" to this TD -->
-                    <td class="subgroups details-control">
-                      <a href="javascript:;">Show</a>
-                    </td>  
-                  </tr>
-                  
-                  <tr role="row" class="even">
-                    <td class="sorting group-name">
-                      <a href="javascript:;">
-                        Safeway
-                      </a>
-                    </td>
-                    <td class="sorting org-name">
-                        Crossmark
-                    </td>
-                    <td class="sorting members">
-                        1,011
-                    </td>
-                    <!-- don't add class "sorting" to this TD -->
-                    <td class="subgroups details-control"></td>  
-                  </tr>
-                </table>
-              
-              </td>
-            </tr>
-            <!-- ENDS EXPANDED SUBGROUPS AREA -->
-            
-            <tr role="row" class="even">
-              <td class="sorting group-name">
-                <a href="javascript:;">
-                  Keebler
-                </a>
-              </td>
-              <td class="sorting org-name">
-                  Crossmark
-              </td>
-              <td class="sorting members">
-                  2,299
-              </td>
-              <!-- don't add class "sorting" to this TD -->
-              <td class="subgroups"></td>  
-            </tr>
-            
-            <tr role="row" class="odd">
-              <td class="sorting group-name">
-                <a href="javascript:;">
-                  Maybelline
-                </a>
-              </td>
-              <td class="sorting org-name">
-                  Crossmark
-              </td>
-              <td class="sorting members">
-                  2,213
-                </a>
-              </td>
-              <!-- don't add class "sorting" to this TD -->
-              <td class="subgroups"></td>  
-            </tr>
-            
-            <tr role="row" class="even">
-              <td class="sorting group-name">
-                <a href="javascript:;">
-                  Megastores 
-                </a>
-              </td>
-              <td class="sorting org-name">
-                  Crossmark
-              </td>
-              <td class="sorting members">
-                  2,426
-              </td>
-              <!-- don't add class "sorting" to this TD -->
-              <td class="subgroups details-control"> 
-                <a href="javascript:;">Show</a>
-              </td>  
-            </tr>
-            
-            <tr role="row" class="odd">
-              <td class="sorting group-name">
-                <a href="javascript:;">
-                  Staples
-                </a>
-              </td>
-              <td class="sorting org-name">
-                  Crossmark
-              </td>
-              <td class="sorting members">
-                  1,011
-              </td>
-              <!-- don't add class "sorting" to this TD -->
-              <td class="subgroups"></td>  
-            </tr>
-            
-            <tr role="row" class="even">
-              <td class="sorting group-name">
-                <a href="javascript:;">
-                  United States 
-                </a>
-              </td>
-              <td class="sorting org-name">
-                  Crossmark
-              </td>
-              <td class="sorting members">
-                  1,379
-              </td>
-              <!-- don't add class "sorting" to this TD -->
-              <td class="subgroups details-control"> 
-                <a href="javascript:;">Show</a>
-              </td>  
-            </tr>
+
+          <tr role="row">
+            <td class="checkbox">
+              <input type="checkbox" value="selected" />
+            </td>
+            <td class="project-title">
+              05.16.15 Product Display - RedBull 24 oz.
+            </td>
+            <td class="assigned">
+
+              <!-- progress bar -->
+              <div class="completion-bar">
+                <div class="completion">
+                  <div class="percent-complete" style="width: 41%;"></div>
+                </div>
+                <div class="text">
+                  <span class="percent-text">41%</span>&nbsp;
+                  <span class="copy">Complete</span>
+                </div>
+              </div><!-- progress bar -->
+
+            </td>
+            <td class="execution">
+              <!-- progress bar -->
+              <div class="completion-bar">
+                <div class="completion">
+                  <div class="percent-complete" style="width: 81%;"></div>
+                </div>
+                <div class="text">
+                  <span class="percent-text">81%</span>&nbsp;
+                  <span class="copy">Complete</span>
+                </div>
+              </div><!-- progress bar -->
+            </td>
+            <td class="hours-left">
+              0
+            </td>
+            <td class="date start">
+              Feb 15
+            </td>
+            <td class="date end">
+              Feb 15
+            </td>
+            <td class="locations">
+              855
+            </td>
+            <td class="status">
+              <span class="complete"></span>
+            </td>
+            <td class="button">
+              <!-- no button for complete projects -->
+              &nbsp;
+            </td>
+          </tr>
+
+          <tr role="row">
+            <td class="checkbox">
+              <input type="checkbox" value="selected" />
+            </td>
+            <td class="project-title">
+              <a href="javascript:;">New Product Cut In - Kikkoman Soy Sauce 24 oz.</a>
+            </td>
+            <td class="assigned">
+
+              <!-- progress bar -->
+              <div class="completion-bar zero">
+                <div class="completion">
+                  <div class="percent-complete" style="width: 0%;"></div>
+                </div>
+                <div class="text">
+                  <span class="percent-text">0%</span>&nbsp;
+                  <span class="copy">Complete</span>
+                </div>
+              </div><!-- progress bar -->
+
+            </td>
+            <td class="execution">
+              <!-- progress bar -->
+              <div class="completion-bar">
+                <div class="completion">
+                  <div class="percent-complete" style="width: 0%;"></div>
+                </div>
+                <div class="text">
+                  <span class="percent-text">0%</span>&nbsp;
+                  <span class="copy">Complete</span>
+                </div>
+              </div><!-- progress bar -->
+            </td>
+            <td class="hours-left">
+              55
+            </td>
+            <td class="date start">
+              Feb 15
+            </td>
+            <td class="date end">
+              Feb 25
+            </td>
+            <td class="locations">
+              1,024
+            </td>
+            <td class="status">
+              <span class="launched"></span>
+            </td>
+            <td class="button">
+              <a href="javascript:;">Autoassign</a>
+            </td>
+          </tr>
+
+          <tr role="row">
+            <td class="checkbox">
+              <input type="checkbox" value="selected" />
+            </td>
+            <td class="project-title">
+              <a href="javascript:;">Atlas Alerts 918-2150987431</a>
+            </td>
+            <td class="assigned">
+
+              <!-- progress bar -->
+              <div class="completion-bar">
+                <div class="completion">
+                  <div class="percent-complete" style="width: 90%;"></div>
+                </div>
+                <div class="text">
+                  <span class="percent-text">90%</span>&nbsp;
+                  <span class="copy">Complete</span>
+                </div>
+              </div><!-- progress bar -->
+
+            </td>
+            <td class="execution">
+              <!-- progress bar -->
+              <div class="completion-bar">
+                <div class="completion">
+                  <div class="percent-complete" style="width: 67%;"></div>
+                </div>
+                <div class="text">
+                  <span class="percent-text">67%</span>&nbsp;
+                  <span class="copy">Complete</span>
+                </div>
+              </div><!-- progress bar -->
+            </td>
+            <td class="hours-left">
+              105
+            </td>
+            <td class="date start">
+              Feb 22
+            </td>
+            <td class="date end">
+              Mar 2
+            </td>
+            <td class="locations">
+              5
+            </td>
+            <td class="status">
+              <span class="in-progress"></span>
+            </td>
+            <td class="button">
+              <a href="javascript:;">Autoassign</a>
+            </td>
+          </tr>
                         
           </tbody>
           
@@ -576,7 +542,6 @@
           <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
         </div>
       </div>
-      
       
       <!-- end List View -->
         

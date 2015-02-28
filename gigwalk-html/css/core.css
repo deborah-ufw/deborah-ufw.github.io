@@ -335,6 +335,7 @@ input[type="radio"]:after,
 .Ticket .instruction .checkboxes .answer .plainLabel,
 .has-metadata {
 	cursor: pointer;
+	pointer-events: auto;
 }
 
 .defaultmouse,
@@ -857,27 +858,45 @@ div.main.wrapper + div.inner {
 .close,
 .close:focus,
 .close:hover {
-	filter: alpha(opacity=100);
-     -moz-opacity: 1;
-          opacity: 1;
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  opacity: 1;
 }
 
-.hint.widget-panel .header .controls .im.icon-arrow-up {
-	filter: alpha(opacity=80);
-     -moz-opacity: .8;
-          opacity: .8;
+th.sorting:after {
+  filter: alpha(opacity=30);
+  -moz-opacity: .3;
+  opacity: .3;
 }
 
 .bigButton.disabled,
 .Ticket .instruction.task .photo .icon-buttons a.disabled,
 .Ticket a.buttonly.disabled {
-	filter: alpha(opacity=50);
-     -moz-opacity: .5;
-          opacity: .5;
+  filter: alpha(opacity=50);
+  -moz-opacity: .5;
+  opacity: .5;
+}
+
+th.sorting_asc:after,
+th.sorting_desc:after,
+th.sorting.ascending:after,
+th.sorting.descending:after {
+  filter: alpha(opacity=70);
+  -moz-opacity: .7;
+  opacity: .7;
+}
+
+.hint.widget-panel .header .controls .im.icon-arrow-up {
+  filter: alpha(opacity=80);
+  -moz-opacity: .8;
+  opacity: .8;
 }
 
 .transition,
 a,
+th.sorting:after,
+th.sorting_asc:after,
+th.sorting_desc:after,
 .dropdown .dropdown-menu,
 .primary.actions a,
 .choose-dates,
@@ -952,6 +971,19 @@ textarea {
 
 /* colors */
 
+a.buttonly,
+.section.title a.navly:after,
+.admin .table-list td.location a,
+.calendar td.incomplete .work,
+.calendar-day .store.incomplete .header,
+.calendar-day .ticket.incomplete,
+.calendar .worker-selected .filters-choices .copy,
+.Ticket .instruction.question .widget-panel-content .answer > .plainLabel,
+.Ticket .instruction.task .widget-panel-content .answer > .plainLabel,
+.Profile .user-org,
+.Profile .scheduling .section.days .plainLabel,
+.popup,
+.instruction.view-mode .attachment .plainLabel,
 .tabnav li .dropdown li a,
 .set-repeats .dropdown .plainLabel,
 .set-repeats .radios .plainLabel,
@@ -1043,9 +1075,6 @@ textarea {
 
 .disabled,
 .action.panel .hint,
-th.sorting:after,
-th.sorting_asc:after, 
-th.sorting_desc:after,
 .table-list table td.assigned,
 .table-list table td.scheduled span,
 .table-list table td.estimated span,
@@ -4294,10 +4323,15 @@ a.iconly:before {
 th.sorting:after,
 th.sorting_asc:after, 
 th.sorting_desc:after {
-	font-size: 34px;
-	margin-left: -10px;
+	font-size: 29px;
+	margin-left: -4px;
 	position: relative;
-		top: 8px;
+		top: 9px;
+}
+
+th.sorting_asc:after,
+th.sorting.ascending:after {
+  top: 8px;
 }
 
 .Group .table-list table .user-name,
@@ -4315,12 +4349,11 @@ th.sorting_desc:after {
 	margin-right: 15px;
 }
 
-/* integrate - add the below style */
 .worker .Tickets .table-list tr.expired.still-editable {
 	display: table-row;
 }
 
-.Tickets .dash td.status span:before {
+.dash td.status span:before {
 	top: -4px;
 }
 
@@ -4330,7 +4363,7 @@ th.sorting_desc:after {
 	max-width: 400px;
 }
 
-.Tickets .dash td.location {
+.dash td.location {
 	min-width: 115px;
 }
 
@@ -7572,6 +7605,83 @@ a.page-action.delete-button span.im {
 .Resources .filters {
 	margin: 1em 0;
 }
+
+/* integrate Projects Dash */
+
+.Projects .dash .table-list th:nth-child(1) input[type="checkbox"] {
+	top: -9px;
+}
+
+.Projects .dash .table-list td:nth-child(1) input[type="checkbox"] {
+	top: -10px;
+}
+
+.Projects .dash .table-list th:nth-child(2) { /* project name */
+	min-width: 175px;
+	max-width: 365px;
+}
+
+.Projects .dash .table-list th:nth-child(3),
+.Projects .dash .table-list th:nth-child(4) { /* progress bars th's */
+	min-width: 115px;
+}
+
+.Projects .dash .table-list td .completion-bar,
+.Projects .dash .table-list td .text { /* progress bars text */
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+
+.Projects .dash .table-list td .percent-text { /* progress bars text */
+	text-align: right;
+	padding-right: 15px;
+}
+
+.Projects .dash .table-list th:nth-child(5) { /* hours left th */
+	min-width: 120px;
+}
+
+.Projects .dash .table-list td:nth-child(5) { /* hours left td */
+	text-align: right;
+	padding-right: 15px;
+}
+
+.Projects .dash .table-list th:nth-child(6),
+.Projects .dash .table-list th:nth-child(7) { /* dates */
+	min-width: 75px;
+}
+
+.Projects .dash .table-list th:nth-child(8) { /* locations th */
+	min-width: 115px;
+}
+
+.Projects .dash .table-list td:nth-child(8) { /* locations td */
+	padding-right: 36px;
+	text-align: right;
+}
+
+.Projects .dash .table-list th:nth-child(9) { /* status */
+	min-width: 95px;
+}
+
+.Projects .dash .completion-bar {
+	border: 0px solid #ffffff;
+}
+
+.Projects .dash .completion-bar .text .copy,
+.Projects .dash .completion-bar .completion {
+	display: none;
+}
+
+.Projects .dash .completion-bar,
+.Projects .dash .completion-bar .text {
+	color: #333;
+	line-height: 1.2em;
+	width: auto;
+	background: transparent;
+}
+
 
 
 /* heredeb */
