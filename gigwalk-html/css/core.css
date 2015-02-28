@@ -7704,16 +7704,14 @@ a.page-action.delete-button span.im {
 @media (max-width: 1510px) {
 
 	.Projects .dash .table-list td .completion-bar,
-	.Projects .dash .table-list td .text { /* progress bars text */
+	.Projects .dash .table-list td .completion-bar .text { /* progress bars text */
+		color: #333;
+		line-height: 1.2em;
 		text-align: center;
 		display: inline-block;
 		width: 100%;
+		background: transparent;
 	}
-
-	.Projects .dash .table-list td .percent-text { /* progress bars text */
-		padding-right: 15px;
-	}
-
 
 	.Projects .dash .table-list td .completion-bar {
 		border: 0px solid #ffffff;
@@ -7723,12 +7721,18 @@ a.page-action.delete-button span.im {
 		display: none;
 	}
 	
-	.Projects .dash .table-list td .completion-bar,
 	.Projects .dash .table-list td .completion-bar .text {
-		color: #333;
-		line-height: 1.2em;
-		width: auto;
-		background: transparent;
+		padding-right: 50px;
+	}
+	
+	.Projects .dash .table-list td .completion-bar .percent-text {
+		text-align: right;
+		display: inline-block;
+		width: 100%;
+	}
+	
+	.Projects .dash .table-list td .completion-bar.zero .text {
+		background: #ffffff;
 	}
 
 }
