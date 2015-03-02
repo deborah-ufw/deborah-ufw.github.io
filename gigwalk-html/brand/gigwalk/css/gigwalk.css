@@ -225,7 +225,6 @@ html, body {
 		color: #fe8e92;
 	}
 	
-	/* integrate the following 9 styles */
 	.ticket.saved.incomplete.expired .due,
 	.worker .pin.expired.assigned:after,
 	.worker .pin.expired.scheduled:after,
@@ -247,7 +246,6 @@ html, body {
 	.messages .message.problem,
 	.problem a.closer,
 	.warning,
-	/* integrate these 2 styles */
 	.error,
 	.prompt.invalid,
 	.Tickets .dash td.status span.expired:before,
@@ -268,7 +266,6 @@ html, body {
 		background: rgba(255, 81, 87, .1);
 	}
 	
-	/* integrate the following line */
 	.calendar-day .store .header .time.expired,
 	.key.expired:before {
 		background: #ff5157;
@@ -287,7 +284,6 @@ html, body {
 		background: #ff797e;
 	}
 	
-	/* integrate the following 2 lines */
 	.calendar-day .ticket.expired,
 	.calendar-day .ticket.today.expired,
 	.messages .message.problem {
@@ -380,7 +376,6 @@ html, body {
 	 a.close:focus,
 	 .dropdown-menu > li > a.link,
 	 .dropdown-menu > li > a.link:hover,
-	 /* integrate the following 2 styles */
 	 .dropdown-menu > li.quick-select > a,
 	 .dropdown-menu > li.quick-select > a:hover,
 	 .pin.submitted:after,
@@ -411,7 +406,6 @@ html, body {
 	.Ticket .comments .primary.actions a.buttonly,
 	.Ticket .barcode .primary.actions a.buttonly,
 	.answerButton.submit,
-	/* integrate below */
 	.project-type .primary.actions a.buttonly {
 		background: #4890e2;
 	}
@@ -430,7 +424,6 @@ html, body {
 	.Ticket .barcode .primary.actions a.buttonly:focus,
 	.answerButton.submit:hover,
 	.answerButton.submit:focus,
-	/* integrate below */
 	.project-type .primary.actions a.buttonly:hover,
 	.project-type .primary.actions a.buttonly:focus {
 		background: #539ce9;
@@ -543,8 +536,6 @@ html, body {
 		background: #32b0e8;
 	}
 	
-	/* integrate 2 styles */
-	
 	.pin.paused:after {
 		color: #9fc8f2;
 	}
@@ -552,8 +543,6 @@ html, body {
 	.key.paused:before {
 		background: #9fc8f2;
 	}
-	
-	/* */
 	
 	.pagination .previous,
 	.pagination .next,
@@ -682,15 +671,12 @@ html, body {
 	
 	/* greens */
 	
-	/* integrate - remove admin.pin.paused:after,
-	include the following Project lines */
 	.Projects .dash .table-list td.status span.complete:before,
 	.Projects .dash .table-list td:nth-child(9) span.complete:before,
 	header .nav li.alerts .im,
 	header .nav li.messages .im,
 	.subnav .nav-tabs > li > a:hover,
 	.subnav .nav-tabs > li > a:focus,
-	/* integrate the following subnav styles */
 	.subnav > ul > li > a:hover,
 	.subnav > ul > li > a:focus,
 	.subnav > ul > li.active > a,
@@ -764,8 +750,6 @@ html, body {
 		background: #84d5c3;
 	}
 	
-	/* integrate - remove .admin from the 2nd style,
-	   add the 2 project styles */
 	.Projects .dash .table-list td.status span.in-progress:before,
 	.Projects .dash .table-list td:nth-child(9) span.in-progress:before,
 	.Tickets .dash td.status span.started:before,
