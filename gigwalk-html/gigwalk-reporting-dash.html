@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Basic Page Needs 
+================================================== -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" /> 
+
+<title>Reporting Dash</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+
+
+<!-- device and shortcut icons
+================================================== -->
+
+<link rel="shortcut icon" type="image/x-icon" href="brand/gigwalk/images/favicon-gigwalk.ico">
+<link rel="apple-touch-icon" href="brand/gigwalk/images/apple-touch-icon.png" /> 
+
+
+<!-- Global CSS and JS
+================================================== -->
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/DataTables.all.min.js"></script>
+<script src="js/interactions-working.js"></script>
+
+<link href="css/bootstrap.css" media="screen" rel="stylesheet" />
+<link href="css/font-awesome.css" media="screen" rel="stylesheet" />
+<link href="css/app-glyphs.css" media="screen" rel="stylesheet" />
+<link href="css/datepicker.css" media="screen" rel="stylesheet" />
+<link href="css/core.css" media="screen" rel="stylesheet" />
+
+<!-- Brand CSS
+================================================== -->
+
+<link href="brand/gigwalk/css/fonts-gigwalk.css" media="screen" rel="stylesheet" />
+<link href="brand/gigwalk/css/gigwalk.css" media="screen" rel="stylesheet" />
+
+
+<!-- Manage IE
+================================================== -->
+
+<!--[if lte IE 8]>
+  <script type="text/javascript">       
+      window.location="unsupported.html";
+  </script>
+<![endif]-->
+
+<!--[if IE 9]>
+  <link href="/css/ie9.css" media="screen" rel="stylesheet" />
+  <script src=="js/html5.min.js"></script> 
+<![endif]-->
+
+<script>
+  var doc = document.documentElement;
+  doc.setAttribute('data-useragent', navigator.userAgent);
+  // detect IE10 and IE11 from string
+</script>
+
+ 
+</head>
+<body class="body">
+
+<!-- top navigation -->
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+  
+  <!-- hold the responsive sidenav button -->
+  <div class="nav-active-holder">Holds nav location<span class="caret"></span></div>
+  
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:;">&nbsp;</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="alerts buttonly">
+            <a href="javascript:;">
+              <span class="im icon-bell"></span>
+              <span class="number">6</span>
+            </a>
+          </li>
+          <li class="messages buttonly">
+            <a href="javascript:;">
+             <span class="im icon-email"></span>
+             <span class="number">18</span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <!-- use this same "user-info" div in the sidenav -->
+            <div class="user-info">
+              <div class="user-image">
+                <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+              </div>
+              <div class="inner">
+                <div class="user-name">Grace Kelly</div>
+                <div class="user-org">Crossmark</div>
+                <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+              </div>
+            </div><!-- ends user info -->
+            
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="header">Manage Organization</li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-checkmark"></span>
+                  <span>Admin Dashboard</span>
+                </a>
+              </li>
+              <li class="disabled">
+                <a href="javascript:;">
+                  <span class="im icon-empty"></span>
+                  <span>Org Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-settings"></span>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li class="last">
+                <a href="javascript:;">
+                  <span class="im icon-lock"></span>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- ends navbar-collapse -->
+    </div><!-- ends container-fluid -->
+  </nav>
+</header>
+
+<!-- start the main panel -->
+<div class="main wrapper">
+                
+<!-- ----------------------------------------------------- --> 
+
+  <!-- side navigation (left side) -->
+  <nav class="sidenav">
+  
+    <!-- use the same "user-info" div as in the top nav -->
+    <div class="user-info">
+      <div class="user-image">
+        <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+      </div>
+      <div class="inner">
+        <div class="user-name">Grace Kelly</div>
+        <div class="user-org">Crossmark</div>
+        <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+      </div>
+    </div><!-- ends user info -->
+    
+    <ul class="nav-sections">
+      <li class="active"><a href="gigwalk-groups-dash.html">Results</a></li>
+      <li><a href="gigwalk-groups-dash.html">Organizations</a></li>
+      <li><a href="gigwalk-projects-dash.html">Projects</a></li>
+      <li><a href="gigwalk-ticket-dash-scheduler.html">Tickets</a></li>
+      <li><a href="javascript:;">People</a></li>
+      <li><a href="javascript:;">Resources</a></li>
+      
+      <!-- <li class="divider">Support</li>
+      <li class="support"><a href="javascript:;">Demos and FAQs</a></li>
+      <li class="support"><a href="javascript:;">Support</a></li>
+      <li class="support"><a href="javascript:;">Contact Us</a></li> -->
+      
+    </ul>
+  </nav><!-- ends side nav -->
+  
+  <!-- content (right side) -->
+  <div class="inner wrapper Reports">
+  
+      <!-- tabs for the content -->
+      <nav class="tabnav">
+        <ul>
+          <li class="active"><a href="javascript:;">Top Level</a></li>
+          <li><a href="javascript:;">Projects</a></li>
+        </ul>
+      </nav><!-- ends content tabs -->
+      
+      <!-- the content under the tabs -->
+      <div class="content dash">
+
+
+
+        
+        starting development
+        
+    
+
+    
+    
+    </div><!-- ends content -->
+
+    <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
+
+  </div><!-- ends right side ("inner wrapper")  -->
+</div><!-- ends main panel ("main wrapper") -->
+
+</body>
+</html>
