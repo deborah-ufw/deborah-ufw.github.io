@@ -71,24 +71,28 @@ $(document).ready(function() {
 	});
 	
 	$('.datepicker').datepicker()
-	
-	
-	//******** initialize bootstrap tabs (map panel) ******** //	
-	
-	$('.map #info a').click(function (e) {
-	  e.preventDefault()
-	  $(this).tab('show')
-	})
-	$('.map #directions a').click(function (e) {
-	  e.preventDefault()
-	  $(this).tab('show')
-	})
-	$('.map #actions a').click(function (e) {
-	  e.preventDefault()
-	  $(this).tab('show')
-	})
-	
-	
+
+
+
+
+    //******** initialize bootstrap tabs ******** //
+
+
+    $('.map #info a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+    $('.map #directions a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+    $('.map #actions a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
+
+
 	//******** project scheduling "repeats" panel ******** //	
 	$('.repeats-setter').click(function() {
 		if ( $('.set-repeats').css('display') == 'none' ) {

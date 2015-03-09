@@ -1,8 +1,8 @@
 
 
 $(document).ready(function() {
-	
-	//******** device detection and class assignment ******** //	
+
+	//******** device detection and class assignment ******** //
 	
 	// detect if is touch
 	function isTouchDevice(){
@@ -71,10 +71,12 @@ $(document).ready(function() {
 	});
 	
 	$('.datepicker').datepicker()
-	
-	
-	//******** initialize bootstrap tabs (map panel) ******** //	
-	
+
+
+	//******** initialize bootstrap tabs ******** //
+
+
+
 	$('.map #info a').click(function (e) {
 	  e.preventDefault()
 	  $(this).tab('show')
@@ -85,10 +87,10 @@ $(document).ready(function() {
 	})
 	$('.map #actions a').click(function (e) {
 	  e.preventDefault()
-	  $(this).tab('show')
-	})
-	
-	
+	  $(this).taab('show')
+    })
+
+
 	//******** project scheduling "repeats" panel ******** //	
 	$('.repeats-setter').click(function() {
 		if ( $('.set-repeats').css('display') == 'none' ) {

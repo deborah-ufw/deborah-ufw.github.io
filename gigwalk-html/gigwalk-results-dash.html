@@ -175,7 +175,6 @@
       <li><a href="gigwalk-groups-dash.html">Organizations</a></li>
       <li><a href="gigwalk-projects-dash.html">Projects</a></li>
       <li><a href="gigwalk-ticket-dash-scheduler.html">Tickets</a></li>
-      <li><a href="javascript:;">People</a></li>
       <li><a href="javascript:;">Resources</a></li>
       
       <!-- <li class="divider">Support</li>
@@ -187,13 +186,13 @@
   </nav><!-- ends side nav -->
   
   <!-- content (right side) -->
-  <div class="inner wrapper Reports">
+  <div class="inner wrapper Results">
   
       <!-- tabs for the content -->
       <nav class="tabnav">
         <ul>
           <li class="active"><a href="javascript:;">Top Level</a></li>
-          <li><a href="javascript:;">Projects</a></li>
+          <li><a href="javascript:;">By Project</a></li>
         </ul>
       </nav><!-- ends content tabs -->
       
@@ -201,11 +200,108 @@
       <div class="content dash">
 
 
+        <!-- ****************************************************************** -->
+        <!--                START "TOP LEVEL" SUBNAV TABS                       -->
+        <!-- ****************************************************************** -->
 
-        
-        starting development
-        
-    
+        <div class="subcontent primary">
+
+          <!-- bootstrap tab nav -->
+
+          <!-- tabnav implementation should be same as has been done in web-app's
+               "Profile" page - you may be able to re-use the js -->
+
+          <nav class="subnav">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="active">
+                <a href="#all-audits" role="tab" data-toggle="tab">All Audits</a>
+              </li>
+              <li>
+                <a href="#on-shelf" role="tab" data-toggle="tab">On-Shelf</a>
+              </li>
+              <li>
+                <a href="#cooler" role="tab" data-toggle="tab">Cooler</a>
+              </li>
+              <li>
+                <a href="#broker" role="tab" data-toggle="tab">Broker</a>
+              </li>
+              <li>
+                <a href="#trade-marketing" role="tab" data-toggle="tab">Trade Marketing</a>
+              </li>
+              <!-- <li>
+                <a href="#pos" role="tab" data-toggle="tab">POS</a>
+              </li> -->
+
+              <!-- future -->
+              <li role="presentation" class="dropdown">
+                <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">More Reports <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                  <li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">POS</a></li>
+                  <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">New Report</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </nav>
+
+          <!-- bootstrap tab panes -->
+          <div class="tab-content" data-target="tab">
+
+            <!-- -------------------- All Audits tab ----------------------- -->
+            <div class="tab-pane all-audits active" id="all-audits">
+              All Audits
+            </div><!-- ends All Audits pane -->
+
+
+
+            <!-- -------------------- On Shelf tab (same for any audit detail)  ----------------------- -->
+            <div class="tab-pane on-shelf" id="on-shelf">
+              On-Shelf
+            </div><!-- ends On Shelf pane -->
+
+
+
+            <!-- -------------------- Cooler (same for any audit detail)  ----------------------- -->
+            <div class="tab-pane cooler" id="cooler">
+              Cooler
+            </div><!-- ends Cooler pane -->
+
+
+
+            <!-- -------------------- Broker (same for any audit detail)  ----------------------- -->
+            <div class="tab-pane broker" id="broker">
+              Broker
+            </div><!-- ends Broker pane -->
+
+
+
+            <!-- -------------------- Trade Marketing (same for any audit detail)  ----------------------- -->
+            <div class="tab-pane trade-marketing" id="trade-marketing">
+              Trade Marketing
+            </div><!-- ends Trade Marketing pane -->
+
+
+
+            <!-- -------------------- POS (same for any audit detail)  ----------------------- -->
+            <div class="tab-pane pos" id="pos">
+              POS
+            </div><!-- ends pos pane -->
+
+
+          </div><!-- ends bootstrap tab panes -->
+
+        </div><!-- ends subcontent primary -->
+
+
+        <!-- ***************** ENDS SUBCONTENT TABS ********************** -->
+
+
+
+
+
+        <!-- ****************************************************************** -->
+        <!--                  START "BY PROJECT" TOP TAB                        -->
+        <!-- ****************************************************************** -->
 
     
     

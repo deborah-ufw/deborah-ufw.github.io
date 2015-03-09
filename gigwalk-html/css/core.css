@@ -316,7 +316,8 @@ header .user-org,
 select:hover,
 select:focus,
 .nav-active-holder,
-.subnav .nav.nav-tabs > li,
+.subnav li,
+.subnav li a,
 th.sorting,
 .worker .table-list .controls .actions.active a,
 .Tickets th.project-title input:before,
@@ -335,8 +336,7 @@ input[type="radio"]:after,
 .Ticket .instruction .item-grid .answer .plainLabel,
 .Ticket .instruction .checkboxes .answer .plainLabel,
 .has-metadata,
-.remove,
-.subnav li a {
+.remove {
 	cursor: pointer;
 	pointer-events: auto;
 }
@@ -345,6 +345,8 @@ input[type="radio"]:after,
 .disable,
 a.disabled,
 .disabled,
+.subnav li.active,
+.subnav li.active a,
 .tabnav li.active a,
 .iconButton.disabled,
 .admin .table-list td.location,
@@ -352,8 +354,7 @@ a.disabled,
 .table-list .controls .actions a,
 .calendar .view a.active,
 .calendar .date-statement,
-.Ticket a.buttonly.disabled,
-.subnav li:active a {
+.Ticket a.buttonly.disabled {
 	cursor: default;
 	pointer-events: none;
 }
@@ -991,7 +992,8 @@ a.buttonly,
 .tabnav li .dropdown li a,
 .set-repeats .dropdown .plainLabel,
 .set-repeats .radios .plainLabel,
-.instruction-footer .descriptor {
+.instruction-footer .descriptor,
+.subnav ul.dropdown-menu li a {
 	color: #333;
 }
 
@@ -1997,6 +1999,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .choose-dates,
 .popup.metadata {
 	box-shadow: -2px 2px 2px rgba(0, 0, 0, .3);
+	-moz-box-shadow: -2px 2px 2px rgba(0, 0, 0, .3);
 	-webkit-box-shadow: -2px 2px 2px rgba(0, 0, 0, .3);
 }
 
@@ -2010,6 +2013,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .navbar-toggle {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+.subnav li a {
+	position: relative;
 }
 
 header .container-fluid {
@@ -2846,8 +2853,8 @@ div.main.wrapper + div.inner {
 @media (min-width: 665px) {
 	
 	.subnav li {
-		font-size: 22px;
-		margin-right: 2em;
+		font-size: 21px;
+		margin-right: 1.5em;
 	}
 
 	.subcontent.secondary .subnav {
@@ -7739,6 +7746,38 @@ a.page-action.delete-button span.im {
 	}
 
 }
+
+
+/* Reports Dash */
+
+.subnav li.dropdown {
+	margin-right: 0;
+}
+
+.subnav li.dropdown .caret {
+	font-size: 1em;
+	position: relative;
+}
+
+.subnav li.dropdown .caret:before {
+	font-size: 26px;
+	position: relative;
+		top: 3px;
+		left: -8px;
+}
+
+.subnav li.dropdown ul li {
+	font-size: 16px;
+	line-height: 1.2em;
+	margin: 0 0 0 0;
+	border-bottom-width: 0;
+}
+
+.subnav li.dropdown ul li,
+.subnav li.dropdown ul li a {
+	width: 100%;
+}
+
 
 /* heredeb */
 

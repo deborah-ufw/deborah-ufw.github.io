@@ -1,78 +1,294 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Untitled Document</title>
+
+<!-- Basic Page Needs 
+================================================== -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" /> 
+
+<title>Profile</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+
+
+<!-- device and shortcut icons
+================================================== -->
+
+<link rel="shortcut icon" type="image/x-icon" href="brand/gigwalk/images/favicon-gigwalk.ico">
+<link rel="apple-touch-icon" href="brand/gigwalk/images/apple-touch-icon.png" /> 
+
+
+<!-- Global CSS and JS
+================================================== -->
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/DataTables.all.min.js"></script>
+<script src="js/interactions-working.js"></script>
+
+<link href="css/bootstrap.css" media="screen" rel="stylesheet" />
+<link href="css/font-awesome.css" media="screen" rel="stylesheet" />
+<link href="css/app-glyphs.css" media="screen" rel="stylesheet" />
+<link href="css/datepicker.css" media="screen" rel="stylesheet" />
+<link href="css/core.css" media="screen" rel="stylesheet" />
+
+<!-- Brand CSS
+================================================== -->
+
+<link href="brand/gigwalk/css/fonts-gigwalk.css" media="screen" rel="stylesheet" />
+<link href="brand/gigwalk/css/gigwalk.css" media="screen" rel="stylesheet" />
+
+<link href="css/working.css" media="screen" rel="stylesheet" />
+
+<!-- Manage IE
+================================================== -->
+
+<!--[if lte IE 8]>
+  <script type="text/javascript">       
+      window.location="unsupported.html";
+  </script>
+<![endif]-->
+
+<!--[if IE 9]>
+  <link href="/css/ie9.css" media="screen" rel="stylesheet" />
+  <script src=="js/html5.min.js"></script> 
+<![endif]-->
+
+<script>
+  var doc = document.documentElement;
+  doc.setAttribute('data-useragent', navigator.userAgent);
+  // detect IE10 and IE11 from string
+</script>
+
+ 
 </head>
 
-<body>
-<table width="100%" border="1">
-  <tr>
-    <th>Sun</th>
-    <th>Mon</th>
-    <th>Tue</th>
-    <th>Wed</th>
-    <th>Thu</th>
-    <th>Fri</th>
-    <th>Sat</th>
-  </tr>
-  <tr>
-    <td><span class="date-num">26</span></td>
-    <td><span class="date-num">27</span></td>
-    <td><span class="date-num">28</span></td>
-    <td><span class="date-num">29</span></td>
-    <td><span class="date-num">30</span></td>
-    <td><span class="date-num">31</span></td>
-    <td><span class="date-num">Nov 1</span></td>
-  </tr>
-  <tr>
-    <td><span class="date-num">2</span></td>
-    <td><span class="date-num">3</span></td>
-    <td><span class="date-num">4</span></td>
-    <td><span class="date-num">5</span></td>
-    <td><span class="date-num">6</span></td>
-    <td><span class="date-num">7</span></td>
-    <td><span class="date-num">8</span></td>
-  </tr>
-  <tr>
-    <td><span class="date-num">9</span></td>
-    <td><span class="date-num">10</span></td>
-    <td><span class="date-num">11</span></td>
-    <td><span class="date-num">12</span></td>
-    <td><span class="date-num">13</span></td>
-    <td><span class="date-num">14</span></td>
-    <td><span class="date-num">15</span></td>
-  </tr>
-  <tr>
-    <td><span class="date-num">16</span></td>
-    <td><span class="date-num">17</span></td>
-    <td><span class="date-num">18</span></td>
-    <td><span class="date-num">19</span></td>
-    <td><span class="date-num">20</span></td>
-    <td><span class="date-num">21</span></td>
-    <td><span class="date-num">22</span></td>
-  </tr>
-  <tr>
-    <td><span class="date-num">23</span></td>
-    <td><span class="date-num">24</span></td>
-    <td><span class="date-num">25</span></td>
-    <td><span class="date-num">26</span></td>
-    <td><span class="date-num">27</span></td>
-    <td><span class="date-num">28</span></td>
-    <td><span class="date-num">29</span></td>
-  </tr>
-  <tr>
-    <td><span class="date-num">30</span></td>
-    <td><span class="date-num">Dec 1</span></td>
-    <td><span class="date-num">2</span></td>
-    <td><span class="date-num">3</span></td>
-    <td><span class="date-num">4</span></td>
-    <td><span class="date-num">5</span></td>
-    <td><span class="date-num">6</span></td>
-  </tr>
-</table>
+<body class="body">
 
+<!-- top navigation -->
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+  
+  <!-- hold the responsive sidenav button -->
+  <div class="nav-active-holder">Holds nav location<span class="caret"></span></div>
+  
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:;">&nbsp;</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="alerts buttonly">
+            <a href="javascript:;">
+              <span class="im icon-bell"></span>
+              <span class="number">6</span>
+            </a>
+          </li>
+          <li class="messages buttonly">
+            <a href="javascript:;">
+             <span class="im icon-email"></span>
+             <span class="number">18</span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <!-- use this same "user-info" div in the sidenav -->
+            <div class="user-info">
+              <div class="user-image">
+                <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+              </div>
+              <div class="inner">
+                <div class="user-name">Grace Kelly</div>
+                <div class="user-org">Crossmark</div>
+                <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+              </div>
+            </div><!-- ends user info -->
+            
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="header">Manage Organization</li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-checkmark"></span>
+                  <span>Admin Dashboard</span>
+                </a>
+              </li>
+              <li class="disabled">
+                <a href="javascript:;">
+                  <span class="im icon-empty"></span>
+                  <span>Org Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-settings"></span>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li class="last">
+                <a href="javascript:;">
+                  <span class="im icon-lock"></span>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- ends navbar-collapse -->
+    </div><!-- ends container-fluid -->
+  </nav>
+</header>
+                
+<!-- start the main panel -->
+<div class="main wrapper">
+                
+<!-- ----------------------------------------------------- --> 
 
+  <!-- side navigation (left side) -->
+  <nav class="sidenav">
+  
+    <!-- use the same "user-info" div as in the top nav -->
+    <div class="user-info">
+      <div class="user-image">
+        <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+      </div>
+      <div class="inner">
+        <div class="user-name">Grace Kelly</div>
+        <div class="user-org">Crossmark</div>
+        <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+      </div>
+    </div><!-- ends user info -->
+    
+    <ul class="nav-sections">
+      <li class="active"><a href="gigwalk-groups-dash.html">Organizations</a></li>
+      <li><a href="gigwalk-project-builder.html">Projects</a></li>
+      <li><a href="gigwalk-ticket-dash-schedluer.html">Tickets</a></li>
+      <li><a href="javascript:;">Resources</a></li>
+    </ul>
+  </nav><!-- ends side nav -->
+  
+  <!-- content (right side) -->
+  <div class="inner wrapper">
+      
+      <!-- tabs for the content -->
+      <!-- remove class "active" from the Groups li (since this is not the home page for Groups) -->
+      <nav class="tabnav">
+        <ul>
+          <li><a href="javascript:;">Users</a></li>
+          <li><a href="javascript:;">Groups</a></li>
+        </ul>
+      </nav><!-- ends content tabs -->
+      
+      <!-- the content under the tabs -->
+      <!-- ---------------------------------------------------------------------------------------------- -->
+      <!-- -------------------------------------DAVE DAVE DAVE------------------------------------------- -->
+      
+      <!-- ------------- This page also requires "admin" vs. "worker" class under the body -------------- -->
+      
+      <div class="content Profile"> <!-- Inject page name (controls responsive view) -->
+      
+      <!-- ---------------------------------------------------------------------------------------------- -->
+      <!-- ---------------------------------------------------------------------------------------------- -->
+        <div class="section-wrapper">
+          <div class="user-info">
+            <div class="user-image">
+              <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+            </div>
+          </div>
+          
+          <div class="section-controls">
+            <!-- Don't place section-title if user is "me" -->
+            <div class="section title">
+              Grace Kelly
+            </div>
+            
+            <div class="section-actions">
+              <!-- Don't place change-picture if user is NOT "me" -->
+              <div class="change-picture">
+                <a class="iconButton camera">Change Picture</a>
+                <div class="button-holder">
+                  <a href="javascript:;">Upload photo</a>
+                  <a href="javascript:;">Take photo</a>
+                  <a href="javascript:;">Remove photo</a>
+                  <a href="javascript:;">Cancel photo</a>
+                </div>
+              </div>
+              
+              <div class="user-details">
+                <!-- Don't place user-activity if user is "me" -->
+                <div class="user-activity">
+                  <span class="plainLabel">Last activity</span>
+                  <span>01/15/2015 at 3:30 p.m.</span>
+                </div>
+                <div class="inner">
+                  <div class="user-org">
+                    <span class="plainLabel">Organization</span>
+                    <span>Crossmark</span>
+                  </div>
+                  <div class="user-role">
+                    <span class="plainLabel">Role</span>
+                    <span>Admin</span>
+                  </div>
+                </div>
+              </div><!-- ends user info -->
+            </div><!-- ends section actions -->
+          </div><!-- ends section controls -->
+          
+        </div><!-- ends section wrapper -->  
+      
+      
+        <!-- ---------------------------- Bootstrap tabs --------------------------- -->
+        <div role="tabpanel">
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#all-audits" role="tab" data-toggle="tab">All Audits</a>
+            </li>
+            <li role="presentation">
+              <a href="#audit-detail" role="tab" data-toggle="tab">Audit Detail</a>
+            </li>
+            <li role="presentation">
+              <a href="#audit-detail-2" role="tab" data-toggle="tab">Audit-detail-2</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="all-audits tab-pane active" id="all-audits">
+              All Audits
+            </div>
+            <div role="tabpanel" class="all-audits tab-pane" id="audit-detail">
+              Audit Detail
+            </div>
+            <div role="tabpanel" class="all-audits tab-pane" id="audit-detail-2">
+              Audit Detail 2
+            </div>
+          </div>
+
+        </div>
+            
+      
+      <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
+    
+    
+    </div><!-- ends content -->
+  
+  </div><!-- ends right side ("inner wrapper")  -->
+</div><!-- ends main panel ("main wrapper") -->
 
 </body>
 </html>
