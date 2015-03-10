@@ -228,11 +228,14 @@
               <li>
                 <a href="#trade-marketing" role="tab" data-toggle="tab">Trade Marketing</a>
               </li>
-              <!-- <li>
+              <li>
                 <a href="#pos" role="tab" data-toggle="tab">POS</a>
-              </li> -->
+              </li>
 
-              <!-- future -->
+              <!-- -----------------------------------------------------------
+                   future: tuck POS and new reports into a dropdown tab
+                           if new audit template is added
+              ----------------------------------------------------------------
               <li role="presentation" class="dropdown">
                 <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">More Reports <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
@@ -240,6 +243,7 @@
                   <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">New Report</a></li>
                 </ul>
               </li>
+              ---------------------------------------------------------------- -->
 
             </ul>
           </nav>
@@ -249,7 +253,74 @@
 
             <!-- -------------------- All Audits tab ----------------------- -->
             <div class="tab-pane all-audits active" id="all-audits">
-              All Audits
+
+              <div class="graph-controls">
+
+                <!-- regions selector -->
+                <div class="selector regions">
+                  <div class="descriptor">Region</div>
+                  <div class="dropdown national">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" tabindex="1">
+                      United States
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li class="ti" role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">United States</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Midwest</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Northeast</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">South</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">West</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown regional">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"  tabindex="2">
+                      Midwest
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li class="ti" role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Midwest</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Illinois</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Indiana</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Iowa</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Kansas</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Michigan</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minnesota</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Missouri</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Nebraska</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">North Dakota</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Ohio</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">South Dakota</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Wisconsin</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="selected state">
+                    IL
+                  </div>
+                </div><!--ends regions selector -->
+
+                <!-- dates selector -->
+                <div class="selector dates">
+                  <div class="descriptor">Dates</div>
+                  <a class="quick" href="javascript:;" tabindex="3">Last 30 days</a>
+                  <a class="quick" href="javascript:;" tabindex="4">YTD</a>
+                  <a class="quick" href="javascript:;" tabindex="5">All Time</a>
+                  <input class="datepicker" placeholder="From date" tabindex="6" />
+                  <span>to</span>
+                  <input class="datepicker" placeholder="To date" tabindex="7" />
+                  <a href="javascript:;" class="buttonly" tabindex="8">Show</a>
+                </div>
+
+                <div class="selector targets-locations">
+                  <div class="descriptor">Targets</div>
+                  <a class="quick targets" href="javascript:;" tabindex="9">105</a>
+                  <div class="descriptor">Locations</div>
+                  <a class="quick locations" href="javascript:;" tabindex="9">268</a>
+                </div>
+
+              </div><!-- ends graph controls -->
+
             </div><!-- ends All Audits pane -->
 
 
