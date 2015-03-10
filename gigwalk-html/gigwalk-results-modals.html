@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Basic Page Needs 
+================================================== -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" /> 
+
+<title>Results Dash Modals</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+
+
+<!-- device and shortcut icons
+================================================== -->
+
+<link rel="shortcut icon" type="image/x-icon" href="brand/gigwalk/images/favicon-gigwalk.ico">
+<link rel="apple-touch-icon" href="brand/gigwalk/images/apple-touch-icon.png" /> 
+
+
+<!-- Global CSS and JS
+================================================== -->
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/DataTables.all.min.js"></script>
+<script src="js/interactions-working.js"></script>
+
+<link href="css/bootstrap.css" media="screen" rel="stylesheet" />
+<link href="css/font-awesome.css" media="screen" rel="stylesheet" />
+<link href="css/app-glyphs.css" media="screen" rel="stylesheet" />
+<link href="css/datepicker.css" media="screen" rel="stylesheet" />
+<link href="css/core.css" media="screen" rel="stylesheet" />
+
+<!-- Brand CSS
+================================================== -->
+
+<link href="brand/gigwalk/css/fonts-gigwalk.css" media="screen" rel="stylesheet" />
+<link href="brand/gigwalk/css/gigwalk.css" media="screen" rel="stylesheet" />
+
+
+<!-- Manage IE
+================================================== -->
+
+<!--[if lte IE 8]>
+  <script type="text/javascript">       
+      window.location="unsupported.html";
+  </script>
+<![endif]-->
+
+<!--[if IE 9]>
+  <link href="/css/ie9.css" media="screen" rel="stylesheet" />
+  <script src=="js/html5.min.js"></script> 
+<![endif]-->
+
+<script>
+  var doc = document.documentElement;
+  doc.setAttribute('data-useragent', navigator.userAgent);
+  // detect IE10 and IE11 from string
+</script>
+
+ 
+</head>
+<body class="body">
+
+<div class="modal results targets" style="display: block;">
+  <table>
+  <tbody>
+  <tr>
+    <td>
+      <div class="popup targets">
+        <div class="wrapper">
+          <div class="popup-header">
+            <div class="popup-ti">105 of 105 Targets shown</div>
+            <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+          </div>
+
+          <div class="popup-content"><!-- content area -->
+
+            <!-- search -->
+            <div class="filters-holder">
+              <div class="filters">
+                <div class="wrapper">
+                  <div class="filter search" data-module="filter">
+                    <div class="filter">
+                      <input type="text" placeholder="Search">
+                      <div class="loading-xsm gray" data-buffering="" style="visibility: hidden;">
+                        <span class="glyphicon glyphicon-refresh"></span>
+                      </div>
+                      <span class="im icon-search"></span>
+                      <ul></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- select all -->
+            <div class="list-ti">
+              <label class="plainLabel">
+                <input type="checkbox" value="select-all" />Targets
+              </label>
+            </div>
+
+            <!-- selection div -->
+            <div class="selection">
+              <!-- for each target -->
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">A Target 1</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">A Target 2</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">A Target 3</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">A Target 4 with very long wordy target name overflows the line</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">B Target 1</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">B Target 2</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">C Target 1</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">C Target 2</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">C Target 3</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">D Target 1</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">D Target 2</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">E Target 1</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">E Target 2</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">E Target 3</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">E Target 4</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">E Target 5</a>
+              </div>
+
+              <div class="item target">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">E Target 6</a>
+              </div>
+
+            </div><!-- ends selection div -->
+
+          </div><!-- ends popup content area -->
+
+          <div class="primary actions">
+            <a class="buttonly">Update</a>
+          </div>
+
+        </div>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+  </table>
+</div>
+
+
+
+</body>
+</html>

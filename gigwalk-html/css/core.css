@@ -995,7 +995,8 @@ a.buttonly,
 .set-repeats .dropdown .plainLabel,
 .set-repeats .radios .plainLabel,
 .instruction-footer .descriptor,
-.subnav ul.dropdown-menu li a {
+.subnav ul.dropdown-menu li a,
+.modal.results .plainLabel {
 	color: #333;
 }
 
@@ -1786,7 +1787,9 @@ header .nav li,
 .Ticket .barcode .answer .added,
 .Ticket .instruction.task .images, 
 .Ticket .instruction .files,
-.table-list table td.expanded {
+.table-list table td.expanded,
+.modal.results .plainLabel,
+.modal.results .selection .item {
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -7881,6 +7884,74 @@ a.quick.locations {
   position: relative;
   	top: -1px;
 }
+
+/* results modals */
+
+.modal.results .popup {
+	padding-bottom: 1em;
+	height: 715px;
+	width: 400px;
+}
+
+.modal.results .popup .primary.actions a {
+	margin-top: 1em;
+}
+
+.modal.results .filters,
+.modal.results .filters .filter.search {
+	width: 100%;
+}
+
+.modal.results .filters-holder .filters .filter {
+	margin-right: 0;
+}
+
+.modal.results .filter.search input[type="text"] {
+	width: 325px;
+}
+
+.modal.results .filter.search .icon-search {
+	background: transparent;
+}
+
+.modal.results .gray,
+.modal.results ul {
+	display: none;
+}
+
+.modal.results .plainLabel {
+	margin: 5px 0 0 0;
+	padding: 0 0 5px 0;
+	display: block;
+}
+
+.modal.results input[type="checkbox"] {
+	margin: 0 15px 0 2px;
+}
+
+.modal.results .selection {
+	height: 500px;
+	overflow-y: auto;
+}
+
+.modal.results .selection .item {
+	font-size: 14px;
+	padding: 9px 0 9px 0;
+	position: relative;
+}
+
+.modal.results .selection .item input[type="checkbox"] {
+	position: absolute;
+		top: 12px; 
+}
+
+.modal.results .selection .item a {
+	display: inline-block;
+	width: 315px;
+	position: relative;
+	left: 32px;
+}
+ 
 
 
 /* heredeb */
