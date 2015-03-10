@@ -68,11 +68,18 @@
 </head>
 <body class="body">
 
-<div class="modal results targets" style="display: block;">
+
+<!-- divs that wrap the modal popup -->
+<div class="modal results" style="display: block;">
   <table>
   <tbody>
   <tr>
     <td>
+
+
+      <!-- ----------------------------------------------------- -->
+      <!-- ------------ TARGET SELECTION POPUP ----------------- -->
+      <!-- ----------------------------------------------------- -->
       <div class="popup targets">
         <div class="wrapper">
           <div class="popup-header">
@@ -88,7 +95,7 @@
                 <div class="wrapper">
                   <div class="filter search" data-module="filter">
                     <div class="filter">
-                      <input type="text" placeholder="Search">
+                      <input type="text" placeholder="Search" autofocus>
                       <div class="loading-xsm gray" data-buffering="" style="visibility: hidden;">
                         <span class="glyphicon glyphicon-refresh"></span>
                       </div>
@@ -110,87 +117,87 @@
             <!-- selection div -->
             <div class="selection">
               <!-- for each target -->
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">A Target 1</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">A Target 2</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">A Target 3</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">A Target 4 with very long wordy target name overflows the line</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">B Target 1</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">B Target 2</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">C Target 1</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">C Target 2</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">C Target 3</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">D Target 1</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">D Target 2</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">E Target 1</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">E Target 2</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">E Target 3</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">E Target 4</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">E Target 5</a>
               </div>
 
-              <div class="item target">
+              <div class="item">
                 <input type="checkbox" value="select-all" />
                 <a href="javascript:;">E Target 6</a>
               </div>
@@ -204,12 +211,168 @@
           </div>
 
         </div>
+      </div><!-- ENDS Target selection popup -->
+
+
+      <!-- ----------------------------------------------------- -->
+      <!-- ------------ LOCATIONS SELECTION POPUP -------------- -->
+      <!-- ----------------------------------------------------- -->
+      <div class="popup locations">
+        <div class="wrapper">
+          <div class="popup-header">
+            <div class="popup-ti">268 of 268 Locations shown</div>
+            <a class="close" href="javascript:;"><span class="im icon-cancel"></span></a>
+          </div>
+
+          <div class="popup-content"><!-- content area -->
+
+            <!-- search -->
+            <div class="filters-holder">
+              <div class="filters">
+                <div class="wrapper">
+                  <div class="filter search" data-module="filter">
+                    <div class="filter">
+                      <input type="text" placeholder="Search" autofocus>
+                      <div class="loading-xsm gray" data-buffering="" style="visibility: hidden;">
+                        <span class="glyphicon glyphicon-refresh"></span>
+                      </div>
+                      <span class="im icon-search"></span>
+                      <ul></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- select all -->
+            <div class="list-ti">
+              <label class="plainLabel">
+                <input type="checkbox" value="select-all" />Locations
+              </label>
+            </div>
+
+            <!-- selection div -->
+            <div class="selection">
+              <!-- for each target -->
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">A Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">B Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">C Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">D Location with very long wordy location name overflows the line</a>
+                <span>1 FOREST PARK DR OVERFLOW THE LINE, BUENA SPRINGS, AR, 72631</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">E Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">F Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">G Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">H Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">I Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">J Location</a>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">K Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">L Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">M Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">N Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">O Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">P Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+              <div class="item">
+                <input type="checkbox" value="select-all" />
+                <a href="javascript:;">Q Location</a>
+                <span>Street Address, City, ST, Zip</span>
+              </div>
+
+            </div><!-- ends selection div -->
+
+          </div><!-- ends popup content area -->
+
+          <div class="primary actions">
+            <a class="buttonly">Update</a>
+          </div>
+
+        </div>
       </div>
+
+
     </td>
   </tr>
   </tbody>
   </table>
 </div>
+
 
 
 

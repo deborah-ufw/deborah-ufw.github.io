@@ -827,7 +827,8 @@ select option,
 .hint.widget-panel .header .ti,
 .Ticket .instruction .header .controls .ti,
 .Ticket .barcode .upc .number,
-.answerButton {
+.answerButton,
+.all-audits .graph-controls .descriptor {
 	font-family: Helvetica-Neue-Medium;
 }
 

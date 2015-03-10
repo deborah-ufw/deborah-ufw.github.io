@@ -7842,9 +7842,9 @@ a.page-action.delete-button span.im {
   opacity: .3; 
 }
 
+.modal.results .selection .item span,
 .all-audits .graph-controls .descriptor {
 	color: #6e6e6e;
-	font-family: Helvetica-Neue-Bold;
 } 
 
 .graph-controls .dates span,
@@ -7945,12 +7945,16 @@ a.quick.locations {
 		top: 12px; 
 }
 
-.modal.results .selection .item a {
+.modal.results .selection .item a,
+.modal.results .selection .item span {
+	line-height: 1.2em;
 	display: inline-block;
 	width: 315px;
 	position: relative;
 	left: 32px;
 }
+
+
  
 
 
