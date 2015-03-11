@@ -1111,6 +1111,7 @@ a.iconButton.disabled:focus,
 .widget-panel .area,
 .calendar-month td.past,
 .calendar-day .ticket,
+.graph-controls .selector,
 .Results .graph-holder,
 .Results .locations-holder {
 	background: #f9f9f9;
@@ -7792,8 +7793,8 @@ a.page-action.delete-button span.im {
 
 .graph-controls .descriptor,
 .graph-controls .dates span,
-.graph-controls .selected.state {
-	color: #9e9e9e;
+.graph-controls .selected.state,
+.targets-locations .descriptor {
 	display: inline-block;
 }
 
@@ -7804,7 +7805,6 @@ a.page-action.delete-button span.im {
 .graph-controls .selector {
 	padding: 9px;
 	width: 100%;
-	background: #fafafa;
 	border-bottom: 1px solid #ffffff;
 }
 
@@ -7961,6 +7961,8 @@ a.quick.locations {
 }
 
 .all-audits .graph-holder {
+	font-size: 14px;
+	padding: 9px;
 	display: table-cell;
 	width: 50%;
 	border-top: 5px solid #ffffff;
@@ -7971,18 +7973,62 @@ a.quick.locations {
 	border-right-width: 0;
 }
 
+.graph-controls .descriptor,
+.graph-controls .dates span,
+.graph-controls .selected.state,
+.Results .graph-holder {
+	color: #6e6e6e;
+}
+
 .graph-controls .dropdown li.ti a {
-	color: #8e8e8e;
+	color: #9e9e9e;
 }
 
 .modal.results .selection .item span,
 .all-audits .graph-controls .descriptor,
 .graph-options .ti {
-	color: #6e6e6e;
+	color: #666666;
 }
 
 .graph-options .ti {
 	font-size: 18px;
+	display: inline-block;
+}
+
+.all-audits .get-more {
+	text-align: center;
+}
+
+.Results .graph {
+	margin-bottom: .3em;
+}
+
+.Results .graph img {
+	width: 100%;
+}
+
+.graph-buttons {
+	float: right;
+}
+
+.graph-buttons .viewers {
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.graph-buttons a {
+	margin-left: 1px;
+	display: inline-block;
+	float: right;
+	position: relative;
+}
+
+.graph-buttons a.viewer.active {
+	background: #ffffff;
+}
+
+.graph-buttons a.buttonly {
+	padding: 8px;
 }
  
 

@@ -475,7 +475,8 @@ html, body {
 	
 	.filters-holder .view a:hover,
 	.filters-holder .view a:active,
-	.filters-holder .view a:focus {
+	.filters-holder .view a:focus,
+	.graph-buttons a {
 		background: #d9e9fa;
 	}
 	
@@ -487,6 +488,11 @@ html, body {
 	.pagination .next:hover,
 	.pagination .next:focus {
 		background-color: #d9e9fa;
+	}
+	
+	.graph-buttons a:hover,
+	.graph-buttons a:focus {
+		background: #c5def7;
 	}
 	
 	.datepicker td.active, 
