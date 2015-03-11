@@ -311,7 +311,11 @@ html, body {
 	.Ticket .instruction.task .photo .icon-buttons a.disabled:hover,
 	.Ticket .instruction.task .photo .icon-buttons a.disabled:focus,
 	.Profile .section-actions .button-holder a:hover,
-	.Profile .section-actions .button-holder a:focus {
+	.Profile .section-actions .button-holder a:focus,
+	.graph-controls .btn.btn-default.dropdown-toggle:focus,
+	.graph-controls .btn.btn-default.dropdown-toggle:active,
+	.graph-controls .dates a:focus,
+	.graph-controls .dates a:active {
 		background: rgba(64, 145, 230, .1);
 	}
 	
@@ -386,7 +390,10 @@ html, body {
 	 .Ticket .instruction.photo .icon-buttons a.disabled,
 	 .Ticket .instruction.task .photo .icon-buttons a.disabled,
 	 a.bigButton.disabled,
-	 .modal.results .filter.search .icon-search {
+	 .modal.results .filter.search .icon-search,
+	 .graph-controls .btn.btn-default.dropdown-toggle,
+	 .graph-buttons,
+	 .graph-buttons a.buttonly {
 		color: #4890e2;
 	}
 	
@@ -827,8 +834,7 @@ select option,
 .hint.widget-panel .header .ti,
 .Ticket .instruction .header .controls .ti,
 .Ticket .barcode .upc .number,
-.answerButton,
-.all-audits .graph-controls .descriptor {
+.answerButton {
 	font-family: Helvetica-Neue-Medium;
 }
 
@@ -845,7 +851,9 @@ header .nav .number,
 .Group .page-action-panel .copy span,
 .Projects .settings .group.required > .plainLabel:after,
 .popup-ti,
-.strong  {
+.strong,
+.all-audits .graph-controls .descriptor,
+.graph-options .ti {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }
@@ -1056,7 +1064,7 @@ header .nav .number,
 	
 }
 
-
+/* match to here */
 
 
 

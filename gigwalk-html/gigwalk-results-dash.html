@@ -251,8 +251,180 @@
           <!-- bootstrap tab panes -->
           <div class="tab-content" data-target="tab">
 
+            <!-- ----------------------------------------------------------- -->
             <!-- -------------------- All Audits tab ----------------------- -->
+            <!-- ----------------------------------------------------------- -->
             <div class="tab-pane all-audits active" id="all-audits">
+
+              <!-- -------------------- FILTERS ------------------------ -->
+              <div class="graph-controls">
+
+                <!-- regions selector -->
+                <div class="selector regions">
+                  <div class="descriptor">Region</div>
+                  <div class="dropdown national">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" tabindex="1">
+                      United States
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li class="ti" role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">United States</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Midwest</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Northeast</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">South</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">West</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown regional">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"  tabindex="2">
+                      Midwest
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li class="ti" role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Midwest</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Illinois</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Indiana</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Iowa</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Kansas</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Michigan</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minnesota</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Missouri</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Nebraska</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">North Dakota</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Ohio</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">South Dakota</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Wisconsin</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="selected state">
+                    IL
+                  </div>
+                </div><!--ends regions selector -->
+
+                <!-- dates selector -->
+                <div class="selector dates">
+                  <div class="descriptor">Dates</div>
+                  <a class="quick" href="javascript:;" tabindex="3">Last 30 days</a>
+                  <a class="quick" href="javascript:;" tabindex="4">YTD</a>
+                  <a class="quick" href="javascript:;" tabindex="5">All Time</a>
+                  <input class="datepicker" placeholder="From date" tabindex="6" />
+                  <span>to</span>
+                  <input class="datepicker" placeholder="To date" tabindex="7" />
+                  <a href="javascript:;" class="buttonly" tabindex="8">Show</a>
+                </div>
+
+                <!-- targets and locations can't be selected for all reports at once,
+                     so for "All Audits" it is moved to the individual graph blocks -->
+
+              </div><!-- ends graph controls -->
+
+              <!-- ------------------ GRAPH BLOCKS --------------------- -->
+
+              <div class="blocks">
+
+                <!-- ---------- starts first block ---------- -->
+                <div class="graph-holder">
+
+                  <div class="graph-options">
+                    <div class="ti">On-Shelf</div>
+
+                    <!-- graph buttons -->
+                    <div class="graph-buttons">
+                      <div class="viewers">
+                        <div class="viewer line"><span class="im icon-graph-line"></span></div>
+                        <div class="viewer bars"><span class="im icon-graph-bars"></span></div>
+                        <!-- suppressed for all audits
+                        <div class="viewer pie"><span class="im icon-graph-pie"></span></div>
+                        -->
+                      </div>
+                      <a class="buttonly detail" href="javascript:;">Detail<span class="im icon-extend"></span></a>
+                    </div>
+
+                    <!-- targets and locations - same HTML as in audit detail, but in a different location -->
+                    <div class="selector targets-locations">
+                      <div class="descriptor">Targets</div>
+                      <a class="quick targets" href="javascript:;" tabindex="9">105</a>
+                      <div class="descriptor">Locations</div>
+                      <a class="quick locations" href="javascript:;" tabindex="9">268</a>
+                    </div>
+                  </div><!-- ends graph options -->
+
+                  <!-- The graph! -->
+                  <div class="graph">
+                    <img src="images/placeholder-graph-small.gif" />
+                  </div>
+
+                  <!-- invitation to get more data -->
+                  <div class="get-more">
+                    <div class="copy">Get more data like this with a</div>
+                    <a href="javascript:;">New On-Shelf Audit Project</a>
+                  </div>
+
+                </div><!-- ends first block -->
+
+                <!-- ---------- starts second block ---------- -->
+                <div class="graph-holder">
+
+                  <div class="graph-options">
+                    <div class="ti">Cooler</div>
+
+                    <!-- graph buttons -->
+                    <div class="graph-buttons">
+                      <div class="viewers">
+                        <div class="viewer line"><span class="im icon-graph-line"></span></div>
+                        <div class="viewer bars"><span class="im icon-graph-bars"></span></div>
+                        <!-- suppressed for all audits
+                        <div class="viewer pie"><span class="im icon-graph-pie"></span></div>
+                        -->
+                      </div>
+                      <a class="buttonly detail" href="javascript:;">Detail<span class="im icon-extend"></span></a>
+                    </div>
+
+                    <!-- targets and locations - same HTML as in audit detail, but in a different location -->
+                    <div class="selector targets-locations">
+                      <div class="descriptor">Targets</div>
+                      <a class="quick targets" href="javascript:;" tabindex="9">645</a>
+                      <div class="descriptor">Locations</div>
+                      <a class="quick locations" href="javascript:;" tabindex="9">822</a>
+                    </div>
+                  </div><!-- ends graph options -->
+
+                  <!-- The graph! -->
+                  <div class="graph">
+                    <img src="images/placeholder-graph-small.gif" />
+                  </div>
+
+                  <!-- invitation to get more data -->
+                  <div class="get-more">
+                    <div class="copy">Get more data like this with a</div>
+                    <a href="javascript:;">New Cooler Audit Project</a>
+                  </div>
+
+                </div><!-- ends first block -->
+
+                <!-- for each tab (each audit template), generate another block -->
+
+                <!-- block for Broker -->
+
+                <!-- block for Trade Marketing -->
+
+                <!-- block for POS -->
+
+                <!-- block for new report template -->
+
+              </div><!-- ends blocks -->
+
+
+            </div><!-- ends All Audits pane -->
+
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <!-- -------------------- On Shelf tab (same for any audit detail)  ----------------------- -->
+            <!-- -------------------------------------------------------------------------------------- -->
+
+            <div class="tab-pane on-shelf" id="on-shelf">
 
               <div class="graph-controls">
 
@@ -312,6 +484,7 @@
                   <a href="javascript:;" class="buttonly" tabindex="8">Show</a>
                 </div>
 
+                <!-- targets and locations -->
                 <div class="selector targets-locations">
                   <div class="descriptor">Targets</div>
                   <a class="quick targets" href="javascript:;" tabindex="9">105</a>
@@ -321,13 +494,9 @@
 
               </div><!-- ends graph controls -->
 
-            </div><!-- ends All Audits pane -->
+              <!-- if there's no data -->
 
 
-
-            <!-- -------------------- On Shelf tab (same for any audit detail)  ----------------------- -->
-            <div class="tab-pane on-shelf" id="on-shelf">
-              On-Shelf
             </div><!-- ends On Shelf pane -->
 
 

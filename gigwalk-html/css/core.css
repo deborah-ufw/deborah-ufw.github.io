@@ -996,7 +996,8 @@ a.buttonly,
 .set-repeats .radios .plainLabel,
 .instruction-footer .descriptor,
 .subnav ul.dropdown-menu li a,
-.modal.results .plainLabel {
+.modal.results .plainLabel,
+.graph-controls .dropdown li.ti a:hover {
 	color: #333;
 }
 
@@ -1109,7 +1110,9 @@ a.iconButton.disabled:focus,
 .table-list table table td,
 .widget-panel .area,
 .calendar-month td.past,
-.calendar-day .ticket {
+.calendar-day .ticket,
+.Results .graph-holder,
+.Results .locations-holder {
 	background: #f9f9f9;
 }
 
@@ -7811,7 +7814,6 @@ a.page-action.delete-button span.im {
 }
 
 .graph-controls .btn.btn-default.dropdown-toggle {
-	color: #4890e2;
 	margin-top: -4px;
 	padding: 0 20px 0 0;
 	width: auto;
@@ -7821,16 +7823,7 @@ a.page-action.delete-button span.im {
 .graph-controls .btn.btn-default.dropdown-toggle:active,
 .graph-controls .dates a:focus,
 .graph-controls .dates a:active {
-	background: rgba(64, 145, 230, .1);
 	border: 0px solid transparent;
-}
-
-.graph-controls .dropdown li.ti a {
-	color: #8e8e8e;
-}
-
-.graph-controls .dropdown li.ti a:hover {
-	color: #333;
 }
 
 .graph-controls .btn.btn-default.dropdown-toggle .caret {
@@ -7841,11 +7834,6 @@ a.page-action.delete-button span.im {
   -moz-opacity: .3;
   opacity: .3; 
 }
-
-.modal.results .selection .item span,
-.all-audits .graph-controls .descriptor {
-	color: #6e6e6e;
-} 
 
 .graph-controls .dates span,
 .graph-controls .dates input {
@@ -7884,6 +7872,14 @@ a.quick.locations {
   position: relative;
   	top: -1px;
 }
+
+.graph-buttons div,
+.graph-buttons im:before,
+.graph-buttons a {
+	position: relative;
+}
+
+
 
 /* results modals */
 
@@ -7954,7 +7950,40 @@ a.quick.locations {
 	left: 32px;
 }
 
+.all-audits .blocks {
+	display: table;
+	width: 100%;
+}
 
+.all-audits .graph-holder {
+	display: table-cell;
+	width: 50%;
+}
+
+.all-audits .graph-holder {
+	display: table-cell;
+	width: 50%;
+	border-top: 5px solid #ffffff;
+	border-right: 6px solid #ffffff;
+}
+
+.all-audits .graph-holder:nth-child(2n) {
+	border-right-width: 0;
+}
+
+.graph-controls .dropdown li.ti a {
+	color: #8e8e8e;
+}
+
+.modal.results .selection .item span,
+.all-audits .graph-controls .descriptor,
+.graph-options .ti {
+	color: #6e6e6e;
+}
+
+.graph-options .ti {
+	font-size: 18px;
+}
  
 
 

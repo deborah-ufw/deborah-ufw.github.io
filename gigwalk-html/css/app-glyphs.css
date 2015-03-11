@@ -341,6 +341,18 @@ a.bigButton.barcode:before,
 .icon-archive:before {
 	content: "\e645";
 }
+.icon-graph-pie:before {
+	content: "\e646";
+}
+.icon-graph-bars:before {
+	content: "\e647";
+}
+.icon-graph-line:before {
+	content: "\e648";
+}
+.icon-download:before {
+	content: "\e649";
+}
 
 /* paste new characters just above this line */
 
