@@ -277,10 +277,7 @@ a.bigButton:focus,
 .Ticket .barcode a.linkly:hover,
 .Ticket .barcode a.linkly:focus,
 .Profile .section-actions .button-holder a:hover,
-.Profile .section-actions .button-holder a:focus,
-.graph-controls .dates a,
-.graph-controls .dates a:hover,
-.graph-controls .dates a:focus {
+.Profile .section-actions .button-holder a:focus {
 	text-decoration: none;
 }
 
@@ -7835,6 +7832,12 @@ a.page-action.delete-button span.im {
   opacity: .3; 
 }
 
+.graph-controls .dates a,
+.graph-controls .dates a:hover,
+.graph-controls .dates a:focus {
+	text-decoration: none;
+}
+
 .graph-controls .dates span,
 .graph-controls .dates input {
 	font-size: 15px;
@@ -7851,6 +7854,12 @@ a.page-action.delete-button span.im {
 	width: 135px;
 	position: relative;
 		top: -1px;
+}
+
+a.quick,
+a.quick:hover,
+a.quick:focus {
+	text-decoration: none;
 }
 
 .graph-controls a.quick {
@@ -7963,7 +7972,7 @@ a.quick.locations {
 .all-audits .graph-holder {
 	font-size: 14px;
 	padding: 9px;
-	display: table-cell;
+	display: inline-block;
 	width: 50%;
 	border-top: 5px solid #ffffff;
 	border-right: 6px solid #ffffff;
@@ -7992,7 +8001,19 @@ a.quick.locations {
 
 .graph-options .ti {
 	font-size: 18px;
+	padding-top: 1.1em;
 	display: inline-block;
+}
+
+.all-audits .targets-locations {
+	margin: 1em 0 .2em 0;
+	display: table;
+	width: 100%;
+}
+
+.all-audits a.quick.targets,
+.all-audits a.quick.locations {
+	padding-left: .5em;
 }
 
 .all-audits .get-more {
@@ -8012,15 +8033,25 @@ a.quick.locations {
 }
 
 .graph-buttons .viewers {
-	margin-right: 20px;
+	margin-right: 15px;
 	display: inline-block;
 }
 
 .graph-buttons a {
+	text-decoration: none;
 	margin-left: 1px;
 	display: inline-block;
 	float: right;
 	position: relative;
+}
+
+.graph-buttons a.viewer {
+	padding: 2px 4px 1px 4px;
+	float: left;
+}
+
+.graph-buttons a.viewer .im:before {
+	font-size: 36px;
 }
 
 .graph-buttons a.viewer.active {
@@ -8028,9 +8059,19 @@ a.quick.locations {
 }
 
 .graph-buttons a.buttonly {
-	padding: 8px;
+	padding: 11px 45px 11px 12px;
 }
- 
+
+.graph-buttons a.buttonly.detail .im {
+	padding-left: 5px;
+	float: right;
+}
+
+.graph-buttons a.buttonly.detail .im {
+	position: absolute;
+		top: 6px;
+		right: 10px;
+}
 
 
 /* heredeb */

@@ -318,14 +318,6 @@
                 <!-- targets and locations can't be selected for all reports at once,
                      so for "All Audits" it is moved to the individual graph blocks -->
 
-                <!-- targets and locations - same HTML as in audit detail, but in a different location -->
-                <div class="selector targets-locations">
-                  <div class="descriptor">Targets</div>
-                  <a class="quick targets" href="javascript:;" tabindex="9">105</a>
-                  <div class="descriptor">Locations</div>
-                  <a class="quick locations" href="javascript:;" tabindex="9">268</a>
-                </div>
-
               </div><!-- ends graph controls -->
 
               <!-- ------------------ GRAPH BLOCKS --------------------- -->
@@ -333,6 +325,14 @@
               <div class="blocks">
 
                 <!-- ---------- starts first block ---------- -->
+
+                <!-- *********************************************************
+                     all blocks are the same HTML except for dynamic content,
+                     but I mocked them all in so the page would look like it
+                     will in implementation (you probably really only need
+                     the first block)
+                     ********************************************************** -->
+
                 <div class="graph-holder">
 
                   <div class="graph-options">
@@ -341,7 +341,7 @@
                     <!-- graph buttons -->
                     <div class="graph-buttons">
                       <div class="viewers">
-                        <a href="javascript:;" class="viewer line"><span class="im icon-graph-line"></span></a>
+                        <a href="javascript:;" class="viewer line active"><span class="im icon-graph-line"></span></a>
                         <a href="javascript:;" class="viewer bars"><span class="im icon-graph-bars"></span></a>
                         <!-- suppressed for all audits
                         <div href="javascript:;" class="viewer pie"><span class="im icon-graph-pie"></span></div>
@@ -372,6 +372,23 @@
 
                 </div><!-- ends first block -->
 
+                <!-- for each tab (each audit template), generate another block -->
+
+                <!-- block for Broker -->
+
+                <!-- block for Trade Marketing -->
+
+                <!-- block for POS -->
+
+                <!-- block for new report template -->
+
+                <!-- *********************************************************
+                     all blocks are the same HTML except for dynamic content,
+                     but I mocked them all in so the page would look like it
+                     will in implementation (you probably really only need
+                     the first block)
+                     ********************************************************** -->
+
                 <!-- ---------- starts second block ---------- -->
                 <div class="graph-holder">
 
@@ -381,7 +398,7 @@
                     <!-- graph buttons -->
                     <div class="graph-buttons">
                       <div class="viewers">
-                        <a href="javascript:;" class="viewer line"><span class="im icon-graph-line"></span></a>
+                        <a href="javascript:;" class="viewer line active"><span class="im icon-graph-line"></span></a>
                         <a href="javascript:;" class="viewer bars"><span class="im icon-graph-bars"></span></a>
                         <!-- suppressed for all audits
                         <div href="javascript:;" class="viewer pie"><span class="im icon-graph-pie"></span></div>
@@ -393,9 +410,9 @@
                     <!-- targets and locations - same HTML as in audit detail, but in a different location -->
                     <div class="selector targets-locations">
                       <div class="descriptor">Targets</div>
-                      <a class="quick targets" href="javascript:;" tabindex="9">645</a>
+                      <a class="quick targets" href="javascript:;" tabindex="9">113</a>
                       <div class="descriptor">Locations</div>
-                      <a class="quick locations" href="javascript:;" tabindex="9">822</a>
+                      <a class="quick locations" href="javascript:;" tabindex="9">2,100</a>
                     </div>
                   </div><!-- ends graph options -->
 
@@ -410,17 +427,129 @@
                     <a href="javascript:;">New Cooler Audit Project</a>
                   </div>
 
-                </div><!-- ends first block -->
+                </div><!-- ends second block -->
 
-                <!-- for each tab (each audit template), generate another block -->
+                <!-- ---------- starts third block ---------- -->
+                <div class="graph-holder">
 
-                <!-- block for Broker -->
+                  <div class="graph-options">
+                    <div class="ti">Broker</div>
 
-                <!-- block for Trade Marketing -->
+                    <!-- graph buttons -->
+                    <div class="graph-buttons">
+                      <div class="viewers">
+                        <a href="javascript:;" class="viewer line active"><span class="im icon-graph-line"></span></a>
+                        <a href="javascript:;" class="viewer bars"><span class="im icon-graph-bars"></span></a>
+                        <!-- suppressed for all audits
+                        <div href="javascript:;" class="viewer pie"><span class="im icon-graph-pie"></span></div>
+                        -->
+                      </div>
+                      <a href="javascript:;" class="buttonly detail">Detail<span class="im icon-extend"></span></a>
+                    </div>
 
-                <!-- block for POS -->
+                    <!-- targets and locations - same HTML as in audit detail, but in a different location -->
+                    <div class="selector targets-locations">
+                      <div class="descriptor">Targets</div>
+                      <a class="quick targets" href="javascript:;" tabindex="9">511</a>
+                      <div class="descriptor">Locations</div>
+                      <a class="quick locations" href="javascript:;" tabindex="9">698</a>
+                    </div>
+                  </div><!-- ends graph options -->
 
-                <!-- block for new report template -->
+                  <!-- The graph! -->
+                  <div class="graph">
+                    <img src="images/placeholder-graph-small.gif" />
+                  </div>
+
+                  <!-- invitation to get more data -->
+                  <div class="get-more">
+                    <div class="copy">Get more data like this with a</div>
+                    <a href="javascript:;">New Broker Audit Project</a>
+                  </div>
+
+                </div><!-- ends third block -->
+
+                <!-- ---------- starts fourth block ---------- -->
+                <div class="graph-holder">
+
+                  <div class="graph-options">
+                    <div class="ti">Trade Marketing</div>
+
+                    <!-- graph buttons -->
+                    <div class="graph-buttons">
+                      <div class="viewers">
+                        <a href="javascript:;" class="viewer line"><span class="im icon-graph-line"></span></a>
+                        <a href="javascript:;" class="viewer bars active"><span class="im icon-graph-bars"></span></a>
+                        <!-- suppressed for all audits
+                        <div href="javascript:;" class="viewer pie"><span class="im icon-graph-pie"></span></div>
+                        -->
+                      </div>
+                      <a href="javascript:;" class="buttonly detail">Detail<span class="im icon-extend"></span></a>
+                    </div>
+
+                    <!-- targets and locations - same HTML as in audit detail, but in a different location -->
+                    <div class="selector targets-locations">
+                      <div class="descriptor">Targets</div>
+                      <a class="quick targets" href="javascript:;" tabindex="9">68</a>
+                      <div class="descriptor">Locations</div>
+                      <a class="quick locations" href="javascript:;" tabindex="9">509</a>
+                    </div>
+                  </div><!-- ends graph options -->
+
+                  <!-- The graph! -->
+                  <div class="graph">
+                    <img src="images/placeholder-graph-small-bars.gif" />
+                  </div>
+
+                  <!-- invitation to get more data -->
+                  <div class="get-more">
+                    <div class="copy">Get more data like this with a</div>
+                    <a href="javascript:;">New Trade Marketing Audit Project</a>
+                  </div>
+
+                </div><!-- ends fourth block -->
+
+                <!-- ---------- starts fifth block ---------- -->
+                <div class="graph-holder">
+
+                  <div class="graph-options">
+                    <div class="ti">POS</div>
+
+                    <!-- graph buttons -->
+                    <div class="graph-buttons">
+                      <div class="viewers">
+                        <a href="javascript:;" class="viewer line active"><span class="im icon-graph-line"></span></a>
+                        <a href="javascript:;" class="viewer bars"><span class="im icon-graph-bars"></span></a>
+                        <!-- suppressed for all audits
+                        <div href="javascript:;" class="viewer pie"><span class="im icon-graph-pie"></span></div>
+                        -->
+                      </div>
+                      <a href="javascript:;" class="buttonly detail">Detail<span class="im icon-extend"></span></a>
+                    </div>
+
+                    <!-- targets and locations - same HTML as in audit detail, but in a different location -->
+                    <div class="selector targets-locations">
+                      <div class="descriptor">Targets</div>
+                      <a class="quick targets" href="javascript:;" tabindex="9">1,402</a>
+                      <div class="descriptor">Locations</div>
+                      <a class="quick locations" href="javascript:;" tabindex="9">1,625</a>
+                    </div>
+                  </div><!-- ends graph options -->
+
+                  <!-- The graph! -->
+                  <div class="graph">
+                    <img src="images/placeholder-graph-small.gif" />
+                  </div>
+
+                  <!-- invitation to get more data -->
+                  <div class="get-more">
+                    <div class="copy">Get more data like this with a</div>
+                    <a href="javascript:;">New POS Audit Project</a>
+                  </div>
+
+                </div><!-- ends fifth block -->
+
+                <!-- if a new report template is added, a new block will go here -->
 
               </div><!-- ends blocks -->
 
@@ -544,15 +673,6 @@
         <!-- ***************** ENDS SUBCONTENT TABS ********************** -->
 
 
-
-
-
-        <!-- ****************************************************************** -->
-        <!--                  START "BY PROJECT" TOP TAB                        -->
-        <!-- ****************************************************************** -->
-
-    
-    
     </div><!-- ends content -->
 
     <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
