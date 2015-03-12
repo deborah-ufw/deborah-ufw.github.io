@@ -254,7 +254,7 @@
             <!-- ----------------------------------------------------------- -->
             <!-- -------------------- All Audits tab ----------------------- -->
             <!-- ----------------------------------------------------------- -->
-            <div class="tab-pane all-audits active" id="all-audits">
+            <div class="tab-pane all-audits" id="all-audits">
 
               <!-- -------------------- FILTERS ------------------------ -->
               <div class="graph-controls">
@@ -590,7 +590,7 @@
             <!-- -------------------- On Shelf tab (same for any audit detail)  ----------------------- -->
             <!-- -------------------------------------------------------------------------------------- -->
 
-            <div class="tab-pane on-shelf" id="on-shelf">
+            <div class="tab-pane audit-detail on-shelf active" id="on-shelf">
 
               <div class="graph-controls">
 
@@ -660,7 +660,59 @@
 
               </div><!-- ends graph controls -->
 
-              <!-- if there's no data -->
+              <!-- *********************************************************************
+                     the audit-detail graphs blocks use the same HTML as on the
+                     all-audits screen, except for
+                       -- targets-locations selector is removed, it's in the
+                          "graph controls" area instead (same html for the element, though)
+                       -- a "list" viewer button is included
+                       -- has a "csv button" instead of a "detail button"
+                     ******************************************************************** -->
+
+              <div class="graph-holder">
+
+                <div class="section-no-content">There is no <span class="ti">On-Shelf</span> data to display.</div>
+
+                <div class="graph-wrapper">
+
+                  <div class="graph-options">
+
+                    <!-- graph buttons -->
+                    <div class="graph-buttons">
+                      <div class="viewers">
+                        <a href="javascript:;" class="viewer line active"><span class="im icon-graph-line"></span></a>
+                        <a href="javascript:;" class="viewer bars"><span class="im icon-graph-bars"></span></a>
+                        <!-- suppressed for all audits
+                        <div href="javascript:;" class="viewer pie"><span class="im icon-graph-pie"></span></div>
+                        -->
+                      </div>
+                      <a href="javascript:;" class="buttonly detail">Detail<span class="im icon-extend"></span></a>
+                    </div>
+
+                    <div class="ti">On-Shelf</div>
+
+                    <!-- targets and locations - same HTML as in audit detail, but in a different location -->
+                    <div class="selector targets-locations">
+                      <div class="descriptor">Targets</div>
+                      <a class="quick targets" href="javascript:;" tabindex="9">105</a>
+                      <div class="descriptor">Locations</div>
+                      <a class="quick locations" href="javascript:;" tabindex="9">268</a>
+                    </div>
+                  </div><!-- ends graph options -->
+
+                  <!-- The graph! -->
+                  <div class="graph">
+                    <img src="images/placeholder-graph-small.gif" />
+                  </div>
+
+                  <!-- invitation to get more data -->
+                  <div class="get-more">
+                    <div class="copy">Get more data like this with a</div>
+                    <a href="javascript:;">New <span class="ti">On-Shelf Audit Project</a>
+                  </div>
+
+                </div><!-- ends graph wrapper -->
+              </div><!-- ends first block -->
 
 
             </div><!-- ends On Shelf pane -->
@@ -668,28 +720,28 @@
 
 
             <!-- -------------------- Cooler (same for any audit detail)  ----------------------- -->
-            <div class="tab-pane cooler" id="cooler">
+            <div class="tab-pane audit-detail cooler" id="cooler">
               Cooler
             </div><!-- ends Cooler pane -->
 
 
 
             <!-- -------------------- Broker (same for any audit detail)  ----------------------- -->
-            <div class="tab-pane broker" id="broker">
+            <div class="tab-pane audit-detail broker" id="broker">
               Broker
             </div><!-- ends Broker pane -->
 
 
 
             <!-- -------------------- Trade Marketing (same for any audit detail)  ----------------------- -->
-            <div class="tab-pane trade-marketing" id="trade-marketing">
+            <div class="tab-pane audit-detail trade-marketing" id="trade-marketing">
               Trade Marketing
             </div><!-- ends Trade Marketing pane -->
 
 
 
             <!-- -------------------- POS (same for any audit detail)  ----------------------- -->
-            <div class="tab-pane pos" id="pos">
+            <div class="tab-pane audit-detail pos" id="pos">
               POS
             </div><!-- ends pos pane -->
 
