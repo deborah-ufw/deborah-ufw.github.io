@@ -268,6 +268,9 @@ a[href*="tel"]:focus,
 .comments a:focus,
 .attached-file:hover,
 .attached-file:focus,
+.attached-file a.filename:hover, 
+.attached-file a.filename:active, 
+.attached-file a.filename:focus,
 .answerButton:hover,
 .answerButton:focus,
 a.bigButton:hover,
@@ -277,7 +280,7 @@ a.bigButton:focus,
 .Ticket .barcode a.linkly:hover,
 .Ticket .barcode a.linkly:focus,
 .Profile .section-actions .button-holder a:hover,
-.Profile .section-actions .button-holder a:focus {
+.Profile .section-actions .button-holder a:focus, {
 	text-decoration: none;
 }
 
@@ -1241,7 +1244,8 @@ a.buttonly.cancel.disabled:hover,
 a.buttonly.cancel.disabled:focus,
 .filters .filter.search,
 .action.panel .filter.search,
-.popup {
+.popup,
+.locations-holder .table-list {
 	background: #ffffff;
 }
 
@@ -1761,7 +1765,7 @@ header .nav li,
 	border-bottom: 1px solid rgba(0, 0, 0, .05);
 }
 
-.Projects .dash .table-list td .completion-bar {
+.table-list td .completion-bar {
 	border-width: 6px;
 }
 
@@ -7702,16 +7706,16 @@ a.page-action.delete-button span.im {
 	min-width: 95px;
 }
 
-.Projects .dash .table-list td .completion-bar .text {
+.table-list td .completion-bar .text {
 	text-align: right;
 	width: 55px;
 }
 
-.Projects .dash .table-list td .completion-bar .text {
+.table-list td .completion-bar .text {
 	line-height: 1.3em;
 }
 
-.Projects .dash .table-list td .completion-bar .percent-complete {
+.table-list td .completion-bar .percent-complete {
 	height: 1.33em;
 }
 
@@ -7802,9 +7806,13 @@ a.page-action.delete-button span.im {
 }
 
 .graph-controls .selector {
-	padding: 9px;
+	padding: 9px 9px 9px 12px;
 	width: 100%;
 	border-bottom: 1px solid #ffffff;
+}
+
+.all-audits .graph-controls .selector {
+	padding-left: 9px;
 }
 
 .graph-controls .dropdown {
@@ -7966,8 +7974,9 @@ a.quick.locations {
 	width: 100%;
 }
 
-.audit-detail .graph-holder {
-	padding: 15px 15px 25px 15px;
+.audit-detail .graph-holder,
+.Results .locations-holder {
+	padding: 12px 12px 25px 12px;
 }
 
 .all-audits .graph-holder {
@@ -7998,11 +8007,13 @@ a.quick.locations {
 
 .modal.results .selection .item span,
 .all-audits .graph-controls .descriptor,
-.graph-options .ti {
+.graph-options .ti,
+.Results .ti-locations {
 	color: #666666;
 }
 
-.graph-options .ti {
+.graph-options .ti,
+.Results .ti-locations {
 	font-size: 22px;
 	padding-top: .7em;
 	display: inline-block;
@@ -8104,9 +8115,8 @@ a.quick.locations {
 }
 
 .audit-detail .get-more {
+	text-align: right;
 	margin-top: 5px;
-	display: inline-block;
-	float: right;
 }
 
 .audit-detail .get-more .copy {
@@ -8121,6 +8131,21 @@ a.quick.locations {
 	padding: 9px 12px;
 	display: inline-block;
 }
+
+.locations-holder {
+	margin-top: 4em;
+}
+
+.locations-holder .table-list {
+	margin-top: 1em;
+	padding: 0 10px;
+}
+
+.Results .completion-bar {
+	max-width: 250px;
+}
+
+
 
 
 /* heredeb */

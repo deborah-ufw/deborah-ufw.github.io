@@ -862,7 +862,8 @@ header .nav .number,
 .popup-ti,
 .strong,
 .all-audits .graph-controls .descriptor,
-.graph-options .ti {
+.graph-options .ti,
+.graph-options .ti-locations {
 	font-family: Helvetica-Neue-Bold;
 	font-weight: normal !important;
 }
