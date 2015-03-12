@@ -7966,6 +7966,10 @@ a.quick.locations {
 	width: 100%;
 }
 
+.audit-detail .graph-holder {
+	padding: 15px 15px 25px 15px;
+}
+
 .all-audits .graph-holder {
 	font-size: 14px;
 	padding: 9px 9px 19px 9px;
@@ -7983,7 +7987,8 @@ a.quick.locations {
 .graph-controls .descriptor,
 .graph-controls .dates span,
 .graph-controls .selected.state,
-.Results .graph-holder {
+.Results .graph-holder,
+.audit-detail .get-more {
 	color: #6e6e6e;
 }
 
@@ -7998,9 +8003,14 @@ a.quick.locations {
 }
 
 .graph-options .ti {
+	font-size: 22px;
+	padding-top: .7em;
+	display: inline-block;
+}
+
+.all-audits .graph-options .ti {
 	font-size: 19px;
 	padding-top: 1.1em;
-	display: inline-block;
 }
 
 .all-audits .targets-locations {
@@ -8053,10 +8063,12 @@ a.quick.locations {
 }
 
 .graph-buttons a.viewer.active {
+	cursor: default;
 	background: #ffffff;
 }
 
-.graph-buttons a.buttonly {
+.graph-buttons a.buttonly,
+.graph-buttons a.csv {
 	padding: 11px 40px 11px 12px;
 }
 
@@ -8071,10 +8083,43 @@ a.quick.locations {
 		right: 10px;
 }
 
+.graph-buttons a.csv {
+	padding: 10px 15px 10px 43px;
+}
+
+.graph-buttons a.csv .im {
+	position: absolute;
+		top: 3px;
+		left: 7px;
+}
+
+.graph-buttons a.csv .im:before {
+	font-size: 36px;
+}
+
 .all-audits .section-no-content {
 	font-size: 24px;
 	padding-left: .8em;
 	padding-right: .8em;
+}
+
+.audit-detail .get-more {
+	margin-top: 5px;
+	display: inline-block;
+	float: right;
+}
+
+.audit-detail .get-more .copy {
+	display: inline-block;
+}
+
+.audit-detail .get-more a,
+.audit-detail .get-more a:hover,
+.audit-detail .get-more a:focus {
+	text-decoration: none;
+	margin-left: 5px;
+	padding: 9px 12px;
+	display: inline-block;
 }
 
 

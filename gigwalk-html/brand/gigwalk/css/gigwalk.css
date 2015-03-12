@@ -476,7 +476,8 @@ html, body {
 	.filters-holder .view a:hover,
 	.filters-holder .view a:active,
 	.filters-holder .view a:focus,
-	.graph-buttons a {
+	.graph-buttons a,
+	.audit-detail .get-more a {
 		background: #d9e9fa;
 	}
 	
@@ -491,7 +492,9 @@ html, body {
 	}
 	
 	.graph-buttons a:hover,
-	.graph-buttons a:focus {
+	.graph-buttons a:focus,
+	.audit-detail .get-more a:hover,
+	.audit-detail .get-more a:focus {
 		background: #c5def7;
 	}
 	

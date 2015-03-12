@@ -213,10 +213,10 @@
 
           <nav class="subnav">
             <ul class="nav nav-tabs" role="tablist">
-              <li class="active">
+              <li>
                 <a href="#all-audits" role="tab" data-toggle="tab">All Audits</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="#on-shelf" role="tab" data-toggle="tab">On-Shelf</a>
               </li>
               <li>
@@ -372,7 +372,7 @@
                     <!-- invitation to get more data -->
                     <div class="get-more">
                       <div class="copy">Get more data like this with a</div>
-                      <a href="javascript:;">New <span class="ti">On-Shelf Audit Project</a>
+                      <a href="javascript:;">New <span class="ti">On-Shelf Audit Project</span></a>
                     </div>
 
                   </div><!-- ends graph wrapper -->
@@ -547,6 +547,7 @@
                           <a href="javascript:;" class="viewer line active"><span class="im icon-graph-line"></span></a>
                           <a href="javascript:;" class="viewer bars"><span class="im icon-graph-bars"></span></a>
                           <!-- suppressed for all audits
+                          <a href="javascript:;" class="viewer bars"><span class="im icon-graph-list"></span></a>
                           <div href="javascript:;" class="viewer pie"><span class="im icon-graph-pie"></span></div>
                           -->
                         </div>
@@ -661,58 +662,56 @@
               </div><!-- ends graph controls -->
 
               <!-- *********************************************************************
-                     the audit-detail graphs blocks use the same HTML as on the
+                     the audit-detail graphs block uses the same HTML as on the
                      all-audits screen, except for
                        -- targets-locations selector is removed, it's in the
-                          "graph controls" area instead (same html for the element, though)
+                          "graph controls" area instead (same HTML for the element, though)
                        -- a "list" viewer button is included
                        -- has a "csv button" instead of a "detail button"
+                       -- "get-more" div is in a different location (same HTML)
                      ******************************************************************** -->
 
-              <div class="graph-holder">
+              <div class="block">
 
-                <div class="section-no-content">There is no <span class="ti">On-Shelf</span> data to display.</div>
+                <div class="graph-holder">
 
-                <div class="graph-wrapper">
+                  <div class="section-no-content">There is no <span class="ti">On-Shelf</span> data to display.</div>
 
-                  <div class="graph-options">
+                  <div class="graph-wrapper">
+                    <div class="graph-options">
 
-                    <!-- graph buttons -->
-                    <div class="graph-buttons">
-                      <div class="viewers">
-                        <a href="javascript:;" class="viewer line active"><span class="im icon-graph-line"></span></a>
-                        <a href="javascript:;" class="viewer bars"><span class="im icon-graph-bars"></span></a>
-                        <!-- suppressed for all audits
-                        <div href="javascript:;" class="viewer pie"><span class="im icon-graph-pie"></span></div>
-                        -->
+                      <!-- graph buttons -->
+                      <div class="graph-buttons">
+                        <div class="viewers">
+                          <a href="javascript:;" class="viewer line active"><span class="im icon-graph-line"></span></a>
+                          <a href="javascript:;" class="viewer bars"><span class="im icon-graph-bars"></span></a>
+                          <a href="javascript:;" class="viewer list"><span class="im icon-list"></span></a>
+                          <!-- suppressed for audit detail
+                          <div href="javascript:;" class="viewer pie"><span class="im icon-graph-pie"></span></div>
+                          -->
+                        </div>
+                        <a href="javascript:;" class="buttonly csv"><span class="im icon-download"></span>CSV</a>
                       </div>
-                      <a href="javascript:;" class="buttonly detail">Detail<span class="im icon-extend"></span></a>
+
+                      <div class="ti">On-Shelf</div>
+
+                    </div><!-- ends graph options -->
+
+                    <!-- The graph! -->
+                    <div class="graph">
+                      <img src="images/placeholder-graph-big.gif" />
                     </div>
 
-                    <div class="ti">On-Shelf</div>
+                  </div><!-- ends graph wrapper -->
+                </div><!-- ends graph holder -->
 
-                    <!-- targets and locations - same HTML as in audit detail, but in a different location -->
-                    <div class="selector targets-locations">
-                      <div class="descriptor">Targets</div>
-                      <a class="quick targets" href="javascript:;" tabindex="9">105</a>
-                      <div class="descriptor">Locations</div>
-                      <a class="quick locations" href="javascript:;" tabindex="9">268</a>
-                    </div>
-                  </div><!-- ends graph options -->
+                <!-- invitation to get more data -->
+                <div class="get-more">
+                  <div class="copy">Get more data like this with a</div>
+                  <a href="javascript:;">New <span class="ti">On-Shelf Audit Project</span></a>
+                </div>
 
-                  <!-- The graph! -->
-                  <div class="graph">
-                    <img src="images/placeholder-graph-small.gif" />
-                  </div>
-
-                  <!-- invitation to get more data -->
-                  <div class="get-more">
-                    <div class="copy">Get more data like this with a</div>
-                    <a href="javascript:;">New <span class="ti">On-Shelf Audit Project</a>
-                  </div>
-
-                </div><!-- ends graph wrapper -->
-              </div><!-- ends first block -->
+              </div><!-- ends block -->
 
 
             </div><!-- ends On Shelf pane -->
@@ -721,28 +720,28 @@
 
             <!-- -------------------- Cooler (same for any audit detail)  ----------------------- -->
             <div class="tab-pane audit-detail cooler" id="cooler">
-              Cooler
+              Same HTML as On-Shelf, but with dynamic content for Cooler
             </div><!-- ends Cooler pane -->
 
 
 
             <!-- -------------------- Broker (same for any audit detail)  ----------------------- -->
             <div class="tab-pane audit-detail broker" id="broker">
-              Broker
+              Same HTML as On-Shelf, but with dynamic content for Broker
             </div><!-- ends Broker pane -->
 
 
 
             <!-- -------------------- Trade Marketing (same for any audit detail)  ----------------------- -->
             <div class="tab-pane audit-detail trade-marketing" id="trade-marketing">
-              Trade Marketing
+              Same HTML as On-Shelf, but with dynamic content for Trade Marketing
             </div><!-- ends Trade Marketing pane -->
 
 
 
             <!-- -------------------- POS (same for any audit detail)  ----------------------- -->
             <div class="tab-pane audit-detail pos" id="pos">
-              POS
+              Same HTML as On-Shelf, but with dynamic content for POS
             </div><!-- ends pos pane -->
 
 
