@@ -68,7 +68,8 @@ header nav .user-edit,
 .Projects .dash .table-list td .completion-bar .text .copy,
 .picker-switch.accordion-toggle,
 .Profile .widget-panel .header .arrow,
-.popup.metadata .primary.actions {
+.popup.metadata .primary.actions,
+.Results .section-no-content {
 	display: none;
 }
 
@@ -150,7 +151,6 @@ header .nav .number,
 .table-list table .zip,
 .map .tab-pane a.buttonly.main,
 .Groups .table-list table .subgroups,
-.section-no-content,
 .map .icon-vacation,
 .calendar .action-panel .wrapper input,
 .calendar-day .blocked .action-panel,
@@ -5733,7 +5733,9 @@ a.page-action.delete-button span.im {
 }
 
 .section-no-content {
+	text-align: center;
 	font-size: 26px;
+	line-height: 1em;
 	padding: 1.2em;
 }
 
@@ -7965,14 +7967,10 @@ a.quick.locations {
 }
 
 .all-audits .graph-holder {
-	display: table-cell;
-	width: 50%;
-}
-
-.all-audits .graph-holder {
 	font-size: 14px;
-	padding: 9px;
+	padding: 9px 9px 19px 9px;
 	display: inline-block;
+	vertical-align: top;
 	width: 50%;
 	border-top: 5px solid #ffffff;
 	border-right: 6px solid #ffffff;
@@ -8000,13 +7998,13 @@ a.quick.locations {
 }
 
 .graph-options .ti {
-	font-size: 18px;
+	font-size: 19px;
 	padding-top: 1.1em;
 	display: inline-block;
 }
 
 .all-audits .targets-locations {
-	margin: 1em 0 .2em 0;
+	margin: .5em 0 .2em 0;
 	display: table;
 	width: 100%;
 }
@@ -8033,7 +8031,7 @@ a.quick.locations {
 }
 
 .graph-buttons .viewers {
-	margin-right: 15px;
+	margin-right: 8px;
 	display: inline-block;
 }
 
@@ -8046,7 +8044,7 @@ a.quick.locations {
 }
 
 .graph-buttons a.viewer {
-	padding: 2px 4px 1px 4px;
+	padding: 2px 3px 1px 3px;
 	float: left;
 }
 
@@ -8059,7 +8057,7 @@ a.quick.locations {
 }
 
 .graph-buttons a.buttonly {
-	padding: 11px 45px 11px 12px;
+	padding: 11px 40px 11px 12px;
 }
 
 .graph-buttons a.buttonly.detail .im {
@@ -8071,6 +8069,12 @@ a.quick.locations {
 	position: absolute;
 		top: 6px;
 		right: 10px;
+}
+
+.all-audits .section-no-content {
+	font-size: 24px;
+	padding-left: .8em;
+	padding-right: .8em;
 }
 
 
