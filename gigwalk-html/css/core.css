@@ -281,7 +281,7 @@ a.bigButton:focus,
 .Ticket .barcode a.linkly:hover,
 .Ticket .barcode a.linkly:focus,
 .Profile .section-actions .button-holder a:hover,
-.Profile .section-actions .button-holder a:focus, {
+.Profile .section-actions .button-holder a:focus {
 	text-decoration: none;
 }
 
@@ -319,6 +319,9 @@ header .user-org,
 select:hover,
 select:focus,
 .nav-active-holder,
+.tabnav li a,
+nav > li,
+nav > li > a,
 .subnav li,
 .subnav li a,
 th.sorting,
@@ -8062,7 +8065,9 @@ a.quick.locations {
 	display: inline-block;
 }
 
-.graph-buttons a {
+
+.graph-buttons a,
+.Results.By-Project a.buttonly {
 	text-decoration: none;
 	margin-left: 1px;
 	display: inline-block;
@@ -8085,16 +8090,15 @@ a.quick.locations {
 }
 
 .graph-buttons a.buttonly,
-.graph-buttons a.csv {
+.graph-buttons a.csv,
+.Results.By-Project a.buttonly {
 	padding: 11px 40px 11px 12px;
 }
 
+.Results.By-Project a.buttonly.detail .im,
 .graph-buttons a.buttonly.detail .im {
 	padding-left: 5px;
 	float: right;
-}
-
-.graph-buttons a.buttonly.detail .im {
 	position: absolute;
 		top: 6px;
 		right: 10px;
@@ -8190,7 +8194,23 @@ a.quick.locations {
 	max-width: 200px;
 }
 
+.Results.By-Project .dash .table-list th:first-child {
+	width: 30%;
+}
 
+.Results.By-Project .dash .table-list th:last-child {
+	width: 120px;
+}
+
+.Results.By-Project .dash .table-list th:nth-child(4),
+.Results.By-Project .dash .table-list td:nth-child(4)
+ { /* locations th and td */
+	text-align: right;
+}
+
+.Results.By-Project .dash .table-list td:nth-child(4) { /* locations td */
+	padding-right: 36px;
+}
 
 
 /* heredeb */

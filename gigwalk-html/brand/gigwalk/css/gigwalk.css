@@ -393,7 +393,8 @@ html, body {
 	 .modal.results .filter.search .icon-search,
 	 .graph-controls .btn.btn-default.dropdown-toggle,
 	 .graph-buttons,
-	 .graph-buttons a.buttonly {
+	 .graph-buttons a.buttonly,
+	 .Results.By-Project a.buttonly {
 		color: #4890e2;
 	}
 	
@@ -410,7 +411,8 @@ html, body {
 	.Ticket .barcode .primary.actions a.buttonly,
 	.answerButton.submit,
 	.project-type .primary.actions a.buttonly,
-	.graph-controls a.buttonly {
+	.graph-controls a.buttonly,
+	.Results.By-Project a.buttonly {
 		background: #4890e2;
 	}
 	
@@ -477,7 +479,8 @@ html, body {
 	.filters-holder .view a:active,
 	.filters-holder .view a:focus,
 	.graph-buttons a,
-	.audit-detail .get-more a {
+	.audit-detail .get-more a,
+	.Results.By-Project a.buttonly {
 		background: #d9e9fa;
 	}
 	
@@ -491,6 +494,8 @@ html, body {
 		background-color: #d9e9fa;
 	}
 	
+	.Results.By-Project a.buttonly:hover,
+	.Results.By-Project a.buttonly:focus,
 	.graph-buttons a:hover,
 	.graph-buttons a:focus,
 	.audit-detail .get-more a:hover,
