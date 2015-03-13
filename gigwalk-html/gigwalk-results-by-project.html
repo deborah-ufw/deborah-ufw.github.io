@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="X-UA-Compatible" content="IE=9" /> 
 
-<title>Projects Dash</title>
+<title>Results By Project</title>
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
@@ -171,10 +171,10 @@
     </div><!-- ends user info -->
     
     <ul class="nav-sections">
+      <li class="active"><a href="gigwalk-groups-dash.html">Results</a></li>
       <li><a href="gigwalk-groups-dash.html">Organizations</a></li>
-      <li class="active"><a href="gigwalk-projects-dash.html">Projects</a></li>
+      <li><a href="gigwalk-projects-dash.html">Projects</a></li>
       <li><a href="gigwalk-ticket-dash-scheduler.html">Tickets</a></li>
-      <li><a href="javascript:;">People</a></li>
       <li><a href="javascript:;">Resources</a></li>
       
       <!-- <li class="divider">Support</li>
@@ -186,31 +186,31 @@
   </nav><!-- ends side nav -->
   
   <!-- content (right side) -->
-  <div class="inner wrapper Projects">
+  <div class="inner wrapper Results">
   
       <!-- tabs for the content -->
       <nav class="tabnav">
         <ul>
-          <li class="active"><a href="javascript:;">Active</a></li>
-          <li><a href="javascript:;">Drafts</a></li>
-          <li><a href="javascript:;">Archived</a></li>
+          <li><a href="javascript:;">Top Level</a></li>
+          <li class="active"><a href="javascript:;">By Project</a></li>
         </ul>
       </nav><!-- ends content tabs -->
       
-      <!-- the content under the tabs -->
-      <div class="content dash">
+    <!-- the content under the tabs -->
+    <div class="content dash">
 
-        <!-- ****************************************************************** -->
-        <!--                       PAGE ACTION MESSAGES                         -->
-        <!-- ****************************************************************** -->
+      <!-- ****************************************************************** -->
+      <!--                       PAGE ACTION MESSAGES                         -->
+      <!-- ****************************************************************** -->
 
-        <!-- Projects Dash doesn't currently use these, but Drafts probably will at some point
-        <div class="page action messages">
-          <div class="message confirmation">
-            <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
-            <h1><span class="im icon-checkmark"></span>I'm a confirmation.</h1>
-          </div>
-        </div> -->
+      <!-- Results By Project doesn't currently use these, but Drafts probably will at some point
+      <div class="page action messages">
+        <div class="message confirmation">
+          <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
+          <h1><span class="im icon-checkmark"></span>I'm a confirmation.</h1>
+        </div>
+      </div> -->
+
 
       <!-- ****************************************************************** -->
       <!--                              FILTERS                               -->
@@ -221,55 +221,25 @@
         <div class="filters">
           <div class="wrapper">
 
-            <div class="filter dropdown multi-state">
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                  Show active
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                  <li class="launched"  role="presentation">
-                    <label>
-                      <input type="checkbox" value="launched" />
-                      Launched
-                    </label>
-                  </li>
-                  <li class="in-progress"  role="presentation">
-                    <label>
-                      <input type="checkbox" value="in-progress" />
-                      In progress
-                    </label>
-                  </li>
-                  <li class="complete"  role="presentation">
-                    <label>
-                      <input type="checkbox" value="complete" />
-                      Complete
-                    </label>
-                  </li>
-                  <li class="quick-select">
-                    <a href="javascript:;">Show</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- ---------------- Desired Search behavior ----------------
-            
-                the way it works in Organizations - Users is very good
-                 - restricts table as user types in the Search input
-                 - un-restricts when user removes typing from the Search input
-
-                 would like
-                 - on "Enter", create a filtered term div [term [X]]
-                       -- user can keep searching within filtered results
-                 - on remove the filtered term div, removes the filter for the term
-                   
-            ----------------------------------------------------------- -->
-            
             <div class="filter search">
               <input type="text" placeholder="Search" />
               <span class="im icon-search"></span>
             </div>
+
+            <div class="filter dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Select Template Type
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" href="javascript:;">On-Shelf</a></li>
+                <li role="presentation"><a role="menuitem" href="javascript:;">Cooler</a></li>
+                <li role="presentation"><a role="menuitem" href="javascript:;">Broker</a></li>
+                <li role="presentation"><a role="menuitem" href="javascript:;">Trade Marketing</a></li>
+                <li role="presentation"><a role="menuitem" href="javascript:;">POS</a></li>
+              </ul>
+            </div>
+
             <a class="page-action new-button"><span class="im icon-pencil-box"></span>New Project</a>
 
           </div><!-- end wrapper -->
@@ -283,50 +253,24 @@
         </div>
       </div><!-- end filters selections -->
 
-      <!-- ---------- NEW PROJECT PANEL INVOKED HERE ------------ -->
+      <!-- -------------------- no content message --------------------- -->
+
+      <div class="section-no-content">
+        There is no <span class="ti">On-Shelf</span> data to display.
+        <a href="javascript:;">Get data with a new <span class="ti">On-Shelf</span> Audit Project</a>
+      </div>
+
 
       <!-- ****************** TABLE CONTROL BAR ***************** -->
-      
+
       <!-- the summary area on the left with action buttons on the right -->
       <div class="table-list">
-        <div class="controls has-buttons">
+        <div class="controls">
           <div class="summary">
             <div class="visible"><span class="value">(#)</span> <span class="descr-before"></span>Projects </div>
-            <div class="selected">&nbsp;|&nbsp; <span class="value">(#)</span><span> selected</span></div>
-          </div>
-          <div class="actions">
-            <a class="iconButton archive last" href="javascript:;">Archive</a>
           </div>
         </div>
 
-        <!-- ****************************************************************** -->
-        <!-- **********  Action panel (drops down on action select  *********** -->
-        <!-- ****************************************************************** -->
-
-        <div class="action panel archive">
-          <h1>Archive 20 Projects</h1>
-          <div class="warning">
-            Some of the selected projects will not be archived because they are
-            in progress. Completed projects will be archived.
-          </div>
-
-          <div class="primary actions">
-            <div class="right">
-              <a class="buttonly cancel" href="javascript:;">Cancel</a>
-              <a class="buttonly" href="javascript:;">Archive</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- **********  Action Confirmation panel  *********** -->
-        <!--    the panel that confirms the executed action     -->
-
-        <div class="action messages">
-          <div class="message confirmation">
-            <a class="closer" href="javascript:;"><span class="im icon-cancel"></span></a>
-            <h1><span class="im icon-checkmark"></span>20 Projects were archived.</h1>
-          </div>
-        </div>
 
         <!-- ****************** TABLE ***************** -->
 
@@ -334,32 +278,17 @@
 
           <thead>
           <tr role="row">
-            <th class="checkbox">
-              <input type="checkbox" value="select-all" />
-            </th>
             <th class="sorting project-title">
               Project
             </th>
-            <th class="sorting assigned">
-              Assigned
-            </th>
             <th class="sorting execution">
               Execution
-            </th>
-            <th class="sorting hours-left">
-              Hours Left
-            </th>
-            <th class="sorting date start">
-              Start
             </th>
             <th class="sorting date end">
               End
             </th>
             <th class="sorting locations">
               Loc<span class="descriptive">ation</span>s
-            </th>
-            <th class="sorting status">
-              Status
             </th>
             <th class="button">
               &nbsp;
@@ -370,25 +299,8 @@
           <tbody>
 
           <tr role="row">
-            <td class="checkbox">
-              <input type="checkbox" value="selected" />
-            </td>
             <td class="project-title">
-              <a href="javascript:;">05.16.15 Product Display - RedBull 24 oz.</a>
-            </td>
-            <td class="assigned">
-
-              <!-- progress bar -->
-              <div class="completion-bar">
-                <div class="completion">
-                  <div class="percent-complete" style="width: 41%;"></div>
-                </div>
-                <div class="text">
-                  <span class="percent-text">41%</span>&nbsp;
-                  <span class="copy">Complete</span>
-                </div>
-              </div><!-- progress bar -->
-
+              <a href="javascript:;">Coca-cola 16 oz.</a>
             </td>
             <td class="execution">
               <!-- progress bar -->
@@ -402,47 +314,20 @@
                 </div>
               </div><!-- progress bar -->
             </td>
-            <td class="hours-left">
-              0
-            </td>
-            <td class="date start">
-              Feb 15
-            </td>
             <td class="date end">
               Feb 15
             </td>
             <td class="locations">
               855
             </td>
-            <td class="status">
-              <span class="complete"></span>
-            </td>
             <td class="button">
-              <!-- no button for complete projects -->
-              &nbsp;
+              <a href="javascript:;" class="buttonly detail">Detail</a>
             </td>
           </tr>
 
           <tr role="row">
-            <td class="checkbox">
-              <input type="checkbox" value="selected" />
-            </td>
             <td class="project-title">
-              <a href="javascript:;">New Product Cut In - Kikkoman Soy Sauce 24 oz.</a>
-            </td>
-            <td class="assigned">
-
-              <!-- progress bar -->
-              <div class="completion-bar zero">
-                <div class="completion">
-                  <div class="percent-complete" style="width: 0%;"></div>
-                </div>
-                <div class="text">
-                  <span class="percent-text">0%</span>&nbsp;
-                  <span class="copy">Complete</span>
-                </div>
-              </div><!-- progress bar -->
-
+              <a href="javascript:;">Coca-cola 32 oz.</a>
             </td>
             <td class="execution">
               <!-- progress bar -->
@@ -456,46 +341,20 @@
                 </div>
               </div><!-- progress bar -->
             </td>
-            <td class="hours-left">
-              55
-            </td>
-            <td class="date start">
-              Feb 15
-            </td>
             <td class="date end">
               Feb 25
             </td>
             <td class="locations">
               1,024
             </td>
-            <td class="status">
-              <span class="launched"></span>
-            </td>
             <td class="button">
-              <a href="javascript:;">Autoassign</a>
+              <a href="javascript:;" class="buttonly detail">Detail</a>
             </td>
           </tr>
 
           <tr role="row">
-            <td class="checkbox">
-              <input type="checkbox" value="selected" />
-            </td>
             <td class="project-title">
-              <a href="javascript:;">Atlas Alerts 918-2150987431</a>
-            </td>
-            <td class="assigned">
-
-              <!-- progress bar -->
-              <div class="completion-bar">
-                <div class="completion">
-                  <div class="percent-complete" style="width: 90%;"></div>
-                </div>
-                <div class="text">
-                  <span class="percent-text">90%</span>&nbsp;
-                  <span class="copy">Complete</span>
-                </div>
-              </div><!-- progress bar -->
-
+              <a href="javascript:;">Coca-cola promo pack</a>
             </td>
             <td class="execution">
               <!-- progress bar -->
@@ -509,28 +368,19 @@
                 </div>
               </div><!-- progress bar -->
             </td>
-            <td class="hours-left">
-              105
-            </td>
-            <td class="date start">
-              Feb 22
-            </td>
             <td class="date end">
               Mar 2
             </td>
             <td class="locations">
               5
             </td>
-            <td class="status">
-              <span class="in-progress"></span>
-            </td>
             <td class="button">
-              <a href="javascript:;">Autoassign</a>
+              <a href="javascript:;" class="buttonly detail">Detail</a>
             </td>
           </tr>
-                        
+
           </tbody>
-          
+
         </table>
       </div><!-- end table-list div -->
 
@@ -541,18 +391,13 @@
           <a class="next" href="javascript:;"><span class="im icon-next"></span></a>
         </div>
       </div>
-      
+
       <!-- end List View -->
-        
-        
-        
-        
-    
-      <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
-    
-    
+
     </div><!-- ends content -->
-  
+
+    <div style="margin: 10em 0;">delete this, it's just to give me some scroll room while I'm working</div>
+
   </div><!-- ends right side ("inner wrapper")  -->
 </div><!-- ends main panel ("main wrapper") -->
 

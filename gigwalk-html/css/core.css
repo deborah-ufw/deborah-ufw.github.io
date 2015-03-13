@@ -7761,7 +7761,7 @@ a.page-action.delete-button span.im {
 }
 
 
-/* integrate Reports Dash */
+/* Results Dash */
 
 .subnav li.dropdown {
 	margin-right: 0;
@@ -7793,6 +7793,11 @@ a.page-action.delete-button span.im {
 
 .Results {
 	min-width: 740px;
+}
+
+.Results .subnav,
+.Results .tab-pane {
+	max-width: 900px;
 }
 
 .graph-controls .descriptor,
@@ -8109,10 +8114,20 @@ a.quick.locations {
 	font-size: 36px;
 }
 
+.Results .section-no-content a {
+	font-size: 18px;
+	margin-top: 1em;
+	display: block;
+}
+
 .all-audits .section-no-content {
 	font-size: 24px;
 	padding-left: .8em;
 	padding-right: .8em;
+}
+
+.Results .all-audits .section-no-content a {
+	font-size: 15px;
 }
 
 .audit-detail .get-more {
