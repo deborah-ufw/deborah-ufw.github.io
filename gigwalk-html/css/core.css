@@ -69,6 +69,7 @@ header nav .user-edit,
 .picker-switch.accordion-toggle,
 .Profile .widget-panel .header .arrow,
 .popup.metadata .primary.actions,
+.Results .completion-bar .copy,
 .Results .section-no-content {
 	display: none;
 }
@@ -7976,7 +7977,7 @@ a.quick.locations {
 
 .audit-detail .graph-holder,
 .Results .locations-holder {
-	padding: 12px 12px 25px 12px;
+	padding: 12px 12px 15px 12px;
 }
 
 .all-audits .graph-holder {
@@ -8141,8 +8142,37 @@ a.quick.locations {
 	padding: 0 10px;
 }
 
+.locations-holder .table-list tbody tr:last-child {
+	border-bottom-width: 0px;
+}
+
+.locations-holder .table-list th {
+	width: 30%;
+}
+
+.locations-holder .table-list th:nth-child(2) {
+	text-align: center;
+	padding-right: 3em;
+}
+
+
+.locations-holder .table-list td:nth-child(2),
+.locations-holder .table-list th:nth-child(3),
+.locations-holder .table-list td:nth-child(3) {
+	text-align: right;
+	padding-right: 3em;
+}
+
+.locations-holder .table-list td:nth-child(2) {
+	padding-right: 8.8em;
+}
+
+.locations-holder .table-list td:nth-child(3) {
+	padding-right: 5.8em;
+}
+
 .Results .completion-bar {
-	max-width: 250px;
+	max-width: 200px;
 }
 
 
