@@ -8092,7 +8092,6 @@ a.quick.locations {
 
 .graph-buttons a.buttonly {
 	padding: 11px 12px 9px 12px;
-	float: none;
 }
 
 .Results a.buttonly.detail {
@@ -8226,6 +8225,10 @@ a.quick.locations {
 
 .Results.By-Project .dash .table-list th:last-child {
 	width: 120px;
+}
+
+.Results.By-Project .dash .table-list td:last-child {
+	padding-top: 12px;
 }
 
 .Results.By-Project .dash .table-list th:nth-child(4),
@@ -8545,10 +8548,10 @@ html[data-useragent*='Trident'] input {
 	border-bottom-width: 1px;
 	border-left-width: 1px;
 	
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
 }	
 		
 
