@@ -6849,6 +6849,10 @@ a.page-action.delete-button span.im {
 	margin: 1em 0;
 }
 
+.completion-bar .completion {
+	vertical-align: top;
+}
+
 .completion-bar .percent-complete {
 	margin: -1px 0;
 	height: 1.73em;
