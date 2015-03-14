@@ -8537,6 +8537,19 @@ textarea:-ms-input-placeholder {
 }
 
 /* ie10 & 11 --- also will be picked up by ie9 */
+	
+html[data-useragent*='MSIE 10.0'] input,
+html[data-useragent*='Trident'] input {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}	
 		
 
 html[data-useragent*='MSIE 10.0'] a.page-action.new-button span,
