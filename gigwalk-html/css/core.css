@@ -8553,6 +8553,18 @@ html[data-useragent*='Trident'] input {
 	border-bottom-style: solid;
 	border-left-style: solid;
 }	
+
+html[data-useragent*='MSIE 10.0'] .all-audits input.datepicker,
+html[data-useragent*='Trident'] .all-audits input.datepicker {
+	padding-top: 3px;
+	padding-bottom: 3px;
+		top: -2px;
+}
+
+html[data-useragent*='MSIE 10.0'] .all-audits .graph-holder,
+html[data-useragent*='Trident'] .all-audits .graph-holder {
+	float: left;
+}
 		
 
 html[data-useragent*='MSIE 10.0'] a.page-action.new-button span,
