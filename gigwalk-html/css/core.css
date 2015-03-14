@@ -8558,8 +8558,8 @@ html[data-useragent*='Trident'] input {
 	border-left-style: solid;
 }	
 
-html[data-useragent*='MSIE 10.0'] .all-audits input.datepicker,
-html[data-useragent*='Trident'] .all-audits input.datepicker {
+html[data-useragent*='MSIE 10.0'] .Results input.datepicker,
+html[data-useragent*='Trident'] .Results input.datepicker {
 	padding-top: 3px;
 	padding-bottom: 3px;
 		top: -2px;
