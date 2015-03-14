@@ -8236,8 +8236,7 @@ a.quick.locations {
 }
 
 .Results.By-Project .dash .table-list th:nth-child(4),
-.Results.By-Project .dash .table-list td:nth-child(4)
- { /* locations th and td */
+.Results.By-Project .dash .table-list td:nth-child(4) { /* locations th and td */
 	text-align: right;
 }
 
