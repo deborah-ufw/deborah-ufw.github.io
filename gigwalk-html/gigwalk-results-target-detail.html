@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+  <title>Results Target Detail</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+
+
+  <!-- device and shortcut icons
+  ================================================== -->
+
+  <link rel="shortcut icon" type="image/x-icon" href="brand/gigwalk/images/favicon-gigwalk.ico">
+  <link rel="apple-touch-icon" href="brand/gigwalk/images/apple-touch-icon.png" />
+
+
+  <!-- Global CSS and JS
+  ================================================== -->
+
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/DataTables.all.min.js"></script>
+  <script src="js/interactions-working.js"></script>
+
+  <link href="css/bootstrap.css" media="screen" rel="stylesheet" />
+  <link href="css/font-awesome.css" media="screen" rel="stylesheet" />
+  <link href="css/app-glyphs.css" media="screen" rel="stylesheet" />
+  <link href="css/datepicker.css" media="screen" rel="stylesheet" />
+  <link href="css/core.css" media="screen" rel="stylesheet" />
+
+  <!-- Brand CSS
+  ================================================== -->
+
+  <link href="brand/gigwalk/css/fonts-gigwalk.css" media="screen" rel="stylesheet" />
+  <link href="brand/gigwalk/css/gigwalk.css" media="screen" rel="stylesheet" />
+
+
+  <!-- Manage IE
+  ================================================== -->
+
+  <!--[if lte IE 8]>
+  <script type="text/javascript">
+    window.location="unsupported.html";
+  </script>
+  <![endif]-->
+
+  <!--[if IE 9]>
+  <link href="/css/ie9.css" media="screen" rel="stylesheet" />
+  <script src=="js/html5.min.js"></script>
+  <![endif]-->
+
+  <script>
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+    // detect IE10 and IE11 from string
+  </script>
+
+
+</head>
+<body class="body">
+
+<!-- top navigation -->
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+
+    <!-- hold the responsive sidenav button -->
+    <div class="nav-active-holder">Holds nav location<span class="caret"></span></div>
+
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:;">&nbsp;</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="alerts buttonly">
+            <a href="javascript:;">
+              <span class="im icon-bell"></span>
+              <span class="number">6</span>
+            </a>
+          </li>
+          <li class="messages buttonly">
+            <a href="javascript:;">
+              <span class="im icon-email"></span>
+              <span class="number">18</span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <!-- use this same "user-info" div in the sidenav -->
+            <div class="user-info">
+              <div class="user-image">
+                <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+              </div>
+              <div class="inner">
+                <div class="user-name">Grace Kelly</div>
+                <div class="user-org">Crossmark</div>
+                <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+              </div>
+            </div><!-- ends user info -->
+
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="header">Manage Organization</li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-checkmark"></span>
+                  <span>Admin Dashboard</span>
+                </a>
+              </li>
+              <li class="disabled">
+                <a href="javascript:;">
+                  <span class="im icon-empty"></span>
+                  <span>Org Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="im icon-settings"></span>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li class="last">
+                <a href="javascript:;">
+                  <span class="im icon-lock"></span>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- ends navbar-collapse -->
+    </div><!-- ends container-fluid -->
+  </nav>
+</header>
+
+<!-- start the main panel -->
+<div class="main wrapper">
+
+  <!-- ----------------------------------------------------- -->
+
+  <!-- side navigation (left side) -->
+  <nav class="sidenav">
+
+    <!-- use the same "user-info" div as in the top nav -->
+    <div class="user-info">
+      <div class="user-image">
+        <img class="user-image" src="brand/gigwalk/images/grace.jpg" />
+      </div>
+      <div class="inner">
+        <div class="user-name">Grace Kelly</div>
+        <div class="user-org">Crossmark</div>
+        <div class="user-edit"><a class="link" href="javascript:;">Edit profile</a></div>
+      </div>
+    </div><!-- ends user info -->
+
+    <ul class="nav-sections">
+      <li class="active"><a href="gigwalk-groups-dash.html">Results</a></li>
+      <li><a href="gigwalk-groups-dash.html">Organizations</a></li>
+      <li><a href="gigwalk-projects-dash.html">Projects</a></li>
+      <li><a href="gigwalk-ticket-dash-scheduler.html">Tickets</a></li>
+      <li><a href="javascript:;">Resources</a></li>
+
+      <!-- <li class="divider">Support</li>
+      <li class="support"><a href="javascript:;">Demos and FAQs</a></li>
+      <li class="support"><a href="javascript:;">Support</a></li>
+      <li class="support"><a href="javascript:;">Contact Us</a></li> -->
+
+    </ul>
+  </nav><!-- ends side nav -->
+
+  <!-- content (right side) -->
+  <div class="inner wrapper Results By-Project">
+
+    <!-- tabs for the content -->
+    <nav class="tabnav">
+      <ul>
+        <li><a href="javascript:;">Top Level</a></li>
+        <li><a href="javascript:;">By Project</a></li>
+      </ul>
+    </nav><!-- ends content tabs -->
+
+    <!-- the content under the tabs -->
+    <div class="content dash">
+
+
+
+      <!-- -------------------------------------------------------------------------------------- -->
+      <!-- ---------------------------------- Target Detail   ----------------------------------- -->
+      <!-- -------------------------------------------------------------------------------------- -->
+
+      <!-- "target-detail" div to CSS control elements in context -->
+      <div class="target-detail">
+        <div class="graph-controls">
+
+          <div class="graph-options">
+            <!-- graph buttons -->
+            <div class="graph-buttons">
+              <!-- viewers are in the graph block for this screen -->
+              <a href="javascript:;" class="buttonly">See all project data for this target</a>
+              <a href="javascript:;" class="buttonly csv"><span class="im icon-download"></span>CSV</a>
+            </div>
+
+            <div class="ti">
+              <span class="template-name">On-Shelf:</span>
+              <span class="target-name">Coca-cola 32 oz.</span>
+            </div>
+          </div><!-- ends graph options -->
+
+          <!-- regions selector -->
+          <div class="selector regions">
+            <div class="descriptor">Region</div>
+            <div class="dropdown national">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" tabindex="1">
+                United States
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li class="ti" role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">United States</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Midwest</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Northeast</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">South</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">West</a></li>
+              </ul>
+            </div>
+
+            <div class="dropdown regional">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"  tabindex="2">
+                Midwest
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li class="ti" role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Midwest</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Illinois</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Indiana</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Iowa</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Kansas</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Michigan</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Minnesota</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Missouri</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Nebraska</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">North Dakota</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Ohio</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">South Dakota</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;">Wisconsin</a></li>
+              </ul>
+            </div>
+
+            <div class="selected state">
+              IL
+            </div>
+          </div><!--ends regions selector -->
+
+          <!-- dates selector -->
+          <div class="selector dates">
+            <div class="descriptor">Dates</div>
+            <a class="quick" href="javascript:;" tabindex="3">Last 30 days</a>
+            <a class="quick" href="javascript:;" tabindex="4">YTD</a>
+            <a class="quick" href="javascript:;" tabindex="5">All Time</a>
+            <input class="datepicker" placeholder="From date" tabindex="6" />
+            <span>to</span>
+            <input class="datepicker" placeholder="To date" tabindex="7" />
+            <a href="javascript:;" class="buttonly" tabindex="8">Show</a>
+          </div>
+
+          <!-- targets and locations -->
+          <div class="selector targets-locations">
+            <div class="descriptor">Targets</div>
+            <a class="quick targets" href="javascript:;" tabindex="9">105</a>
+            <div class="descriptor">Locations</div>
+            <a class="quick locations" href="javascript:;" tabindex="9">268</a>
+          </div>
+
+        </div><!-- ends graph controls -->
+
+        <!-- invitation to get more data -->
+        <div class="get-more">
+          <div class="copy">Get more data like this with a</div>
+          <a href="javascript:;">New Audit Project</a>
+        </div>
+
+        <!-- ---------- starts answer block ---------- -->
+
+        <!-- *********************************************************************
+               the target detail graphs block uses the same HTML as on the
+               all-audits screen, except for
+                 -- targets-locations selector is removed, it's in the
+                    "graph controls" area instead (same HTML for the element, though)
+                 -- gets a "pie" viewer button
+                 -- no "detail" or "csv" button
+                 -- "get-more" divs are in different locations (same HTML)
+                     * one for "above the fold"
+                     * one for the bottom of the locations table
+               ******************************************************************** -->
+
+        <div class="block target-answer">
+
+          <div class="target-question">
+            How many steps did it take to find the Coca-cola 32 oz. from the store’s main entrance?
+          </div>
+
+          <div class="graph-holder">
+
+            <div class="section-no-content">
+              There is no data to show.
+              <a href="javascript:;">Get data with a new Project</a>
+            </div>
+
+            <div class="graph-wrapper">
+
+
+                <!-- graph buttons -->
+                <div class="graph-buttons">
+                  <div class="viewers">
+                    <a href="javascript:;" class="viewer line active"><span class="im icon-graph-line"></span></a>
+                    <a href="javascript:;" class="viewer bars"><span class="im icon-graph-bars"></span></a>
+                    <a href="javascript:;" class="viewer list"><span class="im icon-graph-pie"></span></a>
+                    <!-- suppressed for target detail
+                    <div href="javascript:;" class="viewer pie"><span class="im icon-list"></span></div>
+                    -->
+                  </div>
+                </div>
+
+
+              <!-- The graph! -->
+              <div class="graph">
+                <img src="images/placeholder-graph-medium.gif" />
+              </div>
+
+            </div><!-- ends graph wrapper -->
+          </div><!-- ends graph holder -->
+
+          <!-- no "get more" div here on target detail -->
+
+        </div><!-- ends graph block -->
+
+        <!-- ---------- starts locations table ---------- -->
+
+        <div class="locations-holder">
+          <div class="graph-options">
+
+            <!-- graph buttons -->
+            <div class="graph-buttons">
+              <a href="javascript:;" class="buttonly csv"><span class="im icon-download"></span>CSV</a>
+            </div>
+
+            <div class="ti-locations">Locations</div>
+
+            <!-- table -->
+            <div class="table-list">
+
+              <table data-target="dataTable" class="dataTable no-footer" role="grid">
+                <thead>
+                <tr role="row">
+                  <th class="sorting region"> Region </th>
+                  <th class="sorting compliance"> Compliance </th>
+                  <th class="sorting audits"> Audits </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">Illinois</a></td>
+                  <td class="compliance">
+                    <span class="percent">88%</span>
+                  </td>
+                  <td class="audits">103</td>
+                </tr>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">Indiana</a></td>
+                  <td class="compliance">
+                    <span class="audits">34%</span>
+                  </td>
+                  <td class="locations">44</td>
+                </tr>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">Iowa</a></td>
+                  <td class="compliance">
+                    <span class="percent">55%</span>
+                  </td>
+                  <td class="audits">66</td>
+                </tr>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">Kansas</a></td>
+                  <td class="compliance">
+                    <span class="percent">55%</span>
+                  </td>
+                  <td class="audits">78</td>
+                </tr>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">Michigan</a></td>
+                  <td class="compliance">
+                    <span class="percent">88%</span>
+                  </td>
+                  <td class="audits">103</td>
+                </tr>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">Minnesota</a></td>
+                  <td class="compliance">
+                    <span class="audits">34%</span>
+                  </td>
+                  <td class="locations">44</td>
+                </tr>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">Missouri</a></td>
+                  <td class="compliance">
+                    <span class="percent">55%</span>
+                  </td>
+                  <td class="audits">66</td>
+                </tr>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">Nebraska</a></td>
+                  <td class="compliance">
+                    <span class="percent">55%</span>
+                  </td>
+                  <td class="audits">78</td>
+                </tr>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">North Dakota</a></td>
+                  <td class="compliance">
+                    <span class="percent">88%</span>
+                  </td>
+                  <td class="audits">103</td>
+                </tr>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">Ohio</a></td>
+                  <td class="compliance">
+                    <span class="audits">34%</span>
+                  </td>
+                  <td class="locations">44</td>
+                </tr>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">South Dakota</a></td>
+                  <td class="compliance">
+                    <span class="percent">55%</span>
+                  </td>
+                  <td class="audits">66</td>
+                </tr>
+                <tr role="row">
+                  <td class="region"><a href="javascript:;">Wisconsin</a></td>
+                  <td class="compliance">
+                    <span class="percent">55%</span>
+                  </td>
+                  <td class="audits">78</td>
+                </tr>
+                </tbody>
+              </table>
+
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div><!-- ends target detail -->
+      <!-- invitation to get more data -->
+      <div class="center">
+        <div class="get-more">
+          <div class="copy">Get more data like this with a</div>
+          <a href="javascript:;">New Audit Project</a>
+        </div>
+      </div>
+
+    </div><!-- ends content -->
+
+
+  </div><!-- ends right side ("inner wrapper")  -->
+</div><!-- ends main panel ("main wrapper") -->
+
+</body>
+</html>

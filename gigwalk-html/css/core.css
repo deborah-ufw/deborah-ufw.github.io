@@ -1065,13 +1065,6 @@ a.buttonly,
 	color: #999999;
 }
 
-.ticketname.disabled,
-.ticketname.disabled:hover,
-.ticketname.disabled:focus,
-.dropdown-menu > li > a.link:hover {
- background-color: transparent;
-}
-
 .dropdown-header,
 .calendar .view,
 .calendar .view a.active,
@@ -1117,7 +1110,8 @@ a.iconButton.disabled:focus,
 .calendar-day .ticket,
 .graph-controls .selector,
 .Results .graph-holder,
-.Results .locations-holder {
+.Results .locations-holder,
+.graph-options {
 	background: #f9f9f9;
 }
 
@@ -1253,6 +1247,14 @@ a.buttonly.cancel.disabled:focus,
 	background: #ffffff;
 }
 
+.all-audits .get-more a {
+	background: transparent;
+}
+
+.ticketname.disabled,
+.ticketname.disabled:hover,
+.ticketname.disabled:focus,
+.dropdown-menu > li > a.link:hover,
 .iconButton.disabled,
 .iconButton.disabled:hover,
 .iconButton.disabled:focus,
@@ -7799,7 +7801,8 @@ a.page-action.delete-button span.im {
 }
 
 .Results .subnav,
-.Results .tab-pane {
+.Results .tab-pane,
+.By-Project .target-detail {
 	max-width: 900px;
 }
 
@@ -7814,7 +7817,8 @@ a.page-action.delete-button span.im {
 	width: 4.2em;
 }
 
-.graph-controls .selector {
+.graph-controls .selector,
+.graph-controls .graph-options {
 	padding: 9px 9px 9px 12px;
 	width: 100%;
 	border-bottom: 1px solid #ffffff;
@@ -7893,7 +7897,7 @@ a.quick.locations {
 	padding-left: 1em;
 }
 
-.graph-controls a.buttonly {
+.graph-controls .selector a.buttonly {
 	font-size: 14px;
   padding: 3px 12px 3px 12px;
 	display: inline-block;
@@ -7983,14 +7987,14 @@ a.quick.locations {
 	width: 100%;
 }
 
-.audit-detail .graph-holder,
-.Results .locations-holder {
+.graph-holder,
+.locations-holder {
 	padding: 12px 12px 15px 12px;
 }
 
 .all-audits .graph-holder {
 	font-size: 14px;
-	padding: 9px 9px 19px 9px;
+	padding: 9px 9px 16px 9px;
 	display: inline-block;
 	vertical-align: top;
 	width: 50%;
@@ -8006,7 +8010,7 @@ a.quick.locations {
 .graph-controls .dates span,
 .graph-controls .selected.state,
 .Results .graph-holder,
-.audit-detail .get-more {
+.get-more {
 	color: #6e6e6e;
 }
 
@@ -8044,10 +8048,6 @@ a.quick.locations {
 	padding-left: .5em;
 }
 
-.all-audits .get-more {
-	text-align: center;
-}
-
 .Results .graph {
 	margin-bottom: .3em;
 }
@@ -8058,6 +8058,7 @@ a.quick.locations {
 
 .graph-buttons {
 	float: right;
+	vertical-align: top;
 }
 
 .graph-buttons .viewers {
@@ -8067,7 +8068,7 @@ a.quick.locations {
 
 
 .graph-buttons a,
-.Results.By-Project a.buttonly {
+.Results.By-Project .table-list a.buttonly {
 	text-decoration: none;
 	margin-left: 1px;
 	display: inline-block;
@@ -8089,14 +8090,16 @@ a.quick.locations {
 	background: #ffffff;
 }
 
-.graph-buttons a.buttonly,
-.graph-buttons a.csv,
-.Results.By-Project a.buttonly {
+.graph-buttons a.buttonly {
+	padding: 11px 12px 9px 12px;
+	float: none;
+}
+
+.Results a.buttonly.detail {
 	padding: 11px 40px 11px 12px;
 }
 
-.Results.By-Project a.buttonly.detail .im,
-.graph-buttons a.buttonly.detail .im {
+.Results a.buttonly.detail .im {
 	padding-left: 5px;
 	float: right;
 	position: absolute;
@@ -8104,7 +8107,7 @@ a.quick.locations {
 		right: 10px;
 }
 
-.graph-buttons a.csv {
+.graph-buttons a.buttonly.csv {
 	padding: 10px 15px 10px 43px;
 }
 
@@ -8134,22 +8137,45 @@ a.quick.locations {
 	font-size: 15px;
 }
 
-.audit-detail .get-more {
+.get-more {
 	text-align: right;
 	margin-top: 5px;
 }
 
-.audit-detail .get-more .copy {
+.all-audits .get-more {
+	text-align: center;
+	margin-top: 1em;
+}
+
+.get-more .copy {
 	display: inline-block;
 }
 
-.audit-detail .get-more a,
-.audit-detail .get-more a:hover,
-.audit-detail .get-more a:focus {
+.all-audits .get-more .copy {
+	display: block;
+}
+
+.get-more a,
+.get-more a:hover,
+.get-more a:focus {
 	text-decoration: none;
 	margin-left: 5px;
 	padding: 9px 12px;
 	display: inline-block;
+}
+
+.all-audits .get-more a {
+	margin-left: 0;
+	padding: 0 0 0 0;
+}
+
+.all-audits .get-more a:hover,
+.all-audits .get-more a:focus {
+	text-decoration: underline;
+}
+
+.center .get-more {
+	text-align: center;
 }
 
 .locations-holder {
@@ -8210,6 +8236,25 @@ a.quick.locations {
 
 .Results.By-Project .dash .table-list td:nth-child(4) { /* locations td */
 	padding-right: 36px;
+}
+
+.graph-controls .graph-options a.buttonly {
+	float: left;
+}
+
+.Results .target-answer {
+	margin: 4em 0 2em 0;
+}
+
+.Results .target-question,
+.target-answer .graph-holder {
+	margin: 0 auto 4em auto;
+	width: 70%;
+}
+
+.Results .target-question {
+	line-height: 1.1em;
+	margin-bottom: .3em;
 }
 
 
