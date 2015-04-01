@@ -203,7 +203,12 @@ header nav .number,
 .Ticket .barcode .primary.actions a.buttonly,
 .answerButton.submit,
 .project-type .primary.actions a.buttonly,
-.graph-controls .selector a.buttonly {
+.graph-controls .selector a.buttonly,
+.primary.actions a,
+.choose-dates .actions a.buttonly,
+.page-action-panel .actions a.buttonly,
+.tab-pane a.buttonly.main,
+.button-holder a.buttonly {
 	background: #4890e2;
 }
 
@@ -224,7 +229,17 @@ header nav .number,
 .answerButton.submit:hover,
 .answerButton.submit:focus,
 .project-type .primary.actions a.buttonly:hover,
-.project-type .primary.actions a.buttonly:focus {
+.project-type .primary.actions a.buttonly:focus,
+.primary.actions a:hover,
+.primary.actions a:focus,
+.button-holder a:hover,
+.button-holder a:focus,
+.choose-dates .actions a.buttonly:hover,
+.choose-dates .actions a.buttonly:focus,
+.page-action-panel .actions a.buttonly:hover,
+.page-action-panel .actions a.buttonly:focus,
+.tab-pane a.buttonly.main:hover,
+.tab-pane a.buttonly.main:focus {
 	background: #539ce9;
 }
 
@@ -363,7 +378,13 @@ header nav .dropdown.open {
 .calendar .action-panel .primary.actions a.buttonly,
 .Ticket .section-controls .buttons a.buttonly,
 .Ticket .comments .primary.actions a.buttonly,
-.Ticket .barcode .primary.actions a.buttonly {
+.Ticket .barcode .primary.actions a.buttonly,
+.button-holder a,
+.button-holder a.buttonly:hover,
+.button-holder a.buttonly:focus,
+.choose-dates a.buttonly,
+.page-action-panel .actions a.buttonly,
+.primary.actions a {
 	border-color: rgba(64, 145, 230, .2);
 }
 
@@ -508,7 +529,6 @@ header .nav li.messages .im,
 .map .requirements-list li:before,
 .tab-pane .confirm,
 .confirmation a.closer,
-.Profile td.number,
 .Profile .cert:before {
 	color: #07a985;
 }
@@ -516,26 +536,12 @@ header .nav li.messages .im,
 ul.dropdown-menu li.header,
 input.supercheck:checked:after,
 input[type="checkbox"]:checked:after,
-.primary.actions a,
 .instruction-footer .icon-checkmark,
-.key.scheduled:before,
-.choose-dates .actions a.buttonly,
-.page-action-panel .actions a.buttonly,
-.map .tab-pane a.buttonly.main,
-.button-holder a.buttonly {
+.key.scheduled:before {
 	background: #00a584;
 }
 
-.primary.actions a:hover,
-.primary.actions a:focus,
-.button-holder a:hover,
-.button-holder a:focus,
-.choose-dates .actions a.buttonly:hover,
-.choose-dates .actions a.buttonly:focus,
-.page-action-panel .actions a.buttonly:hover,
-.page-action-panel .actions a.buttonly:focus,
-.tab-pane a.buttonly.main:hover,
-.tab-pane a.buttonly.main:focus {
+.green:hover {
 	background: #119676;
 }
 
@@ -545,14 +551,8 @@ header .nav li {
 
 input.supercheck:checked:after,
 input[type="checkbox"]:checked:after,
-.primary.actions a,
 .subnav li.active a,
-.subnav li.active,
-.button-holder a,
-.button-holder a.buttonly:hover,
-.button-holder a.buttonly:focus,
-.choose-dates a.buttonly,
-.page-action-panel .actions a.buttonly {
+.subnav li.active {
 	border-color: #08aa86;
 }
 

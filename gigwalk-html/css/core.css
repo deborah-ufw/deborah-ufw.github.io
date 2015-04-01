@@ -8139,8 +8139,8 @@ a.page-action.delete-button span.im {
 	width: 60px;
 }
 
-.Profile .account .section.address input.zip,
-.Profile .widget-panel-content .section.hours input[type="text"] {
+.Profile .section.address input.zip,
+.Profile .account .widget-panel-content .section.hours input[type="text"] {
 	width: 105px;
 }
 
