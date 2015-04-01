@@ -61,6 +61,10 @@ a.bigButton:before,
 	position: relative;
 }
 
+.im:before {
+	font-size: 31px;
+}
+
 .icon-empty:before,
 .calendar-month .work .tickets:before,
 .calendar-month .work .time:before {

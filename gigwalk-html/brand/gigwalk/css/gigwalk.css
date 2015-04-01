@@ -1,814 +1,612 @@
 /* ---------- GIGWALK CSS ----------  */
 
-html, body {
-	font-family: Helvetica-Neue, Arial, sans-serif;
-}
-
-/* remove rounded corners */
 	
-.dropdown-menu,
-.navbar-default .navbar-toggle,
-.datepicker,
-.datepicker td, 
-.datepicker th,
-.datepicker td span,
-.btn {
-	border-radius: 0;
-}
-	
-/* borders */
+/* reds */
 
-.sidenav .divider {
-	border-top: 1px solid #cccccc;
+.instruction.incomplete .arrow,
+.instruction.required.incomplete .arrow,
+.instruction.incomplete .header .controls .ti,
+.instruction.required.incomplete .header .controls .ti {
+	color: #fe8e92;
 }
 
-.navbar-default .navbar-toggle	{
-	border: 0px solid transparent;
+.ticket.saved.incomplete.expired .due,
+.worker .pin.expired.assigned:after,
+.worker .pin.expired.scheduled:after,
+.worker .pin.expired.still-editable:after,
+.Tickets .dash tr.expired td.status span:before,
+.Tickets .dash tr.expired td.status span.started:before,
+.Tickets .dash tr.expired td.status span.started.paused:before,
+.Projects .dash .table-list td .completion-bar.zero .text,
+.table-remove,
+.remove,
+.remove:hover,
+.item.required > .plainLabel:after,
+.tab-pane.actions .detail:before,
+.calendar-day .ticket.incomplete.today .due,
+.due.today,
+.invalid input[type="text"],
+.invalid input[type="textarea"],
+.primary.actions a.delete,
+.messages .message.problem,
+.problem a.closer,
+.warning,
+.error,
+.prompt.invalid,
+.Tickets .dash td.status span.expired:before,
+.messages .problem span.exclaim:before,
+.instructions .duplicating-message,
+.instructions .duplicating-message a .im,
+a.page-action.delete-button,
+.page-action-panel .actions a.buttonly.delete,
+.pin.expired:after,
+.Projects .settings .group.required > .plainLabel:after {
+	color: #ff5157;
+}
+
+a.page-action.delete-button:hover,
+a.page-action.delete-button:focus,
+.page-action-panel .actions a.buttonly.delete:hover,
+.page-action-panel .actions a.buttonly.delete:focus {
+	background: rgba(255, 81, 87, .1);
+}
+
+.calendar-day .store .header .time.expired,
+.key.expired:before {
+	background: #ff5157;
+}
+
+a.page-action.delete-button,
+.page-action-panel .actions a.buttonly.delete,
+.invalid input[type="text"],
+.invalid input[type="textarea"] {
+	border-color: #ff5157;
+}
+
+.instruction.incomplete .header,
+.instruction.required.incomplete .header,
+.invalid .btn.btn-default.dropdown-toggle {
+	background: #ff797e;
+}
+
+.calendar-day .ticket.expired,
+.calendar-day .ticket.today.expired,
+.messages .message.problem,
+select.invalid {
+	background: #ffe5e6;
+}
+
+/* highlight */
+
+.instructions .duplicating-message,
+.hint.widget-panel {
+	background: #fffde1;
+}
+
+
+/* blues */
+
+.table-list table table td {
+	background: rgba(64, 145, 230, .05);	
+}
+
+.calendar-day a.get-more,
+.answerButton,
+.bigButton,
+.bigButton.disabled,
+.bigButton.disabled:hover,
+.bigButton.disabled:focus,
+.Ticket .instruction.photo .icon-buttons a,
+.Ticket .instruction.task .photo .icon-buttons a,
+.Ticket .instruction.task .photo .icon-buttons a.disabled,
+.Ticket .instruction.task .photo .icon-buttons a.disabled:hover,
+.Ticket .instruction.task .photo .icon-buttons a.disabled:focus,
+.Profile .section-actions .button-holder a:hover,
+.Profile .section-actions .button-holder a:focus,
+.graph-controls .btn.btn-default.dropdown-toggle:focus,
+.graph-controls .btn.btn-default.dropdown-toggle:active,
+.graph-controls .dates a:focus,
+.graph-controls .dates a:active {
+	background: rgba(64, 145, 230, .1);
+}
+
+.table-list tr.shown td,
+.calendar-day.today .store .header,
+.instruction .header .actions,
+.bigButton:hover,
+.bigButton:focus,
+.Ticket .instruction.photo .icon-buttons a:hover,
+.Ticket .instruction.photo .icon-buttons a:focus,
+.Ticket .instruction.task .photo .icon-buttons a:hover,
+.Ticket .instruction.task .photo .icon-buttons a:focus,
+.Profile .section-actions .button-holder a {
+	background: rgba(64, 145, 230, .2);
+}
+
+.bigButton {
+	border-color: rgba(64, 145, 230, 1);
+}
+
+.messages .message.info,
+.completion-bar {
+	background: rgba(64, 145, 230, .15);
+}
+
+.completion-bar .text {
+	color: #e3eefa;
+}
+
+.instruction .header .actions,
+.instruction .header .actions .icon-buttons a,
+.instruction .header .actions .icon-buttons a:hover,
+.instruction .header .actions .icon-buttons a:focus {
+	color: #234871;
+}
+
+.step .arrow {
+	color: #59beec;
+}
+
+.step .header {
+	background: #59beec;
+}
+
+ a,
+ a:hover,
+ a:focus,
+ a.link,
+ a.link:hover,
+ a.navly,
+ a.navly:focus,
+ .iconly,
+ a.iconly,
+ a.iconly:hover,
+ a.close,
+ a.close:hover,
+ a.close:focus,
+ .dropdown-menu > li > a.link,
+ .dropdown-menu > li > a.link:hover,
+ .dropdown-menu > li.quick-select > a,
+ .dropdown-menu > li.quick-select > a:hover,
+ .pin.submitted:after,
+ .filters-choices,
+ .filters-choices .icon-cancel:before,
+ .quick-select a,
+	a.quick,
+ .map .nav-tabs > li.active > a:before,
+ .table-list .controls .actions.active a,
+ .calendar .view-bar .date-statement,
+ .calendar-day .ticket.incomplete a.ticketname,
+ .Ticket .instruction.photo .icon-buttons a,
+ .Ticket .instruction.task .photo .icon-buttons a,
+ .Ticket .instruction.photo .icon-buttons a.disabled,
+ .Ticket .instruction.task .photo .icon-buttons a.disabled,
+ a.bigButton.disabled,
+ .modal.results .filter.search .icon-search,
+ .graph-controls .btn.btn-default.dropdown-toggle,
+ .graph-buttons,
+ .graph-buttons a.buttonly,
+ .Results.By-Project .table-list a.buttonly {
+	color: #4890e2;
+}
+
+header nav .number,
+.group a.buttonly,
+.filter.dropdown .caret,
+.filter.search .icon-search,
+.key.submitted:before,
+.map .nav-tabs > li > a,
+.calendar-day .ticket .continue a,
+.calendar .action-panel .primary.actions a.buttonly,
+.Ticket .section-controls .buttons a.buttonly,
+.Ticket .comments .primary.actions a.buttonly,
+.Ticket .barcode .primary.actions a.buttonly,
+.answerButton.submit,
+.project-type .primary.actions a.buttonly,
+.graph-controls .selector a.buttonly {
+	background: #4890e2;
+}
+
+.map .nav-tabs > li > a:hover,
+.map .nav-tabs > li > a:focus,
+.calendar-day .ticket .continue a:hover,
+.calendar-day .ticket .continue a:focus,
+.calendar .action-panel .primary.actions a.buttonly:hover,
+.calendar .action-panel .primary.actions a.buttonly:focus,
+.Ticket .section-controls .buttons a.buttonly:hover,
+.Ticket .section-controls .buttons a.buttonly:focus,
+.Ticket .comments .primary.actions a.buttonly:hover,
+.Ticket .comments .primary.actions a.buttonly:focus,
+.Ticket .barcode .primary.actions a.buttonly:hover,
+.Ticket .barcode .primary.actions a.buttonly:focus,
+.graph-controls .selector a.buttonly:hover,
+.graph-controls .selector a.buttonly:focus,
+.answerButton.submit:hover,
+.answerButton.submit:focus,
+.project-type .primary.actions a.buttonly:hover,
+.project-type .primary.actions a.buttonly:focus {
+	background: #539ce9;
+}
+
+select,
+.btn.btn-default.dropdown-toggle,
+.instructions .item .actions a.buttonly,
+.filters-holder .view a.active,
+.filters-holder .view a.active:hover,
+.filters-holder .view a.active:focus,
+.filter.dates {
+	background-color: #4890e2;
+}
+
+.quick-select a:hover,
+.quick-select a:focus,
+a.quick:hover,
+a.quick:focus,
+.filters-choices .choice,
+.filters-choices .choice .close,
+.pagination .previous,
+.pagination .next,
+a.new-button:hover,
+a.new-button:focus {
+	background-color: #f2f7fd;
+}
+
+.calendar-month td.this-month.today {
+	background: #eaf2fd;
+}
+
+.answerButton:hover,
+.answerButton:focus {
+	background: #e0edfb;
+}
+
+.calendar-day.today .store .header .time {
+	background: #8db2db;
+}
+
+.calendar-day.today .store .ticket {
+	background: #f5f9fe;
+}
+
+.filters-holder .view a:hover,
+.filters-holder .view a:active,
+.filters-holder .view a:focus,
+.graph-buttons a,
+.get-more a,
+.Results.By-Project .table-list a.buttonly {
+	background: #d9e9fa;
+}
+
+.filters-choices .choice .close:hover,
+.filters-choices .choice .close:focus,
+.quick-select a,
+.pagination .previous:hover,
+.pagination .previous:focus,
+.pagination .next:hover,
+.pagination .next:focus {
+	background-color: #d9e9fa;
+}
+
+.Results.By-Project .table-list a.buttonly:hover,
+.Results.By-Project .table-list a.buttonly:focus,
+.graph-buttons a:hover,
+.graph-buttons a:focus,
+.get-more a:hover,
+.get-more a:focus {
+	background: #c5def7;
+}
+
+.datepicker td.active, 
+.datepicker td.active.active,
+.datepicker td.active:hover,
+.datepicker td span.active,
+.datepicker td.active:hover,
+.datepicker td.active:hover:hover,
+.datepicker td.active:focus,
+.datepicker td.active:hover:focus,
+.datepicker td.active:active,
+.datepicker td.active:hover:active,
+.datepicker td.active.active,
+.datepicker td.active:hover.active,
+.datepicker td.active.disabled,
+.datepicker td.active:hover.disabled,
+.datepicker td.active[disabled],
+.datepicker td.active:hover[disabled],
+.datepicker td span.active:hover, 
+.datepicker td span.active:focus, 
+.datepicker td span.active:active, 
+.datepicker td span.active.active {
+	background-color: #4890e2;
+	background-image: none;
+}
+
+header nav .dropdown.open {
+	background: rgba(74, 144, 226, .2);
+}
+
+.calendar-month td:hover {
+	background: rgba(74, 144, 226, .25);
+}
+
+.calendar-month td.blocked:hover,
+.calendar-month td.past.blocked:hover {
+	background: #c2d5e9;
+}
+
+.calendar-month td.past:hover {
+	background: #cbdef2;
+}
+
+.calendar-month td.today:hover {
+	background: #bdd8f6;
+}
+
+.tabnav li.active,
+.tabnav li.active:hover,
+.tabnav li.active:focus {
+	background: rgba(50, 176, 232, 0.68);
+}
+
+.pin.paused:after {
+	color: #9fc8f2;
+}
+
+.key.paused:before {
+	background: #9fc8f2;
+}
+
+.pagination .previous,
+.pagination .next,
+.filters-choices .choice,
+.choose-dates a,
+.quick-select a,
+.calendar .action-panel .primary.actions a.buttonly,
+.Ticket .section-controls .buttons a.buttonly,
+.Ticket .comments .primary.actions a.buttonly,
+.Ticket .barcode .primary.actions a.buttonly {
+	border-color: rgba(64, 145, 230, .2);
+}
+
+.filters-choices .choice .close {
+	border-left-color: rgba(64, 145, 230, .2);
+}
+
+.calendar-month td.today {
+	border-top-color: rgba(64, 145, 230, .9);
+}
+
+a.new-button {
+	border-color: rgba(64, 145, 230, .8);
+}
+
+.filters-holder .view a {
+	background: #f2f7fd;
+}
+
+.messages .message.info,
+.message.info a.closer {
+	color: #1e436f;
 }
 
 .instructions .item .actions a.buttonly {
 	border-color: #4890e2;
 }
 
-.btn.btn-default.dropdown-toggle {
-	border-width: 0px;
+.nav-sections li.active {
+	border-left-color: #4890e2;
+}
+
+/* dark blue */
+
+.pin.unassigned:after {
+	color: #256aa8;
+}
+
+.key.unassigned:before,
+.completion-bar .text,
+.instruction .header .controls {
+	background: #256aa8;
+}
+
+.completion-bar {
+	border-color: #256aa8;
+}
+
+.instruction .actions .icon-buttons a {
+	border-color: rgba(36, 105, 167, .3);
+}
+
+.completion-bar .percent-complete {
+	background: #739ac2;
 }
 
 
-/* colors */
 
-	/* white */
-	
-	select,
-	.custom-select:before,
-	ul.dropdown-menu li.header,
-	header nav .number,
-	.tabnav li a,
-	.btn.btn-default.dropdown-toggle,
-	.instructions .header .actions,
-	.primary.actions a,
-	.icon-buttons a,
-	.icon-buttons a:hover,
-	.icon-buttons a:focus,
-	.instructions .item .actions a.buttonly,
-	.projects .settings,
-	.group a.buttonly,
-	.button-holder a.buttonly,
-	.Ticket .instruction.enter-time .header .ti span,
-	.answerButton.submit {
-		color: #ffffff;
-	}
-	
-	.navbar-default .navbar-toggle .icon-bar,
-	.instruction-content,
-	.primary.actions a.cancel,
-	.primary.actions a.delete,
-	.primary.actions a.delete:hover,
-	.primary.actions a.delete:focus,
-	.Ticket .barcode .primary.actions a.buttonly.cancel {
-		background-color: #ffffff;
-	}
-	
-	.navbar-default {
-		background: #ffffff;
-	}
-	
-	ul.dropdown-menu li.disabled {
-		background: transparent;
-	}
-	
-	.navbar-default {
-		border-color: #ffffff;
-	}
-	
-	/* grays */
-	
-	.user-org,
-	.plainLabel,
-	.section-detail,
-	.Ticket .instruction .hint,
-	.answerButton.disabled,
-	.answerButton.disabled:hover,
-	.answerButton.submit.disabled,
-	.Profile .hint  {
-		color: #ababab;
-	}
-	
-	.subnav li a,
-	.section-no-content {
-		color: #aaaaaa;
-	}
-	
-	.primary.actions a.cancel,
-	.button-holder a.cancel,
-	.choose-dates a.cancel,
-	.page-action-panel a.cancel {
-		color: #bbb;
-	}
-	
-	.gray-cancel,
-	.expander a,
-	.expander a:hover,
-	.expander a:focus,
-	.Group .table-list .user-name a span {
-		color: #c6c6c6;
-	}
-	
-	.primary.actions a.cancel,
-	.button-holder a.cancel,
-	.choose-dates a.cancel,
-	.page-action-panel a.cancel,
-	.calendar .action-panel .primary.actions a.buttonly.cancel,
-	.Ticket .barcode .primary.actions a.buttonly.cancel {
-		border-color: #c6c6c6;
-	}
-	
-	.navbar-default .navbar-nav > li > a.dropdown-toggle,
-	.navbar-default .navbar-nav > .open > a, 
-	.navbar-default .navbar-nav > .open > a:hover, 
-	.navbar-default .navbar-nav > .open > a:focus, 
-	.dropdown-menu > .disabled > a, 
-	.dropdown-menu > .disabled > a:hover, 
-	.dropdown-menu > .disabled > a:focus,
-	.section-controls .action.panel .group .selected-item span {
-		color: #9e9e9e;
-	}
-	
-	.navbar-default .navbar-toggle:hover,
-	.navbar-default .navbar-toggle:focus {
-		background: #909090;
-	}
-	
-	.button-holder a.buttonly.disabled,
-	.button-holder a.buttonly.disabled:hover,
-	.button-holder a.buttonly.disabled:focus {
-		background: #dfdfdf;
-	}
-	
-	.button-holder a.buttonly.disabled,
-	.button-holder a.buttonly.disabled:hover,
-	.button-holder a.buttonly.disabled:focus {
-		border-color: #dfdfdf;
-	}
-	
-	.primary.actions a.disabled,
-	.primary.actions a.buttonly.disabled,
-	.primary.actions a.buttonly.disabled:hover,
-	.primary.actions a.buttonly.disabled:focus,
-	.page-action-panel .actions a.buttonly.disabled,
-	.page-action-panel .actions a.buttonly.disabled:hover,
-	.page-action-panel .actions a.buttonly.disabled:focus,
-	.page-action-panel .actions a.buttonly.delete.disabled,
-	.page-action-panel .actions a.buttonly.delete.disabled:hover,
-	.page-action-panel .actions a.buttonly.delete.disabled:focus {
-		background: #bbb;
-	}
-	
-	.primary.actions a.disabled,
-	.primary.actions a.buttonly.disabled:hover,
-	.primary.actions a.buttonly.disabled:focus,
-	.page-action-panel .actions a.buttonly.disabled,
-	.page-action-panel .actions a.buttonly.disabled:hover,
-	.page-action-panel .actions a.buttonly.disabled:focus,
-	.page-action-panel .actions a.buttonly.delete.disabled,
-	.page-action-panel .actions a.buttonly.delete.disabled:hover,
-	.page-action-panel .actions a.buttonly.delete.disabled:focus {
-		border-color: #bbb;
-	}
-	
-	.dropdown-menu > li > a:hover,
-	.dropdown-menu > li > a:focus,
-	.primary.actions a.cancel:hover,
-	.primary.actions a.cancel:focus,
-	.button-holder a.cancel:hover,
-	.button-holder a.cancel:focus,
-	.choose-dates a.cancel:hover,
-	.choose-dates a.cancel:focus,
-	.page-action-panel a.cancel:hover,
-	.page-action-panel a.cancel:focus,
-	.expander,
-	.section-no-content,
-	.Ticket .barcode .primary.actions a.buttonly.cancel:hover,
-	.Ticket .barcode .primary.actions a.buttonly.cancel:focus {
-		background: #f8f8f8;
-	}
-	
-	.page-action-panel .actions a.buttonly.delete:hover,
-	.page-action-panel .actions a.buttonly.delete:focus {
-		background-color: #f8f8f8;
-	}
-	
-	.expander:hover,
-	.expander:focus,
-	.answerButton.disabled,
-	.answerButton.disabled:hover,
-	.answerButton.disabled:focus,
-	.answerButton.submit.disabled,
-	.answerButton.submit.disabled:hover,
-	.answerButton.submit.disabled:focus {
-		background: #f1f1f1;
-	}
-	
-	
-	/* reds */
-	
-	
-	.instruction.incomplete .arrow,
-	.instruction.required.incomplete .arrow,
-	.instruction.incomplete .header .controls .ti,
-	.instruction.required.incomplete .header .controls .ti {
-		color: #fe8e92;
-	}
-	
-	.ticket.saved.incomplete.expired .due,
-	.worker .pin.expired.assigned:after,
-	.worker .pin.expired.scheduled:after,
-	.worker .pin.expired.still-editable:after,
-	.Tickets .dash tr.expired td.status span:before,
-	.Tickets .dash tr.expired td.status span.started:before,
-	.Tickets .dash tr.expired td.status span.started.paused:before,
-	.Projects .dash .table-list td .completion-bar.zero .text,
-	.table-remove,
-	.remove,
-	.remove:hover,
-	.item.required > .plainLabel:after,
-	.tab-pane.actions .detail:before,
-	.calendar-day .ticket.incomplete.today .due,
-	.due.today,
-	.invalid input[type="text"],
-	.invalid input[type="textarea"],
-	.primary.actions a.delete,
-	.messages .message.problem,
-	.problem a.closer,
-	.warning,
-	.error,
-	.prompt.invalid,
-	.Tickets .dash td.status span.expired:before,
-	.messages .problem span.exclaim:before,
-	.instructions .duplicating-message,
-	.instructions .duplicating-message a .im,
-	a.page-action.delete-button,
-	.page-action-panel .actions a.buttonly.delete,
-	.pin.expired:after,
-	.Projects .settings .group.required > .plainLabel:after {
-		color: #ff5157;
-	}
-	
-	a.page-action.delete-button:hover,
-	a.page-action.delete-button:focus,
-	.page-action-panel .actions a.buttonly.delete:hover,
-	.page-action-panel .actions a.buttonly.delete:focus {
-		background: rgba(255, 81, 87, .1);
-	}
-	
-	.calendar-day .store .header .time.expired,
-	.key.expired:before {
-		background: #ff5157;
-	}
-	
-	a.page-action.delete-button,
-	.page-action-panel .actions a.buttonly.delete,
-	.invalid input[type="text"],
-	.invalid input[type="textarea"] {
-		border-color: #ff5157;
-	}
-	
-	.instruction.incomplete .header,
-	.instruction.required.incomplete .header,
-	.invalid .btn.btn-default.dropdown-toggle {
-		background: #ff797e;
-	}
-	
-	.calendar-day .ticket.expired,
-	.calendar-day .ticket.today.expired,
-	.messages .message.problem {
-		background: #ffe5e6;
-	}
-	
-	/* highlight */
-	
-	.instructions .duplicating-message,
-	.hint.widget-panel {
-		background: #fffde1;
-	}
+/* blue button hovers */
+.instructions .item .actions a.buttonly:hover,
+.instructions .item .actions a.buttonly:focus,
+.group a.buttonly:hover,
+.group a.buttonly:focus,
+.filter.dates:hover,
+.filter.dates:focus,
+.filter.search .icon-search:hover,
+.filter.search .icon-search:focus,
+.filter.dropdown .caret:hover,
+.filter.dropdown .caret:focus {
+	background: #2771da;
+}
 
-	
-	/* blues */
-	
-	.table-list table table td {
-		background: rgba(64, 145, 230, .05);	
+
+/* admin filters stacked bg - with sidebar */
+@media (min-width: 665px) and (max-width: 735px) {
+	.admin .Tickets .dash > .filters-holder,
+	.admin .Tickets .dash > .filters-choices {
+		background: #f3f8fd;
 	}
-	
-	.calendar-day a.get-more,
-	.answerButton,
-	.bigButton,
-	.bigButton.disabled,
-	.bigButton.disabled:hover,
-	.bigButton.disabled:focus,
-	.Ticket .instruction.photo .icon-buttons a,
-	.Ticket .instruction.task .photo .icon-buttons a,
-	.Ticket .instruction.task .photo .icon-buttons a.disabled,
-	.Ticket .instruction.task .photo .icon-buttons a.disabled:hover,
-	.Ticket .instruction.task .photo .icon-buttons a.disabled:focus,
-	.Profile .section-actions .button-holder a:hover,
-	.Profile .section-actions .button-holder a:focus,
-	.graph-controls .btn.btn-default.dropdown-toggle:focus,
-	.graph-controls .btn.btn-default.dropdown-toggle:active,
-	.graph-controls .dates a:focus,
-	.graph-controls .dates a:active {
-		background: rgba(64, 145, 230, .1);
+}
+
+/* breadcrumbs need bold when smaller */
+@media (max-width: 664px) {
+	.section.title  {
+		font-family: Helvetica-Neue-Bold;
 	}
-	
-	.table-list tr.shown td,
-	.calendar-day.today .store .header,
-	.instruction .header .actions,
-	.bigButton:hover,
-	.bigButton:focus,
-	.Ticket .instruction.photo .icon-buttons a:hover,
-	.Ticket .instruction.photo .icon-buttons a:focus,
-	.Ticket .instruction.task .photo .icon-buttons a:hover,
-	.Ticket .instruction.task .photo .icon-buttons a:focus,
-	.Profile .section-actions .button-holder a {
-		background: rgba(64, 145, 230, .2);
-	}
-	
-	.bigButton {
-		border-color: rgba(64, 145, 230, 1);
-	}
-	
-	.messages .message.info,
-	.completion-bar {
+}
+
+/* admin filters stacked bg - no sidebar */
+@media (max-width: 590px) {
+	.admin .Tickets .dash > .filters-holder,
+	.admin .Tickets .dash > .filters-choices {
 		background: rgba(64, 145, 230, .15);
 	}
-	
-	.completion-bar .text {
-		color: #e3eefa;
+	.admin .Tickets .filters-holder .view a {
+		border: 1px solid #4890e2;
 	}
-	
-	.instruction .header .actions,
-	.instruction .header .actions .icon-buttons a,
-	.instruction .header .actions .icon-buttons a:hover,
-	.instruction .header .actions .icon-buttons a:focus {
-		color: #234871;
-	}
-	
-	.step .arrow {
-		color: #59beec;
-	}
-	
-	.step .header {
-		background: #59beec;
-	}
-	
-	 a,
-	 a:hover,
-	 a:focus,
-	 a.link,
-	 a.link:hover,
-	 a.navly,
-	 a.navly:focus,
-	 .iconly,
-	 a.iconly,
-	 a.iconly:hover,
-	 a.close,
-	 a.close:hover,
-	 a.close:focus,
-	 .dropdown-menu > li > a.link,
-	 .dropdown-menu > li > a.link:hover,
-	 .dropdown-menu > li.quick-select > a,
-	 .dropdown-menu > li.quick-select > a:hover,
-	 .pin.submitted:after,
-	 .filters-choices,
-	 .filters-choices .icon-cancel:before,
-	 .quick-select a,
-	 .map .nav-tabs > li.active > a:before,
-	 .table-list .controls .actions.active a,
-	 .calendar .view-bar .date-statement,
-	 .calendar-day .ticket.incomplete a.ticketname,
-	 .Ticket .instruction.photo .icon-buttons a,
-	 .Ticket .instruction.task .photo .icon-buttons a,
-	 .Ticket .instruction.photo .icon-buttons a.disabled,
-	 .Ticket .instruction.task .photo .icon-buttons a.disabled,
-	 a.bigButton.disabled,
-	 .modal.results .filter.search .icon-search,
-	 .graph-controls .btn.btn-default.dropdown-toggle,
-	 .graph-buttons,
-	 .graph-buttons a.buttonly,
-	 .Results.By-Project .table-list a.buttonly {
-		color: #4890e2;
-	}
-	
-	header nav .number,
-	.group a.buttonly,
-	.filter.dropdown .caret,
-	.filter.search .icon-search,
-	.key.submitted:before,
-	.map .nav-tabs > li > a,
-	.calendar-day .ticket .continue a,
-	.calendar .action-panel .primary.actions a.buttonly,
-	.Ticket .section-controls .buttons a.buttonly,
-	.Ticket .comments .primary.actions a.buttonly,
-	.Ticket .barcode .primary.actions a.buttonly,
-	.answerButton.submit,
-	.project-type .primary.actions a.buttonly,
-	.graph-controls .selector a.buttonly {
-		background: #4890e2;
-	}
-	
-	.map .nav-tabs > li > a:hover,
-	.map .nav-tabs > li > a:focus,
-	.calendar-day .ticket .continue a:hover,
-	.calendar-day .ticket .continue a:focus,
-	.calendar .action-panel .primary.actions a.buttonly:hover,
-	.calendar .action-panel .primary.actions a.buttonly:focus,
-	.Ticket .section-controls .buttons a.buttonly:hover,
-	.Ticket .section-controls .buttons a.buttonly:focus,
-	.Ticket .comments .primary.actions a.buttonly:hover,
-	.Ticket .comments .primary.actions a.buttonly:focus,
-	.Ticket .barcode .primary.actions a.buttonly:hover,
-	.Ticket .barcode .primary.actions a.buttonly:focus,
-	.graph-controls .selector a.buttonly:hover,
-	.graph-controls .selector a.buttonly:focus,
-	.answerButton.submit:hover,
-	.answerButton.submit:focus,
-	.project-type .primary.actions a.buttonly:hover,
-	.project-type .primary.actions a.buttonly:focus {
-		background: #539ce9;
-	}
-	
-	select,
-	.btn.btn-default.dropdown-toggle,
-	.instructions .item .actions a.buttonly,
-	.filters-holder .view a.active,
-	.filters-holder .view a.active:hover,
-	.filters-holder .view a.active:focus,
-	.filter.dates {
-		background-color: #4890e2;
-	}
-	
-	.quick-select a:hover,
-	.quick-select a:focus,
-	.filters-choices .choice,
-	.filters-choices .choice .close,
-	.pagination .previous,
-	.pagination .next,
-	a.new-button:hover,
-	a.new-button:focus {
-		background-color: #f2f7fd;
-	}
-	
-	.calendar-month td.this-month.today {
-		background: #eaf2fd;
-	}
-	
-	.answerButton:hover,
-	.answerButton:focus {
-		background: #e0edfb;
-	}
-	
-	.calendar-day.today .store .header .time {
-		background: #8db2db;
-	}
-	
-	.calendar-day.today .store .ticket {
-		background: #f5f9fe;
-	}
-	
-	.filters-holder .view a:hover,
-	.filters-holder .view a:active,
-	.filters-holder .view a:focus,
-	.graph-buttons a,
-	.get-more a,
-	.Results.By-Project .table-list a.buttonly {
-		background: #d9e9fa;
-	}
-	
-	.filters-choices .choice .close:hover,
-	.filters-choices .choice .close:focus,
-	.quick-select a,
-	.pagination .previous:hover,
-	.pagination .previous:focus,
-	.pagination .next:hover,
-	.pagination .next:focus {
-		background-color: #d9e9fa;
-	}
-	
-	.Results.By-Project .table-list a.buttonly:hover,
-	.Results.By-Project .table-list a.buttonly:focus,
-	.graph-buttons a:hover,
-	.graph-buttons a:focus,
-	.get-more a:hover,
-	.get-more a:focus {
-		background: #c5def7;
-	}
-	
-	.datepicker td.active, 
-	.datepicker td.active.active,
-	.datepicker td.active:hover,
-	.datepicker td span.active,
-	.datepicker td.active:hover,
-	.datepicker td.active:hover:hover,
-	.datepicker td.active:focus,
-	.datepicker td.active:hover:focus,
-	.datepicker td.active:active,
-	.datepicker td.active:hover:active,
-	.datepicker td.active.active,
-	.datepicker td.active:hover.active,
-	.datepicker td.active.disabled,
-	.datepicker td.active:hover.disabled,
-	.datepicker td.active[disabled],
-	.datepicker td.active:hover[disabled],
-	.datepicker td span.active:hover, 
-	.datepicker td span.active:focus, 
-	.datepicker td span.active:active, 
-	.datepicker td span.active.active {
-		background-color: #4890e2;
-		background-image: none;
-	}
-	
-	header nav .dropdown.open {
-		background: rgba(74, 144, 226, .2);
-	}
-	
-	.calendar-month td:hover {
-		background: rgba(74, 144, 226, .25);
-	}
-	
-	.calendar-month td.blocked:hover,
-	.calendar-month td.past.blocked:hover {
-		background: #c2d5e9;
-	}
-	
-	.calendar-month td.past:hover {
-		background: #cbdef2;
-	}
-	
-	.calendar-month td.today:hover {
-		background: #bdd8f6;
-	}
-	
-	.tabnav li.active,
-	.tabnav li.active:hover,
-	.tabnav li.active:focus {
-		background: rgba(50, 176, 232, 0.68);
-	}
-	
-	.pin.paused:after {
-		color: #9fc8f2;
-	}
-	
-	.key.paused:before {
-		background: #9fc8f2;
-	}
-	
-	.pagination .previous,
-	.pagination .next,
-	.filters-choices .choice,
-	.choose-dates a,
-	.quick-select a,
-	.calendar .action-panel .primary.actions a.buttonly,
-	.Ticket .section-controls .buttons a.buttonly,
-	.Ticket .comments .primary.actions a.buttonly,
-	.Ticket .barcode .primary.actions a.buttonly {
-		border-color: rgba(64, 145, 230, .2);
-	}
-	
-	.filters-choices .choice .close {
-		border-left-color: rgba(64, 145, 230, .2);
-	}
-	
-	.calendar-month td.today {
-		border-top-color: rgba(64, 145, 230, .9);
-	}
-	
-	a.new-button {
-		border-color: rgba(64, 145, 230, .8);
-	}
-	
-	.filters-holder .view a {
-		background: #f2f7fd;
-	}
-	
-	.messages .message.info,
-	.message.info a.closer {
-		color: #1e436f;
-	}
-	
-	.nav-sections li.active {
-		border-left-color: #4890e2;
-	}
-	
-	/* dark blue */
-	
-	.pin.unassigned:after {
-		color: #256aa8;
-	}
-	
-	.key.unassigned:before,
-	.completion-bar .text,
-	.instruction .header .controls {
-		background: #256aa8;
-	}
-	
-	.completion-bar {
-		border-color: #256aa8;
-	}
-	
-	.instruction .actions .icon-buttons a {
-		border-color: rgba(36, 105, 167, .3);
-	}
-	
-	.completion-bar .percent-complete {
-		background: #739ac2;
-	}
-	
-	
-	
-	/* blue button hovers */
-	.instructions .item .actions a.buttonly:hover,
-	.instructions .item .actions a.buttonly:focus,
-	.group a.buttonly:hover,
-	.group a.buttonly:focus,
-	.filter.dates:hover,
-	.filter.dates:focus,
-	.filter.search .icon-search:hover,
-	.filter.search .icon-search:focus,
-	.filter.dropdown .caret:hover,
-	.filter.dropdown .caret:focus {
-		background: #2771da;
-	}
-	
-	
-	/* admin filters stacked bg - with sidebar */
-	@media (min-width: 665px) and (max-width: 735px) {
-		.admin .Tickets .dash > .filters-holder,
-		.admin .Tickets .dash > .filters-choices {
-			background: #f3f8fd;
-		}
-	}
-	
-	/* breadcrumbs need bold when smaller */
-	@media (max-width: 664px) {
-		.section.title  {
-			font-family: Helvetica-Neue-Bold;
-		}
-	}
-	
-	/* admin filters stacked bg - no sidebar */
-	@media (max-width: 590px) {
-		.admin .Tickets .dash > .filters-holder,
-		.admin .Tickets .dash > .filters-choices {
-			background: rgba(64, 145, 230, .15);
-		}
-		.admin .Tickets .filters-holder .view a {
-			border: 1px solid #4890e2;
-		}
-	}
-	
-	/* worker filters stacked bg */
-	@media (max-width: 560px) {
-		.worker .filters-holder,
-		.worker .Tickets .dash > .filters-choices {
-			background: rgba(64, 145, 230, .15);
-		}
-		.worker .Tickets .filters-holder .view a {
-			border: 1px solid #4890e2;
-		}
-	}
-	/* Firefox admin assign sorting */
-	@-moz-document url-prefix() {
-		@media (min-width: 501px) and (max-width: 815px) {
-			.admin .Tickets .table-list .choose.list th {
-				color: #4890e2 !important;
-			}
-		}
-	}
-	
-	
-	
-	/* greens */
-	
-	.Projects .dash .table-list td.status span.complete:before,
-	.Projects .dash .table-list td:nth-child(9) span.complete:before,
-	header .nav li.alerts .im,
-	header .nav li.messages .im,
-	.subnav .nav-tabs > li > a:hover,
-	.subnav .nav-tabs > li > a:focus,
-	.subnav > ul > li > a:hover,
-	.subnav > ul > li > a:focus,
-	.subnav > ul > li.active > a,
-	.subnav > ul > li.active > a:hover,
-	.subnav > ul > li.active > a:focus,
-	.subnav .nav.nav-tabs > li.active > a, 
-	.instruction-footer .item.count .described,
-	.instruction.view-mode .answer.exception .plainLabel:after,
-	.pin.scheduled:after,
-	.confirmation h1,
-	.confirmation .icon-checkmark,
-	.Tickets .dash td.status span.submitted:before,
-	.Profile .groups td.status span:before,
-	.map .requirements-list li:before,
-	.tab-pane .confirm,
-	.confirmation a.closer,
-	.Profile td.number,
-	.Profile .cert:before {
-		color: #07a985;
-	}
-	
-	ul.dropdown-menu li.header,
-	input.supercheck:checked:after,
-	input[type="checkbox"]:checked:after,
-	.primary.actions a,
-	.instruction-footer .icon-checkmark,
-	.key.scheduled:before,
-	.choose-dates .actions a.buttonly,
-	.page-action-panel .actions a.buttonly,
-	.map .tab-pane a.buttonly.main,
-	.button-holder a.buttonly {
-		background: #00a584;
-	}
-	
-	.primary.actions a:hover,
-	.primary.actions a:focus,
-	.button-holder a:hover,
-	.button-holder a:focus,
-	.choose-dates .actions a.buttonly:hover,
-	.choose-dates .actions a.buttonly:focus,
-	.page-action-panel .actions a.buttonly:hover,
-	.page-action-panel .actions a.buttonly:focus,
-	.tab-pane a.buttonly.main:hover,
-	.tab-pane a.buttonly.main:focus {
-		background: #119676;
-	}
-	
-	header .nav li {
-		border-left-color: rgba(0, 169, 133, .3);
-	}
-	
-	input.supercheck:checked:after,
-	input[type="checkbox"]:checked:after,
-	.primary.actions a,
-	.subnav li.active a,
-	.subnav li.active,
-	.button-holder a,
-	.button-holder a.buttonly:hover,
-	.button-holder a.buttonly:focus,
-	.choose-dates a.buttonly,
-	.page-action-panel .actions a.buttonly {
-		border-color: #08aa86;
-	}
-	
-	input[type="radio"]:checked:after {
-		border: 6px solid #08aa86;
-	}
-	
-	input[type="radio"]:checked:after {
-		background: #84d5c3;
-	}
-	
-	.Projects .dash .table-list td.status span.in-progress:before,
-	.Projects .dash .table-list td:nth-child(9) span.in-progress:before,
-	.Tickets .dash td.status span.started:before,
-	.Tickets .dash td.status span.started.paused:before {
-		color: #8ad7c5;
-	}
-	
-	.messages .message.confirmation,
-	.tab-pane .confirm {
-		background: #dbf2ed;
-	}
-	
-	/* purple */
-	
-	
-	.pin.unscheduled:after {
-		color: #9a5cab;
-	}
-	
-	.key.unscheduled:before {
-		background: #9a5cab;
-	}
+}
 
-	
-	/* black */
-	
-	.navbar-default .navbar-toggle {
-		background: #000000;
+/* worker filters stacked bg */
+@media (max-width: 560px) {
+	.worker .filters-holder,
+	.worker .Tickets .dash > .filters-choices {
+		background: rgba(64, 145, 230, .15);
 	}
-	
-	/* gradient */
-	
-	.tabnav ul {
+	.worker .Tickets .filters-holder .view a {
+		border: 1px solid #4890e2;
+	}
+}
+/* Firefox admin assign sorting */
+@-moz-document url-prefix() {
+	@media (min-width: 501px) and (max-width: 815px) {
+		.admin .Tickets .table-list .choose.list th {
+			color: #4890e2 !important;
+		}
+	}
+}
+
+
+
+/* greens */
+
+.Projects .dash .table-list td.status span.complete:before,
+.Projects .dash .table-list td:nth-child(9) span.complete:before,
+header .nav li.alerts .im,
+header .nav li.messages .im,
+.subnav .nav-tabs > li > a:hover,
+.subnav .nav-tabs > li > a:focus,
+.subnav > ul > li > a:hover,
+.subnav > ul > li > a:focus,
+.subnav > ul > li.active > a,
+.subnav > ul > li.active > a:hover,
+.subnav > ul > li.active > a:focus,
+.subnav .nav.nav-tabs > li.active > a, 
+.instruction-footer .item.count .described,
+.instruction.view-mode .answer.exception .plainLabel:after,
+.pin.scheduled:after,
+.confirmation h1,
+.confirmation .icon-checkmark,
+.Tickets .dash td.status span.submitted:before,
+.Profile .groups td.status span:before,
+.map .requirements-list li:before,
+.tab-pane .confirm,
+.confirmation a.closer,
+.Profile td.number,
+.Profile .cert:before {
+	color: #07a985;
+}
+
+ul.dropdown-menu li.header,
+input.supercheck:checked:after,
+input[type="checkbox"]:checked:after,
+.primary.actions a,
+.instruction-footer .icon-checkmark,
+.key.scheduled:before,
+.choose-dates .actions a.buttonly,
+.page-action-panel .actions a.buttonly,
+.map .tab-pane a.buttonly.main,
+.button-holder a.buttonly {
+	background: #00a584;
+}
+
+.primary.actions a:hover,
+.primary.actions a:focus,
+.button-holder a:hover,
+.button-holder a:focus,
+.choose-dates .actions a.buttonly:hover,
+.choose-dates .actions a.buttonly:focus,
+.page-action-panel .actions a.buttonly:hover,
+.page-action-panel .actions a.buttonly:focus,
+.tab-pane a.buttonly.main:hover,
+.tab-pane a.buttonly.main:focus {
+	background: #119676;
+}
+
+header .nav li {
+	border-left-color: rgba(0, 169, 133, .3);
+}
+
+input.supercheck:checked:after,
+input[type="checkbox"]:checked:after,
+.primary.actions a,
+.subnav li.active a,
+.subnav li.active,
+.button-holder a,
+.button-holder a.buttonly:hover,
+.button-holder a.buttonly:focus,
+.choose-dates a.buttonly,
+.page-action-panel .actions a.buttonly {
+	border-color: #08aa86;
+}
+
+input[type="radio"]:checked:after {
+	border: 6px solid #08aa86;
+}
+
+input[type="radio"]:checked:after {
+	background: #84d5c3;
+}
+
+.Projects .dash .table-list td.status span.in-progress:before,
+.Projects .dash .table-list td:nth-child(9) span.in-progress:before,
+.Tickets .dash td.status span.started:before,
+.Tickets .dash td.status span.started.paused:before {
+	color: #8ad7c5;
+}
+
+.messages .message.confirmation,
+.tab-pane .confirm {
+	background: #dbf2ed;
+}
+
+/* purple */
+
+
+.pin.unscheduled:after {
+	color: #9a5cab;
+}
+
+.key.unscheduled:before {
+	background: #9a5cab;
+}
+
+
+/* black */
+
+.navbar-default .navbar-toggle {
+	background: #000000;
+}
+
+/* gradient */
+
+.tabnav ul {
 
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ2OGFkNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iIzE0YTc5NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyOTlkYjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 
-	background: -moz-linear-gradient(left,  #468ad7 0%, #14a795 70%, #299db3 100%); 
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#468ad7), color-stop(70%,#14a795), color-stop(100%,#299db3)); 
-	background: -webkit-linear-gradient(left,  #468ad7 0%,#14a795 70%,#299db3 100%); 
-	background: -o-linear-gradient(left,  #468ad7 0%,#14a795 70%,#299db3 100%); 
-	background: -ms-linear-gradient(left,  #468ad7 0%,#14a795 70%,#299db3 100%); 
-	background: linear-gradient(to right,  #468ad7 0%,#14a795 70%,#299db3 100%); 
-	}
+background: -moz-linear-gradient(left,  #468ad7 0%, #14a795 70%, #299db3 100%); 
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#468ad7), color-stop(70%,#14a795), color-stop(100%,#299db3)); 
+background: -webkit-linear-gradient(left,  #468ad7 0%,#14a795 70%,#299db3 100%); 
+background: -o-linear-gradient(left,  #468ad7 0%,#14a795 70%,#299db3 100%); 
+background: -ms-linear-gradient(left,  #468ad7 0%,#14a795 70%,#299db3 100%); 
+background: linear-gradient(to right,  #468ad7 0%,#14a795 70%,#299db3 100%); 
+}
 	
 
 /* fonts */
@@ -827,7 +625,9 @@ select option,
 .tabnav li .dropdown li a,
 .Ticket .instruction.barcode .widget-panel-content .inner > .ti,
 .Ticket .instruction.task .widget-panel-content .inner > .ti,
-.popup.metadata .popup-ti {
+.popup.metadata .popup-ti,
+.graph-controls .graph-options a.buttonly,
+.buttonly.cancel {
 	font-family: Helvetica-Neue;
 }
 
@@ -846,7 +646,9 @@ select option,
 .hint.widget-panel .header .ti,
 .Ticket .instruction .header .controls .ti,
 .Ticket .barcode .upc .number,
-.answerButton {
+.answerButton,
+.graph-controls .graph-options a.buttonly.csv,
+.map .tab-pane a.buttonly.main {
 	font-family: Helvetica-Neue-Medium;
 }
 
@@ -989,91 +791,24 @@ header .nav .number,
 	.sidenav ul .active a:visited {
 		color: #4890e2;
 	}
-	
-	.sidenav ul a,
-	.sidenav ul a:visited {
-		color: #4a4a4a;
-	}
 
 }
 
 @media (max-width: 767px) {
 	
-	.navbar-default .navbar-toggle:hover,
-	.navbar-default .navbar-toggle:focus {
-		background: #909090;
-	}
-	
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
 		color: #4890e2;
-	}
-	
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-		background-color: #f5f5f5;
-	}
-	
-}
-
-@media (max-width: 774px) {
-
-	/* project builder */
-	
-	.Projects .group .plainLabel,
-	.Projects .instruction .plainLabel,
-	.Projects.instruction .mini-panel .ti {
-		color: #4a4a4a;
 	}
 	
 }
 
 @media (max-width: 664px) {
 	
-	/* navs */
-	
-	.navbar-default {
-		background: #5e5e5e;
-	}
-	
-	.navbar-default .navbar-collapse {
-		background-color: #fbfbfb;
-	}
-	
-	header .nav li {
-		border-left: 0;
-		border-right: 1px solid #cccccc;
-	}
-	
-	header .nav .dropdown-menu li,
-	header .nav li.dropdown {
-		border-right: 0px solid transparent;
-	}
-	
-	.navbar-default .navbar-toggle:hover,
-	.navbar-default .navbar-toggle:focus {
-		background: #909090;
-	}
-	
-	header nav .dropdown.open {
-		padding-left: 0;
-		background: transparent;
-		border-left: 0;
-	}
-	
-	header nav .dropdown .user-info {
-		margin-left: 15px;
-	}
-	
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, 
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
 	.sidenav ul a,
 	.sidenav ul a:visited {
 		color: #4890e2;
-	}
-	
-	.sidenav li:hover,
-	.sidenav li:focus {
-		background: #f5f5f5;
 	}
 	
 }

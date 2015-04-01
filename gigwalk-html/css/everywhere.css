@@ -1,0 +1,33 @@
+/* everywhere */
+
+html, body {
+	font-family: Helvetica-Neue, Arial, sans-serif;
+	font-size: 16px;
+	background: #ffffff;
+	min-width: 315px;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+table,
+td,
+th {
+	font-size: 1em;
+}
+
+label,
+th {
+	font-weight: normal;
+}
+
+.modal-ios {
+  position: absolute;
+  overflow: visible;
+}
+
+.center {
+	text-align: center;
+}
+
+/* end everywhere */
