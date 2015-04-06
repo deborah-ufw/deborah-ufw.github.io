@@ -95,9 +95,15 @@ input[type="radio"]:after,
 
 .disable,
 .disabled,
+a.disabled,
+.iconButton.disabled,
 .table-list .controls .actions a,
 .admin .table-list td.location,
-.calendar .view a.active {
+.calendar .view a.active,
+.map .tab-pane a.buttonly.main.disabled,
+.table-list .controls .actions a,
+.Ticket a.buttonly.disabled,
+.table-list table th {
 	cursor: default;
 	pointer-events: none;
 }
@@ -271,10 +277,6 @@ th.sorting_desc:after,
 	-webkit-backface-visibility: hidden;
 }
 
-.attachment.image .im {
-	text-shadow: 0 0 5px rgba(0, 0, 0, .3);
-}
-
 header nav .number,
 input[type="radio"]:after,
 .message.problem span.exclaim:before,
@@ -299,6 +301,12 @@ textarea,
 	-moz-border-radius: 0;
 	-webkit-border-radius: 0;
 	border-radius: 0;
+}
+
+.close,
+.datepicker td.active,
+.datepicker td.active:hover {
+  text-shadow: none;
 }
 
 input,
@@ -362,11 +370,11 @@ a.buttonly,
 	color: #6e6e6e;
 }
 
-.filter.dropdown .btn.btn-default.dropdown-toggle,
-.filter.search,
 .map .key,
 .table-list .controls .actions a,
 .map .icon-vacation,
+.filter.dropdown .btn.btn-default.dropdown-toggle,
+.filter.search,
 .navbar-default .navbar-nav > li > a.dropdown-toggle,
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 
@@ -439,6 +447,12 @@ a.iconButton.disabled:focus,
 .map .tab-pane .scheduled .value span,
 .popup.metadata .popup-ti {
 	color: #bcbcbc;
+}
+
+.Projects .dash .table-list td.status span.launched:before,
+.Projects .dash .table-list td:nth-child(9) span.launched:before,
+.Tickets .dash td.status span:before {
+	color: #cccccc;
 }
 
 .expander a,
@@ -539,15 +553,23 @@ textarea.disabled,
 	background: #b4b4b4;
 }
 
-.search.disabled input,
-.search.disabled input:hover,
-.search.disabled input:focus,
-.filter.search.disabled,
-.action.panel .filter.search.disabled,
-.instruction .item.targets .sub,
-.datepicker td.day.disabled,
-.comments .new .attachment {
-	background-color: #efefef;
+.map .tab-pane a.buttonly.main.disabled,
+.map .tab-pane a.buttonly.main.disabled:hover,
+.map .tab-pane a.buttonly.main.disabled:focus,
+.calendar-day h1.graphic,
+.calendar-month th:after {
+	background: #cccccc;
+}
+
+.disabled,
+.disabled:hover,
+.disabled:focus,
+.primary.actions a.buttonly.disabled:hover,
+.primary.actions a.buttonly.disabled:focus,
+.search.disabled .im.icon-search,
+.search.disabled .im.icon-search:hover,
+.search.disabled .im.icon-search:focus {
+	background-color: #cccccc;
 }
 
 .datepicker td.blocked,
@@ -562,8 +584,15 @@ textarea.disabled,
 	background-color: #d9d9d9;
 }
 
-.search.disabled {
-	border-color: #efefef;
+.search.disabled input,
+.search.disabled input:hover,
+.search.disabled input:focus,
+.filter.search.disabled,
+.action.panel .filter.search.disabled,
+.instruction .item.targets .sub,
+.datepicker td.day.disabled,
+.comments .new .attachment {
+	background-color: #efefef;
 }
 
 .calendar-month td.blocked,
@@ -640,7 +669,8 @@ input[type="radio"]:after,
 .filter.dropdown .btn.btn-default.dropdown-toggle,
 a.linkly.disabled,
 .datepicker th.disabled,
-.table-list th.disabled {
+.table-list th.disabled,
+.navbar-default {
 	background-color: #ffffff;
 }
 
@@ -668,8 +698,7 @@ a.buttonly.cancel.disabled:focus,
 .filters .filter.search,
 .action.panel .filter.search,
 .popup,
-.locations-holder .table-list,
-.navbar-default {
+.locations-holder .table-list {
 	background: #ffffff;
 }
 
@@ -690,30 +719,6 @@ ul.dropdown-menu li.disabled,
 	background-color: transparent;
 }
 
-.Projects .dash .table-list td.status span.launched:before,
-.Projects .dash .table-list td:nth-child(9) span.launched:before,
-.Tickets .dash td.status span:before {
-	color: #cccccc;
-}
-
-.map .tab-pane a.buttonly.main.disabled,
-.map .tab-pane a.buttonly.main.disabled:hover,
-.map .tab-pane a.buttonly.main.disabled:focus,
-.calendar-day h1.graphic,
-.calendar-month th:after {
-	background: #cccccc;
-}
-
-.disabled,
-.disabled:hover,
-.disabled:focus,
-.primary.actions a.buttonly.disabled:hover,
-.primary.actions a.buttonly.disabled:focus,
-.search.disabled .im.icon-search,
-.search.disabled .im.icon-search:hover,
-.search.disabled .im.icon-search:focus {
-	background-color: #cccccc;
-}
 
 /* reds */
 
@@ -742,9 +747,6 @@ ul.dropdown-menu li.disabled,
 	textarea.invalid {
 		background: #fcfec3;
 	}
-
-
-/* right heredeb */
 
 
 /* borders */
@@ -847,9 +849,17 @@ header .nav ul.dropdown-menu li,
 	border-top: 1px solid #dfdfdf;
 }
 
+.search.disabled {
+	border-color: #efefef;
+}
+
 .filters-holder .view a.list {
 	border-right: 1px solid #ffffff;
 	border-left: 1px solid #ffffff;
+}
+
+.calendar-month td {
+	border: 2px solid #ffffff;
 }
 
 .instruction .item.targets .sub .mini-panel {
@@ -863,24 +873,12 @@ header .nav ul.dropdown-menu li,
 	border-bottom: 2px solid #ffffff;
 }
 
-.Ticket .instruction.task .images {
-	border-top: 5px solid #ffffff;
-}
-
-.calendar-month td {
-	border: 2px solid #ffffff;
-}
-
 .table-list table td.expanded {
 	border-top: 1px solid rgba(0, 0, 0, 0);
 }
 
 .table-list .expanded table tr {
 	border-bottom: 1px solid rgba(0, 0, 0, .05);
-}
-
-.table-list td .completion-bar {
-	border-width: 6px;
 }
 
 .topborder,
@@ -998,10 +996,6 @@ header .nav .dropdown li,
 .navbar-default,
 .primary.actions a.linkly {
 	border-color: #ffffff;
-}
-
-.nav-sections li {
-	border-left: 4px solid transparent;
 }
 
 
@@ -1273,501 +1267,6 @@ nav.sidenav {
 	position: absolute;
 }
 
-
-/* modal */
-
-.modal {
-	background: rgba(0, 0, 0, 0.33);
-}
-
-.modal td {
-	text-align: center;
-}
-	 
-	
-/* form parts */
-
-input:focus {
-	outline: none;
-	box-shadow: none;
-	border-width: 1px;
-}
-
-input[type="text"],
-input[type="password"] {
-	line-height: 1em; 
-}
-
-input[type="radio"]:after,
-input[type="radio"]:checked:after {
-	content: ' ';
-} 
-
-.dropdown-header {
-	font-size: 1em;
-	padding-left: 12px;
-}
-
-.dropdown-menu {
-	margin-top: 0;
-}
-
-.dropdown-menu .link {
-	text-decoration: none;
-}
-
-.dropdown-menu .link:hover {
-	text-decoration: underline;
-}
-
-.dropdown .im:before {
-	margin-right: .1em;
-}
-
-.caret,
-.custom-select:before {
-	font-size: 2em;
-	margin-left: 2px;
-	width: 1em;
-	height: 1em;
-	vertical-align: top;
-}
-
-.btn.btn-default.dropdown-toggle {
-	text-align: left;
-	font-size: 1em;
-	padding-right: 40px;
-	position: relative;
-}
-
-.btn.btn-default.dropdown-toggle .caret {
-	font-size: 27px;
-	float: right;
-	position: absolute;
-		top: 5px;
-		right: 8px;
-}
-
-.btn.btn-default.dropdown-toggle .caret:before {
-	position: relative;
-}
-
-.filter.dropdown .btn.btn-default.dropdown-toggle .caret {
-	font-size: 32px;
-	padding: 5px 3px 2px 3px;
-	height: auto;
-	width: auto;
-}
-
-.filter.dropdown.multi-state ul.dropdown-menu {
-	 padding: 1em 1.5em;
-}
-
-.filter.dropdown.multi-state ul.dropdown-menu > li {
-	 margin: .5em 0;
-}
-
-.filter.dropdown.multi-state ul.dropdown-menu > li.quick-select {
-	 text-align: center;
-	 margin-top: 1.5em;
-}
-
-.plainLabel {
-	line-height: 1.2em;
-}
-
-select,
-.custom-select {
-	display: inline-block;
-}
-
-.custom-select {
-	position: relative;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-	margin-right: 8px;
-	position: relative;
-}
-
-input[type="radio"] {
-	float: left;
-}
-
-input[type="checkbox"]:after,
-input[type="radio"]:after {
-	font-size: 19px;
-	display: block;
-	float: left;
-	position: relative;
-}
-
-input[type="checkbox"]:after {
-	margin: -5px -2px -2px -2px;
-	height: 22px;
-	width: 22px;
-}
-
-.Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
-	font-size: 20px;
-}
-
-.instruction.view-mode .answers .plainLabel {
-	width: auto;
-}
-
-.instruction.view-mode input[type="checkbox"]:after {
-	font-size: 1.2em;
-}
-
-input[type="radio"]:after {
-	margin-top: -5px;
-	height: 24px;
-	width: 24px;
-		left: -5px;
-}
-
-input[type="radio"]:checked:after {
-	padding: 1px;
-}
-
-.checker {
-	position: relative;
-}
-
-.item.checker .supercheck:after {
-	font-size: 32px;
-	padding-left: 1px;
-	height: 35px;
-	width: 35px;
-}
-
-.set-repeats .dropdown,
-.set-repeats .mini-panel {
-	display: inline-block;
-}
-
-.set-repeats .checker .supercheck, 
-.set-repeats input[type="checkbox"] {
-	margin-right: 12px;
-}
-
-.set-repeats input.supercheck:checked:after {
-	font-size: 1.1em;
-}
-
-.item.set-required {
-	margin-bottom: .5em;
-}
-
-.item.set-required .plainLabel {
-	margin-top: .7em;
-}
-
-input[type="text"],
-input[type="textarea"],
-input[type="password"] {
-	margin-top: 1px;
-	padding: .4em .5em .4em 7px;
-}
-
-input[type="radio"] {
-	margin-right: .5em;
-}
-
-.item.required > .plainLabel:after,
-.Profile .required:before,
-.tab-pane.actions .detail:before,
-.Projects .settings .group.required > .plainLabel:after,
-.map .tab-pane .assign-action.detail .plainLabel:after {
-	content: '*';
-	font-size: 1.4em;
-		left: 10px;
-}
-
-.item.required > .plainLabel:after {
-	position: relative;
-}
-
-.Profile .required:before {
-	position: absolute;
-		top: -3px;
-		left: -10px;
-}
-
-.item.required.text input[type="text"],
-.item .required.text input[type="textarea"] {
-	margin-left: 15px;
-}
-
-.warning,
-.hint {
-	line-height: 1.2em;
-}
-
-/* buttons */
-
-a.buttonly,
-.primary.actions a {
-	text-decoration: none;
-	text-align: center;
-	padding: 8px 3em;
-	display: inline-block;
-}
-
-.button-holder a {
-	line-height: 1.2em;
-}
-
-.primary.actions a.delete {
-	padding-right: 1.5em;
-	padding-left: 1.5em;
-	float: left;
-}
-
-.primary.actions a.linkly {
-	text-decoration: underline;
-}
-
-a.quick {
-	font-size: 16px;
-	padding: 8px 1em;
-	display: inline-block;
-}
-
-.choose-dates a,
-.quick-select a,
-.tab-pane .button-holder a,
-.page-action-panel .actions a {
-	font-size: 15px;
-	padding: 5px 1em;
-}
-
-.choose-dates .actions a,
-.page-action-panel .actions a {
-	text-align: center;
-	display: inline-block;
-	width: 125px;
-}
-
-.icon-buttons {
-	display: inline-block;
-	float: right;
-	position: relative;
-}
-
-.icon-buttons a {
-	text-decoration: none;
-	margin-right: -5px;
-	padding: .5em .8em .8em .8em;
-}
-
-.iconButton {
-	position: relative;
-}
-
-.iconButton:before {
-  font-size: 37px;
-  position: relative;
-  top: 10px;
-}
-
-.icon-buttons a:before {
-	top: 7px;
-	position: relative;
-}
-
-.icon-buttons a.icon-edit:before {
-	top: 8px;
-}
-
-.im.icon-pencil-box:before {
-	font-size: 38px;
-}
-
-.remove {
-	cursor: pointer;
-	pointer-events: auto;
-	font-size: 12px;
-	margin-right: 2px;
-	padding-top: 14px;
-	float: right;
-}
-
-a[href*="tel"] {
-	position: relative;
-}
-
-a[href*="tel"]:before {
-	font-size: 29px;
-	margin: 0 -7px;
-	position: relative;
-		top: 7px;
-}
-
-.bigButton {
-	text-align: center;
-	padding-top: .3em;
-	display: inline-block;
-	position: relative;
-	height: 115px;
-	width: 150px;
-	border: 2px dashed;
-}
-
-a.bigButton:hover,
-a.bigButton:focus {
-	text-decoration: none;
-}
-
-.bigButton:before {
-	font-size: 65px;
-	display: block;
-}
-
-.closer,
-.action.messages .message .im.icon-cancel:before,
-.map-drawer .tabs-control a.collapse:before,
-.close .im.icon-cancel:before {
-	font-size: 36px;
-}
-
-a.quick,
-a.quick:hover,
-a.quick:focus,
-a.iconButton:hover,
-a.iconButton:focus,
-a.cancel,
-a.cancel:hover,
-a.cancel:focus,
-.quick-select a,
-.remove,
-.remove:hover,
-.remove:focus,
-.page-action-panel .actions a:hover,
-.page-action-panel .actions a:focus,
-a.closer,
-a.closer:hover,
-a.closer:focus,
-a[href*="tel"]:hover,
-a[href*="tel"]:focus {
-	text-decoration: none;
-}
-
-
-/* datepicker */
-
-input.datepicker,
-input[type="text"].datepicker {
-	text-align: center;
-	margin-bottom: -10px;
-	padding-top: .5em;
-	padding-bottom: .3em;
-	width: 190px;
-}
-
-.datepicker td, 
-.datepicker th {
-	width: 15px;
-}
-	
-/* popup */
-
-.popup {
-	text-align: left;
-	padding: 1em 1em 1.5em 1em;
-	display: inline-block;
-	width: 300px;
-}
-
-.popup.metadata {
-	padding-bottom: 1.2em;
-	position: absolute;
-		top: 1.5em;
-		left: -1px;
-}
-
-.popup .popup-header,
-.popup .popup-ti {
-	position: relative;
-}
-
-.popup a.close {
-	position: absolute;
-		top: -5px;
-		right: -5px;
-}
-
-.popup-ti {
-	margin: 0 40px 1em 0;
-		top: 10px;
-}
-
-.popup.metadata .key {
-	text-transform: uppercase;
-}
-
-.popup.metadata .key-pair {
-	line-height: .9em;
-	padding: 10px 0 5px 0;
-}
-
-.popup.metadata .key-pair div {
-	font-size: 14px;
-	margin-bottom: 5px;
-}
-
-.instruction .target.has-metadata .popup.metadata {
-	top: 2.5em;
-	left: 5px;
-}
-
-.popup .primary.actions {
-	text-align: right;
-}
-
-.popup .primary.actions a {
-	margin-top: 1.5em;
-}
-
-.has-metadata, {
-	position: relative;
-}
-
-.has-metadata:after {
-	font-size: 42px;
-	line-height: 0;
-	display: inline-block;
-	width: 20px;
-	position: relative;
-		top: 9px;
-		right: 8px;
-}
-
-/* completion bar */
-/* progress bar */
-
-.completion-bar .completion {
-	vertical-align: top;
-	display: table-cell;
-	width: 100%;
-}
-
-.completion-bar .percent-complete {
-	margin: -1px 0;
-	height: 1.735em;
-}
-
-.completion-bar .text {
-	text-align: center;
-	line-height: 1.7em;
-	display: inline-block;
-	float: right;
-	width: 150px;
-}
-
-
 /* header nav */
 
 nav .user-info,
@@ -1807,8 +1306,10 @@ header .nav .number {
 	font-size: .7em;
 	text-align: center;
 	padding-top: 1px;
+	display: inline-block;
 	height: 22px;
 	width: 22px;
+	position: absolute;
 		top: .7em;
 		right: 1.3em;
 }
@@ -1862,15 +1363,6 @@ header:after {
 	height: 1px;
 }
 
-
-/* content structure */	
-
-.main.wrapper,
-.tabnav ul { 
-	display: table;
-	width: 100%;
-}
-
 /*  left sidenav */
 
 div.main.wrapper + div.inner {
@@ -1900,6 +1392,11 @@ div.main.wrapper + div.inner {
 .sidenav .user-image {
 	width: 70px;
 	height: 70px;
+}
+
+.nav-sections li {
+	font-size: 1.1em;
+	border-left: 4px solid transparent;
 }
 
 .nav-sections li.divider {
@@ -2344,9 +1841,516 @@ div.main.wrapper + div.inner {
 }
 
 
+/* modal */
+
+.modal {
+	background: rgba(0, 0, 0, 0.33);
+}
+
+.modal td {
+	text-align: center;
+}
+	 
+	
+/* form parts */
+
+input:focus {
+	outline: none;
+	box-shadow: none;
+	border-width: 1px;
+}
+
+input[type="text"],
+input[type="password"] {
+	line-height: 1em; 
+}
+
+input[type="radio"]:after,
+input[type="radio"]:checked:after {
+	content: ' ';
+} 
+
+.dropdown-header {
+	font-size: 1em;
+	padding-left: 12px;
+}
+
+.dropdown-menu {
+	margin-top: 0;
+}
+
+.dropdown-menu .link {
+	text-decoration: none;
+}
+
+.dropdown-menu .link:hover {
+	text-decoration: underline;
+}
+
+.dropdown .im:before {
+	margin-right: .1em;
+}
+
+.caret,
+.custom-select:before {
+	font-size: 2em;
+	margin-left: 2px;
+	width: 1em;
+	height: 1em;
+	vertical-align: top;
+}
+
+.btn.btn-default.dropdown-toggle {
+	text-align: left;
+	font-size: 1em;
+	padding-right: 40px;
+	position: relative;
+}
+
+.btn.btn-default.dropdown-toggle .caret {
+	font-size: 27px;
+	float: right;
+	position: absolute;
+		top: 5px;
+		right: 8px;
+}
+
+.btn.btn-default.dropdown-toggle .caret:before {
+	position: relative;
+}
+
+.filter.dropdown .btn.btn-default.dropdown-toggle .caret {
+	font-size: 32px;
+	padding: 5px 3px 2px 3px;
+	height: auto;
+	width: auto;
+}
+
+.filter.dropdown.multi-state ul.dropdown-menu {
+	 padding: 1em 1.5em;
+}
+
+.filter.dropdown.multi-state ul.dropdown-menu > li {
+	 margin: .5em 0;
+}
+
+.filter.dropdown.multi-state ul.dropdown-menu > li.quick-select {
+	 text-align: center;
+	 margin-top: 1.5em;
+}
+
+.plainLabel {
+	line-height: 1.2em;
+}
+
+select,
+.custom-select {
+	display: inline-block;
+}
+
+.custom-select {
+	position: relative;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin-right: 8px;
+	position: relative;
+}
+
+input[type="radio"] {
+	float: left;
+}
+
+input[type="checkbox"]:after,
+input[type="radio"]:after {
+	font-size: 19px;
+	display: block;
+	float: left;
+	position: relative;
+}
+
+input[type="checkbox"]:after {
+	margin: -5px -2px -2px -2px;
+	height: 22px;
+	width: 22px;
+}
+
+.Tickets .dash .table-list table th.project-title input[type="checkbox"]:after {
+	font-size: 20px;
+}
+
+.instruction.view-mode .answers .plainLabel {
+	width: auto;
+}
+
+.instruction.view-mode input[type="checkbox"]:after {
+	font-size: 1.2em;
+}
+
+input[type="radio"]:after {
+	margin-top: -5px;
+	height: 24px;
+	width: 24px;
+		left: -5px;
+}
+
+input[type="radio"]:checked:after {
+	padding: 1px;
+}
+
+.checker {
+	position: relative;
+}
+
+.item.checker .supercheck:after {
+	font-size: 32px;
+	padding-left: 1px;
+	height: 35px;
+	width: 35px;
+}
+
+.set-repeats .dropdown,
+.set-repeats .mini-panel {
+	display: inline-block;
+}
+
+.set-repeats .checker .supercheck, 
+.set-repeats input[type="checkbox"] {
+	margin-right: 12px;
+}
+
+.set-repeats input.supercheck:checked:after {
+	font-size: 1.1em;
+}
+
+.item.set-required {
+	margin-bottom: .5em;
+}
+
+.item.set-required .plainLabel {
+	margin-top: .7em;
+}
+
+input[type="text"],
+input[type="textarea"],
+input[type="password"] {
+	margin-top: 1px;
+	padding: .4em .5em .4em 7px;
+}
+
+input[type="radio"] {
+	margin-right: .5em;
+}
+
+.item.required > .plainLabel:after,
+.Profile .required:before,
+.tab-pane.actions .detail:before,
+.Projects .settings .group.required > .plainLabel:after,
+.map .tab-pane .assign-action.detail .plainLabel:after {
+	content: '*';
+	font-size: 1.4em;
+		left: 10px;
+}
+
+.item.required > .plainLabel:after {
+	position: relative;
+}
+
+.Profile .required:before {
+	position: absolute;
+		top: -3px;
+		left: -10px;
+}
+
+.item.required.text input[type="text"],
+.item .required.text input[type="textarea"] {
+	margin-left: 15px;
+}
+
+.warning,
+.hint {
+	line-height: 1.2em;
+}
+
+/* buttons */
+
+a.buttonly,
+.primary.actions a {
+	text-decoration: none;
+	text-align: center;
+	padding: 8px 3em;
+	display: inline-block;
+}
+
+.button-holder a {
+	line-height: 1.2em;
+}
+
+.primary.actions a.delete {
+	padding-right: 1.5em;
+	padding-left: 1.5em;
+	float: left;
+}
+
+.primary.actions a.linkly {
+	text-decoration: underline;
+}
+
+a.quick {
+	font-size: 16px;
+	padding: 8px 1em;
+	display: inline-block;
+}
+
+.choose-dates a,
+.quick-select a,
+.tab-pane .button-holder a,
+.page-action-panel .actions a {
+	font-size: 15px;
+	padding: 5px 1em;
+}
+
+.choose-dates .actions a,
+.page-action-panel .actions a {
+	text-align: center;
+	display: inline-block;
+	width: 125px;
+}
+
+.icon-buttons {
+	display: inline-block;
+	float: right;
+	position: relative;
+}
+
+.icon-buttons a {
+	text-decoration: none;
+	margin-right: -5px;
+	padding: .5em .8em .8em .8em;
+}
+
+.iconButton {
+	position: relative;
+}
+
+.iconButton:before {
+  font-size: 37px;
+  position: relative;
+  top: 10px;
+}
+
+.icon-buttons a:before {
+	top: 7px;
+	position: relative;
+}
+
+.icon-buttons a.icon-edit:before {
+	top: 8px;
+}
+
+.im.icon-pencil-box:before {
+	font-size: 38px;
+}
+
+.remove {
+	cursor: pointer;
+	pointer-events: auto;
+	font-size: 12px;
+	margin-right: 2px;
+	padding-top: 14px;
+	float: right;
+}
+
+a[href*="tel"] {
+	position: relative;
+}
+
+a[href*="tel"]:before {
+	font-size: 29px;
+	margin: 0 -7px;
+	position: relative;
+		top: 7px;
+}
+
+.bigButton {
+	text-align: center;
+	padding-top: .3em;
+	display: inline-block;
+	position: relative;
+	height: 115px;
+	width: 150px;
+	border: 2px dashed;
+}
+
+a.bigButton:hover,
+a.bigButton:focus {
+	text-decoration: none;
+}
+
+.bigButton:before {
+	font-size: 65px;
+	display: block;
+}
+
+.closer,
+.action.messages .message .im.icon-cancel:before,
+.map-drawer .tabs-control a.collapse:before,
+.close .im.icon-cancel:before {
+	font-size: 36px;
+}
+
+a.quick,
+a.quick:hover,
+a.quick:focus,
+a.iconButton:hover,
+a.iconButton:focus,
+a.cancel,
+a.cancel:hover,
+a.cancel:focus,
+.quick-select a,
+.remove,
+.remove:hover,
+.remove:focus,
+.page-action-panel .actions a:hover,
+.page-action-panel .actions a:focus,
+a.closer,
+a.closer:hover,
+a.closer:focus,
+a[href*="tel"]:hover,
+a[href*="tel"]:focus {
+	text-decoration: none;
+}
+
+
+/* datepicker */
+
+input.datepicker,
+input[type="text"].datepicker {
+	text-align: center;
+	margin-bottom: -10px;
+	padding-top: .5em;
+	padding-bottom: .3em;
+	width: 190px;
+}
+
+.datepicker td, 
+.datepicker th {
+	width: 15px;
+}
+	
+/* popup */
+
+.popup {
+	text-align: left;
+	padding: 1em 1em 1.5em 1em;
+	display: inline-block;
+	width: 300px;
+}
+
+.popup.metadata {
+	padding-bottom: 1.2em;
+	width: 300px;
+	position: absolute;
+		top: 1.5em;
+		left: -1px;
+}
+
+.popup .popup-header,
+.popup .popup-ti {
+	position: relative;
+}
+
+.popup a.close {
+	position: absolute;
+		top: -5px;
+		right: -5px;
+}
+
+.popup-ti {
+	margin: 0 40px 1em 0;
+		top: 10px;
+}
+
+.popup.metadata .key {
+	text-transform: uppercase;
+}
+
+.popup.metadata .key-pair {
+	line-height: .9em;
+	padding: 10px 0 5px 0;
+}
+
+.popup.metadata .key-pair div {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.instruction .target.has-metadata .popup.metadata {
+	top: 2.5em;
+	left: 5px;
+}
+
+.popup .primary.actions {
+	text-align: right;
+}
+
+.popup .primary.actions a {
+	margin-top: 1.5em;
+}
+
+.has-metadata, {
+	position: relative;
+}
+
+.has-metadata:after {
+	font-size: 42px;
+	line-height: 0;
+	display: inline-block;
+	width: 20px;
+	position: relative;
+		top: 9px;
+		right: 8px;
+}
+
+
+/* completion bar */
+/* progress bar */
+
+.completion-bar {
+  border: 10px solid;
+}
+
+.completion-bar .completion {
+	vertical-align: top;
+	display: table-cell;
+	width: 100%;
+}
+
+.completion-bar .percent-complete {
+	margin: -1px 0;
+	height: 1.735em;
+}
+
+.completion-bar .text {
+	text-align: center;
+	line-height: 1.7em;
+	display: inline-block;
+	float: right;
+	width: 150px;
+}
+
+
+/* content structure */	
+
+.main.wrapper,
+.tabnav ul { 
+	display: table;
+	width: 100%;
+}
+
 
 /* content */
-
 
 /* Project builder top */
 
@@ -4434,6 +4438,8 @@ a.attach .im,
 	position: absolute;
 		top: 10px;
 		right: 8px;
+		
+	text-shadow: 0 0 5px rgba(0, 0, 0, .3);	
 }
 
 
@@ -4763,7 +4769,6 @@ a.attach .im,
 }
 
 /* tickets dash assorted filter adjustments map */
-
 /* filters full width */
 
 .filter.dropdown .btn.btn-default.dropdown-toggle,
@@ -5947,7 +5952,7 @@ a.page-action.delete-button span.im {
 	text-decoration: underline;
 }
 
-.section-controls .action.panel. {
+.section-controls .action.panel {
 	margin: 1em auto;
 }
 
@@ -6231,10 +6236,6 @@ a.page-action.delete-button span.im {
 		padding: 0 0 0 0;
 	}
 	
-	.table-list .expanded table tr {
-		border-bottom: 1px solid rgba(0, 0, 0, .05);
-	}
-	
 	.Groups	.table-list table th.group-name {
 		margin-top: .3em;
 	}
@@ -6489,6 +6490,8 @@ a.page-action.delete-button span.im {
 
 .calendar-month th {
 	text-transform: uppercase;
+	padding-top: 1px;
+	padding-bottom: 1px;
 	width: 14%;
 }
 
@@ -6502,11 +6505,6 @@ a.page-action.delete-button span.im {
 .calendar-month td,
 .calendar-month th span {
 	padding: 2px 4px 6px 4px;
-}
-
-.calendar-month th {
-	padding-top: 1px;
-	padding-bottom: 1px;
 }
 
 .calendar-month .work {
@@ -7763,6 +7761,7 @@ a.page-action.delete-button span.im {
 
 .Ticket .instruction.task .images {
 	margin-top: -27px;
+	border-top: 5px solid #ffffff;
 }
 
 .Ticket .images .attachment.image {
@@ -8289,7 +8288,8 @@ a.page-action.delete-button span.im {
 	margin: 1em 0;
 }
 
-/* integrate Projects Dash */
+/* integrate 
+/* Projects Dash */
 
 .Projects .dash .table-list td.status span:before,
 .Projects .dash .table-list td:nth-child(9) span:before,
@@ -8352,13 +8352,14 @@ a.page-action.delete-button span.im {
 	min-width: 95px;
 }
 
-.table-list td .completion-bar .text {
-	text-align: right;
-	width: 55px;
+.Projects .dash .table-list td .completion-bar {
+  border-width: 6px;
 }
 
 .table-list td .completion-bar .text {
+	text-align: right;
 	line-height: 1.3em;
+	width: 55px;
 }
 
 .table-list td .completion-bar .percent-complete {
