@@ -1,21 +1,20 @@
 /* ---------- APP GLYPHS CSS in sync Feb 24 ---------- */
 
 @font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?-6lck2c');
-	src:url('../fonts/icomoon.eot?#iefix-6lck2c') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?-6lck2c') format('woff'),
-		url('../fonts/icomoon.ttf?-6lck2c') format('truetype'),
-		url('../fonts/icomoon.svg?-6lck2c#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot?-6lck2c');
+  src:url('../fonts/icomoon.eot?#iefix-6lck2c') format('embedded-opentype'),
+  url('../fonts/icomoon.woff?-6lck2c') format('woff'),
+  url('../fonts/icomoon.ttf?-6lck2c') format('truetype'),
+  url('../fonts/icomoon.svg?-6lck2c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .im,
 .im:before,
 .im:after,
 .caret,
-.custom-select:before,
 .editable:after,
 .nav-active-holder:after,
 .instruction.view-mode .answer.exception .plainLabel:after,
@@ -49,26 +48,30 @@ a.bigButton:before,
 .Profile .cert:before,
 .has-metadata:after,
 .comment .actions a:before,
-.dataTables_paginate .pagination a, 
-.dataTables_paginate .pagination a.disabled {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1em;
-	position: relative;
+.dataTables_paginate .pagination a,
+.dataTables_paginate .pagination a.disabled,
+.dropdown-menu li.picker-switch .glyphicon,
+.timepicker-picker .glyphicon,
+.picker-switch .glyphicon {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  position: relative;
 }
 
 .im:before {
-	font-size: 31px;
+  font-size: 31px;
 }
 
 .icon-empty:before,
+.icon-warning:before,
 .calendar-month .work .tickets:before,
 .calendar-month .work .time:before {
-	content: "\e612";
+  content: "\e612";
 }
 th.sorting:after,
 th.sorting_desc:after,
@@ -76,17 +79,16 @@ th.descending:after, /* js class is reversed */
 .collapsed .icon-arrow-up:before,
 .icon-arrow-down:before,
 .caret:before,
-.custom-select:before,
 .nav-active-holder:after {
-	content: "\e613";
+  content: "\e613";
 }
 th.sorting_asc:after,
 th.sorting.ascending:after, /* js class is reversed */
 .icon-arrow-up:before {
-	content: "\e614";
+  content: "\e614";
 }
 .icon-bell:before {
-	content: "\e615";
+  content: "\e615";
 }
 .Projects .dash .table-list td.status span:before,
 .Projects .dash .table-list td:nth-child(9) span:before,
@@ -102,260 +104,273 @@ input[type="checkbox"]:after,
 .Profile .groups td.status span:before,
 .Profile .cert:before,
 .icon-checkmark:before {
-	content: "\e616";
+  content: "\e616";
 }
 .icon-close-alt:before {
-	content: "\e617";
+  content: "\e617";
 }
 .icon-close:before {
-	content: "\e618";
+  content: "\e618";
 }
 .icon-dragger:before {
-	content: "\e619";
+  content: "\e619";
 }
 .icon-duplicate:before {
-	content: "\e629";
+  content: "\e629";
 }
 .editable:after,
 .icon-edit:before {
-	content: "\e62a";
+  content: "\e62a";
 }
 .icon-email:before {
-	content: "\e61c";
+  content: "\e61c";
 }
 .icon-expand-all:before {
-	content: "\e61d";
+  content: "\e61d";
 }
 .icon-lock:before {
-	content: "\e61e";
+  content: "\e61e";
 }
 .section-actions a.new:before,
 .icon-pencil-box:before {
-	content: "\e61f";
+  content: "\e61f";
 }
 .icon-settings:before {
-	content: "\e620";
+  content: "\e620";
 }
 .icon-trash:before {
-	content: "\e621";
+  content: "\e621";
 }
 .icon-building:before {
-	content: "\e622";
+  content: "\e622";
 }
 .icon-map-pin:before {
-	content: "\e623";
+  content: "\e623";
 }
 .pin:after {
-	content: "\e625";
+  content: "\e625";
 }
 .iconButton.assign:before,
 .section-actions a.members:before,
 .icon-people:before {
-	content: "\e624";
+  content: "\e624";
 }
 a.bigButton.photo:before,
 .iconButton.camera:before,
 .icon-camera:before {
-	content: "\e60f";
+  content: "\e60f";
 }
 .instruction.view-mode .answer.exception .plainLabel:after,
 .iconly.set-exceptions:before,
 .icon-flag:before {
-	content: "\e611";
+  content: "\e611";
 }
 .icon-magnify:before {
-	content: "\e60e";
+  content: "\e60e";
 }
 .map .nav-tabs > li > a.actions:before,
 .icon-lightning-strike:before {
-	content: "\e60d";
+  content: "\e60d";
 }
 .icon-barcode:before {
-	content: "\e610";
+  content: "\e610";
 }
 .icon-pause:before {
-	content: "\e600";
+  content: "\e600";
 }
 .map a.collapse:before,
 .iconButton.cancel:before,
 .Tickets .dash td.status span.canceled:before,
 .Tickets .dash td.status span.expired:before,
 .icon-cancel:before {
-	content: "\e601";
+  content: "\e601";
 }
 .icon-search:before {
-	content: "\e602";
+  content: "\e602";
 }
 .iconButton.unassign:before,
 .icon-assign:before {
-	content: "\e603";
+  content: "\e603";
 }
 .iconButton.print:before,
 .icon-print:before {
-	content: "\e604";
+  content: "\e604";
 }
 .iconButton.calendar:before,
 .icon-calendar:before,
-.icon-schedule:before {
-	content: "\e605";
+.icon-schedule:before,
+.picker-switch .glyphicon-calendar:before {
+  content: "\e605";
 }
 .iconButton.comment:before,
 .icon-comment:before {
-	content: "\e606";
+  content: "\e606";
 }
 .icon-lightning-solid:before {
-	content: "\e607";
+  content: "\e607";
 }
 .map .nav-tabs > li > a.directions:before,
 .icon-direction:before {
-	content: "\e608";
+  content: "\e608";
 }
 .iconButton.list:before,
 .icon-list:before {
-	content: "\e609";
+  content: "\e609";
 }
 .calendar-month .has-tickets .work .tickets:before,
 .icon-ticket:before {
-	content: "\e60a";
+  content: "\e60a";
 }
 .map .nav-tabs > li > a.info:before,
 .icon-info:before {
-	content: "\e60b";
+  content: "\e60b";
 }
 .icon-gig:before {
-	content: "\e60c";
+  content: "\e60c";
 }
 .dataTables_paginate .pagination a:nth-child(1):before,
 .icon-previous:before {
-	content: "\e626";
+  content: "\e626";
 }
 .dataTables_paginate .pagination a:nth-child(2):before,
 .icon-next:before {
-	content: "\e627";
+  content: "\e627";
 }
 .icon-shield:before {
-	content: "\e62f";
+  content: "\e62f";
 }
 .icon-paperclip:before {
-	content: "\e60";
-}
-.icon-warning:before {
-	content: "\e61b";
+  content: "\e60";
 }
 .icon-vacation:before {
-	content: "\e61a";
+  content: "\e61a";
 }
 .iconButton.extend:before,
 .icon-extend:before {
-	content: "\e628";
+  content: "\e628";
 }
 .icon-plus:before,
 .iconButton.add:before {
-	content: "\e62b";
+  content: "\e62b";
 }
 .icon-minus:before,
 .iconButton.subtract:before {
-	content: "\e62c";
+  content: "\e62c";
 }
 .section-actions a.ownership:before,
 .icon-ownership:before {
-	content: "\e62d";
+  content: "\e62d";
 }
 .calendar-month .has-tickets .work .time:before,
 .calendar-day .header .time:before,
+.dropdown-menu li.picker-switch .glyphicon-time:before,
 .icon-time:before {
-	content: "\e62e";
+  content: "\e62e";
 }
 .calendar-day .no-scheduled .wrapper.blocker:before,
 .icon-vacation-illust:before {
-	content: "\e630";
+  content: "\e630";
 }
 .icon-group:before {
-	content: "\e631";
+  content: "\e631";
 }
 .iconButton.unschedule:before,
 .icon-calendar-minus:before {
-	content: "\e632";
+  content: "\e632";
 }
 .iconButton.schedule:before,
 .icon-calendar-add:before {
-	content: "\e633";
+  content: "\e633";
 }
 .iconButton.reschedule:before,
 .icon-reschedule:before {
-	content: "\e634";
+  content: "\e634";
 }
 .calendar-day .no-scheduled h1.graphic:before,
 .icon-ticket-solid:before {
-	content: "\e635";
+  content: "\e635";
 }
 .calendar-day .blocked h1.graphic:before,
 .icon-vacation-solid:before {
-	content: "\e636";
+  content: "\e636";
 }
 .icon-map-pin-solid:before,
 .icon-map-toggle:before {
-	content: "\e637";
+  content: "\e637";
 }
 .map .nav-tabs > li > a.requirements:before,
 .icon-checkmark-box:before {
-	content: "\e638";
+  content: "\e638";
 }
 .icon-shield-system:before {
-	content: "\e639";
+  content: "\e639";
 }
 a[href*="tel"]:before,
 .icon-telephone:before {
-	content: "\e63b";
+  content: "\e63b";
 }
 .icon-map-pin-outline:before {
-	content: "\e63c";
+  content: "\e63c";
 }
 a.bigButton.barcode:before,
 .icon-upc:before {
-	content: "\e63d";
+  content: "\e63d";
 }
 .icon-LinkedIn:before {
-	content: "\e63e";
-	color: #0075b6;
+  content: "\e63e";
+  color: #0075b6;
 }
 .icon-Facebook:before {
-	content: "\e63f";
-	color: #365a9b;
+  content: "\e63f";
+  color: #365a9b;
 }
 .icon-GooglePlus:before {
-	content: "\e640";
-	color: #de4d31;
+  content: "\e640";
+  color: #de4d31;
 }
 .has-metadata:after,
 .icon-metadata:before {
-	content: "\e641";
+  content: "\e641";
 }
 .icon-calendar-empty:before {
-	content: "\e642";
+  content: "\e642";
 }
 .icon-clipboard:before {
-	content: "\e643";
+  content: "\e643";
 }
 .iconButton.move:before,
 .icon-move:before {
-	content: "\e644";
+  content: "\e644";
 }
 .iconButton.archive:before,
 .icon-archive:before {
-	content: "\e645";
+  content: "\e645";
 }
 .icon-graph-pie:before {
-	content: "\e646";
+  content: "\e646";
 }
 .icon-graph-bars:before {
-	content: "\e647";
+  content: "\e647";
 }
 .icon-graph-line:before {
-	content: "\e648";
+  content: "\e648";
 }
 .icon-download:before {
-	content: "\e649";
+  content: "\e649";
+}
+.icon-file:before {
+  content: "\e64a";
+}
+.timepicker-picker .glyphicon-chevron-down:before,
+.icon-down:before {
+  content: "\e64b";
+}
+.timepicker-picker .glyphicon-chevron-up:before,
+.icon-up:before {
+  content: "\e64c";
+}
+.icon-glyphicon:before {
+  content: "\e64d";
 }
 
 /* paste new characters just above this line */

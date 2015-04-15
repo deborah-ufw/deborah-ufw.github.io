@@ -1909,7 +1909,6 @@ input[type="radio"]:checked:after {
 
 .btn.btn-default.dropdown-toggle .caret {
 	font-size: 27px;
-	float: right;
 	position: absolute;
 		top: 5px;
 		right: 8px;
@@ -3627,6 +3626,10 @@ a.iconly span:focus {
 @media (max-width: 664px) {
 	
 	/* navs */
+	
+	.navbar > .container-fluid .navbar-brand {
+		display: none;
+	}
 	
 	.navbar-default {
 		background: #5e5e5e;
