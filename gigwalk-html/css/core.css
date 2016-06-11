@@ -4780,7 +4780,7 @@ a.attach .im,
 }
 
 .filter.search input[type="text"] {
-	width: 320px;
+	width: 300px;
 }
 
 .choose-dates .between input {
@@ -6849,6 +6849,11 @@ a.page-action.delete-button span.im {
 /* Calendar month goes responsive - Grace */
 
 @media (max-width: 774px) {
+  
+  .calendar-search .filter.search input[type="text"] {
+    padding-left: 8px;
+    width: 284px;
+  }
 	
 	.admin .calendar .view-bar .view a {
 		font-size: 1.2em;
