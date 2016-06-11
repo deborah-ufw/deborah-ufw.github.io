@@ -6791,8 +6791,8 @@ a.page-action.delete-button span.im {
 
 @media (max-width: 990px) {
 	
-	.admin .view-bar {
-		text-align: left;
+	.calendar .view-bar .date-nav {
+		margin-left: 0;	
 	}
 	
 	.admin .calendar .view-bar .date-nav a.left {
