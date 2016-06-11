@@ -6792,7 +6792,7 @@ a.page-action.delete-button span.im {
 @media (max-width: 990px) {
 	
 	.calendar .view-bar .date-nav {
-		margin-left: 0;	
+		margin-right: 0;	
 	}
 	
 	.admin .calendar .view-bar .date-nav a.left {
