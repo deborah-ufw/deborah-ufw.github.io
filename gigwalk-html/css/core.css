@@ -6850,6 +6850,10 @@ a.page-action.delete-button span.im {
 
 @media (max-width: 774px) {
   
+  .calendar .worker-selected .filters-choices .copy {
+    display: none;
+  }
+  
   .calendar-search .filter.search input[type="text"] {
     padding-left: 8px;
     width: 284px;
