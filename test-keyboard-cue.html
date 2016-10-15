@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 	$('.step2').hide();
 	
-	$('.step1').click(function(){ 
+	$('.focusme').click(function(){ 
 		
 		$('.step1').hide();
 		$('.step2').show();
@@ -31,12 +31,24 @@ body {
 
 .step1 {
 	display: inline-block; 
+	position: relative;
+}
+
+.circle {
 	margin: 0 auto; 
 	height: 90px; 
 	width: 90px; 
 	border-radius: 50%; 
 	background-color: #36C4FF; 
 	position: relative; 
+}
+
+.focusme {
+	height: 100px;
+	width: 100px;
+	position: relative;
+	top: -105px;
+	opacity: 0;
 	cursor: pointer;
 }
 
@@ -62,18 +74,21 @@ body {
 <div style="padding: 20px;">
 
 	<div class="step1">
-    <div class="choice">
-      Use voice
+  	<div class="circle">
+      <div class="choice">
+        Use voice
+      </div>
     </div>
+    
+    <form>
+      <textarea placeholder="Tap me" tabindex="0" class="focusme"></textarea>
+    </form>
   </div>
   
 	
   <div class="step2">
     <div style="margin: 40px 0;">Tap the mic icon next to the spacebar
     <br /> on your keyboard.</div>
-    <form>
-      <textarea placeholder="Tap me" tabindex="0" autofocus class="focusme" style="width: 300px; height: 100px; visibility: hidden;" ></textarea>
-    </form>
   </div>
   
 </div>
