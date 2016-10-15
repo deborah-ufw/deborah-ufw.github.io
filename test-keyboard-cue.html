@@ -32,6 +32,12 @@ body {
 	padding: 0;
 	max-width: 100%;
 }
+	
+.wrapper {
+  	max-width: 374px;	
+}
+	
+	
 
 .step1 {
 	display: inline-block; 
@@ -81,6 +87,12 @@ input:focus { font-size: 16px !important }
 		z-index: 10000;
 	background: url('test-keyboard-arrow.svg') no-repeat;
 }
+	
+@media screen and (min-aspect-ratio: 13/9) {
+	.wrapper {
+		max-width: 660;
+	}
+	}
 
 </style>
 
@@ -91,7 +103,7 @@ input:focus { font-size: 16px !important }
 <body>
 
 
-<div>
+<div class="wrapper">
 
 	<div class="step1">
   	<div class="circle">
