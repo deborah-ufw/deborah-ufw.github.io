@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$('.focusme').focus();
+	$('.focusme').trigger('touchstart');
+	
+	$('textarea').on('touchstart', function() {
+    $(this).focus();
+  });
+	
+});
+
+</script>
+
+<head>
+
+</head>
+
+<body style="text-align:center;">
+
+<div style="height: 50px; background: #ccc; text-align: left; position: relative;">
+
+	<div style="position: relative; top: 15px; left: 15px;">
+  	&lt; Back
+  </div>
+
+</div>
+
+<div style="padding: 20px;">
+
+	
+	
+  <div class="step2" style="margin: 40px 0;">Tap the mic icon next to the spacebar
+  <br /> on your keyboard.</div>
+  
+  <form>
+  
+  
+  <textarea placeholder="Tap me" tabindex="0" autofocus class="focusme" style="width: 300px; height: 100px; visibility: hidden;" ></textarea>
+  
+  </form>
+</div>
+
+
+</body>
+</html>

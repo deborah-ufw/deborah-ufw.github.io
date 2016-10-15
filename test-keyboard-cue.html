@@ -6,41 +6,76 @@
 
 <script type="text/javascript">
 
-$(document).ready(function() {
+$(document).ready(function(){
 
-	$('.focusme').focus();
-	$('.focusme').trigger('touchstart');
+	$('.step2').hide();
 	
-	$('textarea').on('touchstart', function() {
-    $(this).focus();
-  });
+	$('.step1').click(function(){ 
+		
+		$('.step1').hide();
+		$('.step2').show();
+		$('.focusme').trigger('click');
 	
+	});
+
 });
 
 </script>
+
+<style>
+
+body {
+	text-align:center; 
+	font-family: Arial;
+}
+
+.step1 {
+	display: inline-block; 
+	margin: 0 auto; 
+	height: 90px; 
+	width: 90px; 
+	border-radius: 50%; 
+	background-color: #36C4FF; 
+	position: relative; 
+	cursor: pointer;
+}
+
+.step2 {
+	display: none;
+}
+
+.choice {
+	display: inline-block; 
+	position: relative; 
+	top: 35px;
+}
+
+</style>
 
 <head>
 
 </head>
 
-<body style="text-align:center;">
+<body>
 
-<div style="height: 50px; background: #ccc; text-align: left; position: relative;">
-
-	<div style="position: relative; top: 15px; left: 15px;">
-  	&lt; Back
-  </div>
-
-</div>
 
 <div style="padding: 20px;">
-  <div style="margin: 40px 0;">Tap the mic icon next to the spacebar
-  <br /> on your keyboard.</div>
+
+	<div class="step1">
+    <div class="choice">
+      Use voice
+    </div>
+  </div>
   
-  <form>
-  <textarea placeholder="autofocus" autofocus class="focusme" style="width: 300px; height: 100px;" ></textarea>
+	
+  <div class="step2">
+    <div style="margin: 40px 0;">Tap the mic icon next to the spacebar
+    <br /> on your keyboard.</div>
+    <form>
+      <textarea placeholder="Tap me" tabindex="0" autofocus class="focusme" style="width: 300px; height: 100px; visibility: hidden;" ></textarea>
+    </form>
+  </div>
   
-  </form>
 </div>
 
 
