@@ -84,11 +84,24 @@ input:focus { font-size: 16px !important }
 	background: url('test-keyboard-arrow.svg') no-repeat;
 }
 	
+.landscape {
+	display: none;
+}
+	
 @media screen and (min-aspect-ratio: 13/9) {
 	.wrapper {
-		max-width: 660;
+		max-width: 660px;
 	}
+	.portrait {
+		display: none;	
 	}
+	.landscape {
+		display: inline-block;	
+	}
+	.arrow {
+		left: 20px;	
+	}
+}
 
 </style>
 
@@ -115,7 +128,7 @@ input:focus { font-size: 16px !important }
   
 	
   <div class="step2">
-    <div>Tap the mic icon to the left of the spacebar on your keyboard.</div>
+    <div>Tap the mic icon <span class="portrait">to the left of the spacebar</span><span class="landscape"></span> on your keyboard.</div>
   </div>
   
   <div class="arrow"></div>
