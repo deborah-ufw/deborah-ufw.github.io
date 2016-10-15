@@ -9,6 +9,11 @@
 $(document).ready(function() {
 
 	$('.focusme').focus();
+	$('.focusme').trigger('touchstart');
+	
+	$('textarea').on('touchstart', function() {
+    $(this).focus();
+  });
 	
 });
 
