@@ -27,7 +27,7 @@ $(document).ready(function() {
     $('.step2').hide();
     
     if ( $('.focusme').val().length !== 0 ) {
-    	$('.focusme').addClass('has-input');
+    	$('form').addClass('has-input');
     }
     
     else if ($('.focusme').val().indexOf("done") !== -1) {
@@ -99,8 +99,8 @@ input:focus { font-size: 16px !important }
   z-index: 2;
 }
 
-.focusme.has-input,
-.focusme.has-input:focus {
+form.has-input .focusme,
+form.has-input .focusme:focus {
   color: #888888;
 }
 
