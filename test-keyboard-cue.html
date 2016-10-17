@@ -23,23 +23,12 @@ $(document).ready(function(){
 	
 	});
 	
-	onload = function () {
-       var e = document.getElementById('focusme');
-       e.oninput = myHandler;
-       e.onpropertychange = e.oninput; // for IE8
-       // e.onchange = e.oninput; // FF needs this in <select><option>...
-       // other things for onload()
-			 
-			 e.onpropertychange = function() {
-				$('.focusme').addClass('alive'); 
-				$('.step2').hide();
-			 }
-			 
-    };
+	
 		
-		// $("#myId").on('change keydown paste input', function(){
-    //  doSomething();
-		// });
+		$('.focusme').on('change keydown paste input', function() {
+     	$('.focusme').addClass('alive'); 
+      $('.step2').hide();
+		});
 
 });
 
