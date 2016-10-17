@@ -12,23 +12,28 @@
 
 $(document).ready(function(){
 
-  $('.step2').hide();
-  
-  $('.focusme').click(function(){ 
-    
-    $('.step1').hide();
-    $('.step2').show();
-    $('.focusme').focus();
-    //$('.arrow').show();
-  
-  });
-  
-  
-    
-    $('.focusme').on('change keydown paste input', function() {
-      $('.focusme').addClass('alive');
-      $('.step2').hide();
-    });
+	$('.step2').hide();
+	
+	$('.focusme').click(function(){ 
+		
+		$('.step1').hide();
+		$('.step2').show();
+		$('.focusme').focus();
+		//$('.arrow').show();
+	
+	});
+	
+	
+		
+	var final_textarea = $('#focusme');  
+	final_textarea.bind('input keyup change paste cut propertychange', 		function() { 
+	    // if there is anything in the textarea
+	    if (this.value.length) {
+	      $('.step2').hide();
+				$('.focusme').addClass('alive'); 
+	    } 
+	 });
+
 
 });
 
@@ -37,90 +42,90 @@ $(document).ready(function(){
 <style>
 
 body {
-  text-align: center; 
-  font-family: Arial;
-  font-size: 22px;
-  padding: 0;
-  max-width: 100%;
+	text-align: center; 
+	font-family: Arial;
+	font-size: 22px;
+	padding: 0;
+	max-width: 100%;
 }
-  
+	
 .wrapper {
-    max-width: 374px; 
+  	max-width: 374px;	
 }
 
 .step1 {
-  display: inline-block; 
-  position: relative;
+	display: inline-block; 
+	position: relative;
 }
 
 .circle {
-  margin: 0 auto; 
-  height: 125px; 
-  width: 125px; 
-  border-radius: 50%; 
-  background-color: #36C4FF; 
-  position: relative; 
+	margin: 0 auto; 
+	height: 125px; 
+	width: 125px; 
+	border-radius: 50%; 
+	background-color: #36C4FF; 
+	position: relative; 
 }
 
 /* disable zoom */
 input:focus { font-size: 16px !important }
 
 .focusme {
-  height: 135px;
-  width: 135px;
-  position: relative;
-  top: -135px;
-  opacity: 0;
-  cursor: pointer;
+	height: 135px;
+	width: 135px;
+	position: relative;
+	top: -135px;
+	opacity: 0;
+	cursor: pointer;
 }
 
 .focusme.alive {
-  width: 300px;
-  opacity: 1;
+	width: 300px;
+	opacity: 1;
 }
 
 .step2 {
-  font-size: 22px;
-  margin: 140px 40px 0 40px;
-  display: none;
+	font-size: 22px;
+	margin: 140px 40px 0 40px;
+	display: none;
 }
 
 .choice {
-  display: inline-block; 
-  position: relative; 
-  top: 50px;
+	display: inline-block; 
+	position: relative; 
+	top: 50px;
 }
 
 .arrow {
-  height: 80px;
-  width: 65px;
-  display: none;
-  position: relative;
-    left: 70px;
-  background: url('test-keyboard-arrow.svg') no-repeat;
+	height: 80px;
+	width: 65px;
+	display: none;
+	position: relative;
+		left: 70px;
+	background: url('test-keyboard-arrow.svg') no-repeat;
 }
-  
+	
 .landscape {
-  display: none;
+	display: none;
 }
-  
+	
 @media screen and (min-aspect-ratio: 13/9) {
-  .wrapper {
-    max-width: 660px;
-  }
-  .step2 {
-    margin-top: 35px;
-    margin-bottom: -30px;
-  }
-  .portrait {
-    display: none;  
-  }
-  .landscape {
-    display: inline-block;  
-  }
-  .arrow {
-    left: 0;  
-  }
+	.wrapper {
+		max-width: 660px;
+	}
+	.step2 {
+		margin-top: 35px;
+		margin-bottom: -30px;
+	}
+	.portrait {
+		display: none;	
+	}
+	.landscape {
+		display: inline-block;	
+	}
+	.arrow {
+		left: 0;	
+	}
 }
 
 </style>
@@ -131,10 +136,10 @@ input:focus { font-size: 16px !important }
 
 
 <div class="wrapper">
-  
+	
   <!-- ---------- no web media api ---------- -->
-  <div class="step1">
-    <div class="circle">
+	<div class="step1">
+  	<div class="circle">
       <div class="choice">
         Use voice
       </div>
@@ -145,7 +150,7 @@ input:focus { font-size: 16px !important }
     </form>
   </div>
   
-  
+	
   <div class="step2">
     <div>Tap the mic icon below.</div>
   </div>
@@ -154,8 +159,8 @@ input:focus { font-size: 16px !important }
   
   <!-- ---------- web media api ---------- 
   
-  <div class="uses-api">
-    <div class="circle">
+	<div class="uses-api">
+  	<div class="circle">
       <div class="choice">
         Use voice 
         <span>voice api</span>
