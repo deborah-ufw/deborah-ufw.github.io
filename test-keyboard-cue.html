@@ -26,8 +26,12 @@ $(document).ready(function() {
 		$('.focusme').addClass('alive');
     $('.step2').hide();
     
-    if ($('.focusme').val().indexOf("done") !== -1) {
-    	$('.wrapper').trigger('click');
+    if ( $('.focusme').val().length == 0 ) {
+    	$('.focusme').addClass('has-input');
+    }
+    
+    else if ($('.focusme').val().indexOf("done") !== -1) {
+ 
     } else {
         // does not contain
     }
@@ -77,19 +81,33 @@ input:focus { font-size: 16px !important }
 	position: relative;
 	/* opacity: 0; */
 	cursor: pointer;
-  border: 0px solid #ffffff;
+  position: relative;
   background: transparent;
+  border: 0px solid #ffffff;
 }
 
 .focusme.alive {
 	opacity: 1;
+  cursor: default;
 }
 
 .focusme:focus {
-  border:0;
-  outline:none;
-  box-shadow:none;
+  color: #ffffff;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  z-index: 2;
 }
+
+.focusme.has-input,
+.focusme.has-input:focus {
+  color: #888888;
+}
+
+form {
+  position: relative;
+}
+
 
 .step2 {
 	font-size: 22px;
