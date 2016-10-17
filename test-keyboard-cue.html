@@ -10,30 +10,29 @@
 
 <script type="text/javascript">
 
-$(document).ready(function(){
+$(document).ready(function() {
 
 	$('.step2').hide();
 	
-	$('.focusme').click(function(){ 
+	$('.focusme, .circle').click(function() { 
 		
-		$('.step1').hide();
+		$('.circle').hide();
 		$('.step2').show();
 		$('.focusme').focus();
-		//$('.arrow').show();
 	
 	});
-	
-	
-		
-	var final_textarea = $('#focusme');  
-	final_textarea.bind('input keyup change paste cut propertychange', 		function() { 
-	    // if there is anything in the textarea
-	    if (this.value.length) {
-	      $('.step2').hide();
-				$('.focusme').addClass('alive'); 
-	    } 
-	 });
 
+	$('.focusme').change(function() { 
+		$('.focusme').addClass('alive');
+    $('.step2').hide();
+    
+    if ($('.focusme').val().indexOf("done") !== -1) {
+    	$('.wrapper').trigger('click');
+    } else {
+        // does not contain
+    }
+	});
+	
 
 });
 
@@ -60,6 +59,7 @@ body {
 
 .circle {
 	margin: 0 auto; 
+  margin-bottom: -135px;
 	height: 125px; 
 	width: 125px; 
 	border-radius: 50%; 
@@ -71,17 +71,24 @@ body {
 input:focus { font-size: 16px !important }
 
 .focusme {
-	height: 135px;
-	width: 135px;
+  font-size: 16px;
+	height: 40px;
+	width: 300px;
 	position: relative;
-	top: -135px;
 	/* opacity: 0; */
 	cursor: pointer;
+  border: 0px solid #ffffff;
+  background: transparent;
 }
 
 .focusme.alive {
-	width: 300px;
 	opacity: 1;
+}
+
+.focusme:focus {
+  border:0;
+  outline:none;
+  box-shadow:none;
 }
 
 .step2 {
@@ -94,15 +101,6 @@ input:focus { font-size: 16px !important }
 	display: inline-block; 
 	position: relative; 
 	top: 50px;
-}
-
-.arrow {
-	height: 80px;
-	width: 65px;
-	display: none;
-	position: relative;
-		left: 70px;
-	background: url('test-keyboard-arrow.svg') no-repeat;
 }
 	
 .landscape {
@@ -123,9 +121,7 @@ input:focus { font-size: 16px !important }
 	.landscape {
 		display: inline-block;	
 	}
-	.arrow {
-		left: 0;	
-	}
+
 }
 
 </style>
@@ -144,9 +140,8 @@ input:focus { font-size: 16px !important }
         Use voice
       </div>
     </div>
-    
     <form>
-      <textarea placeholder="Tap me" tabindex="0" class="focusme" id="focusme"></textarea>
+      <input type="text" tabindex="0" class="focusme" id="focusme">
     </form>
   </div>
   
@@ -155,8 +150,7 @@ input:focus { font-size: 16px !important }
     <div>1. Tap the mic icon below</div>
     <div>2. Speak</div>
   </div>
-  
-  <!-- <div class="arrow"></div> -->
+
   
   <!-- ---------- web media api ---------- 
   
