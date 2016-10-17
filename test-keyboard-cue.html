@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
@@ -15,9 +19,27 @@ $(document).ready(function(){
 		$('.step1').hide();
 		$('.step2').show();
 		$('.focusme').focus();
-		$('.arrow').show();
+		//$('.arrow').show();
 	
 	});
+	
+	onload = function () {
+       var e = document.getElementById('focusme');
+       e.oninput = myHandler;
+       e.onpropertychange = e.oninput; // for IE8
+       // e.onchange = e.oninput; // FF needs this in <select><option>...
+       // other things for onload()
+			 
+			 e.onpropertychange = function() {
+				$('.focusme').addClass('alive'); 
+				$('.step2').hide();
+			 }
+			 
+    };
+		
+		// $("#myId").on('change keydown paste input', function(){
+    //  doSomething();
+		// });
 
 });
 
@@ -61,6 +83,11 @@ input:focus { font-size: 16px !important }
 	top: -135px;
 	opacity: 0;
 	cursor: pointer;
+}
+
+.focusme.alive {
+	width: 300px;
+	opacity: 1;
 }
 
 .step2 {
@@ -109,15 +136,14 @@ input:focus { font-size: 16px !important }
 
 </style>
 
-<head>
-
 </head>
 
 <body>
 
 
 <div class="wrapper">
-
+	
+  <!-- ---------- no web media api ---------- -->
 	<div class="step1">
   	<div class="circle">
       <div class="choice">
@@ -126,7 +152,7 @@ input:focus { font-size: 16px !important }
     </div>
     
     <form>
-      <textarea placeholder="Tap me" tabindex="0" class="focusme"></textarea>
+      <textarea placeholder="Tap me" tabindex="0" class="focusme" id="focusme"></textarea>
     </form>
   </div>
   
@@ -136,6 +162,20 @@ input:focus { font-size: 16px !important }
   </div>
   
   <!-- <div class="arrow"></div> -->
+  
+  <!-- ---------- web media api ---------- 
+  
+	<div class="uses-api">
+  	<div class="circle">
+      <div class="choice">
+        Use voice 
+        <span>voice api</span>
+      </div>
+    </div>
+  </div> 
+   
+  -->
+  
   
 </div>
 
