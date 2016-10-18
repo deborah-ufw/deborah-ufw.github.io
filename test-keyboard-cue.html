@@ -30,11 +30,10 @@ $(document).ready(function() {
     	$('form').addClass('has-input');
     }
     
-    else if ($('.focusme').val().indexOf("done") !== -1) {
- 
-    } else {
-        // does not contain
+    if ($('.focusme').val().indexOf("done") !== -1) {
+    	
     }
+    
 	});
 	
 
@@ -101,7 +100,7 @@ input:focus { font-size: 16px !important }
 
 form.has-input .focusme,
 form.has-input .focusme:focus {
-  color: #888888;
+  color: #999999;
 }
 
 form {
