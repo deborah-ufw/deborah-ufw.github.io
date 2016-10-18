@@ -21,20 +21,36 @@ $(document).ready(function() {
 		$('.focusme').focus();
 	
 	});
+	
 
-	$('.focusme').change(function() { 
-		$('.focusme').addClass('alive');
+	
+	var recognition = new webkitSpeechRecognition();
+  recognition.continuous = false; // false - ends when user stops speaking
+  recognition.interimResults = true;
+
+  // on start
+  recognition.onstart = function() { 
+  	console.log('started');
+  	recognition.lang = en;
+  	
+  	$('.focusme').addClass('alive');
     $('.step2').hide();
-    
-    if ( $('.focusme').val().length !== 0 ) {
-    	$('form').addClass('has-input');
-    }
-    
-    if ($('.focusme').val().indexOf("done") !== -1) {
-    	
-    }
-    
-	});
+  }
+  
+  // on result
+  recognition.onresult = function(event) { 
+    console.log('result');
+    $('form').addClass('has-input');
+  }
+  
+  // error
+  recognition.onerror = function(event) {  
+  }
+  
+  // on end
+  recognition.onend = function() { 
+  	console.log('ended');
+  }
 	
 
 });
